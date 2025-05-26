@@ -1,134 +1,112 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang='it'>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>Fortissimo Swipe</title>
-  <link rel="manifest" href="manifest.json">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+  <title>Swipe Newsletter</title>
+  <link rel='manifest' href='manifest.json'>
+  <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
   <style>
-    :root{
-      --io-blue:#4285F4;
-      --io-red:#EA4335;
-      --io-yellow:#FBBC05;
-      --io-green:#34A853;
-    }
-    /* Neuromorphic + Google I/O inspired */
-    body{
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-      background:radial-gradient(circle at 20% 20%, #f5fafd 0%, #eef3f9 40%, #e8eef6 100%);
-      font-family:'Inter',sans-serif;
-      -webkit-font-smoothing:antialiased;
-    }
-    #card-container{max-width:22rem;height:100%;position:relative;}
-    .card{
-      background:#f8fafc;
-      border-radius:24px;
-      box-shadow:4px 4px 10px rgba(0,0,0,.05), -4px -4px 10px rgba(255,255,255,.8);
-      transition:box-shadow .3s,transform .3s,opacity .3s;
-      opacity:0;
-      transform:translateY(30px);
-    }
-    .card.enter{opacity:1;transform:none;}
-    .card:hover{box-shadow:6px 6px 15px rgba(0,0,0,.1), -6px -6px 15px rgba(255,255,255,.9);}    
-    .share-btn{
-      background:linear-gradient(135deg,var(--io-blue),var(--io-green));
-      border-radius:12px;
-      padding:0.5rem;
-      color:#fff;
-      display:flex;
-    }
-    .share-btn svg{stroke:white;}
+    body{overflow:hidden;}
   </style>
 </head>
-<body>
-  <div id="card-container"></div>
+<body class='bg-gray-100 flex flex-col items-center justify-center h-screen'>
+  <div id='card-container' class='w-full max-w-sm h-full relative'></div>
 
-  <template id="card-template">
-    <div class="card absolute inset-0 p-6 flex flex-col">
-      <div class="flex-grow overflow-y-auto">
-        <h2 class="text-2xl font-bold mb-3" data-title></h2>
-        <p class="text-base text-gray-700 whitespace-pre-wrap" data-content></p>
+  <template id='card-template'>
+    <div class='absolute inset-0 bg-white rounded-2xl shadow-xl p-6 flex flex-col'>
+      <div class='flex-grow overflow-y-auto'>
+        <h2 class='text-2xl font-bold mb-3' data-title></h2>
+        <p class='text-base text-gray-700 whitespace-pre-wrap' data-content></p>
       </div>
-      <div class="flex justify-end pt-4">
-        <button class="share-btn focus:outline-none" title="Condividi">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12v.01M12 4v.01M12 20v.01M20 12v.01M12 12a.01.01 0 011.414 1.414m-2.828 0a.01.01 0 011.414-1.414m0 0l6-6m-6 6l-6 6"/>
+      <div class='flex justify-end space-x-4 pt-4'>
+        <button class='share-btn focus:outline-none' title='Condividi'>
+          <svg xmlns='http://www.w3.org/2000/svg' class='w-6 h-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 12v.01 M12 4v.01 M12 20v.01 M20 12v.01 M12 12a.01.01 0 011.414 1.414m-2.828 0a.01.01 0 011.414-1.414m0 0l6-6m-6 6l-6 6' />
           </svg>
         </button>
       </div>
     </div>
   </template>
 
-  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js'></script>
   <script>
-    const container=document.getElementById('card-container');
-    const tpl=document.getElementById('card-template');
-    let idx=0, data=[];
+    const container = document.getElementById('card-container');
+    const tpl = document.getElementById('card-template');
+    let index = 0;
+    let cardsData = [];
 
     async function init(){
       try{
-        const res=await fetch('newsletter.json');
-        data=await res.json();
-        data.reverse();
+        const res = await fetch('newsletter.json');
+        cardsData = await res.json();
+        cardsData.reverse();
         loadNext();
-      }catch(e){console.error('cannot load json',e);}    }
+      }catch(e){
+        console.error('Impossibile caricare newsletter.json', e);
+      }
+    }
 
     function loadNext(){
-      if(idx>=data.length) return;
-      const d=data[idx++];
-      const node=tpl.content.cloneNode(true);
-      const card=node.querySelector('.card');
-      card.querySelector('[data-title]').textContent=d.title;
-      card.querySelector('[data-content]').textContent=d.excerpt||'';
-      card.dataset.url=d.url;
+      if(index >= cardsData.length) return;
+      const data = cardsData[index++];
+      const node = tpl.content.cloneNode(true);
+      const card = node.querySelector('div');
+      card.querySelector('[data-title]').textContent = data.title;
+      card.querySelector('[data-content]').textContent = data.excerpt ?? (data.content ? data.content.slice(0,280)+'…' : '');
+      card.dataset.url = data.url;
       addGestures(card);
       container.appendChild(node);
-      requestAnimationFrame(()=>card.classList.add('enter'));
     }
 
     function addGestures(card){
-      const ht=new Hammer(card);
-      ht.get('pan').set({direction:Hammer.DIRECTION_HORIZONTAL,threshold:10});
-      ht.on('pan',ev=>{
-        card.style.transform=`translate(${ev.deltaX}px,${ev.deltaY}px) rotate(${ev.deltaX/20}deg)`;
+      const hammertime = new Hammer(card);
+      hammertime.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold:10 });
+      hammertime.on('pan', ev => {
+        card.style.transform = `translate(${ev.deltaX}px, ${ev.deltaY}px) rotate(${ev.deltaX/20}deg)`;
         if(ev.isFinal){
-          if(Math.abs(ev.deltaX)>80){
-            const dir=ev.deltaX>0?'right':'left';
-            swipeAway(card,dir);
+          if(Math.abs(ev.deltaX) > 80){
+            const direction = ev.deltaX > 0 ? 'right' : 'left';
+            swipeAway(card, direction);
           }else{
-            card.style.transition='transform .2s';
-            card.style.transform='';
+            card.style.transition = 'transform .2s';
+            card.style.transform = '';
             setTimeout(()=>card.style.transition='',200);
           }
         }
       });
-      card.querySelector('.share-btn').addEventListener('click',e=>{
+      card.querySelector('.share-btn').addEventListener('click', e=>{
         e.stopPropagation();
-        share(card.dataset.url,card.querySelector('[data-title]').textContent);
+        shareCard(card.dataset.url, card.querySelector('[data-title]').textContent);
       });
     }
 
-    function swipeAway(card,dir){
-      card.style.transition='transform .3s, opacity .3s';
-      card.style.transform=`translate(${dir==='right'?window.innerWidth:-window.innerWidth}px,0) rotate(${dir==='right'?45:-45}deg)`;
-      card.style.opacity=0;
+    function swipeAway(card, dir){
+      card.style.transition = 'transform .3s';
+      card.style.transform = `translate(${dir==='right'?window.innerWidth: -window.innerWidth}px, 0) rotate(${dir==='right'?45:-45}deg)`;
       setTimeout(()=>card.remove(),310);
-      if(dir==='right'&&card.dataset.url) window.open(card.dataset.url,'_blank');
+      if(dir==='right' && card.dataset.url){
+        window.open(card.dataset.url, '_blank');
+      }
       loadNext();
     }
 
-    async function share(url,title){
+    async function shareCard(url, title){
       if(navigator.share){
-        try{await navigator.share({title,url});}catch(e){}
-      }else{prompt('Copia il link:',url);}    }
+        try{
+          await navigator.share({title, url});
+        }catch(err){
+          console.warn('Share aborted',err);
+        }
+      }else{
+        prompt('Copia il link:', url);
+      }
+    }
 
-    if('serviceWorker'in navigator) navigator.serviceWorker.register('sw.js');
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('sw.js');
+    }
+
     init();
   </script>
 </body>
