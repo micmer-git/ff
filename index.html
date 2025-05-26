@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang='it'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+  <title>Swipe Newsletter</title>
+  <link rel='manifest' href='manifest.json'>
+  <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+  <style>
+    body{overflow:hidden;}
+  </style>
+</head>
+<body class='bg-gray-100 flex flex-col items-center justify-center h-screen'>
+  <div id='card-container' class='w-full max-w-sm h-full relative'></div>
+
+  <template id='card-template'>
+    <div class='absolute inset-0 bg-white rounded-2xl shadow-xl p-6 flex flex-col'>
+      <div class='flex-grow overflow-y-auto'>
+        <h2 class='text-2xl font-bold mb-3' data-title></h2>
+        <p class='text-base text-gray-700 whitespace-pre-wrap' data-content></p>
+      </div>
+      <div class='flex justify-end space-x-4 pt-4'>
+        <button class='share-btn focus:outline-none' title='Condividi'>
+          <svg xmlns='http://www.w3.org/2000/svg' class='w-6 h-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 12v.01 M12 4v.01 M12 20v.01 M20 12v.01 M12 12a.01.01 0 011.414 1.414m-2.828 0a.01.01 0 011.414-1.414m0 0l6-6m-6 6l-6 6' />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </template>
+
+  <script src='https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js'></script>
+  <script>
+    const container = document.getElementById('card-container');
+    const tpl = document.getElementById('card-template');
+    let index = 0;
+    let cardsData = [];
+
+    async function init(){
+      try{
+        const res = await fetch('newsletter.json');
+        cardsData = await res.json();
+        cardsData.reverse();
+        loadNext();
+      }catch(e){
+        console.error('Impossibile caricare newsletter.json', e);
+      }
+    }
+
+    function loadNext(){
+      if(index >= cardsData.length) return;
+      const data = cardsData[index++];
+      const node = tpl.content.cloneNode(true);
+      const card = node.querySelector('div');
+      card.querySelector('[data-title]').textContent = data.title;
+      card.querySelector('[data-content]').textContent = data.excerpt ?? (data.content ? data.content.slice(0,280)+'…' : '');
+      card.dataset.url = data.url;
+      addGestures(card);
+      container.appendChild(node);
+    }
+
+    function addGestures(card){
+      const hammertime = new Hammer(card);
+      hammertime.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold:10 });
+      hammertime.on('pan', ev => {
+        card.style.transform = `translate(${ev.deltaX}px, ${ev.deltaY}px) rotate(${ev.deltaX/20}deg)`;
+        if(ev.isFinal){
+          if(Math.abs(ev.deltaX) > 80){
+            const direction = ev.deltaX > 0 ? 'right' : 'left';
+            swipeAway(card, direction);
+          }else{
+            card.style.transition = 'transform .2s';
+            card.style.transform = '';
+            setTimeout(()=>card.style.transition='',200);
+          }
+        }
+      });
+      card.querySelector('.share-btn').addEventListener('click', e=>{
+        e.stopPropagation();
+        shareCard(card.dataset.url, card.querySelector('[data-title]').textContent);
+      });
+    }
+
+    function swipeAway(card, dir){
+      card.style.transition = 'transform .3s';
+      card.style.transform = `translate(${dir==='right'?window.innerWidth: -window.innerWidth}px, 0) rotate(${dir==='right'?45:-45}deg)`;
+      setTimeout(()=>card.remove(),310);
+      if(dir==='right' && card.dataset.url){
+        window.open(card.dataset.url, '_blank');
+      }
+      loadNext();
+    }
+
+    async function shareCard(url, title){
+      if(navigator.share){
+        try{
+          await navigator.share({title, url});
+        }catch(err){
+          console.warn('Share aborted',err);
+        }
+      }else{
+        prompt('Copia il link:', url);
+      }
+    }
+
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('sw.js');
+    }
+
+    init();
+  </script>
+</body>
+</html>
