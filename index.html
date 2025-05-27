@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>futuro fortissimo – explorer</title>
 
-  <!-- Google Sans (used in Google I/O) -->
+  <!-- Google Sans font (Google I/O) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -16,24 +16,25 @@
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['"Google Sans"', 'Roboto', 'ui-sans-serif', 'system-ui'],
-          },
+          fontFamily: { sans: ['"Google Sans"', 'Roboto', 'ui-sans-serif'] },
           colors: {
-            ioBlue: '#CFE8FF',
-            ioCard: '#F5F7FA',
+            ioBg: '#F6F9FE',
+            ioCard: '#FFFFFF',
           },
           boxShadow: {
-            neu: '8px 8px 16px rgba(0,0,0,0.06), -8px -8px 16px rgba(255,255,255,0.7)',
-            neuInset: 'inset 4px 4px 8px rgba(0,0,0,0.08), inset -4px -4px 8px rgba(255,255,255,0.6)'
+            neu: '4px 4px 8px rgba(0,0,0,0.07), -4px -4px 8px rgba(255,255,255,0.9)',
           }
         }
       }
     }
   </script>
   <style>
-    body { background-color: #CFE8FF; }
-    mark { @apply bg-yellow-300/60 rounded px-0.5; }
+    body{background-color:#F6F9FE;}
+    mark{background:#FFEB3B66;padding:0 2px;border-radius:2px}
+    .pill{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.1);padding:0 8px;border-radius:9999px;cursor:pointer;user-select:none;transition:all .15s ease}
+    .pill.active{outline:2px solid #38bdf8;}
+    /* gradient border */
+    .g-border{background:linear-gradient(135deg,#38bdf8,#c084fc,#f472b6);padding:2px;border-radius:1rem}
   </style>
 </head>
 <body class="font-sans text-gray-800 antialiased">
@@ -46,17 +47,16 @@
   </header>
 
   <!-- Search & Filters -->
-  <section class="max-w-3xl mx-auto px-4 space-y-3">
+  <section class="max-w-3xl mx-auto px-4 space-y-4">
     <div class="relative">
-      <input id="searchInput" type="text" placeholder="Cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-ioCard shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
-      <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 014 4H4a4 4 0 014-4zm-5 8a5 5 0 1110 0A5 5 0 013 12z" clip-rule="evenodd" /></svg>
+      <input id="searchInput" type="text" placeholder="Cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
+      <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 014 4H4a4 4 0 014-4zm-5 8a5 5 0 1110 0A5 5 0 013 12z" clip-rule="evenodd"/></svg>
     </div>
-    <div id="filterRow" class="flex flex-wrap gap-2 justify-center text-xl">
-      <!-- primary filters -->
+    <div id="filterRow" class="flex flex-wrap justify-center gap-2 text-xl">
+      <!-- primary + sub filters -->
       <span class="pill" data-filter="💻">💻</span>
       <span class="pill" data-filter="🍃">🍃</span>
       <span class="pill" data-filter="❤️">❤️</span>
-      <!-- subchapter filters -->
       <span class="pill" data-filter="💸">💸</span>
       <span class="pill" data-filter="⚽">⚽</span>
       <span class="pill" data-filter="🍽">🍽</span>
@@ -70,78 +70,79 @@
     </div>
   </section>
 
-  <!-- Publications container -->
-  <main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-4"></main>
+  <!-- Publications -->
+  <main id="app" class="max-w-3xl mx-auto px-4 pb-40 space-y-6 mt-6"></main>
 
-  <!-- Footer -->
-  <footer class="fixed bottom-0 inset-x-0 text-center py-2 text-xs text-gray-700 bg-ioBlue/80 backdrop-blur">
-    v0.4 – built with Google I/O vibes
-  </footer>
+  <footer class="fixed bottom-0 inset-x-0 text-center py-2 text-xs text-gray-600 bg-ioBg/90 backdrop-blur">v0.5</footer>
 
   <script>
     const DATA_ENDPOINT = './newsletter_data.json';
-    const pills = document.querySelectorAll('.pill');
-    const filters = new Set();
     let DATA;
+    const filters = new Set();
 
-    // style pills
-    pills.forEach(p => {
-      p.className += ' px-2 py-1 rounded-full bg-ioCard shadow-neu cursor-pointer select-none transition';
-      p.addEventListener('click', () => {
-        const val = p.dataset.filter;
-        if (filters.has(val)) {
-          filters.delete(val); p.classList.remove('ring-2','ring-sky-400');
-        } else {
-          filters.add(val); p.classList.add('ring-2','ring-sky-400');
-        }
+    // pill behaviour
+    document.querySelectorAll('.pill').forEach(p=>{
+      p.addEventListener('click',()=>{
+        const val=p.dataset.filter;
+        p.classList.toggle('active');
+        if(filters.has(val)) filters.delete(val); else filters.add(val);
         render();
       });
     });
 
-    // highlight helper
-    const highlight = (txt,t) => t?txt.replace(new RegExp(`(${t})`,'gi'),'<mark>$1</mark>'):txt;
+    document.getElementById('searchInput').addEventListener('input',render);
 
-    // fetch once
-    fetch(DATA_ENDPOINT).then(r=>r.json()).then(json=>{DATA=json; render();});
+    fetch(DATA_ENDPOINT).then(r=>r.json()).then(j=>{DATA=j;render();});
 
-    document.getElementById('searchInput').addEventListener('input', render);
+    function highlight(txt,term){return term?txt.replace(new RegExp(`(${term})`,'gi'),'<mark>$1</mark>'):txt;}
 
     function render(){
-      const term = document.getElementById('searchInput').value.toLowerCase();
-      const wrap = document.getElementById('app');
-      wrap.innerHTML='';
+      const term=document.getElementById('searchInput').value.toLowerCase();
+      const cont=document.getElementById('app');
+      cont.innerHTML='';
 
       DATA.publications.forEach(pub=>{
-        // filters by emoji tag
+        // filter by emoji tag
         if(filters.size){
-          const ok=[...filters].some(f=>pub.cards.some(c=>c.title.includes(f)));
+          const ok=[...filters].some(f=>pub.cards.some(c=>c.tags?.includes(f)));
           if(!ok) return;
         }
 
-        // decide which subchapters to show
-        const visibleCards = pub.cards.filter(c=>{
-          if(c.title.startsWith('📖')) return false; // skip Panorama
-          if(!term) return false; // show only when searching
-          const hitTitle=c.title.toLowerCase().includes(term);
-          const hitContent=c.contentBlocks.some(b=>b.content.some(l=>l.toLowerCase().includes(term)));
-          return hitTitle||hitContent;
-        });
-        if(term && visibleCards.length===0 && !pub.title.toLowerCase().includes(term)) return;
+        // search filtering logic
+        const pubHit=pub.title.toLowerCase().includes(term);
+        const cardsFiltered=pub.cards.filter(sc=>sc.title.toLowerCase().includes(term)||sc.contentBlocks.some(b=>b.content.some(l=>l.toLowerCase().includes(term))));
+        if(term&&!pubHit&&!cardsFiltered.length) return;
 
-        const card=document.createElement('div');
-        card.className='bg-ioCard rounded-2xl p-4 shadow-neu hover:shadow-neuInset transition cursor-pointer';
-        card.innerHTML=`<h2 class="text-lg font-medium mb-1">${highlight(pub.title,term)}</h2>`;
-        card.addEventListener('click',()=>window.open(pub.substackLink,'_blank'));
+        // DETAILS element with gradient border
+        const details=document.createElement('details');
+        details.className='g-border';
+        const inner=document.createElement('div');
+        inner.className='bg-white rounded-[0.95rem] p-4 shadow-neu';
+        const summary=document.createElement('summary');
+        summary.className='cursor-pointer list-none select-none text-lg font-medium';
+        summary.innerHTML=highlight(pub.title,term);
+        inner.appendChild(summary);
 
-        if(visibleCards.length){
-          const div=document.createElement('div');
-          div.className='space-y-1 mt-2 text-sm';
-          visibleCards.forEach(sc=>{
-            div.innerHTML+=`<div class="font-medium">${highlight(sc.title,term)}</div>`;
+        // content block list (initially hidden, shown when open)
+        const subWrap=document.createElement('div');
+        subWrap.className='mt-3 space-y-4';
+        pub.cards.forEach(sc=>{
+          if(sc.title.startsWith('📖')) return; // skip panorama
+          const scDiv=document.createElement('div');
+          scDiv.innerHTML=`<h3 class='font-semibold'>${highlight(sc.title,term)}</h3>`;
+          sc.contentBlocks.forEach(b=>{
+            b.content.forEach(line=>{
+              const p=document.createElement('p');
+              p.className='text-sm text-gray-700';
+              p.innerHTML=highlight(line,term);
+              scDiv.appendChild(p);
+            });
           });
-          card.appendChild(div);
-        }
-        wrap.appendChild(card);
+          subWrap.appendChild(scDiv);
+        });
+        inner.appendChild(subWrap);
+        details.appendChild(inner);
+        cont.appendChild(details);
       });
     }
   </script>
