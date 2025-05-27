@@ -121,103 +121,568 @@
           "title": "🍦 ff.119.4 Meglio di DALL-E: arte e gelati",
           "tags": ["🎨","🍽"],
           "contentBlocks": [{"type":"paragraphs","content":["Google ha rilasciato Gemini 2.0 con generazione nativa di immagini, presentandosi come un'alternativa a Photoshop. In un panorama di modelli AI sempre più vasto, questa tecnologia offre nuove possibilità creative, come mettere 'gelati ovunque'."]}]
+        },{
+  "title": "🎼 ff.122 Naturale è meglio?",
+  "buttonLabel": "🎼 ff.122 Naturale è meglio?",
+  "urlSlug": "ff122-naturale-e-meglio",
+  "substackLink": "https://fortissimo.substack.com/p/ff122-naturale-e-meglio",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["🧠","🍃","💻"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "L'efficienza computazionale del cervello umano rispetto ai supercomputer",
+            "Innovazioni ispirate alla natura: dai computer neuromorfici alla scrittura su DNA",
+            "Un futuro sostenibile attraverso la biologia e la decodifica dei linguaggi naturali"
+          ]
         }
       ]
     },
+    {
+      "title": "🧠 ff.122.1 L'efficienza computazionale del cervello",
+      "tags": ["🧠","🍃"],
+      "contentBlocks": [
         {
-      "title": "🎼 ff.122 Naturale è meglio?",
-      "buttonLabel": "🎼 ff.122 Naturale è meglio?",
-      "urlSlug": "ff122-naturale-e-meglio",
-      "substackLink": "https://fortissimo.substack.com/p/ff122-naturale-e-meglio",
-      "cards": [
-        { "title": "🧠 L'efficienza della natura vs tecnologia nell'era dell'AI", "tags": ["🧠","🍃","💻"], "contentBlocks": [
-          {"type":"paragraphs","content":["L'efficienza computazionale del cervello umano rispetto ai supercomputer","Innovazioni ispirate alla natura: dai computer neuromorfici alla scrittura su DNA","Un futuro sostenibile attraverso la biologia e la decodifica dei linguaggi naturali"]},
-          {"type":"darkerParagraphs","content":["🧠 ff.122.1 L'efficienza computazionale del cervello\nUn cervello umano (20W) è un milione di volte più efficiente...","💾 ff.122.2 Computer neuromorfici?\nParadossale: l'AI simula...","🧬 ff.122.3 Scrivere con il DNA\nPer miniaturizzare l'informazione...","🐜 ff.122.4 Nike fatte da vermi\nNeri Oxman del MIT...","👅 ff.122.5 La lingua della natura\nGoogle sta sviluppando DolphinGemma ..."]}
-        ]}
+          "type": "paragraphs",
+          "content": [
+            "Un cervello umano (20 W) è un milione di volte più efficiente del supercomputer Frontier (21 MW). AlphaGo ha battuto il campione di Go, ma consumando l'energia che un essere umano userebbe in un decennio."
+          ]
+        }
       ]
     },
     {
-      "title": "🎼 ff.19 L'Hamburger di Hemingway",
-      "buttonLabel": "🎼 ff.19 L'Hamburger di Hemingway",
-      "urlSlug": "ff19-lhambuger-di-hemingway",
-      "substackLink": "https://fortissimo.substack.com/p/ff17-lhambuger-di-hemingway",
-      "cards": [
-        { "title": "🍔 Flatulenze, fornelli e l'Hamburger di Hemingway", "tags": ["🍽","🍃","💸"], "contentBlocks": [
-          {"type":"paragraphs","content":["Le mucche inquinano come gli Stati Uniti?","Le silenziose fughe di gas sono un problema per il clima?","Come mangiava il suo hamburger, Hemingway?"]},
-          {"type":"darkerParagraphs","content":["💦 ff.19.1 Flatulenze inquinanti\nLe emissioni di metano...","🍔 ff.19.2 L'hamburger preferito...","♨️ ff.19.3 Fornelli assassini\nI fornelli a gas...","🐖 ff.19.4 Scelte sostenibili cool\nIl packaging di La Vie...","💉 ff.19.5 Carne stampata 3D\nRedefine Meat usa la stampa 3D ..."]}
-        ]}
+      "title": "💾 ff.122.2 Computer neuromorfici?",
+      "tags": ["💻","🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Paradossale: l'AI simula le connessioni cerebrali a livello software, ma l'hardware classico (binario) non replica la complessità analogica e continua dei neuroni."
+          ]
+        }
       ]
     },
     {
-      "title": "🎼 ff.25 La fattoria degli animali",
-      "buttonLabel": "🎼 ff.25 La fattoria degli animali",
-      "urlSlug": "ff25-la-fattoria-degli-animali",
-      "substackLink": "https://fortissimo.substack.com/p/ff25-la-fattoria-degli-animali",
-      "cards": [
-        { "title": "🐷 Trapianti di maiali e startup innovative", "tags": ["💊","🧠","👥"], "contentBlocks": [
-          {"type":"paragraphs","content":["Possiamo trapiantare il cuore di un animale in un essere umano?","Tradurremo i grugniti dei maiali?","Cosa possiamo imparare dal creatore dell’Amazon per gli animali?"]},
-          {"type":"darkerParagraphs","content":["🐖 ff.25.1 Trapianti di cuore di maiale...","🫀 ff.25.2 La dimensione del problema...","🙊 ff.25.3 Tradurre il linguaggio suino...","📦 ff.25.4 Amazon per gli animali: una bolla?..."]}
-        ]}
+      "title": "🧬 ff.122.3 Scrivere con il DNA",
+      "tags": ["💻","🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "George Church ha codificato il libro «Regenesis» nel DNA. Oggi Asimov Press vende libri-DNA: 60 €, 240 pagine, 500 000 molecole."
+          ]
+        }
       ]
     },
     {
-      "title": "🎼 ff.39 Come ti vesti?",
-      "buttonLabel": "🎼 ff.39 Come ti vesti?",
-      "urlSlug": "ff39-come-ti-vesti",
-      "substackLink": "https://fortissimo.substack.com/p/ff39-come-ti-vesti",
-      "cards": [
-        { "title": "👚 Fast fashion, Vinted e moda robotica", "tags": ["🎨","🍃","💸"], "contentBlocks": [
-          {"type":"paragraphs","content":["Qual è l’impatto della moda sul clima?","Vinted aiuterà il pianeta?","Come produrre un vestito robotico (partendo da un NFT)?"]},
-          {"type":"darkerParagraphs","content":["🏭 ff.39.1 L’impatto del fast fashion...","🔄 ff.39.2 Vinted: una soluzione?...","⚗️ ff.39.3 Un mix di scienza, tecnologia e moda..."]}
-        ]}
+      "title": "🐜 ff.122.4 Nike fatte da vermi",
+      "tags": ["🎨","🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Neri Oxman (MIT) unisce design, biologia e tecnologia per creare calzature prodotte da organismi viventi, riducendo rifiuti e CO₂."
+          ]
+        }
       ]
     },
     {
-      "title": "🎼 ff.58 Le banane inquinano troppo?",
-      "buttonLabel": "🎼 ff.58 Le banane inquinano troppo?",
-      "urlSlug": "ff58-le-banane-inquinano-troppo",
-      "substackLink": "https://fortissimo.substack.com/p/ff58-le-banane-inquinano-troppo",
-      "cards": [
-        { "title": "💨 Emissioni di CO2 e il costo della vita umana", "tags": ["🍃","💸"], "contentBlocks": [
-          {"type":"paragraphs","content":["Quanto costa una vita umana?","Andare in bici inquina di più di una macchina (se mangiamo solo asparagi)","Il costo (in CO2-eq) di un incidente stradale"]},
-          {"type":"darkerParagraphs","content":["🔟 ff.58.1 Il costo di una vita umana...","🕹️ ff.58.2 Minecraft delle emissioni...","💲 ff.58.4 Spendere un dollaro..."]}
-        ]}
+      "title": "👅 ff.122.5 La lingua della natura",
+      "tags": ["🧠","👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Google sviluppa DolphinGemma per decifrare il linguaggio dei delfini: un passo verso la comunicazione fra specie grazie all’AI."
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.19 L'Hamburger di Hemingway",
+  "buttonLabel": "🎼 ff.19 L'Hamburger di Hemingway",
+  "urlSlug": "ff19-lhambuger-di-hemingway",
+  "substackLink": "https://fortissimo.substack.com/p/ff17-lhambuger-di-hemingway",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["🍽","🍃","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Le mucche inquinano come gli Stati Uniti?",
+            "Le silenziose fughe di gas sono un problema per il clima?",
+            "Come mangiava il suo hamburger, Hemingway?"
+          ]
+        }
       ]
     },
     {
-      "title": "🎼 ff.1 Clima",
-      "buttonLabel": "🎼 ff.1 Clima",
-      "urlSlug": "ff1-clima",
-      "substackLink": "https://fortissimo.substack.com/p/-ff1-clima",
-      "cards": [
-        { "title": "🌍 COP26 e la corsa verso lo zero", "tags": ["🍃","🚕","💸"], "contentBlocks": [
-          {"type":"paragraphs","content":["COP26, energie rinnovabili, micro-mobilità","Un bellissimo progetto artistico per dare una fresca identità alla conferenza di Glasgow.","Bill Gates."]},
-          {"type":"darkerParagraphs","content":["📉 ff.1.2 Da 51 miliardi a 0...","🛴 ff.1.3 Gli scooter elettrici...","🏭 ff.1.4 Catturare CO2 sarà importante..."]}
-        ]}
+      "title": "💦 ff.19.1 Flatulenze inquinanti",
+      "tags": ["🍃","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Le emissioni di metano bovino superano quelle degli USA, equivalenti al settore trasporti globale. I cibi vegetali inquinano 10× meno degli animali."
+          ]
+        }
       ]
     },
     {
-      "title": "🎼 ff.12 Sole, cuore e amore",
-      "buttonLabel": "🎼 ff.12 Sole, cuore e amore",
-      "urlSlug": "ff10-sole-cuore-e-amore",
-      "substackLink": "https://fortissimo.substack.com/p/-ff10-sole-cuore-e-amore",
-      "cards": [
-        { "title": "🌞 Energia rinnovabile e il futuro del Festivalbar", "tags": ["🍃","🧠"], "contentBlocks": [
-          {"type":"paragraphs","content":["Dove viene prodotta l’energia solare, nel mondo?","Quali progressi ci sono stati nella fusione nucleare?","Finiremo mai le risorse su questo pale blue dot?"]},
-          {"type":"darkerParagraphs","content":["🌬️ ff.11.1 La rivincita delle rinnovabili...","🇨🇳 ff.11.2 La Cina fa storia a sé?...","🦾 ff.11.3 I robot ci assistono...","🌞 ff.10.4 Soldi fusi...","🔚 ff.11.5 Finire le risorse..."]}
-        ]}
+      "title": "🍔 ff.19.2 L'hamburger preferito di Hemingway",
+      "tags": ["🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Carne macinata, cipolle, capperi e India Relish: crosta croccante fuori, cuore morbido, senza salse extra."
+          ]
+        }
       ]
     },
     {
-      "title": "🎼 ff.16 Sossoldi, la transizione ecologica",
-      "buttonLabel": "🎼 ff.16 Sossoldi, la transizione ecologica",
-      "urlSlug": "ff16-sossoldi-la-transizione-ecologica",
-      "substackLink": "https://fortissimo.substack.com/p/-ff15-sossoldi-la-transizione-ecologica",
-      "cards": [
-        { "title": "💰 Quanto costerà raggiungere net-zero?", "tags": ["💸","🍃","🧠"], "contentBlocks": [
-          {"type":"paragraphs","content":["I 700 miliardi investiti nel 2021 per la transizione ecologica sono sufficienti?","Perché il mercato delle emissioni è inefficiente?","Quali aziende domineranno la transizione?"]},
-          {"type":"darkerParagraphs","content":["💰 ff.16.1 Tanti trillioni di dollari...","🌉 ff.16.2 Il costo delle infrastrutture...","⚫ ff.16.3 Il mercato (nero) della CO2...","🆕 ff.16.4 Quali startup monitorare?..."]}
-        ]}
+      "title": "♨️ ff.19.3 Fornelli assassini",
+      "tags": ["🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "I fornelli a gas perdono metano anche da spenti: l’impatto annuo equivale a 500 000 auto negli Stati Uniti."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🐖 ff.19.4 Scelte sostenibili cool",
+      "tags": ["🎨","🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Il packaging pop di La Vie (rosa-verde) dimostra che un design accattivante spinge i consumatori verso alternative sostenibili."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💉 ff.19.5 Carne stampata 3D",
+      "tags": ["🧠","🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Redefine Meat stampa hamburger vegani con fibre muscolari realistiche, avvicinando gusto e texture alla carne animale."
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.25 La fattoria degli animali",
+  "buttonLabel": "🎼 ff.25 La fattoria degli animali",
+  "urlSlug": "ff25-la-fattoria-degli-animali",
+  "substackLink": "https://fortissimo.substack.com/p/ff25-la-fattoria-degli-animali",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💊","🧠","👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Possiamo trapiantare il cuore di un animale in un essere umano?",
+            "Tradurremo i grugniti dei maiali?",
+            "Cosa possiamo imparare dal creatore dell’Amazon per gli animali?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🐖 ff.25.1 Trapianti di cuore di maiale",
+      "tags": ["💊"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Grazie a editing genetico il primo trapianto cardiaco da maiale a uomo evita il rigetto, ma permangono rischi d’infezione zoonotica."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🫀 ff.25.2 La dimensione del problema dei trapianti",
+      "tags": ["💊","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Negli USA 60 000 persone in lista d’attesa: i reni rappresentano l’83 % della domanda, ma l’offerta copre solo il 65 %."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🙊 ff.25.3 Tradurre il linguaggio suino",
+      "tags": ["🧠","👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Un’AI raggiunge il 90 % di accuratezza nel collegare i grugniti ai diversi stati emotivi dei maiali."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📦 ff.25.4 Amazon per gli animali: una bolla?",
+      "tags": ["💸","👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Chewy, ‘e-commerce per pet’, ha perso il 50 % di capitalizzazione nel 2022: il boom pandemic-pets si sta ridimensionando."
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.39 Come ti vesti?",
+  "buttonLabel": "🎼 ff.39 Come ti vesti?",
+  "urlSlug": "ff39-come-ti-vesti",
+  "substackLink": "https://fortissimo.substack.com/p/ff39-come-ti-vesti",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["🎨","🍃","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Qual è l’impatto della moda sul clima?",
+            "Vinted aiuterà il pianeta?",
+            "Come produrre un vestito robotico (partendo da un NFT)?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🏭 ff.39.1 L’impatto del fast fashion sul clima",
+      "tags": ["🍃","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Il tessile genera 5-10 % delle emissioni globali; 500 000 t di capi diventano micro-plastiche oceaniche ogni anno."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🔄 ff.39.2 Vinted: una soluzione?",
+      "tags": ["💸","🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Nel 2021 l’usato online USA valeva quasi metà del giro d’affari Inditex, segno di crescita esponenziale del second-hand."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "⚗️ ff.39.3 Un mix di scienza, tecnologia e moda",
+      "tags": ["🎨","💻"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Bella Hadid sfila in un abito spray-on polimerico; DALL-E ispira collezioni NFT-to-real: la moda diventa laboratorio hi-tech."
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.58 Le banane inquinano troppo?",
+  "buttonLabel": "🎼 ff.58 Le banane inquinano troppo?",
+  "urlSlug": "ff58-le-banane-inquinano-troppo",
+  "substackLink": "https://fortissimo.substack.com/p/ff58-le-banane-inquinano-troppo",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["🍃","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Quanto costa una vita umana?",
+            "Andare in bici inquina più dell’auto (se vivi di asparagi)",
+            "Il costo (in CO₂-eq) di un incidente stradale"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🔟 ff.58.1 Il costo di una vita umana",
+      "tags": ["🍃","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Una vita media ‘vale’ 150 t CO₂; Mike Berners-Lee lo equipara al 5 % del PIL britannico."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🕹️ ff.58.2 Minecraft delle emissioni",
+      "tags": ["🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "53 kg CO₂eq in bici con banane, 1 100 kg in aereo NYC-Niagara: le scelte di trasporto cambiano drasticamente l’impronta."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💲 ff.58.4 Spendere un dollaro",
+      "tags": ["💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Ogni dollaro speso genera 0.1-1 kg CO₂: frugalità + investimenti verdi riducono l’impatto personale."
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.1 Clima",
+  "buttonLabel": "🎼 ff.1 Clima",
+  "urlSlug": "ff1-clima",
+  "substackLink": "https://fortissimo.substack.com/p/-ff1-clima",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["🍃","🚕","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "COP26, energie rinnovabili, micro-mobilità",
+            "Identità artistica fresca per la conferenza di Glasgow",
+            "Bill Gates e la road-map ‘zero’"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📉 ff.1.2 Da 51 miliardi a 0",
+      "tags": ["🍃","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Gates: serve azzerare 51 Gt CO₂ annue per evitare disastri climatici; innovazione + investimenti in R&D sono fondamentali."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🛴 ff.1.3 Gli scooter elettrici ci salveranno?",
+      "tags": ["🚕","🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Negli USA l’80 % degli spostamenti è <16 km: micro-mobilità elettrica può ridurre drasticamente le emissioni urbane."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🏭 ff.1.4 Catturare CO₂ sarà importante",
+      "tags": ["🍃","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Cattura CO₂ in cemento e acciaio costa ~100 $ / toggi; innovazione ne abbasserà il prezzo, rendendola leva chiave."
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.12 Sole, cuore e amore",
+  "buttonLabel": "🎼 ff.12 Sole, cuore e amore",
+  "urlSlug": "ff10-sole-cuore-e-amore",
+  "substackLink": "https://fortissimo.substack.com/p/-ff10-sole-cuore-e-amore",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["🍃","🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Dove viene prodotta l’energia solare nel mondo?",
+            "I progressi recenti nella fusione nucleare",
+            "Finiremo mai le risorse sul nostro pale blue dot?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌬️ ff.11.1 La rivincita delle rinnovabili",
+      "tags": ["🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Nel 2020 l’eolico ha aggiunto +163 TWh, superando solare e idro: le rinnovabili accelerano la decarbonizzazione."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🇨🇳 ff.11.2 La Cina fa storia a sé?",
+      "tags": ["🍃","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Nel 2021 la Cina ha installato 227 GW di solare—più del doppio della capacità globale 2020."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🦾 ff.11.3 I robot ci assistono",
+      "tags": ["💻","🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Automazione e robot abbassano i costi di installazione dei pannelli, accelerando l’adozione delle rinnovabili."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌞 ff.10.4 Soldi fusi",
+      "tags": ["💸","🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Commonwealth Fusion Systems ha raccolto 1,8 mld $ (2021): obiettivo plasma positivo entro il 2025."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🔚 ff.11.5 Finire le risorse",
+      "tags": ["🧠","🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Naval Ravikant: la creatività umana ridefinirà sempre cosa consideriamo ‘risorsa’, perciò non le esauriremo davvero."
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.16 Sossoldi, la transizione ecologica",
+  "buttonLabel": "🎼 ff.16 Sossoldi, la transizione ecologica",
+  "urlSlug": "ff16-sossoldi-la-transizione-ecologica",
+  "substackLink": "https://fortissimo.substack.com/p/-ff15-sossoldi-la-transizione-ecologica",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💸","🍃","🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "I 700 mld investiti nel 2021 per la transizione ecologica sono sufficienti?",
+            "Perché il mercato delle emissioni è inefficiente?",
+            "Quali aziende domineranno la transizione?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💰 ff.16.1 Tanti trillioni di dollari",
+      "tags": ["💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "McKinsey: servono 9 trilioni $/anno fino al 2050 (≈10 % del PIL globale) per centrare gli obiettivi di COP26."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌉 ff.16.2 Il costo delle infrastrutture",
+      "tags": ["💸","🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "50 trilioni $ entro il 2050 per reti, centrali e stazioni di ricarica: il 60 % va in elettrificazione dei trasporti."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "⚫ ff.16.3 Il mercato (nero) della CO₂",
+      "tags": ["💸","🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Il prezzo varia da 7 $/t in Cina a >150 $/t in Svezia; servirebbero ≥50 €/t per stimolare gli investimenti verdi."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🆕 ff.16.4 Quali startup monitorare?",
+      "tags": ["💸","💻"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Mobilità, energia e cibo: nel 2021 le climate-startup hanno raccolto 40 mld $, +20 % ogni quadrimestre."
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+        
       ]
     }
   ]
