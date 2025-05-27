@@ -1,169 +1,162 @@
-<!DOCTYPE html><html lang="it">
+<!DOCTYPE html>
+<html lang="it">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>Futuro Fortissimo – Explorer</title><!-- Tailwind – play CDN for rapid prototyping -->
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-
-<!-- PWA meta (optional) -->
-<link rel="manifest" href="/manifest.json" />
-<meta name="theme-color" content="#111827" />
-
-<style>
-  /* Smooth accordion animation */
-  details > summary { list-style: none; cursor: pointer; }
-  details[open] summary ~ * { animation: sweep 0.3s ease-in-out; }
-  @keyframes sweep { 0% { opacity: 0; transform: translateY(-0.25rem); } 100% { opacity: 1; transform: translateY(0); } }
-  summary::-webkit-details-marker { display: none; } /* remove default triangle */
-</style>
-
-  </head>
-  <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-50 font-inter antialiased selection:bg-indigo-300/40">
-    <!-- Header -->
-    <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-gray-950/80 border-b border-gray-200 dark:border-gray-800">
-      <div class="max-w-3xl mx-auto flex items-center justify-between px-4 h-14">
-        <h1 class="text-lg font-semibold tracking-tight">📚 Futuro Fortissimo</h1>
-        <button id="themeToggle" aria-label="Toggle dark mode" class="w-9 h-9 grid place-content-center rounded-full hover:bg-gray-200/70 dark:hover:bg-gray-700/60 transition">
-          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"></svg>
-        </button>
-      </div>
-    </header><!-- Search bar -->
-<section class="max-w-3xl mx-auto px-4 pt-4 pb-2">
-  <label class="relative block">
-    <span class="sr-only">Cerca</span>
-    <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 014 4H4a4 4 0 014-4zm-5 8a5 5 0 1110 0A5 5 0 013 12z" clip-rule="evenodd"/></svg>
-    </span>
-    <input id="searchInput" class="w-full placeholder:italic placeholder:text-gray-400 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40" placeholder="Cerca titoli, emoji, parole chiave…" type="text" />
-  </label>
-</section>
-
-<!-- Main container -->
-<main id="app" class="max-w-3xl mx-auto px-4 pb-24 flex flex-col gap-4"></main>
-
-<!-- Footer -->
-<footer class="fixed bottom-0 inset-x-0 text-center py-2 text-xs text-gray-500 dark:text-gray-400 backdrop-blur bg-white/70 dark:bg-gray-950/80 border-t border-gray-200 dark:border-gray-800">
-  Made with ♥ for Michele Merelli – v0.2
-</footer>
-
-<script>
-  // NEW: relative path to bundled JSON file
-  const DATA_ENDPOINT = "./newsletter_data.json"; // same folder as index.html
-
-  // Fetch newsletter JSON (local or remote)
-  async function getNewsletterData() {
-    try {
-      const res = await fetch(DATA_ENDPOINT);
-      if (!res.ok) throw new Error("Bad response: " + res.status);
-      return await res.json();
-    } catch (err) {
-      console.error("Newsletter fetch failed, falling back to sample", err);
-      return {
-        publications: [
-          {
-            title: "🧪 ff.000 Demo Issue",
-            buttonLabel: "🧪 ff.000 Demo Issue",
-            urlSlug: "ff000-demo-issue",
-            substackLink: "https://fortissimo.substack.com/p/ff000-demo-issue",
-            cards: [
-              { title: "🚀 Prova di concetto", contentBlocks: [{ type: "paragraphs", content: ["Questo è un demo fallback in assenza di JSON valido."] }] }
-            ]
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>futuro fortissimo – explorer</title>
+    <!-- Google Font → Inter (better legibility) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind Play CDN + typography plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            },
+            boxShadow: {
+              neu: '4px 4px 8px rgba(0,0,0,0.1), -4px -4px 8px rgba(255,255,255,0.7)',
+              neuInset: 'inset 4px 4px 8px rgba(0,0,0,0.1), inset -4px -4px 8px rgba(255,255,255,0.7)'
+            }
           }
-        ]
-      };
-    }
-  }
+        }
+      }
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      mark { @apply bg-yellow-300/60 rounded px-0.5; }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-50 font-sans antialiased">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-gray-100 dark:bg-gray-900/80 backdrop-blur border-b border-gray-200 dark:border-gray-800 py-3">
+      <div class="max-w-3xl mx-auto flex items-center justify-center gap-2 px-4">
+        <img src="logo.png" alt="logo" class="h-7 w-auto" />
+        <h1 class="italic lowercase text-xl font-semibold tracking-tight">futuro fortissimo</h1>
+      </div>
+    </header>
 
-  // Render publications
-  function renderPublications(data) {
-    const container = document.getElementById("app");
-    container.innerHTML = "";
+    <!-- SEARCH + FILTERS -->
+    <section class="max-w-3xl mx-auto px-4 pt-4 pb-2 space-y-3">
+      <div class="relative">
+        <input id="searchInput" type="text" placeholder="Cerca…" class="w-full rounded-full py-2 pl-10 pr-4 shadow-neu bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 014 4H4a4 4 0 014-4zm-5 8a5 5 0 1110 0A5 5 0 013 12z" clip-rule="evenodd" /></svg>
+      </div>
+      <!-- Emoji filter rows -->
+      <div class="flex flex-wrap gap-2 text-xl" id="topicFilters">
+        <!-- Top-level filters -->
+        <span class="filter-pill" data-filter="💻">💻</span>
+        <span class="filter-pill" data-filter="🍃">🍃</span>
+        <span class="filter-pill" data-filter="❤️">❤️</span>
+      </div>
+      <div class="flex flex-wrap gap-2 text-xl" id="subFilters">
+        <span class="filter-pill" data-filter="💸">💸</span>
+        <span class="filter-pill" data-filter="⚽">⚽</span>
+        <span class="filter-pill" data-filter="🍽">🍽</span>
+        <span class="filter-pill" data-filter="🧠">🧠</span>
+        <span class="filter-pill" data-filter="💊">💊</span>
+        <span class="filter-pill" data-filter="🎨">🎨</span>
+        <span class="filter-pill" data-filter="🚕">🚕</span>
+        <span class="filter-pill" data-filter="🥽">🥽</span>
+        <span class="filter-pill" data-filter="👥">👥</span>
+        <span class="filter-pill" data-filter="💆">💆</span>
+      </div>
+    </section>
 
-    data.publications.forEach((pub, idx) => {
-      const details = document.createElement("details");
-      details.className = "group rounded-2xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden";
-      if (idx === 0 && window.matchMedia("(min-width: 640px)").matches) details.open = true;
+    <!-- PUBLICATIONS -->
+    <main id="app" class="max-w-3xl mx-auto px-4 pb-28 flex flex-col gap-4"></main>
 
-      const summary = document.createElement("summary");
-      summary.className = "cursor-pointer select-none list-none outline-none p-4 flex items-center justify-between gap-2";
-      summary.innerHTML = `<span class="font-medium text-base sm:text-lg flex-1">${pub.title}</span><svg xmlns='http://www.w3.org/2000/svg' class='w-5 h-5 text-gray-400 transition-transform group-open:rotate-180' viewBox='0 0 20 20' fill='currentColor'><path fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 10.584l3.71-3.354a.75.75 0 111.02 1.104l-4.25 3.839a.75.75 0 01-1.02 0l-4.25-3.84a.75.75 0 01.02-1.103z' clip-rule='evenodd'/></svg>`;
-      details.appendChild(summary);
+    <!-- FOOTER -->
+    <footer class="fixed bottom-0 inset-x-0 text-center py-2 text-xs text-gray-500 dark:text-gray-400 bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur border-t border-gray-200 dark:border-gray-800">
+      v0.3 – made with ♥
+    </footer>
 
-      const inner = document.createElement("div");
-      inner.className = "divide-y divide-gray-100 dark:divide-gray-700";
+    <script>
+      const DATA_ENDPOINT = './newsletter_data.json';
+      const activeFilters = new Set();
 
-      pub.cards.forEach(card => {
-        const cardDiv = document.createElement("div");
-        cardDiv.className = "p-4 space-y-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm";
-        const title = document.createElement("h3");
-        title.className = "font-semibold text-indigo-600 dark:text-indigo-400";
-        title.textContent = card.title;
-        cardDiv.appendChild(title);
-        card.contentBlocks.forEach(block => {
-          const wrapper = document.createElement("div");
-          wrapper.className = block.type === "darkerParagraphs" ? "text-sm text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 p-3 rounded" : "prose prose-sm dark:prose-invert";
-          block.content.forEach(line => {
-            const p = document.createElement("p");
-            p.textContent = line;
-            wrapper.appendChild(p);
+      // Fetch JSON
+      async function getData() {
+        const res = await fetch(DATA_ENDPOINT);
+        return res.json();
+      }
+
+      // UTIL highlight search term
+      function highlight(text, term) {
+        if (!term) return text;
+        return text.replace(new RegExp(`(${term})`, 'gi'), '<mark>$1</mark>');
+      }
+
+      // Render cards
+      function render(data, term = '') {
+        const wrapper = document.getElementById('app');
+        wrapper.innerHTML = '';
+
+        data.publications.forEach(pub => {
+          // Filter by active emoji filters
+          if (activeFilters.size) {
+            const has = [...activeFilters].some(f => pub.cards.some(c => c.title.includes(f)));
+            if (!has) return;
+          }
+          // Search term filtering
+          const matchPub = pub.title.toLowerCase().includes(term);
+          const cards = pub.cards.filter(c => {
+            const inTitle = c.title.toLowerCase().includes(term);
+            const inContent = c.contentBlocks.some(b => b.content.some(l => l.toLowerCase().includes(term)));
+            return term ? (inTitle || inContent) : true;
           });
-          cardDiv.appendChild(wrapper);
+          if (term && !matchPub && cards.length === 0) return;
+
+          const cardEl = document.createElement('article');
+          cardEl.className = 'shadow-neu rounded-2xl p-4 bg-gray-100 dark:bg-gray-800 hover:shadow-neuInset transition cursor-pointer';
+          cardEl.innerHTML = `
+            <h2 class="font-semibold text-lg mb-2">${highlight(pub.title, term)}</h2>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300">
+              ${cards.map(c => {
+                // first block paragraphs to bullets (compact)
+                const points = c.contentBlocks[0].content.slice(0,3).map(p => `<li>${highlight(p, term)}</li>`).join('');
+                return `<li class="ml-0 font-medium">${highlight(c.title, term)}<ul class="list-disc list-inside ml-4 mt-1">${points}</ul></li>`;
+              }).join('')}
+            </ul>`;
+          cardEl.addEventListener('click', () => window.open(pub.substackLink, '_blank'));
+          wrapper.appendChild(cardEl);
         });
-        inner.appendChild(cardDiv);
-      });
-      const link = document.createElement("a");
-      link.href = pub.substackLink;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.className = "block text-indigo-600 dark:text-indigo-400 text-sm font-medium m-4 underline-offset-2 hover:underline";
-      link.textContent = "Leggi su Substack →";
-      inner.appendChild(link);
+      }
 
-      details.appendChild(inner);
-      container.appendChild(details);
-    });
-  }
+      // Init filters buttons
+      function setupFilters() {
+        document.querySelectorAll('.filter-pill').forEach(btn => {
+          btn.className += ' px-2 py-1 rounded-full shadow-neu cursor-pointer select-none bg-gray-100 dark:bg-gray-800';
+          btn.addEventListener('click', () => {
+            const val = btn.dataset.filter;
+            if (activeFilters.has(val)) {
+              activeFilters.delete(val);
+              btn.classList.remove('ring-2','ring-indigo-400');
+            } else {
+              activeFilters.add(val);
+              btn.classList.add('ring-2','ring-indigo-400');
+            }
+            apply();
+          });
+        });
+      }
 
-  // Search setup (simple contains across titles + lines)
-  function setupSearch(data) {
-    const input = document.getElementById("searchInput");
-    input.addEventListener("input", () => {
-      const term = input.value.toLowerCase();
-      const filtered = { publications: data.publications.filter(pub => {
-        const matchPub = pub.title.toLowerCase().includes(term);
-        const cards = pub.cards.filter(c => c.title.toLowerCase().includes(term) || c.contentBlocks.some(b => b.content.some(l => l.toLowerCase().includes(term))));
-        if (matchPub || cards.length) pub = { ...pub, cards }; else return false;
-        return true;
-      }) };
-      renderPublications(filtered);
-    });
-  }
+      // Apply rendering on search / filter
+      let DATA_CACHE;
+      function apply() { render(DATA_CACHE, document.getElementById('searchInput').value.toLowerCase()); }
 
-  // Theme toggle
-  function setupThemeToggle() {
-    const btn = document.getElementById("themeToggle");
-    const icon = document.getElementById("themeIcon");
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const apply = dark => {
-      document.documentElement.classList.toggle("dark", dark);
-      icon.innerHTML = dark ? '<path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7.5 7.5 0 0021 12.79z" />' : '<path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1M19.07 4.93l-.7.7M6.34 17.66l-.7.7M4.93 4.93l.7.7M17.66 17.66l.7.7" />';
-    };
-    const stored = localStorage.getItem("ff-theme");
-    apply(stored ? stored === "dark" : mq.matches);
-    btn.addEventListener("click", () => {
-      const dark = !document.documentElement.classList.contains("dark");
-      localStorage.setItem("ff-theme", dark ? "dark" : "light");
-      apply(dark);
-    });
-  }
+      // Highlight when typing
+      document.getElementById('searchInput').addEventListener('input', apply);
 
-  (async () => {
-    const data = await getNewsletterData();
-    renderPublications(data);
-    setupSearch(data);
-    setupThemeToggle();
-  })();
-</script>
-
+      // Bootstrap
+      (async () => {
+        DATA_CACHE = await getData();
+        setupFilters();
+        apply();
+      })();
+    </script>
   </body>
 </html>
