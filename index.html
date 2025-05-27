@@ -2,28 +2,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>Futuro Fortissimo – Explorer</title><!-- Tailwind CDN (play version for rapid prototyping) -->
+    <title>Futuro Fortissimo – Explorer</title><!-- Tailwind – play CDN for rapid prototyping -->
 <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 
-<!-- PWA meta (optional, keeps it "app‑like") -->
+<!-- PWA meta (optional) -->
 <link rel="manifest" href="/manifest.json" />
 <meta name="theme-color" content="#111827" />
 
 <style>
   /* Smooth accordion animation */
-  details > summary {
-    list-style: none;
-    cursor: pointer;
-  }
-  details[open] summary ~ * {
-    animation: sweep 0.3s ease-in-out;
-  }
-  @keyframes sweep {
-    0% { opacity: 0; transform: translateY(-0.25rem); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  /* Hide default disclosure triangle */
-  summary::-webkit-details-marker { display: none; }
+  details > summary { list-style: none; cursor: pointer; }
+  details[open] summary ~ * { animation: sweep 0.3s ease-in-out; }
+  @keyframes sweep { 0% { opacity: 0; transform: translateY(-0.25rem); } 100% { opacity: 1; transform: translateY(0); } }
+  summary::-webkit-details-marker { display: none; } /* remove default triangle */
 </style>
 
   </head>
@@ -31,11 +22,9 @@
     <!-- Header -->
     <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-gray-950/80 border-b border-gray-200 dark:border-gray-800">
       <div class="max-w-3xl mx-auto flex items-center justify-between px-4 h-14">
-        <h1 class="text-lg font-semibold tracking-tight">📚 Futuro Fortissimo</h1>
+        <h1 class="text-lg font-semibold tracking-tight">📚 Futuro Fortissimo</h1>
         <button id="themeToggle" aria-label="Toggle dark mode" class="w-9 h-9 grid place-content-center rounded-full hover:bg-gray-200/70 dark:hover:bg-gray-700/60 transition">
-          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1M19.07 4.93l-.7.7M6.34 17.66l-.7.7M4.93 4.93l.7.7M17.66 17.66l.7.7" />
-          </svg>
+          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"></svg>
         </button>
       </div>
     </header><!-- Search bar -->
@@ -43,9 +32,7 @@
   <label class="relative block">
     <span class="sr-only">Cerca</span>
     <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M8 4a4 4 0 014 4H4a4 4 0 014-4zm-5 8a5 5 0 1110 0A5 5 0 013 12z" clip-rule="evenodd" />
-      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 014 4H4a4 4 0 014-4zm-5 8a5 5 0 1110 0A5 5 0 013 12z" clip-rule="evenodd"/></svg>
     </span>
     <input id="searchInput" class="w-full placeholder:italic placeholder:text-gray-400 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/40" placeholder="Cerca titoli, emoji, parole chiave…" type="text" />
   </label>
@@ -56,23 +43,21 @@
 
 <!-- Footer -->
 <footer class="fixed bottom-0 inset-x-0 text-center py-2 text-xs text-gray-500 dark:text-gray-400 backdrop-blur bg-white/70 dark:bg-gray-950/80 border-t border-gray-200 dark:border-gray-800">
-  Made with ♥ for Michele Merelli – v0.1
+  Made with ♥ for Michele Merelli – v0.2
 </footer>
 
 <script>
-  const DATA_ENDPOINT = "/api/newsletter"; // <-- adjust to your backend route (can also be a local JSON file)
+  // NEW: relative path to bundled JSON file
+  const DATA_ENDPOINT = "./newsletter_data.json"; // same folder as index.html
 
-  /**
-   * Fetches the newsletter JSON. Falls back to a small inline example
-   * so that the UI still renders even offline / first‑load.
-   */
+  // Fetch newsletter JSON (local or remote)
   async function getNewsletterData() {
     try {
       const res = await fetch(DATA_ENDPOINT);
-      if (!res.ok) throw new Error("Bad response");
+      if (!res.ok) throw new Error("Bad response: " + res.status);
       return await res.json();
     } catch (err) {
-      console.warn("Using fallback data:", err.message);
+      console.error("Newsletter fetch failed, falling back to sample", err);
       return {
         publications: [
           {
@@ -81,13 +66,7 @@
             urlSlug: "ff000-demo-issue",
             substackLink: "https://fortissimo.substack.com/p/ff000-demo-issue",
             cards: [
-              {
-                title: "🚀 Prova di concetto",
-                contentBlocks: [
-                  { type: "paragraphs", content: ["Questa è una card di esempio.", "Supporta vari blocchi di contenuto."] },
-                  { type: "darkerParagraphs", content: ["Blocco secondario con stile differente."] }
-                ]
-              }
+              { title: "🚀 Prova di concetto", contentBlocks: [{ type: "paragraphs", content: ["Questo è un demo fallback in assenza di JSON valido."] }] }
             ]
           }
         ]
@@ -95,9 +74,7 @@
     }
   }
 
-  /**
-   * Renders the publications list into #app
-   */
+  // Render publications
   function renderPublications(data) {
     const container = document.getElementById("app");
     container.innerHTML = "";
@@ -105,15 +82,11 @@
     data.publications.forEach((pub, idx) => {
       const details = document.createElement("details");
       details.className = "group rounded-2xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden";
-
-      // Expand first publication by default on large screens
       if (idx === 0 && window.matchMedia("(min-width: 640px)").matches) details.open = true;
 
       const summary = document.createElement("summary");
       summary.className = "cursor-pointer select-none list-none outline-none p-4 flex items-center justify-between gap-2";
-      summary.innerHTML = `
-        <span class="font-medium text-base sm:text-lg flex-1">${pub.title}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.584l3.71-3.354a.75.75 0 111.02 1.104l-4.25 3.839a.75.75 0 01-1.02 0l-4.25-3.84a.75.75 0 01.02-1.103z" clip-rule="evenodd" /></svg>`;
+      summary.innerHTML = `<span class="font-medium text-base sm:text-lg flex-1">${pub.title}</span><svg xmlns='http://www.w3.org/2000/svg' class='w-5 h-5 text-gray-400 transition-transform group-open:rotate-180' viewBox='0 0 20 20' fill='currentColor'><path fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 10.584l3.71-3.354a.75.75 0 111.02 1.104l-4.25 3.839a.75.75 0 01-1.02 0l-4.25-3.84a.75.75 0 01.02-1.103z' clip-rule='evenodd'/></svg>`;
       details.appendChild(summary);
 
       const inner = document.createElement("div");
@@ -122,27 +95,22 @@
       pub.cards.forEach(card => {
         const cardDiv = document.createElement("div");
         cardDiv.className = "p-4 space-y-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm";
-
         const title = document.createElement("h3");
         title.className = "font-semibold text-indigo-600 dark:text-indigo-400";
         title.textContent = card.title;
         cardDiv.appendChild(title);
-
         card.contentBlocks.forEach(block => {
-          const pWrap = document.createElement("div");
-          pWrap.className = block.type === "darkerParagraphs" ? "text-sm text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 p-3 rounded" : "prose prose-sm dark:prose-invert";
+          const wrapper = document.createElement("div");
+          wrapper.className = block.type === "darkerParagraphs" ? "text-sm text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 p-3 rounded" : "prose prose-sm dark:prose-invert";
           block.content.forEach(line => {
             const p = document.createElement("p");
             p.textContent = line;
-            pWrap.appendChild(p);
+            wrapper.appendChild(p);
           });
-          cardDiv.appendChild(pWrap);
+          cardDiv.appendChild(wrapper);
         });
-
         inner.appendChild(cardDiv);
       });
-
-      // Link to the full issue
       const link = document.createElement("a");
       link.href = pub.substackLink;
       link.target = "_blank";
@@ -156,52 +124,39 @@
     });
   }
 
-  /**
-   * Simple fuzzy search: filters publications + cards by search term
-   */
+  // Search setup (simple contains across titles + lines)
   function setupSearch(data) {
     const input = document.getElementById("searchInput");
     input.addEventListener("input", () => {
       const term = input.value.toLowerCase();
-      const filtered = {
-        publications: data.publications
-          .map(pub => {
-            const matchPub = pub.title.toLowerCase().includes(term);
-            const cards = pub.cards.filter(c => c.title.toLowerCase().includes(term) || c.contentBlocks.some(b => b.content.some(l => l.toLowerCase().includes(term))));
-            return matchPub || cards.length ? { ...pub, cards } : null;
-          })
-          .filter(Boolean)
-      };
+      const filtered = { publications: data.publications.filter(pub => {
+        const matchPub = pub.title.toLowerCase().includes(term);
+        const cards = pub.cards.filter(c => c.title.toLowerCase().includes(term) || c.contentBlocks.some(b => b.content.some(l => l.toLowerCase().includes(term))));
+        if (matchPub || cards.length) pub = { ...pub, cards }; else return false;
+        return true;
+      }) };
       renderPublications(filtered);
     });
   }
 
-  /**
-   * Theme toggler (light ↔ dark) saved in localStorage
-   */
+  // Theme toggle
   function setupThemeToggle() {
-    const button = document.getElementById("themeToggle");
+    const btn = document.getElementById("themeToggle");
     const icon = document.getElementById("themeIcon");
-    const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    function applyTheme(dark) {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const apply = dark => {
       document.documentElement.classList.toggle("dark", dark);
-      icon.innerHTML = dark
-        ? '<path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7.5 7.5 0 0021 12.79z" />'
-        : '<path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1M19.07 4.93l-.7.7M6.34 17.66l-.7.7M4.93 4.93l.7.7M17.66 17.66l.7.7" />';
-    }
-
+      icon.innerHTML = dark ? '<path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7.5 7.5 0 0021 12.79z" />' : '<path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1M19.07 4.93l-.7.7M6.34 17.66l-.7.7M4.93 4.93l.7.7M17.66 17.66l.7.7" />';
+    };
     const stored = localStorage.getItem("ff-theme");
-    applyTheme(stored ? stored === "dark" : darkQuery.matches);
-
-    button.addEventListener("click", () => {
-      const isDark = document.documentElement.classList.toggle("dark");
-      localStorage.setItem("ff-theme", isDark ? "dark" : "light");
-      applyTheme(isDark);
+    apply(stored ? stored === "dark" : mq.matches);
+    btn.addEventListener("click", () => {
+      const dark = !document.documentElement.classList.contains("dark");
+      localStorage.setItem("ff-theme", dark ? "dark" : "light");
+      apply(dark);
     });
   }
 
-  /* Init */
   (async () => {
     const data = await getNewsletterData();
     renderPublications(data);
