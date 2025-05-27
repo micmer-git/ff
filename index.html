@@ -1,162 +1,149 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>futuro fortissimo – explorer</title>
-    <!-- Google Font → Inter (better legibility) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Tailwind Play CDN + typography plugin -->
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-            },
-            boxShadow: {
-              neu: '4px 4px 8px rgba(0,0,0,0.1), -4px -4px 8px rgba(255,255,255,0.7)',
-              neuInset: 'inset 4px 4px 8px rgba(0,0,0,0.1), inset -4px -4px 8px rgba(255,255,255,0.7)'
-            }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>futuro fortissimo – explorer</title>
+
+  <!-- Google Sans (used in Google I/O) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Google Sans"', 'Roboto', 'ui-sans-serif', 'system-ui'],
+          },
+          colors: {
+            ioBlue: '#CFE8FF',
+            ioCard: '#F5F7FA',
+          },
+          boxShadow: {
+            neu: '8px 8px 16px rgba(0,0,0,0.06), -8px -8px 16px rgba(255,255,255,0.7)',
+            neuInset: 'inset 4px 4px 8px rgba(0,0,0,0.08), inset -4px -4px 8px rgba(255,255,255,0.6)'
           }
         }
       }
-    </script>
-    <style>
-      html { scroll-behavior: smooth; }
-      mark { @apply bg-yellow-300/60 rounded px-0.5; }
-    </style>
-  </head>
-  <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-50 font-sans antialiased">
-    <!-- HEADER -->
-    <header class="sticky top-0 z-50 bg-gray-100 dark:bg-gray-900/80 backdrop-blur border-b border-gray-200 dark:border-gray-800 py-3">
-      <div class="max-w-3xl mx-auto flex items-center justify-center gap-2 px-4">
-        <img src="logo.png" alt="logo" class="h-7 w-auto" />
-        <h1 class="italic lowercase text-xl font-semibold tracking-tight">futuro fortissimo</h1>
-      </div>
-    </header>
+    }
+  </script>
+  <style>
+    body { background-color: #CFE8FF; }
+    mark { @apply bg-yellow-300/60 rounded px-0.5; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+  <!-- Header -->
+  <header class="py-4">
+    <div class="max-w-3xl mx-auto flex items-center justify-center gap-3 px-4">
+      <img src="logo.png" alt="logo" class="h-8 w-auto" />
+      <h1 class="italic lowercase text-2xl font-semibold">futuro fortissimo</h1>
+    </div>
+  </header>
 
-    <!-- SEARCH + FILTERS -->
-    <section class="max-w-3xl mx-auto px-4 pt-4 pb-2 space-y-3">
-      <div class="relative">
-        <input id="searchInput" type="text" placeholder="Cerca…" class="w-full rounded-full py-2 pl-10 pr-4 shadow-neu bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
-        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 014 4H4a4 4 0 014-4zm-5 8a5 5 0 1110 0A5 5 0 013 12z" clip-rule="evenodd" /></svg>
-      </div>
-      <!-- Emoji filter rows -->
-      <div class="flex flex-wrap gap-2 text-xl" id="topicFilters">
-        <!-- Top-level filters -->
-        <span class="filter-pill" data-filter="💻">💻</span>
-        <span class="filter-pill" data-filter="🍃">🍃</span>
-        <span class="filter-pill" data-filter="❤️">❤️</span>
-      </div>
-      <div class="flex flex-wrap gap-2 text-xl" id="subFilters">
-        <span class="filter-pill" data-filter="💸">💸</span>
-        <span class="filter-pill" data-filter="⚽">⚽</span>
-        <span class="filter-pill" data-filter="🍽">🍽</span>
-        <span class="filter-pill" data-filter="🧠">🧠</span>
-        <span class="filter-pill" data-filter="💊">💊</span>
-        <span class="filter-pill" data-filter="🎨">🎨</span>
-        <span class="filter-pill" data-filter="🚕">🚕</span>
-        <span class="filter-pill" data-filter="🥽">🥽</span>
-        <span class="filter-pill" data-filter="👥">👥</span>
-        <span class="filter-pill" data-filter="💆">💆</span>
-      </div>
-    </section>
+  <!-- Search & Filters -->
+  <section class="max-w-3xl mx-auto px-4 space-y-3">
+    <div class="relative">
+      <input id="searchInput" type="text" placeholder="Cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-ioCard shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
+      <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 014 4H4a4 4 0 014-4zm-5 8a5 5 0 1110 0A5 5 0 013 12z" clip-rule="evenodd" /></svg>
+    </div>
+    <div id="filterRow" class="flex flex-wrap gap-2 justify-center text-xl">
+      <!-- primary filters -->
+      <span class="pill" data-filter="💻">💻</span>
+      <span class="pill" data-filter="🍃">🍃</span>
+      <span class="pill" data-filter="❤️">❤️</span>
+      <!-- subchapter filters -->
+      <span class="pill" data-filter="💸">💸</span>
+      <span class="pill" data-filter="⚽">⚽</span>
+      <span class="pill" data-filter="🍽">🍽</span>
+      <span class="pill" data-filter="🧠">🧠</span>
+      <span class="pill" data-filter="💊">💊</span>
+      <span class="pill" data-filter="🎨">🎨</span>
+      <span class="pill" data-filter="🚕">🚕</span>
+      <span class="pill" data-filter="🥽">🥽</span>
+      <span class="pill" data-filter="👥">👥</span>
+      <span class="pill" data-filter="💆">💆</span>
+    </div>
+  </section>
 
-    <!-- PUBLICATIONS -->
-    <main id="app" class="max-w-3xl mx-auto px-4 pb-28 flex flex-col gap-4"></main>
+  <!-- Publications container -->
+  <main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-4"></main>
 
-    <!-- FOOTER -->
-    <footer class="fixed bottom-0 inset-x-0 text-center py-2 text-xs text-gray-500 dark:text-gray-400 bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur border-t border-gray-200 dark:border-gray-800">
-      v0.3 – made with ♥
-    </footer>
+  <!-- Footer -->
+  <footer class="fixed bottom-0 inset-x-0 text-center py-2 text-xs text-gray-700 bg-ioBlue/80 backdrop-blur">
+    v0.4 – built with Google I/O vibes
+  </footer>
 
-    <script>
-      const DATA_ENDPOINT = './newsletter_data.json';
-      const activeFilters = new Set();
+  <script>
+    const DATA_ENDPOINT = './newsletter_data.json';
+    const pills = document.querySelectorAll('.pill');
+    const filters = new Set();
+    let DATA;
 
-      // Fetch JSON
-      async function getData() {
-        const res = await fetch(DATA_ENDPOINT);
-        return res.json();
-      }
+    // style pills
+    pills.forEach(p => {
+      p.className += ' px-2 py-1 rounded-full bg-ioCard shadow-neu cursor-pointer select-none transition';
+      p.addEventListener('click', () => {
+        const val = p.dataset.filter;
+        if (filters.has(val)) {
+          filters.delete(val); p.classList.remove('ring-2','ring-sky-400');
+        } else {
+          filters.add(val); p.classList.add('ring-2','ring-sky-400');
+        }
+        render();
+      });
+    });
 
-      // UTIL highlight search term
-      function highlight(text, term) {
-        if (!term) return text;
-        return text.replace(new RegExp(`(${term})`, 'gi'), '<mark>$1</mark>');
-      }
+    // highlight helper
+    const highlight = (txt,t) => t?txt.replace(new RegExp(`(${t})`,'gi'),'<mark>$1</mark>'):txt;
 
-      // Render cards
-      function render(data, term = '') {
-        const wrapper = document.getElementById('app');
-        wrapper.innerHTML = '';
+    // fetch once
+    fetch(DATA_ENDPOINT).then(r=>r.json()).then(json=>{DATA=json; render();});
 
-        data.publications.forEach(pub => {
-          // Filter by active emoji filters
-          if (activeFilters.size) {
-            const has = [...activeFilters].some(f => pub.cards.some(c => c.title.includes(f)));
-            if (!has) return;
-          }
-          // Search term filtering
-          const matchPub = pub.title.toLowerCase().includes(term);
-          const cards = pub.cards.filter(c => {
-            const inTitle = c.title.toLowerCase().includes(term);
-            const inContent = c.contentBlocks.some(b => b.content.some(l => l.toLowerCase().includes(term)));
-            return term ? (inTitle || inContent) : true;
-          });
-          if (term && !matchPub && cards.length === 0) return;
+    document.getElementById('searchInput').addEventListener('input', render);
 
-          const cardEl = document.createElement('article');
-          cardEl.className = 'shadow-neu rounded-2xl p-4 bg-gray-100 dark:bg-gray-800 hover:shadow-neuInset transition cursor-pointer';
-          cardEl.innerHTML = `
-            <h2 class="font-semibold text-lg mb-2">${highlight(pub.title, term)}</h2>
-            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300">
-              ${cards.map(c => {
-                // first block paragraphs to bullets (compact)
-                const points = c.contentBlocks[0].content.slice(0,3).map(p => `<li>${highlight(p, term)}</li>`).join('');
-                return `<li class="ml-0 font-medium">${highlight(c.title, term)}<ul class="list-disc list-inside ml-4 mt-1">${points}</ul></li>`;
-              }).join('')}
-            </ul>`;
-          cardEl.addEventListener('click', () => window.open(pub.substackLink, '_blank'));
-          wrapper.appendChild(cardEl);
+    function render(){
+      const term = document.getElementById('searchInput').value.toLowerCase();
+      const wrap = document.getElementById('app');
+      wrap.innerHTML='';
+
+      DATA.publications.forEach(pub=>{
+        // filters by emoji tag
+        if(filters.size){
+          const ok=[...filters].some(f=>pub.cards.some(c=>c.title.includes(f)));
+          if(!ok) return;
+        }
+
+        // decide which subchapters to show
+        const visibleCards = pub.cards.filter(c=>{
+          if(c.title.startsWith('📖')) return false; // skip Panorama
+          if(!term) return false; // show only when searching
+          const hitTitle=c.title.toLowerCase().includes(term);
+          const hitContent=c.contentBlocks.some(b=>b.content.some(l=>l.toLowerCase().includes(term)));
+          return hitTitle||hitContent;
         });
-      }
+        if(term && visibleCards.length===0 && !pub.title.toLowerCase().includes(term)) return;
 
-      // Init filters buttons
-      function setupFilters() {
-        document.querySelectorAll('.filter-pill').forEach(btn => {
-          btn.className += ' px-2 py-1 rounded-full shadow-neu cursor-pointer select-none bg-gray-100 dark:bg-gray-800';
-          btn.addEventListener('click', () => {
-            const val = btn.dataset.filter;
-            if (activeFilters.has(val)) {
-              activeFilters.delete(val);
-              btn.classList.remove('ring-2','ring-indigo-400');
-            } else {
-              activeFilters.add(val);
-              btn.classList.add('ring-2','ring-indigo-400');
-            }
-            apply();
+        const card=document.createElement('div');
+        card.className='bg-ioCard rounded-2xl p-4 shadow-neu hover:shadow-neuInset transition cursor-pointer';
+        card.innerHTML=`<h2 class="text-lg font-medium mb-1">${highlight(pub.title,term)}</h2>`;
+        card.addEventListener('click',()=>window.open(pub.substackLink,'_blank'));
+
+        if(visibleCards.length){
+          const div=document.createElement('div');
+          div.className='space-y-1 mt-2 text-sm';
+          visibleCards.forEach(sc=>{
+            div.innerHTML+=`<div class="font-medium">${highlight(sc.title,term)}</div>`;
           });
-        });
-      }
-
-      // Apply rendering on search / filter
-      let DATA_CACHE;
-      function apply() { render(DATA_CACHE, document.getElementById('searchInput').value.toLowerCase()); }
-
-      // Highlight when typing
-      document.getElementById('searchInput').addEventListener('input', apply);
-
-      // Bootstrap
-      (async () => {
-        DATA_CACHE = await getData();
-        setupFilters();
-        apply();
-      })();
-    </script>
-  </body>
+          card.appendChild(div);
+        }
+        wrap.appendChild(card);
+      });
+    }
+  </script>
+</body>
 </html>
