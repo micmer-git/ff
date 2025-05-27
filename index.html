@@ -3,42 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>futuro fortissimo – explorer</title>
-
-  <!-- Google Sans font (Google I/O) -->
+  <title>futuro fortissimo </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: { sans: ['"Google Sans"', 'Roboto', 'ui-sans-serif'] },
-          colors: {
-            ioBg: '#F6F9FE',
-            ioCard: '#FFFFFF',
-          },
-          boxShadow: {
-            neu: '4px 4px 8px rgba(0,0,0,0.07), -4px -4px 8px rgba(255,255,255,0.9)',
-          }
+          colors: { ioBg: '#F6F9FE', ioCard: '#FFFFFF' },
+          boxShadow: { neu: '4px 4px 8px rgba(0,0,0,0.06)' }
         }
       }
     }
   </script>
   <style>
-    body{background-color:#F6F9FE;}
+    body{background:#F6F9FE;}
     mark{background:#FFEB3B66;padding:0 2px;border-radius:2px}
-    .pill{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.1);padding:0 8px;border-radius:9999px;cursor:pointer;user-select:none;transition:all .15s ease}
+    .pill{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.1);padding:0 8px;border-radius:9999px;cursor:pointer;user-select:none;transition:all .15s}
     .pill.active{outline:2px solid #38bdf8;}
-    /* gradient border */
-    .g-border{background:linear-gradient(135deg,#38bdf8,#c084fc,#f472b6);padding:2px;border-radius:1rem}
   </style>
 </head>
 <body class="font-sans text-gray-800 antialiased">
-  <!-- Header -->
   <header class="py-4">
     <div class="max-w-3xl mx-auto flex items-center justify-center gap-3 px-4">
       <img src="logo.png" alt="logo" class="h-8 w-auto" />
@@ -46,103 +34,84 @@
     </div>
   </header>
 
-  <!-- Search & Filters -->
-  <section class="max-w-3xl mx-auto px-4 space-y-4">
+  <section class="max-w-3xl mx-auto px-4 space-y-6">
     <div class="relative">
-      <input id="searchInput" type="text" placeholder="Cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
+      <input id="searchInput" placeholder="Cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
       <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 014 4H4a4 4 0 014-4zm-5 8a5 5 0 1110 0A5 5 0 013 12z" clip-rule="evenodd"/></svg>
     </div>
     <div id="filterRow" class="flex flex-wrap justify-center gap-2 text-xl">
-      <!-- primary + sub filters -->
-      <span class="pill" data-filter="💻">💻</span>
-      <span class="pill" data-filter="🍃">🍃</span>
-      <span class="pill" data-filter="❤️">❤️</span>
-      <span class="pill" data-filter="💸">💸</span>
-      <span class="pill" data-filter="⚽">⚽</span>
-      <span class="pill" data-filter="🍽">🍽</span>
-      <span class="pill" data-filter="🧠">🧠</span>
-      <span class="pill" data-filter="💊">💊</span>
-      <span class="pill" data-filter="🎨">🎨</span>
-      <span class="pill" data-filter="🚕">🚕</span>
-      <span class="pill" data-filter="🥽">🥽</span>
-      <span class="pill" data-filter="👥">👥</span>
-      <span class="pill" data-filter="💆">💆</span>
+      <span class="pill" data-filter="💻">💻</span><span class="pill" data-filter="🍃">🍃</span><span class="pill" data-filter="❤️">❤️</span><span class="pill" data-filter="💸">💸</span><span class="pill" data-filter="⚽">⚽</span><span class="pill" data-filter="🍽">🍽</span><span class="pill" data-filter="🧠">🧠</span><span class="pill" data-filter="💊">💊</span><span class="pill" data-filter="🎨">🎨</span><span class="pill" data-filter="🚕">🚕</span><span class="pill" data-filter="🥽">🥽</span><span class="pill" data-filter="👥">👥</span><span class="pill" data-filter="💆">💆</span>
     </div>
   </section>
 
-  <!-- Publications -->
-  <main id="app" class="max-w-3xl mx-auto px-4 pb-40 space-y-6 mt-6"></main>
+  <main id="app" class="max-w-3xl mx-auto px-4 pb-40 space-y-8 mt-8"></main>
 
-  <footer class="fixed bottom-0 inset-x-0 text-center py-2 text-xs text-gray-600 bg-ioBg/90 backdrop-blur">v0.5</footer>
+  <footer class="fixed bottom-0 inset-x-0 text-center py-2 text-xs text-gray-600 bg-ioBg/95 backdrop-blur">v0.6</footer>
 
   <script>
-    const DATA_ENDPOINT = './newsletter_data.json';
-    let DATA;
-    const filters = new Set();
+    const DATA_ENDPOINT='./newsletter_data.json';
+    let DATA;const filters=new Set();
 
-    // pill behaviour
-    document.querySelectorAll('.pill').forEach(p=>{
-      p.addEventListener('click',()=>{
-        const val=p.dataset.filter;
-        p.classList.toggle('active');
-        if(filters.has(val)) filters.delete(val); else filters.add(val);
-        render();
-      });
-    });
+    // gradient combos
+    const gradients=[
+      'linear-gradient(135deg,#38bdf8,#c084fc)',
+      'linear-gradient(135deg,#f472b6,#facc15)',
+      'linear-gradient(135deg,#34d399,#60a5fa)',
+      'linear-gradient(135deg,#f87171,#fb923c)',
+      'linear-gradient(135deg,#a78bfa,#f472b6)'
+    ];
 
-    document.getElementById('searchInput').addEventListener('input',render);
+    document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>{const v=p.dataset.filter; p.classList.toggle('active');filters.has(v)?filters.delete(v):filters.add(v);render();});
+    document.getElementById('searchInput').oninput=render;
 
     fetch(DATA_ENDPOINT).then(r=>r.json()).then(j=>{DATA=j;render();});
 
-    function highlight(txt,term){return term?txt.replace(new RegExp(`(${term})`,'gi'),'<mark>$1</mark>'):txt;}
+    function highlight(t,term){return term?t.replace(new RegExp(`(${term})`,'gi'),'<mark>$1</mark>'):t;}
 
     function render(){
       const term=document.getElementById('searchInput').value.toLowerCase();
-      const cont=document.getElementById('app');
-      cont.innerHTML='';
-
-      DATA.publications.forEach(pub=>{
-        // filter by emoji tag
-        if(filters.size){
-          const ok=[...filters].some(f=>pub.cards.some(c=>c.tags?.includes(f)));
-          if(!ok) return;
-        }
-
-        // search filtering logic
+      const wrap=document.getElementById('app');wrap.innerHTML='';
+      DATA.publications.forEach((pub,idx)=>{
+        // filter
+        if(filters.size&&!pub.cards.some(c=>c.tags?.some(t=>filters.has(t))))return;
+        // search filter
         const pubHit=pub.title.toLowerCase().includes(term);
-        const cardsFiltered=pub.cards.filter(sc=>sc.title.toLowerCase().includes(term)||sc.contentBlocks.some(b=>b.content.some(l=>l.toLowerCase().includes(term))));
-        if(term&&!pubHit&&!cardsFiltered.length) return;
+        const scHit=pub.cards.filter(c=>c.title.toLowerCase().includes(term)||c.contentBlocks.some(b=>b.content.some(l=>l.toLowerCase().includes(term))));
+        if(term&&!pubHit&&!scHit.length)return;
 
-        // DETAILS element with gradient border
-        const details=document.createElement('details');
-        details.className='g-border';
+        // card wrapper
+        const card=document.createElement('div');
+        card.className='rounded-2xl overflow-hidden';
+        card.style.background=gradients[idx%gradients.length];
         const inner=document.createElement('div');
-        inner.className='bg-white rounded-[0.95rem] p-4 shadow-neu';
-        const summary=document.createElement('summary');
-        summary.className='cursor-pointer list-none select-none text-lg font-medium';
-        summary.innerHTML=highlight(pub.title,term);
-        inner.appendChild(summary);
+        inner.className='bg-white rounded-2xl p-5 shadow-neu';
+        card.appendChild(inner);
 
-        // content block list (initially hidden, shown when open)
-        const subWrap=document.createElement('div');
-        subWrap.className='mt-3 space-y-4';
+        // header row
+        const head=document.createElement('div');head.className='flex items-start justify-between gap-3';
+        const title=document.createElement('div');title.innerHTML=`<h2 class='text-lg font-medium'>${highlight(pub.title,term)}</h2>`;
+        const btn=document.createElement('button');btn.innerHTML=`<svg class='w-6 h-6 transition-transform text-gray-600' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/></svg>`;btn.className='shrink-0';
+        head.appendChild(title);head.appendChild(btn);inner.appendChild(head);
+
+        // bullet list (first bullet of each subchapter or first 4 lines)
+        const bullets=document.createElement('ul');bullets.className='list-disc list-inside mt-2 space-y-1 text-sm';
+        pub.cards.forEach(sc=>{if(sc.title.startsWith('📖'))return;const bullet=sc.contentBlocks[0]?.content[0];if(bullet)bullets.innerHTML+=`<li>${highlight(bullet,term)}</li>`;});
+        inner.appendChild(bullets);
+
+        // details div hidden
+        const details=document.createElement('div');details.className='mt-4 space-y-4 hidden';
         pub.cards.forEach(sc=>{
-          if(sc.title.startsWith('📖')) return; // skip panorama
-          const scDiv=document.createElement('div');
-          scDiv.innerHTML=`<h3 class='font-semibold'>${highlight(sc.title,term)}</h3>`;
-          sc.contentBlocks.forEach(b=>{
-            b.content.forEach(line=>{
-              const p=document.createElement('p');
-              p.className='text-sm text-gray-700';
-              p.innerHTML=highlight(line,term);
-              scDiv.appendChild(p);
-            });
-          });
-          subWrap.appendChild(scDiv);
+          if(sc.title.startsWith('📖'))return;
+          const scDiv=document.createElement('div');scDiv.innerHTML=`<h3 class='font-semibold mb-1'>${highlight(sc.title,term)}</h3>`;
+          sc.contentBlocks.forEach(b=>b.content.forEach(line=>{const p=document.createElement('p');p.className='text-sm text-gray-700';p.innerHTML=highlight(line,term);scDiv.appendChild(p);}));
+          details.appendChild(scDiv);
         });
-        inner.appendChild(subWrap);
-        details.appendChild(inner);
-        cont.appendChild(details);
+        inner.appendChild(details);
+
+        // toggle behaviour
+        btn.onclick=()=>{const open=!details.classList.contains('hidden');details.classList.toggle('hidden');btn.children[0].style.transform=open?'rotate(0deg)':'rotate(180deg)';};
+
+        wrap.appendChild(card);
       });
     }
   </script>
