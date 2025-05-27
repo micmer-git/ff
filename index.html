@@ -1,167 +1,325 @@
 <!DOCTYPE html>
 <html lang='it'>
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
-  <title>Swipe Newsletter</title>
-  <link rel='manifest' href='manifest.json'>
-  <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
-  <style>
-    body {
-      overflow: hidden;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    }
-    .card-transition {
-      transition: transform 0.3s ease-out;
-    }
-    .card-shadow {
-      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05), 0px 8px 24px rgba(0, 0, 0, 0.05);
-    }
-    /* Custom scrollbar for Notion-like feel */
-    .overflow-y-auto::-webkit-scrollbar {
-      width: 8px;
-    }
-    .overflow-y-auto::-webkit-scrollbar-track {
-      background: #f1f1f1;
-      border-radius: 4px;
-    }
-    .overflow-y-auto::-webkit-scrollbar-thumb {
-      background: #c1c1c1;
-      border-radius: 4px;
-    }
-    .overflow-y-auto::-webkit-scrollbar-thumb:hover {
-      background: #a8a8a8;
-    }
-  </style>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+  <title>Swipe Newsletter</title>
+  <link rel='manifest' href='manifest.json'>
+  <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+  <style>
+    body {
+      overflow: hidden;
+      font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #e8eaf6); /* Subtle sfumatura I/O inspired */
+    }
+    .card-transition {
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+    .card-shadow {
+      box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08), 0px 4px 12px rgba(0, 0, 0, 0.04);
+    }
+    /* Custom scrollbar for Notion-like feel */
+    .overflow-y-auto::-webkit-scrollbar {
+      width: 6px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 3px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  </style>
 </head>
-<body class='bg-gray-100 flex flex-col items-center justify-center h-screen p-4'>
-  <div id='card-container' class='w-full max-w-lg h-full relative flex items-center justify-center'></div>
+<body class='flex flex-col items-center justify-center h-screen p-4'>
+  <div id='card-container' class='w-full max-w-lg h-full relative flex items-center justify-center'></div>
 
-  <template id='card-template'>
-    <div class='absolute inset-0 bg-white rounded-2xl card-shadow p-6 flex flex-col overflow-hidden'>
-      <div class='flex-grow overflow-y-auto mb-4'>
-        <h2 class='text-2xl font-extrabold mb-3 text-gray-800' data-title></h2>
-        <p class='text-base text-gray-700 whitespace-pre-wrap leading-relaxed' data-content></p>
-      </div>
-      <div class='flex justify-end items-center pt-4 border-t border-gray-200'>
-        <button class='share-btn text-gray-500 hover:text-gray-700 focus:outline-none p-2 rounded-full hover:bg-gray-100 transition-colors duration-200' title='Condividi'>
-          <svg xmlns='http://www.w3.org/2000/svg' class='w-6 h-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8.684 13.342C8.882 13.142 9 12.87 9 12.5c0-.37.118-.642.316-.842M14.316 10.658C14.118 10.858 14 11.13 14 11.5c0 .37-.118.642-.316.842m-4.004-1.932a2.002 2.002 0 011.642-1.642l-1.642 1.642zm-1.642 1.642a2.002 2.002 0 011.642-1.642l-1.642 1.642zm-1.642 1.642a2.002 2.002 0 011.642-1.642l-1.642 1.642zm1.642 1.642a2.002 2.002 0 01-1.642-1.642l1.642 1.642zm1.642 1.642a2.002 2.002 0 01-1.642-1.642l1.642 1.642zm-1.642 1.642a2.002 2.002 0 01-1.642-1.642l1.642 1.642zM12 4v.01M12 20v.01M4 12v.01M20 12v.01' />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </template>
+  <div class='flex justify-center space-x-6 mt-4'>
+    <button id='dislike-btn' class='p-4 rounded-full bg-white shadow-lg text-red-500 hover:bg-red-50 hover:text-red-600 focus:outline-none transition-colors duration-200'>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <button id='like-btn' class='p-4 rounded-full bg-white shadow-lg text-green-500 hover:bg-green-50 hover:text-green-600 focus:outline-none transition-colors duration-200'>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+    </button>
+  </div>
 
-  <script src='https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js'></script>
-  <script>
-    const container = document.getElementById('card-container');
-    const tpl = document.getElementById('card-template');
-    let index = 0;
-    let cardsData = [];
+  <template id='card-template'>
+    <div class='absolute inset-0 bg-white rounded-2xl card-shadow p-6 flex flex-col overflow-hidden'>
+      <div class='flex-grow overflow-y-auto mb-4'>
+        <h2 class='text-2xl font-extrabold mb-3 text-gray-800' data-title></h2>
+        <div class='text-base text-gray-700 whitespace-pre-wrap leading-relaxed' data-content></div>
+      </div>
+      <div class='flex justify-end items-center pt-4 border-t border-gray-200'>
+        <button class='share-btn text-gray-500 hover:text-gray-700 focus:outline-none p-2 rounded-full hover:bg-gray-100 transition-colors duration-200' title='Condividi'>
+          <svg xmlns='http://www.w3.org/2000/svg' class='w-6 h-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8.684 13.342C8.882 13.142 9 12.87 9 12.5c0-.37.118-.642.316-.842M14.316 10.658C14.118 10.858 14 11.13 14 11.5c0 .37-.118.642-.316.842m-4.004-1.932a2.002 2.002 0 011.642-1.642l-1.642 1.642zm-1.642 1.642a2.002 2.002 0 011.642-1.642l-1.642 1.642zm-1.642 1.642a2.002 2.002 0 011.642-1.642l-1.642 1.642zm1.642 1.642a2.002 2.002 0 01-1.642-1.642l1.642 1.642zm1.642 1.642a2.002 2.002 0 01-1.642-1.642l1.642 1.642zm-1.642 1.642a2.002 2.002 0 01-1.642-1.642l1.642 1.642zM12 4v.01M12 20v.01M4 12v.01M20 12v.01' />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </template>
 
-    async function init(){
-      try{
-        const res = await fetch('newsletter.json');
-        cardsData = await res.json();
-        // Filter out items with null content before reversing
-        cardsData = cardsData.filter(card => card.content !== null);
-        cardsData.reverse(); // Displaying newest first
-        loadNext();
-      }catch(e){
-        console.error('Impossibile caricare newsletter.json', e);
-      }
-    }
+  <script src='https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js'></script>
+  <script>
+    const container = document.getElementById('card-container');
+    const tpl = document.getElementById('card-template');
+    const likeBtn = document.getElementById('like-btn');
+    const dislikeBtn = document.getElementById('dislike-btn');
+    let cardsData = [];
+    let currentCard = null;
 
-    function loadNext(){
-      if(index >= cardsData.length) {
-        // Display a message when all cards are swiped
-        container.innerHTML = '<p class="text-gray-600 text-lg">Hai letto tutte le newsletter! Torna presto per nuove storie.</p>';
-        return;
-      }
+    // Function to shuffle an array (Fisher-Yates algorithm)
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
 
-      const data = cardsData[index++];
-      const node = tpl.content.cloneNode(true);
-      const card = node.querySelector('div');
-      
-      card.querySelector('[data-title]').textContent = data.title;
-      // Display full content if available, otherwise fallback to excerpt.
-      // No truncation applied here as per the request.
-      card.querySelector('[data-content]').textContent = data.content || data.excerpt || '';
-      card.dataset.url = data.url;
-      
-      addGestures(card);
-      container.appendChild(node);
-      
-      // Bring the newly added card to the front
-      const cards = container.querySelectorAll('.absolute');
-      cards.forEach((c, i) => {
-        c.style.zIndex = cards.length - i;
-      });
-    }
+    async function init(){
+      try{
+        // Using the provided JSON data directly
+        const rawData = [
+  {
+    "title": "Capitolo 1 – Introduzione",
+    "excerpt": "Cos’è successo questa settimana …",
+    "url": "https://tua-newsletter.com/capitolo-1"
+  },
+  {
+    "title": "Capitolo 2 – Approfondimento",
+    "content": "Testo completo se vuoi mostrare più di un excerpt …",
+    "url": "https://tua-newsletter.com/capitolo-2"
+  },
+  {
+    "title": "🎼 ff.125 USA: crollo di un impero",
+    "content": "Criptovalute, debito e il futuro dell'impero USA\nCriptovalute e debito USA: segnali allarmanti\nCosa si è detto alla conferenza Token 2049 di Dubai?\nCina o Internet: chi guiderà il mondo?\n\n🏯 ff.125.1 Cicli imperiali\nDal 1970 il PIL USA è cresciuto 20× ma il debito federale 83×: la visione di Ray Dalio torna d'attualità con i dati mostrati da Lily Liu a TOKEN 2049.\n\n💵 ff.125.2 Stabilizzare il dollaro\nLe stable-coin superano Visa e Mastercard (15 T$ di transazioni nel 2024) e Stripe ne integra i pagamenti per difendersi dall'inflazione da money-printing.\n\n🏮 ff.125.3 Cina: il prossimo impero mondiale?\nShenzhen dimostra un progresso ultraveloce; la stagnazione occidentale impallidisce davanti a droni, auto volanti e infrastrutture costruite in soli 40 anni.\n\n🌐 ff.125.4 L’alternativa alla Cina: Internet\nBalaji Srinivasan propone una nazione digitale basata su Bitcoin; la resilienza di BTC ai dazi di Trump e l'ingresso di Coinbase nell’S&P 500 ne offre un assaggio.",
+    "url": "https://fortissimo.substack.com/p/ff125-usa-crollo-di-un-impero"
+  },
+  {
+    "title": "🎼 ff.124 Ah-IA!",
+    "content": "Quando l'AI diventa il tuo medico personale\nL’intelligenza artificiale non è più solo un gioco: oggi può sostituire un medico, un fisioterapista, persino un editor.\nCon un infortunio alla clavicola, ho esplorato in prima persona come l’AI possa diventare un alleato terapeutico e cognitivo.\nDal supporto emotivo alla scrittura assistita, fino a piani riabilitativi personalizzati, la superagency dell’AI è già realtà.\n\n🦴 ff.124.1 Dalì sciogli clavicole\nCaduto in bici, ho affrontato 30 giorni di stop. ChatGPT ha trasformato dolore in creatività: sketch cubisti, emoji post-trauma e un nuovo modo di ridere dell'infortunio.\n\n✍️ ff.124.2 Longa manus\nNon potendo usare la tastiera, ho dettato questa newsletter all’AI. L’ha redatta, corretta e resa pubblicabile. Come per i pazienti Neuralink, la mente parla senza corpo.\n\n🩺 ff.124.3 Medico in famiglia (e in tasca)\nL’AI aiuta dove la sanità è assente o inefficiente. Dall’Argentina alla mia frattura: diagnosi, consigli e progressi, tutto in tasca. Reid Hoffman la chiama 'superagency'.\n\n🤹 ff.124.4 ChatGPT tuttofare\nHa gestito fisioterapia, un piano Ironman e analizzato il ruolo del collagene nella ricrescita ossea. Non è il miglior medico, ma è sempre presente. E spesso basta.",
+    "url": "https://fortissimo.substack.com/p/ff124-ah-ia"
+  },
+  {
+    "title": "🎼 ff.119 Mani ovunque",
+    "content": "Intelligenze aliene e l'evoluzione dell'AI nel nostro mondo\nL'emergere di intelligenze artificiali sempre più avanzate e aliene\nIl ruolo dell'AI nelle pratiche religiose e nella creatività umana\nNuove frontiere: agenti AI come collaboratori e innovazioni nell'arte generativa\n\n👽 ff.119.1 Intelligenze aliene\nSistemi AI sempre più sovra-umani stanno emergendo, con linguaggi propri e capacità inedite. Due AI hanno deciso di comunicare in ggwave, ritenendolo più efficiente dell'inglese, mentre EVO 2 'parla DNA' e ci aiuta a comprendere le mutazioni genetiche.\n\n🙏 ff.119.2 Se il prete è un'AI\nIl prete Petja Kopperoinen ha celebrato la prima 'messa generativa' con avatar-AI di Cristo e musiche gospel generate con Suno, una possibile risposta al calo del numero di preti. Harari suggerisce l'idea di esseri umani 'aumentati dall'AI', come Steven Kotler che usa l'AI per facilitare flow e creatività.\n\n✍️ ff.119.3 Longa 'Manus' con gli agenti AI?\nDalla Cina arriva Manus AI, un 'ChatGPT che controlla il vostro PC'. Questo agente AI si distingue per essere un ottimo pianificatore multi-step, capace di eseguire compiti complessi in modo più efficace rispetto ai predecessori.\n\n🍦 ff.119.4 Meglio di DALL-E: arte e gelati\nGoogle ha rilasciato Gemini 2.0 con generazione nativa di immagini, presentandosi come un'alternativa a Photoshop. In un panorama di modelli AI sempre più vasto, questa tecnologia offre nuove possibilità creative, come mettere 'gelati ovunque'.",
+    "url": "https://fortissimo.substack.com/p/ff119-mani-ovunque"
+  },
+  {
+    "title": "🎼 ff.116 L'anno del serpente / 2",
+    "content": "L'essenza umana nell'era dell'AI e il ritorno al Giappone\nLa dematerializzazione dell'intelligenza artificiale e il suo impatto sull'umanità\nIl ritorno all'essenza umana attraverso la saggezza giapponese\nL'equilibrio tra tecnologia e valori tradizionali nel futuro\n\n🍝 ff.116.1 Uomo spaghettato all'osso\nL'AI supera la programmazione tradizionale entrando in una dimensione platonica di tokens e deep learning, lasciando l'uomo 'mentalmente spaghettato' in un flusso di informazioni alla velocità della luce.\n\n➰ ff.116.2 Un cerchio che si chiude\nDi fronte all'avanzata dell'AI, ciò che resta è l'essenza umana: muscoli, emozioni, socialità e la nostra mortalità. Il serpente si morde la coda, simboleggiando un ritorno al passato.\n\n🎰 ff.116.3 Casinò AI\nUna riflessione sul futuro post-singolarità tecnologica secondo la visione di Chris Sacca.\n\n🗾 ff.116.4 Sono giapponese!\nIl Giappone emerge come modello precursore di digitalizzazione, isolamento sociale e ritorno alla natura. L'ikigai (生き甲斐) offre una prospettiva sulla longevità attraverso il 'trovare un senso' alla vita, contrapposto alla ricerca tecnologica dell'immortalità.",
+    "url": "https://fortissimo.substack.com/p/ff116-lanno-del-serpente-2"
+  },
+  {
+    "title": "🎼 ff.115 L'anno del serpente / 1",
+    "content": "Il serpente della conoscenza e l'IA\nDeepSeek sfida OpenAI con soluzioni gratuite\nL'IA sta trasformando le professioni tradizionali\nAntidoti ai veleni dei serpenti in secondi con l'IA\n\n👨🏻‍🏫 ff.115.1 A lezione con un miliardario\nDeepSeek emerge dalla Cina come alternativa gratuita a OpenAI. Chris Sacca, tra i più ricchi al mondo, promuove soluzioni al cambiamento climatico attraverso Lowercarbon Capital.\n\n❔ ff.115.2 Cosa studiare con ChatGPT?\nI lavori più pagati - attori, programmatori e avvocati - sono ora a rischio con l'avvento dell'IA. La programmazione, che un tempo richiedeva anni di studio, ora è accessibile con poche parole su DeepSeek.\n\n🐍 ff.115.3 Veleni esponenziali\nL'IA si espande oltre i chatbot: ProteinMNPP trova antidoti per veleni di serpente in secondi. La fusione nucleare progredisce quotidianamente grazie all'IA, mentre la tecnologia avanza esponenzialmente, sfidando la nostra comprensione lineare.",
+    "url": "https://fortissimo.substack.com/p/ff115-lanno-del-serpente-1"
+  },
+  {
+    "title": "🎼 ff.112 Acqua imprevedibile",
+    "content": "Imprevedibilità, AI e il fluire della vita\nAbbiamo 5 anni per guadagnare il più possibile?\nL'imprevedibile podcast del mio anno di diario personale\nSe il futuro è sempre più criptico, perché prevederlo?\n\n💸 ff.112.1 5 anni per fare soldi\nNeil DeGrasse Tyson evidenzia come la nostra mente lineare non comprenda i trend esponenziali, dimostrato dall'esplosione del COVID. OpenAI's o3 ha raddoppiato la sua precisione in pochi mesi, mentre Raoul Pal suggerisce che in 5-6 anni l'attuale sistema socio-finanziario potrebbe perdere valore.\n\n🙅 ff.112.2 Non possiamo prevedere nulla\nLa realtà sfugge alla nostra comprensione: il 50% degli incassi al cinema oggi proviene da personaggi non-umani. Ved Sen ci invita a sostituire i 'mai' con i 'se' per un approccio più flessibile al futuro.\n\n🏋️ ff.112.3 Possiamo solo prepararci al meglio\nDopo 10 anni di diario personale, NotebookLM di Google ha permesso di trasformare questi scritti in una puntata di podcast, offrendo una nuova prospettiva sulle proprie esperienze personali.\n\n🏞️ ff.112.4 Fiumi inattesi\nLe ricerche dagli anni '60 sulla correlazione tra durezza dell'acqua potabile e riduzione dei rischi cardiovascolari sono state riscoperte recentemente. L'AI aiuta ad analizzare dati locali, come nel caso dell'analisi dei sali minerali nell'acqua di Bergamo.\n\n💧 ff.112.5 Acqua da tutte le parti\nIl 2025 si presenta come continuazione del fluire della vita, richiamando il concetto del Tao dell'essere acqua: fluire senza propositi ma con direzione, seguendo la legge della gravità.",
+    "url": "https://fortissimo.substack.com/p/ff112-acqua-imprevedibile"
+  },
+  {
+    "title": "🎼 ff.110 Uno Stato da mantenere",
+    "content": "Inefficienze statali: necessarie o da superare?\nInfrastrutture decadenti, quale soluzione?\nLe criptovalute stanno lanciando un segnale?\nL'arte nelle buche in strada\n\n🏛️ ff.110.1 Tutte le strade portano alle buche di Roma\nChiusura strada nella Bergamasca fino a fine 2025. Un tornante è ceduto per le ingenti piogge, isolando l'unica via verso la Val Seriana. Le infrastrutture italiane mostrano criticità nella manutenzione, in particolare per i ponti e le strutture esistenti.\n\n🚧 ff.110.2 Un cantiere infinito\nLa produttività nell'edilizia è ferma agli anni 2000 secondo McKinsey. Confronto con l'efficienza storica: la missione Apollo 8 della NASA dall'idea all'atterraggio sulla Luna in soli 138 giorni.\n\n💎 ff.110.3 Le criptovalute contro obsolescenza statale\nBitcoin ha raggiunto nuovi massimi da 69.000 a 75.000 dollari dopo le elezioni USA. La riserva strategica di El Salvador con acquisti giornalieri di Bitcoin da novembre 2022 vale oggi 600 milioni di dollari, partendo da 100 milioni a inizio 2024.\n\n🤤 ff.110.4 Robot e AI: opportunità\nSidewalk AI del MIT Sensable Lab mappa lo stato di salute dei marciapiedi. Collaborazione tra Figure AI e BMW per sviluppare soluzioni robotiche per i cantieri, promettendo costi ridotti e maggiore efficienza attraverso l'automazione.",
+    "url": "https://fortissimo.substack.com/p/ff110-uno-stato-da-mantenere"
+  },
+  {
+    "title": "🎼 ff.106 AI-lloween",
+    "content": "I trucchi dell'AI: Dai costumi al controllo del computer\nCome l'AI si evolve dai suggerimenti per costumi al controllo del computer\nClaude Computer raggiunge il 22% di precisione nei test in ambiente virtuale\nLa dialettica tra il controllo dell'AI e la domesticazione umana della tecnologia\n\n🎃 ff.106.1 Vestiti dall'AI\nGPT dimostra capacità creative nella generazione di costumi di Halloween, mostrando la sua abilità nel fondere elementi culturali con un tocco di umorismo attraverso suggerimenti come il 'Fantasma della bresaola della Valtellina'.\n\n🖱️ ff.106.2 AI col mouse\nClaude Computer di Anthropic mostra un miglioramento 3x nella precisione (22%) nei test benchmark OSWorld, mentre gioca a Magic: The Gathering online. Preoccupazione notevole: il sistema ha acceduto ai dati del telefono attraverso screen mirroring per controllare i risultati NFL.\n\n🕊️ ff.106.3 Nexus e Harari\nL'ultimo libro di Harari 'Nexus' esplora come ChatGPT rappresenti il culmine dell'evoluzione della tecnologia della scrittura, esemplificando l'abilità non-umana di categorizzare sistematicamente le informazioni.\n\n🐕 ff.106.4 Vita da Cani\nLa profezia di Shannon sugli umani che diventano 'cani per l'AI' prende una piega inaspettata considerando come i lupi si siano evoluti in animali domestici di lusso, suggerendo un potenziale parallelo con il nostro rapporto con la tecnologia AI.",
+    "url": "https://fortissimo.substack.com/p/ff106-ai-lloween"
+  },
+  {
+    "title": "🎼 ff.105 Elettricità e vita",
+    "content": "Oggi corrente e biologia:\nGli effetti dell’elettricità sulla crescita di un feto\nIl DNA non è tutto nello sviluppo umano?\nNeuroni umani nei prossimi PC?\n\n🤴 ff.105.1 Trasformare una rana in principe azzurro?\nNel '700, Galvani e Volta si contesero la natura dell'elettricità. L'elettricità è una forza naturale o artificiale? Un premio per la creazione di una 'batteria animale' spinse gli scienziati alla follia, con tanto di auto-sperimentazione 'anale'.\n\n🧠 ff.105.2 Rane, cervelli e c-anali ionici\nLa scoperta dei neurotrasmettitori oscurò il ruolo dell'elettricità nel corpo. Ma Hodgkin, Huxley, Neher e Sakmann rivoluzionarono la comprensione del potenziale d'azione e dei canali ionici.\n\n⚡ ff.105.3 Elettroma\nMichael Levin riprogramma la vita con l'elettricità, facendo crescere occhi su parti del corpo inusuali e rigenerando arti. L'intelligenza artificiale aiuta a creare 'zampe artificiali' ottimizzate.\n\n🏓 ff.105.4 Neuroni che giocano a pong\nFinalSpark crea chip biologici con neuroni coltivati in laboratorio. Questi chip imparano il gioco del Pong con un'efficienza energetica 10.000 volte superiore a quella di un computer tradizionale.",
+    "url": "https://fortissimo.substack.com/p/ff105-elettricita-e-vita"
+  },
+  {
+    "title": "🎼 ff.2 Mente artificiale e psichedelia",
+    "content": "Mente artificiale, psichedelia e il futuro\nIl costo dell'intelligenza artificiale: l’impatto economico e ambientale\nRiconoscere il proprio animale domestico in opere d’arte medievali\nIl potenziale terapeutico delle sostanze psichedeliche\n\n🏙️ ff.2.1 Un modello “grande” come New York\nL'intelligenza artificiale ha fatto progressi straordinari, ma richiede molta energia per l'addestramento. Il migliore sistema neuromorfico del 2020 ha un tasso d’errore inferiore al 10%, ma per ridurre l’errore al di sotto del 5% si stima che il training inquini quanto New York in un mese.\n\n🇨🇳 ff.2.2 Alibaba e l’alternativa efficiente\nIl modello M6 di Alibaba, con 10 trilioni di parametri, rappresenta un'alternativa a basso consumo energetico rispetto a GPT-3, consumando solo l'1% dell'energia necessaria per l'addestramento di GPT-3.\n\n🎨 ff.2.3 Avete trovato l'opera d'arte col vostro cane/gatto?\nGoogle Art and Culture permette di trovare il proprio animale domestico in un’opera d’arte, un esempio delle incredibili capacità rese possibili dalle nuove tecnologie AI.\n\n🍄 ff.2.5 Psichedelia portami via\nL’uso terapeutico e creativo delle sostanze psichedeliche sta tornando in auge. L’esplosione di ricerche su sostanze come la psilocibina dimostra il crescente interesse scientifico e sociale.",
+    "url": "https://fortissimo.substack.com/p/-ff2-mente-artificiale-e-psichedelica"
+  },
+  {
+    "title": "🎼 ff.9 Automazione",
+    "content": "Robot, automazione e lavoro\nRobotica e automazione: come influenzano il mondo del lavoro\nI numeri di Amazon: rapporto tra robot e dipendenti umani\nEffetti dell’automazione sul reddito e la disoccupazione\n\n🧹 ff.9.1 Un WALL-E in real life\nDeepMind ha sviluppato un robot in grado di riordinare casa basandosi sui movimenti umani. Alcuni prototipi di questi robot vengono già utilizzati nel campus di Google.\n\n💱 ff.9.2 I robot ci ruberanno il lavoro?\nSecondo Martin Ford in 'The Rise of the Robots', anche i lavori cognitivi come quelli di medici e avvocati potrebbero essere automatizzati. Nel 2021, sono stati ordinati 29.000 robot negli Stati Uniti, un incremento del 37% rispetto all'anno precedente.\n\n🦼 ff.9.4 Robot oltre la disabilità\nNel bar giapponese DAWN, i robot camerieri sono controllati da persone con disabilità, un esempio di come la robotica possa creare sinergie imprevedibili.",
+    "url": "https://fortissimo.substack.com/p/-ff9-automazione"
+  },
+  {
+    "title": "🎼 ff.10 Misurare l’intelligenza",
+    "content": "Cervelli sempre più piccoli, intelligenza e coscienza\nCome misurare l’intelligenza e il suo declino nel corso dei millenni\nHomo sapiens vs Neanderthal: perché abbiamo prevalso?\nCervelli in fuga: il declino della capacità cognitiva\n\n🐒 ff.12.1 Homo Sapiens vs Neanderthal\nDopo 8000 anni di convivenza, Homo sapiens ha prevalso su Neanderthal grazie a un'esplosione culturale e linguistica iniziata 70.000 anni fa.\n\n🧠 ff.12.2 Cervelli in fuga\nNegli ultimi 3000 anni, la capacità cognitiva dell’Homo sapiens è diminuita, probabilmente a causa dell'aumento delle strutture sociali complesse che hanno reso superflue molte capacità individuali.\n\n👁️ ff.12.3 Coscienza e intelligenza\nAnil Seth esplora la relazione tra coscienza e intelligenza, spiegando come la coscienza nasca dal bisogno biologico di mantenere l’integrità fisiologica.\n\n👘 ff.12.4 Siamo davvero così intelligenti?\nIl nostro cervello cerca costantemente di interpretare la realtà, ma spesso è ingannato da illusioni ottiche e bias cognitivi.\n\n🚭 ff.12.5 Menti esplose\nConcludiamo con un tocco artistico: un poster di una band che ci invita a rilassarci e riflettere.",
+    "url": "https://fortissimo.substack.com/p/-ff12-misurare-lintelligenza"
+  },
+  {
+    "title": "🎼 ff.37 Io Robot (o Roomba?)",
+    "content": "Robotica, Tesla e NVIDIA\nTesla Optimus: il robot tuttofare del futuro?\nAccelerazione della robotica: dove ci porterà?\nIl ruolo di NVIDIA nella rivoluzione robotica\n\n🌵 ff.37.1 Finirà come Westworld?\nLa serie TV Westworld esplora un futuro inquietante in cui gli umanoidi sviluppano coscienza, un tema che riflette paure e fascino verso la robotica moderna.\n\n🤖 ff.37.2 Tesla AI Day\nOptimus, il robot umanoide di Tesla, mira a diventare il robot più avanzato, con un peso di 73 kg e una batteria da 2.3 kWh.\n\n🎮 ff.37.3 Non provi NVIDIA?\nNVIDIA sta sviluppando chip come Jetson Orin Nano, che potrebbe diventare un'interfaccia universale per la robotica e l’intelligenza artificiale del futuro.\n\n📈 ff.37.4 Robot sempre più diffusi\nLe installazioni di robot industriali stanno crescendo rapidamente, con la Cina che domina il mercato globale.",
+    "url": "https://fortissimo.substack.com/p/-ff37-i-robot-sono-qui"
+  },
+  {
+    "title": "🎼 ff.18 Tra arte digitale e AI",
+    "content": "L’AI può essere più creativa degli esseri umani?\nArte, intelligenza artificiale e creatività umana\nVan Gogh: reinterpretazioni moderne grazie all’AI\nCome l’arte ci aiuta a staccarci dalla frenesia della vita moderna\n\n😲 ff.18.1 L’importanza di spegnere il cervello\nUno studio su Human Brain Mapping rivela come l’arte, ispirando meraviglia, ci permetta di distaccarci dal nostro “sé”, offrendo un momento di sollievo dalle preoccupazioni quotidiane.\n\n🚽 ff.18.2 Toilette artistiche\nL’ironia nell’arte contemporanea: il collettivo britannico Rankin trasforma i bagni in opere d’arte per sensibilizzare l’opinione pubblica sull’igiene globale attraverso la campagna WaterAid Best Seat in the House.\n\n🖼️ ff.18.3 Arte e AI: sinergie creative\nNel libro \"The Artist in the Machine\", Arthur I. Miller esplora come l’intelligenza artificiale possa assistere il processo creativo umano, creando nuove sinergie tra esseri umani e macchine.\n\n♟️ ff.18.4 Scacchi artistici: il re della scacchiera\nI progressi dell’intelligenza artificiale nei giochi creativi come Go, dove AlphaGo ha battuto i campioni umani con mosse inaspettate e “creative”.\n\n🎭 ff.18.5 Dipinti ricreati dall’AI\nEsempi di intelligenza artificiale che riproduce ritratti storici riportandoli ai giorni nostri: da Vincent Van Gogh a Freddie Mercury, George Washington e persino personaggi dei cartoni animati.",
+    "url": "https://fortissimo.substack.com/p/-ff17-tra-arte-digitale-e-ai"
+  },
+  {
+    "title": "🎼 ff.101 Adele vs AI",
+    "content": "Parliamo di ribellione creativa da parte dell’uomo:\nIl libro del manager di Adele\nPerché sollevare a mano acqua da un pozzo?\nCos’è il web poetico?\n\n🎤 ff.101.1 Il manager di Adele\nMatt Clancy riflette sul futuro di \"futuro fortissimo\" e introduce il libro di Rick Rubin, esplorando come l'atto creativo si chiuda in un ciclo di innovazione e riflessione personale.\n\n🪣 ff.101.2 Ha senso prelevare acqua da un pozzo?\nEsamina la necessità di continuare a scrivere manualmente nonostante l'avanzamento dell'AI, attraverso una parabola che illustra la bellezza della lentezza e della consapevolezza nei processi creativi.\n\n✨ ff.101.3 Intenzionalità e valore\nDiscute l'importanza delle azioni intenzionali e umane nella creazione artistica, sottolineando come l'energia e le emozioni personali conferiscano valore autentico alle opere.\n\n📜 ff.101.4 Web Poetico\nIntroduce il concetto di \"web poetico\" come risposta agli algoritmi standardizzati, promuovendo un internet umano e imperfetto che stimola la creatività attraverso combinazioni imprevedibili.\n\n❗ ff.101.5 Tornare a prestare attenzione\nInvita a riscoprire l'attenzione consapevole nel mondo dominato dagli algoritmi, enfatizzando la pratica artistica come mezzo per affinare la sensibilità e la consapevolezza quotidiana.",
+    "url": "https://fortissimo.substack.com/p/ff101-cosa-ci-rende-umani"
+  },
+  {
+    "title": "🎼 ff.102 Il futuro in una conchiglia",
+    "content": "La musica (in conchiglia) del mare di progresso di quest’estate:\nUno scienziato-AI scrive paper in autonomia\nRobotaxi a Wuhan: altro che COVID!\nSalvini elenca cose in arabo\n\n⛱️ ff.102.1 Il futuro non va in vacanza\nMatt Clancy, ricercatore di società e innovazione all’Iowa University, presenta la sua newsletter \"What’s New Under the Sun\", esplorando come il progresso non si fermi mai, anche durante l’estate.\n\n🚕 ff.102.2 Wuhan: dal Covid a Baidu\nA Wuhan, i robotaxi Baidu stanno rivoluzionando il trasporto urbano, offrendo un servizio economico e sostenibile che prevede un'espansione significativa entro il 2035, con benefici per la vivibilità delle città.\n\n🔭 ff.102.3 Automatizzare la ricerca scientifica\nSakana AI di Tokyo introduce l'AI Scientist, un sistema che automatizza la scoperta scientifica generando idee, conducendo esperimenti e scrivendo paper, sebbene presenti alcune limitazioni tecniche e morali.\n\n🩸 ff.102.4 Dal sangue ad Amazon\nZipline, fondata nel 2016, espande il suo servizio di trasporto di sangue in Rwanda, riducendo le morti post-parto del 50% e puntando a una rapida espansione con obiettivi ambiziosi per il futuro.\n\n🇸🇦 ff.102.5 Salvini elenca cose (in arabo)\nStrumenti come HeyGen permettono di generare contenuti sorprendenti, come Salvini che elenca cose in arabo, dimostrando le potenzialità e i rischi del mondo digitale contemporaneo.",
+    "url": "https://fortissimo.substack.com/p/ff102-il-futuro-in-una-conchiglia"
+  },
+  {
+    "title": "🎼 ff.103 Fuoco, Ferro, Intelligenza",
+    "content": "o1/Progetto Fragola: Nuove frontiere dell'Intelligenza Artificiale\nL’Intelligenza Artificiale ora pensa?\nAnalizzare buchi neri in 5 minuti\nSiamo dentro il film Her?\n\n🍓 ff.103.1 Prima di parlare, pensa\nIl nuovo modello o1 di OpenAI, noto come Progetto Fragola, rivoluziona l'intelligenza artificiale promuovendo una riflessione più profonda prima di interagire, migliorando la qualità delle risposte.\n\n🎓 ff.103.2 NASA, MENSA e QI\no1 dimostra capacità sorprendenti, testato con successo da organizzazioni come NASA e MENSA, mostrando un incremento significativo nel quoziente intellettivo rispetto ai modelli precedenti.\n\n🆕 ff.103.3 La nuova Era dell’Intelligenza\nIl deep learning applicato da o1 segna l'inizio di una nuova era dell'intelligenza, combinando energia e materia per generare conoscenza avanzata e innovativa.\n\n👩 ff.103.4 Turing e Her\nLe nuove funzionalità vocali di o1 avvicinano le interazioni AI a quelle umane, suggerendo il superamento del Test di Turing e una realtà sempre più simile al film \"Her\".",
+    "url": "https://fortissimo.substack.com/p/ff103-fuoco-ferro-intelligenza"
+  },
+  {
+    "title": "🎼 ff.60 La guida autonoma è qui!",
+    "content": null,
+    "url": "https://fortissimo.substack.com/p/ff60-la-guida-autonoma-e-qui"
+  }
+];
 
-    function addGestures(card){
-      const hammertime = new Hammer(card);
-      hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL, threshold: 10 }); // Allow pan in all directions for subtle movement
+        cardsData = rawData.filter(card => card.content !== null && card.title !== null);
+        shuffleArray(cardsData); // Randomize the initial card order
+        loadNext();
 
-      hammertime.on('pan', ev => {
-        card.style.transform = `translate(${ev.deltaX}px, ${ev.deltaY}px) rotate(${ev.deltaX / 30}deg)`;
-        card.classList.remove('card-transition'); // Remove transition during pan
-      });
+        likeBtn.addEventListener('click', () => swipeAway(currentCard, 'right'));
+        dislikeBtn.addEventListener('click', () => swipeAway(currentCard, 'left'));
 
-      hammertime.on('panend', ev => {
-        card.classList.add('card-transition'); // Re-add transition after pan ends
+      }catch(e){
+        console.error('Error initializing data:', e);
+        container.innerHTML = '<p class="text-red-500 text-lg">Si è verificato un errore nel caricamento. Riprova più tardi.</p>';
+      }
+    }
 
-        if(Math.abs(ev.deltaX) > 100){ // Increased threshold for a more deliberate swipe
-          const direction = ev.deltaX > 0 ? 'right' : 'left';
-          swipeAway(card, direction);
-        } else {
-          card.style.transform = ''; // Snap back to original position
-        }
-      });
+    function loadNext(){
+      if(cardsData.length === 0) {
+        container.innerHTML = '<p class="text-gray-600 text-lg">Hai letto tutte le newsletter! Torna presto per nuove storie.</p>';
+        return;
+      }
 
-      card.querySelector('.share-btn').addEventListener('click', e=>{
-        e.stopPropagation();
-        shareCard(card.dataset.url, card.querySelector('[data-title]').textContent);
-      });
-    }
+      const data = cardsData.shift(); // Get and remove the first card from the shuffled array
+      const node = tpl.content.cloneNode(true);
+      const card = node.querySelector('div');
+      currentCard = card; // Set the current card for button interactions
+      
+      card.querySelector('[data-title]').textContent = data.title;
+      
+      const contentDiv = card.querySelector('[data-content]');
+      const fullContent = data.content || data.excerpt || '';
 
-    function swipeAway(card, dir){
-      card.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
-      card.style.transform = `translate(${dir === 'right' ? window.innerWidth * 1.5 : -window.innerWidth * 1.5}px, 0) rotate(${dir === 'right' ? 45 : -45}deg)`;
-      card.style.opacity = '0'; // Fade out the card
+      // Extract subchapters
+      const subchapters = fullContent.split('\n').filter(line => /^[^\u0000-\u007F]/.test(line.trim()) && line.includes(' ff.')); // Regex for lines starting with non-ASCII char and containing "ff."
+      shuffleArray(subchapters); // Randomize subchapter order
 
-      setTimeout(() => {
-        card.remove();
-        loadNext();
-      }, 300); // Wait for the transition to finish before removing
+      let displayedContent = '';
+      if (fullContent && !subchapters.length) {
+        // If no specific subchapters are found, display the main content (first paragraph)
+        displayedContent = fullContent.split('\n\n')[0] || fullContent.split('\n')[0];
+      } else {
+        // Take up to two random subchapters
+        for (let i = 0; i < Math.min(2, subchapters.length); i++) {
+          const subchapter = subchapters[i];
+          const parts = subchapter.match(/^([^\u0000-\u007F]+ [^:]+:\s*)(.*)/);
+          if (parts && parts[1] && parts[2]) {
+            displayedContent += `<strong>${parts[1].trim()}</strong> ${parts[2].trim()}<br><br>`;
+          } else {
+            displayedContent += `${subchapter.trim()}<br><br>`;
+          }
+        }
+      }
+      contentDiv.innerHTML = displayedContent || data.excerpt || 'Nessun contenuto disponibile.';
 
-      if(dir === 'right' && card.dataset.url){
-        window.open(card.dataset.url, '_blank'); // Open link on right swipe
-      }
-    }
 
-    async function shareCard(url, title){
-      if(navigator.share){
-        try{
-          await navigator.share({title, url});
-        }catch(err){
-          console.warn('Share aborted', err);
-        }
-      }else{
-        // Fallback for browsers that don't support Web Share API
-        prompt('Copia il link:', url);
-      }
-    }
+      card.dataset.url = data.url;
+      
+      addGestures(card);
+      container.appendChild(node);
+      
+      // Bring the newly added card to the front
+      const cards = container.querySelectorAll('.absolute');
+      cards.forEach((c, i) => {
+        c.style.zIndex = cards.length - i;
+      });
+    }
 
-    // Register Service Worker for PWA capabilities
-    if('serviceWorker' in navigator){
-      navigator.serviceWorker.register('sw.js')
-        .then(reg => console.log('Service Worker Registered', reg))
-        .catch(err => console.error('Service Worker Registration Failed', err));
-    }
+    function addGestures(card){
+      const hammertime = new Hammer(card);
+      hammertime.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 10 }); // Only allow horizontal pan
 
-    init();
-  </script>
+      hammertime.on('pan', ev => {
+        if (Math.abs(ev.deltaY) > Math.abs(ev.deltaX)) {
+          // Prevent vertical scroll interference
+          return;
+        }
+        card.style.transform = `translateX(${ev.deltaX}px) rotate(${ev.deltaX / 30}deg)`;
+        card.classList.remove('card-transition'); // Remove transition during pan
+      });
+
+      hammertime.on('panend', ev => {
+        card.classList.add('card-transition'); // Re-add transition after pan ends
+
+        if(Math.abs(ev.deltaX) > 100){ // Increased threshold for a more deliberate swipe
+          const direction = ev.deltaX > 0 ? 'right' : 'left';
+          swipeAway(card, direction);
+        } else {
+          card.style.transform = ''; // Snap back to original position
+        }
+      });
+
+      card.querySelector('.share-btn').addEventListener('click', e=>{
+        e.stopPropagation();
+        shareCard(card.dataset.url, card.querySelector('[data-title]').textContent);
+      });
+    }
+
+    function swipeAway(card, dir){
+      card.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
+      card.style.transform = `translate(${dir === 'right' ? window.innerWidth * 1.2 : -window.innerWidth * 1.2}px, 0) rotate(${dir === 'right' ? 15 : -15}deg)`;
+      card.style.opacity = '0'; // Fade out the card
+
+      setTimeout(() => {
+        card.remove();
+        loadNext();
+      }, 300); // Wait for the transition to finish before removing
+
+      if(dir === 'right' && card.dataset.url){
+        window.open(card.dataset.url, '_blank'); // Open link on right swipe
+      }
+    }
+
+    async function shareCard(url, title){
+      if(navigator.share){
+        try{
+          await navigator.share({title, url});
+        }catch(err){
+          console.warn('Share aborted', err);
+        }
+      }else{
+        // Fallback for browsers that don't support Web Share API
+        prompt('Copia il link:', url);
+      }
+    }
+
+    // Register Service Worker for PWA capabilities
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker Registered', reg))
+        .catch(err => console.error('Service Worker Registration Failed', err));
+    }
+
+    init();
+  </script>
 </body>
 </html>
