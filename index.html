@@ -7,22 +7,46 @@
   <link rel='manifest' href='manifest.json'>
   <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
   <style>
-    body{overflow:hidden;}
+    body {
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    .card-transition {
+      transition: transform 0.3s ease-out;
+    }
+    .card-shadow {
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05), 0px 8px 24px rgba(0, 0, 0, 0.05);
+    }
+    /* Custom scrollbar for Notion-like feel */
+    .overflow-y-auto::-webkit-scrollbar {
+      width: 8px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 4px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+      background: #a8a8a8;
+    }
   </style>
 </head>
-<body class='bg-gray-100 flex flex-col items-center justify-center h-screen'>
-  <div id='card-container' class='w-full max-w-sm h-full relative'></div>
+<body class='bg-gray-100 flex flex-col items-center justify-center h-screen p-4'>
+  <div id='card-container' class='w-full max-w-lg h-full relative flex items-center justify-center'></div>
 
   <template id='card-template'>
-    <div class='absolute inset-0 bg-white rounded-2xl shadow-xl p-6 flex flex-col'>
-      <div class='flex-grow overflow-y-auto'>
-        <h2 class='text-2xl font-bold mb-3' data-title></h2>
-        <p class='text-base text-gray-700 whitespace-pre-wrap' data-content></p>
+    <div class='absolute inset-0 bg-white rounded-2xl card-shadow p-6 flex flex-col overflow-hidden'>
+      <div class='flex-grow overflow-y-auto mb-4'>
+        <h2 class='text-2xl font-extrabold mb-3 text-gray-800' data-title></h2>
+        <p class='text-base text-gray-700 whitespace-pre-wrap leading-relaxed' data-content></p>
       </div>
-      <div class='flex justify-end space-x-4 pt-4'>
-        <button class='share-btn focus:outline-none' title='Condividi'>
+      <div class='flex justify-end items-center pt-4 border-t border-gray-200'>
+        <button class='share-btn text-gray-500 hover:text-gray-700 focus:outline-none p-2 rounded-full hover:bg-gray-100 transition-colors duration-200' title='Condividi'>
           <svg xmlns='http://www.w3.org/2000/svg' class='w-6 h-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 12v.01 M12 4v.01 M12 20v.01 M20 12v.01 M12 12a.01.01 0 011.414 1.414m-2.828 0a.01.01 0 011.414-1.414m0 0l6-6m-6 6l-6 6' />
+            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8.684 13.342C8.882 13.142 9 12.87 9 12.5c0-.37.118-.642.316-.842M14.316 10.658C14.118 10.858 14 11.13 14 11.5c0 .37-.118.642-.316.842m-4.004-1.932a2.002 2.002 0 011.642-1.642l-1.642 1.642zm-1.642 1.642a2.002 2.002 0 011.642-1.642l-1.642 1.642zm-1.642 1.642a2.002 2.002 0 011.642-1.642l-1.642 1.642zm1.642 1.642a2.002 2.002 0 01-1.642-1.642l1.642 1.642zm1.642 1.642a2.002 2.002 0 01-1.642-1.642l1.642 1.642zm-1.642 1.642a2.002 2.002 0 01-1.642-1.642l1.642 1.642zM12 4v.01M12 20v.01M4 12v.01M20 12v.01' />
           </svg>
         </button>
       </div>
@@ -40,7 +64,9 @@
       try{
         const res = await fetch('newsletter.json');
         cardsData = await res.json();
-        cardsData.reverse();
+        // Filter out items with null content before reversing
+        cardsData = cardsData.filter(card => card.content !== null);
+        cardsData.reverse(); // Displaying newest first
         loadNext();
       }catch(e){
         console.error('Impossibile caricare newsletter.json', e);
@@ -48,33 +74,52 @@
     }
 
     function loadNext(){
-      if(index >= cardsData.length) return;
+      if(index >= cardsData.length) {
+        // Display a message when all cards are swiped
+        container.innerHTML = '<p class="text-gray-600 text-lg">Hai letto tutte le newsletter! Torna presto per nuove storie.</p>';
+        return;
+      }
+
       const data = cardsData[index++];
       const node = tpl.content.cloneNode(true);
       const card = node.querySelector('div');
+      
       card.querySelector('[data-title]').textContent = data.title;
-      card.querySelector('[data-content]').textContent = data.excerpt ?? (data.content ? data.content.slice(0,280)+'…' : '');
+      // Display full content if available, otherwise fallback to excerpt.
+      // No truncation applied here as per the request.
+      card.querySelector('[data-content]').textContent = data.content || data.excerpt || '';
       card.dataset.url = data.url;
+      
       addGestures(card);
       container.appendChild(node);
+      
+      // Bring the newly added card to the front
+      const cards = container.querySelectorAll('.absolute');
+      cards.forEach((c, i) => {
+        c.style.zIndex = cards.length - i;
+      });
     }
 
     function addGestures(card){
       const hammertime = new Hammer(card);
-      hammertime.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold:10 });
+      hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL, threshold: 10 }); // Allow pan in all directions for subtle movement
+
       hammertime.on('pan', ev => {
-        card.style.transform = `translate(${ev.deltaX}px, ${ev.deltaY}px) rotate(${ev.deltaX/20}deg)`;
-        if(ev.isFinal){
-          if(Math.abs(ev.deltaX) > 80){
-            const direction = ev.deltaX > 0 ? 'right' : 'left';
-            swipeAway(card, direction);
-          }else{
-            card.style.transition = 'transform .2s';
-            card.style.transform = '';
-            setTimeout(()=>card.style.transition='',200);
-          }
+        card.style.transform = `translate(${ev.deltaX}px, ${ev.deltaY}px) rotate(${ev.deltaX / 30}deg)`;
+        card.classList.remove('card-transition'); // Remove transition during pan
+      });
+
+      hammertime.on('panend', ev => {
+        card.classList.add('card-transition'); // Re-add transition after pan ends
+
+        if(Math.abs(ev.deltaX) > 100){ // Increased threshold for a more deliberate swipe
+          const direction = ev.deltaX > 0 ? 'right' : 'left';
+          swipeAway(card, direction);
+        } else {
+          card.style.transform = ''; // Snap back to original position
         }
       });
+
       card.querySelector('.share-btn').addEventListener('click', e=>{
         e.stopPropagation();
         shareCard(card.dataset.url, card.querySelector('[data-title]').textContent);
@@ -82,13 +127,18 @@
     }
 
     function swipeAway(card, dir){
-      card.style.transition = 'transform .3s';
-      card.style.transform = `translate(${dir==='right'?window.innerWidth: -window.innerWidth}px, 0) rotate(${dir==='right'?45:-45}deg)`;
-      setTimeout(()=>card.remove(),310);
-      if(dir==='right' && card.dataset.url){
-        window.open(card.dataset.url, '_blank');
+      card.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
+      card.style.transform = `translate(${dir === 'right' ? window.innerWidth * 1.5 : -window.innerWidth * 1.5}px, 0) rotate(${dir === 'right' ? 45 : -45}deg)`;
+      card.style.opacity = '0'; // Fade out the card
+
+      setTimeout(() => {
+        card.remove();
+        loadNext();
+      }, 300); // Wait for the transition to finish before removing
+
+      if(dir === 'right' && card.dataset.url){
+        window.open(card.dataset.url, '_blank'); // Open link on right swipe
       }
-      loadNext();
     }
 
     async function shareCard(url, title){
@@ -96,15 +146,19 @@
         try{
           await navigator.share({title, url});
         }catch(err){
-          console.warn('Share aborted',err);
+          console.warn('Share aborted', err);
         }
       }else{
+        // Fallback for browsers that don't support Web Share API
         prompt('Copia il link:', url);
       }
     }
 
+    // Register Service Worker for PWA capabilities
     if('serviceWorker' in navigator){
-      navigator.serviceWorker.register('sw.js');
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker Registered', reg))
+        .catch(err => console.error('Service Worker Registration Failed', err));
     }
 
     init();
