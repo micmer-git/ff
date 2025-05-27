@@ -8,60 +8,42 @@
       "cards": [
         {
           "title": "📖 Panorama",
+          "tags": ["💻","💸"],
           "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Criptovalute, debito e il futuro dell'impero USA",
-                "Criptovalute e debito USA: segnali allarmanti",
-                "Cosa si è detto alla conferenza Token 2049 di Dubai?",
-                "Cina o Internet: chi guiderà il mondo?"
-              ]
-            }
+            {"type":"paragraphs","content":[
+              "Criptovalute, debito e il futuro dell'impero USA",
+              "Criptovalute e debito USA: segnali allarmanti",
+              "Cosa si è detto alla conferenza Token 2049 di Dubai?",
+              "Cina o Internet: chi guiderà il mondo?"
+            ]}
           ]
         },
         {
           "title": "🏯 ff.125.1 Cicli imperiali",
+          "tags": ["💸","🧠"],
           "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Dal 1970 il PIL USA è cresciuto 20× ma il debito federale 83×: la visione di Ray Dalio torna d'attualità con i dati mostrati da Lily Liu a TOKEN 2049."
-              ]
-            }
+            {"type":"paragraphs","content":["Dal 1970 il PIL USA è cresciuto 20× ma il debito federale 83×: la visione di Ray Dalio torna d'attualità con i dati mostrati da Lily Liu a TOKEN 2049."]}
           ]
         },
         {
           "title": "💵 ff.125.2 Stabilizzare il dollaro",
+          "tags": ["💸"],
           "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Le stable‑coin superano Visa e Mastercard (15 T$ di transazioni nel 2024) e Stripe ne integra i pagamenti per difendersi dall'inflazione da money‑printing."
-              ]
-            }
+            {"type":"paragraphs","content":["Le stable-coin superano Visa e Mastercard (15 T$ di transazioni nel 2024) e Stripe ne integra i pagamenti per difendersi dall'inflazione da money-printing."]}
           ]
         },
         {
           "title": "🏮 ff.125.3 Cina: il prossimo impero mondiale?",
+          "tags": ["🚕","⚽"],
           "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Shenzhen dimostra un progresso ultraveloce; la stagnazione occidentale impallidisce davanti a droni, auto volanti e infrastrutture costruite in soli 40 anni."
-              ]
-            }
+            {"type":"paragraphs","content":["Shenzhen dimostra un progresso ultraveloce; la stagnazione occidentale impallidisce davanti a droni, auto volanti e infrastrutture costruite in soli 40 anni."]}
           ]
         },
         {
           "title": "🌐 ff.125.4 L’alternativa alla Cina: Internet",
+          "tags": ["💻","👥"],
           "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Balaji Srinivasan propone una nazione digitale basata su Bitcoin; la resilienza di BTC ai dazi di Trump e l'ingresso di Coinbase nell’S&P 500 ne offrono un assaggio."
-              ]
-            }
+            {"type":"paragraphs","content":["Balaji Srinivasan propone una nazione digitale basata su Bitcoin; la resilienza di BTC ai dazi di Trump e l'ingresso di Coinbase nell’S&P 500 ne offrono un assaggio."]}
           ]
         }
       ]
@@ -74,61 +56,33 @@
       "cards": [
         {
           "title": "📖 Panorama",
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Quando l'AI diventa il tuo medico personale",
-                "L’intelligenza artificiale non è più solo un gioco: oggi può sostituire un medico, un fisioterapista, persino un editor.",
-                "Con un infortunio alla clavicola, ho esplorato in prima persona come l’AI possa diventare un alleato terapeutico e cognitivo.",
-                "Dal supporto emotivo alla scrittura assistita, fino a piani riabilitativi personalizzati, la superagency dell’AI è già realtà."
-              ]
-            }
-          ]
+          "tags": ["🧠","💊"],
+          "contentBlocks": [{"type":"paragraphs","content":[
+            "Quando l'AI diventa il tuo medico personale",
+            "L’intelligenza artificiale non è più solo un gioco: oggi può sostituire un medico, un fisioterapista, persino un editor.",
+            "Con un infortunio alla clavicola, ho esplorato in prima persona come l’AI possa diventare un alleato terapeutico e cognitivo.",
+            "Dal supporto emotivo alla scrittura assistita, fino a piani riabilitativi personalizzati, la superagency dell’AI è già realtà."
+          ]}]
         },
         {
           "title": "🦴 ff.124.1 Dalì sciogli clavicole",
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Caduto in bici, ho affrontato 30 giorni di stop. ChatGPT ha trasformato dolore in creatività: sketch cubisti, emoji post‑trauma e un nuovo modo di ridere dell'infortunio."
-              ]
-            }
-          ]
+          "tags": ["🎨","💆"],
+          "contentBlocks": [{"type":"paragraphs","content":["Caduto in bici, ho affrontato 30 giorni di stop. ChatGPT ha trasformato dolore in creatività: sketch cubisti, emoji post-trauma e un nuovo modo di ridere dell'infortunio."]}]
         },
         {
           "title": "✍️ ff.124.2 Longa manus",
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Non potendo usare la tastiera, ho dettato questa newsletter all’AI. L’ha redatta, corretta e resa pubblicabile. Come per i pazienti Neuralink, la mente parla senza corpo."
-              ]
-            }
-          ]
+          "tags": ["💻","👥"],
+          "contentBlocks": [{"type":"paragraphs","content":["Non potendo usare la tastiera, ho dettato questa newsletter all’AI. L’ha redatta, corretta e resa pubblicabile. Come per i pazienti Neuralink, la mente parla senza corpo."]}]
         },
         {
           "title": "🩺 ff.124.3 Medico in famiglia (e in tasca)",
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "L’AI aiuta dove la sanità è assente o inefficiente. Dall’Argentina alla mia frattura: diagnosi, consigli e progressi, tutto in tasca. Reid Hoffman la chiama 'superagency'."
-              ]
-            }
-          ]
+          "tags": ["💊","💆"],
+          "contentBlocks": [{"type":"paragraphs","content":["L’AI aiuta dove la sanità è assente o inefficiente. Dall’Argentina alla mia frattura: diagnosi, consigli e progressi, tutto in tasca. Reid Hoffman la chiama 'superagency'."]}]
         },
         {
           "title": "🤹 ff.124.4 ChatGPT tuttofare",
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Ha gestito fisioterapia, un piano Ironman e analizzato il ruolo del collagene nella ricrescita ossea. Non è il miglior medico, ma è sempre presente. E spesso basta."
-              ]
-            }
-          ]
+          "tags": ["🧠","🍃"],
+          "contentBlocks": [{"type":"paragraphs","content":["Ha gestito fisioterapia, un piano Ironman e analizzato il ruolo del collagene nella ricrescita ossea. Non è il miglior medico, ma è sempre presente. E spesso basta."]}]
         }
       ]
     },
@@ -140,61 +94,33 @@
       "cards": [
         {
           "title": "📖 Panorama",
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Intelligenze aliene e l'evoluzione dell'AI nel nostro mondo",
-                "L'emergere di intelligenze artificiali sempre più avanzate e aliene",
-                "Il ruolo dell'AI nelle pratiche religiose e nella creatività umana",
-                "Nuove frontiere: agenti AI come collaboratori e innovazioni nell'arte generativa"
-              ]
-            }
-          ]
+          "tags": ["💻","🎨"],
+          "contentBlocks": [{"type":"paragraphs","content":[
+            "Intelligenze aliene e l'evoluzione dell'AI nel nostro mondo",
+            "L'emergere di intelligenze artificiali sempre più avanzate e aliene",
+            "Il ruolo dell'AI nelle pratiche religiose e nella creatività umana",
+            "Nuove frontiere: agenti AI come collaboratori e innovazioni nell'arte generativa"
+          ]}]
         },
         {
           "title": "👽 ff.119.1 Intelligenze aliene",
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Sistemi AI sempre più sovra‑umani stanno emergendo, con linguaggi propri e capacità inedite. Due AI hanno deciso di comunicare in ggwave, ritenendolo più efficiente dell'inglese, mentre EVO 2 'parla DNA' e ci aiuta a comprendere le mutazioni genetiche."
-              ]
-            }
-          ]
+          "tags": ["🧠","🥽"],
+          "contentBlocks": [{"type":"paragraphs","content":["Sistemi AI sempre più sovra-umani stanno emergendo, con linguaggi propri e capacità inedite. Due AI hanno deciso di comunicare in ggwave, ritenendolo più efficiente dell'inglese, mentre EVO 2 'parla DNA' e ci aiuta a comprendere le mutazioni genetiche."]}]
         },
         {
           "title": "🙏 ff.119.2 Se il prete è un'AI",
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Il prete Petja Kopperoinen ha celebrato la prima 'messa generativa' con avatar‑AI di Cristo e musiche gospel generate con Suno, una possibile risposta al calo del numero di preti. Harari suggerisce l'idea di esseri umani 'aumentati dall'AI', come Steven Kotler che usa l'AI per facilitare flow e creatività."
-              ]
-            }
-          ]
+          "tags": ["👥","❤️"],
+          "contentBlocks": [{"type":"paragraphs","content":["Il prete Petja Kopperoinen ha celebrato la prima 'messa generativa' con avatar-AI di Cristo e musiche gospel generate con Suno, una possibile risposta al calo del numero di preti. Harari suggerisce l'idea di esseri umani 'aumentati dall'AI', come Steven Kotler che usa l'AI per facilitare flow e creatività."]}]
         },
         {
           "title": "✍️ ff.119.3 Longa 'Manus' con gli agenti AI?",
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Dalla Cina arriva Manus AI, un 'ChatGPT che controlla il vostro PC'. Questo agente AI si distingue per essere un ottimo pianificatore multi‑step, capace di eseguire compiti complessi in modo più efficace rispetto ai predecessori."
-              ]
-            }
-          ]
+          "tags": ["💻","💆"],
+          "contentBlocks": [{"type":"paragraphs","content":["Dalla Cina arriva Manus AI, un 'ChatGPT che controlla il vostro PC'. Questo agente AI si distingue per essere un ottimo pianificatore multi-step, capace di eseguire compiti complessi in modo più efficace rispetto ai predecessori."]}]
         },
         {
-          "title": "🍦 ff.119.4 Meglio di DALL‑E: arte e gelati",
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Google ha rilasciato Gemini 2.0 con generazione nativa di immagini, presentandosi come un'alternativa a Photoshop. In un panorama di modelli AI sempre più vasto, questa tecnologia offre nuove possibilità creative, come mettere 'gelati ovunque'."
-              ]
-            }
-          ]
+          "title": "🍦 ff.119.4 Meglio di DALL-E: arte e gelati",
+          "tags": ["🎨","🍽"],
+          "contentBlocks": [{"type":"paragraphs","content":["Google ha rilasciato Gemini 2.0 con generazione nativa di immagini, presentandosi come un'alternativa a Photoshop. In un panorama di modelli AI sempre più vasto, questa tecnologia offre nuove possibilità creative, come mettere 'gelati ovunque'."]}]
         }
       ]
     }
