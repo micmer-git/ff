@@ -1,11 +1,94 @@
 {
-  "books":[
+  "books": [
     {
-      "id":1,
-      "tags":["📚","❤️"],
-      "title":"The Almanack of Naval Ravikant",
-      "quote":"\"Earn with your mind, not your time.\"",
-      "url":"https://navalmanack.com"
+      "id": 1,
+      "tags": ["❤️", "🧠"],
+      "title": "Wayne W. Dyer, La saggezza del Tao",
+      "quote": "Uno dei molti doni del Tao Te Ching è la sua qualità di espandere la mente, specialmente nel modo in cui Lao-tzu usa ironia e paradosso per farti guardare alla vita.",
+      "summary": "Il Tao Te Ching stimola il pensiero e offre nuove prospettive attraverso l'uso di ironia e paradosso.",
+      "page": 15,
+      "url": "https://amzn.to/4kxvN86"
+    },
+    {
+      "id": 2,
+      "tags": ["🍃", "🎨"],
+      "title": "Wayne W. Dyer, La saggezza del Tao",
+      "quote": "Quando il lavoro è fatto, viene dimenticato. Per questo dura per sempre. Fai il tuo lavoro e poi indietreggia. Pratica l'umiltà piuttosto che l'ostentazione e il consumo incontrollato.",
+      "summary": "La vera permanenza deriva dal completare il proprio compito senza cercare riconoscimento, praticando umiltà e moderazione.",
+      "page": 30,
+      "url": "https://amzn.to/4kxvN86"
+    },
+    {
+      "id": 3,
+      "tags": ["❤️", "💆"],
+      "title": "Wayne W. Dyer, La saggezza del Tao",
+      "quote": "Ricordati quotidianamente che non c'è una strada per la felicità; la felicità è la strada stessa in ogni momento che vivi e sperimenti.",
+      "summary": "La felicità non è un punto di arrivo futuro, ma uno stato dell'essere da abbracciare pienamente nel presente.",
+      "page": 39,
+      "url": "https://amzn.to/4kxvN86"
+    },
+    {
+      "id": 4,
+      "tags": ["👥", "🧠"],
+      "title": "Wayne W. Dyer, La saggezza del Tao",
+      "quote": "Se qualcuno è speciale, allora lo siamo tutti. E se siamo tutti eccezionali, la parola stessa perde senso.",
+      "summary": "Parlare di 'speciali' crea distinzioni inutili: tutti possiedono un valore intrinseco e unico.",
+      "page": 52,
+      "url": "https://amzn.to/4kxvN86"
+    },
+    {
+      "id": 5,
+      "tags": ["🍃", "🧠"],
+      "title": "Wayne W. Dyer, La saggezza del Tao",
+      "quote": "L'utilità di ciò che c'è dipende da ciò che non c'è. È il vuoto che rende funzionale una stanza.",
+      "summary": "Il valore delle cose materiali dipende dallo spazio (o assenza) che le rende utili.",
+      "page": 83,
+      "url": "https://amzn.to/4kxvN86"
+    },
+    {
+      "id": 6,
+      "tags": ["❤️", "🧠"],
+      "title": "Wayne W. Dyer, La saggezza del Tao",
+      "quote": "Non sei intelligente grazie a un certificato; sei intelligenza stessa, che non necessita di conferme esterne.",
+      "summary": "L’intelligenza è intrinseca e non richiede validazione da titoli o istituzioni.",
+      "page": 128,
+      "url": "https://amzn.to/4kxvN86"
+    },
+    {
+      "id": 7,
+      "tags": ["❤️", "💸"],
+      "title": "Wayne W. Dyer, La saggezza del Tao",
+      "quote": "Quando hai abbastanza, sei veramente ricco. L'accumulo eccessivo nasconde povertà interiore.",
+      "summary": "La ricchezza autentica nasce dalla contentezza, non dall'accumulo illimitato.",
+      "page": 214,
+      "url": "https://amzn.to/4kxvN86"
+    },
+    {
+      "id": 8,
+      "tags": ["🍃", "💆"],
+      "title": "Wayne W. Dyer, La saggezza del Tao",
+      "quote": "Vivi lasciandoti andare. Attiri il potere cooperativo del Tao quando abbandoni il bisogno di controllo.",
+      "summary": "Allinearsi al flusso naturale porta a risultati più armoniosi che il controllo rigido.",
+      "page": 346,
+      "url": "https://amzn.to/4kxvN86"
+    },
+    {
+      "id": 9,
+      "tags": ["🧠", "💆"],
+      "title": "Wayne W. Dyer, La saggezza del Tao",
+      "quote": "La follia è credere di aver bisogno di ciò che non si ha o che un futuro difficile impedisca la gioia presente.",
+      "summary": "Pensare che la felicità dipenda da fattori esterni o futuri è irrazionale: il presente basta.",
+      "page": 387,
+      "url": "https://amzn.to/4kxvN86"
+    },
+    {
+      "id": 10,
+      "tags": ["🍃", "🎨"],
+      "title": "Wayne W. Dyer, La saggezza del Tao",
+      "quote": "Il saggio non accumula, e così dona. Più vive per gli altri, maggiore è la sua abbondanza.",
+      "summary": "La generosità, non l'accumulo, genera abbondanza e flusso con il Tao.",
+      "page": 491,
+      "url": "https://amzn.to/4kxvN86"
     }
   ]
 }
