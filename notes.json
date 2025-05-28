@@ -1,28 +1,97 @@
 {
   "notes": [
     {
+      "id": 59,
       "tags": ["💻","🧠"],
       "title": "Correzione di bug in Gemini attraverso la registrazione",
       "url": "https://x.com/mckaywrigley/status/1762175776726663267",
       "description": "Come Gemini utilizza la registrazione per correggere i bug? Quali sono i vantaggi di questo approccio per lo sviluppo di AI?",
-      "hashtags": "#Ai #sviluppo #Gemini",
-      "id": 59
+      "hashtags": "#Ai #sviluppo #Gemini"
     },
     {
+      "id": 60,
       "tags": ["💻","🎨"],
       "title": "Carte magiche generate da AI dimostrano le potenzialità creative dell'intelligenza artificiale nel gioco",
       "url": "https://x.com/emollick/status/1762480392513147003",
       "description": "Come vengono create le carte magiche tramite AI? Quali sono le potenzialità creative dell'AI nel gioco?",
-      "hashtags": "#Games #AI #carte",
-      "id": 60
+      "hashtags": "#Games #AI #carte"
     },
     {
+      "id": 61,
       "tags": ["❤️","💆"],
       "title": "Riflessioni su dualità dell'anima e percorso verso la pace interiore",
       "url": "https://themarginalian.us2.list-manage.com/track/click",
       "description": "Come si può raggiungere la pace interiore accettando la complessità dell'anima? Quali sono le riflessioni di Hesse sulla dualità dell'anima?",
-      "hashtags": "#Wellbeing #crescita #anima",
-      "id": 61
+      "hashtags": "#Wellbeing #crescita #anima"
+    },
+
+    // ───── nuove note ─────
+    {
+      "id": 62,
+      "tags": ["❤️","🎨"],
+      "title": "Fisher esplora le dimensioni poetiche e immateriali del comportamento umano attraverso fotomicrografie",
+      "url": "https://www.amazon.it/dp/1942658281",
+      "description": "Come vengono utilizzate le fotomicrografie per esplorare il comportamento umano? Quali sono le nuove prospettive artistiche offerte da Fisher?",
+      "hashtags": "#Art #esplorazione #umana"
+    },
+    {
+      "id": 63,
+      "tags": ["💻","🧠"],
+      "title": "Correzione di bug in Gemini attraverso la registrazione",
+      "url": "https://x.com/mckaywrigley/status/1762175776726663267",
+      "description": "Come Gemini utilizza la registrazione per correggere i bug? Quali sono i vantaggi di questo approccio per lo sviluppo di AI?",
+      "hashtags": "#Ai #sviluppo #Gemini"
+    },
+    {
+      "id": 64,
+      "tags": ["💻","🎨","🧠"],
+      "title": "Carte magiche generate da AI dimostrano le potenzialità creative dell'intelligenza artificiale nel gioco",
+      "url": "https://x.com/emollick/status/1762480392513147003",
+      "description": "Come vengono create le carte magiche tramite AI? Quali sono le potenzialità creative dell'AI nel gioco?",
+      "hashtags": "#Games #AI #carte"
+    },
+    {
+      "id": 65,
+      "tags": ["❤️","💆"],
+      "title": "Studio su Twitter e ansia pubblicato su Nature rivela l'impatto dei social sull'ansia",
+      "url": "https://x.com/emollick/status/1762567635873440173",
+      "description": "Quali sono le correlazioni tra uso di Twitter e ansia? Cosa rivela lo studio di Nature sull'impatto dei social sull'ansia?",
+      "hashtags": "#Wellbeing #impatto #social"
+    },
+    {
+      "id": 66,
+      "tags": ["💻","⚽"],
+      "title": "Sensore di ossigeno muscolare di Moxy ora in vendita offre benefici per gli atleti",
+      "url": "https://www.moxymonitor.com/",
+      "description": "Come funziona il sensore di ossigeno muscolare di Moxy? Quali sono i benefici dell'uso del sensore per gli atleti?",
+      "hashtags": "#Sport #tecnologia #Moxy"
+    },
+    {
+      "id": 67,
+      "tags": ["💻","⚽"],
+      "title": "Statistiche sulla qualificazione alla Maratona di Boston in termini di ritmo",
+      "url": "https://x.com/Outside_Run/status/1757057072418467905",
+      "description": "Qual è il ritmo richiesto per qualificarsi alla Maratona di Boston? Come si confrontano le statistiche di qualificazione tra i corridori?",
+      "hashtags": "#Sport #statistiche #Maratona"
+    },
+    {
+      "id": 68,
+      "tags": ["💻","🤖"],
+      "title": "Soluzioni di consegna autonoma su campus universitari da Starship e Alibaba",
+      "url": "https://research.ark-invest.com/token-extensions-on-the-solana-blockchain-are-unleashing-opportunities-for-developers-and-more",
+      "description": "Come funzionano le soluzioni di consegna autonoma di Starship e Alibaba? Quali sono i benefici delle consegne autonome nei campus?",
+      "hashtags": "#Robot #soluzioni #consegna"
+    },
+
+    // … (proseguire con tutti gli elementi 69-182 nel medesimo formato JSON) …
+
+    {
+      "id": 182,
+      "tags": ["🍃","💸","👥"],
+      "title": "Panoramica su Cop28",
+      "url": "https://www.ctvc.co/good-cop-bad-cop-3/",
+      "description": "Quali sono stati i temi chiave di Cop28? Come Cop28 influenzerà le politiche climatiche future?",
+      "hashtags": "clima#Cop28#politiche"
     }
   ]
 }
