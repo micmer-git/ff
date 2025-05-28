@@ -79,10 +79,8 @@ function render(){
   const activeS=term.length>0, activeF=filters.size>0;
   const wrap=document.getElementById('app');wrap.innerHTML='';
 
-  // collapsed strip
   if(!activeS&&!activeF){wrap.appendChild(createPubStrip(DATA.publications));}
 
-  // list when filtered / search
   DATA.publications.forEach((pub,idx)=>{
     if(activeS||activeF){
       const visibleSC=pub.cards.filter(sc=>!sc.title.startsWith('📖')).filter(sc=>{const tagOk=!activeF||sc.tags?.some(t=>filters.has(t));const txtOk=!activeS||match(sc.title,term)||sc.contentBlocks.some(b=>b.content.some(l=>match(l,term)));return tagOk&&txtOk;});
