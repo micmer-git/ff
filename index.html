@@ -101,17 +101,24 @@ function render(){
 function createPubStrip(publications){
   const strip=document.createElement('div');strip.id='pubStrip';strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
   publications.forEach((pub,i)=>{
-    const card=document.createElement('div');card.className='rounded-xl border-2 border-gray-900 flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden cursor-pointer';
+    const card=document.createElement('div');
+    card.className='rounded-xl flex-shrink-0 snap-start overflow-hidden cursor-pointer w-full max-w-[320px]';
     card.style.background=gradients[i%gradients.length];
-    const inner=document.createElement('div');inner.className='bg-white h-full flex flex-col justify-center p-5';
+    card.style.padding='2px';
+
+    const inner=document.createElement('div');
+    inner.className='bg-white rounded-xl p-5 shadow-neu';
+
     const pano=pub.cards.find(c=>c.title.startsWith('📖'));
-    let html=`<h3 class='font-semibold text-xl text-center mb-2'>${pub.title}</h3>`;
-    if(pano){html+=`<p class='text-base text-center'>${pano.contentBlocks[0].content[0]}</p>`;}
-    inner.innerHTML=html;card.appendChild(inner);
+    inner.innerHTML=`<h3 class='font-semibold text-xl mb-2 break-words'>${pub.title}</h3>`+
+      (pano?`<p class='text-base break-words'>${pano.contentBlocks[0].content[0]}</p>`:'');
+
+    card.appendChild(inner);
     card.onclick=()=>openExpanded(pub);
     strip.appendChild(card);
   });
   return strip;
+}
 }
 
 function openExpanded(pub){
@@ -137,15 +144,26 @@ function createPubCard(pub,scList,idx,condensed,term,showTags){
   return card;
 }
 
-function createNotesStrip(notes,showTags){
-  const strip=document.createElement('div');strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+function createNotesStrip(notes){
+  const strip=document.createElement('div');
+  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
   notes.forEach(n=>{
-    const card=document.createElement('div');card.className='rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';card.style.background='#ffffff';
+    const card=document.createElement('div');
+    card.className='rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
+    card.style.background='#ffffff';
     card.onclick=()=>window.open(n.url,'_blank');
-    const inner=document.createElement('div');inner.className='p-5';inner.innerHTML=`<h3 class='font-semibold text-xl mb-1 break-words'>${n.title}</h3>${showTags?`<div class='flex flex-wrap gap-1 mt-3'>${n.tags.map(t=>`<span class='tag text-lg'>${t}</span>`).join('')}</div>`:''}`;card.appendChild(inner);
+
+    const inner=document.createElement('div');inner.className='p-5';
+    const host=(()=>{try{return new URL(n.url).hostname.replace(/^www\./,'');}catch(e){return '';}})();
+    const tagsHTML=n.tags.map(t=>`<span class='tag text-lg'>${t}</span>`).join('');
+    const hostHTML=host?`<span class='tag text-xs'>${host}</span>`:'';
+
+    inner.innerHTML=`<h3 class='font-semibold text-xl mb-1 break-words'>${n.title}</h3><div class='flex flex-wrap gap-1 mt-3'>${tagsHTML}${hostHTML}</div>`;
+    card.appendChild(inner);
     strip.appendChild(card);
   });
   return strip;
+}
 }
 
 function createBooksStrip(books,showTags){
