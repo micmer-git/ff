@@ -89,6 +89,98 @@
       "summary": "La generosità, non l'accumulo, genera abbondanza e flusso con il Tao.",
       "page": 491,
       "url": "https://amzn.to/4kxvN86"
+    },
+    {
+      "id": 11,
+      "tags": ["💊", "❤️"],
+      "title": "Peter Attia, Outlive (cit.)",
+      "quote": "Studi dimostrano che il 70 percento delle persone con malattie cardiache e l’80 percento di quelle con Alzheimer presentano livelli disfunzionali di glucosio nel sangue.",
+      "summary": "Il controllo della glicemia è centrale per prevenire patologie cardiovascolari e neurodegenerative.",
+      "page": 49,
+      "url": "https://example.com/outlive"
+    },
+    {
+      "id": 12,
+      "tags": ["💊", "🧠"],
+      "title": "Peter Attia, Outlive (cit.)",
+      "quote": "Il fatto che l’intervallo normale per i trigliceridi sia qualsiasi valore inferiore a 150 mg/dL è una farsa.",
+      "summary": "La soglia ‘normale’ dei trigliceridi andrebbe rivista drasticamente al ribasso.",
+      "page": 108,
+      "url": "https://example.com/outlive"
+    },
+    {
+      "id": 13,
+      "tags": ["💊", "🧠"],
+      "title": "Peter Attia, Outlive (cit.)",
+      "quote": "Calcola il tuo rapporto trigliceridi-HDL per comprendere meglio la sensibilità all’insulina… questo valore è ben correlato con la resistenza all’insulina.",
+      "summary": "Il rapporto TG/HDL è un marcatore rapido ed economico della salute metabolica.",
+      "page": 114,
+      "url": "https://example.com/outlive"
+    },
+    {
+      "id": 14,
+      "tags": ["💊", "❤️"],
+      "title": "Peter Attia, Outlive (cit.)",
+      "quote": "Il monitoraggio continuo del glucosio permette di raccogliere decine di punti dati e visualizzare un quadro dinamico della glicemia.",
+      "summary": "Il CGM offre un’analisi molto più dettagliata rispetto al singolo dato di laboratorio.",
+      "page": 102,
+      "url": "https://example.com/outlive"
+    },
+    {
+      "id": 15,
+      "tags": ["💊", "🧠"],
+      "title": "Peter Attia, Outlive (cit.)",
+      "quote": "La GGT può offrire un indizio di stress ossidativo, uno dei tre processi chiave alla base della ‘cattiva energia’.",
+      "summary": "Usare la GGT come marker indiretto dello stress ossidativo sistemico.",
+      "page": 121,
+      "url": "https://example.com/outlive"
+    },
+    {
+      "id": 16,
+      "tags": ["💊", "👥"],
+      "title": "Peter Attia, Outlive (cit.)",
+      "quote": "Il tessuto adiposo contiene aromatasi che convertono il testosterone in estrogeni e alterano l’equilibrio ormonale necessario per la spermatogenesi.",
+      "summary": "L’eccesso di grasso corporeo compromette la fertilità maschile via conversione ormonale.",
+      "page": 67,
+      "url": "https://example.com/outlive"
+    },
+    {
+      "id": 17,
+      "tags": ["🍃", "💊"],
+      "title": "Peter Attia, Outlive (cit.)",
+      "quote": "L’acqua nella mia comunità conteneva 820 volte la quantità di arsenico raccomandata come sicura. Raccomando un filtro a osmosi inversa.",
+      "summary": "Le contaminazioni dell’acqua potabile richiedono sistemi di filtrazione avanzati.",
+      "page": 169,
+      "url": "https://example.com/outlive"
+    },
+    {
+      "id": 18,
+      "tags": ["❤️", "🧠"],
+      "title": "Peter Attia, Outlive (cit.)",
+      "quote": "La ‘ricompensa variabile’ del cibo trasformato attiva la dopamina e ci spinge a continuare a cercarlo.",
+      "summary": "I meccanismi di reward imprevedibile spiegano la dipendenza da junk-food.",
+      "page": 158,
+      "url": "https://example.com/outlive"
+    },
+    {
+      "id": 19,
+      "tags": ["💆", "❤️"],
+      "title": "Peter Attia, Outlive (cit.)",
+      "quote": "In un impeto di energia, chiese di essere portata nel boschetto che dominava campi e oceano, dove presto sarebbe stata sepolta.",
+      "summary": "Un momento di consapevolezza e accettazione nel fine-vita.",
+      "page": 85,
+      "url": "https://example.com/outlive"
+    },
+    {
+      "id": 20,
+      "tags": ["💆", "🧠"],
+      "title": "Peter Attia, Outlive (cit.)",
+      "quote": "I medici hanno un tasso di suicidi doppio rispetto alla popolazione generale.",
+      "summary": "Burn-out e salute mentale sono criticità particolarmente elevate fra i medici.",
+      "page": 99,
+      "url": "https://example.com/outlive"
     }
+  ]
+}
   ]
 }
