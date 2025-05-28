@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html id="roothtml" lang="it">
+<!DOCTYPE html><html id="roothtml" lang="it">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,9 +28,7 @@
     <img src="logo.png" alt="logo Futuro Fortissimo" class="h-8" />
     <h1 class="italic lowercase text-3xl font-semibold">futuro fortissimo</h1>
   </div>
-</header>
-
-<section class="max-w-3xl mx-auto px-4 space-y-3">
+</header><section class="max-w-3xl mx-auto px-4 space-y-3">
   <div class="relative">
     <input id="searchInput" placeholder="search / cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
     <span class="absolute left-4 top-1/2 -translate-y-1/2 text-lg">🔍</span>
@@ -42,17 +39,11 @@
     <span class="pill" data-filter="🧠">🧠</span><span class="pill" data-filter="💊">💊</span><span class="pill" data-filter="🎨">🎨</span>
     <span class="pill" data-filter="🚕">🚕</span><span class="pill" data-filter="🥽">🥽</span><span class="pill" data-filter="👥">👥</span><span class="pill" data-filter="💆">💆</span>
   </div>
-</section>
-
-<main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-6 mt-6"></main>
-
-<footer class="fixed bottom-0 inset-x-0 flex items-center justify-center gap-3 py-2 text-base bg-ioBg/90 backdrop-blur">
+</section><main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-6 mt-6"></main><footer class="fixed bottom-0 inset-x-0 flex items-center justify-center gap-3 py-2 text-base bg-ioBg/90 backdrop-blur">
   <button onclick="window.open('https://www.paypal.com/paypalme/michelemerelli','_blank')" class="pill">☕ sostieni</button>
   <button onclick="window.open('https://linktr.ee/micmer','_blank')" class="pill">👤 chi&nbsp;sono</button>
   <button id="langToggle" class="pill">🇬🇧 english</button>
-</footer>
-
-<script>
+</footer><script>
 let LANG='it';
 const DATA_PATH={it:'newsletter_data.json',en:'newsletter_data_en.json'};
 const NOTES_PATH='notes.json';
@@ -114,31 +105,54 @@ function createPubCard(pub,scList,idx,condensed,term,showTags){
   scList.forEach((sc,i)=>{inner.innerHTML+=`<div><h3 class='font-semibold mb-1'>${condensed?hl(sc.title,term):sc.title}</h3>${sc.contentBlocks[0].content.map(l=>`<p class='text-base'>${condensed?hl(l,term):l}</p>`).join('')}${showTags?`<div class='flex flex-wrap gap-1 mt-1'>${sc.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>`:''}</div>${i<scList.length-1?"<hr class='border-t my-3' />":''}`;});
   inner.onclick=()=>window.open(pub.substackLink,'_blank');return card;}
 
-function createNotesStrip(notes,showTags){
-  const strip=document.createElement('div');strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';notes.forEach(n=>{const card=document.createElement('div');card.className='rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';card.style.background='#ffffff';card.onclick=()=>window.open(n.url,'_blank');const inner=document.createElement('div');inner.className='p-5';const host=(()=>{try{return new URL(n.url).hostname.replace(/^www\./,'');}catch{return'';}})();const tagsHTML=n.tags.map(t=>`<span class='tag text-lg'>${t}</span>`).join('');const hostHTML=host?`<span class='tag text-xs'>${host}</span>`:'';inner.innerHTML=`<h3 class='font-semibold text-xl mb-1 break-words'>${n.title}</h3><div class='flex flex-wrap gap-1 mt-3'>${tagsHTML}${hostHTML}</div>`;card.appendChild(inner);strip.appendChild(card);});return strip;}
+function createNotesStrip(notes, showTags) {
+  const strip = document.createElement('div');
+  strip.className = 'flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  notes.forEach(n => {
+    const card = document.createElement('div');
+    card.className = 'rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
+    card.style.background = '#ffffff';
+    card.onclick = () => window.open(n.url, '_blank');
 
-function createBooksStrip(books,showTags){
-  const strip=document.createElement('div');
-  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
-  books.forEach(b=>{
-    const card=document.createElement('div');
-    card.className='rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
-    card.style.background='#ffffff';
-    card.onclick=()=>window.open(b.url,'_blank');
+    const inner = document.createElement('div');
+    inner.className = 'p-5 flex flex-col justify-between min-h-[160px]';
+    const host = (() => { try { return new URL(n.url).hostname.replace(/^www\./, ''); } catch { return ''; } })();
+    const tagsHTML  = n.tags.map(t => `<span class='tag text-lg'>${t}</span>`).join('');
+    const hostHTML  = host ? `<span class='tag text-xs'>${host}</span>` : '';
 
-    const inner=document.createElement('div');
-    inner.className='p-5 flex flex-col justify-between min-h-[160px]';
-    inner.innerHTML=`<p class='text-xl font-semibold break-words'>&ldquo;${b.quote}&rdquo;</p>`+
-      `<p class='text-sm text-gray-600 mt-2'>${b.title}</p>`+
-      (showTags?`<div class='flex flex-wrap gap-1 mt-2'>${b.tags.map(t=>`<span class='tag text-lg'>${t}</span>`).join('')}</div>`:'');
+    inner.innerHTML = `
+      <h3 class='font-semibold text-xl mb-1 break-words'>${n.title}</h3>
+      <div class='flex flex-wrap items-center gap-1 mt-3'>${showTags ? tagsHTML : ''}${hostHTML}</div>`;
+    card.appendChild(inner);
+    strip.appendChild(card);
+  });
+  return strip;
+}}
+
+function createBooksStrip(books, showTags) {
+  const strip = document.createElement('div');
+  strip.className = 'flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  books.forEach(b => {
+    const card = document.createElement('div');
+    card.className = 'rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
+    card.style.background = '#ffffff';
+    card.onclick = () => window.open(b.url, '_blank');
+
+    const inner = document.createElement('div');
+    inner.className = 'p-5 flex flex-col justify-between min-h-[180px]';
+    inner.innerHTML = `
+      <p class='text-xl font-semibold break-words'>&ldquo;${b.quote}&rdquo;</p>
+      <p class='text-sm text-gray-600 mt-2'>${b.title}</p>
+      <p class='text-xs text-gray-500'>p.&nbsp;${b.page}</p>
+      ${showTags ? `<div class='flex flex-wrap gap-1 mt-2'>${b.tags.map(t => `<span class='tag text-lg'>${t}</span>`).join('')}</div>` : ''}`;
     card.appendChild(inner);
     strip.appendChild(card);
   });
   return strip;
 }
+}
 
 /* ---- initialize ---- */
 loadAll();
-</script>
-</body>
+</script></body>
 </html>
