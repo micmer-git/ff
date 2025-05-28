@@ -4,31 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>futuro fortissimo – newsletter explorer</title>
-
-  <!-- SEO base -->
-  <meta name="description" content="Esplora Futuro Fortissimo: tecnologia, sostenibilità, creatività. Filtra per emoji o cerca testo in italiano/inglese." />
-  <link rel="canonical" href="https://futurofortissimo.web.app/" />
-  <meta property="og:title" content="futuro fortissimo" />
-  <meta property="og:description" content="Tech, AI, climate & creativity – interactive explorer." />
-  <meta property="og:image" content="https://futurofortissimo.web.app/preview.png" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="Esplora Futuro Fortissimo: tecnologia, sostenibilità, creatività. Filtra per emoji o cerca testo." />
   <meta name="robots" content="index,follow" />
-
-  <!-- fonts + tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['"Google Sans"', 'Roboto', 'ui-sans-serif'] },
-          colors: { ioBg: '#F6F9FE' },
-          boxShadow: { neu: '4px 4px 8px rgba(0,0,0,.06)' }
-        }
-      }
-    }
+    tailwind.config = {theme:{extend:{fontFamily:{sans:['\"Google Sans\"','Roboto','ui-sans-serif']},colors:{ioBg:'#F6F9FE'},boxShadow:{neu:'4px 4px 8px rgba(0,0,0,.06)'}}}}
   </script>
   <style>
     body{background:#F6F9FE}
@@ -36,18 +19,19 @@
     .pill,.tag{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.1);padding:4px 12px;border-radius:9999px;user-select:none;transition:.15s}
     .pill{cursor:pointer;font-size:1.1rem}.pill.active{outline:2px solid #38bdf8}
     .tag{font-size:.9rem;margin-right:4px;margin-top:4px}
+    /* hide scrollbar */
+    .hide-scrollbar::-webkit-scrollbar{display:none}
+    .hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
   </style>
 </head>
 <body class="font-sans text-gray-800 antialiased text-[18px]">
-<!-- ────────────────────────── header -->
 <header class="py-2">
   <div class="max-w-3xl mx-auto flex items-center justify-center gap-3 px-4">
-    <img src="logo.png" class="h-8" alt="logo Futuro Fortissimo" />
+    <img src="logo.png" alt="logo Futuro Fortissimo" class="h-8" />
     <h1 class="italic lowercase text-3xl font-semibold">futuro fortissimo</h1>
   </div>
 </header>
 
-<!-- ────────────────────────── search + emoji -->
 <section class="max-w-3xl mx-auto px-4 space-y-3">
   <div class="relative">
     <input id="searchInput" placeholder="search / cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
@@ -61,46 +45,41 @@
   </div>
 </section>
 
-<!-- ────────────────────────── main -->
 <main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-6 mt-6"></main>
 
-<!-- ────────────────────────── footer -->
 <footer class="fixed bottom-0 inset-x-0 flex items-center justify-center gap-3 py-2 text-base bg-ioBg/90 backdrop-blur">
   <button onclick="window.open('https://www.paypal.com/paypalme/michelemerelli','_blank')" class="pill">☕ sostieni</button>
   <button onclick="window.open('https://linktr.ee/micmer','_blank')" class="pill">👤 chi&nbsp;sono</button>
   <button id="langToggle" class="pill">🇬🇧 english</button>
 </footer>
 
-<!-- ────────────────────────── scripts -->
 <script>
-/* ==== paths & globals ==== */
+/* paths & globals */
 let LANG='it';
-const DATA_PATH={it:'newsletter_data.json', en:'newsletter_data_en.json'};
+const DATA_PATH={it:'newsletter_data.json',en:'newsletter_data_en.json'};
 const NOTES_PATH='notes.json';
-let DATA, NOTES;
+let DATA,NOTES;
 const filters=new Set();
 const gradients=['linear-gradient(135deg,#38bdf8,#c084fc)','linear-gradient(135deg,#f472b6,#facc15)','linear-gradient(135deg,#34d399,#60a5fa)','linear-gradient(135deg,#f87171,#fb923c)','linear-gradient(135deg,#a78bfa,#f472b6)','linear-gradient(135deg,#fb923c,#fde68a)','linear-gradient(135deg,#5eead4,#3b82f6)','linear-gradient(135deg,#fda4af,#c4b5fd)'];
 
-/* ==== listeners ==== */
-document.querySelectorAll('.pill').forEach(p=>p.dataset.filter && p.addEventListener('click',()=>{const v=p.dataset.filter;p.classList.toggle('active');filters.has(v)?filters.delete(v):filters.add(v);render();}));
+/* listeners */
+document.querySelectorAll('.pill').forEach(p=>p.dataset.filter&&p.addEventListener('click',()=>{const v=p.dataset.filter;p.classList.toggle('active');filters.has(v)?filters.delete(v):filters.add(v);render();}));
 document.getElementById('searchInput').oninput=render;
 document.getElementById('langToggle').onclick=()=>{LANG=LANG==='it'?'en':'it';document.getElementById('langToggle').textContent=LANG==='it'?'🇬🇧 english':'🇮🇹 italiano';document.documentElement.lang=LANG;loadAll();};
 
-/* ==== helpers ==== */
+/* helpers */
 const match=(t,term)=>t.toLowerCase().includes(term);
-const hl=(t,term)=>term? t.replace(new RegExp(`(${term})`,'gi'),'<mark>$1</mark>') : t;
+const hl=(t,term)=>term?t.replace(new RegExp(`(${term})`,'gi'),'<mark>$1</mark>'):t;
 
-/* ==== load ==== */
+/* load */
 async function loadAll(){
-  DATA=await fetch(DATA_PATH[LANG]).then(r=>r.json());
-  NOTES=await fetch(NOTES_PATH).then(r=>r.json());
+  [DATA,NOTES]=await Promise.all([fetch(DATA_PATH[LANG]).then(r=>r.json()),fetch(NOTES_PATH).then(r=>r.json())]);
   DATA.publications.sort(()=>Math.random()-0.5);
   filters.clear();document.querySelectorAll('.pill.active').forEach(p=>p.classList.remove('active'));
-  document.getElementById('searchInput').value='';
-  render();
+  document.getElementById('searchInput').value='';render();
 }
 
-/* ==== render ==== */
+/* render */
 function render(){
   const term=document.getElementById('searchInput').value.toLowerCase();
   const activeS=term.length>0, activeF=filters.size>0;
@@ -114,60 +93,67 @@ function render(){
     });
     if((activeS||activeF)&&!visibleSC.length) return;
 
-    /* card */
-    const card=document.createElement('div');
-    card.className='rounded-xl overflow-hidden';
-    card.style.cssText=`background:${gradients[idx%gradients.length]};padding:2px`;
-    const inner=document.createElement('div');
-    inner.className='bg-white rounded-xl p-5 shadow-neu'; card.appendChild(inner);
-
-    /* collapsed view */
-    if(!activeS&&!activeF){
-      const hd=`<div class="flex justify-between items-start gap-2"><h2 class="text-xl font-semibold">${pub.title}</h2><button><svg class="w-6 h-6 text-gray-600 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button></div>`;
-      inner.insertAdjacentHTML('beforeend',hd);
-      const pano=pub.cards.find(c=>c.title.startsWith('📖'));
-      if(pano){
-        const [f,...r]=pano.contentBlocks[0].content;
-        let html='<div class="mt-2">';
-        if(f)html+=`<p class="font-bold">${f}</p>`;
-        if(r.length)html+=`<ul class="list-disc list-inside text-base space-y-0.5">${r.map(l=>`<li>${l}</li>`).join('')}</ul>`;
-        html+='</div>'; inner.insertAdjacentHTML('beforeend',html);
-      }
-      const det=document.createElement('div');det.className='mt-4 space-y-3 hidden';
-      pub.cards.filter(sc=>!sc.title.startsWith('📖')).forEach(sc=>{
-        det.innerHTML+=`<div><h3 class="font-semibold mb-1">${sc.title}</h3>${sc.contentBlocks[0].content.map(l=>`<p class="text-base">${l}</p>`).join('')}<div class="flex flex-wrap gap-1 mt-1">${(sc.tags||[]).map(t=>`<span class="tag text-lg">${t}</span>`).join('')}</div></div>`;
-      });
-      inner.appendChild(det);
-      inner.querySelector('button').onclick=e=>{e.stopPropagation();det.classList.toggle('hidden');e.currentTarget.querySelector('svg').classList.toggle('rotate-180');};
-      inner.onclick=e=>{if(e.target.tagName==='BUTTON'||e.target.closest('button'))return;window.open(pub.substackLink,'_blank');};
-    } else {
-      visibleSC.forEach(sc=>{
-        inner.innerHTML+=`<div class="mb-2"><h3 class="font-semibold mb-1">${hl(sc.title,term)}</h3>${sc.contentBlocks[0].content.map(l=>`<p class="text-base">${hl(l,term)}</p>`).join('')}<div class="flex flex-wrap gap-1 mt-1">${(sc.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div></div>`;
-      });
-      inner.onclick=()=>window.open(pub.substackLink,'_blank');
-    }
+    const card=createPubCard(pub,visibleSC,idx,activeS||activeF,term);
     wrap.appendChild(card);
 
-    /* notes card subito dopo la prima pubblicazione */
+    /* notes después prima scheda */
     if(idx===0){
-      const noteCard=document.createElement('div');
-      noteCard.className='rounded-xl overflow-hidden mt-2';
-      noteCard.style.cssText='background:linear-gradient(135deg,#e0f2ff,#ffffff);padding:2px;border:2px solid #000';
-      const noteInner=document.createElement('div');
-      noteInner.className='bg-white rounded-xl p-4 shadow-neu';
-      noteCard.appendChild(noteInner);
-      noteInner.innerHTML='<h2 class="text-xl font-semibold mb-2">🗒️ quick notes</h2><div id="noteStrip" class="flex overflow-x-auto gap-4"></div>';
-      const strip=noteInner.querySelector('#noteStrip');
-      NOTES.notes.forEach(n=>{
-         const box=document.createElement('div');
-         box.className='min-w-[260px] flex-shrink-0 border border-gray-300 rounded-lg p-3';box.style.cursor='pointer';
-         box.innerHTML=`<div class="flex flex-wrap gap-1 mb-1">${n.tags.map(t=>`<span class="tag text-base">${t}</span>`).join('')}</div><p class="font-semibold text-base">${n.title}</p><p class="text-sm">${n.description}</p>`;
-         box.onclick=()=>window.open(n.url,'_blank');
-         strip.appendChild(box);
+      const notesVisible=NOTES.notes.filter(n=>{
+        const tagOk=!activeF||n.tags.some(t=>filters.has(t));
+        const txtOk=!activeS||match(n.title,term)||match(n.description,term);
+        return tagOk&&txtOk;
       });
-      wrap.appendChild(noteCard);
+      if(notesVisible.length) wrap.appendChild(createNotesStrip(notesVisible));
     }
   });
+}
+
+/* build publication card */
+function createPubCard(pub,scList,idx,condensed,term){
+  const card=document.createElement('div');
+  card.className='rounded-xl overflow-hidden';card.style.cssText=`background:${gradients[idx%gradients.length]};padding:2px`;
+  const inner=document.createElement('div');inner.className='bg-white rounded-xl p-5 shadow-neu';card.appendChild(inner);
+
+  if(condensed){
+    scList.forEach((sc,i)=>{
+      inner.innerHTML+=`<div><h3 class="font-semibold mb-1">${hl(sc.title,term)}</h3>${sc.contentBlocks[0].content.map(l=>`<p class="text-base">${hl(l,term)}</p>`).join('')}<div class="flex flex-wrap gap-1 mt-1">${sc.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div>${i<scList.length-1?'<hr class="border-t border-gray-200 my-3" />':''}`;
+    });
+    inner.onclick=()=>window.open(pub.substackLink,'_blank');
+  }else{
+    const header=`<div class="flex justify-between items-start gap-2"><h2 class="text-xl font-semibold">${pub.title}</h2><button><svg class="w-6 h-6 text-gray-600 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button></div>`;
+    inner.insertAdjacentHTML('beforeend',header);
+    const pano=pub.cards.find(c=>c.title.startsWith('📖'));
+    if(pano){
+      const [f,...r]=pano.contentBlocks[0].content;
+      let html='<div class="mt-2">';
+      if(f)html+=`<p class="font-bold text-base">${f}</p>`;
+      if(r.length)html+=`<ul class="list-disc list-inside text-sm space-y-0.5">${r.map(l=>`<li>${l}</li>`).join('')}</ul>`;
+      html+='</div>';inner.insertAdjacentHTML('beforeend',html);
+    }
+    const det=document.createElement('div');det.className='mt-4 space-y-3 hidden';
+    pub.cards.filter(sc=>!sc.title.startsWith('📖')).forEach((sc,i)=>{
+      det.innerHTML+=`<div><h3 class="font-semibold mb-1">${sc.title}</h3>${sc.contentBlocks[0].content.map(l=>`<p class="text-base">${l}</p>`).join('')}<div class="flex flex-wrap gap-1 mt-1">${sc.tags.map(t=>`<span class="tag text-lg">${t}</span>`).join('')}</div></div>${i<pub.cards.length-2?'<hr class="border-t border-gray-200 my-3" />':''}`;
+    });
+    inner.appendChild(det);
+    inner.querySelector('button').onclick=e=>{e.stopPropagation();det.classList.toggle('hidden');e.currentTarget.querySelector('svg').classList.toggle('rotate-180');};
+    inner.onclick=e=>{if(e.target.tagName==='BUTTON'||e.target.closest('button'))return;window.open(pub.substackLink,'_blank');};
+  }
+  return card;
+}
+
+/* build notes strip */
+function createNotesStrip(notes){
+  const wrap=document.createElement('div');
+  wrap.className='rounded-xl overflow-hidden';wrap.style.cssText='background:linear-gradient(135deg,#e0f2ff,#ffffff);padding:2px;border:2px solid #000';
+  const inner=document.createElement('div');inner.className='bg-white rounded-xl p-4 shadow-neu';wrap.appendChild(inner);
+  const strip=document.createElement('div');strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-smooth';inner.appendChild(strip);
+  notes.forEach(n=>{
+    const box=document.createElement('div');
+    box.className='min-w-[260px] flex-shrink-0 border border-gray-300 rounded-lg p-3 cursor-pointer';
+    box.innerHTML=`<p class="font-semibold text-base">${n.title}</p><p class="text-sm">${n.description}</p><div class="flex flex-wrap gap-1 mt-2">${n.tags.map(t=>`<span class="tag text-base">${t}</span>`).join('')}</div>`;
+    box.onclick=()=>window.open(n.url,'_blank');strip.appendChild(box);
+  });
+  return wrap;
 }
 
 loadAll();
