@@ -1,0 +1,11 @@
+{
+  "books":[
+    {
+      "id":1,
+      "tags":["📚","❤️"],
+      "title":"The Almanack of Naval Ravikant",
+      "quote":"\"Earn with your mind, not your time.\"",
+      "url":"https://navalmanack.com"
+    }
+  ]
+}
