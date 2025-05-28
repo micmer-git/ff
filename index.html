@@ -143,17 +143,27 @@ function createPubCard(pub,scList,idx,condensed,term){
 
 /* build notes strip */
 function createNotesStrip(notes){
-  const wrap=document.createElement('div');
-  wrap.className='rounded-xl overflow-hidden';wrap.style.cssText='background:linear-gradient(135deg,#e0f2ff,#ffffff);padding:2px;border:2px solid #000';
-  const inner=document.createElement('div');inner.className='bg-white rounded-xl p-4 shadow-neu';wrap.appendChild(inner);
-  const strip=document.createElement('div');strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-smooth';inner.appendChild(strip);
+  const card=document.createElement('div');
+  // bordo nero, gradient light-blue – niente “doppia” scheda interna
+  card.className='rounded-xl border-2 border-black overflow-hidden';
+  card.style.background='linear-gradient(135deg,#e0f2ff 0%,#ffffff 100%)';
+
+  const strip=document.createElement('div');
+  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-smooth p-4';
+  card.appendChild(strip);
+
   notes.forEach(n=>{
     const box=document.createElement('div');
-    box.className='min-w-[260px] flex-shrink-0 border border-gray-300 rounded-lg p-3 cursor-pointer';
-    box.innerHTML=`<p class="font-semibold text-base">${n.title}</p><p class="text-sm">${n.description}</p><div class="flex flex-wrap gap-1 mt-2">${n.tags.map(t=>`<span class="tag text-base">${t}</span>`).join('')}</div>`;
-    box.onclick=()=>window.open(n.url,'_blank');strip.appendChild(box);
+    // singola notecard
+    box.className='min-w-[240px] flex-shrink-0 bg-white border border-gray-300 rounded-lg p-3 cursor-pointer';
+    box.innerHTML=`<p class="font-semibold text-base break-words">${n.title}</p>
+                   <p class="text-sm break-words">${n.description}</p>
+                   <div class="flex flex-wrap gap-1 mt-2">${n.tags
+                     .map(t=>`<span class="tag text-base">${t}</span>`).join('')}</div>`;
+    box.onclick=()=>window.open(n.url,'_blank');
+    strip.appendChild(box);
   });
-  return wrap;
+  return card;
 }
 
 loadAll();
