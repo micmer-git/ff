@@ -1,9 +1,18 @@
-<!DOCTYPE html><html lang="it">
+<!DOCTYPE html><html id="roothtml" lang="it">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>futuro fortissimo – explorer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>futuro fortissimo – newsletter explorer</title>
+  <meta name="description" content="Esplora Futuro Fortissimo: una newsletter su tecnologia, economia, sostenibilità e creatività. Filtra per emoji, cerca per testo, goditi un design mobile‑first." />
+  <link rel="canonical" href="https://futurofortissimo.web.app/" />
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:title" content="futuro fortissimo" />
+  <meta property="og:description" content="Tech, AI, climate & creativity – explore the newsletter visually." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://futurofortissimo.web.app/" />
+  <meta property="og:image" content="https://futurofortissimo.web.app/preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index,follow" />  <!-- Google Sans & Tailwind -->  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
@@ -15,18 +24,26 @@
     mark{background:#FFEB3B66;padding:0 2px;border-radius:3px}
     .pill,.tag{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.1);padding:4px 12px;border-radius:9999px;user-select:none;transition:.15s}
     .pill{cursor:pointer;font-size:1.15rem}.pill.active{outline:2px solid #38bdf8}
-    .tag{font-size:1.05rem;margin-right:4px;margin-top:4px}
+    .tag{font-size:1rem;margin-right:4px;margin-top:4px}
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Futuro Fortissimo Explorer",
+    "url": "https://futurofortissimo.web.app/"
+  }
+  </script>
 </head>
 <body class="font-sans text-gray-800 antialiased text-lg sm:text-[18px]">
   <header class="py-2">
     <div class="max-w-3xl mx-auto flex items-center justify-center gap-3 px-4">
-      <img src="logo.png" class="h-8" alt="logo" />
+      <img src="logo.png" class="h-8" alt="logo Futuro Fortissimo" />
       <h1 class="italic lowercase text-2xl sm:text-3xl font-semibold">futuro fortissimo</h1>
     </div>
   </header>  <section class="max-w-3xl mx-auto px-4 space-y-3">
     <div class="relative">
-      <input id="searchInput" placeholder="cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
+      <input id="searchInput" placeholder="search… / cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
       <span class="absolute left-4 top-1/2 -translate-y-1/2 text-xl">🔍</span>
     </div>
     <div id="filterRow" class="flex flex-wrap justify-center gap-2 text-2xl">
@@ -38,19 +55,21 @@
   </section>  <main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-6 mt-6"></main>  <footer class="fixed bottom-0 inset-x-0 flex items-center justify-center gap-3 py-2 text-base bg-ioBg/95 backdrop-blur">
     <button onclick="window.open('https://buymeacoffee.com/tuo_link','_blank')" class="pill">☕ sostieni</button>
     <button onclick="window.open('https://fortissimo.substack.com/about','_blank')" class="pill">👤 chi sono</button>
+    <button id="langToggle" class="pill">🇬🇧 english</button>
   </footer><script>
-const DATA_ENDPOINT='./newsletter_data.json';
+let CURRENT_LANG='it';
+const DATA_PATH={it:'newsletter_data.json',en:'newsletter_data_en.json'};
 let DATA;const filters=new Set();
 const gradients=['linear-gradient(135deg,#38bdf8,#c084fc)','linear-gradient(135deg,#f472b6,#facc15)','linear-gradient(135deg,#34d399,#60a5fa)','linear-gradient(135deg,#f87171,#fb923c)','linear-gradient(135deg,#a78bfa,#f472b6)','linear-gradient(135deg,#fb923c,#fde68a)','linear-gradient(135deg,#5eead4,#3b82f6)','linear-gradient(135deg,#fda4af,#c4b5fd)'];
 
-document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>{const v=p.dataset.filter;p.classList.toggle('active');filters.has(v)?filters.delete(v):filters.add(v);render();});
+document.querySelectorAll('.pill').forEach(p=>p.dataset.filter&&p.addEventListener('click',()=>{const v=p.dataset.filter;p.classList.toggle('active');filters.has(v)?filters.delete(v):filters.add(v);render();}));
 document.getElementById('searchInput').oninput=render;
-fetch(DATA_ENDPOINT).then(r=>r.json()).then(j=>{
-  // shuffle publications once
-  DATA=j;
-  DATA.publications=DATA.publications.sort(()=>Math.random()-0.5);
-  render();
-});
+
+document.getElementById('langToggle').onclick=()=>{CURRENT_LANG=CURRENT_LANG==='it'?'en':'it';document.getElementById('langToggle').textContent=CURRENT_LANG==='it'?'🇬🇧 english':'🇮🇹 italiano';document.getElementById('roothtml').lang=CURRENT_LANG;loadData();};
+
+function loadData(){
+ fetch(DATA_PATH[CURRENT_LANG]).then(r=>r.json()).then(j=>{DATA=j;DATA.publications=DATA.publications.sort(()=>Math.random()-0.5);filters.clear();document.querySelectorAll('.pill.active').forEach(p=>p.classList.remove('active'));document.getElementById('searchInput').value='';render();});
+}
 
 const match=(t,term)=>t.toLowerCase().includes(term);
 const hl=(t,term)=>term?t.replace(new RegExp(`(${term})`,'gi'),'<mark>$1</mark>'):t;
@@ -65,10 +84,8 @@ function render(){
      const searchOK=!activeSearch||match(sc.title,term)||sc.contentBlocks.some(b=>b.content.some(l=>match(l,term)));
      return tagOK&&searchOK;});
    if((activeSearch||activeFilter)&&!visibleSC.length) return;
-
    const card=document.createElement('div');card.className='rounded-xl overflow-hidden';card.style.background=gradients[idx%gradients.length];card.style.padding='2px';
    const inner=document.createElement('div');inner.className='bg-white rounded-xl p-5 shadow-neu';card.appendChild(inner);
-
    if(!activeSearch&&!activeFilter){
      const header=document.createElement('div');header.className='flex justify-between items-start gap-2';header.innerHTML=`<h2 class='text-lg font-semibold'>${pub.title}</h2>`;
      const btn=document.createElement('button');btn.innerHTML=`<svg class='w-6 h-6 text-gray-600 transition-transform' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/></svg>`;header.appendChild(btn);inner.appendChild(header);
@@ -85,5 +102,7 @@ function render(){
    wrap.appendChild(card);
  });
 }
+
+loadData();
 </script></body>
 </html>
