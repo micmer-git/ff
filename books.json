@@ -180,5 +180,96 @@
       "page": 99,
       "url": "https://example.com/outlive"
     }
+,
+    {
+      "id": 21,
+      "tags": ["🧠", "⚽"],
+      "title": "Steven Kotler, The Rise of Superman",
+      "quote": "Il trick di Schiller misurava 2.340 gradi di rotazione. Pensaci un momento. I tuffi hanno impiegato un secolo per aggiungere 900 gradi al loro conto, ma gli sciatori in qualche modo hanno spinto il loro totale su di 1.640 gradi in poco più di un decennio?",
+      "summary": "Salti freestyle sugli sci hanno accelerato di oltre 1.600° di rotazione in soli dieci anni, un progresso record rispetto ad altri sport.",
+      "page": 18,
+      "url": "https://example.com/rise-of-superman"
+    },
+    {
+      "id": 22,
+      "tags": ["🧠", "⚽"],
+      "title": "Steven Kotler, The Rise of Superman",
+      "quote": "Maverick’s... Con onde alte fino a cinquanta piedi, correnti forti, rocce pericolose, scogliere basse e acqua gelida, Maverick’s è come nessun altro posto sulla terra.",
+      "summary": "Descrizione dei fattori estremi – onde da 15 m, correnti e rocce – che rendono il surf a Maverick’s unico e letale.",
+      "page": 20,
+      "url": "https://example.com/rise-of-superman"
+    },
+    {
+      "id": 23,
+      "tags": ["🧠", "⚽"],
+      "title": "Steven Kotler, The Rise of Superman",
+      "quote": "Way si allenò nel deserto, dove l’aria era rarefatta… In Cina l’atmosfera più densa lo rallenta: salta corto, atterra male e si frattura la caviglia.",
+      "summary": "La densità dell’aria influisce drasticamente sulla velocità e sugli atterraggi negli sport di salto.",
+      "page": 29,
+      "url": "https://example.com/rise-of-superman"
+    },
+    {
+      "id": 24,
+      "tags": ["🧠", "⚽"],
+      "title": "Steven Kotler, The Rise of Superman",
+      "quote": "Le quattro G che Way sperimentò equivalgono a più di 800 libbre di pressione aggiunta—tutte supportate da un arto frantumato.",
+      "summary": "Durante l’impatto Daniel Way subisce oltre 360 kg di forza su una gamba già rotta.",
+      "page": 31,
+      "url": "https://example.com/rise-of-superman"
+    },
+    {
+      "id": 25,
+      "tags": ["🧠", "❤️"],
+      "title": "Steven Kotler, The Rise of Superman",
+      "quote": "Quando era alla scacchiera, nient’altro sembrava penetrare la coscienza di Csikszentmihalyi: né guardie armate, né la prigionia.",
+      "summary": "Il futuro teorico del flow scopre da bambino la totale immersione mentale giocando a scacchi in un campo di prigionia.",
+      "page": 42,
+      "url": "https://example.com/rise-of-superman"
+    },
+    {
+      "id": 26,
+      "tags": ["🧠", "⚽"],
+      "title": "Steven Kotler, The Rise of Superman",
+      "quote": "Nel 1999 fu Half Dome e The Nose in 23 ore… Nel 2002 Potter fece free solo del Fitz Roy in 6 ore e mezzo.",
+      "summary": "Dean Potter spinge il limite dell’arrampicata libera in tempi record su vie alpine estreme.",
+      "page": 73,
+      "url": "https://example.com/rise-of-superman"
+    },
+    {
+      "id": 27,
+      "tags": ["🧠", "⚽"],
+      "title": "Steven Kotler, The Rise of Superman",
+      "quote": "Per 1.500 anni gli aspiranti uomini-uccello si sono legati ali fatte in casa, si sono lanciati dai trespoli, e sono morti.",
+      "summary": "Dal Medioevo ai giorni nostri, la ricerca del volo umano è costellata di tentativi letali.",
+      "page": 91,
+      "url": "https://example.com/rise-of-superman"
+    },
+    {
+      "id": 28,
+      "tags": ["🧠", "⚽"],
+      "title": "Steven Kotler, The Rise of Superman",
+      "quote": "Il rapporto sfida/abilità… Quanto è difficile? Il pensiero generale è circa il 4 percento.",
+      "summary": "Per innescare il flow interno, la sfida deve superare l’abilità del 4 %.",
+      "page": 156,
+      "url": "https://example.com/rise-of-superman"
+    },
+    {
+      "id": 29,
+      "tags": ["🧠", "⚽"],
+      "title": "Steven Kotler, The Rise of Superman",
+      "quote": "Mentre la maggior parte degli skydiver fa almeno 200 lanci prima di tentare un BASE, il Gambler lo fece dopo dodici.",
+      "summary": "Eccesso di fiducia e rischio: il ‘Gambler’ ignora le soglie di sicurezza minime nel BASE jump.",
+      "page": 186,
+      "url": "https://example.com/rise-of-superman"
+    },
+    {
+      "id": 30,
+      "tags": ["🧠", "⚽"],
+      "title": "Steven Kotler, The Rise of Superman",
+      "quote": "McConkey e Holmes presero la funivia per la cima del Sass Pordoi, alto 9.685 piedi, per tentare il doppio ski-BASE.",
+      "summary": "Cronaca del tentativo di doppio ski-BASE nelle Dolomiti (2.953 m) di McConkey e Holmes nel 2009.",
+      "page": 193,
+      "url": "https://example.com/rise-of-superman"
+    }
   ]
 }
