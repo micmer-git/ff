@@ -34,14 +34,11 @@
     .scroll-snap-x{scroll-snap-type:x mandatory}
     .snap-start{scroll-snap-align:start}
 
-    /* animazioni apertura card */
+    /* stessa animazione “enter/exit” delle prime versioni */
     .exp-card{transform:scale(.95);opacity:0;transition:transform .35s ease,opacity .35s ease}
     .exp-card.enter{transform:scale(1);opacity:1}
     .exp-card.exit{transform:scale(.9);opacity:0}
     .expander{position:absolute;right:10px;bottom:10px;background:#ffffff;border-radius:9999px;padding:6px 9px;font-size:18px;box-shadow:0 1px 4px rgba(0,0,0,.15);cursor:pointer}
-
-    /* effetto fade degli altri elementi */
-    .dimmed>*:not(.focused){opacity:.25;filter:blur(1px);transition:.25s}
   </style>
 </head>
 
@@ -145,7 +142,6 @@ function render(){
     if(!vis.length) return;
     wrap.appendChild(makePubCard(pub,vis,idx,true,term,activeF));
 
-    /* strip Notes + Books dopo la prima scheda visibile */
     if(wrap.querySelectorAll('.pub-card').length===1){
       const noteVis=NOTES.notes.sort(()=>Math.random()-0.5).filter(n=>{
         const tagOk=!activeF||n.tags.some(t=>filters.has(t));
@@ -156,7 +152,7 @@ function render(){
 
       const bookVis=BOOKS.books.sort(()=>Math.random()-0.5).filter(b=>{
         const tagOk=!activeF||b.tags?.some(t=>filters.has(t));
-        const txtOk=!activeS||match(b.text,term)||match(b.title,term);
+        const txtOk=!activeS||match(b.text,term)||match(b.book,term);
         return tagOk&&txtOk;
       });
       if(bookVis.length) wrap.appendChild(makeBooksStrip(bookVis,activeF));
@@ -194,23 +190,20 @@ function makePubStrip(list){
 
 function openExpanded(pub){
   $('#pubStrip')?.classList.add('hidden');
-  document.body.classList.add('dimmed');
-
   const wrap=$('#app');
   const idx=DATA.publications.findIndex(p=>p.title===pub.title);
   const scList=pub.cards.filter(sc=>!sc.title.startsWith('📖'));
   const card=makePubCard(pub,scList,idx,false,'',false);
-  card.classList.add('exp-card','focused'); card.style.maxWidth='640px';
-  card.style.margin='8vh auto'; wrap.prepend(card);
+  card.classList.add('exp-card'); card.style.maxWidth='640px';
+  wrap.prepend(card);
   requestAnimationFrame(()=>card.classList.add('enter'));
 
   const close=document.createElement('button');
   close.textContent='✕'; close.className='absolute top-2 right-2 text-2xl';
   close.onclick=()=>{card.classList.remove('enter');card.classList.add('exit');
-    setTimeout(()=>{card.remove();$('#pubStrip')?.classList.remove('hidden');document.body.classList.remove('dimmed');},350);};
+    setTimeout(()=>{card.remove();$('#pubStrip')?.classList.remove('hidden');},350);};
   card.appendChild(close);
-
-  card.scrollIntoView({behavior:'smooth',block:'center'});
+  card.scrollIntoView({behavior:'smooth'});
 }
 
 function makePubCard(pub,scList,idx,condensed,term,showTags){
