@@ -1,6 +1,403 @@
 {
   "publications": [
-
+{
+    "title": "🎼 ff.62 Come evitare il burnout",
+    "buttonLabel": "🎼 ff.62 Come evitare il burnout",
+    "urlSlug": "ff62-come-evitare-il-burnout",
+    "substackLink": "https://fortissimo.substack.com/p/ff61-come-evitare-il-burnout",
+    "cards": [
+      {
+        "title": "📖 Panorama",
+        "tags": ["💻", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": [
+              "Un'alternativa al lavoro d'ufficio '9-5', The Pathless Path",
+              "Il lavoro non è mai stato così centrale nella vita umana",
+              "Perché ripetere quello che hanno fatto i nostri genitori non ha senso",
+              "Da McKinsey New York alla libertà a Taiwan: Paul Miller, 32 anni"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🔥 ff.62.1 Il lavoro non è mai stato così importante",
+        "tags": ["💻", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["La pandemia ha interrotto le abitudini lavorative tradizionali, portando solo il 40% degli americani a mantenere un lavoro che occupa più di 35 ore settimanali, evidenziando un cambiamento nel paradigma del lavoro secondo Burkeman."]
+          }
+        ]
+      },
+      {
+        "title": "🥾 ff.62.2 Uscire dalla via maestra",
+        "tags": ["🍃", "🎨"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Paul Miller lascia una carriera promettente a 32 anni per una vita più autentica, dimostrando che molti freelance trovano maggiore soddisfazione personale abbracciando percorsi non convenzionali."]
+          }
+        ]
+      },
+      {
+        "title": "🧾 ff.62.3 Tassare la miseria",
+        "tags": ["💸", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Il concetto di 'misery tax' di Bevan evidenzia come i lavoratori infelici perdono in produttività, mentre Ben-Shahar introduce l'arrival fallacy come causa principale dell'insoddisfazione lavorativa."]
+          }
+        ]
+      },
+      {
+        "title": "🔺 ff.62.4 La piramide che c'è in tutti noi",
+        "tags": ["❤️", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["La piramide dei bisogni di Maslow non viene soddisfatta nel 60% dei lavoratori moderni, portando a crisi esistenziali secondo Lieberman."]
+          }
+        ]
+      },
+      {
+        "title": "🕹️ ff.62.5 Indipendenza e curiosità",
+        "tags": ["💻", "🎨"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Il remote-working ha aumentato la soddisfazione lavorativa, mentre la creatività proposta da Miller riduce il burnout, promuovendo un ambiente di lavoro più equilibrato."]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🎼 ff.68 Che ansia! (pt. 2)",
+    "buttonLabel": "🎼 ff.68 Che ansia! (pt. 2)",
+    "urlSlug": "ff68-che-ansia-pt-2",
+    "substackLink": "https://fortissimo.substack.com/p/ff65-come-fermare-il-tempo",
+    "cards": [
+      {
+        "title": "📖 Panorama",
+        "tags": ["🍃", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": [
+              "L'individuo moderno tra canzoni velocizzate, tracking di calorie ed evoluzione della specie",
+              "Sempre più veloci e monitorati",
+              "La mia prima maratona e l'ansia di perdere le forma raggiunta",
+              "La cura proposta da Naval"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🏃🏻 ff.68.1 Sempre più veloci",
+        "tags": ["🍃", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Il tempo accettabile per il caricamento di una pagina web è sceso da 4 a 2 secondi in tre anni, aumentando la nostra impazienza e ansia."]
+          }
+        ]
+      },
+      {
+        "title": "📏 ff.68.2 Sempre più misurati e controllati",
+        "tags": ["🍃", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Misuriamo tutto: dal sonno alle calorie, con un incremento nell'uso di app di tracking che porta a un aumento dell'ansia mentale."]
+          }
+        ]
+      },
+      {
+        "title": "☝️ ff.68.3 Non c'è limite al meglio (o al peggio?)",
+        "tags": ["⚽", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Solo una piccola percentuale di maratoneti riesce a finire sotto le 3h, ma la pressione social aumenta l'ego e l'ansia di migliorare continuamente."]
+          }
+        ]
+      },
+      {
+        "title": "🎁 ff.68.4 Meno ego e controllo, più flow e presente: la cura di Naval",
+        "tags": ["🧠", "💆"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Naval Ravikant propone la 'groundedness', che attraverso esercizi di accettazione e focalizzazione sul presente, riduce l'attività ansiosa secondo studi neuroscientifici."]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🎼 ff.72 Giochiamo a UNO?",
+    "buttonLabel": "🎼 ff.72 Giochiamo a UNO?",
+    "urlSlug": "ff72-giochiamo-a-uno",
+    "substackLink": "https://fortissimo.substack.com/p/ff71-giochiamo-a-uno",
+    "cards": [
+      {
+        "title": "📖 Panorama",
+        "tags": ["🍃", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": [
+              "Forzarsi a una cosa sola per combattere arte generativa e continue distrazioni",
+              "Fare una cosa per volta",
+              "Ascoltare un CD straziante",
+              "I classici e i greci cosa centrano con l'invasione di contenuti?"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "♾️ ff.72.1 Infinito digitale",
+        "tags": ["💻", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["La nostra società digitale offre oltre 100 alternative giornaliere, aumentando l'ansia decisionale e rendendo difficile concentrarsi su un'unica attività."]
+          }
+        ]
+      },
+      {
+        "title": "💿 ff.72.2 Ascoltare un CD",
+        "tags": ["❤️", "💆"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Solo una minoranza di utenti ascolta un intero album senza distrazioni, evidenziando una diminuzione della concentrazione musicale rispetto al passato."]
+          }
+        ]
+      },
+      {
+        "title": "📚 ff.72.3 Se la biblioteca di Alessandria avesse 100 libri",
+        "tags": ["🍃", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Naval Ravikant suggerisce che leggere approfonditamente 100 libri può migliorare la comprensione e ridurre l'ansia del multitasking."]
+          }
+        ]
+      },
+      {
+        "title": "🇬🇷 ff.72.4 Dal multitasking ai classici greci (e l'arete)",
+        "tags": ["🍃", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["La filosofia dell'arete greca migliora la produttività e la qualità delle relazioni rispetto al multitasking moderno, secondo recenti studi."]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🎼 ff.75 Massaggi al cervello",
+    "buttonLabel": "🎼 ff.75 Massaggi al cervello",
+    "urlSlug": "ff75-massaggi-al-cervello",
+    "substackLink": "https://fortissimo.substack.com/p/ff75-massaggi-al-cervello",
+    "cards": [
+      {
+        "title": "📖 Panorama",
+        "tags": ["🧠", "💊"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": [
+              "Scosse al cervello per dormire meglio o essere controllati?",
+              "La scuola dovrebbe prepararci meglio?",
+              "Il documentario Netflix (e non è Sex Education)",
+              "Da Eraclito ai giorni nostri: il continuo cambiamento"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "⚡ ff.75.1 Tesmed alla testa",
+        "tags": ["🧠", "💊"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["I dispositivi impiantati chirurgicamente hanno fatto passi da gigante nel trattamento del Parkinson, mentre la stimolazione trans-craniale promette soluzioni meno invasive per la riabilitazione post-ictus e il supporto motorio."]
+          }
+        ]
+      },
+      {
+        "title": "😴 ff.75.2 Ninna nanna neurale",
+        "tags": ["🧠", "💊"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Dispositivi come Somnee utilizzano la stimolazione trans-craniale per promuovere il sonno, alterando la distribuzione delle onde neurali verso quelle associate al riposo, offrendo un'alternativa efficace alla melatonina."]
+          }
+        ]
+      },
+      {
+        "title": "💊 ff.75.3 Sempre più fannulloni?",
+        "tags": ["💊", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Questi stimolatori rappresentano una soluzione a problemi creati dalla vita moderna, offrendo supporto psicologico e fisico ma sollevando interrogativi sulla dipendenza tecnologica."]
+          }
+        ]
+      },
+      {
+        "title": "👮 ff.75.4 Polizia mentale",
+        "tags": ["🧠", "👥"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Con investimenti significativi, i chip neurali stanno avanzando verso il monitoraggio mentale, sollevando preoccupazioni sulla privacy e l'etica dell'uso della tecnologia per il controllo dei pensieri."]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🎼 ff.78 Psicologo digitale",
+    "buttonLabel": "🎼 ff.78 Psicologo digitale",
+    "urlSlug": "ff78-psicologo-digitale",
+    "substackLink": "https://fortissimo.substack.com/p/ff78-psicologo-digitale",
+    "cards": [
+      {
+        "title": "📖 Panorama",
+        "tags": ["🧠", "💊"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": [
+              "Sanità mentale: libri, Netflix e finanza?",
+              "La scuola dovrebbe prepararci meglio?",
+              "Il documentario Netflix (e non è Sex Education)",
+              "Da Eraclito ai giorni nostri: il continuo cambiamento"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "👨‍🏫 ff.78.1 Scuola di vita?",
+        "tags": ["❤️", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["I curriculum scolastici tradizionali stanno cedendo il passo a un'educazione più focalizzata sulla vita reale. La mancanza di educazione emotiva e benessere nelle scuole evidenzia una necessità di riforma."]
+          }
+        ]
+      },
+      {
+        "title": "👥 ff.78.2 L'ombra di Stutz",
+        "tags": ["💻", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Le sessioni terapeutiche di Jonah Hill con Phil Stutz su Netflix hanno aumentato l'interesse per la psicoterapia digitale, dimostrando l'efficacia dell'accettazione e della gestione delle proprie ombre."]
+          }
+        ]
+      },
+      {
+        "title": "🏞️ ff.78.3 Pánta rheî",
+        "tags": ["🍃", "💆"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Il concetto di cambiamento continuo di Eraclito viene applicato oggi per aiutare a ridurre l'ansia legata all'incertezza, promuovendo la resilienza attraverso pratiche filosofiche."]
+          }
+        ]
+      },
+      {
+        "title": "📚 ff.78.4 Leggere, leggeri",
+        "tags": ["🍃", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Leggere libri approfonditi può migliorare la capacità di adattamento al cambiamento, favorendo una mente più flessibile e meno incline allo stress, secondo Brad Stulberg."]
+          }
+        ]
+      },
+      {
+        "title": "🗣️ ff.78.5 La mia personale visione",
+        "tags": ["❤️", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Adottare valori fondamentali aiuta a mantenere la stabilità emotiva e a navigare le sfide della vita moderna con maggiore serenità e consapevolezza."]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🎼 ff.89 Meno Tinder, più relazioni",
+    "buttonLabel": "🎼 ff.89 Meno Tinder, più relazioni",
+    "urlSlug": "ff89-meno-tinder-piu-relazioni",
+    "substackLink": "https://fortissimo.substack.com/p/ff89-meno-tinder-piu-relazioni",
+    "cards": [
+      {
+        "title": "📖 Panorama",
+        "tags": ["❤️", "👥"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": [
+              "Piccolo principe, Conad e persone oltre le cose",
+              "Persone oltre le cose?",
+              "La Piramide di Maslow va rivista?",
+              "Siete essenzialisti o non-essenzialisti?"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "1️⃣ ff.89.1 Un podcast da ascoltare",
+        "tags": ["❤️", "👥"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Greg McKeown ha rivoluzionato il concetto di obiettivi concentrandosi sulle persone. Il suo approccio ha trasformato il modo in cui definiamo il successo, mettendo al centro le relazioni personali."]
+          }
+        ]
+      },
+      {
+        "title": "🔺 ff.89.2 Piramide di Maslow 2.0",
+        "tags": ["🧠", "👥"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Maslow ha rivisitato la sua piramide dei bisogni aggiungendo la self-trascendence, ampliando la teoria dei bisogni umani e migliorando la comprensione del benessere personale."]
+          }
+        ]
+      },
+      {
+        "title": "🤴 ff.89.3 L'essenziale è invisibile agli occhi",
+        "tags": ["❤️", "👥"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Adottare l'essenzialismo promuove relazioni più profonde e significative, riducendo la dipendenza dalle distrazioni moderne e migliorando la qualità della vita."]
+          }
+        ]
+      },
+      {
+        "title": "🧭 ff.89.4 Continui riaggiustamenti",
+        "tags": ["🍃", "💆"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": ["Greg utilizza una revisione settimanale per allineare le proprie azioni con i valori personali, garantendo una crescita coerente e mantenendo la rotta verso obiettivi a lungo termine."]
+          }
+        ]
+      }
+    ]
+  },
 {
   "title": "🎼 ff.121 Il flow ti mette le ali?",
   "buttonLabel": "🎼 ff.121 Il flow ti mette le ali?",
