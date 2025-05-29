@@ -1,5 +1,455 @@
 {
   "publications": [
+
+{
+  "title": "🎼 ff.121 Il flow ti mette le ali?",
+  "buttonLabel": "🎼 ff.121 Il flow ti mette le ali?",
+  "urlSlug": "ff121-il-flow-ti-mette-le-ali",
+  "substackLink": "https://fortissimo.substack.com/p/ff121-il-flow-ti-mette-le-ali",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["🧠","⚽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Il flow come stato di totale immersione e perdita del senso del tempo",
+            "Dall'impossibile al possibile: l'adrenalina degli sport estremi",
+            "L'effetto Bannister e la costante ricerca di nuovi limiti"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌊 ff.121.1 Le basi del flow",
+      "tags": ["🧠","⚽"],
+      "contentBlocks":[{"type":"paragraphs","content":["Stato mentale di totale immersione definito da Mihaly Csikszentmihalyi; favorito da movimento, rischio, complessità ottimale, novità e assenza di distrazioni."]}]
+    },
+    {
+      "title": "💸 ff.121.2 Il flow ti mette le ali",
+      "tags": ["💸","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Oltre alla felicità, il flow alza drasticamente le performance con ricadute socio-economiche notevoli."]}]
+    },
+    {
+      "title": "♟️ ff.122.3 Dagli scacchi alla Patagonia",
+      "tags": ["🧠","⚽"],
+      "contentBlocks":[{"type":"paragraphs","content":["Negli sport estremi (Steven Kotler, \"The Rise of Superman\") il rischio di morte fa scattare il flow e rende possibile l’impossibile."]}]
+    },
+    {
+      "title": "🔺 ff.122.4 Piramidi in 4 minuti?",
+      "tags": ["🧠","⚽"],
+      "contentBlocks":[{"type":"paragraphs","content":["Project Limitless, Effetto Bannister e i livelli alti della piramide di Maslow spingono l’uomo a cercare nuovi stimoli in un mondo di bisogni primari soddisfatti."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.120 Sport e longevità",
+  "buttonLabel": "🎼 ff.120 Sport e longevità",
+  "urlSlug": "ff120-sport-e-longevita",
+  "substackLink": "https://fortissimo.substack.com/p/ff120-sport-e-longevita",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["⚽","💊"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "L'impatto dell'esercizio fisico sulla salute e sulla durata della vita",
+            "Il rapporto tra alimentazione e attività fisica",
+            "I benefici neurologici e cardiovascolari dello sport"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🏃🏼‍♂️ ff.120.1 Quanto correre per \"scappare\" alla morte?",
+      "tags": ["⚽","💊"],
+      "contentBlocks":[{"type":"paragraphs","content":["Chi raggiunge 14 METs ha un rischio di morte 4× più basso di chi resta a 5 METs: fitness metabolico = longevità."]}]
+    },
+    {
+      "title": "🥗 ff.120.2 Dieta o esercizio?",
+      "tags": ["🍽","⚽"],
+      "contentBlocks":[{"type":"paragraphs","content":["Il movimento allunga la vita anche con dieta mediocre: l’attività fisica compensa in parte gli errori alimentari."]}]
+    },
+    {
+      "title": "💕 ff.120.3 Questioni di cuore",
+      "tags": ["💊","❤️"],
+      "contentBlocks":[{"type":"paragraphs","content":["Allenarsi previene l’indurimento arterioso: i muscoli attivi assorbono l’eccesso di zuccheri nel sangue."]}]
+    },
+    {
+      "title": "🍼 ff.120.4 Lattato al cervello?",
+      "tags": ["💊","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Il lattato è carburante preferito dai neuroni e stimola BDNF: più sport = cervello più giovane."]}]
+    },
+    {
+      "title": "⚔️ ff.120.5 Tumore vs battiti cardiaci?",
+      "tags": ["💊","⚽"],
+      "contentBlocks":[{"type":"paragraphs","content":["Esercizio intenso migliora flusso sanguigno e potenzia terapie anticancro contro metastasi."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.118 Paprika e massaggi",
+  "buttonLabel": "🎼 ff.118 Paprika e massaggi",
+  "urlSlug": "ff118-paprika-e-massaggi",
+  "substackLink": "https://fortissimo.substack.com/p/ff118-paprika-e-massaggi",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["🎨","🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Distopie a confronto: dalla censura di Orwell alla spezia di Huxley",
+            "Paprika e la realtà non-lineare delle città moderne",
+            "La ricerca della 'groundedness' contro il caos degli stimoli"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌎 ff.118.1 Il Mondo Nuovo",
+      "tags": ["🍃","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Da Huxley a TikTok: stimoli infiniti come moderna 'spezia' che anestetizza la società."]}]
+    },
+    {
+      "title": "🌶️ ff.118.2 Paprika - Sognando un sogno",
+      "tags": ["🎨","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Il film di Satoshi Kon mostra realtà digitali sovrapposte, deserto di segni senza significato univoco."]}]
+    },
+    {
+      "title": "🌳 ff.118.3 La cura: albero e silenzi?",
+      "tags": ["💆","🍃"],
+      "contentBlocks":[{"type":"paragraphs","content":["Disintossicarsi correndo, cercando noia e silenzio (John Cage) per ritrovare radici interiori."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.117 Viviamo in una simulazione",
+  "buttonLabel": "🎼 ff.117 Viviamo in una simulazione",
+  "urlSlug": "ff117-viviamo-in-una-simulazione",
+  "substackLink": "https://fortissimo.substack.com/p/ff117-viviamo-in-una-simulazione",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💻","🎨"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "La realtà come film: 24 ore tra Hong Kong e Shenzhen",
+            "Algoritmi e pattern recognition: come il nostro cervello crea la simulazione",
+            "McLuhan e la profetica visione del 1967: liberarsi dalla virtualità"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🏆 ff.117.1 Giornate da Oscar",
+      "tags": ["🎨","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Vita quotidiana come sceneggiatura di Interstellar, Inception e Black Mirror."]}]
+    },
+    {
+      "title": "🍩 ff.117.2 Ciambelle atomiche",
+      "tags": ["💻","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Realtà compressa come file .zip: tutto ovunque, sempre (ChatGPT-style)."]}]
+    },
+    {
+      "title": "🧮 ff.117.3 Simulazioni e algoritmi",
+      "tags": ["💻","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Viviamo in pattern generati da algoritmi che il cervello decodifica per dare senso al caos."]}]
+    },
+    {
+      "title": "👨‍💻 ff.117.4 Liberarci dalla simulazione degli algoritmi",
+      "tags": ["💆","👥"],
+      "contentBlocks":[{"type":"paragraphs","content":["McLuhan: attenzione consapevole come via d’uscita dall’ipermodernismo algoritmico."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.113 Fame chimica",
+  "buttonLabel": "🎼 ff.113 Fame chimica",
+  "urlSlug": "ff113-fame-chimica",
+  "substackLink": "https://fortissimo.substack.com/p/ff113-fame-chimica",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["🍽","💊"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Perché la bilancia è lo strumento sbagliato per misurare la salute",
+            "In che senso la dieta è questione di chimica",
+            "Superare la distinzione tra proteine, carboidrati e grassi"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "⚖️ ff.113.1 Oltre la bilancia",
+      "tags": ["💊","🍃"],
+      "contentBlocks":[{"type":"paragraphs","content":["Casey Means ('Good Energy'): focus su metabolismo ed energia, non sul peso."]}]
+    },
+    {
+      "title": "🥛 ff.113.2 Marketing vs salute",
+      "tags": ["🍽","💸"],
+      "contentBlocks":[{"type":"paragraphs","content":["Food-industry spende ×10 la ricerca medica in marketing e formulazioni iper-palatabili."]}]
+    },
+    {
+      "title": "💎 ff.113.3 Minerali essenziali",
+      "tags": ["💊","🍃"],
+      "contentBlocks":[{"type":"paragraphs","content":["Raddoppiare il potassio (4 300 mg/die) ↓40 % rischio cardiovascolare: patate > pasta ×25."]}]
+    },
+    {
+      "title": "➗ ff.113.4 Equilibri chimici",
+      "tags": ["💊","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Il corpo è rete di reazioni interconnesse: rapporti ferro-rame contano più delle calorie."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.109 Medico in famigl-IA",
+  "buttonLabel": "🎼 ff.109 Medico in famigl-IA",
+  "urlSlug": "ff109-medico-in-famigl-ia",
+  "substackLink": "https://fortissimo.substack.com/p/ff109-medico-in-famigl-ia",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💊","👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "La donna con più followers su LinkedIn",
+            "Come può una password cambiarci la giornata?",
+            "Spendiamo troppo in AI?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "👩 ff.109.1 La donna più influente di LinkedIn",
+      "tags": ["👥","🎨"],
+      "contentBlocks":[{"type":"paragraphs","content":["Arianna Huffington e il giornalismo del 'What's Working'."]}]
+    },
+    {
+      "title": "🌱 ff.109.2 Dai media al digital wellbeing",
+      "tags": ["💆","👥"],
+      "contentBlocks":[{"type":"paragraphs","content":["Thrive Global porta meditazione, mood-check e digital-detox in Teams e Slack."]}]
+    },
+    {
+      "title": "🧶 ff.109.3 Sbrigliare un gomitolo in un minuto",
+      "tags": ["💆","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Password significative + eye-tracking per riconoscere stress e proporre reset di 60 s."]}]
+    },
+    {
+      "title": "💲 ff.109.4 Elemosina dall'AI",
+      "tags": ["💸","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Harari: investire in coscienza umana; Sam Altman finanzia algoritmi per l’auto-consapevolezza."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.108 Inno alla routine",
+  "buttonLabel": "🎼 ff.108 Inno alla routine",
+  "urlSlug": "ff108-inno-alla-routine",
+  "substackLink": "https://fortissimo.substack.com/p/ff108-inno-alla-routine",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💆","🎨"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Come sopravvivere alla monotonia dell'ordinario?",
+            "Pulire i cessi di Tokyo: un giorno perfetto?",
+            "Il collegamento tra Pascoli e il Tao"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🪣 ff.108.1 Il Perfect Day",
+      "tags": ["💆","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Routine iper-standardizzate (Bryan Johnson) e la sfida di restare umani."]}]
+    },
+    {
+      "title": "👶 ff.108.2 La poetica del fanciullino",
+      "tags": ["🎨","💆"],
+      "contentBlocks":[{"type":"paragraphs","content":["Wim Wenders + Pascoli: meraviglia nelle variazioni minime del quotidiano."]}]
+    },
+    {
+      "title": "☯️ ff.108.3 La saggezza del Tao",
+      "tags": ["🍃","💆"],
+      "contentBlocks":[{"type":"paragraphs","content":["Wayne Dyer e il Wu-Wei: fluire senza imposizione dell’ego."]}]
+    },
+    {
+      "title": "🚽 ff.108.4 L'arte del quotidiano",
+      "tags": ["🎨","💆"],
+      "contentBlocks":[{"type":"paragraphs","content":["Bagni di Tokyo come 'Fountain' di Duchamp: creatività = atto di notare."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.107 Ozempic: la cura all'obesità?",
+  "buttonLabel": "🎼 ff.107 Ozempic: la cura all'obesità?",
+  "urlSlug": "ff107-glp-1-la-cura-allobesita",
+  "substackLink": "https://fortissimo.substack.com/p/ff107-glp-1-la-cura-allobesita",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💊","💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Cosa sono semaglutide e GLP-1 e come funzionano?",
+            "Quanto impatta l'obesità sulla società e l'economia?",
+            "Alternative naturali esistono davvero?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🤤 ff.107.1 Dieta vs evoluzione",
+      "tags": ["💊","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Per ogni kg perso il cervello richiede +100 kcal: GLP-1 blocca il meccanismo evolutivo."]}]
+    },
+    {
+      "title": "✈️ ff.107.2 I costi dell'obesità",
+      "tags": ["💸","💊"],
+      "contentBlocks":[{"type":"paragraphs","content":["Crollo azioni Novo Nordisk – l’obesità ha enormi costi economici ed ecologici."]}]
+    },
+    {
+      "title": "💊 ff.107.3 Ozempic: il farmaco miracoloso",
+      "tags": ["💊","💸"],
+      "contentBlocks":[{"type":"paragraphs","content":["Semaglutide imita il GLP-1: 'Magic Pill' di Johan Hari racconta la rivoluzione."]}]
+    },
+    {
+      "title": "💉 ff.107.4 Meno dipendenze",
+      "tags": ["💊","💆"],
+      "contentBlocks":[{"type":"paragraphs","content":["Science: GLP-1 riduce suicidi, abuso di sostanze e arresti cardiaci oltre alla perdita di peso."]}]
+    },
+    {
+      "title": "🌿 ff.107.5 Alternative naturali",
+      "tags": ["🍃","💊"],
+      "contentBlocks":[{"type":"paragraphs","content":["Bryan Johnson propone cacao + olio EVO per modulare il microbioma come GLP-1 naturale."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.104 Hackerare il corpo",
+  "buttonLabel": "🎼 ff.104 Hackerare il corpo",
+  "urlSlug": "-ff104-hackerare-il-corpo",
+  "substackLink": "https://fortissimo.substack.com/p/-ff104-hackerare-il-corpo",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💊","🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Il controverso libro di Dave Asprey sul biohacking",
+            "4 cibi segreti per ottimizzare la salute e le prestazioni",
+            "GPT come dietista personale: potenzialità e limiti"
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.44 Che ansia! (pt. 1)",
+  "buttonLabel": "🎼 ff.44 Che ansia! (pt. 1)",
+  "urlSlug": "-ff44-che-ansia-pt-1",
+  "substackLink": "https://fortissimo.substack.com/p/ff42-che-ansia-pt-1",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💆","🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Una sintesi settimanale delle cose più belle, interessanti e fortissime trovate su Internet",
+            "Riflessioni sull'ansia e la gestione del tempo ispirate dal libro 'Four Thousand Weeks' di Oliver Burkeman",
+            "Strategie per superare l'ansia del presente accettando la propria finitudine"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "☑️ ff.44.1 La fallacia moderna del tempo a contenitori",
+      "tags": ["🧠","💆"],
+      "contentBlocks":[{"type":"paragraphs","content":["Burkeman: la nostra percezione del tempo ci sabota; serve nuova filosofia della produttività."]}]
+    },
+    {
+      "title": "♾️ ff.44.2 L’infinitudine là fuori",
+      "tags": ["🧠","💆"],
+      "contentBlocks":[{"type":"paragraphs","content":["Flusso infinito di alternative online → ansia decisionale e incapacità di scegliere."]}]
+    },
+    {
+      "title": "🏠 ff.44.3 Stabilirsi stabilizza",
+      "tags": ["💆","👥"],
+      "contentBlocks":[{"type":"paragraphs","content":["Heidegger: l'impegno definitivo dà senso; oggi fatichiamo a prendere decisioni permanenti."]}]
+    },
+    {
+      "title": "🖼️ ff.44.4 Sprecare 3 ore davanti a un quadro",
+      "tags": ["🎨","💆"],
+      "contentBlocks":[{"type":"paragraphs","content":["Jennifer Roberts (Harvard) usa 3 h di contemplazione per ridurre ansia e allenare l’attenzione."]}]
+    },
+    {
+      "title": "4️⃣ ff.44.5 4 modi per trovare una cura",
+      "tags": ["💆","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Attività ateliche, done-list, obiettivi realistici e niente carpe diem forzato: ricetta anti-ansia."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.30 DALL-E: genera arte",
+  "buttonLabel": "🎼 ff.30 DALL-E: genera arte",
+  "urlSlug": "ff30-dall-e-genera-arte",
+  "substackLink": "https://fortissimo.substack.com/p/-ff30-dall-e-genera-arte",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["🎨","💻"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Oggi parleremo principalmente di DALL-E 2",
+            "Può aiutarci a capire Picasso?",
+            "Quanto velocemente sta migliorando questa tecnologia?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "👨‍🏫 ff.30.1 Una breve introduzione",
+      "tags": ["🎨","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["DALL-E genera immagini da testo; risultati sorprendenti e in rapido miglioramento."]}]
+    },
+    {
+      "title": "😂 ff.30.2 Qualche esempio divertente",
+      "tags": ["🎨","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["Da 'astronauta in un lounge tropicale' alle variazioni di Vermeer: versatilità creativa."]}]
+    },
+    {
+      "title": "😱 ff.30.3 Qualche esempio meno divertente",
+      "tags": ["🎨","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["Account Weirddalle mostra immagini inquietanti ('urinale Razer Gaming') evidenziando limiti e potenza dello strumento."]}]
+    }
+  ]
+}
+,
+
     {
   "title": "🎼 ff.18 Tra arte digitale e AI",
   "buttonLabel": "🎼 ff.18 Tra arte digitale e AI",
