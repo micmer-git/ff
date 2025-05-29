@@ -271,5 +271,95 @@
       "page": 193,
       "url": "https://example.com/rise-of-superman"
     }
+    {
+    "id": 21,
+    "tags": ["🧠", "💆"],
+    "title": "Note da \"L'arte dell'impossibile\"",
+    "quote": "Ecstasis indica stati di coscienza non-ordinari in cui la normale veglia svanisce lasciando posto a un’euforia intensa e a un profondo senso di connessione.",
+    "summary": "Flow, contemplazione e psichedelia condividono la stessa base neurobiologica: cambi d’attività nella corteccia prefrontale e un’ondata di neuro-chimici (dopamina, ossitocina) che potenziano le prestazioni.",
+    "page": null,
+    "link": "https://amzn.to/4jr07R2"
+  },
+  {
+    "id": 22,
+    "tags": ["🧠", "👥"],
+    "title": "Note da \"L'arte dell'impossibile\"",
+    "quote": "Il \"flow di gruppo\" emerge quando le coscienze individuali si fondono con il team: lo vivono i Navy SEAL in missione e gli ingegneri di Google al Burning Man.",
+    "summary": "Nei contesti ad alto rischio e rapidi cambiamenti la sincronizzazione collettiva conta più della grinta individuale: per questo l’addestramento punta alla durezza mentale condivisa.",
+    "page": null,
+    "link": "https://amzn.to/4jr07R2"
+  },
+  {
+    "id": 23,
+    "tags": ["🧠", "💊"],
+    "title": "Note da \"L'arte dell'impossibile\"",
+    "quote": "Negli stati alterati stress-chimici come noradrenalina e cortisolo cedono il passo a dopamina, endorfine, anandamide, serotonina e ossitocina, migliorando prestazione e piacere.",
+    "summary": "Capire questo “cocktail” permette di retro-ingegnerizzare i picchi prestazionali trattando la mente come un cruscotto da regolare a seconda dell’obiettivo.",
+    "page": null,
+    "link": "https://amzn.to/4jr07R2"
+  },
+  {
+    "id": 24,
+    "tags": ["💻", "🧠"],
+    "title": "Note da \"L'arte dell'impossibile\"",
+    "quote": "Psicologia, neurobiologia, farmacologia e tecnologia si stanno fondendo per produrre ‘ricette’ di peak-experience sempre più precise, accessibili su richiesta.",
+    "summary": "Dalla VR ai wearable passando per i psichedelici controllati, le quattro forze dell’ecstasis accelerano l’accesso a stati potenzianti.",
+    "page": null,
+    "link": "https://amzn.to/4jr07R2"
+  },
+  {
+    "id": 25,
+    "tags": ["💸", "💆"],
+    "title": "Note da \"L'arte dell'impossibile\"",
+    "quote": "L’«Altered States Economy» vale circa 4 000 miliardi di dollari l’anno: dal micro-dosing agli EDM festival la gente paga pur di uscire dalla coscienza ordinaria.",
+    "summary": "Il valore economico mostra il bisogno diffuso di sollievo dallo stato mentale quotidiano e la disponibilità a investire in esperienze di state-shift.",
+    "page": null,
+    "link": "https://amzn.to/4jr07R2"
+  },
+  {
+    "id": 26,
+    "tags": ["💆", "🧠"],
+    "title": "Note da \"L'arte dell'impossibile\"",
+    "quote": "Nei picchi di ecstasis il senso di sé si spegne: la corteccia prefrontale, che genera l’ego narrativo, va in standby permettendo il ‘subject-object shift’.",
+    "summary": "Senza l’io neurótico diventiamo più flessibili e meno difensivi, qualità essenziali per navigare complessità e contraddizioni.",
+    "page": null,
+    "link": "https://amzn.to/4jr07R2"
+  },
+  {
+    "id": 27,
+    "tags": ["🧠", "🍃"],
+    "title": "Note da \"L'arte dell'impossibile\"",
+    "quote": "La percezione del tempo si distorce: in assenza di passato e futuro l’attenzione resta ancorata al presente, creando esperienze di «senza-tempo».",
+    "summary": "Questi momenti ‘timeless’ modellano i nostri comportamenti più di quanto faccia il costante senso di fretta rilevato dal sondaggio Gallup.",
+    "page": null,
+    "link": "https://amzn.to/4jr07R2"
+  },
+  {
+    "id": 28,
+    "tags": ["💆", "🧠"],
+    "title": "Note da \"L'arte dell'impossibile\"",
+    "quote": "Quando il cervello riceve il cocktail neurochimico del flow il compito diventa intrinsecamente gratificante e lo sforzo svanisce.",
+    "summary": "L’effortlessness sostiene il coinvolgimento a lungo termine: i team più innovativi attingono a passione e flow piuttosto che alla sola disciplina esterna.",
+    "page": null,
+    "link": "https://amzn.to/4jr07R2"
+  },
+  {
+    "id": 29,
+    "tags": ["🧠", "🎨"],
+    "title": "Note da \"L'arte dell'impossibile\"",
+    "quote": "Gli stati non-ordinari bypassano il limite cosciente di ~120 bit al secondo e liberano l’inconscio, capace di miliardi di bit: da qui gli ‘aha-moment’ e il +200 % di creatività.",
+    "summary": "Meditazione e micro-dosing aumentano apprendimento (fino a +490 %) e collegano idee lontane, accelerando l’innovazione.",
+    "page": null,
+    "link": "https://amzn.to/4jr07R2"
+  },
+  {
+    "id": 30,
+    "tags": ["💊", "🧠"],
+    "title": "Note da \"L'arte dell'impossibile\"",
+    "quote": "Micro-dosi di LSD o mescalina possono raddoppiare la creatività; MDMA mostra efficacia duratura nel trattare il PTSD, superando le terapie convenzionali.",
+    "summary": "Le ricerche recenti confermano il potenziale dei psichedelici come potenziatori cognitivi e terapeutici, già adottati da innovatori in Silicon Valley.",
+    "page": null,
+    "link": "https://amzn.to/4jr07R2"
+  }
   ]
 }
