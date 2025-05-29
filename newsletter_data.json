@@ -2569,53 +2569,7 @@
     }
   ]
 },
-{
-  "title": "🎼 ff.60 La guida autonoma è qui!",
-  "buttonLabel": "🎼 ff.60 La guida autonoma è qui!",
-  "urlSlug": "ff60-la-guida-autonoma-e-qui",
-  "substackLink": "https://fortissimo.substack.com/p/ff60-la-guida-autonoma-e-qui",
-  "cards": [
-    {
-      "title": "📖 Panorama",
-      "tags": ["🚕","💸"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "Oggi parleremo principalmente di taxi autonomi",
-            "I robotaxi sono finalmente qui?",
-            "La mortalità stradale diminuirà?"
-          ]
-        }
-      ]
-    },
-    {
-      "title": "🤠 ff.60.1 Westworld della guida autonoma: SF",
-      "tags": ["🚕","🎨"],
-      "contentBlocks":[{"type":"paragraphs","content":["Cruise e Waymo a San Francisco: flotte piccole, futuro vicino ma non distribuito."]}]
-    },
-    {
-      "title": "🆕 ff.60.2 I taxi di Tesla",
-      "tags": ["💸","💻"],
-      "contentBlocks":[{"type":"paragraphs","content":["ARK Invest valuta 613 mld $ di ricavi robotaxi per Tesla entro il 2027."]}]
-    },
-    {
-      "title": "⚡ ff.60.3 Più soldi ai taxi, meno ai produttori",
-      "tags": ["💸","🚕"],
-      "contentBlocks":[{"type":"paragraphs","content":["Con i robotaxi serviranno meno auto: i margini migrano ai gestori dei servizi di mobilità."]}]
-    },
-    {
-      "title": "🇨🇳 ff.60.4 DriveGPT",
-      "tags": ["💻","🚕"],
-      "contentBlocks":[{"type":"paragraphs","content":["Haomo.ai (ByteDance + Great Wall) lancia DriveGPT per la guida autonoma cinese."]}]
-    },
-    {
-      "title": "💀 ff.60.5 Meno morti sulle strade?",
-      "tags": ["❤️","🚕"],
-      "contentBlocks":[{"type":"paragraphs","content":["Statistiche Tesla: 1 incidente ogni 10 M km in Autopilot vs 4 M per conducenti umani."]}]
-    }
-  ]
-},
+,
 {
   "title": "🎼 ff.69 Quantico?",
   "buttonLabel": "🎼 ff.69 Quantico?",
