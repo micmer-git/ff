@@ -1,6 +1,126 @@
 {
   "publications": [
     {
+  "buttonLabel": "🎼 ff.2 Mente artificiale e psichedelia",
+  "substackLink": "https://fortissimo.substack.com/p/-ff2-mente-artificiale-e-psichedelica",
+  "urlSlug": "-ff2-mente-artificiale-e-psichedelica",
+  "title": "🎼 ff.2 Mente artificiale e psichedelia",
+  "cards": [
+    {
+      "title": "🧠 Mente artificiale, psichedelia e il futuro",
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Il costo dell'intelligenza artificiale: l’impatto economico e ambientale",
+            "Riconoscere il proprio animale domestico in opere d’arte medievali",
+            "Il potenziale terapeutico delle sostanze psichedeliche"
+          ]
+        },
+        {
+          "type": "darkerParagraphs",
+          "content": [
+            "🏙️ ff.2.1 Un modello “grande” come New York\nL'intelligenza artificiale ha fatto progressi straordinari, ma richiede molta energia per l'addestramento. Il migliore sistema neuromorfico del 2020 ha un tasso d’errore inferiore al 10%, ma per ridurre l’errore al di sotto del 5% si stima che il training inquini quanto New York in un mese.",
+            "🇨🇳 ff.2.2 Alibaba e l’alternativa efficiente\nIl modello M6 di Alibaba, con 10 trilioni di parametri, rappresenta un'alternativa a basso consumo energetico rispetto a GPT-3, consumando solo l'1% dell'energia necessaria per l'addestramento di GPT-3.",
+            "🎨 ff.2.3 Avete trovato l'opera d'arte col vostro cane/gatto?\nGoogle Art and Culture permette di trovare il proprio animale domestico in un’opera d’arte, un esempio delle incredibili capacità rese possibili dalle nuove tecnologie AI.",
+            "🍄 ff.2.5 Psichedelia portami via\nL’uso terapeutico e creativo delle sostanze psichedeliche sta tornando in auge. L’esplosione di ricerche su sostanze come la psilocibina dimostra il crescente interesse scientifico e sociale."
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "buttonLabel": "🎼 ff.9 Automazione",
+  "substackLink": "https://fortissimo.substack.com/p/-ff9-automazione",
+  "urlSlug": "-ff9-automazione",
+  "title": "🎼 ff.9 Automazione",
+  "cards": [
+    {
+      "title": "🤖 Robot, automazione e lavoro",
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Robotica e automazione: come influenzano il mondo del lavoro",
+            "I numeri di Amazon: rapporto tra robot e dipendenti umani",
+            "Effetti dell’automazione sul reddito e la disoccupazione"
+          ]
+        },
+        {
+          "type": "darkerParagraphs",
+          "content": [
+            "🧹 ff.9.1 Un WALL-E in real life\nDeepMind ha sviluppato un robot in grado di riordinare casa basandosi sui movimenti umani. Alcuni prototipi di questi robot vengono già utilizzati nel campus di Google.",
+            "💱 ff.9.2 I robot ci ruberanno il lavoro?\nSecondo Martin Ford in \"The Rise of the Robots\", anche i lavori cognitivi come quelli di medici e avvocati potrebbero essere automatizzati. Nel 2021 sono stati ordinati 29.000 robot negli Stati Uniti, un incremento del 37% rispetto all'anno precedente.",
+            "🦼 ff.9.4 Robot oltre la disabilità\nNel bar giapponese DAWN, i robot camerieri sono controllati da persone con disabilità, un esempio di come la robotica possa creare sinergie imprevedibili."
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "buttonLabel": "🎼 ff.10 Misurare l’intelligenza",
+  "substackLink": "https://fortissimo.substack.com/p/-ff12-misurare-lintelligenza",
+  "urlSlug": "-ff10-misurare-lintelligenza",
+  "title": "🎼 ff.10 Misurare l’intelligenza",
+  "cards": [
+    {
+      "title": "🧠 Cervelli sempre più piccoli, intelligenza e coscienza",
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Come misurare l’intelligenza e il suo declino nel corso dei millenni",
+            "Homo sapiens vs Neanderthal: perché abbiamo prevalso?",
+            "Cervelli in fuga: il declino della capacità cognitiva"
+          ]
+        },
+        {
+          "type": "darkerParagraphs",
+          "content": [
+            "🐒 ff.12.1 Homo Sapiens vs Neanderthal\nDopo 8000 anni di convivenza, Homo sapiens ha prevalso su Neanderthal grazie a un'esplosione culturale e linguistica iniziata 70.000 anni fa.",
+            "🧠 ff.12.2 Cervelli in fuga\nNegli ultimi 3000 anni la capacità cognitiva dell’Homo sapiens è diminuita, probabilmente a causa dell'aumento delle strutture sociali complesse che hanno reso superflue molte capacità individuali.",
+            "👁️ ff.12.3 Coscienza e intelligenza\nAnil Seth esplora la relazione tra coscienza e intelligenza, spiegando come la coscienza nasca dal bisogno biologico di mantenere l’integrità fisiologica.",
+            "👘 ff.12.4 Siamo davvero così intelligenti?\nIl nostro cervello cerca costantemente di interpretare la realtà, ma spesso è ingannato da illusioni ottiche e bias cognitivi.",
+            "🚭 ff.12.5 Menti esplose\nConcludiamo con un tocco artistico: un poster di una band che ci invita a rilassarci e riflettere."
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "buttonLabel": "🎼 ff.37 Io Robot (o Roomba?)",
+  "substackLink": "https://fortissimo.substack.com/p/ff37-i-robot-sono-qui",
+  "urlSlug": "-ff37-i-robot-sono-qui",
+  "title": "🎼 ff.37 Io Robot (o Roomba?)",
+  "cards": [
+    {
+      "title": "🤖 Robotica, Tesla e NVIDIA",
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Tesla Optimus: il robot tuttofare del futuro?",
+            "Accelerazione della robotica: dove ci porterà?",
+            "Il ruolo di NVIDIA nella rivoluzione robotica"
+          ]
+        },
+        {
+          "type": "darkerParagraphs",
+          "content": [
+            "🌵 ff.37.1 Finirà come Westworld?\nLa serie TV Westworld esplora un futuro inquietante in cui gli umanoidi sviluppano coscienza, un tema che riflette paure e fascino verso la robotica moderna.",
+            "🤖 ff.37.2 Tesla AI Day\nOptimus, il robot umanoide di Tesla, mira a diventare il robot più avanzato, con un peso di 73 kg e una batteria da 2,3 kWh.",
+            "🎮 ff.37.3 Non provi NVIDIA?\nNVIDIA sta sviluppando chip come Jetson Orin Nano, che potrebbe diventare un'interfaccia universale per la robotica e l’intelligenza artificiale del futuro.",
+            "📈 ff.37.4 Robot sempre più diffusi\nLe installazioni di robot industriali stanno crescendo rapidamente, con la Cina che domina il mercato globale."
+          ]
+        }
+      ]
+    }
+  ]
+},
+    {
       "title": "🎼 ff.125 USA: crollo di un impero",
       "buttonLabel": "🎼 ff.125 USA: crollo di un impero",
       "urlSlug": "ff125-usa-crollo-di-un-impero",
