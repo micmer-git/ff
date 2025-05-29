@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>futuro fortissimo – explorer</title>
 
-  <!-- Google Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
     tailwind.config={
@@ -37,7 +35,14 @@
     .exp-card.exit{transform:scale(.9);opacity:0}
     .expander{position:absolute;right:10px;bottom:10px;background:#fff;border-radius:9999px;padding:6px 9px;font-size:18px;box-shadow:0 1px 4px rgba(0,0,0,.15);cursor:pointer}
     /* fade altri elementi */
-    .dimmed>*:not(.focused){opacity:.25;filter:blur(1px);transition:.25s}
+    .dimmed > *:not(.focused) {
+        opacity: 0.25;
+        filter: blur(2px); /* Aumentato il blur per maggiore enfasi */
+        transition: opacity 0.35s ease, filter 0.35s ease;
+    }
+    .focused {
+        z-index: 10; /* Assicura che la card espansa sia sopra gli altri elementi */
+    }
   </style>
 </head>
 
@@ -128,7 +133,13 @@ function render(){
   const activeS=term.length>0, activeF=filters.size>0;
   const wrap=$('#app'); wrap.innerHTML='';
 
-  if(!activeS && !activeF) wrap.appendChild(makePubStrip(DATA.publications));
+  // Mostra solo makePubStrip se non ci sono ricerche o filtri attivi
+  if(!activeS && !activeF) {
+      wrap.appendChild(makePubStrip(DATA.publications));
+      // Nasconde eventuali cards di subchapters, notes o books che potrebbero essere rimaste
+      wrap.querySelectorAll('.pub-card, .notes-strip, .books-strip').forEach(el => el.remove());
+      return; // Esce dalla funzione per non renderizzare altro
+  }
 
   DATA.publications.forEach((pub,idx)=>{
     const vis=pub.cards.filter(sc=>!sc.title.startsWith('📖')).filter(sc=>{
@@ -186,8 +197,16 @@ function makePubStrip(list){
 }
 
 function openExpanded(pub){
+  // Nasconde tutti gli elementi non essenziali per l'espansione e aggiunge la classe dimmed
+  const appChildren = Array.from($('#app').children);
+  appChildren.forEach(child => {
+      if (child.id !== 'pubStrip') { // Assicurati di non nascondere pubStrip prematuramente
+          child.classList.add('hidden');
+      }
+  });
   $('#pubStrip')?.classList.add('hidden');
   document.body.classList.add('dimmed');
+
 
   const wrap=$('#app');
   const idx=DATA.publications.findIndex(p=>p.title===pub.title);
@@ -197,9 +216,23 @@ function openExpanded(pub){
   wrap.prepend(card); requestAnimationFrame(()=>card.classList.add('enter'));
 
   const close=document.createElement('button');
-  close.textContent='✕'; close.className='absolute top-2 right-2 text-2xl';
-  close.onclick=()=>{card.classList.remove('enter');card.classList.add('exit');
-    setTimeout(()=>{card.remove();$('#pubStrip')?.classList.remove('hidden');document.body.classList.remove('dimmed');},350);};
+  close.textContent='✕'; close.className='absolute top-2 right-2 text-2xl z-20'; // Aggiunto z-index per il pulsante di chiusura
+  close.onclick=()=>{
+    card.classList.remove('enter');
+    card.classList.add('exit');
+    setTimeout(()=>{
+        card.remove();
+        document.body.classList.remove('dimmed');
+        // Mostra nuovamente pubStrip e tutti gli altri elementi che erano stati nascosti
+        $('#pubStrip')?.classList.remove('hidden');
+        appChildren.forEach(child => {
+            if (child.id !== 'pubStrip') {
+                child.classList.remove('hidden');
+            }
+        });
+        render(); // Richiama render per ripristinare lo stato iniziale
+    },350);
+  };
   card.appendChild(close); card.scrollIntoView({behavior:'smooth',block:'center'});
 }
 
@@ -220,13 +253,16 @@ function makePubCard(pub,scList,idx,condensed,term,showTags){
       </div>
       ${i<scList.length-1?"<hr class='border-t my-3' />":''}`;
   });
-  inner.onclick=()=>window.open(pub.substackLink,'_blank');
+  // L'onclick sul inner deve aprire il link solo se non siamo in modalità espansa
+  if (condensed) {
+    inner.onclick=()=>window.open(pub.substackLink,'_blank');
+  }
   return card;
 }
 
 function makeNotesStrip(notes,showTags){
   const strip=document.createElement('div');
-  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  strip.className='notes-strip flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2'; // Aggiunto notes-strip
   notes.forEach(n=>{
     const card=document.createElement('div');
     card.className='rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
@@ -245,7 +281,7 @@ function makeNotesStrip(notes,showTags){
 
 function makeBooksStrip(books,showTags){
   const strip=document.createElement('div');
-  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  strip.className='books-strip flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2'; // Aggiunto books-strip
   books.forEach(b=>{
     const card=document.createElement('div');
     card.className='rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
