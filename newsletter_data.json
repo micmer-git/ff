@@ -1,5 +1,636 @@
 {
   "publications": [
+    {
+  "title": "🎼 ff.4 Mammut resuscitati",
+  "buttonLabel": "🎼 ff.4 Mammut resuscitati",
+  "urlSlug": "ff4-mammut-resuscitati",
+  "substackLink": "https://fortissimo.substack.com/p/-ff4-mammut-e-torneo-tremaghi",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💻", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Intelligenza Artificiale per predire la struttura delle proteine e farmaci innovativi",
+            "Mammut da resuscitare e la settimana enigmistica",
+            "Applicazioni dell'IA nella chimica e nella biologia"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🧬 ff.4.1 La struttura delle proteine",
+      "tags": ["💻", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["DeepMind ha dimostrato di poter trovare la struttura delle proteine nel giro di ore, risolvendo un enigma cinquantennale."]
+        }
+      ]
+    },
+    {
+      "title": "💊 ff.4.2 Il prossimo farmaco innovativo",
+      "tags": ["💻", "💊"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Un'Intelligenza Artificiale è stata allenata a predire le proprietà delle strutture chimiche, riducendo il tempo di ricerca da 3 mesi a 3 ore."]
+        }
+      ]
+    },
+    {
+      "title": "🦖 ff.4.3 Mammut resuscitati dall’estinzione",
+      "tags": ["🍃", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Colossal sta provando a resuscitare i mammut per riequilibrare l’ecosistema tundra e migliorare le tecniche di editing genetico."]
+        }
+      ]
+    },
+    {
+      "title": "📉 ff.4.4 DNA meglio dei microchip!",
+      "tags": ["💻", "💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Il costo di sequenziamento del genoma umano è diminuito di 100.000 volte negli ultimi 20 anni, rendendolo più economico di un iPhone."]
+        }
+      ]
+    },
+    {
+      "title": "🦠 ff.4.5 Microbi computazionali?",
+      "tags": ["💻", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Ricercatori hanno creato labirinti risolvibili da E. coli, dimostrando capacità computazionali basate su substrati biologici."]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.27 Un milione di morti COVID",
+  "buttonLabel": "🎼 ff.27 Un milione di morti COVID",
+  "urlSlug": "ff27-un-milione-di-morti-covid-us",
+  "substackLink": "https://fortissimo.substack.com/p/-ff27-un-milione-di-morti-covid-us",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["❤️", "👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "I pixel del New York Times: visualizzare un milione di morti COVID",
+            "Lo scroll infinito che accumula decessi",
+            "Le frasi interrotte del Washington Post e le storie individuali"
+          ]
+        }
+      ]
+    },
+    {
+      "title": " pixel del New York Times",
+      "tags": ["❤️", "👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Il New York Times ha visualizzato un milione di morti COVID negli Stati Uniti usando pixel, ogni puntino rappresenta una vita umana. Questo approccio invita a riflettere sulla scala della pandemia."]
+        }
+      ]
+    },
+    {
+      "title": "🖱️ ff.27.2 Scroll e morti",
+      "tags": ["❤️", "👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Axios ha creato una visualizzazione interattiva che accumula i decessi man mano che si scorre. A settembre 2021, le morti hanno superato le vittime della pandemia del 1918."]
+        }
+      ]
+    },
+    {
+      "title": "💬 ff.27.3 Le frasi interrotte del Washington Post",
+      "tags": ["❤️", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Il Washington Post ha presentato frasi interrotte per rappresentare le storie individuali delle vittime del COVID-19, invitando il lettore a fermarsi e riflettere."]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.28 Google ricerca il futuro",
+  "buttonLabel": "🎼 ff.28 Google ricerca il futuro",
+  "urlSlug": "ff28-google-ricerca-il-futuro",
+  "substackLink": "https://fortissimo.substack.com/p/-ff28-google-ricerca-il-futuro",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💻", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Controllare 'il sole sulla terra' con l'IA per la fusione nucleare",
+            "Contare i fagioli e valutare l’efficienza del raccolto con Project Mineral",
+            "Ridurre le emissioni negli spostamenti su Google Maps",
+            "Analizzare i nostri dati sanitari con Care Studio"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "☢️ ff.28.1 Intelligenza artificiale per la fusione nucleare",
+      "tags": ["💻", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Nature ha pubblicato l’uso di reti neurali per controllare la posizione e la forma del plasma in un reattore di fusione nucleare, gestendo il sistema più velocemente dei calcoli tradizionali."]
+        }
+      ]
+    },
+    {
+      "title": "🧆 ff.28.2 Trovare il fagiolo di Bazar",
+      "tags": ["💻", "🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Project Mineral di Google utilizza robotica e riconoscimento immagini per migliorare l’agricoltura, promuovendo la biodiversità e l’efficienza del raccolto."]
+        }
+      ]
+    },
+    {
+      "title": "🗺️ ff.28.3 Google Maps riduce le emissioni",
+      "tags": ["💻", "🚕"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Google ha implementato un sistema di guida eco-friendly su Maps, evitando ingorghi e riducendo le emissioni. Si stima un risparmio di 1 milione di tonnellate di CO2 all'anno."]
+        }
+      ]
+    },
+    {
+      "title": "🩺 ff.28.4 Metti la canottiera (o ti senti fortunato?)",
+      "tags": ["💻", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Google ha lanciato Care Studio per la gestione dati sanitari e Nest Hub 2 per monitorare il sonno e supportare persone disabili, migliorando il benessere quotidiano."]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.76 Siamo ancora in lockdown?",
+  "buttonLabel": "🎼 ff.76 Siamo ancora in lockdown?",
+  "urlSlug": "ff76-quello-che-resta-del-lockdown",
+  "substackLink": "https://fortissimo.substack.com/p/ff76-quello-che-resta-del-lockdown",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["❤️", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Ci ha trasformato nello scarafaggio di Kafka?",
+            "Smartworking, yoga, biciclette: quali tendenze sono sopravvissute?",
+            "Dopo il COVID giocare a Minecraft è più difficile?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🦠 ff.76.1 Cosa è rimasto del COVID?",
+      "tags": ["❤️", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Il COVID è un lontano ricordo, ma i 65 milioni di persone affette da long-COVID testimoniano le cicatrici psico-fisiche lasciate dalla pandemia, con sintomi come fiato corto e insonnia."]
+        }
+      ]
+    },
+    {
+      "title": "🧖‍♂️ ff.76.2 L’esplosione degli hobby",
+      "tags": ["❤️", "👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Durante il lockdown, 1 americano su 2 ha iniziato un nuovo hobby, contribuendo a una rinascita degli interessi domestici come il fai-da-te e il ciclismo, riflettendo un desiderio di connessione e miglioramento personale."]
+        }
+      ]
+    },
+    {
+      "title": "🫁 ff.76.3 E gli effetti fisici",
+      "tags": ["❤️", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Il lockdown ha lasciato segni fisici significativi, con 65 milioni di persone in Europa affette da long-COVID. Giochi come Minecraft ora includono modalità che simulano sintomi cronici, evidenziando l'impatto duraturo sulla vita quotidiana."]
+        }
+      ]
+    },
+    {
+      "title": "🐛 ff.76.4 Trasformati in uno scarafaggio?",
+      "tags": ["❤️", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Bruno Latour propone una filosofia del lockdown, paragonando l'esperienza umana a quella dello scarafaggio di Kafka, portandoci a riflettere sulla nostra materialità e le limitazioni imposte dalla pandemia."]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.87 Siamo quello che respiriamo",
+  "buttonLabel": "🎼 ff.87 Siamo quello che respiriamo",
+  "urlSlug": "ff87-siamo-quello-che-respiriamo",
+  "substackLink": "https://fortissimo.substack.com/p/ff87-siamo-quello-che-respiriamo",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["🍃", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "I cibi processati ci fanno russare?",
+            "Il costo sociale dell’inquinamento dell'aria",
+            "Comprare un purificatore d’aria ai cittadini?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💨 ff.87.1 Breve storia del respiro",
+      "tags": ["🍃", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["I cibi processati hanno modificato il palato, portando problemi come il russare, connessi anche all'uso del biberon rispetto all'allattamento naturale."]
+        }
+      ]
+    },
+    {
+      "title": "🏭 ff.87.2 Quanto è inquinata l’aria in Italia?",
+      "tags": ["🍃", "💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["In Pianura Padana, la qualità dell’aria è critica. Vivere a Milano è come fumare due sigarette al giorno a causa dell'inquinamento."]
+        }
+      ]
+    },
+    {
+      "title": "🔄 ff.87.3 Un purificatore d’aria per tutti",
+      "tags": ["🍃", "💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Il costo di un purificatore ambientale per aumentare di 1 DALY la vita di un americano è stimato a $33k, mentre in India costa $1.5k."]
+        }
+      ]
+    },
+    {
+      "title": "💆🏻‍♀️ ff.87.4 Respirare contro lo stress: il metodo 3-4-5",
+      "tags": ["❤️", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["La tecnica del 3-4-5 (inspirare per 3 secondi, trattenere per 4, espirare per 5) è utile per alleviare lo stress."]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.90 L'epidemia di stress",
+  "buttonLabel": "🎼 ff.90 L'epidemia di stress",
+  "urlSlug": "ff90-lepidemia-di-stress",
+  "substackLink": "https://fortissimo.substack.com/p/ff91-lepidemia-di-stress",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["❤️", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "L’effetto dei social come un leone nella savana?",
+            "Il cortisolo tra alimentazione, notifiche e sport",
+            "Stress e diabete, quale connessione?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🦁 ff.90.1 Scappare da un leone o una notifica",
+      "tags": ["❤️", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Le notifiche attivano una risposta fisiologica simile a quella della savana, innalzando glucosio e cortisolo, contribuendo a obesità e diabete in un contesto sedentario."]
+        }
+      ]
+    },
+    {
+      "title": "😵‍ ff.90.2 Microdosi di stress",
+      "tags": ["❤️", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Le 'microdosi di stress' accumulate durante la giornata (notifiche, email notturne) possono portare a obesità e insonnia."]
+        }
+      ]
+    },
+    {
+      "title": "🥽 ff.90.3 Micro-bi di stress",
+      "tags": ["❤️", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Lo stress altera il microbioma intestinale, riducendo microbi buoni (Lactobacillus) e favorendo la proliferazione di microbi nocivi come Citrobacter, con conseguenze sulla salute metabolica."]
+        }
+      ]
+    },
+    {
+      "title": "🏓 ff.90.4 Sport contro lo stress",
+      "tags": ["❤️", "⚽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["L'esercizio fisico, anche solo camminare 2 minuti ogni 20 di sedentarietà, contrasta gli effetti del glucosio e del cortisolo in eccesso, aiutando il corpo a gestire meglio lo stress cronico."]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.17 Sport (e chi ne fa le feci)",
+  "buttonLabel": "🎼 ff.17 Sport (e chi ne fa le feci)",
+  "urlSlug": "ff17-sport-e-chi-ne-fa-le-feci",
+  "substackLink": "https://fortissimo.substack.com/p/-ff16-sport-e-chi-ne-fa-le-feci",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💻", "⚽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Urina e feci possono dirci se batteremo il record del mondo?",
+            "Siamo una specie di camminatori?",
+            "Ci alleniamo di più vedendo le attività dei nostri amici su Strava?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🇳🇴 ff.17.1 La Norvegia è maniacale",
+      "tags": ["⚽", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Kristian Blummenfelt, triatleta norvegese, ha battuto record impressionanti. L'ingegnere Olav Aleksander Bu ha analizzato le sue feci e urina per ottimizzare il consumo di carboidrati e ossigeno, migliorando le sue performance."]
+        }
+      ]
+    },
+    {
+      "title": "🏃 ff.17.2 Il report del 2021 di Strava",
+      "tags": ["💻", "⚽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Strava ha visto un incremento del 38% delle attività rispetto al 2020, con le camminate in forte crescita. Chi ha iniziato nel 2020 ha migliorato significativamente i propri record personali nel 2021."]
+        }
+      ]
+    },
+    {
+      "title": "🕸️ ff.17.3 Social network positivi?",
+      "tags": ["💻", "👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Sinan Aral del MIT ha dimostrato che vedere un amico correre 1 km in più su Strava ci spinge a correre almeno 750 metri in più, con variazioni influenzate anche dal meteo."]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.22 Mangiamo troppo?",
+  "buttonLabel": "🎼 ff.22 Mangiamo troppo?",
+  "urlSlug": "ff22-mangiamo-troppo",
+  "substackLink": "https://fortissimo.substack.com/p/-ff22-mangiamo-troppo",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["❤️", "🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Possiamo mangiare qualunque cosa, se lo facciamo in una finestra di 10 ore?",
+            "Mangiamo di più se in compagnia?",
+            "Davvero esiste una dieta con un solo pasto al giorno?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🕐 ff.22.1 Dieta circadiana?",
+      "tags": ["❤️", "🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Seguire una finestra temporale di 10-12 ore per mangiare può aiutare a mantenere il nostro metabolismo bilanciato. Uno studio su Nature Metabolism mostra che topi perdono più peso se il cibo viene consumato in una finestra temporale limitata."]
+        }
+      ]
+    },
+    {
+      "title": "🪑 ff.22.2 Aggiungi un posto (e qualche kcal) a tavola",
+      "tags": ["❤️", "🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["La convivialità può farci mangiare fino al 50% in più rispetto a quando siamo da soli."]
+        }
+      ]
+    },
+    {
+      "title": "🥔 ff.22.3 Perché mangiare cibo non processato (e ricco di fibre)",
+      "tags": ["❤️", "🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Il cibo non processato richiede più energie per essere digerito. Per esempio, digerire sandwich con pane integrale consuma il doppio delle calorie rispetto a quelli con pane bianco."]
+        }
+      ]
+    },
+    {
+      "title": "🤰🏻 ff.22.4 I cibi che saziano di più",
+      "tags": ["❤️", "🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Le patate sono tra i cibi più sazianti, con un indice di sazietà pari a 332, mentre il croissant si ferma a 47. Arance e mele saziano di più delle banane."]
+        }
+      ]
+    },
+    {
+      "title": "🍹 ff.22.5 Beviamoci su?",
+      "tags": ["❤️", "🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Il consumo di alcol può influire molto sul bilancio calorico: 5 birre a settimana aggiungono fino a 5.6 kg in un anno."]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.35 Sto bene, sono Super Sapiens",
+  "buttonLabel": "🎼 ff.35 Sto bene, sono Super Sapiens",
+  "urlSlug": "ff35-siamo-supersapiens",
+  "substackLink": "https://fortissimo.substack.com/p/ff35-siamo-supersapiens",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💻", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Quanto spenderemo per Garmin, Apple Watch e sessioni di Yoga?",
+            "Saremo dei Super Sapiens grazie alla tecnologia?",
+            "7 regole per dormire bene e concentrarsi!"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📈 ff.35.1 Le proiezioni del mercato del well-being",
+      "tags": ["💸", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Il mercato del wellness è cresciuto fino a 1.5 trilioni di dollari, con il COVID che ha sensibilizzato l'attenzione verso la salute. Il 20% del GDP negli Stati Uniti è investito in spese mediche."]
+        }
+      ]
+    },
+    {
+      "title": "🕛 ff.35.2 Smartwatch e non solo",
+      "tags": ["💻", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Nel mercato del wellness troviamo oggetti come l’Oura Ring e il sensore di glicemia Supersapiens. Anche Zoe fornisce kit per monitorare la risposta glicemica e il microbioma."]
+        }
+      ]
+    },
+    {
+      "title": "💸 ff.35.3 Tanti soldi nella medicina digitale",
+      "tags": ["💻", "💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Nel 2021 le startup nel campo della salute hanno raccolto 38 miliardi di dollari, con aziende leader come Devoted Health, Medlinker e Hinge Health."]
+        }
+      ]
+    },
+    {
+      "title": "💤 ff.35.4 Super-dormita e super-focus",
+      "tags": ["❤️", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Sette consigli per migliorare il sonno e la concentrazione, tra cui esporsi alla luce solare subito dopo il risveglio e ridurre l'esposizione a luci intense di notte."]
+        }
+      ]
+    },
+    {
+      "title": "🌳 ff.35.5 L'infinito di Leopardi secondo l’AI",
+      "tags": ["💻", "🍃"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["La natura è essenziale per il benessere. In mancanza di verde, l'Intelligenza Artificiale può ricrearla: Wombo Art ha interpretato l'Infinito di Leopardi, mostrando nuove prospettive artistiche."]
+        }
+      ]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.49 La pandemia del 21esimo secolo",
+  "buttonLabel": "🎼 ff.49 La pandemia del 21esimo secolo",
+  "urlSlug": "ff49-la-pandemia-del-21esimo-secolo",
+  "substackLink": "https://fortissimo.substack.com/p/ff49-la-pandemia-del-21esimo-secolo",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["❤️", "🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Perché anche gli animali domestici ingrassano con noi?",
+            "Teorie alternative sull'obesità da valutare scientificamente",
+            "Sempre 18enni con 100+ pillole al giorno"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "⚽ ff.49.1 Siamo sempre più tondi",
+      "tags": ["❤️", "💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["La mortalità legata all'obesità è cresciuta dal 5.3% (1990) all'8.5% (2019). In Italia, i casi di obesità sono passati da 10 a 23 persone su 100 dal 1975."]
+        }
+      ]
+    },
+    {
+      "title": "👅 ff.49.2 BMI, BMR (non sono pernacchie)",
+      "tags": ["❤️", "🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Il BMI misura il rapporto peso/altezza, mentre il BMR (basal metabolic rate) indica quante calorie consumiamo a riposo, variando tra 1100 e 2500 kcal giornaliere. Il fattore principale è la massa muscolare."]
+        }
+      ]
+    },
+    {
+      "title": "🍔 ff.49.3 Diete e inquinanti",
+      "tags": ["❤️", "🍽"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Le abitudini alimentari sono cambiate, con un incremento di 400 kcal al giorno nella dieta americana. Il consumo di fibre riduce il BMI, mentre grassi e zuccheri aumentano il rilascio di dopamina, contribuendo all'obesità."]
+        }
+      ]
+    },
+    {
+      "title": "💊 ff.49.4 Il superuomo che prende 100 pillole al giorno",
+      "tags": ["❤️", "💊"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": ["Bryan Johnson, fondatore di Braintree, assume oltre 100 pillole al giorno e segue una dieta maniacale per rallentare il processo di invecchiamento, riducendo la sua età epigenetica di 5 anni."]
+        }
+      ]
+    }
+  ]
+},
 {
     "title": "🎼 ff.62 Come evitare il burnout",
     "buttonLabel": "🎼 ff.62 Come evitare il burnout",
