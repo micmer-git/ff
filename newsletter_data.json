@@ -1,282 +1,353 @@
 {
   "publications": [
     {
-  "title": "🎼 ff.2 Mente artificiale e psichedelia",
-  "buttonLabel": "🎼 ff.2 Mente artificiale e psichedelia",
-  "urlSlug": "-ff2-mente-artificiale-e-psichedelica",
-  "substackLink": "https://fortissimo.substack.com/p/-ff2-mente-artificiale-e-psichedelica",
+  "title": "🎼 ff.18 Tra arte digitale e AI",
+  "buttonLabel": "🎼 ff.18 Tra arte digitale e AI",
+  "urlSlug": "-ff18-tra-arte-digitale-e-ai",
+  "substackLink": "https://fortissimo.substack.com/p/-ff17-tra-arte-digitale-e-ai",
   "cards": [
     {
-      "title": "🧠 Mente artificiale, psichedelia e il futuro",
-      "tags": ["🧠", "🎨"],
+      "title": "📖 Panorama",
+      "tags": ["🎨","🧠"],
       "contentBlocks": [
         {
           "type": "paragraphs",
           "content": [
-            "Il costo dell'intelligenza artificiale: l’impatto economico e ambientale",
-            "Riconoscere il proprio animale domestico in opere d’arte medievali",
-            "Il potenziale terapeutico delle sostanze psichedeliche"
+            "Arte, intelligenza artificiale e creatività umana",
+            "Van Gogh: reinterpretazioni moderne grazie all’AI",
+            "Come l’arte ci aiuta a staccarci dalla frenesia della vita moderna"
           ]
         }
       ]
     },
     {
-      "title": "🏙️ ff.2.1 Un modello “grande” come New York",
-      "tags": ["💻", "🍃"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "L'intelligenza artificiale ha fatto progressi straordinari, ma richiede molta energia per l'addestramento. Il migliore sistema neuromorfico del 2020 ha un tasso d’errore inferiore al 10%, ma per ridurre l’errore al di sotto del 5% si stima che il training inquini quanto New York in un mese."
-          ]
-        }
-      ]
+      "title": "😲 ff.18.1 L’importanza di spegnere il cervello",
+      "tags": ["💆","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Uno studio su Human Brain Mapping rivela come l’arte, ispirando meraviglia, ci permetta di distaccarci dal nostro “sé”, offrendo un momento di sollievo dalle preoccupazioni quotidiane."]}]
     },
     {
-      "title": "🇨🇳 ff.2.2 Alibaba e l’alternativa efficiente",
-      "tags": ["💻", "💸"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "Il modello M6 di Alibaba, con 10 trilioni di parametri, rappresenta un'alternativa a basso consumo energetico rispetto a GPT-3, consumando solo l'1% dell'energia necessaria."
-          ]
-        }
-      ]
+      "title": "🚽 ff.18.2 Toilette artistiche",
+      "tags": ["🎨","❤️"],
+      "contentBlocks":[{"type":"paragraphs","content":["Il collettivo Rankin trasforma i bagni in opere d’arte per la campagna WaterAid “Best Seat in the House” sensibilizzando sull’igiene globale."]}]
     },
     {
-      "title": "🎨 ff.2.3 Avete trovato l'opera d'arte col vostro cane/gatto?",
-      "tags": ["🎨", "👥"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "Google Art and Culture permette di trovare il proprio animale domestico in un’opera d’arte, un esempio delle incredibili capacità rese possibili dalle nuove tecnologie AI."
-          ]
-        }
-      ]
+      "title": "🖼️ ff.18.3 Arte e AI: sinergie creative",
+      "tags": ["🎨","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["Nel libro \"The Artist in the Machine\" Arthur I. Miller esplora come l’AI possa assistere (e ampliare) il processo creativo umano."]}]
     },
     {
-      "title": "🍄 ff.2.5 Psichedelia portami via",
-      "tags": ["💊", "💆"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "L’uso terapeutico e creativo delle sostanze psichedeliche sta tornando in auge. L’esplosione di ricerche su sostanze come la psilocibina dimostra il crescente interesse scientifico e sociale."
-          ]
-        }
-      ]
+      "title": "♟️ ff.18.4 Scacchi artistici: il re della scacchiera",
+      "tags": ["💻","⚽"],
+      "contentBlocks":[{"type":"paragraphs","content":["AlphaGo e altri sistemi AI battono i campioni umani con mosse inaspettate e creative, sconvolgendo i giochi strategici."]}]
+    },
+    {
+      "title": "🎭 ff.18.5 Dipinti ricreati dall’AI",
+      "tags": ["🎨","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["L’AI ricostruisce volti storici (da Van Gogh a Freddie Mercury) mostrando le potenzialità creative del deep-learning generativo."]}]
     }
   ]
 },
 {
-  "title": "🎼 ff.9 Automazione",
-  "buttonLabel": "🎼 ff.9 Automazione",
-  "urlSlug": "-ff9-automazione",
-  "substackLink": "https://fortissimo.substack.com/p/-ff9-automazione",
+  "title": "🎼 ff.101 Adele vs AI",
+  "buttonLabel": "🎼 ff.101 Adele vs AI",
+  "urlSlug": "-ff101-adele-vs-ai",
+  "substackLink": "https://fortissimo.substack.com/p/ff101-cosa-ci-rende-umani",
   "cards": [
     {
-      "title": "🤖 Robot, automazione e lavoro",
-      "tags": ["💻", "👥"],
+      "title": "📖 Panorama",
+      "tags": ["🎨","👥"],
       "contentBlocks": [
         {
           "type": "paragraphs",
           "content": [
-            "Robotica e automazione: come influenzano il mondo del lavoro",
-            "I numeri di Amazon: rapporto tra robot e dipendenti umani",
-            "Effetti dell’automazione sul reddito e la disoccupazione"
+            "Il libro del manager di Adele",
+            "Perché sollevare a mano acqua da un pozzo?",
+            "Cos’è il web poetico?"
           ]
         }
       ]
     },
     {
-      "title": "🧹 ff.9.1 Un WALL-E in real life",
-      "tags": ["💻", "🧠"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "DeepMind ha sviluppato un robot in grado di riordinare casa basandosi sui movimenti umani; alcuni prototipi sono già usati nel campus di Google."
-          ]
-        }
-      ]
+      "title": "🎤 ff.101.1 Il manager di Adele",
+      "tags": ["🎨","💸"],
+      "contentBlocks":[{"type":"paragraphs","content":["Rick Rubin e Matt Clancy riflettono su come l’atto creativo chiuda un ciclo di innovazione e introspezione personale."]}]
     },
     {
-      "title": "💱 ff.9.2 I robot ci ruberanno il lavoro?",
-      "tags": ["💸", "👥"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "Secondo Martin Ford in \"The Rise of the Robots\", anche lavori cognitivi (medici, avvocati) potrebbero essere automatizzati. Nel 2021 gli ordini di robot negli USA sono aumentati del 37%."
-          ]
-        }
-      ]
+      "title": "🪣 ff.101.2 Ha senso prelevare acqua da un pozzo?",
+      "tags": ["💆","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Parabola sulla lentezza: scrivere (o attingere acqua) manualmente per recuperare consapevolezza nell’era dell’AI."]}]
     },
     {
-      "title": "🦼 ff.9.4 Robot oltre la disabilità",
-      "tags": ["🎨", "💆"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "Nel bar giapponese DAWN, i robot-camerieri sono controllati da persone con disabilità: esempio di sinergie imprevedibili tra robotica e inclusione."
-          ]
-        }
-      ]
+      "title": "✨ ff.101.3 Intenzionalità e valore",
+      "tags": ["❤️","🎨"],
+      "contentBlocks":[{"type":"paragraphs","content":["L’energia e l’emozione personale conferiscono autenticità: l’intenzionalità umana resta centrale nell’arte."]}]
+    },
+    {
+      "title": "📜 ff.101.4 Web Poetico",
+      "tags": ["💻","🎨"],
+      "contentBlocks":[{"type":"paragraphs","content":["Un internet umano, imperfetto e sorprendente come antidoto agli algoritmi standardizzati."]}]
+    },
+    {
+      "title": "❗ ff.101.5 Tornare a prestare attenzione",
+      "tags": ["💆","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["La pratica artistica come palestra di attenzione consapevole in un mondo dominato da feed algoritmici."]}]
     }
   ]
 },
 {
-  "title": "🎼 ff.10 Misurare l’intelligenza",
-  "buttonLabel": "🎼 ff.10 Misurare l’intelligenza",
-  "urlSlug": "-ff10-misurare-lintelligenza",
-  "substackLink": "https://fortissimo.substack.com/p/-ff12-misurare-lintelligenza",
+  "title": "🎼 ff.102 Il futuro in una conchiglia",
+  "buttonLabel": "🎼 ff.102 Il futuro in una conchiglia",
+  "urlSlug": "-ff102-il-futuro-in-una-conchiglia",
+  "substackLink": "https://fortissimo.substack.com/p/ff102-il-futuro-in-una-conchiglia",
   "cards": [
     {
-      "title": "🧠 Cervelli sempre più piccoli, intelligenza e coscienza",
-      "tags": ["🧠", "🍃"],
+      "title": "📖 Panorama",
+      "tags": ["💻","🚕"],
       "contentBlocks": [
         {
           "type": "paragraphs",
           "content": [
-            "Come misurare l’intelligenza e il suo declino nel corso dei millenni",
-            "Homo sapiens vs Neanderthal: perché abbiamo prevalso?",
-            "Cervelli in fuga: il declino della capacità cognitiva"
+            "Uno scienziato-AI scrive paper in autonomia",
+            "Robotaxi a Wuhan: altro che COVID!",
+            "Salvini elenca cose in arabo"
           ]
         }
       ]
     },
     {
-      "title": "🐒 ff.12.1 Homo Sapiens vs Neanderthal",
+      "title": "⛱️ ff.102.1 Il futuro non va in vacanza",
+      "tags": ["🍃","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["La newsletter “What’s New Under the Sun” mostra che il progresso non si ferma nemmeno d’estate."]}]
+    },
+    {
+      "title": "🚕 ff.102.2 Wuhan: dal Covid a Baidu",
+      "tags": ["🚕","💸"],
+      "contentBlocks":[{"type":"paragraphs","content":["I robotaxi Baidu rivoluzionano il trasporto urbano con espansione prevista fino al 2035."]}]
+    },
+    {
+      "title": "🔭 ff.102.3 Automatizzare la ricerca scientifica",
+      "tags": ["💻","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Sakana AI lancia “AI Scientist”: genera ipotesi, esperimenti e paper – restano sfide etiche/tecniche."]}]
+    },
+    {
+      "title": "🩸 ff.102.4 Dal sangue ad Amazon",
+      "tags": ["🚕","❤️"],
+      "contentBlocks":[{"type":"paragraphs","content":["Zipline riduce del 50 % le morti post-parto in Rwanda consegnando sangue con droni; ora guarda al mercato consumer."]}]
+    },
+    {
+      "title": "🇸🇦 ff.102.5 Salvini elenca cose (in arabo)",
+      "tags": ["🎨","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["Con HeyGen e simili i deep-fake multilingua diventano accessibili: opportunità & rischi della creatività digitale."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.103 Fuoco, Ferro, Intelligenza",
+  "buttonLabel": "🎼 ff.103 Fuoco, Ferro, Intelligenza",
+  "urlSlug": "-ff103-fuoco-ferro-intelligenza",
+  "substackLink": "https://fortissimo.substack.com/p/ff103-fuoco-ferro-intelligenza",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💻","🧠"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "L’Intelligenza Artificiale ora pensa?",
+            "Analizzare buchi neri in 5 minuti",
+            "Siamo dentro il film Her?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🍓 ff.103.1 Prima di parlare, pensa",
+      "tags": ["💻","🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Il modello o1 di OpenAI promuove riflessioni più profonde prima di rispondere, migliorando la qualità dell’interazione."]}]
+    },
+    {
+      "title": "🎓 ff.103.2 NASA, MENSA e QI",
       "tags": ["🧠"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "Dopo 8000 anni di convivenza, Homo sapiens ha prevalso su Neanderthal grazie a un'esplosione culturale e linguistica iniziata 70.000 anni fa."
-          ]
-        }
-      ]
+      "contentBlocks":[{"type":"paragraphs","content":["o1 supera test complessi di problem-solving: balzo di “QI artificiale” rispetto ai modelli precedenti."]}]
     },
     {
-      "title": "🧠 ff.12.2 Cervelli in fuga",
-      "tags": ["🧠", "💆"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "Negli ultimi 3000 anni la capacità cognitiva dell’Homo sapiens è diminuita, forse a causa di strutture sociali complesse che rendono superflue molte abilità individuali."
-          ]
-        }
-      ]
+      "title": "🆕 ff.103.3 La nuova Era dell’Intelligenza",
+      "tags": ["💻","🍃"],
+      "contentBlocks":[{"type":"paragraphs","content":["Energia + materia in reti neurali profonde aprono una fase di conoscenza generativa senza precedenti."]}]
     },
     {
-      "title": "👁️ ff.12.3 Coscienza e intelligenza",
-      "tags": ["🧠", "👥"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "Anil Seth esplora la relazione tra coscienza e intelligenza: la coscienza nasce dall’esigenza biologica di mantenere l’integrità fisiologica."
-          ]
-        }
-      ]
-    },
-    {
-      "title": "👘 ff.12.4 Siamo davvero così intelligenti?",
-      "tags": ["💻", "🎨"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "Il cervello è spesso ingannato da illusioni ottiche e bias cognitivi: siamo certi di interpretare correttamente la realtà?"
-          ]
-        }
-      ]
-    },
-    {
-      "title": "🚭 ff.12.5 Menti esplose",
-      "tags": ["🎨"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "Un poster artistico ci invita a rallentare e riflettere, ricordando i pericoli di un ‘over-load’ cognitivo costante."
-          ]
-        }
-      ]
+      "title": "👩 ff.103.4 Turing e Her",
+      "tags": ["👥","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["Le nuove funzioni vocali avvicinano l’AI al superamento del Test di Turing e a interazioni stile \"Her\"."]}]
     }
   ]
 },
 {
-  "title": "🎼 ff.37 Io Robot (o Roomba?)",
-  "buttonLabel": "🎼 ff.37 Io Robot (o Roomba?)",
-  "urlSlug": "-ff37-i-robot-sono-qui",
-  "substackLink": "https://fortissimo.substack.com/p/ff37-i-robot-sono-qui",
+  "title": "🎼 ff.60 La guida autonoma è qui!",
+  "buttonLabel": "🎼 ff.60 La guida autonoma è qui!",
+  "urlSlug": "ff60-la-guida-autonoma-e-qui",
+  "substackLink": "https://fortissimo.substack.com/p/ff60-la-guida-autonoma-e-qui",
   "cards": [
     {
-      "title": "🤖 Robotica, Tesla e NVIDIA",
-      "tags": ["💻", "🚕"],
+      "title": "📖 Panorama",
+      "tags": ["🚕","💸"],
       "contentBlocks": [
         {
           "type": "paragraphs",
           "content": [
-            "Tesla Optimus: il robot tuttofare del futuro?",
-            "Accelerazione della robotica: dove ci porterà?",
-            "Il ruolo di NVIDIA nella rivoluzione robotica"
+            "Oggi parleremo principalmente di taxi autonomi",
+            "I robotaxi sono finalmente qui?",
+            "La mortalità stradale diminuirà?"
           ]
         }
       ]
     },
     {
-      "title": "🌵 ff.37.1 Finirà come Westworld?",
-      "tags": ["🎨", "🧠"],
+      "title": "🤠 ff.60.1 Westworld della guida autonoma: SF",
+      "tags": ["🚕","🎨"],
+      "contentBlocks":[{"type":"paragraphs","content":["Cruise e Waymo a San Francisco: flotte piccole, futuro vicino ma non distribuito."]}]
+    },
+    {
+      "title": "🆕 ff.60.2 I taxi di Tesla",
+      "tags": ["💸","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["ARK Invest valuta 613 mld $ di ricavi robotaxi per Tesla entro il 2027."]}]
+    },
+    {
+      "title": "⚡ ff.60.3 Più soldi ai taxi, meno ai produttori",
+      "tags": ["💸","🚕"],
+      "contentBlocks":[{"type":"paragraphs","content":["Con i robotaxi serviranno meno auto: i margini migrano ai gestori dei servizi di mobilità."]}]
+    },
+    {
+      "title": "🇨🇳 ff.60.4 DriveGPT",
+      "tags": ["💻","🚕"],
+      "contentBlocks":[{"type":"paragraphs","content":["Haomo.ai (ByteDance + Great Wall) lancia DriveGPT per la guida autonoma cinese."]}]
+    },
+    {
+      "title": "💀 ff.60.5 Meno morti sulle strade?",
+      "tags": ["❤️","🚕"],
+      "contentBlocks":[{"type":"paragraphs","content":["Statistiche Tesla: 1 incidente ogni 10 M km in Autopilot vs 4 M per conducenti umani."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.69 Quantico?",
+  "buttonLabel": "🎼 ff.69 Quantico?",
+  "urlSlug": "ff69-quantico",
+  "substackLink": "https://fortissimo.substack.com/p/ff69-quantico",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💻","🧠"],
       "contentBlocks": [
         {
           "type": "paragraphs",
           "content": [
-            "La serie TV Westworld esplora un futuro inquietante in cui gli umanoidi sviluppano coscienza, riflettendo paure e fascino verso la robotica moderna."
+            "Oggi parleremo principalmente di computer quantistici",
+            "Cosa sono i qu-bit?",
+            "Quali applicazioni potrebbero avere?"
           ]
         }
       ]
     },
     {
-      "title": "🤖 ff.37.2 Tesla AI Day",
-      "tags": ["💻"],
+      "title": "🐱 ff.69.1 Dal gatto di Schrödinger ai qu-bit",
+      "tags": ["💻","🍃"],
+      "contentBlocks":[{"type":"paragraphs","content":["Sycamore-70 di Google supera i supercomputer classici: potenza quantistica in azione."]}]
+    },
+    {
+      "title": "🧼 ff.69.2 Schiuma quantica",
+      "tags": ["🧠"],
+      "contentBlocks":[{"type":"paragraphs","content":["Il vuoto non esiste: la schiuma quantica spiega l’assenza di vera assenza."]}]
+    },
+    {
+      "title": "🍏 ff.69.3 La Apple quantistica?",
+      "tags": ["💸","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["Rigetti Computing e l’impennata dei finanziamenti privati nel calcolo quantistico."]}]
+    },
+    {
+      "title": "🤔 ff.69.4 Quali utilizzi e pericoli?",
+      "tags": ["💸","❤️"],
+      "contentBlocks":[{"type":"paragraphs","content":["Dalla decifrazione di VISA/Bitcoin ai nuovi algoritmi: rischi e opportunità del quantum computing."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.82 Guerra a colpi di chip",
+  "buttonLabel": "🎼 ff.82 Guerra a colpi di chip",
+  "urlSlug": "ff82-guerra-a-colpi-di-chip",
+  "substackLink": "https://fortissimo.substack.com/p/ff81-guerra-a-colpi-di-chip",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💻","🍃"],
       "contentBlocks": [
         {
           "type": "paragraphs",
           "content": [
-            "Optimus, il robot umanoide di Tesla, punta a diventare il robot più avanzato: 73 kg di peso e batteria da 2,3 kWh."
+            "Oggi parleremo principalmente di microprocessori",
+            "La guerra fredda a colpi di nanometri",
+            "Quanto inquinano i modelli di intelligenza artificiale?"
           ]
         }
       ]
     },
     {
-      "title": "🎮 ff.37.3 Non provi NVIDIA?",
-      "tags": ["💻", "🎨"],
+      "title": "🦖 ff.82.1 Estinzione di massa?",
+      "tags": ["🍃","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["Emissioni CO₂ dell’AI: MIT & Microsoft propongono reattori nucleari compatti per bilanciare costi/benefici."]}]
+    },
+    {
+      "title": "🐔 ff.82.2 Polli computazionali",
+      "tags": ["💻","💸"],
+      "contentBlocks":[{"type":"paragraphs","content":["Datacenter come nuove trincee: modelli AI più efficienti (Mistral) sfidano i giganti come GPT-4."]}]
+    },
+    {
+      "title": "🥶 ff.82.3 Guerra fredda",
+      "tags": ["🚕","💸"],
+      "contentBlocks":[{"type":"paragraphs","content":["Embargo su chip e litografia verso la Cina: \"Chip War\" di Chris Miller svela la nuova geopolitica dei semiconduttori."]}]
+    },
+    {
+      "title": "🥵 ff.82.4 Guerra calda",
+      "tags": ["💸","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["NVIDIA produrrà 1 Mln di GPU H100 nel 2024; Tesla sviluppa il supercomputer Dojo per indipendenza di calcolo."]}]
+    }
+  ]
+},
+{
+  "title": "🎼 ff.88 Singolarità nel 2029?",
+  "buttonLabel": "🎼 ff.88 Singolarità nel 2029?",
+  "urlSlug": "ff88-singolarita-nel-2029",
+  "substackLink": "https://fortissimo.substack.com/p/ff88-singolarita-nel-2029",
+  "cards": [
+    {
+      "title": "📖 Panorama",
+      "tags": ["💻","🧠"],
       "contentBlocks": [
         {
           "type": "paragraphs",
           "content": [
-            "NVIDIA sviluppa chip come Jetson Orin Nano, candidati a interfaccia universale per la robotica e l’AI del futuro."
+            "Oggi parleremo di singolarità tecnologica",
+            "Siamo in una bolla finanziaria con le azioni di NVIDIA?",
+            "Perché il 2029 sarà l’anno della singolarità?"
           ]
         }
       ]
     },
     {
-      "title": "📈 ff.37.4 Robot sempre più diffusi",
-      "tags": ["💸", "🚕"],
-      "contentBlocks": [
-        {
-          "type": "paragraphs",
-          "content": [
-            "Le installazioni di robot industriali crescono rapidamente, con la Cina che domina il mercato globale."
-          ]
-        }
-      ]
+      "title": "🧩 ff.88.1 Una bolla finanziaria?",
+      "tags": ["💸","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["NVIDIA +300 % in 3 anni, ma la crescita dell’AI sembra reale: differenze con la bolla dot-com."]}]
+    },
+    {
+      "title": "🤖 ff.88.2 ChatGPT controlla un robot",
+      "tags": ["💻","🚕"],
+      "contentBlocks":[{"type":"paragraphs","content":["FigureAI mostra robot generalisti che apprendono via GPT-4: la rivoluzione robotica è alle porte."]}]
+    },
+    {
+      "title": "👀 ff.88.3 Dalle parole ai fatti",
+      "tags": ["🧠","💻"],
+      "contentBlocks":[{"type":"paragraphs","content":["Visione artificiale + comprensione visiva permettono ai robot di agire nel mondo fisico."]}]
     }
   ]
 }
