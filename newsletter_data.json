@@ -1,13 +1,14 @@
 {
   "publications": [
     {
-  "buttonLabel": "🎼 ff.2 Mente artificiale e psichedelia",
-  "substackLink": "https://fortissimo.substack.com/p/-ff2-mente-artificiale-e-psichedelica",
-  "urlSlug": "-ff2-mente-artificiale-e-psichedelica",
   "title": "🎼 ff.2 Mente artificiale e psichedelia",
+  "buttonLabel": "🎼 ff.2 Mente artificiale e psichedelia",
+  "urlSlug": "-ff2-mente-artificiale-e-psichedelica",
+  "substackLink": "https://fortissimo.substack.com/p/-ff2-mente-artificiale-e-psichedelica",
   "cards": [
     {
       "title": "🧠 Mente artificiale, psichedelia e il futuro",
+      "tags": ["🧠", "🎨"],
       "contentBlocks": [
         {
           "type": "paragraphs",
@@ -16,14 +17,53 @@
             "Riconoscere il proprio animale domestico in opere d’arte medievali",
             "Il potenziale terapeutico delle sostanze psichedeliche"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "title": "🏙️ ff.2.1 Un modello “grande” come New York",
+      "tags": ["💻", "🍃"],
+      "contentBlocks": [
         {
-          "type": "darkerParagraphs",
+          "type": "paragraphs",
           "content": [
-            "🏙️ ff.2.1 Un modello “grande” come New York\nL'intelligenza artificiale ha fatto progressi straordinari, ma richiede molta energia per l'addestramento. Il migliore sistema neuromorfico del 2020 ha un tasso d’errore inferiore al 10%, ma per ridurre l’errore al di sotto del 5% si stima che il training inquini quanto New York in un mese.",
-            "🇨🇳 ff.2.2 Alibaba e l’alternativa efficiente\nIl modello M6 di Alibaba, con 10 trilioni di parametri, rappresenta un'alternativa a basso consumo energetico rispetto a GPT-3, consumando solo l'1% dell'energia necessaria per l'addestramento di GPT-3.",
-            "🎨 ff.2.3 Avete trovato l'opera d'arte col vostro cane/gatto?\nGoogle Art and Culture permette di trovare il proprio animale domestico in un’opera d’arte, un esempio delle incredibili capacità rese possibili dalle nuove tecnologie AI.",
-            "🍄 ff.2.5 Psichedelia portami via\nL’uso terapeutico e creativo delle sostanze psichedeliche sta tornando in auge. L’esplosione di ricerche su sostanze come la psilocibina dimostra il crescente interesse scientifico e sociale."
+            "L'intelligenza artificiale ha fatto progressi straordinari, ma richiede molta energia per l'addestramento. Il migliore sistema neuromorfico del 2020 ha un tasso d’errore inferiore al 10%, ma per ridurre l’errore al di sotto del 5% si stima che il training inquini quanto New York in un mese."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🇨🇳 ff.2.2 Alibaba e l’alternativa efficiente",
+      "tags": ["💻", "💸"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Il modello M6 di Alibaba, con 10 trilioni di parametri, rappresenta un'alternativa a basso consumo energetico rispetto a GPT-3, consumando solo l'1% dell'energia necessaria."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎨 ff.2.3 Avete trovato l'opera d'arte col vostro cane/gatto?",
+      "tags": ["🎨", "👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Google Art and Culture permette di trovare il proprio animale domestico in un’opera d’arte, un esempio delle incredibili capacità rese possibili dalle nuove tecnologie AI."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🍄 ff.2.5 Psichedelia portami via",
+      "tags": ["💊", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "L’uso terapeutico e creativo delle sostanze psichedeliche sta tornando in auge. L’esplosione di ricerche su sostanze come la psilocibina dimostra il crescente interesse scientifico e sociale."
           ]
         }
       ]
@@ -31,13 +71,14 @@
   ]
 },
 {
-  "buttonLabel": "🎼 ff.9 Automazione",
-  "substackLink": "https://fortissimo.substack.com/p/-ff9-automazione",
-  "urlSlug": "-ff9-automazione",
   "title": "🎼 ff.9 Automazione",
+  "buttonLabel": "🎼 ff.9 Automazione",
+  "urlSlug": "-ff9-automazione",
+  "substackLink": "https://fortissimo.substack.com/p/-ff9-automazione",
   "cards": [
     {
       "title": "🤖 Robot, automazione e lavoro",
+      "tags": ["💻", "👥"],
       "contentBlocks": [
         {
           "type": "paragraphs",
@@ -46,13 +87,41 @@
             "I numeri di Amazon: rapporto tra robot e dipendenti umani",
             "Effetti dell’automazione sul reddito e la disoccupazione"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "title": "🧹 ff.9.1 Un WALL-E in real life",
+      "tags": ["💻", "🧠"],
+      "contentBlocks": [
         {
-          "type": "darkerParagraphs",
+          "type": "paragraphs",
           "content": [
-            "🧹 ff.9.1 Un WALL-E in real life\nDeepMind ha sviluppato un robot in grado di riordinare casa basandosi sui movimenti umani. Alcuni prototipi di questi robot vengono già utilizzati nel campus di Google.",
-            "💱 ff.9.2 I robot ci ruberanno il lavoro?\nSecondo Martin Ford in \"The Rise of the Robots\", anche i lavori cognitivi come quelli di medici e avvocati potrebbero essere automatizzati. Nel 2021 sono stati ordinati 29.000 robot negli Stati Uniti, un incremento del 37% rispetto all'anno precedente.",
-            "🦼 ff.9.4 Robot oltre la disabilità\nNel bar giapponese DAWN, i robot camerieri sono controllati da persone con disabilità, un esempio di come la robotica possa creare sinergie imprevedibili."
+            "DeepMind ha sviluppato un robot in grado di riordinare casa basandosi sui movimenti umani; alcuni prototipi sono già usati nel campus di Google."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💱 ff.9.2 I robot ci ruberanno il lavoro?",
+      "tags": ["💸", "👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Secondo Martin Ford in \"The Rise of the Robots\", anche lavori cognitivi (medici, avvocati) potrebbero essere automatizzati. Nel 2021 gli ordini di robot negli USA sono aumentati del 37%."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🦼 ff.9.4 Robot oltre la disabilità",
+      "tags": ["🎨", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Nel bar giapponese DAWN, i robot-camerieri sono controllati da persone con disabilità: esempio di sinergie imprevedibili tra robotica e inclusione."
           ]
         }
       ]
@@ -60,13 +129,14 @@
   ]
 },
 {
-  "buttonLabel": "🎼 ff.10 Misurare l’intelligenza",
-  "substackLink": "https://fortissimo.substack.com/p/-ff12-misurare-lintelligenza",
-  "urlSlug": "-ff10-misurare-lintelligenza",
   "title": "🎼 ff.10 Misurare l’intelligenza",
+  "buttonLabel": "🎼 ff.10 Misurare l’intelligenza",
+  "urlSlug": "-ff10-misurare-lintelligenza",
+  "substackLink": "https://fortissimo.substack.com/p/-ff12-misurare-lintelligenza",
   "cards": [
     {
       "title": "🧠 Cervelli sempre più piccoli, intelligenza e coscienza",
+      "tags": ["🧠", "🍃"],
       "contentBlocks": [
         {
           "type": "paragraphs",
@@ -75,15 +145,65 @@
             "Homo sapiens vs Neanderthal: perché abbiamo prevalso?",
             "Cervelli in fuga: il declino della capacità cognitiva"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "title": "🐒 ff.12.1 Homo Sapiens vs Neanderthal",
+      "tags": ["🧠"],
+      "contentBlocks": [
         {
-          "type": "darkerParagraphs",
+          "type": "paragraphs",
           "content": [
-            "🐒 ff.12.1 Homo Sapiens vs Neanderthal\nDopo 8000 anni di convivenza, Homo sapiens ha prevalso su Neanderthal grazie a un'esplosione culturale e linguistica iniziata 70.000 anni fa.",
-            "🧠 ff.12.2 Cervelli in fuga\nNegli ultimi 3000 anni la capacità cognitiva dell’Homo sapiens è diminuita, probabilmente a causa dell'aumento delle strutture sociali complesse che hanno reso superflue molte capacità individuali.",
-            "👁️ ff.12.3 Coscienza e intelligenza\nAnil Seth esplora la relazione tra coscienza e intelligenza, spiegando come la coscienza nasca dal bisogno biologico di mantenere l’integrità fisiologica.",
-            "👘 ff.12.4 Siamo davvero così intelligenti?\nIl nostro cervello cerca costantemente di interpretare la realtà, ma spesso è ingannato da illusioni ottiche e bias cognitivi.",
-            "🚭 ff.12.5 Menti esplose\nConcludiamo con un tocco artistico: un poster di una band che ci invita a rilassarci e riflettere."
+            "Dopo 8000 anni di convivenza, Homo sapiens ha prevalso su Neanderthal grazie a un'esplosione culturale e linguistica iniziata 70.000 anni fa."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🧠 ff.12.2 Cervelli in fuga",
+      "tags": ["🧠", "💆"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Negli ultimi 3000 anni la capacità cognitiva dell’Homo sapiens è diminuita, forse a causa di strutture sociali complesse che rendono superflue molte abilità individuali."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "👁️ ff.12.3 Coscienza e intelligenza",
+      "tags": ["🧠", "👥"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Anil Seth esplora la relazione tra coscienza e intelligenza: la coscienza nasce dall’esigenza biologica di mantenere l’integrità fisiologica."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "👘 ff.12.4 Siamo davvero così intelligenti?",
+      "tags": ["💻", "🎨"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Il cervello è spesso ingannato da illusioni ottiche e bias cognitivi: siamo certi di interpretare correttamente la realtà?"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚭 ff.12.5 Menti esplose",
+      "tags": ["🎨"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Un poster artistico ci invita a rallentare e riflettere, ricordando i pericoli di un ‘over-load’ cognitivo costante."
           ]
         }
       ]
@@ -91,13 +211,14 @@
   ]
 },
 {
-  "buttonLabel": "🎼 ff.37 Io Robot (o Roomba?)",
-  "substackLink": "https://fortissimo.substack.com/p/ff37-i-robot-sono-qui",
-  "urlSlug": "-ff37-i-robot-sono-qui",
   "title": "🎼 ff.37 Io Robot (o Roomba?)",
+  "buttonLabel": "🎼 ff.37 Io Robot (o Roomba?)",
+  "urlSlug": "-ff37-i-robot-sono-qui",
+  "substackLink": "https://fortissimo.substack.com/p/ff37-i-robot-sono-qui",
   "cards": [
     {
       "title": "🤖 Robotica, Tesla e NVIDIA",
+      "tags": ["💻", "🚕"],
       "contentBlocks": [
         {
           "type": "paragraphs",
@@ -106,20 +227,60 @@
             "Accelerazione della robotica: dove ci porterà?",
             "Il ruolo di NVIDIA nella rivoluzione robotica"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "title": "🌵 ff.37.1 Finirà come Westworld?",
+      "tags": ["🎨", "🧠"],
+      "contentBlocks": [
         {
-          "type": "darkerParagraphs",
+          "type": "paragraphs",
           "content": [
-            "🌵 ff.37.1 Finirà come Westworld?\nLa serie TV Westworld esplora un futuro inquietante in cui gli umanoidi sviluppano coscienza, un tema che riflette paure e fascino verso la robotica moderna.",
-            "🤖 ff.37.2 Tesla AI Day\nOptimus, il robot umanoide di Tesla, mira a diventare il robot più avanzato, con un peso di 73 kg e una batteria da 2,3 kWh.",
-            "🎮 ff.37.3 Non provi NVIDIA?\nNVIDIA sta sviluppando chip come Jetson Orin Nano, che potrebbe diventare un'interfaccia universale per la robotica e l’intelligenza artificiale del futuro.",
-            "📈 ff.37.4 Robot sempre più diffusi\nLe installazioni di robot industriali stanno crescendo rapidamente, con la Cina che domina il mercato globale."
+            "La serie TV Westworld esplora un futuro inquietante in cui gli umanoidi sviluppano coscienza, riflettendo paure e fascino verso la robotica moderna."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🤖 ff.37.2 Tesla AI Day",
+      "tags": ["💻"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Optimus, il robot umanoide di Tesla, punta a diventare il robot più avanzato: 73 kg di peso e batteria da 2,3 kWh."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎮 ff.37.3 Non provi NVIDIA?",
+      "tags": ["💻", "🎨"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "NVIDIA sviluppa chip come Jetson Orin Nano, candidati a interfaccia universale per la robotica e l’AI del futuro."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📈 ff.37.4 Robot sempre più diffusi",
+      "tags": ["💸", "🚕"],
+      "contentBlocks": [
+        {
+          "type": "paragraphs",
+          "content": [
+            "Le installazioni di robot industriali crescono rapidamente, con la Cina che domina il mercato globale."
           ]
         }
       ]
     }
   ]
-},
+}
+,
     {
       "title": "🎼 ff.125 USA: crollo di un impero",
       "buttonLabel": "🎼 ff.125 USA: crollo di un impero",
