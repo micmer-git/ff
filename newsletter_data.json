@@ -1,5 +1,232 @@
 {
-  "publications": [
+  "publications": [{
+"buttonLabel": "🎼 ff.69 Quantico?",
+"substackLink": "https://fortissimo.substack.com/p/ff69-quantico",
+"urlSlug": "ff69-quantico",
+"title": "🎼 ff.69 Quantico?",
+"cards": [
+{
+"title": "📖 Panorama",
+"tags": ["⚛️", "🧠"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": [
+"Oggi parleremo principalmente di computer quantistici",
+"Cosa sono i qu-bit?",
+"Quali applicazioni potrebbero avere?"
+]
+}
+]
+},
+{
+"title": "🐱 ff.69.1 Dal gatto di Schrödinger ai qu-bit",
+"tags": ["⚛️", "💻"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["Un nuovo traguardo nel calcolo quantistico con Sycamore-70 di Google, che supera di gran lunga i supercomputer tradizionali come Frontier, dimostrando il potenziale esponenziale della tecnologia quantistica."]
+}
+]
+},
+{
+"title": "🧼 ff.69.2 Schiuma quantica",
+"tags": ["⚛️", "🧠"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["Il vuoto non esiste: il concetto di schiuma quantica spiega l'assenza di vera assenza di energia o materia, con collegamenti al principio di indeterminazione di Heisenberg."]
+}
+]
+},
+{
+"title": "🍏 ff.69.3 La Apple quantistica?",
+"tags": ["⚛️", "💸"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["Rigetti Computing è una delle aziende che sta cercando di commercializzare il calcolo quantistico, mentre i finanziamenti privati verso questa tecnologia crescono rapidamente."]
+}
+]
+},
+{
+"title": "🤔 ff.69.4 Quali utilizzi e pericoli?",
+"tags": ["⚛️", "🧠"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["Tra i rischi del calcolo quantistico: la possibilità di decifrare sistemi di sicurezza come VISA, Mastercard e persino Bitcoin, cambiando radicalmente la finanza globale."]
+}
+]
+}
+]
+},
+{
+"buttonLabel": "🎼 ff.82 Guerra a colpi di chip",
+"substackLink": "https://fortissimo.substack.com/p/ff81-guerra-a-colpi-di-chip",
+"urlSlug": "ff82-guerra-a-colpi-di-chip",
+"title": "🎼 ff.82 Guerra a colpi di chip",
+"cards": [
+{
+"title": "📖 Panorama",
+"tags": ["💾", "💻"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": [
+"Oggi parleremo principalmente di microprocessori",
+"La guerra fredda a colpi di nanometri",
+"Quanto inquinano i modelli di intelligenza artificiale?"
+]
+}
+]
+},
+{
+"title": "🦖 ff.82.1 Estinzione di massa?",
+"tags": ["💻", "🍃"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["L'aumento delle emissioni di CO2 dovute all'intelligenza artificiale è preoccupante, ma i benefici superano i costi, come notato da MIT e Microsoft con l'implementazione di reattori nucleari compatti."]
+}
+]
+},
+{
+"title": "🐔 ff.82.2 Polli computazionali",
+"tags": ["💻", "🧠"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["Le infrastrutture come i datacenter sono le nuove trincee della guerra tecnologica, con modelli AI più efficienti come Mistral che rappresentano una sfida ai giganti come GPT-4."]
+}
+]
+},
+{
+"title": "🥶 ff.82.3 Guerra fredda",
+"tags": ["💸", "👥"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["La competizione geopolitica si intensifica con l'embargo sui chip e sulle macchine litografiche verso la Cina, esplorato in dettaglio da Chris Miller in 'Chip War'."]
+}
+]
+},
+{
+"title": "🥵 ff.82.4 Guerra calda",
+"tags": ["💻", "💸"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["NVIDIA produrrà 1 milione di GPU H100 nel 2024, consolidando il suo dominio nella fornitura di calcolo per l'AI, mentre Tesla cerca di sviluppare indipendenza con il supercomputer Dojo."]
+}
+]
+}
+]
+},
+{
+"buttonLabel": "🎼 ff.88 Singolarità nel 2029?",
+"substackLink": "https://fortissimo.substack.com/p/ff88-singolarita-nel-2029",
+"urlSlug": "ff88-singolarita-nel-2029",
+"title": "🎼 ff.88 Singolarità nel 2029?",
+"cards": [
+{
+"title": "📖 Panorama",
+"tags": ["🚀", "🧠"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": [
+"Oggi parleremo di singolarità tecnologica",
+"Siamo in una bolla finanziaria con le azioni di NVIDIA?",
+"Perché il 2029 sarà l’anno della singolarità?"
+]
+}
+]
+},
+{
+"title": "🧩 ff.88.1 Una bolla finanziaria?",
+"tags": ["💸", "🧠"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["Le azioni di NVIDIA sembrano esponenziali, ma la crescita del 300% negli ultimi tre anni e la scontistica del settore tecnologico suggeriscono che non si tratta di una bolla simile a quella del dot-com."]
+}
+]
+},
+{
+"title": "🤖 ff.88.2 ChatGPT controlla un robot",
+"tags": ["💻", "🧠"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["La rivoluzione robotica è qui: FigureAI mostra come i robot possono muoversi autonomamente e imparare attraverso l'interazione vocale grazie a GPT-4, segnando un nuovo paradigma per l'intelligenza artificiale."]
+}
+]
+},
+{
+"title": "👀 ff.88.3 Dalle parole ai fatti",
+"tags": ["💻", "🧠"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["Con il nervo ottico che trasporta miliardi di dati, i robot stanno cominciando a processare il mondo visivo, aprendo una nuova fase di comprensione e azione rispetto ai semplici modelli di testo."]
+}
+]
+}
+]
+},
+{
+"buttonLabel": "🎼 ff.30 DALL-E: genera arte",
+"substackLink": "https://fortissimo.substack.com/p/-ff30-dall-e-genera-arte",
+"urlSlug": "ff30-dall-e-genera-arte",
+"title": "🎼 ff.30 DALL-E: genera arte",
+"cards": [
+{
+"title": "📖 Panorama",
+"tags": ["🤖", "🎨"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": [
+"Oggi parleremo principalmente di DALL-E 2",
+"Può aiutarci a capire Picasso?",
+"Quanto velocemente sta migliorando questa tecnologia?"
+]
+}
+]
+},
+{
+"title": "👨‍🏫 ff.30.1 Una breve introduzione",
+"tags": ["💻", "🎨"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["DALL-E combina arte e AI, permettendo agli utenti di creare immagini da input testuali. I risultati sono impressionanti, e la tecnologia continua a migliorare."]
+}
+]
+},
+{
+"title": "😂 ff.30.2 Qualche esempio divertente",
+"tags": ["🎨", "🧠"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["Esempi generati dall'AI vanno da 'un astronauta in un lounge tropicale' a variazioni della Ragazza col turbante di Vermeer, dimostrando la versatilità dello strumento."]
+}
+]
+},
+{
+"title": "😱 ff.30.3 Qualche esempio meno divertente",
+"tags": ["🎨", "🧠"],
+"contentBlocks": [
+{
+"type": "paragraphs",
+"content": ["L'account Weirddalle ha creato immagini esilaranti e inquietanti come 'un urinale di Razer Gaming', mostrando i limiti ma anche le potenzialità di questa tecnologia creativa."]
+}
+]
+}
+]
+},
     {
 "buttonLabel": "🎼 ff.115 L'anno del serpente",
 "substackLink": "https://fortissimo.substack.com/p/ff115-lanno-del-serpente-1",
