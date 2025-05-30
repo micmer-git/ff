@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>futuro fortissimo – explorer</title>
 
-  <!-- Google Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind (CDN build) -->
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
     tailwind.config = {
@@ -38,12 +36,6 @@
     .exp-card.enter{transform:scale(1);opacity:1}
     .exp-card.exit{transform:scale(.9);opacity:0}
     .expander{position:absolute;right:10px;bottom:10px;background:#ffffff;border-radius:9999px;padding:6px 9px;font-size:18px;box-shadow:0 1px 4px rgba(0,0,0,.15);cursor:pointer}
-    /* smaller fonts for books and notes */
-    .book-quote{font-size:0.95rem}
-    .book-title{font-size:0.8rem}
-    .book-page{font-size:0.7rem}
-    .note-title{font-size:0.95rem}
-    .note-desc{font-size:0.8rem}
   </style>
 </head>
 
@@ -122,6 +114,68 @@ async function loadAll(){
     fetch(NOTES_PATH).then(r=>r.json()),
     fetch(BOOKS_PATH).then(r=>r.json()).catch(()=>({books:[]}))]);
 
+  // Add tags to books data based on the provided logic
+  BOOKS.books.forEach(book => {
+    book.tags = [];
+    if (book.title.includes("IA") || book.text.includes("IA") || book.title.includes("Dati") || book.text.includes("Dati")) {
+      book.tags.push("💻");
+    } else if (book.title.includes("Salute Mentale") || book.text.includes("salute mentale") || book.title.includes("Obiettivo") || book.text.includes("Morire con Zero") || book.title.includes("Rimpianto") || book.text.includes("rimpianti") || book.title.includes("Morte") || book.text.includes("mortalità")) {
+      book.tags.push("❤️");
+    } else if (book.title.includes("Esperienze") || book.text.includes("esperienze") || book.title.includes("Tempo") || book.text.includes("tempo") || book.title.includes("Salute") || book.text.includes("salute") || book.title.includes("Figli") || book.text.includes("eredità") || book.title.includes("Investimento") || book.text.includes("earnability") || book.title.includes("Bilanciamento") || book.text.includes("Pianificazione Finanziaria")) {
+      book.tags.push("💸");
+    }
+
+    if (book.text.includes("costi globali stimati supereranno 6 trilioni $") || book.title.includes("Obiettivo “Morire con Zero”") || book.text.includes("eredità finanziaria significativa") || book.title.includes("Figli") || book.text.includes("donare “inter vivos”") || book.title.includes("Investimento in Se Stessi") || book.text.includes("earnability") || book.title.includes("Bilanciamento tra Guadagno, Spesa e Investimento") || book.title.includes("Pianificazione Finanziaria Orientata all'Esperienza")) {
+      book.tags.push("💸");
+    }
+    if (book.text.includes("IA diffuse") || book.text.includes("modelli conversazionali")) {
+      book.tags.push("🧠");
+    }
+    if (book.text.includes("salute e opportunità diminuiscono con l’età") || book.text.includes("salute diminuisce irreversibilmente con l’età")) {
+      book.tags.push("💊");
+    }
+    if (book.text.includes("esperienze dal “periodo di godimento” limitato") || book.text.includes("massimizzare le esperienze di vita") || book.text.includes("“dividendo di esperienze”")) {
+      book.tags.push("💆");
+    }
+    if (book.title.includes("Conoscenza") || book.text.includes("informazioni disponibili") || book.text.includes("Big Data") || book.text.includes("Big Knowledge") || book.text.includes("Common Crawl") || book.text.includes("Pile")) {
+      book.tags.push("🧠");
+    }
+    if (book.title.includes("Salute Mentale") || book.text.includes("salute mentale")) {
+      book.tags.push("💆");
+    }
+    if (book.title.includes("Obiettivo “Morire con Zero”") || book.text.includes("massimizzare le esperienze di vita")) {
+        book.tags.push("💆");
+    }
+    if (book.title.includes("Importanza delle Esperienze") || book.text.includes("dividendo di esperienze")) {
+        book.tags.push("💆");
+    }
+    if (book.title.includes("Tempo come Risorsa Finita") || book.text.includes("orologio della vita")) {
+        book.tags.push("💆");
+    }
+    if (book.title.includes("Salute e il Declino delle Capacità") || book.text.includes("salute diminuisce irreversibilmente")) {
+        book.tags.push("💊");
+    }
+    if (book.title.includes("Evitare il Rimpianto") || book.text.includes("dolore del rimpianto")) {
+        book.tags.push("💆");
+    }
+    if (book.title.includes("Figli e l'Eredità") || book.text.includes("donare “inter vivos”")) {
+        book.tags.push("👥");
+    }
+    if (book.title.includes("Investimento in Se Stessi e le Competenze") || book.text.includes("earnability")) {
+        book.tags.push("🧠");
+    }
+    if (book.title.includes("Bilanciamento tra Guadagno, Spesa e Investimento") || book.text.includes("equilibrio strategico")) {
+        book.tags.push("💸");
+    }
+    if (book.title.includes("Pianificazione Finanziaria Orientata all'Esperienza") || book.text.includes("budget della vita")) {
+        book.tags.push("💸");
+    }
+    if (book.title.includes("Morte come Catalizzatore per Vivere Pienamente") || book.text.includes("coscienza della finitezza")) {
+        book.tags.push("💆");
+    }
+  });
+
+
   DATA.publications.sort(()=>Math.random()-0.5); // random order
   filters.clear();
   document.querySelectorAll('.pill.active').forEach(p=>p.classList.remove('active'));
@@ -139,23 +193,6 @@ function render(){
 
   if(!activeS && !activeF) wrap.appendChild(makePubStrip(DATA.publications));
 
-  // First render books section (above notes)
-  const bookVis = BOOKS.books.filter(b=>{
-    const tagOk=!activeF||b.tags.some(t=>filters.has(t));
-    const txtOk=!activeS||match(b.quote,term)||match(b.title,term)||match(b.author,term);
-    return tagOk&&txtOk;
-  });
-  if(bookVis.length) wrap.appendChild(makeBooksStrip(bookVis, term, activeF));
-
-  // Then render notes section
-  const noteVis = NOTES.notes.filter(n=>{
-    const tagOk=!activeF||n.tags.some(t=>filters.has(t));
-    const txtOk=!activeS||match(n.title,term)||match(n.description,term);
-    return tagOk&&txtOk;
-  });
-  if(noteVis.length) wrap.appendChild(makeNotesStrip(noteVis, term, activeF));
-
-  // Finally render publications
   DATA.publications.forEach((pub,idx)=>{
     if(activeS||activeF){
       const vis = pub.cards
@@ -167,6 +204,24 @@ function render(){
         });
       if(!vis.length) return;
       wrap.appendChild(makePubCard(pub,vis,idx,true,term,activeF));
+    }
+
+    if(idx===0){         /* strip notes + books dopo la prima scheda */
+
+      const bookVis = BOOKS.books.filter(b=>{
+        const tagOk=!activeF||b.tags.some(t=>filters.has(t));
+        const txtOk=!activeS||match(b.title,term)||match(b.text,term);
+        return tagOk&&txtOk;
+      });
+      if(bookVis.length) wrap.appendChild(makeBooksStrip(bookVis,activeF));
+
+
+      const noteVis = NOTES.notes.filter(n=>{
+        const tagOk=!activeF||n.tags.some(t=>filters.has(t));
+        const txtOk=!activeS||match(n.title,term)||match(n.description,term);
+        return tagOk&&txtOk;
+      });
+      if(noteVis.length) wrap.appendChild(makeNotesStrip(noteVis,activeF));
     }
   });
 }
@@ -242,53 +297,9 @@ function makePubCard(pub,scList,idx,condensed,term,showTags){
   return card;
 }
 
-function makeBooksStrip(books, term, showTags){
+function makeNotesStrip(notes,showTags){
   const strip=document.createElement('div');
-  strip.className='mb-6';
-  
-  const header=document.createElement('h2');
-  header.className='font-semibold text-xl mb-3';
-  header.textContent='Libri / Books';
-  strip.appendChild(header);
-  
-  const scrollContainer=document.createElement('div');
-  scrollContainer.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
-  strip.appendChild(scrollContainer);
-
-  books.forEach(b=>{
-    const card=document.createElement('div');
-    card.className='rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
-    card.style.background='#ffffff';
-    card.onclick=()=>window.open(b.url,'_blank');
-
-    const inner=document.createElement('div');
-    inner.className='p-5 flex flex-col justify-between min-h-[180px]';
-    inner.innerHTML=`
-      <p class='book-quote font-semibold break-words'>&ldquo;${hl(b.quote, term)}&rdquo;</p>
-      <div class='mt-2'>
-        <p class='book-title text-gray-600'>${hl(b.title, term)}</p>
-        <p class='book-page text-gray-500'>p.&nbsp;${b.page}</p>
-      </div>
-      ${showTags?`<div class='flex flex-wrap gap-1 mt-2'>${b.tags.map(t=>`<span class='tag text-lg'>${t}</span>`).join('')}</div>`:''}`;
-    card.appendChild(inner);
-    scrollContainer.appendChild(card);
-  });
-  return strip;
-}
-
-function makeNotesStrip(notes, term, showTags){
-  const strip=document.createElement('div');
-  strip.className='mb-6';
-  
-  const header=document.createElement('h2');
-  header.className='font-semibold text-xl mb-3';
-  header.textContent='Note / Notes';
-  strip.appendChild(header);
-  
-  const scrollContainer=document.createElement('div');
-  scrollContainer.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
-  strip.appendChild(scrollContainer);
-  
+  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
   notes.forEach(n=>{
     const card=document.createElement('div');
     card.className='rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
@@ -299,15 +310,39 @@ function makeNotesStrip(notes, term, showTags){
     inner.className='p-5 flex flex-col justify-between min-h-[160px]';
 
     const host=(()=>{try{return new URL(n.url).hostname.replace(/^www\\./,'');}catch{return'';}})();
-    const tagsHTML=n.tags.map(t=>`<span class='tag text-lg'>${t}</span>`).join('');
+    const tagsHTML=n.tags.map(t=>`<span class='tag text-base'>${t}</span>`).join('');
     const hostHTML=host?`<span class='tag text-xs'>${host}</span>`:'';
 
-    inner.innerHTML=`
-      <h3 class='note-title font-semibold mb-1 break-words'>${hl(n.title, term)}</h3>
-      <p class='note-desc text-gray-600'>${hl(n.description, term)}</p>
-      <div class='flex flex-wrap items-center gap-1 mt-3'>${showTags?tagsHTML:''}${hostHTML}</div>`;
+    inner.innerHTML=`<h3 class='font-semibold text-lg mb-1 break-words'>${n.title}</h3>
+                     <p class='text-sm'>${n.description}</p>
+                     <div class='flex flex-wrap items-center gap-1 mt-3'>${showTags?tagsHTML:''}${hostHTML}</div>`;
     card.appendChild(inner);
-    scrollContainer.appendChild(card);
+    strip.appendChild(card);
+  });
+  return strip;
+}
+
+function makeBooksStrip(books,showTags){
+  const strip=document.createElement('div');
+  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+
+  books.forEach(b=>{
+    const card=document.createElement('div');
+    card.className='rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
+    card.style.background='#ffffff';
+    card.onclick=()=>window.open(b.url,'_blank');
+
+    const inner=document.createElement('div');
+    inner.className='p-5 flex flex-col justify-between min-h-[180px]';
+    const tagsHTML = b.tags.map(t => `<span class='tag text-base'>${t}</span>`).join('');
+
+    inner.innerHTML=`
+      <p class='text-lg font-semibold break-words'>&ldquo;${hl(b.text, $('#searchInput').value)}&rdquo;</p>
+      <p class='text-sm text-gray-600 mt-2'>${hl(b.title, $('#searchInput').value)}</p>
+      <p class='text-xs text-gray-500'>${b.author}</p>
+      ${showTags ? `<div class='flex flex-wrap gap-1 mt-2'>${tagsHTML}</div>` : ''}`;
+    card.appendChild(inner);
+    strip.appendChild(card);
   });
   return strip;
 }
