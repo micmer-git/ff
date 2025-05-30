@@ -1,5 +1,78 @@
 {
   "publications": [{
+    "buttonLabel": "🎼 ff.126 Google: fine o rinascita?",
+    "substackLink": "https://fortissimo.substack.com/p/ff126-google-fine-o-rinascita",
+    "urlSlug": "ff126-google-fine-o-rinascita",
+    "title": "🎼 ff.126 Google: fine o rinascita?",
+    "cards": [
+      {
+        "title": "📖 Panorama",
+        "tags": ["🔄", "💻"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": [
+              "L'importanza di reinventarsi, anche quando tutto va bene",
+              "Come Google affronta le sfide competitive moderne",
+              "Dalla paranoia di Intel alle innovazioni AI di Mountain View"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🔯 ff.126.1 Da campi di sterminio a Intel",
+        "tags": ["📚", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": [
+              "Andy Grove è sopravvissuto all'Olocausto. Poi, emigrato in America dall'Ungheria, ha guidato sin dalla sua nascita, Intel (co-fondata con Moore, quello della legge). Nonostante la sua formazione tecnica, si è reinventato manager operativo, raccogliendo successi tanto da essere nominato Time Man of The Year 1997.",
+              "La stessa paranoia fomentata dalla gioventù tra guerra e nazismo, ha salvato Intel dalla competizione giapponese: Andy spostò nel 1985 il focus aziendale dalla memoria (DRAM) ai chip."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🐦 ff.126.2 Non è la fine di Google",
+        "tags": ["💻", "💸"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": [
+              "Google oggi è in una situazione simile a Intel negli anni '80. Il 50% del suo business, Google Search ($200 miliardi l'anno) è sotto attacco da ChatGPT e Perplexity. In più, Apple pensa di sostituirlo come default su Safari (nonostante Google paghi $20 miliardi per questo privilegio).",
+              "Durante l'annuale conferenza Google I/O, il gigante ha mostrato tutte le sue carte: Veo 3, modello text-to-video con qualità alla Hollywood, traduzioni audio simultanee in Google Meet, e Smart-glasses potenziati dall'AI."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "❎ ff.126.3 La luna di Google: X",
+        "tags": ["🍃", "🎨"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": [
+              "I vantaggi secondo Sundar Pichai rispetto a OpenAI, Anthropic, Meta e Perplexity: prodotti diffusi nella popolazione (Gmail, YouTube, Cloud), chip personalizzati con le Tensor Processing Units alla 7° generazione, e X, Alphabet's Moonshot Factory.",
+              "La fucina di ricerche su guida autonoma (Waymo), computer quantistici e biologia, oltre al riconoscimento Nobel vinto da Demis Hassabis per la Chimica 2024 dimostrano che Google non è solo search."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🅰️ ff.126.4 AlphaEvolve",
+        "tags": ["❤️", "🧠"],
+        "contentBlocks": [
+          {
+            "type": "paragraphs",
+            "content": [
+              "Dopo AlphaGo e AlphaStar, Google/DeepMind ha recentemente presentato AlphaEvolve. Non per vincere ai videogiochi, ma per rivoluzionare la matematica.",
+              "Mentre espande le frontiere della matematica (nuovo record di 593 sfere nel 'problema dei baci' in 11 dimensioni), riduce dell'1% il consumo dei data center migliorando l'algoritmo di Strassen imbattuto dal 1969."
+            ]
+          }
+        ]
+      }
+    ]
+  },{
 "buttonLabel": "🎼 ff.69 Quantico?",
 "substackLink": "https://fortissimo.substack.com/p/ff69-quantico",
 "urlSlug": "ff69-quantico",
