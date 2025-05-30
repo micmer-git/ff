@@ -1,4 +1,73 @@
-[
+[{
+    "title": "Sull'Importanza Generale dei Minerali",
+    "text": "I minerali sono i 'conduttori' invisibili della vita biologica: sostengono ogni processo corporeo, dalla produzione di energia all'integrità mitocondriale. Carenze croniche riducono l’ATP e accelerano l’invecchiamento cellulare. Il libro propone una nuova prospettiva: non solo evitare le carenze, ma ottimizzare in chiave preventiva e prestazionale.",
+    "book": "The Mineral Fix",
+    "author": "James DiNicolantonio, Siim Land",
+    "url": "https://amzn.to/4mIfwiM"
+  },
+  {
+    "title": "Sul Magnesio",
+    "text": "Coinvolto in oltre 600 reazioni enzimatiche, il magnesio è un pilastro per ATP, muscoli, sonno e gestione dello stress. Il suolo impoverito e le diete moderne rendono la carenza comune: il libro raccomanda integrazione mirata per supportare mitocondri e resilienza allo stress.",
+    "book": "The Mineral Fix",
+    "author": "James DiNicolantonio, Siim Land",
+    "url": "https://amzn.to/4mIfwiM"
+  },
+  {
+    "title": "Sul Sodio e il Sale",
+    "text": "Il sodio è essenziale, non un nemico. Fondamentale per nervi e pressione, una carenza può essere più pericolosa di un eccesso, specie negli sportivi. Il libro sfata i miti sul sale iodato raffinato, promuovendo invece il sale marino integrale ricco di minerali.",
+    "book": "The Mineral Fix",
+    "author": "James DiNicolantonio, Siim Land",
+    "url": "https://amzn.to/4mIfwiM"
+  },
+  {
+    "title": "Sul Calcio",
+    "text": "Ben oltre le ossa: il calcio regola anche muscoli e cuore. Il libro avverte che un eccesso, senza il giusto bilanciamento con magnesio, K2 e D, può portare a calcificazione arteriosa. Non è quanto calcio assumi, ma con quali cofattori lo gestisci.",
+    "book": "The Mineral Fix",
+    "author": "James DiNicolantonio, Siim Land",
+    "url": "https://amzn.to/4mIfwiM"
+  },
+  {
+    "title": "Sul Potassio",
+    "text": "Cardine della salute cardiovascolare, il potassio è spesso carente. Il libro evidenzia il ruolo critico del rapporto sodio/potassio, citando uno studio su 12.000 soggetti: un basso rapporto è associato a rischio ridotto di eventi cardiovascolari.",
+    "book": "The Mineral Fix",
+    "author": "James DiNicolantonio, Siim Land",
+    "url": "https://amzn.to/4mIfwiM"
+  },
+  {
+    "title": "Sullo Iodio e la Funzione Tiroidea",
+    "text": "Lo iodio è vitale per la tiroide e il metabolismo. Il libro affronta il dibattito sul dosaggio: alcuni esperti propongono 12–50 mg/giorno, ben oltre le RDA. Cruciale è la presenza del selenio, che consente la conversione sicura dello iodio.",
+    "book": "The Mineral Fix",
+    "author": "James DiNicolantonio, Siim Land",
+    "url": "https://amzn.to/4mIfwiM"
+  },
+  {
+    "title": "Sul Ferro e l'Anemia",
+    "text": "Il ferro trasporta ossigeno e supporta l’energia cellulare. La sua carenza è la più diffusa al mondo. Il libro sottolinea come un corretto equilibrio con rame sia fondamentale per un’efficace utilizzazione e per prevenire anemia funzionale.",
+    "book": "The Mineral Fix",
+    "author": "James DiNicolantonio, Siim Land",
+    "url": "https://amzn.to/4mIfwiM"
+  },
+  {
+    "title": "Sullo Zinco e l'Immunità",
+    "text": "Zinco: sentinella del sistema immunitario, catalizzatore del DNA e della rigenerazione cellulare. Il libro ne raccomanda l’integrazione, specie nei mesi freddi o in periodi di stress, per rafforzare la risposta immunitaria e la salute di pelle e capelli.",
+    "book": "The Mineral Fix",
+    "author": "James DiNicolantonio, Siim Land",
+    "url": "https://amzn.to/4mIfwiM"
+  },
+  {
+    "title": "Sul Rame e l'Utilizzo del Ferro",
+    "text": "Minerale trascurato, il rame è cruciale per mitocondri, ferro e immunità. Il libro spiega che senza rame, il ferro non può essere efficacemente utilizzato. Evidenzia inoltre la necessità di bilanciare rame e zinco per evitare squilibri.",
+    "book": "The Mineral Fix",
+    "author": "James DiNicolantonio, Siim Land",
+    "url": "https://amzn.to/4mIfwiM"
+  },
+  {
+    "title": "Sull'Equilibrio e la Sinergia tra i Minerali",
+    "text": "I minerali agiscono in rete: un eccesso può bloccarne altri. Il libro invita a considerare le interazioni (es. zinco/rame, calcio/magnesio), promuovendo una dieta varia e integratori bilanciati per evitare carenze secondarie o tossicità inattese.",
+    "book": "The Mineral Fix",
+    "author": "James DiNicolantonio, Siim Land",
+    "url": "https://amzn.to/4mIfwiM"
+  },
   {
     "title": "Sui Dati e la Conoscenza",
     "text": "La quantità di informazioni disponibili è esplosa, superando di gran lunga ciò che possiamo consumare. La chiave è trasformare i “Big Data” in “Big Knowledge” attraverso IA diffuse che estendono la volontà umana: dataset come Common Crawl e Pile, con miliardi di pagine e paper scientifici, alimentano questo processo.",
