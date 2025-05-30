@@ -26,7 +26,6 @@
 
   <style>
     body { background:#F6F9FE }
-    mark { background:#FFEB3B66; padding:0 2px; border-radius:3px }
     .pill, .tag {
       background:#fff;
       box-shadow:0 1px 4px rgba(0,0,0,.1);
@@ -41,7 +40,6 @@
     .hide-scrollbar { -ms-overflow-style:none; scrollbar-width:none }
     .scroll-snap-x { scroll-snap-type:x mandatory }
     .snap-start { scroll-snap-align:start }
-
     .exp-card {
       transform:scale(.95);
       opacity:0;
@@ -56,11 +54,7 @@
       box-shadow:0 1px 4px rgba(0,0,0,.15);
       cursor:pointer
     }
-
-    /* note cards */
-    .note-card h3 { font-size:1rem; }
-    .note-card .tags { font-size:1rem; }
-    .note-card .source { font-size:.875rem; color:#555 }
+    .pub-sub { cursor:pointer } /* make subchapters clickable */
   </style>
 </head>
 
@@ -113,7 +107,6 @@
 let LANG='it';
 const PATH={it:'newsletter_data.json',en:'newsletter_data_en.json'};
 const NOTES_PATH='notes.json', BOOKS_PATH='books.json';
-
 let DATA, NOTES, BOOKS;
 const filters=new Set();
 const gradients=[
@@ -127,20 +120,20 @@ const gradients=[
   'linear-gradient(135deg,#fda4af,#c4b5fd)'
 ];
 
-const $=s=>document.querySelector(s);
-const match=(t,s)=>t.toLowerCase().includes(s);
-const hl=(t,s)=>s?t.replace(new RegExp(`(${s})`,'gi'),'<mark>$1</mark>'):t;
+const $=s=>document.querySelector(s),
+      match=(t,s)=>t.toLowerCase().includes(s),
+      hl=(t,s)=>s?t.replace(new RegExp(`(${s})`,'gi'),'<mark>$1</mark>'):t;
 
 $('#mainFilterRow').addEventListener('click',e=>{
   if(!e.target.dataset.filter) return;
-  const f=e.target.dataset.filter;
+  let f=e.target.dataset.filter;
   filters.has(f)?filters.delete(f):filters.add(f);
   e.target.classList.toggle('active');
   render();
 });
 $('#tagFilterRow').addEventListener('click',e=>{
   if(!e.target.dataset.filter) return;
-  const f=e.target.dataset.filter;
+  let f=e.target.dataset.filter;
   filters.has(f)?filters.delete(f):filters.add(f);
   e.target.classList.toggle('active');
   render();
@@ -172,16 +165,14 @@ async function loadAll(){
 function render(){
   const term=$('#searchInput').value.toLowerCase();
   const activeS=term.length>0;
-  const activeF=filters.size>0;
   const mainSel=[...filters].filter(f=>['🎼','📚','🎶'].includes(f));
   const wrap=$('#app'); wrap.innerHTML='';
 
-  // SEARCH only pubs
   if(activeS){
     DATA.publications.forEach((pub,pi)=>{
       pub.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>{
-        const txt=c.title+' '+c.contentBlocks[0].content.join(' ');
-        if(match(pub.title,term)||match(txt,term)){
+        let alltxt=pub.title+' '+c.title+' '+c.contentBlocks[0].content.join(' ');
+        if(match(alltxt,term)){
           wrap.appendChild(makePubCard(pub,c,pi,term));
         }
       });
@@ -189,60 +180,55 @@ function render(){
     return;
   }
 
-  // ONLY books
   if(mainSel.length===1 && mainSel[0]==='📚'){
     wrap.appendChild(makeBooksList(BOOKS));
     return;
   }
-  // ONLY notes
   if(mainSel.length===1 && mainSel[0]==='🎶'){
     wrap.appendChild(makeNotesList(NOTES.notes));
     return;
   }
-  // DEFAULT: pubs + horizontal books + horizontal notes
+
+  // default: strip + books + notes
   wrap.appendChild(makePubStrip(DATA.publications));
   wrap.appendChild(makeBooksStrip(BOOKS));
   wrap.appendChild(makeNotesStrip(NOTES.notes));
 }
 
-// ----- publications -----
 function makePubStrip(list){
-  const strip=document.createElement('div');
-  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  const d=document.createElement('div');
+  d.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
   list.forEach((pub,i)=>{
     const card=document.createElement('div');
     card.className='relative rounded-xl flex-shrink-0 snap-start overflow-hidden cursor-pointer w-full max-w-[320px]';
     card.style.background=gradients[i%gradients.length]; card.style.padding='2px';
-
     const inr=document.createElement('div');
     inr.className='bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
     inr.innerHTML=`<h3 class='font-semibold text-xl mb-2 text-center'>${pub.title}</h3>`;
     card.appendChild(inr);
-
     const btn=document.createElement('button');
     btn.className='expander'; btn.textContent='⤢';
     btn.onclick=e=>{ e.stopPropagation(); openExpanded(pub); };
     card.appendChild(btn);
-
     card.onclick=()=>openExpanded(pub);
-    strip.appendChild(card);
+    d.appendChild(card);
   });
-  return strip;
+  return d;
 }
 
 function makePubCard(pub,c,idx,term){
   const card=document.createElement('div');
   card.className='rounded-xl overflow-hidden mb-4';
   card.style.cssText=`background:${gradients[idx%gradients.length]};padding:2px`;
-  const inner=document.createElement('div');
-  inner.className='bg-white rounded-xl p-5 shadow-neu';
-  inner.innerHTML=`
+  const inr=document.createElement('div');
+  inr.className='bg-white rounded-xl p-5 shadow-neu pub-sub';
+  inr.innerHTML=`
     <h3 class='font-semibold mb-1'>${hl(c.title,term)}</h3>
     ${c.contentBlocks[0].content.map(l=>`<p class='text-base'>${hl(l,term)}</p>`).join('')}
     <div class='flex flex-wrap gap-1 mt-1'>${(c.tags||[]).map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
   `;
-  inner.onclick=()=>window.open(pub.substackLink,'_blank');
-  card.appendChild(inner);
+  inr.onclick=()=>window.open(pub.substackLink,'_blank');
+  card.appendChild(inr);
   return card;
 }
 
@@ -250,23 +236,26 @@ function openExpanded(pub){
   document.querySelectorAll('.exp-card').forEach(c=>c.remove());
   $('#pubStrip')?.classList.add('hidden');
 
+  // filter subchapters by tag filters (excluding main filters)
+  const tagFilters=[...filters].filter(f=>!['🎼','📚','🎶'].includes(f));
+  const subs=pub.cards.filter(c=>!c.title.startsWith('📖'))
+    .filter(c=>!tagFilters.length||c.tags?.some(t=>tagFilters.includes(t)));
+
   const idx=DATA.publications.findIndex(p=>p.title===pub.title);
-  const sc=pub.cards.filter(c=>!c.title.startsWith('📖'));
   const cont=document.createElement('div');
   cont.className='exp-card rounded-xl overflow-hidden mb-4';
   cont.style.cssText=`background:${gradients[idx%gradients.length]};padding:2px`;
-  const inner=document.createElement('div');
-  inner.className='bg-white rounded-xl p-5 shadow-neu';
-  sc.forEach((c,i)=>{
-    inner.innerHTML+=`
-      <div>
+  const inr=document.createElement('div');
+  inr.className='bg-white rounded-xl p-5 shadow-neu';
+  subs.forEach((c,i)=>{
+    inr.innerHTML+=`
+      <div class='pub-sub mb-4' onclick="window.open('${pub.substackLink}','_blank')">
         <h3 class='font-semibold mb-1'>${c.title}</h3>
         ${c.contentBlocks[0].content.map(l=>`<p class='text-base'>${l}</p>`).join('')}
       </div>
-      ${i<sc.length-1?'<hr class="border-t my-3"/>':''}
     `;
   });
-  cont.appendChild(inner);
+  cont.appendChild(inr);
 
   const close=document.createElement('button');
   close.textContent='✕';
@@ -285,13 +274,12 @@ function openExpanded(pub){
   cont.scrollIntoView({behavior:'smooth',block:'center'});
 }
 
-// ----- books -----
 function makeBooksStrip(list){
-  const strip=document.createElement('div');
-  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  const d=document.createElement('div');
+  d.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
   list.forEach(b=>{
     const card=document.createElement('div');
-    card.className='book-card rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
+    card.className='rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start';
     card.style.background='#fff';
     if(b.url) card.onclick=()=>window.open(b.url,'_blank');
     const inr=document.createElement('div');
@@ -302,16 +290,16 @@ function makeBooksStrip(list){
       <p class='source mt-2'>${b.book} — ${b.author}</p>
     `;
     card.appendChild(inr);
-    strip.appendChild(card);
+    d.appendChild(card);
   });
-  return strip;
+  return d;
 }
 
 function makeBooksList(list){
-  const con=document.createElement('div'); con.className='space-y-4';
+  const c=document.createElement('div'); c.className='space-y-4';
   list.forEach(b=>{
     const card=document.createElement('div');
-    card.className='book-card rounded-xl border-2 border-indigo-500 p-4';
+    card.className='rounded-xl border-2 border-indigo-500 p-4';
     card.style.background='#fff';
     if(b.url) card.onclick=()=>window.open(b.url,'_blank');
     card.innerHTML=`
@@ -319,51 +307,50 @@ function makeBooksList(list){
       <p class='quote'>&ldquo;${b.text}&rdquo;</p>
       <p class='source mt-2'>${b.book} — ${b.author}</p>
     `;
-    con.appendChild(card);
+    c.appendChild(card);
   });
-  return con;
+  return c;
 }
 
-// ----- notes -----
 function makeNotesStrip(list){
-  const strip=document.createElement('div');
-  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  const d=document.createElement('div');
+  d.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
   list.forEach(n=>{
     const card=document.createElement('div');
-    card.className='note-card rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
+    card.className='rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start';
     card.style.background='#fff';
     if(n.url) card.onclick=()=>window.open(n.url,'_blank');
     const inr=document.createElement('div');
     inr.className='p-5 flex flex-col justify-between min-h-[160px]';
     inr.innerHTML=`
       <h3 class='font-semibold mb-1'>${n.title}</h3>
-      <div class='tags flex flex-wrap gap-1'>${n.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+      <div class='flex flex-wrap gap-1'>${n.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
       <p class='source mt-2'>${new URL(n.url).hostname.replace(/^www\./,'')}</p>
     `;
     card.appendChild(inr);
-    strip.appendChild(card);
+    d.appendChild(card);
   });
-  return strip;
+  return d;
 }
 
 function makeNotesList(list){
-  const con=document.createElement('div'); con.className='space-y-4';
+  const c=document.createElement('div'); c.className='space-y-4';
   list.forEach(n=>{
     const card=document.createElement('div');
-    card.className='note-card rounded-xl border-2 border-black p-4';
+    card.className='rounded-xl border-2 border-black p-4';
     card.style.background='#fff';
     if(n.url) card.onclick=()=>window.open(n.url,'_blank');
     card.innerHTML=`
       <h3 class='font-semibold mb-1'>${n.title}</h3>
-      <div class='tags flex flex-wrap gap-1'>${n.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+      <div class='flex flex-wrap gap-1'>${n.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
       <p class='source mt-2'>${new URL(n.url).hostname.replace(/^www\./,'')}</p>
     `;
-    con.appendChild(card);
+    c.appendChild(card);
   });
-  return con;
+  return c;
 }
 
-// start
+// kick off
 loadAll();
 </script>
 </body>
