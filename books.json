@@ -1,4 +1,73 @@
 [{
+    "title": "Sulle DAOs (Definizione e Caratteristiche Fondamentali)",
+    "text": "Le DAO sono 'una chat di gruppo con un conto in banca': strutture decentralizzate, senza gerarchie, che abilitano decisioni collettive, accesso globale, resistenza alla censura e modelli economici interni. Sono infrastrutture di coordinazione orizzontale per creare valore condiviso.",
+    "book": "How to DAO",
+    "author": "Kevin Owocki, Puncar",
+    "url": "https://amzn.to/3Sso1R2"
+  },
+  {
+    "title": "Sulla Decentralizzazione e il Coordinamento",
+    "text": "Le DAO riducono i costi del coordinamento umano grazie alla 'fiducia via codice' (trustware). Strumenti come Coordinape permettono distribuzione equa del lavoro valorizzando la saggezza collettiva, al di là di confini e istituzioni.",
+    "book": "How to DAO",
+    "author": "Kevin Owocki, Puncar",
+    "url": "https://amzn.to/3Sso1R2"
+  },
+  {
+    "title": "Sulla Finanza Decentralizzata (DeFi) e l'Economia dei Token",
+    "text": "La DeFi offre servizi finanziari senza intermediari. Le DAO usano token di governance per distribuire potere decisionale e incentivi economici: dai bounty ai salari comunitari. Si crea così un’economia interna programmabile e partecipativa.",
+    "book": "How to DAO",
+    "author": "Kevin Owocki, Puncar",
+    "url": "https://amzn.to/3Sso1R2"
+  },
+  {
+    "title": "Sui Tipi e gli Scopi delle DAOs",
+    "text": "Impact, Infrastructure, Protocol, Social e Art DAOs: ogni tipo si struttura su una missione comune. Dal finanziamento climatico (Big Green DAO) alla governance dei protocolli (MakerDAO), le DAO ridefiniscono il concetto di organizzazione.",
+    "book": "How to DAO",
+    "author": "Kevin Owocki, Puncar",
+    "url": "https://amzn.to/3Sso1R2"
+  },
+  {
+    "title": "Sulla Governance delle DAOs",
+    "text": "Token = potere decisionale. Il turnout spesso è basso (1–10%), ma meccanismi come delega e voto quadratico cercano di equilibrare il peso della maggioranza con l’intensità della minoranza. La governance DAO è ancora in sperimentazione.",
+    "book": "How to DAO",
+    "author": "Kevin Owocki, Puncar",
+    "url": "https://amzn.to/3Sso1R2"
+  },
+  {
+    "title": "Sull'Accesso e il Potenziamento Individuale tramite DAOs",
+    "text": "Le DAO permettono empowerment globale: in Nigeria, Isaac Onuwa ha moltiplicato il suo reddito di 8 volte. Wallet e nomi ENS diventano l'identità Web3. Le stablecoin offrono stabilità finanziaria nei paesi instabili.",
+    "book": "How to DAO",
+    "author": "Kevin Owocki, Puncar",
+    "url": "https://amzn.to/3Sso1R2"
+  },
+  {
+    "title": "Sui Rischi e la Resilienza delle DAOs (Esempio The DAO Hack)",
+    "text": "Nel 2016, un bug nel contratto di The DAO permise il furto di $150M. La risposta fu una 'hard fork' di Ethereum. Da allora sono nati standard come MolochDAO: più semplici, verificabili e resilienti.",
+    "book": "How to DAO",
+    "author": "Kevin Owocki, Puncar",
+    "url": "https://amzn.to/3Sso1R2"
+  },
+  {
+    "title": "Sull'Identità e le Comunità Web3",
+    "text": "Nel Web3 il wallet è identità. I domini ENS (.eth) lo rendono leggibile. Le DAO e le community NFT nascono attorno alla proprietà condivisa, creando fiducia nativa e cooperazione incentivata.",
+    "book": "How to DAO",
+    "author": "Kevin Owocki, Puncar",
+    "url": "https://amzn.to/3Sso1R2"
+  },
+  {
+    "title": "Sui Quadri Legali e la Conformità delle DAOs",
+    "text": "Il Wyoming riconosce le DAO come LLC, ma l’esperta Primavera De Filippi propone un futuro dove la DAO *stessa* sia entità legale. Oggi, le leggi restano in ritardo rispetto alla natura fluida del Web3.",
+    "book": "How to DAO",
+    "author": "Kevin Owocki, Puncar",
+    "url": "https://amzn.to/3Sso1R2"
+  },
+  {
+    "title": "Sui 'Network States' e il Futuro delle Comunità",
+    "text": "I Network States nascono online con ambizione geopolitica: 'cloud first, land last'. Progetti come Zuzalu esplorano micro-città temporanee. Ma il rischio è riprodurre dinamiche coloniali o governance opaca.",
+    "book": "How to DAO",
+    "author": "Kevin Owocki, Puncar",
+    "url": "https://amzn.to/3Sso1R2"
+  },{
     "title": "Sull'Importanza Generale dei Minerali",
     "text": "I minerali sono i 'conduttori' invisibili della vita biologica: sostengono ogni processo corporeo, dalla produzione di energia all'integrità mitocondriale. Carenze croniche riducono l’ATP e accelerano l’invecchiamento cellulare. Il libro propone una nuova prospettiva: non solo evitare le carenze, ma ottimizzare in chiave preventiva e prestazionale.",
     "book": "The Mineral Fix",
