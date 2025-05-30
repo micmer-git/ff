@@ -38,6 +38,12 @@
     .exp-card.enter{transform:scale(1);opacity:1}
     .exp-card.exit{transform:scale(.9);opacity:0}
     .expander{position:absolute;right:10px;bottom:10px;background:#ffffff;border-radius:9999px;padding:6px 9px;font-size:18px;box-shadow:0 1px 4px rgba(0,0,0,.15);cursor:pointer}
+    /* smaller fonts for books and notes */
+    .book-quote{font-size:0.95rem}
+    .book-title{font-size:0.8rem}
+    .book-page{font-size:0.7rem}
+    .note-title{font-size:0.95rem}
+    .note-desc{font-size:0.8rem}
   </style>
 </head>
 
@@ -133,6 +139,23 @@ function render(){
 
   if(!activeS && !activeF) wrap.appendChild(makePubStrip(DATA.publications));
 
+  // First render books section (above notes)
+  const bookVis = BOOKS.books.filter(b=>{
+    const tagOk=!activeF||b.tags.some(t=>filters.has(t));
+    const txtOk=!activeS||match(b.quote,term)||match(b.title,term)||match(b.author,term);
+    return tagOk&&txtOk;
+  });
+  if(bookVis.length) wrap.appendChild(makeBooksStrip(bookVis, term, activeF));
+
+  // Then render notes section
+  const noteVis = NOTES.notes.filter(n=>{
+    const tagOk=!activeF||n.tags.some(t=>filters.has(t));
+    const txtOk=!activeS||match(n.title,term)||match(n.description,term);
+    return tagOk&&txtOk;
+  });
+  if(noteVis.length) wrap.appendChild(makeNotesStrip(noteVis, term, activeF));
+
+  // Finally render publications
   DATA.publications.forEach((pub,idx)=>{
     if(activeS||activeF){
       const vis = pub.cards
@@ -144,22 +167,6 @@ function render(){
         });
       if(!vis.length) return;
       wrap.appendChild(makePubCard(pub,vis,idx,true,term,activeF));
-    }
-
-    if(idx===0){         /* strip notes + books dopo la prima scheda */
-      const noteVis = NOTES.notes.filter(n=>{
-        const tagOk=!activeF||n.tags.some(t=>filters.has(t));
-        const txtOk=!activeS||match(n.title,term)||match(n.description,term);
-        return tagOk&&txtOk;
-      });
-      if(noteVis.length) wrap.appendChild(makeNotesStrip(noteVis,activeF));
-
-      const bookVis = BOOKS.books.filter(b=>{
-        const tagOk=!activeF||b.tags.some(t=>filters.has(t));
-        const txtOk=!activeS||match(b.quote,term)||match(b.title,term);
-        return tagOk&&txtOk;
-      });
-      if(bookVis.length) wrap.appendChild(makeBooksStrip(bookVis,activeF));
     }
   });
 }
@@ -235,9 +242,53 @@ function makePubCard(pub,scList,idx,condensed,term,showTags){
   return card;
 }
 
-function makeNotesStrip(notes,showTags){
+function makeBooksStrip(books, term, showTags){
   const strip=document.createElement('div');
-  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  strip.className='mb-6';
+  
+  const header=document.createElement('h2');
+  header.className='font-semibold text-xl mb-3';
+  header.textContent='Libri / Books';
+  strip.appendChild(header);
+  
+  const scrollContainer=document.createElement('div');
+  scrollContainer.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  strip.appendChild(scrollContainer);
+
+  books.forEach(b=>{
+    const card=document.createElement('div');
+    card.className='rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
+    card.style.background='#ffffff';
+    card.onclick=()=>window.open(b.url,'_blank');
+
+    const inner=document.createElement('div');
+    inner.className='p-5 flex flex-col justify-between min-h-[180px]';
+    inner.innerHTML=`
+      <p class='book-quote font-semibold break-words'>&ldquo;${hl(b.quote, term)}&rdquo;</p>
+      <div class='mt-2'>
+        <p class='book-title text-gray-600'>${hl(b.title, term)}</p>
+        <p class='book-page text-gray-500'>p.&nbsp;${b.page}</p>
+      </div>
+      ${showTags?`<div class='flex flex-wrap gap-1 mt-2'>${b.tags.map(t=>`<span class='tag text-lg'>${t}</span>`).join('')}</div>`:''}`;
+    card.appendChild(inner);
+    scrollContainer.appendChild(card);
+  });
+  return strip;
+}
+
+function makeNotesStrip(notes, term, showTags){
+  const strip=document.createElement('div');
+  strip.className='mb-6';
+  
+  const header=document.createElement('h2');
+  header.className='font-semibold text-xl mb-3';
+  header.textContent='Note / Notes';
+  strip.appendChild(header);
+  
+  const scrollContainer=document.createElement('div');
+  scrollContainer.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  strip.appendChild(scrollContainer);
+  
   notes.forEach(n=>{
     const card=document.createElement('div');
     card.className='rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
@@ -251,33 +302,12 @@ function makeNotesStrip(notes,showTags){
     const tagsHTML=n.tags.map(t=>`<span class='tag text-lg'>${t}</span>`).join('');
     const hostHTML=host?`<span class='tag text-xs'>${host}</span>`:'';
 
-    inner.innerHTML=`<h3 class='font-semibold text-xl mb-1 break-words'>${n.title}</h3>
-                     <div class='flex flex-wrap items-center gap-1 mt-3'>${showTags?tagsHTML:''}${hostHTML}</div>`;
-    card.appendChild(inner);
-    strip.appendChild(card);
-  });
-  return strip;
-}
-
-function makeBooksStrip(books,showTags){
-  const strip=document.createElement('div');
-  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
-
-  books.forEach(b=>{
-    const card=document.createElement('div');
-    card.className='rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
-    card.style.background='#ffffff';
-    card.onclick=()=>window.open(b.url,'_blank');
-
-    const inner=document.createElement('div');
-    inner.className='p-5 flex flex-col justify-between min-h-[180px]';
     inner.innerHTML=`
-      <p class='text-xl font-semibold break-words'>&ldquo;${b.quote}&rdquo;</p>
-      <p class='text-sm text-gray-600 mt-2'>${b.title}</p>
-      <p class='text-xs text-gray-500'>p.&nbsp;${b.page}</p>
-      ${showTags?`<div class='flex flex-wrap gap-1 mt-2'>${b.tags.map(t=>`<span class='tag text-lg'>${t}</span>`).join('')}</div>`:''}`;
+      <h3 class='note-title font-semibold mb-1 break-words'>${hl(n.title, term)}</h3>
+      <p class='note-desc text-gray-600'>${hl(n.description, term)}</p>
+      <div class='flex flex-wrap items-center gap-1 mt-3'>${showTags?tagsHTML:''}${hostHTML}</div>`;
     card.appendChild(inner);
-    strip.appendChild(card);
+    scrollContainer.appendChild(card);
   });
   return strip;
 }
