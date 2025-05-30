@@ -54,7 +54,7 @@
       box-shadow:0 1px 4px rgba(0,0,0,.15);
       cursor:pointer
     }
-    .pub-sub { cursor:pointer } /* make subchapters clickable */
+    .pub-sub { cursor:pointer }
   </style>
 </head>
 
@@ -72,8 +72,8 @@
       <input id="searchInput" placeholder="search / cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
       <span class="absolute left-4 top-1/2 -translate-y-1/2 text-lg">🔍</span>
     </div>
+    <!-- only 📚 and 🎶 pills now -->
     <div id="mainFilterRow" class="flex gap-2">
-      <span class="pill" data-filter="🎼">🎼</span>
       <span class="pill" data-filter="📚">📚</span>
       <span class="pill" data-filter="🎶">🎶</span>
     </div>
@@ -163,16 +163,18 @@ async function loadAll(){
 }
 
 function render(){
-  const term=$('#searchInput').value.toLowerCase();
-  const activeS=term.length>0;
-  const mainSel=[...filters].filter(f=>['🎼','📚','🎶'].includes(f));
+  const term=$('#searchInput').value.toLowerCase(),
+        activeS=term.length>0,
+        mainSel=[...filters].filter(f=>['📚','🎶'].includes(f)),
+        themeSel=[...filters].filter(f=>!['📚','🎶'].includes(f));
   const wrap=$('#app'); wrap.innerHTML='';
 
+  // search mode
   if(activeS){
     DATA.publications.forEach((pub,pi)=>{
       pub.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>{
-        let alltxt=pub.title+' '+c.title+' '+c.contentBlocks[0].content.join(' ');
-        if(match(alltxt,term)){
+        let all=pub.title+' '+c.title+' '+c.contentBlocks[0].content.join(' ');
+        if(match(all,term)){
           wrap.appendChild(makePubCard(pub,c,pi,term));
         }
       });
@@ -180,12 +182,23 @@ function render(){
     return;
   }
 
-  if(mainSel.length===1 && mainSel[0]==='📚'){
+  // main-filter 📚
+  if(mainSel.includes('📚') && mainSel.length===1){
     wrap.appendChild(makeBooksList(BOOKS));
     return;
   }
-  if(mainSel.length===1 && mainSel[0]==='🎶'){
+  // main-filter 🎶
+  if(mainSel.includes('🎶') && mainSel.length===1){
     wrap.appendChild(makeNotesList(NOTES.notes));
+    return;
+  }
+
+  // theme-filter only subchapters
+  if(themeSel.length>0){
+    DATA.publications.forEach((pub,pi)=>{
+      pub.cards.filter(c=>!c.title.startsWith('📖') && c.tags?.some(t=>themeSel.includes(t)))
+        .forEach(c=>wrap.appendChild(makePubCard(pub,c,pi,'')));
+    });
     return;
   }
 
@@ -223,8 +236,8 @@ function makePubCard(pub,c,idx,term){
   const inr=document.createElement('div');
   inr.className='bg-white rounded-xl p-5 shadow-neu pub-sub';
   inr.innerHTML=`
-    <h3 class='font-semibold mb-1'>${hl(c.title,term)}</h3>
-    ${c.contentBlocks[0].content.map(l=>`<p class='text-base'>${hl(l,term)}</p>`).join('')}
+    <h3 class='font-semibold mb-1'>${term?hl(c.title,term):c.title}</h3>
+    ${c.contentBlocks[0].content.map(l=>`<p class='text-base'>${term?hl(l,term):l}</p>`).join('')}
     <div class='flex flex-wrap gap-1 mt-1'>${(c.tags||[]).map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
   `;
   inr.onclick=()=>window.open(pub.substackLink,'_blank');
@@ -235,31 +248,26 @@ function makePubCard(pub,c,idx,term){
 function openExpanded(pub){
   document.querySelectorAll('.exp-card').forEach(c=>c.remove());
   $('#pubStrip')?.classList.add('hidden');
-
-  // filter subchapters by tag filters (excluding main filters)
-  const tagFilters=[...filters].filter(f=>!['🎼','📚','🎶'].includes(f));
+  const tagSel=[...filters].filter(f=>!['📚','🎶'].includes(f));
   const subs=pub.cards.filter(c=>!c.title.startsWith('📖'))
-    .filter(c=>!tagFilters.length||c.tags?.some(t=>tagFilters.includes(t)));
-
+    .filter(c=>!tagSel.length||c.tags?.some(t=>tagSel.includes(t)));
   const idx=DATA.publications.findIndex(p=>p.title===pub.title);
   const cont=document.createElement('div');
   cont.className='exp-card rounded-xl overflow-hidden mb-4';
   cont.style.cssText=`background:${gradients[idx%gradients.length]};padding:2px`;
   const inr=document.createElement('div');
   inr.className='bg-white rounded-xl p-5 shadow-neu';
-  subs.forEach((c,i)=>{
+  subs.forEach(c=>{
     inr.innerHTML+=`
       <div class='pub-sub mb-4' onclick="window.open('${pub.substackLink}','_blank')">
         <h3 class='font-semibold mb-1'>${c.title}</h3>
         ${c.contentBlocks[0].content.map(l=>`<p class='text-base'>${l}</p>`).join('')}
-      </div>
-    `;
+      </div>`;
   });
   cont.appendChild(inr);
 
   const close=document.createElement('button');
-  close.textContent='✕';
-  close.className='absolute top-2 right-2 text-2xl';
+  close.textContent='✕'; close.className='absolute top-2 right-2 text-2xl';
   close.onclick=()=>{
     cont.classList.remove('enter'); cont.classList.add('exit');
     setTimeout(()=>{
