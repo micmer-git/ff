@@ -25,8 +25,8 @@
   </script>
 
   <style>
-    body { background: #F6F9FE }
-    mark { background: #FFEB3B66; padding: 0 2px; border-radius: 3px }
+    body { background: #F6F9FE; }
+    mark { background: #FFEB3B66; padding: 0 2px; border-radius: 3px; }
     .pill, .tag {
       background: #fff;
       box-shadow: 0 1px 4px rgba(0,0,0,.1);
@@ -34,256 +34,298 @@
       border-radius: 9999px;
       user-select: none;
       transition: .15s;
-      white-space: nowrap;
     }
-    .pill { cursor: pointer; font-size: 1.1rem }
-    .pill.active { outline: 2px solid #38bdf8 }
+    .pill { cursor: pointer; font-size: 1.1rem; }
+    .pill.active { outline: 2px solid #38bdf8; }
     .hide-scrollbar::-webkit-scrollbar { display: none }
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none }
     .scroll-snap-x { scroll-snap-type: x mandatory }
     .snap-start { scroll-snap-align: start }
 
-    .exp-card { transform: scale(.95); opacity: 0; transition: transform .35s ease, opacity .35s ease }
-    .exp-card.enter { transform: scale(1); opacity: 1 }
-    .exp-card.exit { transform: scale(.9); opacity: 0 }
-    .expander {
-      position: absolute; right: 10px; bottom: 10px;
-      background: #fff; border-radius: 9999px; padding: 6px 9px;
-      font-size: 18px; box-shadow: 0 1px 4px rgba(0,0,0,.15);
-      cursor: pointer;
-    }
+    /* card open / close animation */
+    .exp-card { transform: scale(.95); opacity:0; transition: transform .35s ease, opacity .35s ease }
+    .exp-card.enter { transform: scale(1); opacity:1 }
+    .exp-card.exit  { transform: scale(.9); opacity:0 }
+    .expander { position:absolute; right:10px; bottom:10px; background:#fff; border-radius:9999px; padding:6px 9px; font-size:18px; box-shadow:0 1px 4px rgba(0,0,0,.15); cursor:pointer }
+
+    /* book/notes card text slightly smaller and wrapping */
+    .book-card p, .note-card h3 { word-break: break-word; }
+    .book-card p.quote { font-size: 1rem; }      /* about 16px */
+    .book-card p.source { font-size: .875rem; } /* about 14px */
+
   </style>
 </head>
 
 <body class="font-sans text-gray-800 antialiased text-[18px]">
-  <header class="py-2">
-    <div class="max-w-3xl mx-auto flex items-center justify-center gap-3 px-4">
-      <a href="https://fortissimo.substack.com" target="_blank" class="flex items-center gap-3">
-        <img src="logo.png" alt="logo Futuro Fortissimo" class="h-8" />
-        <h1 class="italic lowercase text-3xl font-semibold">futuro fortissimo</h1>
-      </a>
-    </div>
-  </header>
+<header class="py-2">
+  <div class="max-w-3xl mx-auto flex items-center justify-center gap-3 px-4">
+    <img src="logo.png" alt="logo Futuro Fortissimo" class="h-8" />
+    <h1 class="italic lowercase text-3xl font-semibold">futuro fortissimo</h1>
+  </div>
+</header>
 
-  <section class="max-w-3xl mx-auto px-4 space-y-3">
-    <div class="relative">
+<section class="max-w-3xl mx-auto px-4 space-y-3">
+  <!-- Search + main filters -->
+  <div class="flex items-center gap-3">
+    <div class="relative flex-grow">
       <input id="searchInput" placeholder="search / cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
       <span class="absolute left-4 top-1/2 -translate-y-1/2 text-lg">🔍</span>
     </div>
-    <div id="filterRow" class="flex gap-2 overflow-x-auto hide-scrollbar scroll-snap-x pb-2 px-4">
-      <span class="pill" data-filter="💻">💻</span>
-      <span class="pill" data-filter="🍃">🍃</span>
-      <span class="pill" data-filter="❤️">❤️</span>
-      <span class="pill" data-filter="💸">💸</span>
-      <span class="pill" data-filter="⚽">⚽</span>
-      <span class="pill" data-filter="🍽">🍽</span>
-      <span class="pill" data-filter="🧠">🧠</span>
-      <span class="pill" data-filter="💊">💊</span>
-      <span class="pill" data-filter="🎨">🎨</span>
-      <span class="pill" data-filter="🚕">🚕</span>
-      <span class="pill" data-filter="🥽">🥽</span>
-      <span class="pill" data-filter="👥">👥</span>
-      <span class="pill" data-filter="💆">💆</span>
-      <span class="pill" data-filter="📖">📖</span>
+    <div id="mainFilterRow" class="flex gap-2">
+      <span class="pill" data-filter="🎼">🎼</span>
+      <span class="pill" data-filter="📚">📚</span>
+      <span class="pill" data-filter="🎶">🎶</span>
     </div>
-  </section>
+  </div>
 
-  <main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-6 mt-6"></main>
+  <!-- Tag filters -->
+  <div id="tagFilterRow" class="flex flex-wrap justify-center gap-2 text-xl">
+    <span class="pill" data-filter="💻">💻</span>
+    <span class="pill" data-filter="🍃">🍃</span>
+    <span class="pill" data-filter="❤️">❤️</span>
+    <span class="pill" data-filter="💸">💸</span>
+    <span class="pill" data-filter="⚽">⚽</span>
+    <span class="pill" data-filter="🍽">🍽</span>
+    <span class="pill" data-filter="🧠">🧠</span>
+    <span class="pill" data-filter="💊">💊</span>
+    <span class="pill" data-filter="🎨">🎨</span>
+    <span class="pill" data-filter="🚕">🚕</span>
+    <span class="pill" data-filter="🥽">🥽</span>
+    <span class="pill" data-filter="👥">👥</span>
+    <span class="pill" data-filter="💆">💆</span>
+  </div>
+</section>
 
-  <footer class="fixed bottom-0 inset-x-0 flex items-center justify-center gap-3 py-2 text-base bg-ioBg/90 backdrop-blur">
-    <button onclick="window.open('https://www.paypal.com/paypalme/michelemerelli','_blank')" class="pill">☕ sostieni</button>
-    <button onclick="window.open('https://linktr.ee/micmer','_blank')" class="pill">👤 chi&nbsp;sono</button>
-    <button id="langToggle" class="pill">🇬🇧 english</button>
-  </footer>
+<main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-6 mt-6"></main>
 
-  <script>
-    let LANG='it';
-    const PATH={ it:'newsletter_data.json', en:'newsletter_data_en.json' };
-    const NOTES_PATH='notes.json';
-    const BOOKS_PATH='books.json';
-    let DATA, NOTES, BOOKS;
-    const filters=new Set();
-    const gradients=[
-      'linear-gradient(135deg,#38bdf8,#c084fc)',
-      'linear-gradient(135deg,#f472b6,#facc15)',
-      'linear-gradient(135deg,#34d399,#60a5fa)',
-      'linear-gradient(135deg,#f87171,#fb923c)',
-      'linear-gradient(135deg,#a78bfa,#f472b6)',
-      'linear-gradient(135deg,#fb923c,#fde68a)',
-      'linear-gradient(135deg,#5eead4,#3b82f6)',
-      'linear-gradient(135deg,#fda4af,#c4b5fd)'
-    ];
-    const $=s=>document.querySelector(s);
-    const match=(t,s)=>t.toLowerCase().includes(s);
-    const hl=(t,s)=>s?t.replace(new RegExp(`(${s})`,'gi'),'<mark>$1</mark>'):t;
+<footer class="fixed bottom-0 inset-x-0 flex items-center justify-center gap-3 py-2 text-base bg-ioBg/90 backdrop-blur">
+  <button onclick="window.open('https://www.paypal.com/paypalme/michelemerelli','_blank')" class="pill">☕ sostieni</button>
+  <button onclick="window.open('https://linktr.ee/micmer','_blank')" class="pill">👤 chi&nbsp;sono</button>
+  <button id="langToggle" class="pill">🇬🇧 english</button>
+</footer>
 
-    $('#filterRow').addEventListener('click',e=>{
-      const f=e.target.dataset.filter; if(!f) return;
-      filters.has(f)?filters.delete(f):filters.add(f);
-      e.target.classList.toggle('active');
-      render();
-    });
-    $('#searchInput').oninput=render;
-    $('#langToggle').onclick=()=>{
-      LANG = LANG==='it'?'en':'it';
-      document.documentElement.lang=LANG;
-      $('#langToggle').textContent=LANG==='it'?'🇬🇧 english':'🇮🇹 italiano';
-      loadAll();
-    };
+<script>
+/* ---------- paths & globals ---------- */
+let LANG = 'it';
+const PATH = { it:'newsletter_data.json', en:'newsletter_data_en.json' };
+const NOTES_PATH = 'notes.json';
+const BOOKS_PATH = 'books.json';
 
-    async function loadAll(){
-      [DATA,NOTES,BOOKS] = await Promise.all([
-        fetch(PATH[LANG]).then(r=>r.json()),
-        fetch(NOTES_PATH).then(r=>r.json()),
-        fetch(BOOKS_PATH).then(r=>r.json())
-      ]);
-      render();
+let DATA, NOTES, BOOKS;
+const filters = new Set();
+const gradients = [
+  'linear-gradient(135deg,#38bdf8,#c084fc)',
+  'linear-gradient(135deg,#f472b6,#facc15)',
+  'linear-gradient(135deg,#34d399,#60a5fa)',
+  'linear-gradient(135deg,#f87171,#fb923c)',
+  'linear-gradient(135deg,#a78bfa,#f472b6)',
+  'linear-gradient(135deg,#fb923c,#fde68a)',
+  'linear-gradient(135deg,#5eead4,#3b82f6)',
+  'linear-gradient(135deg,#fda4af,#c4b5fd)'
+];
+
+/* ---------- helpers ---------- */
+const match = (txt,term) => txt.toLowerCase().includes(term);
+const hl = (txt,term) => term ? txt.replace(new RegExp(`(${term})`,'gi'),'<mark>$1</mark>') : txt;
+const $ = s => document.querySelector(s);
+
+/* ---------- listeners ---------- */
+$('#mainFilterRow').addEventListener('click', e => {
+  if (!e.target.dataset.filter) return;
+  const f = e.target.dataset.filter;
+  filters.has(f) ? filters.delete(f) : filters.add(f);
+  e.target.classList.toggle('active');
+  render();
+});
+$('#tagFilterRow').addEventListener('click', e => {
+  if (!e.target.dataset.filter) return;
+  const f = e.target.dataset.filter;
+  filters.has(f) ? filters.delete(f) : filters.add(f);
+  e.target.classList.toggle('active');
+  render();
+});
+$('#searchInput').oninput = render;
+$('#langToggle').onclick = () => {
+  LANG = LANG==='it' ? 'en' : 'it';
+  $('#langToggle').textContent = LANG==='it' ? '🇬🇧 english' : '🇮🇹 italiano';
+  document.documentElement.lang = LANG;
+  loadAll();
+};
+
+/* ---------- load JSON ---------- */
+async function loadAll(){
+  [DATA, NOTES, BOOKS] = await Promise.all([
+    fetch(PATH[LANG]).then(r=>r.json()),
+    fetch(NOTES_PATH).then(r=>r.json()),
+    fetch(BOOKS_PATH).then(r=>r.json())
+  ]);
+
+  // shuffle each section
+  DATA.publications.sort(()=>Math.random()-0.5);
+  BOOKS.sort(()=>Math.random()-0.5);
+  if (Array.isArray(NOTES.notes)) NOTES.notes.sort(()=>Math.random()-0.5);
+
+  filters.clear();
+  document.querySelectorAll('.pill.active').forEach(p=>p.classList.remove('active'));
+  $('#searchInput').value = '';
+  render();
+}
+
+/* ---------- render ---------- */
+function render(){
+  const term = $('#searchInput').value.toLowerCase();
+  const activeS = term.length>0;
+  const activeF = filters.size>0;
+
+  const wrap = $('#app'); wrap.innerHTML = '';
+
+  // defaults: pubs → books → notes
+  if (!activeS && !activeF){
+    wrap.appendChild(makePubStrip(DATA.publications));
+    wrap.appendChild(makeBooksStrip(BOOKS,false,term));
+    wrap.appendChild(makeNotesStrip(NOTES.notes,false,term));
+    return;
+  }
+
+  // search / filter branch
+  // Publications
+  const pubVis = DATA.publications.filter(pub=>{
+    // if any tag filter (tag emojis) -> check cards tags
+    const isTagFilter = [...filters].some(f=>'💻🍃❤️💸⚽🍽🧠💊🎨🚕🥽👥💆'.includes(f));
+    if (isTagFilter){
+      return pub.cards.some(c=>c.tags?.some(t=>filters.has(t)));
     }
-
-    function render(){
-      const term=$('#searchInput').value.toLowerCase();
-      const activeS=term.length>0;
-      const activeF=filters.size>0;
-      const bookFilter=filters.has('📖');
-      const wrap=$('#app'); wrap.innerHTML='';
-
-      // BOOKS ONLY VIEW
-      if(bookFilter && !activeS){
-        const shuffled=[...BOOKS].sort(()=>Math.random()-0.5);
-        wrap.appendChild(makeBookVertical(shuffled));
-        return;
-      }
-      // DEFAULT VIEW
-      if(!activeS && !activeF){
-        wrap.appendChild(makePubStrip(DATA.publications));
-        const shuffled=[...BOOKS].sort(()=>Math.random()-0.5);
-        wrap.appendChild(makeBookStrip(shuffled));
-        return;
-      }
-
-      // FILTER/SEARCH VIEW
-      DATA.publications.forEach((pub,idx)=>{
-        let vis=pub.cards.filter(c=>!c.title.startsWith('📖')).filter(c=>{
-          const tagOk = !activeF || c.tags.some(t=>filters.has(t));
-          const txtOk = !activeS
-            || match(c.title,term)
-            || c.contentBlocks.flatMap(b=>b.content).some(l=>match(l,term));
-          return tagOk && txtOk;
-        });
-        if(vis.length){
-          wrap.appendChild(makePubCard(pub,vis,idx,true,term,activeF));
-        }
-      });
-
-      // matched BOOK QUOTES
-      if(activeS){
-        const matched=BOOKS.filter(b=>match(b.text,term)||match(b.title,term));
-        if(matched.length) wrap.appendChild(makeBookStrip(matched));
-      }
+    // if search, match title or any line
+    if (activeS){
+      return pub.title.toLowerCase().includes(term)
+        || pub.cards.some(c=>c.title.toLowerCase().includes(term)
+          || c.contentBlocks.some(b=>b.content.some(l=>l.toLowerCase().includes(term))));
     }
+    // if main filter 🎼 only
+    if (filters.has('🎼')) return true;
+    return false;
+  });
+  if(pubVis.length) wrap.appendChild(makePubCards(pubVis,term));
 
-    function makePubStrip(list){
-      const strip=document.createElement('div');
-      strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x pb-2';
-      list.forEach((pub,i)=>{
-        const c=document.createElement('div');
-        c.className='relative rounded-xl flex-shrink-0 snap-start w-full max-w-[320px] cursor-pointer';
-        c.style.cssText=`background:${gradients[i%gradients.length]};padding:2px`;
-        const inr=document.createElement('div');
-        inr.className='bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
-        const pano=pub.cards.find(x=>x.title.startsWith('📖'));
-        inr.innerHTML=`
-          <h3 class="font-semibold text-xl text-center mb-2">${pub.title}</h3>
-          ${pano?`<p class="text-base text-center">${pano.contentBlocks[0].content[0]}</p>`:''}`;
-        c.appendChild(inr);
-        const btn=document.createElement('button');
-        btn.className='expander'; btn.textContent='⤢';
-        btn.onclick=e=>{ e.stopPropagation(); openExpanded(pub); };
-        c.appendChild(btn);
-        c.onclick=()=>openExpanded(pub);
-        strip.appendChild(c);
-      });
-      return strip;
+  // Books
+  const bookVis = BOOKS.filter(b=>{
+    if (filters.has('📚') && !activeS) return true;
+    if (activeS){
+      return b.title.toLowerCase().includes(term)
+        || b.text.toLowerCase().includes(term)
+        || b.book.toLowerCase().includes(term)
+        || b.author.toLowerCase().includes(term);
     }
+    return filters.size===0;
+  });
+  if(bookVis.length) wrap.appendChild(makeBooksStrip(bookVis,true,term));
 
-    function makeBookStrip(quotes){
-      const strip=document.createElement('div');
-      strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x pb-2 mt-4';
-      quotes.forEach(b=>{
-        const q=document.createElement('div');
-        q.className='flex-shrink-0 snap-start bg-white rounded-xl p-5 shadow-neu max-w-[300px] text-[15px] break-words cursor-pointer';
-        if(b.url) q.onclick=()=>window.open(b.url,'_blank');
-        q.innerHTML=`
-          <h3 class="font-semibold text-lg mb-1">${b.title}</h3>
-          <p class="font-medium">&ldquo;${b.text}&rdquo;</p>
-          <p class="text-xs text-gray-600 mt-2">${b.book} — ${b.author}</p>`;
-        strip.appendChild(q);
-      });
-      return strip;
+  // Notes
+  const noteVis = (NOTES.notes||[]).filter(n=>{
+    if (filters.has('🎶') && !activeS) return true;
+    if (activeS){
+      return n.title.toLowerCase().includes(term)
+        || (n.description||'').toLowerCase().includes(term);
     }
+    return filters.size===0;
+  });
+  if(noteVis.length) wrap.appendChild(makeNotesStrip(noteVis,true,term));
+}
 
-    function makeBookVertical(quotes){
-      const c=document.createElement('div');
-      c.className='space-y-6';
-      quotes.forEach(b=>{
-        const q=document.createElement('div');
-        q.className='bg-white rounded-xl p-5 shadow-neu text-[15px] break-words cursor-pointer';
-        if(b.url) q.onclick=()=>window.open(b.url,'_blank');
-        q.innerHTML=`
-          <h3 class="font-semibold text-lg mb-1">${b.title}</h3>
-          <p>&ldquo;${b.text}&rdquo;</p>
-          <p class="text-sm text-gray-600 mt-2">${b.book} — ${b.author}</p>`;
-        c.appendChild(q);
-      });
-      return c;
-    }
+/* ---------- components ---------- */
+function makePubStrip(list){
+  const strip = document.createElement('div');
+  strip.className = 'flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  list.forEach((pub,i)=>{
+    const card = document.createElement('div');
+    card.className = 'relative rounded-xl flex-shrink-0 snap-start overflow-hidden cursor-pointer w-full max-w-[320px]';
+    card.style.background = gradients[i%gradients.length];
+    card.style.padding = '2px';
 
-    function makePubCard(pub, scList, idx, cond, term, showTags){
-      const card=document.createElement('div');
-      card.className='pub-card rounded-xl mb-4';
-      card.style.cssText=`background:${gradients[idx%gradients.length]};padding:2px`;
-      const inner=document.createElement('div');
-      inner.className='bg-white rounded-xl p-5 shadow-neu flex flex-col';
-      scList.forEach((sc,i)=>{
-        inner.innerHTML+=`
-          <div>
-            <h3 class="font-semibold mb-1">${cond?hl(sc.title,term):sc.title}</h3>
-            ${sc.contentBlocks[0].content.map(l=>`<p class="text-base">${cond?hl(l,term):l}</p>`).join('')}
-            ${showTags?`<div class="flex flex-wrap gap-1 mt-1">${sc.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>`:''}
-          </div>
-          ${i<scList.length-1?'<hr class="border-t my-3"/':''}`;
-      });
-      inner.onclick=()=>window.open(pub.substackLink,'_blank');
+    const inr = document.createElement('div');
+    inr.className = 'bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
+    const pano = pub.cards.find(c=>c.title.startsWith('📖'));
+    inr.innerHTML = `<h3 class='font-semibold text-xl mb-2 text-center break-words'>${pub.title}</h3>` +
+                    (pano?`<p class='text-base text-center break-words'>${pano.contentBlocks[0].content[0]}</p>`:'');
+    card.appendChild(inr);
+
+    const btn = document.createElement('button');
+    btn.className='expander'; btn.textContent='⤢';
+    btn.onclick = e=>{ e.stopPropagation(); openExpanded(pub); };
+    card.appendChild(btn);
+
+    card.onclick = ()=>openExpanded(pub);
+    strip.appendChild(card);
+  });
+  return strip;
+}
+
+function makePubCards(list,term){
+  const container = document.createElement('div');
+  list.forEach((pub,idx)=>{
+    pub.cards.filter(c=>!c.title.startsWith('📖')).forEach((c,i)=>{
+      const card = document.createElement('div');
+      card.className='rounded-xl overflow-hidden mb-4';
+      card.style.cssText = `background:${gradients[idx%gradients.length]};padding:2px`;
+      const inner = document.createElement('div');
+      inner.className='bg-white rounded-xl p-5 shadow-neu';
+      inner.innerHTML = `
+        <h3 class='font-semibold mb-1'>${hl(c.title,term)}</h3>
+        ${c.contentBlocks[0].content.map(l=>`<p class='text-base'>${hl(l,term)}</p>`).join('')}
+        <div class='flex flex-wrap gap-1 mt-1'>${(c.tags||[]).map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+      `;
+      inner.onclick = ()=>window.open(pub.substackLink,'_blank');
       card.appendChild(inner);
-      return card;
-    }
+      container.appendChild(card);
+    });
+  });
+  return container;
+}
 
-    function openExpanded(pub){
-      document.querySelectorAll('.exp-card').forEach(x=>x.remove());
-      $('#pubStrip')?.classList.add('hidden');
-      const wrap=$('#app');
-      const idx=DATA.publications.findIndex(p=>p.title===pub.title);
-      const sc=pub.cards.filter(c=>!c.title.startsWith('📖'));
-      const card=makePubCard(pub,sc,idx,false,'',false);
-      card.classList.add('exp-card');
-      wrap.prepend(card);
-      const close=document.createElement('button');
-      close.textContent='✕'; close.className='absolute top-2 right-2 text-2xl';
-      close.onclick=()=>{
-        card.classList.remove('enter'); card.classList.add('exit');
-        setTimeout(()=>{
-          card.remove();
-          $('#pubStrip')?.classList.remove('hidden');
-        },350);
-      };
-      card.style.position='relative';
-      card.appendChild(close);
-      requestAnimationFrame(()=>card.classList.add('enter'));
-      card.scrollIntoView({behavior:'smooth',block:'center'});
-    }
+function makeBooksStrip(list,showHeader,term){
+  const strip = document.createElement('div');
+  strip.className = 'flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  list.forEach(b=>{
+    const card = document.createElement('div');
+    card.className='book-card rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
+    card.style.background='#ffffff';
+    card.onclick = ()=>b.url && window.open(b.url,'_blank');
 
-    loadAll();
-  </script>
+    const inner = document.createElement('div');
+    inner.className='p-5 flex flex-col justify-between min-h-[180px]';
+    inner.innerHTML = `
+      <p class='quote text-lg break-words'>&ldquo;${hl(b.text,term)}&rdquo;</p>
+      <p class='source text-sm text-gray-600 mt-2 break-words'>${hl(b.book,term)} — ${hl(b.author,term)}</p>
+    `;
+    card.appendChild(inner);
+    strip.appendChild(card);
+  });
+  return strip;
+}
+
+function makeNotesStrip(list,showHeader,term){
+  const strip = document.createElement('div');
+  strip.className = 'flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  list.forEach(n=>{
+    const card = document.createElement('div');
+    card.className='note-card rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
+    card.style.background='#ffffff';
+    card.onclick = ()=>n.url && window.open(n.url,'_blank');
+
+    const inner = document.createElement('div');
+    inner.className='p-5 flex flex-col justify-between min-h-[160px]';
+    inner.innerHTML = `
+      <h3 class='font-semibold mb-1 text-base break-words'>${hl(n.title,term)}</h3>
+      <p class='text-sm break-words'>${hl(n.description||'',term)}</p>
+    `;
+    card.appendChild(inner);
+    strip.appendChild(card);
+  });
+  return strip;
+}
+
+/* ---------- start ---------- */
+loadAll();
+</script>
 </body>
 </html>
-
