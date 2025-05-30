@@ -1,5 +1,4 @@
-{
-  "books": [
+[
     {
       "title": "Superagenzia & IA",
       "quote": "La quantità di informazioni disponibili è esplosa, superando di gran lunga ciò che possiamo consumare. La chiave è trasformare i "Big Data" in "Big Knowledge" attraverso IA diffuse che estendono la volontà umana.",
@@ -97,4 +96,6 @@
       "tags": ["❤️", "🧠"]
     }
   ]
-}
+
+
+
