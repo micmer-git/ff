@@ -1,101 +1,86 @@
 [
-    {
-      "title": "Superagenzia & IA",
-      "quote": "La quantità di informazioni disponibili è esplosa, superando di gran lunga ciò che possiamo consumare. La chiave è trasformare i "Big Data" in "Big Knowledge" attraverso IA diffuse che estendono la volontà umana.",
-      "author": "—",
-      "page": "—",
-      "url": "",
-      "tags": ["💻", "🧠"]
-    },
-    {
-      "title": "Superagenzia & IA",
-      "quote": "Nel 2022 quasi 50 000 americani si sono tolti la vita; i costi globali stimati supereranno 6 trilioni $ entro 2030. L'IA può assistere la salute mentale: dalla stesura di note cliniche alla valutazione dei tirocinanti fino a cure autonome.",
-      "author": "—",
-      "page": "—",
-      "url": "",
-      "tags": ["💻", "💊"]
-    },
-    {
-      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
-      "quote": "L'obiettivo di "morire con zero" significa non lasciare un'eredità finanziaria significativa, ma massimizzare le esperienze di vita con un "dividendo di esperienze".",
-      "author": "Bill Perkins",
-      "page": "1",
-      "url": "https://amzn.to/3Zup331",
-      "tags": ["❤️", "💸"]
-    },
-    {
-      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
-      "quote": "La vita è la somma delle nostre esperienze, non del saldo bancario. Un "dividendo di esperienze" è il ricordo e il godimento duraturo di momenti significativi.",
-      "author": "Bill Perkins",
-      "page": "15",
-      "url": "https://amzn.to/3Zup331",
-      "tags": ["❤️", "💆"]
-    },
-    {
-      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
-      "quote": "Il tempo è la risorsa più preziosa e limitata, con un "orologio della vita" che ticchetta. Ipoteca il tuo tempo in esperienze, perché salute e opportunità diminuiscono con l'età.",
-      "author": "Bill Perkins",
-      "page": "23",
-      "url": "https://amzn.to/3Zup331",
-      "tags": ["❤️", "🧠"]
-    },
-    {
-      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
-      "quote": "La salute diminuisce irreversibilmente con l'età, limitando la godibilità delle esperienze. "Non sai mai quando la tua salute potrebbe peggiorare".",
-      "author": "Bill Perkins",
-      "page": "37",
-      "url": "https://amzn.to/3Zup331",
-      "tags": ["❤️", "💊"]
-    },
-    {
-      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
-      "quote": "Accumuli senza godere possono portare a rimpianti in età avanzata. Definisci le priorità usando un esercizio sui rimpianti.",
-      "author": "Bill Perkins",
-      "page": "42",
-      "url": "https://amzn.to/3Zup331",
-      "tags": ["❤️", "💆"]
-    },
-    {
-      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
-      "quote": "Perkins suggerisce di donare "inter vivos", quando i figli possono beneficiarne (istruzione, casa), così da vedere l'impatto e insegnare gestione invece di eredità tardive.",
-      "author": "Bill Perkins",
-      "page": "56",
-      "url": "https://amzn.to/3Zup331",
-      "tags": ["❤️", "👥"]
-    },
-    {
-      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
-      "quote": "Investire nella "earnability" e nelle abilità è cruciale: educazione, nuove competenze e salute danno sicurezza, rendendo meno necessario accumulare solo per sopravvivere.",
-      "author": "Bill Perkins",
-      "page": "68",
-      "url": "https://amzn.to/3Zup331",
-      "tags": ["🍃", "🧠"]
-    },
-    {
-      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
-      "quote": "Non è spesa sconsiderata ma equilibrio strategico: guadagna quanto serve, investi in esperienze ad alto "dividendo di esperienze", e spendi con consapevolezza.",
-      "author": "Bill Perkins",
-      "page": "75",
-      "url": "https://amzn.to/3Zup331",
-      "tags": ["🍃", "💸"]
-    },
-    {
-      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
-      "quote": "Pianifica per massimizzare esperienze di vita anziché solo ricchezza: proietta salute e opportunità future, creando un "budget della vita" distribuito per fasce d'età.",
-      "author": "Bill Perkins",
-      "page": "89",
-      "url": "https://amzn.to/3Zup331",
-      "tags": ["🍃", "💸"]
-    },
-    {
-      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
-      "quote": "La coscienza della finitezza è un potente catalizzatore: "La morte risveglia le persone". Abbraccia la mortalità per fare scelte significative mentre sei ancora capace.",
-      "author": "Bill Perkins",
-      "page": "102",
-      "url": "https://amzn.to/3Zup331",
-      "tags": ["❤️", "🧠"]
-    }
-  ]
-
-
-
+  {
+    "title": "Sui Dati e la Conoscenza",
+    "text": "La quantità di informazioni disponibili è esplosa, superando di gran lunga ciò che possiamo consumare. La chiave è trasformare i “Big Data” in “Big Knowledge” attraverso IA diffuse che estendono la volontà umana: dataset come Common Crawl e Pile, con miliardi di pagine e paper scientifici, alimentano questo processo.",
+    "book": "Superagenzia & IA",
+    "author": "—",
+    "url": ""
+  },
+  {
+    "title": "Sull'IA e la Salute Mentale",
+    "text": "Nel 2022 quasi 50 000 americani si sono tolti la vita; i costi globali stimati supereranno 6 trilioni $ entro 2030. L’IA può assistere la salute mentale: dalla stesura di note cliniche (Stage 1) alla valutazione dei tirocinanti (Stage 2) fino a cure autonome (Stage 3). I modelli conversazionali mappano terreno fattuale ed emotivo, ampliando l’accesso alle terapie.",
+    "book": "Superagenzia & IA",
+    "author": "—",
+    "url": ""
+  },
+  {
+    "title": "Sull'Obiettivo “Morire con Zero”",
+    "text": "L'obiettivo di “morire con zero” significa non lasciare un’eredità finanziaria significativa, ma massimizzare le esperienze di vita con un “dividendo di esperienze”. Non si tratta di finire senza soldi, ma di spendere strategicamente per esperienze dal “periodo di godimento” limitato, evitando rimpianti.",
+    "book": "Die with Zero: Getting All You Can from Your Money and Your Life",
+    "author": "Bill Perkins",
+    "url": "https://amzn.to/3Zup331"
+  },
+  {
+    "title": "Sull'Importanza delle Esperienze e dei “Dividendi di Esperienze”",
+    "text": "La vita è la somma delle nostre esperienze, non del saldo bancario. Un “dividendo di esperienze” è il ricordo e il godimento duraturo di momenti significativi: viaggi, nuove abilità, che migliorano nel tempo anziché deprezzarsi.",
+    "book": "Die with Zero: Getting All You Can from Your Money and Your Life",
+    "author": "Bill Perkins",
+    "url": "https://amzn.to/3Zup331"
+  },
+  {
+    "title": "Sul Tempo come Risorsa Finita",
+    "text": "Il tempo è la risorsa più preziosa e limitata, con un “orologio della vita” che ticchetta. Ipoteca il tuo tempo in esperienze, perché salute e opportunità diminuiscono con l’età; l’inerzia costa “punti esperienza”.",
+    "book": "Die with Zero: Getting All You Can from Your Money and Your Life",
+    "author": "Bill Perkins",
+    "url": "https://amzn.to/3Zup331"
+  },
+  {
+    "title": "Sulla Salute e il Declino delle Capacità",
+    "text": "La salute diminuisce irreversibilmente con l’età, limitando la godibilità delle esperienze. “Non sai mai quando la tua salute potrebbe peggiorare”: spingiti a vivere mentre sei giovane e in forma.",
+    "book": "Die with Zero: Getting All You Can from Your Money and Your Life",
+    "author": "Bill Perkins",
+    "url": "https://amzn.to/3Zup331"
+  },
+  {
+    "title": "Sull'Evitare il Rimpianto",
+    "text": "Accumuli senza godere possono portare a rimpianti in età avanzata. Definisci le priorità usando un esercizio sui rimpianti: “Il dolore del rimpianto per non aver vissuto la vita che avresti potuto avere”.",
+    "book": "Die with Zero: Getting All You Can from Your Money and Your Life",
+    "author": "Bill Perkins",
+    "url": "https://amzn.to/3Zup331"
+  },
+  {
+    "title": "Sui Figli e l'Eredità (Donazioni Inter Vivos)",
+    "text": "Perkins suggerisce di donare “inter vivos”, quando i figli possono beneficiarne (istruzione, casa), così da vedere l’impatto e insegnare gestione invece di eredità tardive.",
+    "book": "Die with Zero: Getting All You Can from Your Money and Your Life",
+    "author": "Bill Perkins",
+    "url": "https://amzn.to/3Zup331"
+  },
+  {
+    "title": "Sull'Investimento in Se Stessi e le Competenze",
+    "text": "Investire nella “earnability” e nelle abilità è cruciale: educazione, nuove competenze e salute danno sicurezza, rendendo meno necessario accumulare solo per sopravvivere.",
+    "book": "Die with Zero: Getting All You Can from Your Money and Your Life",
+    "author": "Bill Perkins",
+    "url": "https://amzn.to/3Zup331"
+  },
+  {
+    "title": "Sul Bilanciamento tra Guadagno, Spesa e Investimento",
+    "text": "Non è spesa sconsiderata ma equilibrio strategico: guadagna quanto serve, investi in esperienze ad alto “dividendo di esperienze”, e spendi con consapevolezza di tempi e benefici.",
+    "book": "Die with Zero: Getting All You Can from Your Money and Your Life",
+    "author": "Bill Perkins",
+    "url": "https://amzn.to/3Zup331"
+  },
+  {
+    "title": "Sulla Pianificazione Finanziaria Orientata all'Esperienza",
+    "text": "Pianifica per massimizzare esperienze di vita anziché solo ricchezza: proietta salute e opportunità future, creando un “budget della vita” distribuito per fasce d’età.",
+    "book": "Die with Zero: Getting All You Can from Your Money and Your Life",
+    "author": "Bill Perkins",
+    "url": "https://amzn.to/3Zup331"
+  },
+  {
+    "title": "Sulla Morte come Catalizzatore per Vivere Pienamente",
+    "text": "La coscienza della finitezza è un potente catalizzatore: “La morte risveglia le persone”. Abbraccia la mortalità per fare scelte significative mentre sei ancora capace.",
+    "book": "Die with Zero: Getting All You Can from Your Money and Your Life",
+    "author": "Bill Perkins",
+    "url": "https://amzn.to/3Zup331"
+  }
+]
