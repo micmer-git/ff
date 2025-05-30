@@ -69,8 +69,6 @@
       <span class="pill" data-filter="🥽">🥽</span>
       <span class="pill" data-filter="👥">👥</span>
       <span class="pill" data-filter="💆">💆</span>
-      <!-- new book-only filter -->
-      <span class="pill" data-filter="📚">📚</span>
     </div>
   </section>
 
@@ -106,16 +104,16 @@
     $('#filterRow').addEventListener('click',e=>{
       const f=e.target.dataset.filter;
       if(!f) return;
-      e.target.classList.toggle('active');
       filters.has(f)?filters.delete(f):filters.add(f);
+      e.target.classList.toggle('active');
       render();
     });
     $('#searchInput').oninput=render;
-    $('#langToggle').onclick=()=>{ 
-      LANG=LANG==='it'?'en':'it'; 
+    $('#langToggle').onclick=()=>{
+      LANG=LANG==='it'?'en':'it';
       document.documentElement.lang=LANG;
       $('#langToggle').textContent=LANG==='it'?'🇬🇧 english':'🇮🇹 italiano';
-      loadAll(); 
+      loadAll();
     };
 
     async function loadAll(){
@@ -132,47 +130,25 @@
       const activeS=term.length>0, activeF=filters.size>0;
       const wrap=$('#app'); wrap.innerHTML='';
 
-      // BOOK-ONLY filter mode
-      if(activeF && filters.has('📚')){
-        let bookVis = [...BOOKS].sort(()=>Math.random()-0.5)
-          .filter(b=> !activeS || match(b.title,term) || match(b.text,term));
-        wrap.appendChild(makeBooksList(bookVis));
+      // show the horizontal publication strip only when NOT searching or filtering
+      if(!activeS && !activeF){
+        wrap.appendChild(makePubStrip(DATA.publications));
         return;
       }
 
-      // default PUB strip
-      if(!activeS && !activeF){
-        wrap.appendChild(makePubStrip(DATA.publications));
-      }
-
-      // publications + (after first) books strip + notes strip
+      // when searching/filtering: show only publication cards (no notes, no books)
       DATA.publications.forEach((pub,idx)=>{
-        // only show pub details in search or filter (except book-only)
-        if(activeS||activeF){
-          let vis = pub.cards.filter(c=>!c.title.startsWith('📖'))
-            .filter(c=>{
-              const tagOk=!activeF||c.tags.some(t=>filters.has(t));
-              const txtOk=!activeS||match(c.title,term)||c.contentBlocks.flatMap(b=>b.content).some(l=>match(l,term));
-              return tagOk&&txtOk;
-            });
-          if(vis.length){
-            wrap.appendChild(makePubCard(pub,vis,idx,true,term,activeF));
-          }
-        }
-
-        // after first pub-card, inject BOOKS and NOTES
-        if(wrap.querySelectorAll('.pub-card').length===1){
-          // books strip
-          let bookVis = [...BOOKS].sort(()=>Math.random()-0.5)
-            .filter(b=> (!activeF||filters.has('📚')||b.tags?.some(t=>filters.has(t))) 
-                      && (!activeS||match(b.title,term)||match(b.text,term)));
-          if(bookVis.length) wrap.appendChild(makeBooksStrip(bookVis));
-
-          // notes strip
-          let noteVis = NOTES.notes.sort(()=>Math.random()-0.5)
-            .filter(n=> (!activeF||n.tags.some(t=>filters.has(t))) 
-                     && (!activeS||match(n.title,term)||match(n.description,term)));
-          if(noteVis.length) wrap.appendChild(makeNotesStrip(noteVis));
+        let vis = pub.cards
+          .filter(c=>!c.title.startsWith('📖'))
+          .filter(c=>{
+            const tagOk = !activeF || c.tags.some(t=>filters.has(t));
+            const txtOk = !activeS
+              || match(c.title,term)
+              || c.contentBlocks.flatMap(b=>b.content).some(l=>match(l,term));
+            return tagOk && txtOk;
+          });
+        if(vis.length){
+          wrap.appendChild(makePubCard(pub,vis,idx,true,term,activeF));
         }
       });
     }
@@ -184,16 +160,20 @@
         const card=document.createElement('div');
         card.className='relative rounded-xl flex-shrink-0 snap-start w-full max-w-[320px] cursor-pointer';
         card.style.cssText=`background:${gradients[i%gradients.length]};padding:2px`;
-        const inr=document.createElement('div');
-        inr.className='bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
+        const inner=document.createElement('div');
+        inner.className='bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
         const pano=pub.cards.find(c=>c.title.startsWith('📖'));
-        inr.innerHTML=`<h3 class='font-semibold text-xl text-center mb-2'>${pub.title}</h3>`
-                     + (pano?`<p class='text-base text-center'>${pano.contentBlocks[0].content[0]}</p>`:'');
-        card.appendChild(inr);
+        inner.innerHTML=`
+          <h3 class="font-semibold text-xl text-center mb-2">${pub.title}</h3>
+          ${pano?`<p class="text-base text-center">${pano.contentBlocks[0].content[0]}</p>`:''}`;
+        card.appendChild(inner);
+
+        // expander button
         const btn=document.createElement('button');
         btn.className='expander'; btn.textContent='⤢';
-        btn.onclick=e=>{e.stopPropagation(); openExpanded(pub);};
+        btn.onclick=e=>{ e.stopPropagation(); openExpanded(pub); };
         card.appendChild(btn);
+
         card.onclick=()=>openExpanded(pub);
         strip.appendChild(card);
       });
@@ -205,13 +185,13 @@
       card.className='pub-card rounded-xl mb-4';
       card.style.cssText=`background:${gradients[idx%gradients.length]};padding:2px`;
       const inner=document.createElement('div');
-      inner.className='bg-white rounded-xl p-5 shadow-neu';
+      inner.className='bg-white rounded-xl p-5 shadow-neu flex flex-col';
       scList.forEach((sc,i)=>{
         inner.innerHTML+=`
           <div>
-            <h3 class='font-semibold mb-1'>${cond?hl(sc.title,term):sc.title}</h3>
-            ${sc.contentBlocks[0].content.map(l=>`<p class='text-base'>${cond?hl(l,term):l}</p>`).join('')}
-            ${showTags?`<div class='flex flex-wrap gap-1 mt-1'>${sc.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>`:''}
+            <h3 class="font-semibold mb-1">${cond?hl(sc.title,term):sc.title}</h3>
+            ${sc.contentBlocks[0].content.map(l=>`<p class="text-base">${cond?hl(l,term):l}</p>`).join('')}
+            ${showTags?`<div class="flex flex-wrap gap-1 mt-1">${sc.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>`:''}
           </div>
           ${i<scList.length-1?'<hr class="border-t my-3"/>':''}`;
       });
@@ -221,81 +201,55 @@
     }
 
     function openExpanded(pub){
+      // remove any existing expanded card
+      document.querySelectorAll('.exp-card').forEach(el=>el.remove());
       $('#pubStrip')?.classList.add('hidden');
+
       const wrap=$('#app');
       const idx=DATA.publications.findIndex(p=>p.title===pub.title);
       const sc=pub.cards.filter(c=>!c.title.startsWith('📖'));
       const card=makePubCard(pub,sc,idx,false,'',false);
       card.classList.add('exp-card');
       wrap.prepend(card);
-      requestAnimationFrame(()=>card.classList.add('enter'));
+
+      // add close button
       const close=document.createElement('button');
       close.textContent='✕'; close.className='absolute top-2 right-2 text-2xl';
-      close.onclick=()=>{ card.classList.remove('enter'); card.classList.add('exit');
-        setTimeout(()=>{ card.remove(); $('#pubStrip')?.classList.remove('hidden'); },350);
+      close.onclick=()=>{
+        card.classList.remove('enter'); card.classList.add('exit');
+        setTimeout(()=>{
+          card.remove();
+          $('#pubStrip')?.classList.remove('hidden');
+        },350);
       };
       card.style.position='relative';
       card.appendChild(close);
-      card.scrollIntoView({behavior:'smooth'});
-    }
 
-    function makeBooksStrip(books){
-      const strip=document.createElement('div');
-      strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x pb-2';
-      books.forEach(b=>{
-        const card=document.createElement('div');
-        card.className='rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start cursor-pointer';
-        card.style.background='#fff';
-        if(b.url) card.onclick=()=>window.open(b.url,'_blank');
-        const inner=document.createElement('div');
-        inner.className='p-4 min-h-[140px] text-[15px] flex flex-col justify-between';
-        inner.innerHTML=`
-          <h3 class="font-semibold text-xl mb-1">${b.title}</h3>
-          <p class="text-base leading-tight">${b.text}</p>
+      // append book quotes under the expanded pub
+      const quotesContainer = document.createElement('div');
+      quotesContainer.className='mt-4 space-y-3';
+      // randomize order
+      [...BOOKS].sort(()=>Math.random()-0.5).forEach(b=>{
+        const qb=document.createElement('div');
+        qb.className='rounded-lg border-2 border-indigo-500 bg-white p-4 shadow-neu cursor-pointer text-[15px]';
+        if(b.url) qb.onclick=()=>window.open(b.url,'_blank');
+        qb.innerHTML=`
+          <h4 class="font-semibold text-xl mb-1">${b.title}</h4>
+          <p class="text-lg leading-tight">${b.text}</p>
           <p class="text-sm text-gray-600 mt-2">${b.book} — ${b.author}</p>`;
-        card.appendChild(inner);
-        strip.appendChild(card);
+        quotesContainer.appendChild(qb);
       });
-      return strip;
-    }
+      card.appendChild(quotesContainer);
 
-    function makeBooksList(books){
-      const container=document.createElement('div');
-      container.className='space-y-4';
-      books.forEach(b=>{
-        const card=document.createElement('div');
-        card.className='rounded-xl border-2 border-indigo-500 bg-white p-5 shadow-neu cursor-pointer';
-        if(b.url) card.onclick=()=>window.open(b.url,'_blank');
-        card.innerHTML=`
-          <h3 class="font-semibold text-xl mb-2">${b.title}</h3>
-          <p class="text-base">${b.text}</p>
-          <p class="text-sm text-gray-600 mt-2">${b.book} — ${b.author}</p>`;
-        container.appendChild(card);
-      });
-      return container;
-    }
-
-    function makeNotesStrip(notes){
-      const strip=document.createElement('div');
-      strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x pb-2';
-      notes.forEach(n=>{
-        const card=document.createElement('div');
-        card.className='rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start cursor-pointer';
-        card.style.background='#fff';
-        card.onclick=()=>window.open(n.url,'_blank');
-        const inner=document.createElement('div');
-        inner.className='p-4 min-h-[140px] text-[15px] flex flex-col justify-between';
-        inner.innerHTML=`
-          <h3 class="font-semibold text-xl mb-1">${n.title}</h3>
-          <p class="text-sm leading-tight">${n.description}</p>
-          <div class="flex flex-wrap gap-1 mt-2">${n.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>`;
-        card.appendChild(inner);
-        strip.appendChild(card);
-      });
-      return strip;
+      // animate in
+      requestAnimationFrame(()=>card.classList.add('enter'));
+      card.scrollIntoView({behavior:'smooth', block:'center'});
     }
 
     loadAll();
   </script>
 </body>
 </html>
+
+
+
