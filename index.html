@@ -25,18 +25,33 @@
   </script>
 
   <style>
-    body{background:#F6F9FE}
-    mark{background:#FFEB3B66;padding:0 2px;border-radius:3px}
-    .pill,.tag{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.1);padding:4px 12px;border-radius:9999px;user-select:none;transition:.15s}
-    .pill{cursor:pointer;font-size:1.1rem}.pill.active{outline:2px solid #38bdf8}
-    .hide-scrollbar::-webkit-scrollbar{display:none}
-    .hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
-    .scroll-snap-x{scroll-snap-type:x mandatory}
-    .snap-start{scroll-snap-align:start}
-    .exp-card{transform:scale(.95);opacity:0;transition:transform .35s ease,opacity .35s ease}
-    .exp-card.enter{transform:scale(1);opacity:1}
-    .exp-card.exit{transform:scale(.9);opacity:0}
-    .expander{position:absolute;right:10px;bottom:10px;background:#fff;border-radius:9999px;padding:6px 9px;font-size:18px;box-shadow:0 1px 4px rgba(0,0,0,.15);cursor:pointer}
+    body { background: #F6F9FE }
+    mark { background: #FFEB3B66; padding: 0 2px; border-radius: 3px }
+    .pill, .tag {
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,.1);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      user-select: none;
+      transition: .15s;
+      white-space: nowrap;
+    }
+    .pill { cursor: pointer; font-size: 1.1rem }
+    .pill.active { outline: 2px solid #38bdf8 }
+    .hide-scrollbar::-webkit-scrollbar { display: none }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none }
+    .scroll-snap-x { scroll-snap-type: x mandatory }
+    .snap-start { scroll-snap-align: start }
+
+    .exp-card { transform: scale(.95); opacity: 0; transition: transform .35s ease, opacity .35s ease }
+    .exp-card.enter { transform: scale(1); opacity: 1 }
+    .exp-card.exit { transform: scale(.9); opacity: 0 }
+    .expander {
+      position: absolute; right: 10px; bottom: 10px;
+      background: #fff; border-radius: 9999px; padding: 6px 9px;
+      font-size: 18px; box-shadow: 0 1px 4px rgba(0,0,0,.15);
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -55,7 +70,8 @@
       <input id="searchInput" placeholder="search / cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
       <span class="absolute left-4 top-1/2 -translate-y-1/2 text-lg">🔍</span>
     </div>
-    <div id="filterRow" class="flex flex-wrap justify-center gap-2 text-xl">
+    <div id="filterRow" class="flex gap-2 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth px-4">
+      <!-- emoji filters -->
       <span class="pill" data-filter="💻">💻</span>
       <span class="pill" data-filter="🍃">🍃</span>
       <span class="pill" data-filter="❤️">❤️</span>
@@ -69,7 +85,7 @@
       <span class="pill" data-filter="🥽">🥽</span>
       <span class="pill" data-filter="👥">👥</span>
       <span class="pill" data-filter="💆">💆</span>
-      <!-- new book‐quotes filter -->
+      <!-- book‐quotes filter -->
       <span class="pill" data-filter="📖">📖</span>
     </div>
   </section>
@@ -111,9 +127,9 @@
     });
     $('#searchInput').oninput=render;
     $('#langToggle').onclick=()=>{
-      LANG = LANG==='it' ? 'en' : 'it';
-      document.documentElement.lang = LANG;
-      $('#langToggle').textContent = LANG==='it' ? '🇬🇧 english' : '🇮🇹 italiano';
+      LANG = LANG==='it'?'en':'it';
+      document.documentElement.lang=LANG;
+      $('#langToggle').textContent=LANG==='it'?'🇬🇧 english':'🇮🇹 italiano';
       loadAll();
     };
 
@@ -133,89 +149,95 @@
       const bookFilter=filters.has('📖');
       const wrap=$('#app'); wrap.innerHTML='';
 
-      // 1) If book‐filter only → show vertical list of book quotes
+      // BOOKS ONLY
       if(bookFilter && !activeS){
         wrap.appendChild(makeBookVertical(BOOKS));
         return;
       }
 
-      // 2) Base view (no search & no filters except possibly book pill inactive) 
+      // BASE VIEW: publications + ALL book quotes strip
       if(!activeS && !activeF){
         wrap.appendChild(makePubStrip(DATA.publications));
         wrap.appendChild(makeBookStrip(BOOKS));
         return;
       }
 
-      // 3) Search/other filters → show only publication cards
+      // SEARCH / OTHER FILTERS: publications + matched book‐quotes
       DATA.publications.forEach((pub,idx)=>{
-        let vis = pub.cards
-          .filter(c=>!c.title.startsWith('📖'))
-          .filter(c=>{
-            const tagOk = !activeF || c.tags.some(t=>filters.has(t));
-            const txtOk = !activeS
-              || match(c.title,term)
-              || c.contentBlocks.flatMap(b=>b.content).some(l=>match(l,term));
-            return tagOk && txtOk;
-          });
+        let vis=pub.cards.filter(c=>!c.title.startsWith('📖')).filter(c=>{
+          const tagOk = !activeF || c.tags.some(t=>filters.has(t));
+          const txtOk = !activeS
+            || match(c.title,term)
+            || c.contentBlocks.flatMap(b=>b.content).some(l=>match(l,term));
+          return tagOk && txtOk;
+        });
         if(vis.length){
           wrap.appendChild(makePubCard(pub,vis,idx,true,term,activeF));
         }
       });
+
+      // matched book‐quotes
+      if(activeS){
+        const matched=BOOKS.filter(b=>match(b.text,term)||match(b.title,term));
+        if(matched.length){
+          wrap.appendChild(makeBookStrip(matched));
+        }
+      }
     }
 
     function makePubStrip(list){
       const strip=document.createElement('div');
       strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x pb-2';
       list.forEach((pub,i)=>{
-        const card=document.createElement('div');
-        card.className='relative rounded-xl flex-shrink-0 snap-start w-full max-w-[320px] cursor-pointer';
-        card.style.cssText=`background:${gradients[i%gradients.length]};padding:2px`;
-        const inner=document.createElement('div');
-        inner.className='bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
-        const pano=pub.cards.find(c=>c.title.startsWith('📖'));
-        inner.innerHTML=`
+        const c=document.createElement('div');
+        c.className='relative rounded-xl flex-shrink-0 snap-start w-full max-w-[320px] cursor-pointer';
+        c.style.cssText=`background:${gradients[i%gradients.length]};padding:2px`;
+        const inr=document.createElement('div');
+        inr.className='bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
+        const pano=pub.cards.find(x=>x.title.startsWith('📖'));
+        inr.innerHTML=`
           <h3 class="font-semibold text-xl text-center mb-2">${pub.title}</h3>
           ${pano?`<p class="text-base text-center">${pano.contentBlocks[0].content[0]}</p>`:''}`;
-        card.appendChild(inner);
+        c.appendChild(inr);
         const btn=document.createElement('button');
         btn.className='expander'; btn.textContent='⤢';
         btn.onclick=e=>{ e.stopPropagation(); openExpanded(pub); };
-        card.appendChild(btn);
-        card.onclick=()=>openExpanded(pub);
-        strip.appendChild(card);
+        c.appendChild(btn);
+        c.onclick=()=>openExpanded(pub);
+        strip.appendChild(c);
       });
       return strip;
     }
 
     function makeBookStrip(quotes){
       const strip=document.createElement('div');
-      strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x pb-2 mt-4';
+      strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2 mt-4';
       quotes.forEach(b=>{
         const q=document.createElement('div');
-        q.className='flex-shrink-0 snap-start bg-white rounded-xl p-4 shadow-neu max-w-[280px] text-[15px] cursor-pointer';
+        q.className='flex-shrink-0 snap-start bg-white rounded-xl p-5 shadow-neu max-w-[300px] text-[15px] break-words cursor-pointer';
         if(b.url) q.onclick=()=>window.open(b.url,'_blank');
         q.innerHTML=`
-          <p class="font-medium truncate">&ldquo;${b.text}&rdquo;</p>
-          <p class="text-xs text-gray-600 mt-1">${b.book} — ${b.author}</p>`;
+          <p class="font-medium">&ldquo;${b.text}&rdquo;</p>
+          <p class="text-xs text-gray-600 mt-2">${b.book} — ${b.author}</p>`;
         strip.appendChild(q);
       });
       return strip;
     }
 
     function makeBookVertical(quotes){
-      const container=document.createElement('div');
-      container.className='space-y-4';
+      const c=document.createElement('div');
+      c.className='space-y-4';
       quotes.forEach(b=>{
         const q=document.createElement('div');
-        q.className='bg-white rounded-xl p-5 shadow-neu text-[15px] cursor-pointer';
+        q.className='bg-white rounded-xl p-5 shadow-neu text-[15px] break-words cursor-pointer';
         if(b.url) q.onclick=()=>window.open(b.url,'_blank');
         q.innerHTML=`
           <h3 class="font-semibold text-lg mb-1">${b.title}</h3>
-          <p class="truncate">&ldquo;${b.text}&rdquo;</p>
+          <p>&ldquo;${b.text}&rdquo;</p>
           <p class="text-sm text-gray-600 mt-2">${b.book} — ${b.author}</p>`;
-        container.appendChild(q);
+        c.appendChild(q);
       });
-      return container;
+      return c;
     }
 
     function makePubCard(pub, scList, idx, cond, term, showTags){
@@ -231,7 +253,7 @@
             ${sc.contentBlocks[0].content.map(l=>`<p class="text-base">${cond?hl(l,term):l}</p>`).join('')}
             ${showTags?`<div class="flex flex-wrap gap-1 mt-1">${sc.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>`:''}
           </div>
-          ${i<scList.length-1?'<hr class="border-t my-3"/>':''}`;
+          ${i<scList.length-1?'<hr class="border-t my-3"/':''}`;
       });
       inner.onclick=()=>window.open(pub.substackLink,'_blank');
       card.appendChild(inner);
@@ -239,17 +261,14 @@
     }
 
     function openExpanded(pub){
-      // remove previous
-      document.querySelectorAll('.exp-card').forEach(el=>el.remove());
+      document.querySelectorAll('.exp-card').forEach(x=>x.remove());
       $('#pubStrip')?.classList.add('hidden');
-
       const wrap=$('#app');
       const idx=DATA.publications.findIndex(p=>p.title===pub.title);
       const sc=pub.cards.filter(c=>!c.title.startsWith('📖'));
       const card=makePubCard(pub,sc,idx,false,'',false);
       card.classList.add('exp-card');
       wrap.prepend(card);
-
       const close=document.createElement('button');
       close.textContent='✕'; close.className='absolute top-2 right-2 text-2xl';
       close.onclick=()=>{
@@ -261,7 +280,6 @@
       };
       card.style.position='relative';
       card.appendChild(close);
-
       requestAnimationFrame(()=>card.classList.add('enter'));
       card.scrollIntoView({behavior:'smooth',block:'center'});
     }
