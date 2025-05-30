@@ -1,4 +1,73 @@
 [{
+    "title": "Sull'Agenzia Umana e la Superagenzia",
+    "text": "L'agenzia è la capacità di scegliere e agire. Quando l'IA potenzia milioni di individui, nasce la 'superagenzia': impatti che si propagano anche a chi non usa direttamente l'IA. È la visione di una società potenziata dalla distribuzione diffusa dell’intelligenza.",
+    "book": "Superagency",
+    "author": "Reid Hoffman, Greg Beato",
+    "url": "https://amzn.to/450ZolV"
+  },
+  {
+    "title": "Sulle Paure e Preoccupazioni Riguardo all'IA",
+    "text": "Ogni tecnologia ha generato timori: distruzione della famiglia, privacy, controllo. L’IA è vista da alcuni come rischio esistenziale, ma la storia insegna che l’informazione condivisa è spesso liberatoria, non opprimente.",
+    "book": "Superagency",
+    "author": "Reid Hoffman, Greg Beato",
+    "url": "https://amzn.to/450ZolV"
+  },
+  {
+    "title": "Sull'Implementazione Iterativa dell'IA",
+    "text": "OpenAI adotta l'approccio dell’'implementazione iterativa': piccoli rilasci con feedback costante. È il metodo che ha reso il web un sistema migliorabile e sicuro. L’accesso diffuso accelera l’apprendimento collettivo.",
+    "book": "Superagency",
+    "author": "Reid Hoffman, Greg Beato",
+    "url": "https://amzn.to/450ZolV"
+  },
+  {
+    "title": "Sul Potenziamento e l'Accessibilità dell'IA",
+    "text": "L'IA funziona come un 'GPS informativo', guidando attraverso il caos informativo. Democratizza la creazione di contenuti, permettendo a tutti di accedere a nuove possibilità: scrittura, arte, codice, musica, video. Potenzia le potenzialità umane.",
+    "book": "Superagency",
+    "author": "Reid Hoffman, Greg Beato",
+    "url": "https://amzn.to/450ZolV"
+  },
+  {
+    "title": "Sui Dati e la Conoscenza",
+    "text": "Viviamo nell'era dell'eccesso informativo. La chiave è trasformare i Big Data in Big Knowledge, grazie a IA addestrate su dataset enormi come Common Crawl e Pile, che aggregano miliardi di fonti per potenziare la comprensione.",
+    "book": "Superagency",
+    "author": "Reid Hoffman, Greg Beato",
+    "url": "https://amzn.to/450ZolV"
+  },
+  {
+    "title": "Sull'IA e la Salute Mentale",
+    "text": "Con 50.000 suicidi annui solo negli USA e un costo globale stimato in 6 trilioni entro il 2030, l’IA può assistere la salute mentale. Dalla stesura di note cliniche alla valutazione dei tirocinanti, fino al supporto diretto tramite LLM.",
+    "book": "Superagency",
+    "author": "Reid Hoffman, Greg Beato",
+    "url": "https://amzn.to/450ZolV"
+  },
+  {
+    "title": "Sull'Economia delle Piattaforme Digitali e il 'Commons Privato'",
+    "text": "Piattaforme come Google Maps o Yelp rappresentano un 'commons privato': gli utenti contribuiscono, le piattaforme centralizzano, ma il valore percepito è molto alto (12x nel caso di Facebook). Democratizzano accesso e opportunità, pur restando centralizzate.",
+    "book": "Superagency",
+    "author": "Reid Hoffman, Greg Beato",
+    "url": "https://amzn.to/450ZolV"
+  },
+  {
+    "title": "Sull'Evoluzione della Regolamentazione e Innovazione 'Permissionless'",
+    "text": "L’innovazione 'permissionless' – vista con CRISPR, IA e veicoli elettrici – si sviluppa fuori dai canali tradizionali. Non regolamentazione preventiva, ma accountability a posteriori: il web ne è un esempio. Ma il principio di precauzione sfida questo modello.",
+    "book": "Superagency",
+    "author": "Reid Hoffman, Greg Beato",
+    "url": "https://amzn.to/450ZolV"
+  },
+  {
+    "title": "Sul Confronto tra IA e Precedenti Rivoluzioni Tecnologiche (Auto, GPS)",
+    "text": "Come l’auto o il GPS, anche l’IA ha avuto inizio tra dubbi e rischi. Ma ha il potenziale per moltiplicare l’agenzia individuale e produrre enormi benefici: il GPS ha generato 1,4 trilioni $ di valore dal 1984 al 2017.",
+    "book": "Superagency",
+    "author": "Reid Hoffman, Greg Beato",
+    "url": "https://amzn.to/450ZolV"
+  },
+  {
+    "title": "Sull'IA come Estensione della Volontà Umana e la Collaborazione Umano-IA",
+    "text": "L’IA è estensione della volontà umana: amplifica le intenzioni e l’efficacia delle azioni. Con minima supervisione, può svolgere più compiti contemporaneamente. La collaborazione Umano–IA migliora i risultati, specialmente per chi parte da svantaggio.",
+    "book": "Superagency",
+    "author": "Reid Hoffman, Greg Beato",
+    "url": "https://amzn.to/450ZolV"
+  },{
     "title": "Sulle DAOs (Definizione e Caratteristiche Fondamentali)",
     "text": "Le DAO sono 'una chat di gruppo con un conto in banca': strutture decentralizzate, senza gerarchie, che abilitano decisioni collettive, accesso globale, resistenza alla censura e modelli economici interni. Sono infrastrutture di coordinazione orizzontale per creare valore condiviso.",
     "book": "How to DAO",
