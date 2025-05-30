@@ -69,6 +69,8 @@
       <span class="pill" data-filter="🥽">🥽</span>
       <span class="pill" data-filter="👥">👥</span>
       <span class="pill" data-filter="💆">💆</span>
+      <!-- new book‐quotes filter -->
+      <span class="pill" data-filter="📖">📖</span>
     </div>
   </section>
 
@@ -102,17 +104,16 @@
     const hl=(t,s)=>s?t.replace(new RegExp(`(${s})`,'gi'),'<mark>$1</mark>'):t;
 
     $('#filterRow').addEventListener('click',e=>{
-      const f=e.target.dataset.filter;
-      if(!f) return;
+      const f=e.target.dataset.filter; if(!f) return;
       filters.has(f)?filters.delete(f):filters.add(f);
       e.target.classList.toggle('active');
       render();
     });
     $('#searchInput').oninput=render;
     $('#langToggle').onclick=()=>{
-      LANG=LANG==='it'?'en':'it';
-      document.documentElement.lang=LANG;
-      $('#langToggle').textContent=LANG==='it'?'🇬🇧 english':'🇮🇹 italiano';
+      LANG = LANG==='it' ? 'en' : 'it';
+      document.documentElement.lang = LANG;
+      $('#langToggle').textContent = LANG==='it' ? '🇬🇧 english' : '🇮🇹 italiano';
       loadAll();
     };
 
@@ -127,16 +128,25 @@
 
     function render(){
       const term=$('#searchInput').value.toLowerCase();
-      const activeS=term.length>0, activeF=filters.size>0;
+      const activeS=term.length>0;
+      const activeF=filters.size>0;
+      const bookFilter=filters.has('📖');
       const wrap=$('#app'); wrap.innerHTML='';
 
-      // show the horizontal publication strip only when NOT searching or filtering
-      if(!activeS && !activeF){
-        wrap.appendChild(makePubStrip(DATA.publications));
+      // 1) If book‐filter only → show vertical list of book quotes
+      if(bookFilter && !activeS){
+        wrap.appendChild(makeBookVertical(BOOKS));
         return;
       }
 
-      // when searching/filtering: show only publication cards (no notes, no books)
+      // 2) Base view (no search & no filters except possibly book pill inactive) 
+      if(!activeS && !activeF){
+        wrap.appendChild(makePubStrip(DATA.publications));
+        wrap.appendChild(makeBookStrip(BOOKS));
+        return;
+      }
+
+      // 3) Search/other filters → show only publication cards
       DATA.publications.forEach((pub,idx)=>{
         let vis = pub.cards
           .filter(c=>!c.title.startsWith('📖'))
@@ -167,17 +177,45 @@
           <h3 class="font-semibold text-xl text-center mb-2">${pub.title}</h3>
           ${pano?`<p class="text-base text-center">${pano.contentBlocks[0].content[0]}</p>`:''}`;
         card.appendChild(inner);
-
-        // expander button
         const btn=document.createElement('button');
         btn.className='expander'; btn.textContent='⤢';
         btn.onclick=e=>{ e.stopPropagation(); openExpanded(pub); };
         card.appendChild(btn);
-
         card.onclick=()=>openExpanded(pub);
         strip.appendChild(card);
       });
       return strip;
+    }
+
+    function makeBookStrip(quotes){
+      const strip=document.createElement('div');
+      strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x pb-2 mt-4';
+      quotes.forEach(b=>{
+        const q=document.createElement('div');
+        q.className='flex-shrink-0 snap-start bg-white rounded-xl p-4 shadow-neu max-w-[280px] text-[15px] cursor-pointer';
+        if(b.url) q.onclick=()=>window.open(b.url,'_blank');
+        q.innerHTML=`
+          <p class="font-medium truncate">&ldquo;${b.text}&rdquo;</p>
+          <p class="text-xs text-gray-600 mt-1">${b.book} — ${b.author}</p>`;
+        strip.appendChild(q);
+      });
+      return strip;
+    }
+
+    function makeBookVertical(quotes){
+      const container=document.createElement('div');
+      container.className='space-y-4';
+      quotes.forEach(b=>{
+        const q=document.createElement('div');
+        q.className='bg-white rounded-xl p-5 shadow-neu text-[15px] cursor-pointer';
+        if(b.url) q.onclick=()=>window.open(b.url,'_blank');
+        q.innerHTML=`
+          <h3 class="font-semibold text-lg mb-1">${b.title}</h3>
+          <p class="truncate">&ldquo;${b.text}&rdquo;</p>
+          <p class="text-sm text-gray-600 mt-2">${b.book} — ${b.author}</p>`;
+        container.appendChild(q);
+      });
+      return container;
     }
 
     function makePubCard(pub, scList, idx, cond, term, showTags){
@@ -201,7 +239,7 @@
     }
 
     function openExpanded(pub){
-      // remove any existing expanded card
+      // remove previous
       document.querySelectorAll('.exp-card').forEach(el=>el.remove());
       $('#pubStrip')?.classList.add('hidden');
 
@@ -212,7 +250,6 @@
       card.classList.add('exp-card');
       wrap.prepend(card);
 
-      // add close button
       const close=document.createElement('button');
       close.textContent='✕'; close.className='absolute top-2 right-2 text-2xl';
       close.onclick=()=>{
@@ -225,31 +262,11 @@
       card.style.position='relative';
       card.appendChild(close);
 
-      // append book quotes under the expanded pub
-      const quotesContainer = document.createElement('div');
-      quotesContainer.className='mt-4 space-y-3';
-      // randomize order
-      [...BOOKS].sort(()=>Math.random()-0.5).forEach(b=>{
-        const qb=document.createElement('div');
-        qb.className='rounded-lg border-2 border-indigo-500 bg-white p-4 shadow-neu cursor-pointer text-[15px]';
-        if(b.url) qb.onclick=()=>window.open(b.url,'_blank');
-        qb.innerHTML=`
-          <h4 class="font-semibold text-xl mb-1">${b.title}</h4>
-          <p class="text-lg leading-tight">${b.text}</p>
-          <p class="text-sm text-gray-600 mt-2">${b.book} — ${b.author}</p>`;
-        quotesContainer.appendChild(qb);
-      });
-      card.appendChild(quotesContainer);
-
-      // animate in
       requestAnimationFrame(()=>card.classList.add('enter'));
-      card.scrollIntoView({behavior:'smooth', block:'center'});
+      card.scrollIntoView({behavior:'smooth',block:'center'});
     }
 
     loadAll();
   </script>
 </body>
 </html>
-
-
-
