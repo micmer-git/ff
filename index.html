@@ -10,48 +10,57 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind (CDN build) -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['"Google Sans"', 'Roboto', 'ui-sans-serif'] },
-          colors:     { ioBg:  '#F6F9FE' },
-          boxShadow:  { neu:   '4px 4px 8px rgba(0,0,0,.06)' }
+          fontFamily:{ sans:['"Google Sans"','Roboto','ui-sans-serif'] },
+          colors:{ ioBg:'#F6F9FE' },
+          boxShadow:{ neu:'4px 4px 8px rgba(0,0,0,.06)' }
         }
       }
     };
   </script>
 
   <style>
-    body { background: #F6F9FE; }
-    mark { background: #FFEB3B66; padding: 0 2px; border-radius: 3px; }
+    body { background:#F6F9FE }
+    mark { background:#FFEB3B66; padding:0 2px; border-radius:3px }
     .pill, .tag {
-      background: #fff;
-      box-shadow: 0 1px 4px rgba(0,0,0,.1);
-      padding: 4px 12px;
-      border-radius: 9999px;
-      user-select: none;
-      transition: .15s;
+      background:#fff;
+      box-shadow:0 1px 4px rgba(0,0,0,.1);
+      padding:4px 12px;
+      border-radius:9999px;
+      user-select:none;
+      transition:.15s;
     }
-    .pill { cursor: pointer; font-size: 1.1rem; }
-    .pill.active { outline: 2px solid #38bdf8; }
-    .hide-scrollbar::-webkit-scrollbar { display: none }
-    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none }
-    .scroll-snap-x { scroll-snap-type: x mandatory }
-    .snap-start { scroll-snap-align: start }
+    .pill { cursor:pointer; font-size:1.1rem }
+    .pill.active { outline:2px solid #38bdf8 }
+    .hide-scrollbar::-webkit-scrollbar { display:none }
+    .hide-scrollbar { -ms-overflow-style:none; scrollbar-width:none }
+    .scroll-snap-x { scroll-snap-type:x mandatory }
+    .snap-start { scroll-snap-align:start }
 
-    /* card open / close animation */
-    .exp-card { transform: scale(.95); opacity:0; transition: transform .35s ease, opacity .35s ease }
-    .exp-card.enter { transform: scale(1); opacity:1 }
-    .exp-card.exit  { transform: scale(.9); opacity:0 }
-    .expander { position:absolute; right:10px; bottom:10px; background:#fff; border-radius:9999px; padding:6px 9px; font-size:18px; box-shadow:0 1px 4px rgba(0,0,0,.15); cursor:pointer }
+    .exp-card {
+      transform:scale(.95);
+      opacity:0;
+      transition:transform .35s ease,opacity .35s ease
+    }
+    .exp-card.enter { transform:scale(1); opacity:1 }
+    .exp-card.exit  { transform:scale(.9); opacity:0 }
+    .expander {
+      position:absolute; right:10px; bottom:10px;
+      background:#fff; border-radius:9999px;
+      padding:6px 9px; font-size:18px;
+      box-shadow:0 1px 4px rgba(0,0,0,.15);
+      cursor:pointer
+    }
 
-    /* book/notes card text wrapping & sizing */
-    .book-card p.quote { font-size: 1rem; }
-    .book-card p.source { font-size: .875rem; color: #555; }
-    .note-card h3, .note-card p { font-size: .875rem; }
+    /* note cards */
+    .note-card h3 { font-size:1rem; }
+    .note-card .tags { font-size:1rem; }
+    .note-card .source { font-size:.875rem; color:#555 }
   </style>
 </head>
 
@@ -64,7 +73,6 @@
 </header>
 
 <section class="max-w-3xl mx-auto px-4 space-y-3">
-  <!-- Search + main filters -->
   <div class="flex items-center gap-3">
     <div class="relative flex-grow">
       <input id="searchInput" placeholder="search / cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400" />
@@ -76,8 +84,6 @@
       <span class="pill" data-filter="🎶">🎶</span>
     </div>
   </div>
-
-  <!-- Tag filters -->
   <div id="tagFilterRow" class="flex flex-wrap justify-center gap-2 text-xl">
     <span class="pill" data-filter="💻">💻</span>
     <span class="pill" data-filter="🍃">🍃</span>
@@ -104,15 +110,13 @@
 </footer>
 
 <script>
-/* ---------- globals ---------- */
-let LANG = 'it';
-const PATH = { it:'newsletter_data.json', en:'newsletter_data_en.json' };
-const NOTES_PATH = 'notes.json';
-const BOOKS_PATH = 'books.json';
+let LANG='it';
+const PATH={it:'newsletter_data.json',en:'newsletter_data_en.json'};
+const NOTES_PATH='notes.json', BOOKS_PATH='books.json';
 
 let DATA, NOTES, BOOKS;
-const filters = new Set();
-const gradients = [
+const filters=new Set();
+const gradients=[
   'linear-gradient(135deg,#38bdf8,#c084fc)',
   'linear-gradient(135deg,#f472b6,#facc15)',
   'linear-gradient(135deg,#34d399,#60a5fa)',
@@ -123,266 +127,243 @@ const gradients = [
   'linear-gradient(135deg,#fda4af,#c4b5fd)'
 ];
 
-/* ---------- helpers ---------- */
-const match = (t,s)=>t.toLowerCase().includes(s);
-const hl    = (t,s)=>s? t.replace(new RegExp(`(${s})`,'gi'),'<mark>$1</mark>') : t;
-const $     = s=>document.querySelector(s);
+const $=s=>document.querySelector(s);
+const match=(t,s)=>t.toLowerCase().includes(s);
+const hl=(t,s)=>s?t.replace(new RegExp(`(${s})`,'gi'),'<mark>$1</mark>'):t;
 
-/* ---------- listeners ---------- */
-$('#mainFilterRow').addEventListener('click', e=>{
+$('#mainFilterRow').addEventListener('click',e=>{
   if(!e.target.dataset.filter) return;
-  const f = e.target.dataset.filter;
+  const f=e.target.dataset.filter;
   filters.has(f)?filters.delete(f):filters.add(f);
   e.target.classList.toggle('active');
   render();
 });
-$('#tagFilterRow').addEventListener('click', e=>{
+$('#tagFilterRow').addEventListener('click',e=>{
   if(!e.target.dataset.filter) return;
-  const f = e.target.dataset.filter;
+  const f=e.target.dataset.filter;
   filters.has(f)?filters.delete(f):filters.add(f);
   e.target.classList.toggle('active');
   render();
 });
-$('#searchInput').oninput = render;
-$('#langToggle').onclick = ()=>{
-  LANG = LANG==='it'?'en':'it';
-  $('#langToggle').textContent = LANG==='it'?'🇬🇧 english':'🇮🇹 italiano';
-  document.documentElement.lang = LANG;
+$('#searchInput').oninput=render;
+$('#langToggle').onclick=()=>{
+  LANG=LANG==='it'?'en':'it';
+  $('#langToggle').textContent=LANG==='it'?'🇬🇧 english':'🇮🇹 italiano';
+  document.documentElement.lang=LANG;
   loadAll();
 };
 
-/* ---------- load JSON ---------- */
 async function loadAll(){
-  [DATA, NOTES, BOOKS] = await Promise.all([
+  [DATA,NOTES,BOOKS]=await Promise.all([
     fetch(PATH[LANG]).then(r=>r.json()),
     fetch(NOTES_PATH).then(r=>r.json()),
     fetch(BOOKS_PATH).then(r=>r.json())
   ]);
-
-  // shuffle sections
   DATA.publications.sort(()=>Math.random()-0.5);
   BOOKS.sort(()=>Math.random()-0.5);
-  NOTES.notes && NOTES.notes.sort(()=>Math.random()-0.5);
+  NOTES.notes.sort(()=>Math.random()-0.5);
 
   filters.clear();
   document.querySelectorAll('.pill.active').forEach(p=>p.classList.remove('active'));
-  $('#searchInput').value = '';
+  $('#searchInput').value='';
   render();
 }
 
-/* ---------- render ---------- */
 function render(){
-  const term = $('#searchInput').value.toLowerCase();
-  const activeS = term.length > 0;
-  const activeF = filters.size > 0;
-  const showBooks = filters.has('📚') && !activeS;
-  const showNotes = filters.has('🎶') && !activeS;
-  const showPubs  = filters.has('🎼') || (!showBooks && !showNotes);
+  const term=$('#searchInput').value.toLowerCase();
+  const activeS=term.length>0;
+  const activeF=filters.size>0;
+  const mainSel=[...filters].filter(f=>['🎼','📚','🎶'].includes(f));
+  const wrap=$('#app'); wrap.innerHTML='';
 
-  const wrap = $('#app');
-  wrap.innerHTML = '';
-
-  // SEARCH MODE: only matching pubs
+  // SEARCH only pubs
   if(activeS){
-    const matched = [];
     DATA.publications.forEach((pub,pi)=>{
       pub.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>{
-        const txt = c.title + ' ' + c.contentBlocks[0].content.join(' ');
-        if(txt.toLowerCase().includes(term) || pub.title.toLowerCase().includes(term)){
-          matched.push({pub,pi,c});
+        const txt=c.title+' '+c.contentBlocks[0].content.join(' ');
+        if(match(pub.title,term)||match(txt,term)){
+          wrap.appendChild(makePubCard(pub,c,pi,term));
         }
       });
     });
-    if(matched.length){
-      matched.forEach(({pub,pi,c})=>{
-        const card = makePubCard(pub, c, pi, term);
-        wrap.appendChild(card);
-      });
-    }
     return;
   }
 
-  // DEFAULT / FILTER MODE
-  if(showPubs){
-    wrap.appendChild(makePubStrip(DATA.publications));
-  }
-  if(showBooks){
+  // ONLY books
+  if(mainSel.length===1 && mainSel[0]==='📚'){
     wrap.appendChild(makeBooksList(BOOKS));
-  } else {
-    // horizontal books under pubs
-    wrap.appendChild(makeBooksStrip(BOOKS,false,''));
+    return;
   }
-  if(showNotes){
+  // ONLY notes
+  if(mainSel.length===1 && mainSel[0]==='🎶'){
     wrap.appendChild(makeNotesList(NOTES.notes));
-  } else {
-    // horizontal notes
-    wrap.appendChild(makeNotesStrip(NOTES.notes,false,''));
+    return;
   }
+  // DEFAULT: pubs + horizontal books + horizontal notes
+  wrap.appendChild(makePubStrip(DATA.publications));
+  wrap.appendChild(makeBooksStrip(BOOKS));
+  wrap.appendChild(makeNotesStrip(NOTES.notes));
 }
 
-/* ---------- components ---------- */
+// ----- publications -----
 function makePubStrip(list){
-  const strip = document.createElement('div');
-  strip.className = 'flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  const strip=document.createElement('div');
+  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
   list.forEach((pub,i)=>{
-    const card = document.createElement('div');
-    card.className = 'relative rounded-xl flex-shrink-0 snap-start overflow-hidden cursor-pointer w-full max-w-[320px]';
-    card.style.background = gradients[i%gradients.length];
-    card.style.padding    = '2px';
+    const card=document.createElement('div');
+    card.className='relative rounded-xl flex-shrink-0 snap-start overflow-hidden cursor-pointer w-full max-w-[320px]';
+    card.style.background=gradients[i%gradients.length]; card.style.padding='2px';
 
-    const inr = document.createElement('div');
-    inr.className = 'bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
-    inr.innerHTML = `<h3 class='font-semibold text-xl mb-2 text-center break-words'>${pub.title}</h3>`;
+    const inr=document.createElement('div');
+    inr.className='bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
+    inr.innerHTML=`<h3 class='font-semibold text-xl mb-2 text-center'>${pub.title}</h3>`;
     card.appendChild(inr);
 
-    const btn = document.createElement('button');
+    const btn=document.createElement('button');
     btn.className='expander'; btn.textContent='⤢';
     btn.onclick=e=>{ e.stopPropagation(); openExpanded(pub); };
     card.appendChild(btn);
 
-    card.onclick = ()=>openExpanded(pub);
+    card.onclick=()=>openExpanded(pub);
     strip.appendChild(card);
   });
   return strip;
 }
 
-function makePubCard(pub, c, idx, term){
-  // single subcard
-  const card = document.createElement('div');
-  card.className = 'rounded-xl overflow-hidden mb-4';
-  card.style.cssText = `background:${gradients[idx%gradients.length]};padding:2px`;
-  const inner = document.createElement('div');
+function makePubCard(pub,c,idx,term){
+  const card=document.createElement('div');
+  card.className='rounded-xl overflow-hidden mb-4';
+  card.style.cssText=`background:${gradients[idx%gradients.length]};padding:2px`;
+  const inner=document.createElement('div');
   inner.className='bg-white rounded-xl p-5 shadow-neu';
-  inner.innerHTML = `
+  inner.innerHTML=`
     <h3 class='font-semibold mb-1'>${hl(c.title,term)}</h3>
     ${c.contentBlocks[0].content.map(l=>`<p class='text-base'>${hl(l,term)}</p>`).join('')}
     <div class='flex flex-wrap gap-1 mt-1'>${(c.tags||[]).map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
   `;
-  inner.onclick = ()=>window.open(pub.substackLink,'_blank');
+  inner.onclick=()=>window.open(pub.substackLink,'_blank');
   card.appendChild(inner);
   return card;
 }
 
 function openExpanded(pub){
-  // remove existing
   document.querySelectorAll('.exp-card').forEach(c=>c.remove());
   $('#pubStrip')?.classList.add('hidden');
 
-  const idx = DATA.publications.findIndex(p=>p.title===pub.title);
-  const scList = pub.cards.filter(c=>!c.title.startsWith('📖'));
-  const container = document.createElement('div');
-  container.className='exp-card rounded-xl overflow-hidden mb-4';
-  container.style.cssText = `background:${gradients[idx%gradients.length]};padding:2px;`;
-  const inner = document.createElement('div');
+  const idx=DATA.publications.findIndex(p=>p.title===pub.title);
+  const sc=pub.cards.filter(c=>!c.title.startsWith('📖'));
+  const cont=document.createElement('div');
+  cont.className='exp-card rounded-xl overflow-hidden mb-4';
+  cont.style.cssText=`background:${gradients[idx%gradients.length]};padding:2px`;
+  const inner=document.createElement('div');
   inner.className='bg-white rounded-xl p-5 shadow-neu';
-  container.appendChild(inner);
-
-  scList.forEach((c,i)=>{
-    inner.innerHTML += `
+  sc.forEach((c,i)=>{
+    inner.innerHTML+=`
       <div>
         <h3 class='font-semibold mb-1'>${c.title}</h3>
         ${c.contentBlocks[0].content.map(l=>`<p class='text-base'>${l}</p>`).join('')}
       </div>
-      ${i<scList.length-1?'<hr class="border-t my-3"/>':''}
+      ${i<sc.length-1?'<hr class="border-t my-3"/>':''}
     `;
   });
+  cont.appendChild(inner);
 
-  const close = document.createElement('button');
+  const close=document.createElement('button');
   close.textContent='✕';
   close.className='absolute top-2 right-2 text-2xl';
-  close.onclick = ()=>{
-    container.classList.remove('enter');
-    container.classList.add('exit');
+  close.onclick=()=>{
+    cont.classList.remove('enter'); cont.classList.add('exit');
     setTimeout(()=>{
-      container.remove();
-      $('#pubStrip')?.classList.remove('hidden');
+      cont.remove(); $('#pubStrip')?.classList.remove('hidden');
     },350);
   };
-  container.style.position='relative';
-  container.appendChild(close);
+  cont.style.position='relative';
+  cont.appendChild(close);
 
-  document.querySelector('#app').prepend(container);
-  requestAnimationFrame(()=>container.classList.add('enter'));
-  container.scrollIntoView({behavior:'smooth',block:'center'});
+  document.querySelector('#app').prepend(cont);
+  requestAnimationFrame(()=>cont.classList.add('enter'));
+  cont.scrollIntoView({behavior:'smooth',block:'center'});
 }
 
-function makeBooksStrip(list, showHeader, term){
-  const strip = document.createElement('div');
-  strip.className = 'flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+// ----- books -----
+function makeBooksStrip(list){
+  const strip=document.createElement('div');
+  strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
   list.forEach(b=>{
-    const card = document.createElement('div');
+    const card=document.createElement('div');
     card.className='book-card rounded-xl border-2 border-indigo-500 flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
     card.style.background='#fff';
-    card.onclick = ()=>b.url && window.open(b.url,'_blank');
-    const inner = document.createElement('div');
-    inner.className='p-5 flex flex-col justify-between min-h-[180px]';
-    inner.innerHTML=`
-      <h3 class='font-semibold text-lg mb-1 break-words'>${hl(b.title,term)}</h3>
-      <p class='quote'>&ldquo;${hl(b.text,term)}&rdquo;</p>
-      <p class='source mt-2'>${hl(b.book,term)} — ${hl(b.author,term)}</p>
+    if(b.url) card.onclick=()=>window.open(b.url,'_blank');
+    const inr=document.createElement('div');
+    inr.className='p-5 flex flex-col justify-between min-h-[180px]';
+    inr.innerHTML=`
+      <h3 class='font-semibold text-lg mb-1'>${b.title}</h3>
+      <p class='quote'>&ldquo;${b.text}&rdquo;</p>
+      <p class='source mt-2'>${b.book} — ${b.author}</p>
     `;
-    card.appendChild(inner);
+    card.appendChild(inr);
     strip.appendChild(card);
   });
   return strip;
 }
 
 function makeBooksList(list){
-  const container = document.createElement('div');
-  container.className='space-y-4';
+  const con=document.createElement('div'); con.className='space-y-4';
   list.forEach(b=>{
-    const card = document.createElement('div');
+    const card=document.createElement('div');
     card.className='book-card rounded-xl border-2 border-indigo-500 p-4';
     card.style.background='#fff';
-    card.onclick = ()=>b.url && window.open(b.url,'_blank');
+    if(b.url) card.onclick=()=>window.open(b.url,'_blank');
     card.innerHTML=`
       <h3 class='font-semibold text-lg mb-1'>${b.title}</h3>
       <p class='quote'>&ldquo;${b.text}&rdquo;</p>
       <p class='source mt-2'>${b.book} — ${b.author}</p>
     `;
-    container.appendChild(card);
+    con.appendChild(card);
   });
-  return container;
+  return con;
 }
 
+// ----- notes -----
 function makeNotesStrip(list){
-  const strip = document.createElement('div');
+  const strip=document.createElement('div');
   strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
   list.forEach(n=>{
-    const card = document.createElement('div');
+    const card=document.createElement('div');
     card.className='note-card rounded-xl border-2 border-black flex-shrink-0 w-full max-w-[320px] snap-start overflow-hidden';
     card.style.background='#fff';
-    card.onclick = ()=>n.url && window.open(n.url,'_blank');
-    const inner = document.createElement('div');
-    inner.className='p-5 flex flex-col justify-between min-h-[160px]';
-    inner.innerHTML=`
+    if(n.url) card.onclick=()=>window.open(n.url,'_blank');
+    const inr=document.createElement('div');
+    inr.className='p-5 flex flex-col justify-between min-h-[160px]';
+    inr.innerHTML=`
       <h3 class='font-semibold mb-1'>${n.title}</h3>
-      <p>${n.description||''}</p>
+      <div class='tags flex flex-wrap gap-1'>${n.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+      <p class='source mt-2'>${new URL(n.url).hostname.replace(/^www\./,'')}</p>
     `;
-    card.appendChild(inner);
+    card.appendChild(inr);
     strip.appendChild(card);
   });
   return strip;
 }
 
 function makeNotesList(list){
-  const container = document.createElement('div');
-  container.className='space-y-4';
+  const con=document.createElement('div'); con.className='space-y-4';
   list.forEach(n=>{
-    const card = document.createElement('div');
+    const card=document.createElement('div');
     card.className='note-card rounded-xl border-2 border-black p-4';
     card.style.background='#fff';
-    card.onclick = ()=>n.url && window.open(n.url,'_blank');
+    if(n.url) card.onclick=()=>window.open(n.url,'_blank');
     card.innerHTML=`
       <h3 class='font-semibold mb-1'>${n.title}</h3>
-      <p>${n.description||''}</p>
+      <div class='tags flex flex-wrap gap-1'>${n.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+      <p class='source mt-2'>${new URL(n.url).hostname.replace(/^www\./,'')}</p>
     `;
-    container.appendChild(card);
+    con.appendChild(card);
   });
-  return container;
+  return con;
 }
 
-/* ---------- init ---------- */
+// start
 loadAll();
 </script>
 </body>
