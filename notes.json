@@ -1,6 +1,694 @@
 {
   "notes": [
     {
+    "id": 500,
+    "tags": ["💻", "👥"],
+    "title": "Tendenza a tornare ai vecchi telefoni e allo stile vintage/retrò/analogico",
+    "url": "https://www.itsnicethat.com/articles/heineken-bodega-the-boring-phone-advertising-project-240424",
+    "description": "Quale è l'attrazione dei telefoni e delle tecnologie \"noiosissime\"? Perché le persone stanno tornando ai telefoni e agli stili di vita più semplici e vintage?",
+    "hashtags": "#Tecnologia #Vintage #Tendenze"
+  },
+  {
+    "id": 501,
+    "tags": ["💻"],
+    "title": "Redwood Materials espande il riciclaggio delle batterie EV riducendo le emissioni di carbonio",
+    "url": "https://www.bloomberg.com/news/features/2024-04-18/redwood-material-s-nevada-ev-battery-recycling-facility-attempts-to-rival-china",
+    "description": "Perché il riciclaggio delle batterie sta diventando così importante? Quali sono i vantaggi ambientali del riciclaggio delle batterie per veicoli elettrici?",
+    "hashtags": "#Riciclaggio #Batterie #Emissioni"
+  },
+  {
+    "id": 502,
+    "tags": ["🍃", "👥"],
+    "title": "Stima di 4 miliardi di tonnellate di CO2 in più con la rielezione di Trump entro il 2030",
+    "url": "https://www.carbonbrief.org/analysis-trump-election-win-could-add-4bn-tonnes-to-us-emissions-by-2030/",
+    "description": "Quali sono gli impatti potenziali dell'elezione di Trump sulle emissioni di gas serra? Come potrebbero le politiche di Trump influenzare gli obiettivi climatici degli Stati Uniti?",
+    "hashtags": "#Clima #Emissioni #Politica"
+  },
+  {
+    "id": 503,
+    "tags": ["🍃", "👥"],
+    "title": "Studio sull'ottimizzazione degli hub per la raccolta delle demolizioni di case nell'urbanistica",
+    "url": "https://www.nature.com/articles/s42949-024-00153-0",
+    "description": "Come possono essere ottimizzati gli hub di demolizione nelle aree urbane? Quali sono i vantaggi di una pianificazione efficiente del ciclo di vita degli edifici?",
+    "hashtags": "#Urbanistica #Riciclaggio #Sostenibilità"
+  },
+  {
+    "id": 504,
+    "tags": ["💻", "🚕"],
+    "title": "Ricerca MIT: distanze di pendolarismo standard indipendentemente dalle dimensioni della città",
+    "url": "https://archinect.com/news/article/150334233/mit-research-finds-that-commuting-distances-are-standard-regardless-of-city-size",
+    "description": "Perché le distanze di pendolarismo rimangono simili tra città di diverse dimensioni? Come influisce questo sui modelli di trasporto e sulla pianificazione urbana?",
+    "hashtags": "#Trasporti #Urbanistica #Ricerca"
+  },
+  {
+    "id": 505,
+    "tags": ["💻", "🍃"],
+    "title": "Earth AI scopre un ricco deposito di molibdeno con costi ridotti",
+    "url": "https://www.notboring.co/p/earth-ai",
+    "description": "Come l'AI può rendere più efficiente l'esplorazione mineraria? Quali sono i vantaggi di utilizzare l'AI nella ricerca di risorse naturali?",
+    "hashtags": "#AI #Mineraria #Efficienza"
+  },
+  {
+    "id": 506,
+    "tags": ["💻", "💊"],
+    "title": "Profluent crea OpenCRISPR, il primo editor genico open-source generato dall'AI",
+    "url": "https://www.businesswire.com/news/home/20240422399482/en/Profluent-Successfully-Edits-Human-Genome-with-OpenCRISPR-1-the-World%E2%80%99s-First-AI-Created-and-Open-Source-Gene-Editor",
+    "description": "Quali sono le potenziali applicazioni degli editor genici open-source generati dall'AI? Come potrebbero influenzare il futuro della medicina?",
+    "hashtags": "#Genomica #AI #Medicina"
+  },
+  {
+    "id": 507,
+    "tags": ["💻", "🍃"],
+    "title": "Aumento di sei volte dell'accumulo di energia da batterie necessario entro il 2030 per le rinnovabili",
+    "url": "https://www.iea.org/news/rapid-expansion-of-batteries-will-be-crucial-to-meet-climate-and-energy-security-goals-set-at-cop28",
+    "description": "Perché l'accumulo di energia a batteria è così cruciale per le energie rinnovabili? Quali sfide devono essere affrontate per espandere rapidamente la capacità delle batterie?",
+    "hashtags": "#Batterie #EnergiaRinnovabile #Clima"
+  },
+  {
+    "id": 508,
+    "tags": ["💻", "🧠"],
+    "title": "Qualità del testo chiave per costruire modelli AI piccoli ma potenti",
+    "url": "https://www.semafor.com/article/04/26/2024/microsoft-apple-look-to-go-big-with-smaller-ai-models",
+    "description": "Quali sono i vantaggi dei modelli AI più piccoli rispetto a quelli di grandi dimensioni? Come possono essere ottimizzati per prestazioni elevate?",
+    "hashtags": "#AI #Addestramento #Efficienza"
+  },
+  {
+    "id": 509,
+    "tags": ["💻"],
+    "title": "NYC attrae 1 lavoratore tech su 7, supera San Francisco come hub tecnologico",
+    "url": "https://www.axios.com/2024/04/18/austin-nyc-tech-job-boom-towns",
+    "description": "Perché NYC sta diventando un centro tecnologico in rapida crescita? Quali fattori contribuiscono al suo successo nell'attrarre aziende e talenti tech?",
+    "hashtags": "#Tecnologia #Startup #Innovazione"
+  },
+  {
+    "id": 510,
+    "tags": ["💻", "💊", "💸"],
+    "title": "Round di finanziamento da 1 miliardo di dollari per Xaira Therapeutics per reinventare la scoperta di farmaci con l'AI",
+    "url": "https://endpts.com/archs-bob-nelsen-on-launching-xaira-with-1b-to-reinvent-drug-discovery-with-ai/",
+    "description": "Come può l'AI rivoluzionare la scoperta di nuovi farmaci? Quali sono le sfide e le opportunità nell'applicazione dell'AI alla ricerca farmaceutica?",
+    "hashtags": "#Farmaceutica #AI #Investimenti"
+  },
+  {
+    "id": 511,
+    "tags": ["💻", "🍽"],
+    "title": "Ruolo degli acidi grassi a catena corta del microbioma intestinale nella comunicazione intestino-cervello",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7005631/",
+    "description": "Come influisce il microbioma intestinale sulla salute del cervello? Quali sono i meccanismi alla base del legame intestino-cervello?",
+    "hashtags": "#Salute #Microbioma #Cervello"
+  },
+  {
+    "id": 512,
+    "tags": ["💻", "🍃"],
+    "title": "Tesla si afferma come azienda energetica con margini record grazie alle batterie",
+    "url": "https://www.nasdaq.com/articles/teslas-q1-2024:-challenges-and-opportunities-on-the-road-ahead",
+    "description": "Quali sono le prospettive di Tesla nel mercato dell'energia e delle batterie? Come potrebbero influenzare la transizione verso l'energia pulita?",
+    "hashtags": "#Tesla #Batterie #EnergiaRinnovabile"
+  },
+  {
+    "id": 513,
+    "tags": ["❤️", "💊"],
+    "title": "Profluent genera 4,8 volte più cluster proteici con AI generativa per l'ingegneria genetica",
+    "url": "https://www.biorxiv.org/content/10.1101/2024.04.22.590591v1",
+    "description": "Come l'AI generativa può spingere i confini dell'ingegneria genetica? Quali applicazioni potenziali ha questa tecnologia?",
+    "hashtags": "#Genomica #IA #Biotecnologia"
+  },
+  {
+    "id": 514,
+    "tags": ["❤️", "💊"],
+    "title": "Farmaci GLP-1 (es. Ozempic) riducono consumo di sigarette e e-sigarette",
+    "url": "https://qz.com/ozempic-drugs-alcohol-tobacco-use-1851430022",
+    "description": "Quali sono gli effetti secondari positivi dei farmaci per la perdita di peso? Possono aiutare a prevenire altre condizioni di salute?",
+    "hashtags": "#Salute #Obesità #Tabagismo"
+  },
+  {
+    "id": 515,
+    "tags": ["❤️", "🎨", "📚"],
+    "title": "Hypnovels: l'AI trasforma le parole dei libri in sogni ipnotici e coerenti",
+    "url": "https://www.hypnovels.com/",
+    "description": "Come può l'AI reinterpretare le opere letterarie in nuovi media? Quali sono i pro e i contro di questa trasformazione creativa?",
+    "hashtags": "#AI #Arte #Letteratura"
+  },
+  {
+    "id": 516,
+    "tags": ["❤️", "🍽"],
+    "title": "Ricette a base di patate dall'Idaho",
+    "url": "https://idahopotato.com/recipes",
+    "description": "Quali sono i piatti tradizionali a base di patate dell'Idaho? Come possono essere reinterpretati in modi nuovi e deliziosi?",
+    "hashtags": "#Cucina #Patate #Tradizione"
+  },
+  {
+    "id": 517,
+    "tags": ["❤️", "🍽"],
+    "title": "Panoramica approfondita sul cacao e la bevanda Montezuma",
+    "url": "https://www.themarginalian.org/2024/02/15/oaxaca-journal-sacks-chocolate/?mc_cid=bc694dd8c1&mc_eid=d27999fecf",
+    "description": "Quali sono le origini storiche e culturali del cioccolato? Come si è evoluta la sua produzione e il suo consumo nel corso del tempo?",
+    "hashtags": "#Cibo #Storia #Cultura"
+  },
+  {
+    "id": 518,
+    "tags": ["💻", "❤️"],
+    "title": "Tokyo è la città più popolosa al mondo con 37.1M residenti",
+    "url": "https://worldpopulationreview.com/world-cities",
+    "description": "Quali sono le caratteristiche che rendono Tokyo la città più popolosa del mondo? Quali sfide e opportunità presenta una tale densità di popolazione?",
+    "hashtags": "#Società #Urbanistica #Demografia"
+  },
+  {
+    "id": 519,
+    "tags": ["💻", "🥽"],
+    "title": "Collaborazione Walmart e Roblox per esperienze e-commerce nel Metaverso",
+    "url": "https://digiday.com/marketing/walmart-and-roblox-are-teaming-up-to-make-virtual-e-commerce-a-reality/",
+    "description": "In che modo il Metaverso può rivoluzionare l'esperienza di acquisto online? Quali prodotti si prestano meglio a essere \"virtualizzati\"?",
+    "hashtags": "#Metaverso #ECommerce #MarketingDigitale"
+  },
+  {
+    "id": 520,
+    "tags": ["❤️", "💊", "🧠"],
+    "title": "Vaccini a mRNA contro il cancro al cervello secondo recenti studi",
+    "url": "https://x.com/justindross/status/1786064203398164831",
+    "description": "Quali sono le prospettive dei vaccini a mRNA per combattere il cancro al cervello? Quali altre applicazioni terapeutiche potrebbero avere?",
+    "hashtags": "#Medicina #Oncologia #Biotecnologie"
+  },
+  {
+    "id": 521,
+    "tags": ["❤️", "💊", "🧠"],
+    "title": "Identificati neuroni che controllano la risposta immunitaria cervello-intestino",
+    "url": "https://www.nature.com/articles/d41586-024-01259-2",
+    "description": "Quale ruolo giocano questi neuroni nell'asse cervello-intestino? Come potrebbe essere sfruttata questa scoperta in ambito terapeutico?",
+    "hashtags": "#Neuroscienze #Immunologia #SaluteUmana"
+  },
+  {
+    "id": 522,
+    "tags": ["❤️", "💊"],
+    "title": "Orangutan osservata usare erbe medicinali per curare ferita",
+    "url": "https://www.nature.com/articles/s41598-024-58988-7",
+    "description": "Quali comportamenti simili a quelli umani sono stati osservati nelle grandi scimmie antropomorfe? Cosa ci insegnano sull'intelligenza animale?",
+    "hashtags": "#Primatologia #Etnobotanica #Intelligenza"
+  },
+  {
+    "id": 523,
+    "tags": ["💻", "🚕"],
+    "title": "I veicoli elettrici si guastano quasi il 50% in meno rispetto a quelli a combustione",
+    "url": "https://x.com/alex_avoigt/status/1785443228961091731",
+    "description": "Quali sono i principali vantaggi dei veicoli elettrici oltre al minor inquinamento? Come potrebbe evolversi ulteriormente questa tecnologia?",
+    "hashtags": "#Mobilità #VeicoliElettrici #Tecnologia"
+  },
+  {
+    "id": 524,
+    "tags": ["❤️", "💊", "🧠"],
+    "title": "Generati 4.8X più cluster proteici per editing genico con CRISPR-Cas",
+    "url": "https://www.biorxiv.org/content/10.1101/2024.04.22.590591v1",
+    "description": "Quali potenziali applicazioni ha questa nuova tecnica di editing genico? Quali sfide etiche potrebbe sollevare?",
+    "hashtags": "#BiotecnologiaMedica #CRISPR #IntelligenzaArtificiale"
+  },
+  {
+    "id": 525,
+    "tags": ["💻", "🎨", "🧠"],
+    "title": "Criticate le AI artistiche che fanno baciare celebrità con se stesse",
+    "url": "https://www.itsnicethat.com/articles/bard-edlund-celebrities-kissing-themselves-art-project-230424",
+    "description": "Quali sono i limiti etici delle AI generative nell'uso di immagini di persone reali? Come bilanciare creatività e rispetto dei diritti?",
+    "hashtags": "#IntelligenzaArtificiale #ArteDigitale #Etica"
+  },
+  {
+    "id": 673,
+    "tags": ["💻", "👥"],
+    "title": "Tendenza a tornare a vecchi telefoni e prodotti analogici vintage",
+    "url": "https://www.itsnicethat.com/articles/heineken-bodega-the-boring-phone-advertising-project-240424",
+    "description": "Qual è l'attrattiva dei prodotti tech \"retrò\"? Questa tendenza è destinata a durare o è una moda passeggera?",
+    "hashtags": "#Tecnologia #Marketing #TrendCulturali"
+  },
+  {
+    "id": 527,
+    "tags": ["💻", "♻️"],
+    "title": "Redwood Materials ricicla batterie riducendo emissioni del 40-70%",
+    "url": "https://www.bloomberg.com/news/features/2024-04-18/redwood-material-s-nevada-ev-battery-recycling-facility-attempts-to-rival-china",
+    "description": "Quali sono le sfide tecniche ed economiche del riciclo di batterie? Che ruolo avrà questo processo con la diffusione dei veicoli elettrici?",
+    "hashtags": "#Riciclo #IndustriaAutomobilistica #EconomiaCircolare"
+  },
+  {
+    "id": 528,
+    "tags": ["🍃", "♻️"],
+    "title": "Emissione stimata di 4 miliardi di tonnellate di CO2 se Trump viene rieletto",
+    "url": "https://www.carbonbrief.org/analysis-trump-election-win-could-add-4bn-tonnes-to-us-emissions-by-2030/",
+    "description": "Quali politiche energetiche e ambientali sono in gioco in queste elezioni? Quali conseguenze potrebbe avere la vittoria di Trump?",
+    "hashtags": "#CambiamentoClimatico #PoliticaEnergetica #ElezioniUSA"
+  },
+  {
+    "id": 796,
+    "tags": ["🍃", "👥"],
+    "title": "Ottimizzazione di hub per raccolta demolizioni per pianificazione urbana",
+    "url": "https://www.nature.com/articles/s42949-024-00153-0",
+    "description": "Come può la pianificazione urbana sostenibile gestire i rifiuti da demolizione? Quali altre soluzioni circolari sono possibili in ambito edilizio?",
+    "hashtags": "#Urbanistica #EconomiaCircolare #GestioneRifiuti"
+  },
+  {
+    "id": 530,
+    "tags": ["💻", "👥"],
+    "title": "Ricerca MIT: distanze di pendolarismo indipendenti dalla dimensione cittadina",
+    "url": "https://archinect.com/news/article/150334233/mit-research-finds-that-commuting-distances-are-standard-regardless-of-city-size",
+    "description": "Quali sono i fattori che influenzano le distanze di pendolarismo oltre alla dimensione urbana? Quali implicazioni ha questa scoperta?",
+    "hashtags": "#Urbanistica #Mobilità #PianificazioneTrasporti"
+  },
+  {
+    "id": 531,
+    "tags": ["🍃", "🍽"],
+    "title": "Progetto Potato del MIT per mappare movimenti di prodotti alimentari",
+    "url": "https://senseable.mit.edu/potato/",
+    "description": "Quali sono i vantaggi di tracciare i percorsi dei prodotti alimentari? Come possono questi dati supportare un'agricoltura più sostenibile?",
+    "hashtags": "#Agricoltura #LogisticaAlimentare #InnovazioneTecnologica"
+  },
+  {
+    "id": 532,
+    "tags": ["🍃", "💻"],
+    "title": "Earth AI scopre giacimento di molibdeno con minori costi e impatto ambientale",
+    "url": "https://www.notboring.co/p/earth-ai",
+    "description": "Quali sono i potenziali dell'intelligenza artificiale nell'esplorazione mineraria? Quali vantaggi economici e ambientali potrebbe portare?",
+    "hashtags": "#IntelligenzaArtificiale #Mineraria #SostenibilitàAmbientale"
+  },
+  {
+    "id": 533,
+    "tags": ["❤️", "💊", "🧠"],
+    "title": "Rilasciato l'editing genico open-source Profluent-OpenCRISPR generato da AI",
+    "url": "https://www.businesswire.com/news/home/20240422399482/en/Profluent-Successfully-Edits-Human-Genome-with-OpenCRISPR-1-the-World%E2%80%99s-First-AI-Created-and-Open-Source-Gene-Editor",
+    "description": "Quali sono i potenziali benefici di questo editing genico open-source? Quali sfide potrebbe presentare la sua regolamentazione?",
+    "hashtags": "#Biotecnologie #OpenSource #CRISPR"
+  },
+  {
+    "id": 534,
+    "tags": ["💻", "♻️"],
+    "title": "Raddoppio necessario degli impianti di stoccaggio energetico entro il 2030",
+    "url": "https://www.iea.org/news/rapid-expansion-of-batteries-will-be-crucial-to-meet-climate-and-energy-security-goals-set-at-cop28",
+    "description": "Quali sono le tecnologie di stoccaggio energetico più promettenti? Come possono essere integrate nelle reti intelligenti del futuro?",
+    "hashtags": "#EnergiaRinnovabile #StoccaggioEnergia #ReteElettrica"
+  },
+  {
+    "id": 535,
+    "tags": ["💻", "👥"],
+    "title": "New York City attrae 1 lavoratore tech su 7 tra il 2019 e il 2023",
+    "url": "https://www.axios.com/2024/04/18/austin-nyc-tech-job-boom-towns",
+    "description": "Quali fattori rendono NYC un polo tecnologico in rapida crescita? Quali sfide dovrà affrontare per rimanere competitiva?",
+    "hashtags": "#IndustriaTecnologica #EconomiaRegionale #TalentiDigitali"
+  },
+  {
+    "id": 536,
+    "tags": ["❤️", "💊", "🔬"],
+    "title": "Round da 1 miliardo di dollari per Xaira Therapeutics nell'AI per la scoperta farmaci",
+    "url": "https://endpts.com/archs-bob-nelsen-on-launching-xaira-with-1b-to-reinvent-drug-discovery-with-ai/",
+    "description": "In che modo l'intelligenza artificiale può rivoluzionare la ricerca di nuovi farmaci? Quali sono i potenziali benefici e le sfide?",
+    "hashtags": "#Farmaceutica #IntelligenzaArtificiale #RicercaBiomedica"
+  },
+  {
+    "id": 537,
+    "tags": ["❤️", "💊", "🧠"],
+    "title": "Acidi grassi del microbiota intestinale e comunicazione cervello-intestino",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7005631/",
+    "description": "Quale ruolo giocano questi composti nella regolazione dell'asse cervello-intestino? Quali implicazioni possono avere per la salute?",
+    "hashtags": "#Microbioma #Neuroscienze #SaluteUmana"
+  },
+  {
+    "id": 538,
+    "tags": ["💻", "🚕"],
+    "title": "Tesla si afferma come azienda energetica grazie alle sue batterie",
+    "url": "https://www.nasdaq.com/articles/teslas-q1-2024:-challenges-and-opportunities-on-the-road-ahead",
+    "description": "Quali sono le prospettive di Tesla nel mercato dell'energia e delle batterie? Potrebbe diventare leader in questo settore?",
+    "hashtags": "#VeicoliElettrici #StoccaggioEnergia #StrategiaAziendale"
+  },
+  {
+    "id": 539,
+    "tags": ["❤️", "💊"],
+    "title": "L'editing proteico di Profluent spinge i confini dell'ingegneria genetica",
+    "url": "https://www.biorxiv.org/content/10.1101/2024.04.22.590591v1",
+    "description": "Quali altre applicazioni potenziali potrebbe avere questa tecnologia oltre alla terapia genica? Quali sfide rimangono da superare?",
+    "hashtags": "#Biotecnologie #CRISPR #InnovazioneBiomedica"
+  },
+  {
+    "id": 540,
+    "tags": ["❤️", "💊"],
+    "title": "Farmaci GLP-1 riducono fumo e uso sigarette elettroniche del 14-16%",
+    "url": "https://qz.com/ozempic-drugs-alcohol-tobacco-use-1851430022",
+    "description": "Quali sono i meccanismi che collegano questi farmaci al calo del consumo di tabacco? Quali altre implicazioni potrebbero avere?",
+    "hashtags": "#Farmaci #DipendenzeChimiche #SalutePubblica"
+  },
+  {
+    "id": 541,
+    "tags": ["💻", "📚"],
+    "title": "Hypnovels trasforma libri in sogni ipnotici grazie all'AI generativa",
+    "url": "https://www.hypnovels.com/",
+    "description": "Quali sono le potenzialità creative dell'intelligenza artificiale nell'arte visiva? Ci sono anche rischi o limitazioni da considerare?",
+    "hashtags": "#IntelligenzaArtificiale #ArteDigitale #CreativitàComputazionale"
+  },
+  {
+    "id": 542,
+    "tags": ["❤️", "🍽"],
+    "title": "Ricette a base di patate tradizionali dell'Idaho",
+    "url": "https://idahopotato.com/recipes",
+    "description": "Quali sono le origini e la storia delle patate dell'Idaho? Quali piatti tipici regionali prevedono questo ingrediente?",
+    "hashtags": "#Cucina #Tradizioni #ProduzioneAlimentare"
+  },
+  {
+    "id": 543,
+    "tags": ["❤️", "🎨"],
+    "title": "Illustrazioni di ciclisti storici dal disegnatore di Magic e Unisoft",
+    "url": "https://www.greyfoxblog.com/2014/08/karl-kopinski-portrait-painter-captures.html",
+    "description": "Quali sono le caratteristiche distintive delle illustrazioni di ciclisti storici Chi è il disegnatore di Magic e Unisoft che ha realizzato queste illustrazioni",
+    "hashtags": "#Arte #Ciclismo #Illustrazione"
+  },
+  {
+    "id": 544,
+    "tags": ["💻", "👥"],
+    "title": "Solidlife costruisce un holodeck simile a Star Trek",
+    "url": "https://www.lightfieldlab.com/",
+    "description": "Come funziona il holodeck costruito da Solidlife In che modo questo holodeck è simile a quello di Star Trek",
+    "hashtags": "#Tecnologia #Innovazione #Holodeck"
+  },
+  {
+    "id": 545,
+    "tags": ["💻", "🧠"],
+    "title": "Neuralink quasi più veloce del mouse nel controllare le interfacce cerebrali",
+    "url": "https://neuralink.com/blog/prime-study-progress-update-user-experience/",
+    "description": "Quanto è veloce Neuralink nel controllare le interfacce rispetto al mouse Quali sono i progressi recenti di Neuralink nel controllo delle interfacce cerebrali",
+    "hashtags": "#Tecnologia #InterfacceCerebrali #Neuralink"
+  },
+  {
+    "id": 546,
+    "tags": ["❤️", "💆"],
+    "title": "Fountain Life lancia l'abbonamento CORE da 2995 dollari all'anno per la longevità",
+    "url": "http://www.fountainlife.com/core-membership",
+    "description": "Che cos'è l'abbonamento CORE di Fountain Life Quali benefici offre l'abbonamento CORE di Fountain Life per la longevità",
+    "hashtags": "#Salute #Longevità #Abbonamento"
+  },
+  {
+    "id": 547,
+    "tags": ["🧠", "📚"],
+    "title": "Il creatore di Wolfram Alpha sulla visualizzazione dell'evoluzione naturale con il codice",
+    "url": "https://writings.stephenwolfram.com/2024/05/why-does-biological-evolution-work-a-minimal-model-for-biological-evolution-and-other-adaptive-processes/",
+    "description": "Come visualizza l'evoluzione naturale il creatore di Wolfram Alpha Qual è il modello minimo per l'evoluzione biologica secondo il creatore di Wolfram Alpha",
+    "hashtags": "#Scienza #Evoluzione #Visualizzazione"
+  },
+  {
+    "id": 548,
+    "tags": ["🧠", "💊"],
+    "title": "AlphaFold 3 CRISPR occhi geni orecchio MDMA collasso sociale",
+    "url": "https://www.notboring.co/p/weekly-dose-of-optimism-93",
+    "description": "Quali sono le innovazioni introdotte da AlphaFold 3 e CRISPR Quali sono le implicazioni delle scoperte genetiche recenti per la società",
+    "hashtags": "#Genetica #Innovazione #Scoperte"
+  },
+  {
+    "id": 549,
+    "tags": ["💻", "🎙️"],
+    "title": "Previsioni di Scott Galloway per il 2024 molto interessanti",
+    "url": "https://youtu.be/mHZhLE8OVmk,Quali",
+    "description": "sono le previsioni di Scott Galloway per il 2024 Perché le previsioni di Scott Galloway per il 2024 sono interessanti",
+    "hashtags": "#Tecnologia #Previsioni #2024"
+  },
+  {
+    "id": 550,
+    "tags": ["❤️", "💆"],
+    "title": "Studio: 10 squat ogni 45 minuti migliorano la regolazione della glicemia più di una camminata di 30 minuti",
+    "url": "https://x.com/foundmyfitness/status/1788991915633045809",
+    "description": "Quali sono i benefici di fare 10 squat ogni 45 minuti Come il fare squat ogni 45 minuti migliora la regolazione della glicemia rispetto a una camminata di 30 minuti",
+    "hashtags": "#Salute #Esercizio #Glicemia"
+  },
+  {
+    "id": 551,
+    "tags": ["❤️", "👥"],
+    "title": "Long Covid ha ridotto l'offerta di lavoro dello 0.3-0.5% nell'UE nel 2022",
+    "url": "https://economy-finance.ec.europa.eu/publications/long-covid-tentative-assessment-its-impact-labour-market-participation-and-potential-economic_en",
+    "description": "Qual è stato l'impatto del Long Covid sull'offerta di lavoro nell'UE Come il Long Covid ha influenzato la partecipazione al mercato del lavoro e l'economia",
+    "hashtags": "#Salute #Economia #LongCovid"
+  },
+  {
+    "id": 552,
+    "tags": ["❤️", "💊"],
+    "title": "Le molecole di farmaci scoperte dall'IA mostrano tassi di successo dell'80-90% nei trial clinici di Fase I",
+    "url": "https://www.sciencedirect.com/science/article/pii/S135964462400134X",
+    "description": "Qual è il tasso di successo delle molecole scoperte dall'IA nei trial clinici di Fase I Come i tassi di successo delle molecole scoperte dall'IA si confrontano con la media storica del settore",
+    "hashtags": "#Salute #AI #Farmaci"
+  },
+  {
+    "id": 553,
+    "tags": ["❤️", "👥"],
+    "title": "L'arte dell'allattamento",
+    "url": "https://www.itsnicethat.com/articles/bre-furlong-half-empty-photography-project-090524",
+    "description": "Come viene rappresentata l'arte dell'allattamento nelle fotografie Quali sono gli elementi distintivi delle fotografie sull'allattamento",
+    "hashtags": "#Salute #Fotografia #Allattamento"
+  },
+  {
+    "id": 554,
+    "tags": ["❤️", "🎨"],
+    "title": "Stopmotion divertenti",
+    "url": "https://www.itsnicethat.com/articles/stefano-colferai-animation-project-070424",
+    "description": "Quali sono le caratteristiche distintive delle stopmotion divertenti Chi è Stefano Colferai e quali progetti di animazione ha realizzato",
+    "hashtags": "#Arte #Animazione #Stopmotion"
+  },
+  {
+    "id": 555,
+    "tags": ["🍃", "🧠"],
+    "title": "I danni climatici sono 6 volte più grandi di quanto si pensasse: ogni aumento di 1°C cancella il 12% del PIL globale",
+    "url": "https://x.com/DrSimEvans/status/1790055336289677368",
+    "description": "Quali sono i danni climatici stimati dal nuovo documento di lavoro NBER Come ogni aumento di 1°C e ogni tonnellata di CO2 influiscono sul PIL globale",
+    "hashtags": "#Clima #Economia #DanniClimatici"
+  },
+  {
+    "id": 556,
+    "tags": ["💻", "💆"],
+    "title": "Uso di Internet correlato a una maggiore soddisfazione della vita; social media potenzialmente negativi per la salute mentale",
+    "url": "https://www.ox.ac.uk/news/2024-05-14-internet-use-statistically-associated-higher-wellbeing-finds-new-global-oxford-study",
+    "description": "Quali sono le correlazioni tra l'uso di Internet e la soddisfazione della vita Come l'uso generale di Internet può influenzare positivamente il benessere",
+    "hashtags": "#Tecnologia #Internet #Benessere"
+  },
+  {
+    "id": 557,
+    "tags": ["💻", "👥"],
+    "title": "Apple porta il tracciamento oculare sugli iPhone e iPad recenti",
+    "url": "https://www.engadget.com/apple-brings-eye-tracking-to-recent-iphones-and-ipads-140012990.html",
+    "description": "Quali sono le nuove funzionalità di eye-tracking introdotte da Apple Come l'eye-tracking migliora l'esperienza utente su iPhone e iPad",
+    "hashtags": "#Tecnologia #Apple #EyeTracking"
+  },
+  {
+    "id": 558,
+    "tags": ["💻", "🎨"],
+    "title": "Retail virtuale di Dubit e Roblox",
+    "url": "https://www.dubit.io/products/game-retail",
+    "description": "Come funziona il retail virtuale di Dubit su Roblox Quali sono le potenzialità del retail virtuale su piattaforme di gioco come Roblox",
+    "hashtags": "#Tecnologia #RetailVirtuale #Roblox"
+  },
+  {
+    "id": 559,
+    "tags": ["❤️", "💆"],
+    "title": "Come non invecchiare: cibi per rimanere giovani",
+    "url": "https://amzn.to/4bp14pQ",
+    "description": "Quali sono i cibi che aiutano a rimanere giovani Come la dieta può influire sul processo di invecchiamento",
+    "hashtags": "#Salute #Alimentazione #Giovinezza"
+  },
+  {
+    "id": 560,
+    "tags": ["💻", "📚"],
+    "title": "Piattaforma collaborativa per creare trend e grafici di correlazioni inaspettate",
+    "url": "https://perthirtysix.com/communal-plot-daily-poll",
+    "description": "Come funziona la piattaforma collaborativa per la creazione di trend Quali sono i vantaggi di creare grafici di correlazioni inaspettate",
+    "hashtags": "#Tecnologia #Piattaforme #Trend"
+  },
+  {
+    "id": 560,
+    "tags": ["💻", "🍽"],
+    "title": "Piattaforma AI di Mana.bio ottimizza nanoparticelle lipidiche per terapie geniche e RNA",
+    "url": "https://www.prnewswire.com/news-releases/manabio-advances-ai-based-lipid-nanoparticle-lnp-platform-to-accelerate-programmable-drug-delivery-for-rna-and-gene-therapies-301952340.html",
+    "description": "Quali sono le applicazioni delle nanoparticelle lipidiche nelle terapie a base di acidi nucleici Come l'AI può aiutare a personalizzare queste nanoparticelle",
+    "hashtags": "#Genetica #AI #Farmaci"
+  },
+  {
+    "id": 561,
+    "tags": ["🍃", "💊"],
+    "title": "Agonisti del recettore del glucagone-peptide 1 trattano il diabete riducendo zuccheri",
+    "url": "https://research.ark-invest.com/e3t/Ctc/I1+113/c3nSf04/VVYLK31700MfV346cm3mljdDW1h36Dw54r2nPN1FQ0tj5nR32W7Y9pgv6lZ3nvW3VNktT657JJcW72BFWM2rK4VLW6jC-qD9dkgnHW6xHbtK3XsYChN4xnkDTSKBRCVzk8vy4ZRqstW5ZQchh9bPbHLW17j1PD1dXKMPW5HmbMy7zf2MPW5XcRqJ2fNNK3W7x94Z07WWr6pW8ptLbY1Qd-5RW8tCwHn7Cf_SfW937VjX7DkYcWW5y7SQT7sYb5JW1K9f7p1T4156W1C5fL08mP1_KVmGLHw6LZMXxW8ZCW4J4X_gNKW2lF5Fg54kJCNW4GjvS71m316VW7thRt926Y5ZbW8d2h56908nx2W14VyKn8hl2S9W4KdTdP4bprz-W6h1FDp8v9QRcVSpkkb2C-WRvW7flgWX6wQDR5W49KGGT8XNN96VYB8Xs93Xrz6W2C4N5R4XpjLfW43jVhD4-fXbSW8HpYcp1yyhKSW1Kq7KK8GTHzGW7nmcQZ1bjdTQV2hk137l94XbW2sqxqk9lyz5dW1FC-X617ycXXN8c60DRb1Wb3W8dhcZj4bg7RqW3k8xZy2gdh4BW1kr8dz4Xw8cVf5x6Bqj04",
+    "description": "In che modo gli agonisti del GLP-1 contrastano il diabete di tipo 2 Quali altri effetti hanno oltre al controllo della glicemia",
+    "hashtags": "#Salute #Farmaci #Diabete"
+  },
+  {
+    "id": 562,
+    "tags": ["❤️", "🍽"],
+    "title": "Analista: United Airlines potrebbe risparmiare 801M dollari di carburante se i passeggeri perdessero peso con farmaci GLP-1",
+    "url": "https://research.ark-invest.com/e3t/Ctc/I1+113/c3nSf04/VVYLK31700MfV346cm3mljdDW1h36Dw54r2nPN1FQ0s67mmzdW5BWSxg6lZ3nyW5SS8L928YtmJW8VNm7f4ZlmwTW5Jc2f64gRcFnW6FbTdG59s7hMV4RBCT87RCSFW1tXjC94QXZTQW7Nm_NZ50nLrNW2jQGK_7T9wL3W95z5m-8F6HYKW4NF75h5n3yYFW1Vdhzg6HlCLtW7_r-6W5c14tQN2Yd9w6JH349W624tZ59djkYSW7g99bL43f_zFW3Nt_7W3ycZTXW4FK4sK2cT_nvV_l1yB4bp3gNW4Th1kw6VZCJjW236S_r2q42GZW8_CNZs5Qx7R7N3SXCQlKH1ZFN4wvq1_ZxsgzN8KX1L6wh32yW3M7hBp668T0mW3L2jDd8FyLvkW875HLX32N9_kW5Fr7KL965Ws4W1Wz4V98TdKlSW1gM-nt78QQ02W5zLr-j81y0YsW8SSggv10nJNVN8wTWkPDVsMCW5yX9dg97zPvtW8pzf1x32FPLzW6XTXT01JCMbQW6N-9FZ3NhD9rN4bsxXtCh2tCW8XjMJm4Zz7F9W7tDHY43D3dH9W4KNRM_9cFMcQW3dvRJG3_bWfgN1hWwpZYxjplW8sV5804y92z2N3byb1WSDb2rW4NZMx_3r_QnWW8HSRTx2296HXW2b29nj2CsMx4W1fqS_J3TDp9mW83L-Lf2c3_Zrf1BR_Zv04",
+    "description": "Quali benefici economici potrebbero derivare per le compagnie aeree se i passeggeri perdessero peso Oltre al risparmio di carburante ci sono altri vantaggi",
+    "hashtags": "#Viaggi #Salute #Economia"
+  },
+  {
+    "id": 563,
+    "tags": ["🍃", "💸"],
+    "title": "Le mezze stagioni stanno scomparendo a causa dell'allungamento dell'estate",
+    "url": "https://heatmap.news/climate/fall-colors-are-getting-weird",
+    "description": "In che modo il cambiamento climatico sta alterando le stagioni Quali sono gli impatti di questa trasformazione",
+    "hashtags": "#Clima #Stagioni #Ambiente"
+  },
+  {
+    "id": 564,
+    "tags": ["💻", "🧠"],
+    "title": "Paper di Anthropic spiega i grandi modelli linguistici come GPT",
+    "url": "https://twitter.com/AnthropicAI/status/1709986949711200722",
+    "description": "Quali sono le sfide e le opportunità legate allo sviluppo di grandi modelli linguistici Come possono essere impiegati in modo responsabile ed etico",
+    "hashtags": "#AI #Linguistica #Tecnologia"
+  },
+  {
+    "id": 565,
+    "tags": ["🍃", "⚽"],
+    "title": "Quote delle auto elettriche nel terzo trimestre 2023",
+    "url": "https://www.ctvc.co/r/b2e372a3",
+    "description": "Quale percentuale di nuove immatricolazioni riguarda veicoli elettrici Come sta evolvendo la transizione verso la mobilità elettrica",
+    "hashtags": "#Mobilita #Ambiente #Innovazione"
+  },
+  {
+    "id": 566,
+    "tags": ["💻", "🚕"],
+    "title": "Nuovo rapporto sui pagamenti digitali: proiezione di 800 miliardi di dollari nel 2027",
+    "url": "https://www.consumerfinance.gov/data-research/research-reports/big-techs-role-in-contactless-payments-analysis-of-mobile-device-operating-systems-and-tap-to-pay-practices/full-report",
+    "description": "Qual è l'impatto delle big tech sui pagamenti digitali contactless Come potrebbero evolversi questi sistemi di pagamento nel prossimo futuro",
+    "hashtags": "#Pagamenti #Fintech #Tecnologia"
+  },
+  {
+    "id": 567,
+    "tags": ["🍃", "💆"],
+    "title": "Calo del 17% nella produzione idroelettrica in Asia nei primi 7 mesi del 2023",
+    "url": "https://www.reuters.com/business/energy/china-india-lead-asias-biggest-hydropower-crunch-decades-2023-09-21",
+    "description": "Quali sono le cause della diminuzione della produzione idroelettrica in Asia Quali sono le possibili soluzioni per affrontare questa crisi energetica",
+    "hashtags": "#Energia #Clima #Siccità"
+  },
+  {
+    "id": 568,
+    "tags": ["💻", "🎙️"],
+    "title": "Ottimizzare forma aereo per ridurre il boom sonico come una lavastoviglie",
+    "url": "https://semafor.com/s/ezPHPubdVs",
+    "description": "Come è possibile rendere il volo supersonico più silenzioso Quali tecnologie innovative sono state applicate al nuovo aereo X-59 della Lockheed",
+    "hashtags": "#Aviazione #Innovazione #Ambiente"
+  },
+  {
+    "id": 569,
+    "tags": ["💻", "🎼"],
+    "title": "Ingegnerizzare batterio Streptococcus mutans per produrre etanolo invece di acido lattico",
+    "url": "https://www.lanternbioworks.com",
+    "description": "Quali applicazioni potrebbe avere questa modifica genetica dei batteri orali Quali sono i potenziali benefici e rischi",
+    "hashtags": "#Biotecnologia #Batteri #Salute"
+  },
+  {
+    "id": 570,
+    "tags": ["💻", "🎼"],
+    "title": "Rapporto Goldman Sachs: l'AI generale può aumentare il PIL globale del 7%",
+    "url": "https://substack.com/redirect/4382047a-aba7-4a34-a473-bfb6f5de9edb",
+    "description": "Quale impatto potrebbe avere l'intelligenza artificiale generale sull'economia globale In quali settori potrebbe portare maggiori benefici",
+    "hashtags": "#AI #Economia #Innovazione"
+  },
+  {
+    "id": 571,
+    "tags": ["🍃", "🎼"],
+    "title": "Importante avanzamento nello sviluppo di metodi per determinare biogegenicità di materiali organici in campioni planetari",
+    "url": "https://luxcapital.us13.list-manage.com/track/click",
+    "description": "Come potrebbe questa scoperta aiutare nella ricerca di tracce di vita su altri mondi Quali implicazioni ha per l'astrobiologia",
+    "hashtags": "#Spazio #Astrobiologia #Ricerca"
+  },
+  {
+    "id": 572,
+    "tags": ["💻", "🎙️"],
+    "title": "Le banche europee hanno aiutato aziende fossili a raccogliere oltre 1T dollari dai mercati obbligazionari dal 2016",
+    "url": "https://www.theguardian.com/business/2023/sep/26/europes-banks-helped-fossil-fuel-firms-raise-more-than-1tn-from-global-bond-markets",
+    "description": "Qual è il ruolo delle banche nel finanziare l'industria dei combustibili fossili Come può essere contrastato questo sostegno ai settori ad alta impronta di carbonio",
+    "hashtags": "#Finanza #Clima #Ambiente"
+  },
+  {
+    "id": 573,
+    "tags": ["🍃", "🍽"],
+    "title": "Panoramica sulla dieta dei centenari con focus sui fagioli microbioma intestino e caffè",
+    "url": "https://fortissimo.substack.com/p/ff92-la-dieta-dei-centenari",
+    "description": "Quali cibi consumano le popolazioni con più centenari al mondo In che modo il microbioma intestinale influenza la salute",
+    "hashtags": "#Alimentazione #Longevità #Salute"
+  },
+  {
+    "id": 574,
+    "tags": ["🎼", "🍽"],
+    "title": "I fagioli sono l'alimento chiave per i centenari ecco il perché",
+    "url": "https://fortissimo.substack.com/i/137958307/ff-fagioli-di-bazar",
+    "description": "Quali sono i segreti della longevità dei centenari sardi Quali sono i benefici dei fagioli per la salute",
+    "hashtags": "#Alimentazione #Longevità #Sardegna"
+  },
+  {
+    "id": 575,
+    "tags": ["🎼", "🧠"],
+    "title": "Il microbioma intestinale è un organo chiave per la salute e la longevità",
+    "url": "https://fortissimo.substack.com/i/137958307/ff-un-organo-in-piu-il-microbioma",
+    "description": "Quali sono le funzioni del microbioma intestinale Come influenza il metabolismo e la salute",
+    "hashtags": "#Microbioma #Salute #Longevità"
+  },
+  {
+    "id": 576,
+    "tags": ["🎼", "☕"],
+    "title": "Il caffè e il tè sono bevande benefiche per il microbioma e il controllo della glicemia",
+    "url": "https://fortissimo.substack.com/i/137958307/ff-te-o-caffe-benzina-del-microbioma",
+    "description": "Quali sono i benefici del caffè e del tè per la salute Come possono aiutare a prevenire il diabete",
+    "hashtags": "#Caffè #Tè #Microbioma #Diabete"
+  },
+  {
+    "id": 577,
+    "tags": ["🎼", "👌"],
+    "title": "La dieta perfetta secondo ChatGPT per arrivare a 100 anni in salute",
+    "url": "https://fortissimo.substack.com/i/137958307/ff-la-dieta-perfetta-secondo-gpt",
+    "description": "Qual è la dieta ideale per una lunga vita secondo ChatGPT Quali nutrienti sono essenziali per la longevità",
+    "hashtags": "#Alimentazione #Longevità #ChatGPT"
+  },
+  {
+    "id": 578,
+    "tags": ["💻", "💸"],
+    "title": "Previsioni tecnologiche peggiori della storia",
+    "url": "https://www.readtrung.com/p/the-worst-tech-predictions-ever",
+    "description": "Quali sono state le peggiori previsioni tecnologiche? Come queste previsioni hanno influenzato l'industria tecnologica?",
+    "hashtags": "#tech #predizioni #fallimenti"
+  },
+  {
+    "id": 579,
+    "tags": ["💻", "🍃"],
+    "title": "L'India accelera l'installazione solare",
+    "url": "https://x.com/Noahpinion/status/1794260181184070128",
+    "description": "Quali sono i progressi dell'India nell'energia solare? Quanto velocemente l'India sta espandendo le sue installazioni solari?",
+    "hashtags": "#energia #solare #India"
+  },
+  {
+    "id": 580,
+    "tags": ["❤️", "💊"],
+    "title": "Microplastiche nei testicoli di cani e umani e potenziale associazione con la fertilità",
+    "url": "https://academic.oup.com/toxsci/advance-article/doi/10.1093/toxsci/kfae060/7673133",
+    "description": "Cosa sono le microplastiche e come influenzano la salute riproduttiva? Quali sono le implicazioni delle microplastiche sulla fertilità?",
+    "hashtags": "#microplastiche #salute #riproduzione"
+  },
+  {
+    "id": 581,
+    "tags": ["🍃", "📚"],
+    "title": "Gli Stati Uniti raddoppieranno la capacità solare su larga scala in 3 anni dice FERC!",
+    "url": "https://x.com/johnrhanger/status/1793606523429802240",
+    "description": "Qual è la previsione di crescita della capacità solare negli Stati Uniti? Come influirà questa crescita sull'industria energetica degli Stati Uniti?",
+    "hashtags": "#solare #USA #energia"
+  },
+  {
+    "id": 582,
+    "tags": ["💻", "🧠"],
+    "title": "Grafici di un po tutto",
+    "url": "https://realtime.org/",
+    "description": "Cosa mostra questo sito di datavisualization? Come possono essere utilizzati i grafici per comprendere meglio i dati?",
+    "hashtags": "#datavisualization #grafici #analisi"
+  },
+  {
+    "id": 583,
+    "tags": ["❤️", "💊"],
+    "title": "Aziende come Recursion stanno pionierizzando il passaggio all'autonomia completa con Recursion OS e piattaforme LOWE",
+    "url": "https://www.recursion.com/",
+    "description": "Cosa sono Recursion OS e LOWE? Come queste piattaforme stanno rivoluzionando la scoperta di farmaci?",
+    "hashtags": "#AI #scopertadifarmaci #autonomia"
+  },
+  {
+    "id": 584,
+    "tags": ["💻", "🧠"],
+    "title": "Aggiornamento sulla comprensione degli LLM da parte di Claude e Anthropic 2024",
+    "url": "https://www.anthropic.com/news/mapping-mind-language-model",
+    "description": "Quali sono gli ultimi sviluppi nella comprensione dei modelli di linguaggio? Come influiscono questi sviluppi sull'IA?",
+    "hashtags": "#LLM #IA #Claude"
+  },
+    {
     "id": 401,
     "tags": ["❤️", "⚽", "💸"],
     "title": "Correre per un bonus",
