@@ -1,6 +1,750 @@
 {
   "notes": [
     {
+    "id": 401,
+    "tags": ["❤️", "⚽", "💸"],
+    "title": "Correre per un bonus",
+    "url": "https://www.instagram.com/p/C1E9Elar44p/",
+    "description": "Come influisce un bonus sulle prestazioni degli atleti?",
+    "hashtags": "#bonus #prestazioni_atleti #motivazione"
+  },
+  {
+    "id": 402,
+    "tags": ["❤️", "👥"],
+    "title": "Guida a un Natale meno edonistico",
+    "url": "https://www.theatlantic.com/ideas/archive/2023/12/happiness-christmas-meditation-spiritual-festival/676897/",
+    "description": "Come vivere un Natale meno edonistico?",
+    "hashtags": "#Natale #meno_edonistico #guida"
+  },
+  {
+    "id": 403,
+    "tags": ["❤️", "⚽"],
+    "title": "Allenarsi e lavorare: sei principi dell'allenamento atletico applicati alla scrittura",
+    "url": "https://www.themarginalian.org/2023/12/17/exercise-writing/",
+    "description": "Quali principi dell'allenamento atletico si possono applicare alla scrittura?",
+    "hashtags": "#allenamento_atletico #principi #scrittura"
+  },
+  {
+    "id": 404,
+    "tags": ["🍃", "🔬"],
+    "title": "La vita è un fenomeno unitario osservato da Lynn Margulis",
+    "url": "https://themarginalian.us2.list-manage.com/track/click",
+    "description": "Come descrive Lynn Margulis la vita?",
+    "hashtags": "#Lynn_Margulis #fenomeno_unitario #vita"
+  },
+  {
+    "id": 405,
+    "tags": ["❤️", "📊", "🎨"],
+    "title": "Refik Anadol crea arte con dati e IA Novak Dreams",
+    "url": "https://ocula.com/magazine/art-news/to-refik-anadol-criticism-is-just-more-data/",
+    "description": "Come Refik Anadol utilizza dati e IA per creare arte?",
+    "hashtags": "#Refik_Anadol #arte_dati #intelligenza_artificiale"
+  },
+  {
+    "id": 406,
+    "tags": ["❤️", "⚽", "🎨"],
+    "title": "Grafiche paralimpiche 2024",
+    "url": "https://www.itsnicethat.com/news/paris-2024-olympic-paralympic-pictograms-080223",
+    "description": "Qual è il design delle grafiche paralimpiche del 2024?",
+    "hashtags": "#grafiche_paralimpiche #Parigi_2024 #design"
+  },
+  {
+    "id": 407,
+    "tags": ["💊", "🧠"],
+    "title": "Uno studio su oltre 1.1 milioni di adulti ha scoperto che il miglior tasso di sopravvivenza è tra coloro che dormono 7 ore per notte. Dormire più di 8 ore o meno di 6 ore aumenta significativamente il rischio di mortalità",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/11825133/",
+    "description": "Quale durata del sonno è associata alla migliore sopravvivenza? Qual è il rischio di mortalità per chi dorme troppo poco o troppo?",
+    "hashtags": "#Sonno #Salute #Ricerca"
+  },
+  {
+    "id": 408,
+    "tags": ["💻", "🚀"],
+    "title": "Astro Mechanica inventa un nuovo motore a getto efficiente a tutte le velocità ideale come primo stadio di veicoli di lancio orbitale per ridurre i costi",
+    "url": "https://x.com/k2pilot/status/1763007610993991722?t=7zKIlJI-n_xmTPsVMXweFA&s=09",
+    "description": "Come funziona il nuovo motore a getto di Astro Mechanica? Quali sono le applicazioni del motore a getto di Astro Mechanica?",
+    "hashtags": "#AstroMechanica #MotoreAGetto #LancioOrbitale"
+  },
+  {
+    "id": 409,
+    "tags": ["💻", "🚀"],
+    "title": "L'industria aeronautica ha ridotto del 50% il consumo medio di carburante dei nuovi jet commerciali dal 1960 come evidenziato da Anna-Sofia Lesiv nell'articolo 'The Future of Aviation'",
+    "url": "https://www.contrary.com/foundations-and-frontiers/aviation?utm_source=substack&utm_medium=email",
+    "description": "Quali progressi ha fatto l'industria aeronautica nel consumo di carburante? Come si è evoluto il consumo di carburante nei jet commerciali dal 1960?",
+    "hashtags": "#Aviazione #EfficienzaEnergetica"
+  },
+  {
+    "id": 410,
+    "tags": ["💻", "🎼"],
+    "title": "Robotaxi e Tesla cambiano il futuro della guida",
+    "url": "https://fortissimo.substack.com/i/117901757/ff-i-taxi-di-tesla",
+    "description": "Cosa significano i robotaxi per il futuro? Come Tesla influisce sulla guida autonoma? Quale impatto hanno i robotaxi sul trasporto? Tesla e la rivoluzione della guida autonoma",
+    "hashtags": "#robotaxi #Tesla #guidaautonoma"
+  },
+  {
+    "id": 411,
+    "tags": ["💻", "🚕", "🎼"],
+    "title": "Cruise lancia il servizio di robotaxi a San Francisco",
+    "url": "https://fortissimo.substack.com/i/117901757/ff-westworld-della-guida-autonoma-sf",
+    "description": "Come sta avanzando il servizio di robotaxi di Cruise? San Francisco diventa un punto di riferimento per i robotaxi? Quali sono le novità nel servizio di robotaxi di Cruise? Perché San Francisco è importante per i robotaxi?",
+    "hashtags": "#Cruise #robotaxi #SanFrancisco"
+  },
+  {
+    "id": 412,
+    "tags": ["💻", "🚕", "🎼"],
+    "title": "Tesla stimata a crescere grazie ai robo-taxi",
+    "url": "https://fortissimo.substack.com/i/117901757/ff-i-taxi-di-tesla",
+    "description": "Come contribuiranno i robo-taxi alla crescita di Tesla? Qual è la stima di crescita di Tesla grazie ai robo-taxi? In che modo i robo-taxi influenzeranno il valore di Tesla? Quali previsioni ci sono per Tesla e i robo-taxi?",
+    "hashtags": "#Tesla #robo-taxi #crescita"
+  },
+  {
+    "id": 413,
+    "tags": ["💻", "🚕", "🎼"],
+    "title": "La guida autonoma potrebbe ridurre la mortalità stradale",
+    "url": "https://fortissimo.substack.com/i/117901757/ff-meno-morti-sulle-strade",
+    "description": "Può la guida autonoma diminuire gli incidenti stradali? Qual è l'impatto della guida autonoma sulla sicurezza stradale? Come influisce la guida autonoma sulla mortalità stradale? La guida autonoma e la riduzione degli incidenti",
+    "hashtags": "#guidaautonoma #sicurezzastradale #riduzioneincidenti"
+  },
+  {
+    "id": 414,
+    "tags": ["💻", "👥", "🎼"],
+    "title": "DriveGPT: l'AI cinese per la guida autonoma",
+    "url": "https://fortissimo.substack.com/i/117901757/ff-drivegpt",
+    "description": "Cosa è DriveGPT e come cambierà la guida autonoma? L'innovazione cinese nell'AI per la guida? Qual è il ruolo di DriveGPT nella guida autonoma? Come l'AI cinese sta avanzando nella guida autonoma?",
+    "hashtags": "#DriveGPT #guidaautonoma #innovazioneAI"
+  },
+  {
+    "id": 414,
+    "tags": ["💻", "🎼"],
+    "title": "Convivenza di 8000 anni tra Homo Sapiens e Neanderthal ha visto prevalere il primo",
+    "url": "https://fortissimo.substack.com/i/46992863/ff-homo-sapiens-vs-neanderthal",
+    "description": "Come ha fatto l'Homo Sapiens a prevalere sul Neanderthal? Esiste un vantaggio culturale dietro? Quali teorie spiegano la prevalenza dell'Homo Sapiens sul Neanderthal?",
+    "hashtags": "#evoluzione#HomoSapiens#Neanderthal"
+  },
+  {
+    "id": 415,
+    "tags": ["❤️", "🧠", "🎼"],
+    "title": "La capacità cognitiva dell'Homo Sapiens sta decrescendo?",
+    "url": "https://fortissimo.substack.com/i/46992863/ff-cervelli-in-fuga",
+    "description": "I social media influenzano la nostra capacità cognitiva? La società moderna contribuisce alla decrescita della capacità cognitiva? Come influenzano i social media e la società moderna la nostra capacità cognitiva?",
+    "hashtags": "#cognizione#socialmedia#società"
+  },
+  {
+    "id": 416,
+    "tags": ["💻", "🧠", "📚"],
+    "title": "Esplorazione della coscienza e intelligenza tramite \"Being You\"",
+    "url": "https://fortissimo.substack.com/i/46992863/ff-coscienza-e-intelligenza",
+    "description": "Come definire coscienza e intelligenza? \"Being You\" offre spunti interessanti? Qual è la differenza tra coscienza e intelligenza secondo \"Being You\"?",
+    "hashtags": "#coscienza#intelligenza#libri"
+  },
+  {
+    "id": 417,
+    "tags": ["💻", "🧠", "🎼"],
+    "title": "Percezione della realtà e illusioni ottiche",
+    "url": "https://www.itsnicethat.com/articles/jose-berrio-illustration-130122",
+    "description": "In che modo il nostro cervello modifica la percezione della realtà? Le illusioni ottiche come esempio? Quali sono gli effetti delle illusioni ottiche sulla nostra percezione della realtà?",
+    "hashtags": "#percezione#realtà#illusioniottiche"
+  },
+  {
+    "id": 418,
+    "tags": ["❤️", "🎨", "🎼"],
+    "title": "Arte a tema cervelli e musica di Chicano Batman",
+    "url": "https://fortissimo.substack.com/i/46992863/ff-cervelli-in-fumo",
+    "description": "La musica di Chicano Batman e l'arte correlata possono influenzare la nostra percezione? In che modo l'arte e la musica di Chicano Batman influenzano la nostra percezione?",
+    "hashtags": "#arte#musica#percezione"
+  },
+  {
+    "id": 419,
+    "tags": ["🍃", "♻️", "🎼"],
+    "title": "La rivoluzione delle energie rinnovabili nel 2020 con un focus sul ruolo dominante dell'eolico",
+    "url": "https://fortissimo.substack.com/i/44894125/ff-la-rivincita-delle-rinnovabili",
+    "description": "Quali fonti di energia rinnovabile hanno guidato la crescita nel 2020? Perché l'energia eolica ha avuto un impatto così significativo?",
+    "hashtags": "#EnergieRinnovabili #Eolico #Sostenibilità"
+  },
+  {
+    "id": 420,
+    "tags": ["💻", "🤖", "🎼"],
+    "title": "L'impiego dei robot nell'industria solare riduce i costi e aumenta l'efficienza promuovendo lo sviluppo sostenibile",
+    "url": "https://fortissimo.substack.com/i/44894125/ff-i-robot-ci-assistono",
+    "description": "Come influenzano i robot l'industria dell'energia solare? Quali sono i benefici dell'automazione nella produzione di energia solare?",
+    "hashtags": "#Tecnologia #EnergiaSolare #Automazione"
+  },
+  {
+    "id": 421,
+    "tags": ["🍃", "♻️", "💬", "🎼"],
+    "title": "Il potenziale illimitato delle risorse energetiche e la visione per un futuro di abbondanza sostenibile",
+    "url": "https://fortissimo.substack.com/i/44894125/ff-finire-le-risorse",
+    "description": "Qual è la prospettiva sulle risorse finite della Terra? Come possiamo sfruttare meglio le risorse disponibili?",
+    "hashtags": "#Sostenibilità #Innovazione #FuturoEnergetico"
+  },
+  {
+    "id": 422,
+    "tags": ["❤️", "👥", "📊", "🎼"],
+    "title": "La crescita della popolazione mondiale mostra una tendenza esponenziale con un aumento connesso soprattutto a una minore mortalità infantile",
+    "url": "https://fortissimo.substack.com/i/46806059/ff-una-crescita-infinita",
+    "description": "Che impatto ha la diminuzione della mortalità infantile sulla crescita della popolazione mondiale? Come ha influenzato la mortalità infantile l'espansione demografica globale?",
+    "hashtags": "#popolazione#demografia#mortalitàinfantile"
+  },
+  {
+    "id": 423,
+    "tags": ["❤️", "👥", "🎼"],
+    "title": "La Nigeria con una media di figli per donna di 5.25 rappresenta uno dei paesi più popolosi in piena transizione demografica",
+    "url": "https://fortissimo.substack.com/i/46806059/ff-la-nigeria-esplodera",
+    "description": "Qual è la media di figli per donna in Nigeria? Come si posiziona la Nigeria nella transizione demografica globale?",
+    "hashtags": "#Nigeria#transizionedemografica#figliperdonna"
+  },
+  {
+    "id": 424,
+    "tags": ["❤️", "👥", "🎼"],
+    "title": "Interessante osservare il numero di appuntamenti necessari per uomini e donne per arrivare a momenti significativi in una relazione",
+    "url": "https://fortissimo.substack.com/i/46806059/ff-trend-relazionali",
+    "description": "Quanti appuntamenti sono necessari prima di andare a letto o dire \"ti amo\" in una relazione? Qual è il ruolo degli appuntamenti nei primi stadi di una relazione amorosa?",
+    "hashtags": "#relazioni#appuntamenti#amore"
+  },
+  {
+    "id": 425,
+    "tags": ["❤️", "👥", "📊", "🎼"],
+    "title": "Percentuale di utenti internet che hanno visitato Pornhub evidenziando le differenze culturali e sociali tra i paesi europei",
+    "url": "https://fortissimo.substack.com/i/46806059/ff-o-di-amore-con-se-stessi",
+    "description": "Quali sono le percentuali di utenti internet che visitano Pornhub in Europa? Come varia l'uso di Pornhub tra i diversi paesi europei?",
+    "hashtags": "#Pornhub#internet#Europa"
+  },
+  {
+    "id": 426,
+    "tags": ["💻", "🚕"],
+    "title": "Tesla Full Self-Driving (Supervised) 12.3.3 effettua un viaggio da Union Street all'aeroporto internazionale di San Francisco e ritorno",
+    "url": "https://x.com/WholeMarsBlog/status/1775718598067298671?t=eLPbiKZuoC_805lI61CLQA&s=33",
+    "description": "Come si comporta il Tesla Full Self-Driving in situazioni urbane complesse? Quali sono le caratteristiche salienti del Tesla Full Self-Driving 12.3.3?",
+    "hashtags": "#Tesla#FullSelfDriving#Innovazione"
+  },
+  {
+    "id": 427,
+    "tags": ["💻", "♻️"],
+    "title": "Regolamentazioni e sentimenti anti-nucleari hanno causato un sovrapprezzo di circa 345 miliardi di dollari nello sviluppo delle centrali nucleari statunitensi rendendo l'energia nucleare meno competitiva in termini di costi rispetto al gas naturale",
+    "url": "https://x.com/DMaguireARK/status/1775663318838976852?t=zxi7pGKHTy8QEHCZLItvyQ&s=33",
+    "description": "Qual è l'impatto delle regolamentazioni e del sentimento anti-nucleare sul costo dello sviluppo delle centrali nucleari negli USA? Come influenzano le regolamentazioni la competitività dell'energia nucleare rispetto al gas naturale?",
+    "hashtags": "#EnergiaNucleare#Regolamentazioni#Costi"
+  },
+  {
+    "id": 428,
+    "tags": ["💻", "🧠"],
+    "title": "Explorer Globe Engineer è un'intelligenza artificiale che permette di cercare grafici e trend su vari argomenti",
+    "url": "https://explorer.globe.engineer",
+    "description": "Come funziona Explorer Globe Engineer per la ricerca di grafici e trend?",
+    "hashtags": "#ExplorerGlobeEngineer #IntelligenzaArtificiale #RicercaTrend"
+  },
+  {
+    "id": 429,
+    "tags": ["💻", "📱"],
+    "title": "Guida su come utilizzare l'IA per il marketing e la crescita",
+    "url": "https://www.canva.com/design/DAF_JFMQSX0/a_RRBMuSZ3Z9w-sKGgZe9g/view",
+    "description": "Come si può impiegare l'intelligenza artificiale per favorire il marketing e la crescita?",
+    "hashtags": "#Marketing #Crescita #IntelligenzaArtificiale"
+  },
+  {
+    "id": 430,
+    "tags": ["💻"],
+    "title": "Il report 2024 di Deloitte evidenzia le principali tendenze digitali",
+    "url": "https://www2.deloitte.com/content/dam/insights/articles/us176942_tmt_digital-media-trends-2024/DI_Digital-media-trends-2024.pdf",
+    "description": "Quali sono le tendenze digitali principali nel report 2024 di Deloitte?",
+    "hashtags": "#Deloitte2024 #TrendDigitali #Report"
+  },
+  {
+    "id": 431,
+    "tags": ["❤️", "⚽"],
+    "title": "Il primo corridore a percorrere tutta l'Africa",
+    "url": "https://x.com/hardestgeezer/status/1776354923115934073",
+    "description": "Chi ha corso tutta l'Africa? Come si è svolta la corsa attraverso l'Africa?",
+    "hashtags": "#Corsa #Africa #Avventura"
+  },
+  {
+    "id": 432,
+    "tags": ["💻", "💸"],
+    "title": "La maggior parte degli esperti crypto nel 2019 prevedeva che il prezzo del Bitcoin crollasse a zero mentre ora sembra che coloro che avevano puntato su $100.000 siano più vicini alla realtà",
+    "url": "https://igorpejic.substack.com/p/how-far-can-the-bitcoin-price-go",
+    "description": "Qual era la previsione sul prezzo del Bitcoin e come si è evoluta nel tempo?",
+    "hashtags": "#Bitcoin #Previsioni #Criptovalute"
+  },
+  {
+    "id": 433,
+    "tags": ["💻", "🧠"],
+    "title": "AI: cos'è il Q learning?",
+    "url": "https://x.com/hamandcheese/status/1727533848328651057",
+    "description": "Come sta avanzando il Q learning nel campo dell'AI? Quali sono le ultime novità nel Q learning per l'intelligenza artificiale?",
+    "hashtags": "#Qlearning #AI #TecnologiaAvanzata"
+  },
+  {
+    "id": 434,
+    "tags": ["❤️", "💆", "🎼"],
+    "title": "La privazione del sonno post-dimissioni del CEO di OpenAI",
+    "url": "https://twitter.com/m_franceschetti/status/1726732560770666979?s=46",
+    "description": "Come influisce la privazione del sonno dopo le dimissioni del CEO di OpenAI sulla salute? Quali sono le conseguenze della privazione del sonno?",
+    "hashtags": "#PrivazioneSonno #OpenAI #SaluteMentale"
+  },
+  {
+    "id": 435,
+    "tags": ["🍃", "🚕"],
+    "title": "Le e-bike riducono le emissioni climatiche globali più dei veicoli elettrici",
+    "url": "https://theconversation.com/the-worlds-280-million-electric-bikes-and-mopeds-are-cutting-demand-for-oil-far-more-than-electric-cars-213870",
+    "description": "Come stanno le e-bike influenzando le emissioni climatiche globali rispetto ai veicoli elettrici? Qual è l'impatto delle e-bike sulle emissioni di CO2?",
+    "hashtags": "#EBike #EmissioniClimatiche #VeicoliElettrici"
+  },
+  {
+    "id": 436,
+    "tags": ["❤️", "⚽", "🎨"],
+    "title": "Muscoli e arte si incontrano",
+    "url": "https://www.itsnicethat.com/articles/hugo-bilton-illustration-discover-131123?utm_source=weeklyemail&utm_medium=email&utm_campaign=intemail",
+    "description": "Come si combinano muscoli e arte? Quali sono gli esempi di integrazione tra sport e arte?",
+    "hashtags": "#SportArte #MuscoliArte #Creatività"
+  },
+  {
+    "id": 437,
+    "tags": ["💻", "🚀"],
+    "title": "Tutto quello che devi sapere sui satelliti Starlink",
+    "url": "https://www.space.com/spacex-starlink-satellites.html",
+    "description": "Quali sono le informazioni chiave sui satelliti Starlink? Qual è la controversia intorno alla megaconstellazione internet di Starlink?",
+    "hashtags": "#Starlink #Satelliti #InternetGlobale"
+  },
+  {
+    "id": 438,
+    "tags": ["❤️", "💊"],
+    "title": "Come aumentare la propria aspettativa di vita di 10 anni",
+    "url": "https://x.com/Paddy_Barrett/status/1725508236978040961",
+    "description": "Quali sono i metodi per aumentare l'aspettativa di vita di 10 anni? Come può migliorare la propria salute per vivere più a lungo?",
+    "hashtags": "#Longevità #Salute #AspettativaDiVita"
+  },
+  {
+    "id": 439,
+    "tags": ["❤️", "💊"],
+    "title": "Sonno e mortalità: uno studio approfondito",
+    "url": "https://x.com/sleepdiplomat/status/1720553933511496100",
+    "description": "Qual è il legame tra sonno e mortalità? Come influisce la qualità del sonno sulla longevità della vita?",
+    "hashtags": "#Sonno #Mortalità #Salute"
+  },
+  {
+    "id": 440,
+    "tags": ["💻", "🧠"],
+    "title": "ChatGPT e il bioterrorismo: una nuova minaccia?",
+    "url": "https://www.vox.com/future-perfect/23820331/chatgpt-bioterrorism-bioweapons-artificial-inteligence-openai-terrorism",
+    "description": "Come ChatGPT potrebbe essere legato al bioterrorismo? Quali sono i rischi associati all'uso dell'AI in contesti di bioterrorismo?",
+    "hashtags": "#ChatGPT #Bioterrorismo #SicurezzaGlobale"
+  },
+  {
+    "id": 441,
+    "tags": ["❤️", "💊"],
+    "title": "Gap di aspettativa di vita tra maschi e femmine",
+    "url": "https://www.cdc.gov/nchs/data/nvsr/nvsr72/nvsr72-12.pdf?utm_source=chartr&utm_medium=newsletter&utm_campaign=chartr_20231115",
+    "description": "Qual è il divario di aspettativa di vita tra maschi e femmine? Come si sta evolvendo il gap di aspettativa di vita?",
+    "hashtags": "#AspettativaDiVita #Genere #SalutePubblica"
+  },
+  {
+    "id": 442,
+    "tags": ["💻", "🧠"],
+    "title": "AI che commenta la vita di qualcuno in diretta",
+    "url": "https://x.com/charliebholtz/status/1724815159590293764",
+    "description": "Come l'AI può commentare la vita delle persone in tempo reale? Quali sono le applicazioni dell'AI nel commentare eventi dal vivo?",
+    "hashtags": "#AI #VitaReale #TecnologiaInterattiva"
+  },
+  {
+    "id": 443,
+    "tags": ["❤️", "💊", "⚽"],
+    "title": "Attività fisica e riduzione del cancro",
+    "url": "https://x.com/Paddy_Barrett/status/1724699491444342944",
+    "description": "Qual è il legame tra attività fisica e riduzione del rischio di cancro? Come l'esercizio fisico può aiutare a prevenire il cancro?",
+    "hashtags": "#AttivitàFisica #PrevenzioneCancro #Salute"
+  },
+  {
+    "id": 444,
+    "tags": ["🍃", "💻"],
+    "title": "La più recente IA di Google per la previsione del tempo",
+    "url": "https://x.com/demishassabis/status/1724452655454466489",
+    "description": "Quali sono le innovazioni di Google nell'IA per la previsione del tempo? Come la nuova IA di Google sta migliorando le previsioni meteorologiche?",
+    "hashtags": "#IA #PrevisioneTempo #Google"
+  },
+  {
+    "id": 445,
+    "tags": ["💻", "🎮"],
+    "title": "AI che gioca a Minecraft",
+    "url": "https://x.com/rowancheung/status/1724646472157745346",
+    "description": "Come l'AI sta imparando a giocare a Minecraft? Quali progressi ci sono stati nell'uso dell'AI nei videogiochi?",
+    "hashtags": "#AI #Minecraft #Gaming"
+  },
+  {
+    "id": 446,
+    "tags": ["💻", "🧠"],
+    "title": "GPT V fa shopping su Amazon",
+    "url": "https://x.com/emollick/status/1724272391595995329",
+    "description": "Come GPT V può assistere nello shopping su Amazon? Quali sono le potenzialità dell'AI nello shopping online?",
+    "hashtags": "#GPTV #ShoppingOnline #Amazon"
+  },
+  {
+    "id": 447,
+    "tags": ["❤️", "🎨"],
+    "title": "Collaborazione Crocs molto apprezzata",
+    "url": "https://x.com/MorningBrew/status/1699796138742976566",
+    "description": "Qual è la nuova collaborazione di Crocs che sta ricevendo attenzioni? Come si distingue questa collaborazione di Crocs?",
+    "hashtags": "#Crocs #Collaborazione #Moda"
+  },
+  {
+    "id": 448,
+    "tags": ["❤️", "💊"],
+    "title": "Cura delle malattie cardiache con la genetica",
+    "url": "https://www.bayareatimes.com/p/heart-disease-3-drugs-report-positive-clinical-trials-f912",
+    "description": "Quali sono i progressi nella cura delle malattie cardiache tramite la genetica? Come la ricerca genetica sta contribuendo alla lotta contro le malattie cardiache?",
+    "hashtags": "#MalattieCardiache #Genetica #RicercaMedica"
+  },
+  {
+    "id": 449,
+    "tags": ["💻", "🚕"],
+    "title": "Stato dell'auto a guida autonoma e miglia percorse",
+    "url": "https://www.dmv.ca.gov/portal/news-and-media/autonomous-vehicle-permit-holders-report-5-7-million-test-miles-in-california/",
+    "description": "Qual è lo stato attuale delle auto a guida autonoma? Quante miglia sono state percorse nei test in California?",
+    "hashtags": "#GuidaAutonoma #Tecnologia #Innovazione"
+  },
+  {
+    "id": 450,
+    "tags": ["💻", "🧠"],
+    "title": "La condivisione dello schermo e l'AI sono incredibili",
+    "url": "https://x.com/IlyaAbyzov/status/1722079051358376235",
+    "description": "Come la condivisione dello schermo sta evolvendo con l'AI? Quali sono le applicazioni più sorprendenti dell'AI nella condivisione dello schermo?",
+    "hashtags": "#CondivisioneSchermo #AI #InnovazioneTecnologica"
+  },
+  {
+    "id": 451,
+    "tags": ["💻", "🧠"],
+    "title": "Un'interazione con un LLM può consumare tanta energia quanto una lampadina LED a bassa luminosità accesa per un'ora",
+    "url": "https://luxcapital.us13.list-manage.com/track/click",
+    "description": "Quanta energia consuma un'interazione con un LLM? Come si confronta il consumo energetico dell'AI con quello di una lampadina LED?",
+    "hashtags": "#ConsumoEnergetico #AI #Sostenibilità"
+  },
+  {
+    "id": 452,
+    "tags": ["❤️", "💊", "📚"],
+    "title": "Analisi tossicologiche forensi rivelano l'uso di cannabis a Milano nel 1600",
+    "url": "https://www.sciencedirect.com/science/article/pii/S030544032300153X",
+    "description": "Quali sono le evidenze dell'uso di cannabis a Milano nel 1600? Come le analisi tossicologiche hanno rivelato l'uso storico della cannabis?",
+    "hashtags": "#Cannabis #Storia #Milano"
+  },
+  {
+    "id": 453,
+    "tags": ["❤️", "👥"],
+    "title": "Pubblicità natalizia molto famosa con Bocelli",
+    "url": "https://www.itsnicethat.com/news/saatchi-and-saatchi-john-lewis-christmas-advert-091123",
+    "description": "Qual è la nuova pubblicità natalizia che coinvolge Bocelli? Perché la pubblicità natalizia con Bocelli è diventata così famosa?",
+    "hashtags": "#PubblicitàNatalizia #Bocelli #Festa"
+  },
+  {
+    "id": 454,
+    "tags": ["❤️", "💊"],
+    "title": "Frequenza cardiaca a riposo per una maggiore sopravvivenza",
+    "url": "https://x.com/Alan_Couzens/status/1722982115766075504",
+    "description": "Come influisce la frequenza cardiaca a riposo sulla sopravvivenza? Quali sono i benefici di una bassa frequenza cardiaca a riposo per la salute?",
+    "hashtags": "#FrequenzaCardiaca #Salute #Longevità"
+  },
+  {
+    "id": 455,
+    "tags": ["❤️", "💊", "🎨"],
+    "title": "Musica e variabilità della frequenza cardiaca",
+    "url": "https://x.com/Alan_Couzens/status/1722313154820980788",
+    "description": "Qual è l'effetto della musica sulla variabilità della frequenza cardiaca? Come può la musica influenzare la salute del cuore?",
+    "hashtags": "#Musica #FrequenzaCardiaca #Salute"
+  },
+  {
+    "id": 456,
+    "tags": ["🍃", "📊"],
+    "title": "Analisi dell'uso del carbonio nel cibo",
+    "url": "https://twitter.com/MaxCRoser/status/1698378188810768567",
+    "description": "Qual è l'impatto del consumo di cibo sulle emissioni di carbonio? Come possiamo ridurre l'uso del carbonio nella produzione alimentare?",
+    "hashtags": "#Carbonio #Alimentazione #Sostenibilità"
+  },
+  {
+    "id": 457,
+    "tags": ["💻", "🚀"],
+    "title": "Manifesto dell'ottimismo di Marc",
+    "url": "https://x.com/pmarca/status/1713930459779129358",
+    "description": "Quali sono i principi del manifesto dell'ottimismo di Marc? Come l'ottimismo può guidare l'innovazione tecnologica?",
+    "hashtags": "#Ottimismo #Tecnologia #Innovazione"
+  },
+  {
+    "id": 458,
+    "tags": ["🍃", "💻", "📊"],
+    "title": "Uso del suolo vs produzione energetica in MW",
+    "url": "https://ci5.googleusercontent.com/proxy/kSVd-z974OWfajmuN__jVUMxMwu14S55PNikt95G5Tw7rE8IYYmBdhwrC59Wu_p-wNLGd2jQd9ySogtLJvfvclbeJg9JNWgH6tIBuPb2ky__DRSw9SDHcFuMn5FVW2hU-QL-tuCjl6oBQsVA51K4TAn56Gm9mw=s0-d-e1-ft#https://mcusercontent.com/18058af086319ba6afad752ec/images/e62ea297-70ac-250f-fbfc-4584f3ae708d.png,Qual",
+    "description": "è il confronto tra l'uso del suolo e la produzione di energia? Come l'uso del suolo influisce sulla capacità di generazione energetica?",
+    "hashtags": "#UsoSuolo #Energia #Sostenibilità"
+  },
+  {
+    "id": 459,
+    "tags": ["❤️", "💊"],
+    "title": "La University of Michigan ha sviluppato un metodo per pompare sangue attraverso un ossigenatore estendendo la vita di un agnello per due settimane",
+    "url": "https://research.ark-invest.com/e3t/Ctc/I1+113/c3nSf04/VWv4Hs52PGSTVMzgz_5z_SMNW2SWDgt53TZkkN4CDgfj3qgyTW7Y8-PT6lZ3pkW79QBxh819jfzW7C3HH_2Zf3CHW3FXzbX7fdqgcW2RdvQb1FyV3pW3KLj1h2pvRbMW46YGcS8Lr02HW6N1DgZ7HT0dkN4RcBNk9-z5vW64zFsG99QDmKW57dxTb1yS6WfW8G9Rsl2y9vwDW2DdBK298fCdCN5BKncz2n4hCW8X7KnS5tMSSbW8HVqdm4B-5ZfW611vgN33fr_fW61fFNd3YyKX3Vn1wYw5cwNyCW60Ryz_5J7tK0W3kwyKM7f5zvwW2gS-lm2dCFl1W2KsTM-9hBm4vW2lHhFv3p81dKF1djSl8SQ5gW6k1KQX4ymjgdN98m4h2FhkYvf5p5v_204",
+    "description": "Quali sono i dettagli del nuovo metodo per estendere la vita usando un ossigenatore? Come ha funzionato l'esperimento sull'agnello?",
+    "hashtags": "#RicercaMedica #Innovazione #Salute"
+  },
+  {
+    "id": 460,
+    "tags": ["❤️", "💊", "⚽"],
+    "title": "Allenarsi per una pensione più salutare",
+    "url": "https://twitter.com/Alan_Couzens/status/1710990439682285756",
+    "description": "Come l'allenamento fisico può prepararci per una pensione salutare? Quali sono i benefici dell'esercizio fisico per gli anziani?",
+    "hashtags": "#Allenamento #Pensione #Salute"
+  },
+  {
+    "id": 461,
+    "tags": ["🍃", "💻"],
+    "title": "Il piano di Terraform per produrre idrocarburi economici dalla cattura diretta dell'aria di CO2 e dalla luce solare",
+    "url": "https://substack.com/redirect/f1cbdbfb-32fb-42af-8a9c-f9477a733c80",
+    "description": "Qual è il piano di Terraform per utilizzare l'energia solare e catturare CO2? Come Terraform intende produrre gas neutri dal punto di vista carbonico?",
+    "hashtags": "#Terraform #CO2 #EnergiaSolare"
+  },
+  {
+    "id": 462,
+    "tags": ["💻", "🎮"],
+    "title": "Ricreare Spyro con l'intelligenza artificiale",
+    "url": "https://x.com/skirano/status/1713702757583016302",
+    "description": "Come si sta usando l'AI per ricreare Spyro? Quali sono i progressi nell'uso dell'AI nel gaming?",
+    "hashtags": "#AI #Spyro #Gaming"
+  },
+  {
+    "id": 463,
+    "tags": ["💻", "👥"],
+    "title": "L'importanza di rimuovere anziché aggiungere per migliorare un prodotto",
+    "url": "https://davidepstein.substack.com/p/the-christmas-tree-effect",
+    "description": "Come la rimozione può migliorare un prodotto? Quali sono gli esempi di successo di questa strategia?",
+    "hashtags": "#Innovazione #Semplificazione #Design"
+  },
+  {
+    "id": 464,
+    "tags": ["💻", "🎮"],
+    "title": "La gamification della prenotazione nei ristoranti",
+    "url": "https://www.nytimes.com/interactive/2023/10/23/dining/restaurant-reservations-nyc.html",
+    "description": "Come la gamification sta cambiando le prenotazioni nei ristoranti? Quali sono i vantaggi della gamification per i clienti e i ristoranti?",
+    "hashtags": "#Gamification #Ristoranti #Prenotazioni"
+  },
+  {
+    "id": 465,
+    "tags": ["💻", "🥽"],
+    "title": "Da immagine a 3D con collaborazione AI",
+    "url": "https://github.com/dreamgaussian/dreamgaussian",
+    "description": "Come si può convertire un'immagine in 3D con l'AI? Quali sono le applicazioni di questa tecnologia?",
+    "hashtags": "#AI #3D #Tecnologia"
+  },
+  {
+    "id": 466,
+    "tags": ["💻", "⚽"],
+    "title": "L'AI basata su Caressa commenta lo sport",
+    "url": "https://x.com/geepytee/status/1721705524176257296",
+    "description": "Come l'AI può imitare il commento sportivo di Caressa? Quali sono le potenzialità dell'AI nel commento sportivo?",
+    "hashtags": "#AI #Sport #Commento"
+  },
+  {
+    "id": 467,
+    "tags": ["💻", "👥"],
+    "title": "L'importanza di rimuovere anziché aggiungere per migliorare un prodotto",
+    "url": "https://davidepstein.substack.com/p/the-christmas-tree-effect",
+    "description": "Come rimuovere elementi può migliorare un prodotto? Quali sono gli esempi di prodotti migliorati attraverso la rimozione?",
+    "hashtags": "#DesignProdotti #Innovazione #Semplificazione"
+  },
+  {
+    "id": 468,
+    "tags": ["❤️", "⚽"],
+    "title": "Panoramica sull'attività sportiva e la riduzione della mortalità con il VO2 max",
+    "url": "https://x.com/Alan_Couzens/status/1720437671623868878",
+    "description": "Qual è il legame tra livello di attività lavorativa e riduzione della mortalità? Come il VO2 max può indicare la salute cardiovascolare?",
+    "hashtags": "#AttivitàLavorativa #VO2max #Salute"
+  },
+  {
+    "id": 469,
+    "tags": ["💻", "💸"],
+    "title": "Gensyn con sede nel Regno Unito annuncia un finanziamento di serie A di 43 milioni di dollari scommettendo sul futuro della blockchain nell'industria dell'AI",
+    "url": "https://semafor.com/s/H6pQuDYMQf",
+    "description": "Qual è il futuro della blockchain nell'industria dell'AI? Come Gensyn sta utilizzando il blockchain per l'industria dell'AI?",
+    "hashtags": "#Blockchain #AI #Finanziamento"
+  },
+  {
+    "id": 470,
+    "tags": ["💻", "❤️", "💊", "🧠"],
+    "title": "In uno studio recente ChatGPT ha mostrato disaccordo con il ~60% dei giudizi dei medici dell'Università di Stanford",
+    "url": "https://research.ark-invest.com/e3t/Ctc/I1+113/c3nSf04/VWrD3b8HdR3sW5G0FPT5MkDWqW3yn_R_54_cwkMmLVTq3qgyTW95jsWP6lZ3pxW4-6r-22r4317W5Zq2mZ1w20FbW9kP5J61Mq_ZZW8LHg0Z2-_7MSW5V1B_K3x847PW6hTRvY67RR0sW8KYd_m38QpnFW4gP9Hw2qs2l2N62T5ZVTPyP_VHt79429VRCmW6_SKDx36TYL0W2RPvHx64TbdfW95krl06R400CW6LckNk8PxgstW9m3tz64drkjJVzNRWT7nj52PW5Kyz3k17tvF6W76T06g5MSmfwW4nWxtZ1QcDZ_N7JNC55vkgNZN6l_NDfj0p6jW5Z6Y7g2tq1CYW54ptrL9d8tn9W8L3TnF3_y6rPW77wNWG7dsdGBW86ygzh40-HCKW3sfRzh4NnRSb",
+    "description": "Come ChatGPT si confronta con i giudizi dei medici? Quali sono le implicazioni dei disaccordi di ChatGPT con i medici?",
+    "hashtags": "#ChatGPT #Medicina #IntelligenzaArtificiale"
+  },
+  {
+    "id": 471,
+    "tags": ["❤️", "💊"],
+    "title": "Un impianto cerebrale minimamente invasivo che i pazienti potrebbero operare da casa?",
+    "url": "https://spectrum.ieee.org/neurostimulation",
+    "description": "Come funziona l'impianto cerebrale minimamente invasivo? Quali sono i benefici di un impianto cerebrale operabile da casa?",
+    "hashtags": "#ImpiantoCerebrale #Neurostimolazione #TecnologiaMedica"
+  },
+  {
+    "id": 472,
+    "tags": ["🍃", "💸"],
+    "title": "L'industria assicurativa statunitense affronta pressioni crescenti a causa dell'aumento dei costi dei disastri naturali da 4.6 miliardi di dollari nel 2000 a 100 miliardi oggi",
+    "url": "https://substack.com/redirect/a3c11d90-269d-477b-b943-e1bb884d6ce1",
+    "description": "Qual è l'impatto dei disastri naturali sull'industria assicurativa? Come sono cambiati i costi dei disastri naturali negli ultimi anni?",
+    "hashtags": "#DisastriNaturali #IndustriaAssicurativa #CambiamentiClimatici"
+  },
+  {
+    "id": 473,
+    "tags": ["❤️", "👥"],
+    "title": "Un sito che esplora il tempo e la sua percezione umana",
+    "url": "https://www.maximiliankiener.com/digitalprojects/time/",
+    "description": "Come viene percepito il tempo dagli esseri umani? Quali sono i concetti chiave dietro la percezione umana del tempo?",
+    "hashtags": "#PercezioneDelTempo #Umano #ConcettoDiTempo #473"
+  },
+  {
+    "id": 474,
+    "tags": ["💻", "👥", "🎼"],
+    "title": "Effetti social come leoni savana rischio stress",
+    "url": "https://fortissimo.substack.com/p/ff91-lepidemia-di-stress",
+    "description": "Come i social influenzano lo stress come un leone nella savana? Qual è l'effetto dei social sul nostro stress quotidiano?",
+    "hashtags": "#socialmedia #stress #salute"
+  },
+  {
+    "id": 475,
+    "tags": ["❤️", "⚽", "👥", "🎼"],
+    "title": "Cortisolo alimentazione notifiche e sport",
+    "url": "https://fortissimo.substack.com/p/ff91-lepidemia-di-stress",
+    "description": "Qual è il legame tra cortisolo alimentazione notifiche e sport? Come il cortisolo collega cibo notifiche e attività fisica?",
+    "hashtags": "#cortisolo #alimentazione #sport"
+  },
+  {
+    "id": 476,
+    "tags": ["❤️", "🎼"],
+    "title": "Connessione stress diabete",
+    "url": "https://fortissimo.substack.com/p/ff91-lepidemia-di-stress",
+    "description": "Qual è la connessione tra stress e diabete? Come lo stress influisce sul rischio di diabete?",
+    "hashtags": "#stress #diabete #salute"
+  },
+  {
+    "id": 477,
+    "tags": ["❤️", "📚"],
+    "title": "Microdosi stress quotidiano: il libro di Rangan Chatterjee",
+    "url": "https://amzn.to/3OQzp7M",
+    "description": "Cosa sono le microdosi di stress e come influenzano la vita quotidiana? Qual è l'impatto delle microdosi di stress sul nostro benessere?",
+    "hashtags": "#stress #quotidianità #salute"
+  },
+  {
+    "id": 478,
+    "tags": ["❤️", "💊"],
+    "title": "Microbioma e influenza dello stress",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2849416/",
+    "description": "Come lo stress influenza il microbioma intestinale? Quali effetti ha lo stress sul nostro microbioma?",
+    "hashtags": "#microbioma #stress #salute"
+  },
+  {
+    "id": 479,
+    "tags": ["❤️", "⚽"],
+    "title": "Movimento contro stress e diabete",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2667036423000018",
+    "description": "Qual è l'importanza del movimento contro lo stress e il diabete? Come l'attività fisica può aiutare nella gestione dello stress e nella prevenzione del diabete?",
+    "hashtags": "#movimento #stress #diabete"
+  },
+  {
+    "id": 480,
+    "tags": ["❤️", "🎨", "🎼"],
+    "title": "Contare le notifiche come fossero kcal?",
+    "url": "https://www.itsnicethat.com/news/studio-output-a-positive-platform-social-media-mental-health-031117",
+    "description": "Come una piattaforma positiva può combattere lo stress causato dai social media? Quali sono le strategie per ridurre lo stress legato all'uso dei social?",
+    "hashtags": "#socialmedia #stress #benessere"
+  },
+  {
+    "id": 481,
+    "tags": ["❤️"],
+    "title": "Uno studio pubblicato sul sito del National Institutes of Health esamina il consumo di caramelle e la longevità",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC28747/",
+    "description": "Quali effetti ha il consumo di caramelle sulla longevità? Come influisce il consumo di dolci sulla salute a lungo termine?",
+    "hashtags": "#salute #longevità #caramelle"
+  },
+  {
+    "id": 482,
+    "tags": ["❤️", "📚", "💆"],
+    "title": "Un pensiero di James Clear su come interpretare il fallimento leggendo",
+    "url": "https://www.amazon.it/dp/1419715704",
+    "description": "Come James Clear descrive il fallimento? Quali lezioni possiamo imparare dal fallimento secondo James Clear?",
+    "hashtags": "#fallimento #apprendimento #crescitapersonale"
+  },
+  {
+    "id": 483,
+    "tags": ["💻", "🚀"],
+    "title": "La NASA seleziona tre aziende per progettare il rover lunare con un valore potenziale di contratti di 4,6 miliardi di dollari e un utilizzo previsto sulla luna nel 2030",
+    "url": "https://link.mail.beehiiv.com/ss/c/u001.knvSGDKJtM9Ilui-AmCT-dTrvHabAzoJgq-fctBhaew8tqkJZ3jn3Sg6nJcCh0KwFKkOOQEMEKQiQyMX_9O6NYsYDX8kPuK-K0PmYQ0ZwCh0mzKpLGmDGa0ODA583W_y/458/tEiuSX3tT-iaP-kjue6Urg/h25/h001.B_xxYFsGISf7-Zvh9zdIK4eZQwy5S6THNgSmOQjxH7A",
+    "description": "Quali aziende sono state selezionate dalla NASA per progettare il rover lunare? Qual è il valore dei contratti per il rover lunare?",
+    "hashtags": "#NASA #tecnologiaspaziale #roverlunare"
+  },
+  {
+    "id": 484,
+    "tags": ["🍃", "💻"],
+    "title": "Analisi globale delle tendenze della deforestazione nel 2023 pubblicata da World Resources Institute",
+    "url": "https://research.wri.org/gfr/latest-analysis-deforestation-trends",
+    "description": "Quali sono le ultime tendenze della deforestazione globale? Come si è evoluta la deforestazione nel 2023?",
+    "hashtags": "#clima #deforestazione #ambiente"
+  },
+  {
+    "id": 485,
+    "tags": ["💻", "👥"],
+    "title": "Esper Bionics introduce braccia robotiche per la riabilitazione presentate su LinkedIn",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7182301518681829376",
+    "description": "Che innovazioni presenta Esper Bionics nelle protesi robotiche? Come funzionano le braccia riabilitative di Esper Bionics?",
+    "hashtags": "#AI #riabilitazione #innovazione"
+  },
+  {
+    "id": 486,
+    "tags": ["💻", "💸", "💆"],
+    "title": "Le Filippine e altri paesi dipendono dalle rimesse degli emigrati rappresentando una frazione significativa del loro PIL",
+    "url": "https://luxcapital.us13.list-manage.com/track/click",
+    "description": "Quanto influiscono le rimesse sul PIL delle Filippine? Quali paesi dipendono maggiormente dalle rimesse estere?",
+    "hashtags": "#economia #rimesse #PIL"
+  },
+  {
+    "id": 487,
+    "tags": ["💻", "🍃"],
+    "title": "Ingegneri trovano un nuovo modo per convertire l'anidride carbonica in prodotti utili usando un catalizzatore legato al DNA",
+    "url": "https://news.mit.edu/2024/engineers-find-new-way-convert-carbon-dioxide-useful-products-0327",
+    "description": "Come può il DNA aiutare a convertire l'anidride carbonica? Quali sono i nuovi metodi per la conversione dell'anidride carbonica?",
+    "hashtags": "#scienza #tecnologia #CO2"
+  },
+  {
+    "id": 488,
+    "tags": ["💻", "🔬"],
+    "title": "Microsoft annuncia significativi progressi nel computing quantistico con un miglioramento di 800 volte nel tasso di errore logico dei qubit",
+    "url": "https://cloudblogs.microsoft.com/quantum/2024/04/03/how-microsoft-and-quantinuum-achieved-reliable-quantum-computing/",
+    "description": "Che progressi sono stati fatti nel computing quantistico da Microsoft? Come migliora la tecnologia dei qubit?",
+    "hashtags": "#quantumcomputing #Microsoft #innovazione"
+  },
+  {
+    "id": 489,
+    "tags": ["❤️", "🍽️"],
+    "title": "Lixisenatide un agonista del recettore del peptide-1 simile al glucagone mostra proprietà neuroprotettive in un modello murino di malattia di Parkinson e offre benefici per la perdita di peso la gestione del diabete e la riduzione delle malattie cardiache",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2312323",
+    "description": "Quali sono i benefici di Lixisenatide per la salute? Come agisce Lixisenatide sul Parkinson e altre condizioni?",
+    "hashtags": "#salute #Parkinson #diabete"
+  },
+  {
+    "id": 490,
+    "tags": ["❤️", "🍃", "🍽️"],
+    "title": "Gli Omega-3 sono essenziali e una carenza di magnesio può causare il prelievo di calcio dalle ossa mentre le verdure a foglia come la vitamina K sono cruciali per la guarigione delle ferite",
+    "url": "https://open.spotify.com/episode/4tnRkV3qL3GulapNmzirsy,Quali",
+    "description": "sono i benefici degli Omega-3 e della vitamina K? Perché il magnesio è importante per le ossa?",
+    "hashtags": "#salute #nutrizione #Omega3"
+  },
+  {
+    "id": 491,
+    "tags": ["💻", "🚕"],
+    "title": "Elon Musk annuncia che Tesla presenterà il suo primo Robotaxi il 8 agosto con una nuova direzione strategica che privilegia i veicoli autonomi rispetto ai modelli più economici",
+    "url": "https://www.theverge.com/2024/4/5/24122384/tesla-robotaxi-reveal-date-elon-musk-august-8",
+    "description": "Che impatto avranno i Robotaxi di Tesla? Quali sono i piani futuri di Tesla per i veicoli autonomi?",
+    "hashtags": "#Tesla #Robotaxi #tecnologia"
+  },
+  {
+    "id": 492,
+    "tags": ["💻", "🚕"],
+    "title": "Un'idea di Tesla per un'ambulanza autonoma che trasporta pazienti all'ospedale mostrando un nuovo approccio nell'uso di veicoli autonomi in emergenze mediche",
+    "url": "https://x.com/The_EVGuy/status/1777041486464590132",
+    "description": "Come funzionerebbe un'ambulanza autonoma Tesla? Quali sono i vantaggi di un'ambulanza autonoma?",
+    "hashtags": "#Tesla #ambulanza #innovazione"
+  },
+    {
     "id": 300,
     "tags": [
       "❤️",
