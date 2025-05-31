@@ -275,73 +275,64 @@
     "book": "How to DAO",
     "author": "Kevin Owocki, Puncar",
     "url": "https://amzn.to/3Sso1R2"
-  },{
-    "title": "Sull'Importanza Generale dei Minerali",
-    "text": "I minerali sono i 'conduttori' invisibili della vita biologica: sostengono ogni processo corporeo, dalla produzione di energia all'integrità mitocondriale. Carenze croniche riducono l’ATP e accelerano l’invecchiamento cellulare. Il libro propone una nuova prospettiva: non solo evitare le carenze, ma ottimizzare in chiave preventiva e prestazionale.",
-    "book": "The Mineral Fix",
+  },l magnesio è cruciale per la produzione di ATP, la sintesi proteica e la stabilità del DNA. Regola oltre 600 processi enzimatici, inclusa la traslocazione di GLUT4 per l'assorbimento di glucosio [54]. La carenza è endemica, influenzando la sensibilità all'insulina, la funzione neurologica (es. sonno, ansia) e muscolare (es. crampi). L'integrazione è spesso necessaria a causa della deplezione del magnesio nel suolo e della ridotta assunzione dietetica.",
+    "book": "The Mineral Fix: How to Optimize Your Mineral Intake for Energy, Longevity, Immunity, Sleep and More",
     "author": "James DiNicolantonio, Siim Land",
     "url": "https://amzn.to/4mIfwiM"
   },
   {
-    "title": "Sul Magnesio",
-    "text": "Coinvolto in oltre 600 reazioni enzimatiche, il magnesio è un pilastro per ATP, muscoli, sonno e gestione dello stress. Il suolo impoverito e le diete moderne rendono la carenza comune: il libro raccomanda integrazione mirata per supportare mitocondri e resilienza allo stress.",
-    "book": "The Mineral Fix",
+    "title": "Sul Sodio e il Riequilibrio della Narrativa Nutrizionale",
+    "text": "Contrariamente alle linee guida dietetiche standard, il sodio è fondamentale per l'equilibrio idro-elettrolitico, la funzione nervosa e la regolazione della pressione sanguigna. L'iponatremia può essere più pericolosa dell'ipernatremia, specialmente in individui attivi [609]. L'autore sostiene che le restrizioni dietetiche sul sodio, in particolare l'evitare il sale iodato, possono portare a carenze pericolose, suggerendo l'uso di sale marino integrale non raffinato come fonte più completa di minerali.",
+    "book": "The Mineral Fix: How to Optimize Your Mineral Intake for Energy, Longevity, Immunity, Sleep and More",
     "author": "James DiNicolantonio, Siim Land",
     "url": "https://amzn.to/4mIfwiM"
   },
   {
-    "title": "Sul Sodio e il Sale",
-    "text": "Il sodio è essenziale, non un nemico. Fondamentale per nervi e pressione, una carenza può essere più pericolosa di un eccesso, specie negli sportivi. Il libro sfata i miti sul sale iodato raffinato, promuovendo invece il sale marino integrale ricco di minerali.",
-    "book": "The Mineral Fix",
+    "title": "Sul Calcio: Bilanciamento e Controlli Ormonali",
+    "text": "Il calcio è vitale per la salute scheletrica, ma la sua omeostasi è finemente regolata da vitamina D, vitamina K2 e magnesio. L'eccessiva assunzione di calcio, soprattutto da integratori o latticini fortificati in assenza di cofattori adeguati, può indurre calcificazione ectopica (es. arterie) [958]. L'autore raccomanda una dieta equilibrata e l'ottimizzazione dei cofattori per prevenire squilibri e promuovere l'utilizzo corretto del calcio.",
+    "book": "The Mineral Fix: How to Optimize Your Mineral Intake for Energy, Longevity, Immunity, Sleep and More",
     "author": "James DiNicolantonio, Siim Land",
     "url": "https://amzn.to/4mIfwiM"
   },
   {
-    "title": "Sul Calcio",
-    "text": "Ben oltre le ossa: il calcio regola anche muscoli e cuore. Il libro avverte che un eccesso, senza il giusto bilanciamento con magnesio, K2 e D, può portare a calcificazione arteriosa. Non è quanto calcio assumi, ma con quali cofattori lo gestisci.",
-    "book": "The Mineral Fix",
+    "title": "Sul Potassio e il Rapporto Sodio-Potassio",
+    "text": "Il potassio è un catione intracellulare critico per la funzione cardiaca, la pressione sanguigna e l'attività neuromuscolare. La carenza di potassio è diffusa a causa di diete povere di alimenti vegetali integrali. Il rapporto sodio-potassio è un biomarcatore più predittivo del rischio cardiovascolare rispetto all'assunzione di sodio da sola; un rapporto più basso è associato a minore mortalità [1789].",
+    "book": "The Mineral Fix: How to Optimize Your Mineral Intake for Energy, Longevity, Immunity, Sleep and More",
     "author": "James DiNicolantonio, Siim Land",
     "url": "https://amzn.to/4mIfwiM"
   },
   {
-    "title": "Sul Potassio",
-    "text": "Cardine della salute cardiovascolare, il potassio è spesso carente. Il libro evidenzia il ruolo critico del rapporto sodio/potassio, citando uno studio su 12.000 soggetti: un basso rapporto è associato a rischio ridotto di eventi cardiovascolari.",
-    "book": "The Mineral Fix",
+    "title": "Sullo Iodio e la Funzione Tiroidea Ottimale",
+    "text": "Lo iodio è un micronutriente essenziale per la sintesi degli ormoni tiroidei, che regolano il metabolismo basale e lo sviluppo. La carenza di iodio è una delle principali cause di danno cerebrale prevenibile a livello globale. Il dibattito sui dosaggi ottimali persiste, con alcuni che suggeriscono apporti significativamente superiori alle RDA per saturare la tiroide e altri tessuti, sottolineando l'importanza del selenio come co-fattore [1872].",
+    "book": "The Mineral Fix: How to Optimize Your Mineral Intake for Energy, Longevity, Immunity, Sleep and More",
     "author": "James DiNicolantonio, Siim Land",
     "url": "https://amzn.to/4mIfwiM"
   },
   {
-    "title": "Sullo Iodio e la Funzione Tiroidea",
-    "text": "Lo iodio è vitale per la tiroide e il metabolismo. Il libro affronta il dibattito sul dosaggio: alcuni esperti propongono 12–50 mg/giorno, ben oltre le RDA. Cruciale è la presenza del selenio, che consente la conversione sicura dello iodio.",
-    "book": "The Mineral Fix",
+    "title": "Sul Ferro e le Sue Interazioni con il Rame",
+    "text": "Il ferro è indispensabile per il trasporto dell'ossigeno (emoglobina) e la produzione di energia. La carenza di ferro è la carenza nutrizionale più comune a livello mondiale. Tuttavia, l'autore evidenzia l'importanza del rame nella mobilizzazione e nell'utilizzo del ferro; una carenza di rame può manifestarsi come anemia resistente al ferro. Un eccesso di ferro, d'altra parte, può promuovere lo stress ossidativo.",
+    "book": "The Mineral Fix: How to Optimize Your Mineral Intake for Energy, Longevity, Immunity, Sleep and More",
     "author": "James DiNicolantonio, Siim Land",
     "url": "https://amzn.to/4mIfwiM"
   },
   {
-    "title": "Sul Ferro e l'Anemia",
-    "text": "Il ferro trasporta ossigeno e supporta l’energia cellulare. La sua carenza è la più diffusa al mondo. Il libro sottolinea come un corretto equilibrio con rame sia fondamentale per un’efficace utilizzazione e per prevenire anemia funzionale.",
-    "book": "The Mineral Fix",
+    "title": "Sullo Zinco e il Supporto Immunitario",
+    "text": "Lo zinco è un minerale traccia essenziale per la funzione immunitaria, la guarigione delle ferite, la sintesi del DNA e la percezione sensoriale. La carenza di zinco compromette gravemente la risposta immunitaria, aumentando la suscettibilità alle infezioni. L'autore suggerisce l'integrazione di zinco, soprattutto in periodi di elevato fabbisogno o in diete a rischio, sempre considerando il bilanciamento con il rame.",
+    "book": "The Mineral Fix: How to Optimize Your Mineral Intake for Energy, Longevity, Immunity, Sleep and More",
     "author": "James DiNicolantonio, Siim Land",
     "url": "https://amzn.to/4mIfwiM"
   },
   {
-    "title": "Sullo Zinco e l'Immunità",
-    "text": "Zinco: sentinella del sistema immunitario, catalizzatore del DNA e della rigenerazione cellulare. Il libro ne raccomanda l’integrazione, specie nei mesi freddi o in periodi di stress, per rafforzare la risposta immunitaria e la salute di pelle e capelli.",
-    "book": "The Mineral Fix",
+    "title": "Sul Rame e la Bio-Disponibilità del Ferro",
+    "text": "Il rame, spesso sottovalutato, è fondamentale per l'attività di enzimi chiave (es. ceruloplasmina) che catalizzano la mobilizzazione del ferro e la protezione antiossidante. La carenza di rame può mimare la carenza di ferro, poiché ostacola l'utilizzo del ferro immagazzinato. Il libro sottolinea l'importanza di bilanciare l'assunzione di rame con lo zinco (rapporto Zn:Cu tipicamente 8:1 - 15:1) per prevenire squilibri.",
+    "book": "The Mineral Fix: How to Optimize Your Mineral Intake for Energy, Longevity, Immunity, Sleep and More",
     "author": "James DiNicolantonio, Siim Land",
     "url": "https://amzn.to/4mIfwiM"
   },
   {
-    "title": "Sul Rame e l'Utilizzo del Ferro",
-    "text": "Minerale trascurato, il rame è cruciale per mitocondri, ferro e immunità. Il libro spiega che senza rame, il ferro non può essere efficacemente utilizzato. Evidenzia inoltre la necessità di bilanciare rame e zinco per evitare squilibri.",
-    "book": "The Mineral Fix",
-    "author": "James DiNicolantonio, Siim Land",
-    "url": "https://amzn.to/4mIfwiM"
-  },
-  {
-    "title": "Sull'Equilibrio e la Sinergia tra i Minerali",
-    "text": "I minerali agiscono in rete: un eccesso può bloccarne altri. Il libro invita a considerare le interazioni (es. zinco/rame, calcio/magnesio), promuovendo una dieta varia e integratori bilanciati per evitare carenze secondarie o tossicità inattese.",
-    "book": "The Mineral Fix",
+    "title": "Sull'Interconnettività e Sinergia dei Minerali",
+    "text": "I minerali operano in una complessa rete sinergica; la carenza o l'eccesso di un minerale può influenzare l'assorbimento, il trasporto o l'utilizzo di altri. Ad esempio, l'eccesso di calcio inibisce il magnesio, e lo zinco compete con il rame. Questo concetto di \"mineralogramma\" o interazione multi-minerale è cruciale per una strategia nutrizionale efficace, sottolineando la necessità di un approccio olistico e non isolazionista all'integrazione.",
+    "book": "The Mineral Fix: How to Optimize Your Mineral Intake for Energy, Longevity, Immunity, Sleep and More",
     "author": "James DiNicolantonio, Siim Land",
     "url": "https://amzn.to/4mIfwiM"
   },
