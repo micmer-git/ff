@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="it" id="roothtml">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>futuro fortissimo – explorer</title>
 
-<!-- Google Sans + Tailwind -->
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
 <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 <script>
 tailwind.config={
@@ -27,7 +28,7 @@ body{background:#F6F9FE}
 .exp-card{transform:scale(.95);opacity:0;transition:transform .35s ease,opacity .35s ease}
 .exp-card.enter{transform:scale(1);opacity:1}.exp-card.exit{transform:scale(.9);opacity:0}
 .expander{position:absolute;right:10px;bottom:10px;background:#fff;border-radius:9999px;padding:6px 9px;font-size:18px;box-shadow:0 1px 4px rgba(0,0,0,.15);cursor:pointer}
-.quote{font-size:1rem;line-height:1.3rem;overflow-y-auto;max-height:9rem}
+.quote{font-size:1rem;line-height:1.3rem;overflow-y:auto;max-height:9rem}
 .source{font-size:.75rem;color:#555}
 .pub-sub{cursor:pointer}
 </style>
@@ -43,7 +44,7 @@ body{background:#F6F9FE}
 </header>
 
 <section class="max-w-3xl mx-auto px-4 space-y-3">
-  <!-- search + main filter row -->
+  <!-- search + main filter -->
   <div class="flex items-center gap-3">
     <div class="relative flex-grow">
       <input id="searchInput" placeholder="search / cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400">
@@ -54,6 +55,7 @@ body{background:#F6F9FE}
       <span class="pill" data-filter="🎶">🎶</span>
     </div>
   </div>
+
   <!-- thematic filters -->
   <div id="tagFilterRow" class="flex flex-wrap justify-center gap-2 text-xl">
     <span class="pill" data-filter="💻">💻</span><span class="pill" data-filter="🍃">🍃</span>
@@ -66,7 +68,7 @@ body{background:#F6F9FE}
   </div>
 </section>
 
-<main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-6 mt-6"></main>
+<main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-4 mt-6"></main>
 
 <footer class="fixed bottom-0 inset-x-0 flex items-center justify-center gap-3 py-2 text-base bg-ioBg/90 backdrop-blur">
   <button onclick="window.open('https://www.paypal.com/paypalme/michelemerelli','_blank')" class="pill">☕ sostieni</button>
@@ -139,21 +141,27 @@ function render(){
   if(activeS){
     DATA.publications.forEach((pub,i)=>{
       pub.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>{
-        const txt=pub.title+' '+c.title+' '+c.contentBlocks[0].content.join(' ');
+        const txt=[pub.title,c.title,...c.contentBlocks[0].content].join(' ');
         if(match(txt,term)) wrap.appendChild(makePubCard(pub,c,i,term));
       });
     });
-    // books & notes dentro search solo se match → citazione titoli+testo
+    /* books match */
     BOOKS.forEach(b=>{
-      if(match(b.title,term)||match(b.text,term)) wrap.appendChild(makeBookCard(b));
+      if(match(b.title,term)||match(b.text,term)) wrap.appendChild(makeBookCard(b,'mb-4'));
+    });
+    /* notes match */
+    NOTES.notes.forEach(n=>{
+      const txt=n.title+' '+(n.description||'');
+      if(match(txt,term)) wrap.appendChild(makeNoteCard(n,'mb-4'));
     });
     return;
   }
 
   /* ---- main filters ---- */
   if(mainSel.length===1){
-    if(mainSel[0]==='📚'){wrap.appendChild(makeBooksList(BOOKS));return;}
-    if(mainSel[0]==='🎶'){wrap.appendChild(makeNotesList(NOTES.notes));return;}
+    const bigger='space-y-6';
+    if(mainSel[0]==='📚'){wrap.appendChild(makeBooksList(BOOKS,bigger));return;}
+    if(mainSel[0]==='🎶'){wrap.appendChild(makeNotesList(NOTES.notes,bigger));return;}
   }
 
   /* ---- theme filter ---- */
@@ -182,7 +190,7 @@ function makePubStrip(list){
     card.style.cssText=`background:${gradients[i%gradients.length]};padding:2px`;
     const inner=document.createElement('div');
     inner.className='bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
-    inner.innerHTML=`<h3 class="font-semibold text-xl mb-2 text-center">${pub.title}</h3>`;
+    inner.innerHTML=`<h3 class="font-semibold text-xl text-center break-words">${pub.title}</h3>`;
     card.appendChild(inner);
     const btn=document.createElement('button');btn.className='expander';btn.textContent='⤢';
     btn.onclick=e=>{e.stopPropagation();openExpanded(pub);};
@@ -230,9 +238,9 @@ function openExpanded(pub){
 }
 
 /* ---- books ---- */
-function makeBookCard(b){
+function makeBookCard(b,extra='mb-2'){
   const card=document.createElement('div');
-  card.className='rounded-xl border-2 border-indigo-500 p-4';
+  card.className=`rounded-xl border-2 border-indigo-500 p-4 ${extra}`;
   card.style.background='#fff';
   if(b.url) card.onclick=()=>window.open(b.url,'_blank');
   card.innerHTML=`<h3 class="font-semibold text-lg mb-1">${b.title}</h3>
@@ -240,25 +248,25 @@ function makeBookCard(b){
                   <p class="source mt-2">${b.book} — ${b.author}</p>`;
   return card;
 }
-const makeBooksList=list=>{const c=document.createElement('div');list.forEach(b=>c.appendChild(makeBookCard(b)));return c;};
+const makeBooksList=(list,classes)=>{const c=document.createElement('div');if(classes)c.className=classes;list.forEach(b=>c.appendChild(makeBookCard(b,'mb-6')));return c;};
 const makeBooksStrip=list=>{
   const d=document.createElement('div');d.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
-  list.forEach(b=>{const c=makeBookCard(b);c.classList.add('flex-shrink-0','w-full','max-w-[320px]','snap-start');d.appendChild(c)});return d;};
+  list.forEach(b=>{const c=makeBookCard(b,'mb-0');c.classList.add('flex-shrink-0','w-full','max-w-[320px]','snap-start');d.appendChild(c)});return d;};
 
 /* ---- notes ---- */
-function makeNoteCard(n){
-  const card=document.createElement('div');card.className='rounded-xl border-2 border-black p-4';
+function makeNoteCard(n,extra='mb-2'){
+  const card=document.createElement('div');card.className=`rounded-xl border-2 border-black p-4 ${extra}`;
   card.style.background='#fff';if(n.url) card.onclick=()=>window.open(n.url,'_blank');
   const host=safeHost(n.url);
   card.innerHTML=`<h3 class="font-semibold mb-1">${n.title}</h3>
-                  <div class="flex flex-wrap gap-1">${n.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
-                  ${host?`<p class="source mt-2">${host}</p>`:''}`;
+      <div class="flex flex-wrap gap-1 mb-1">${n.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      ${host?`<p class="source">${host}</p>`:''}`;
   return card;
 }
-const makeNotesList=list=>{const c=document.createElement('div');list.forEach(n=>c.appendChild(makeNoteCard(n)));return c;};
+const makeNotesList=(list,classes)=>{const c=document.createElement('div');if(classes)c.className=classes;list.forEach(n=>c.appendChild(makeNoteCard(n,'mb-6')));return c;};
 const makeNotesStrip=list=>{
   const d=document.createElement('div');d.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
-  list.forEach(n=>{const c=makeNoteCard(n);c.classList.add('flex-shrink-0','w-full','max-w-[320px]','snap-start');d.appendChild(c)});return d;};
+  list.forEach(n=>{const c=makeNoteCard(n,'mb-0');c.classList.add('flex-shrink-0','w-full','max-w-[320px]','snap-start');d.appendChild(c)});return d;};
 
 /* ---- start ---- */
 loadAll();
