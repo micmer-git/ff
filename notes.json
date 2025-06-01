@@ -1,5 +1,780 @@
 {
-  "notes": [
+  "notes": [{
+    "id": 601,
+    "tags": ["💻","🍽"],
+    "title": "Robot barista di Doosan Robotics a Seul: 80 tazze/ora e latte art",
+    "url": "https://asia.nikkei.com/Business/Technology/Robot-sommeliers-and-baristas-go-to-work-in-labor-starved-South-Korea",
+    "description": "Come funziona il robot barista di Doosan Robotics? Qual è la capacità produttiva del robot barista?",
+    "hashtags": "#robotica #caffè #Seoul"
+ },
+ {
+    "id": 602,
+    "tags": ["❤️","💆"],
+    "title": "In Review: Gli Effetti della Restrizione di Metionina",
+    "url": "https://www.orentreich.org/in-review-the-many-effects-of-methionine-restriction/",
+    "description": "Quali sono gli effetti della restrizione di metionina? Come può la restrizione di metionina influenzare la salute?",
+    "hashtags": "#metionina #restrizione #salute"
+ },
+ {
+    "id": 603,
+    "tags": ["❤️","💊"],
+    "title": "Nuovo farmaco con strategia 'Cavallo di Troia' per GLP-1s",
+    "url": "https://www.nature.com/articles/s41586-024-07419-8",
+    "description": "Cos'è la strategia \"Cavallo di Troia\" nei nuovi farmaci? Come funziona il nuovo farmaco nei GLP-1s?",
+    "hashtags": "#GLP1 #farmaco #strategia"
+ },
+ {
+    "id": 604,
+    "tags": ["💻","📚"],
+    "title": "I mercati di previsione liquidi: un oracolo per il futuro?",
+    "url": "https://www.brownjppe.com/nickwhitaker",
+    "description": "Cosa sono i mercati di previsione liquidi? Come possono i mercati di previsione influenzare le credenze sugli eventi futuri?",
+    "hashtags": "#previsioni #mercati #futuro"
+ },
+ {
+    "id": 605,
+    "tags": ["💻","👥"],
+    "title": "Il Sud Tirolo sfida il calo demografico italiano con politiche pro-bambino",
+    "url": "https://www.boomcampaign.org/p/the-province-defying-italys-birth",
+    "description": "Quali sono le politiche pro-bambino del Sud Tirolo? Come queste politiche hanno influenzato il tasso di natalità?",
+    "hashtags": "#SudTirolo #natalità #politiche"
+ },
+ {
+    "id": 606,
+    "tags": ["❤️","💆"],
+    "title": "Come i farmaci agonisti del GLP-1 (es. Semaglutide/Wegovy e Mounjaro) ripristinano il 'lipostat' per la perdita di peso",
+    "url": "https://x.com/sguyenet/status/1784656349898350625",
+    "description": "Come funzionano i farmaci agonisti del GLP-1? Qual è il ruolo del 'lipostat' nella regolazione del peso corporeo?",
+    "hashtags": "#GLP1 #peso #regolazione"
+ },
+ {
+    "id": 607,
+    "tags": ["📚","🎨"],
+    "title": "Campionato mondiale di anziani che guardano cantieri",
+    "url": "https://www.scopeofwork.net/il-campionato-mondiale-di-umari/",
+    "description": "Cosa è il campionato mondiale di anziani che guardano cantieri? Come questo evento unico è diventato popolare?",
+    "hashtags": "#anziani #cantieri #campionato"
+ },
+ {
+    "id": 608,
+    "tags": ["💻","💸"],
+    "title": "Il Wisconsin è il primo stato USA a divulgare l'acquisto di Bitcoin",
+    "url": "https://www.coindesk.com/business/2024/05/14/state-of-wisconsin-buys-nearly-100m-worth-of-blackrock-spot-bitcoin-etf/",
+    "description": "Qual è il primo stato degli USA a divulgare l'acquisto di bitcoin? Quanto vale l'acquisto di bitcoin del Wisconsin?",
+    "hashtags": "#bitcoin #Wisconsin #acquisto"
+ },
+ {
+    "id": 609,
+    "tags": ["💻","📚"],
+    "title": "Distribuzione globale dei brevetti per regioni del mondo",
+    "url": "https://x.com/RichardHanania/status/1790923632098877945",
+    "description": "Qual è la distribuzione dei brevetti per regioni del mondo? Come varia il numero di brevetti a livello globale?",
+    "hashtags": "#brevetti #distribuzione #mondo"
+ },
+ {
+    "id": 610,
+    "tags": ["🍃","🍃"],
+    "title": "Meno inquinamento e aerosol: più radiazione solare ed esposizione UV",
+    "url": "https://x.com/LeonSimons8/status/1791828099048382668",
+    "description": "Qual è l'effetto della riduzione dell'inquinamento e degli aerosol? Come influisce la radiazione solare sull'esposizione ai raggi UV?",
+    "hashtags": "#inquinamento #aerosol #UV"
+ },
+ {
+    "id": 611,
+    "tags": ["💻","🎨"],
+    "title": "Strumenti di editing video AI per trasformare video in stile anime",
+    "url": "https://x.com/0xFramer/status/1792204461995397138",
+    "description": "Come funzionano gli strumenti di editing video AI? Quali sono le applicazioni per trasformare i video in stile anime?",
+    "hashtags": "#videoediting #AI #anime"
+ },
+ {
+    "id": 612,
+    "tags": ["💻","🧠"],
+    "title": "Proiezione della generazione di pixel AI: TV entro il 2029, film entro il 2031",
+    "url": "https://x.com/agrimgupta92/status/1790421460043067874",
+    "description": "Qual è la proiezione della generazione di pixel AI? Quando avremo episodi TV e film generati da AI?",
+    "hashtags": "#pixel #AI #proiezione"
+ },
+ {
+    "id": 613,
+    "tags": ["💻","📚"],
+    "title": "Il 38% dei link del 2013 non è più accessibile: un rischio per la preservazione delle informazioni",
+    "url": "https://www.pewresearch.org/data-labs/2024/05/17/when-online-content-disappears/",
+    "description": "Qual è il tasso di link inaccessibili dal 2013? Come l'inaccessibilità dei link influenza la preservazione delle informazioni?",
+    "hashtags": "#link #inaccessibilità #preservazione"
+ },
+ {
+    "id": 614,
+    "tags": ["💻","🧠"],
+    "title": "GPT-4o guida un utente in Minecraft: nuove applicazioni nel gaming",
+    "url": "https://x.com/bilawalsidhu/status/1792633168433971363",
+    "description": "Come Gpt-4o guida un utente in Minecraft? Quali sono le applicazioni di Gpt-4o nel gaming?",
+    "hashtags": "#Gpt4o #Minecraft #gaming"
+ },
+ {
+    "id": 615,
+    "tags": ["💻","💸"],
+    "title": "I CEO più pagati del 2023: premi azionari record, tech in testa",
+    "url": "https://www.wsj.com/business/highest-paid-ceo-2023-charts-0d65be3b",
+    "description": "Chi sono gli amministratori delegati più pagati del 2023? Quali sono i settori con i dirigenti più pagati?",
+    "hashtags": "#CEO #stipendi #2023"
+ },
+ {
+    "id": 616,
+    "tags": ["🍃","🍃"],
+    "title": "Riduzione aerosol dai solfiti delle barche e l'effetto inverso sulla geoingegneria",
+    "url": "https://x.com/LeonSimons8/status/1792652286499442776",
+    "description": "Qual è l'effetto della riduzione degli aerosol dai solfiti delle barche? Come la riduzione delle emissioni influisce sulla geoingegneria?",
+    "hashtags": "#aerosol #solfiti #geoingegneria"
+ },
+ {
+    "id": 617,
+    "tags": ["💻","📚"],
+    "title": "La manipolazione dei modelli di linguaggio: implicazioni e sfide",
+    "url": "https://www.anthropic.com/research/mapping-mind-language-model",
+    "description": "Come possono essere manipolati i modelli di linguaggio? Quali sono le implicazioni della manipolazione nei modelli di linguaggio?",
+    "hashtags": "#modelli #linguaggio #manipolazione"
+ },
+ {
+    "id": 618,
+    "tags": ["❤️","💆"],
+    "title": "BrainBridge mira a sviluppare il 'primo sistema di trapianto di testa al mondo'",
+    "url": "https://youtu.be/3_ZlCD2RYc8,Cos'è",
+    "description": "Cos'è BrainBridge? Qual è l'obiettivo del primo sistema di trapianto di testa al mondo?",
+    "hashtags": "#BrainBridge #trapianto #testa"
+ },
+ {
+    "id": 619,
+    "tags": ["💻","💆"],
+    "title": "Massaggi robotici: benefici rispetto ai massaggi tradizionali",
+    "url": "https://app.aescape.com/",
+    "description": "Cosa sono i massaggi robotici? Quali sono i benefici dei massaggi robotici rispetto a quelli tradizionali?",
+    "hashtags": "#robotica #massaggi #benefici"
+ },
+ {
+    "id": 620,
+    "tags": ["💻","📚"],
+    "title": "Marijuana sorpassa l'alcol negli USA: oltre 15 milioni di consumatori",
+    "url": "https://x.com/brewmarkets/status/1793656858638487712",
+    "description": "Come la marijuana ha superato l'alcol negli Stati Uniti? Qual è l'impatto del consumo di marijuana rispetto all'alcol?",
+    "hashtags": "#marijuana #alcol #consumo"
+ },
+ {
+    "id": 621,
+    "tags": ["📚","🎨"],
+    "title": "Illustrazioni di ciclisti storici dal disegnatore di Magic e Unisoft",
+    "url": "https://www.greyfoxblog.com/2014/08/karl-kopinski-portrait-painter-captures.html",
+    "description": "Quali sono le opere del disegnatore di Magic e Unisoft? Come sono rappresentati i ciclisti storici nelle sue illustrazioni?",
+    "hashtags": "#illustrazioni #ciclisti #arte"
+ },
+ {
+    "id": 622,
+    "tags": ["💻","🍽"],
+    "title": "Solidlife costruisce un holodeck simile a Star Trek",
+    "url": "https://www.lightfieldlab.com/",
+    "description": "Cosa è l'holodeck di Solidlife? Come questa tecnologia si avvicina al mondo di Star Trek?",
+    "hashtags": "#holodeck #Solidlife #StarTrek"
+ },
+ {
+    "id": 623,
+    "tags": ["💻","🧠"],
+    "title": "Neuralink: controllo delle interfacce cervello quasi più veloce di un mouse",
+    "url": "https://neuralink.com/blog/prime-study-progress-update-user-experience/",
+    "description": "Qual è il progresso di Neuralink nel controllo delle interfacce? Come la velocità di Neuralink si confronta con quella di un mouse?",
+    "hashtags": "#Neuralink #interfacce #velocità"
+ },
+ {
+    "id": 624,
+    "tags": ["❤️","💸"],
+    "title": "Fountain Life lancia l'abbonamento CORE da $2995 all'anno per la longevità",
+    "url": "https://www.fountainlife.com/core-membership",
+    "description": "Cos'è l'abbonamento CORE di Fountain Life? Quali sono i vantaggi del programma di longevità di Fountain Life?",
+    "hashtags": "#longevità #FountainLife #CORE"
+ },
+ {
+    "id": 625,
+    "tags": ["💻","🍃"],
+    "title": "Wolfram Alpha: evoluzione biologica visualizzata con il codice",
+    "url": "https://writings.stephenwolfram.com/2024/05/why-does-biological-evolution-work-a-minimal-model-for-biological-evolution-and-other-adaptive-processes/",
+    "description": "Cos'è il modello minimale per l'evoluzione biologica? Come Stephen Wolfram visualizza l'evoluzione naturale con il codice?",
+    "hashtags": "#WolframAlpha #evoluzione #codice"
+ },
+ {
+    "id": 626,
+    "tags": ["💻","🍃"],
+    "title": "AlphaFold 3, CRISPR, geni orecchio e collasso sociale: una panoramica settimanale",
+    "url": "https://www.notboring.co/p/weekly-dose-of-optimism-93",
+    "description": "Cos'è AlphaFold 3? Come la genetica influisce sulla previsione del collasso sociale?",
+    "hashtags": "#AlphaFold3 #genetica #collasso"
+ },
+ {
+    "id": 627,
+    "tags": ["💻","🎨"],
+    "title": "Previsioni 2024 di Scott Galloway: analisi e settori influenzati",
+    "url": "https://youtu.be/mHZhLE8OVmk,Quali",
+    "description": "Quali sono le previsioni di Scott Gallowat per il 2024? Quali settori saranno influenzati dalle previsioni di Scott Gallowat?",
+    "hashtags": "#ScottGallowat #previsioni #2024"
+ },
+ {
+    "id": 628,
+    "tags": ["❤️","💆"],
+    "title": "Squat vs camminata: 10 squat ogni 45 minuti migliorano la glicemia più di 30 minuti di camminata",
+    "url": "https://x.com/foundmyfitness/status/1788991915633045809",
+    "description": "Come gli squat a corpo libero influenzano la regolazione della glicemia? Qual è l'effetto degli squat rispetto a una camminata sulla glicemia?",
+    "hashtags": "#squat #glicemia #salute"
+ },
+ {
+    "id": 629,
+    "tags": ["❤️","📚"],
+    "title": "L'impatto economico del Long Covid sull'offerta di lavoro nell'UE nel 2022",
+    "url": "https://economy-finance.ec.europa.eu/publications/long-covid-tentative-assessment-its-impact-labour-market-participation-and-potential-economic_en",
+    "description": "Qual è l'impatto del Long Covid sul mercato del lavoro dell'UE? Come il Long Covid ha influenzato la partecipazione al mercato del lavoro nel 2022?",
+    "hashtags": "#LongCovid #mercatodellavoro #UE"
+ },
+ {
+    "id": 630,
+    "tags": ["❤️","💊"],
+    "title": "Farmaci scoperti dall'AI: successo clinico all'80-90% nella Fase I",
+    "url": "https://www.sciencedirect.com/science/article/pii/S135964462400134X",
+    "description": "Qual è il tasso di successo dei farmaci scoperti dall'AI? Come il successo dei farmaci AI si confronta con la media storica?",
+    "hashtags": "#AI #farmaci #successo"
+ },
+ {
+    "id": 631,
+    "tags": ["❤️","💆"],
+    "title": "L'arte dell'allattamento: sfide e benefici",
+    "url": "https://www.itsnicethat.com/articles/bre-furlong-half-empty-photography-project-090524",
+    "description": "Cos'è l'arte dell'allattamento? Quali sono le sfide e i benefici dell'allattamento?",
+    "hashtags": "#allattamento #arte #benefici"
+ },
+ {
+    "id": 632,
+    "tags": ["📚","🎨"],
+    "title": "Stopmotion divertenti: l'arte di raccontare storie",
+    "url": "https://www.itsnicethat.com/articles/stefano-colferai-animation-project-070424",
+    "description": "Cosa sono le stopmotion divertenti? Come le stopmotion possono essere utilizzate per raccontare storie?",
+    "hashtags": "#stopmotion #divertenti #storie"
+ },
+ {
+    "id": 633,
+    "tags": ["🍃","📚"],
+    "title": "Danni climatici 6 volte maggiori del previsto: ogni 1°C cancella il 12% del PIL globale",
+    "url": "https://x.com/DrSimEvans/status/1790055336289677368",
+    "description": "Quali sono i danni climatici secondo il nuovo documento di lavoro NBER? Come l'aumento della temperatura influisce sul PIL globale?",
+    "hashtags": "#danniclimatici #NBER #PIL"
+ },
+ {
+    "id": 634,
+    "tags": ["💻","📚"],
+    "title": "L'uso di Internet correlato a maggiore soddisfazione di vita: studio Oxford",
+    "url": "https://www.ox.ac.uk/news/2024-05-14-internet-use-statistically-associated-higher-wellbeing-finds-new-global-oxford-study",
+    "description": "Come l'uso di Internet influenza la soddisfazione di vita? Qual è la relazione tra l'uso di Internet e il benessere?",
+    "hashtags": "#internet #soddisfazione #benessere"
+ },
+ {
+    "id": 635,
+    "tags": ["💻","🥽"],
+    "title": "Apple introduce il tracciamento oculare su iPhone e iPad",
+    "url": "https://www.engadget.com/apple-brings-eye-tracking-to-recent-iphones-and-ipads-140012990.html",
+    "description": "Cos'è il tracciamento oculare di Apple? Come funziona il tracciamento oculare nei dispositivi Apple?",
+    "hashtags": "#Apple #tracciamentooculare #iPhone"
+ },
+ {
+    "id": 636,
+    "tags": ["💻","🚕"],
+    "title": "Vendita al dettaglio virtuale e Roblox: potenzialità e funzionamento",
+    "url": "https://www.dubit.io/products/game-retail",
+    "description": "Come funziona la vendita al dettaglio virtuale su Roblox? Quali sono le potenzialità della vendita al dettaglio virtuale?",
+    "hashtags": "#venditavirtuale #Roblox #retail"
+ },
+ {
+    "id": 637,
+    "tags": ["❤️","📚"],
+    "title": "Come non invecchiare: cibi per rimanere giovani e l'influenza della dieta",
+    "url": "https://amzn.to/4bp14pQ",
+    "description": "Quali cibi aiutano a rimanere giovani? Come la dieta può influenzare il processo di invecchiamento?",
+    "hashtags": "#invecchiamento #cibi #giovani"
+ },
+ {
+    "id": 638,
+    "tags": ["💻","📚"],
+    "title": "Piattaforma collaborativa per trend e correlazioni inaspettate",
+    "url": "https://perthirtysix.com/communal-plot-daily-poll",
+    "description": "Cos'è una piattaforma collaborativa di trend? Come funziona la creazione di grafici di correlazioni inaspettate?",
+    "hashtags": "#piattaforma #trend #grafici"
+ },
+ {
+    "id": 639,
+    "tags": ["💻","🧠","🎼"],
+    "title": "3600 microregioni generano metà del PIL mondiale: impatto economico",
+    "url": "https://fortissimo.substack.com/p/ff52-fondare-una-nazione-in-garage#§ff-un-mondo-criptico",
+    "description": "Quante microregioni producono metà del PIL mondiale? Qual è l'impatto economico delle microregioni?",
+    "hashtags": "#microregioni #PIL #economia"
+ },
+ {
+    "id": 640,
+    "tags": ["🍃","💸","🎼"],
+    "title": "Centralizzazione tecnologica e decentralizzazione istituzionale: vantaggi e funzionamento",
+    "url": "https://fortissimo.substack.com/p/ff52-fondare-una-nazione-in-garage#§ff-centralizzare-conviene",
+    "description": "Quali sono i vantaggi della centralizzazione tecnologica? Come funziona la decentralizzazione istituzionale?",
+    "hashtags": "#centralizzazione #tecnologia #istituzioni"
+ },
+ {
+    "id": 641,
+    "tags": ["❤️","🧠","🎼"],
+    "title": "Libro gratuito dell'ex-CTO di Coinbase: dove trovarlo",
+    "url": "https://fortissimo.substack.com/p/ff52-fondare-una-nazione-in-garage#§ff-fondare-la-propria-nazione",
+    "description": "Qual è il libro gratuito dell'ex-CTO di Coinbase? Dove posso trovare il libro gratuito di Coinbase?",
+    "hashtags": "#libro #Coinbase #gratuito"
+ },
+ {
+    "id": 642,
+    "tags": ["💻","🙍‍♂️","🎼"],
+    "title": "Previsioni 2024 del professore Scott Galloway: futuro di tecnologia e società",
+    "url": "https://fortissimo.substack.com/p/ff96-2024-al-giro-di-boa#§ff-il-frate-indovino-di-new-york",
+    "description": "Quali previsioni fa il professore Scott Galloway per il 2024? Quali sono le sue analisi sul futuro della tecnologia e della società?",
+    "hashtags": "#PrevisoniTecnologiche #SocietàDigitale #ScottGalloway"
+ },
+ {
+    "id": 643,
+    "tags": ["🍃","📱","🎼"],
+    "title": "TikTok: app di propaganda cinese pericolosa per i giovani utenti",
+    "url": "https://fortissimo.substack.com/p/ff96-2024-al-giro-di-boa#§ff-tiktok-e-pericoloso",
+    "description": "Perché TikTok è considerata un'app di propaganda cinese pericolosa? Quali sono i rischi per i giovani utenti?",
+    "hashtags": "#TikTok #Propaganda #RischiGiovani"
+ },
+ {
+    "id": 644,
+    "tags": ["💻","🤖","🎼"],
+    "title": "L'intelligenza artificiale non ha i numeri utenti di Google: criticità del mercato dell'IA",
+    "url": "https://fortissimo.substack.com/p/ff96-2024-al-giro-di-boa#§ff-il-massimo-per-lintelligenza-artificiale",
+    "description": "Perché l'intelligenza artificiale non ha numeri di utenti paragonabili a Google? Quali sono le criticità del mercato dell'IA?",
+    "hashtags": "#IntelligenzaArtificiale #MercatoIA #CriticitàIA"
+ },
+ {
+    "id": 645,
+    "tags": ["❤️","💊","🎼"],
+    "title": "Farmaco anti-obesità più importante dell'IA nel 2024: previsioni future",
+    "url": "https://fortissimo.substack.com/p/ff96-2024-al-giro-di-boa#§ff-altro-che-gpt-glp",
+    "description": "Quale sarà la tecnologia più importante del 2024 secondo le previsioni? Perché un farmaco anti-obesità è considerato più rilevante dell'IA?",
+    "hashtags": "#Farmaci #AntiObesità #PrevisioniFuturo"
+ },
+ {
+    "id": 646,
+    "tags": ["💻","🧑‍💻","🎼"],
+    "title": "Rischio isolamento da contenuti digitali personalizzati e intelligenza artificiale",
+    "url": "https://fortissimo.substack.com/p/ff96-2024-al-giro-di-boa#§ff-il-pericolo-dellintelligenza-artificiale-la-solitudine",
+    "description": "Quali sono i pericoli dell'intelligenza artificiale per le relazioni umane? Come possiamo evitare l'isolamento causato dai contenuti digitali personalizzati?",
+    "hashtags": "#IA #RelazioniUmane #IsolamentoDigitale"
+ },
+ {
+    "id": 647,
+    "tags": ["❤️","💸"],
+    "title": "Gli aerosol dei pini stimolano il sistema immunitario: effetti sulla salute",
+    "url": "https://journals.sagepub.com/doi/10.1177/039463200902200410",
+    "description": "Quali sono gli effetti degli aerosol dei pini sul sistema immunitario? Come influenzano la nostra salute?",
+    "hashtags": "#immunità #natura #benessere"
+ },
+ {
+    "id": 648,
+    "tags": ["❤️","⚽"],
+    "title": "Il nitrato favorisce l'endurance migliorando le prestazioni cardiorespiratorie",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5295087",
+    "description": "Quali sono gli effetti del nitrato sull'endurance? Come migliora le prestazioni cardiorespiratori?",
+    "hashtags": "#nutrizione #sport #endurance"
+ },
+ {
+    "id": 649,
+    "tags": ["❤️","💆"],
+    "title": "Routine serale per migliorare il sonno: tè decaffeinato, bagno di sale e sauna",
+    "url": "https://www.reddit.com/r/timferriss/s/1hRx3k5h29",
+    "description": "Quali sono i componenti di una routine serale efficace? Come può migliorare la qualità del sonno?",
+    "hashtags": "#sonno #benessere #routine"
+ },
+ {
+    "id": 650,
+    "tags": ["💻","💸"],
+    "title": "Anguilla genera oltre il 10% del PIL dalla vendita di domini .ai",
+    "url": "https://luxcapital.us13.list-manage.com/track/click",
+    "description": "Come Anguilla ha capitalizzato sui domini .ai? Qual è l'impatto economico di questa strategia?",
+    "hashtags": "#AI #domini #economia"
+ },
+ {
+    "id": 651,
+    "tags": ["💻","🧠"],
+    "title": "Robot per automatizzare i laboratori di chimica: vantaggi nella ricerca",
+    "url": "https://x.com/leecronin/status/1799508734424580540",
+    "description": "Come i robot stanno trasformando i laboratori di chimica? Quali sono i vantaggi dell'automazione nella ricerca chimica?",
+    "hashtags": "#robotica #chimica #automazione"
+ },
+ {
+    "id": 652,
+    "tags": ["💻","💸"],
+    "title": "Cina: tempo per acquistare auto elettrica ridotto da 9 anni a meno di 1 dal 2008",
+    "url": "https://x.com/GlennLuk/status/1797626337919701086",
+    "description": "Come è cambiata l'accessibilità delle auto elettriche in Cina? Qual è l'impatto di questo cambiamento?",
+    "hashtags": "#autoelettriche #Cina #mobilità"
+ },
+ {
+    "id": 653,
+    "tags": ["❤️","🧠"],
+    "title": "Sistema Future You: chatbot AI per ridurre l'ansia simulando il sé futuro",
+    "url": "https://arxiv.org/abs/2405.12514",
+    "description": "Come funziona il sistema Future You? Quali sono i potenziali benefici per la gestione dell'ansia?",
+    "hashtags": "#AI #salutemental #futuroyou"
+ },
+ {
+    "id": 654,
+    "tags": ["🍃","💸"],
+    "title": "Investimenti globali in energia pulita: supereranno i 3 trilioni di dollari entro il 2024",
+    "url": "https://www.iea.org/news/investment-in-clean-energy-this-year-is-set-to-be-twice-the-amount-going-to-fossil-fuels",
+    "description": "Quanto si investe globalmente in energia pulita? Come si confronta con gli investimenti in combustibili fossili?",
+    "hashtags": "#energiapulita #investimenti #sostenibilità"
+ },
+ {
+    "id": 655,
+    "tags": ["❤️","🧠"],
+    "title": "Terapia genica ripristina l'udito nei bambini con sordità ereditaria tramite virus",
+    "url": "https://cosmosmagazine.com/science/biology/gene-therapy-restores-hearing-to-children-with-inherited-deafness",
+    "description": "Come funziona la terapia genica per ripristinare l'udito? Quali sono i risultati sui bambini con sordità ereditaria?",
+    "hashtags": "#terapiagenica #udito #ricercamedica"
+ },
+ {
+    "id": 656,
+    "tags": ["🍃","💆"],
+    "title": "Mindfulness autosomministrata riduce lo stress in uno studio su vasta scala",
+    "url": "https://www.nature.com/articles/s41562-024-01907-7",
+    "description": "Quali sono i benefici della mindfulness? Come ridurre lo stress?",
+    "hashtags": "#benessere #mindfulness #salutementale"
+ },
+ {
+    "id": 657,
+    "tags": ["💻","💸"],
+    "title": "Coinbase vs Bitstamp: volumi di trading e quote di mercato",
+    "url": "https://investors.robinhood.com/news/news-details/2024/Robinhood-to-Acquire-Bitstamp/default.aspx",
+    "description": "Qual è la differenza tra Coinbase e Bitstamp in termini di volume di trading? Come confrontare le quote di mercato delle piattaforme di criptovalute?",
+    "hashtags": "#criptovalute #trading #exchange"
+ },
+ {
+    "id": 658,
+    "tags": ["💻","🧠"],
+    "title": "POLYGON: scoperta sistematica di composti polifarmacologici con AI",
+    "url": "https://www.nature.com/articles/s41467-024-47120-y",
+    "description": "Cosa sono i composti polifarmacologici? Come funziona POLYGON per la loro scoperta?",
+    "hashtags": "#medicina #AI #farmaci"
+ },
+ {
+    "id": 659,
+    "tags": ["❤️","📚"],
+    "title": "La chimica dietro i saggi sulla capacità antiossidante: principi e misurazione",
+    "url": "https://pubs.acs.org/doi/10.1021/jf030723c",
+    "description": "Quali sono i principi chimici alla base dei test sulla capacità antiossidante? Come si misura la capacità antiossidante?",
+    "hashtags": "#antiossidanti #chimica #analisi"
+ },
+ {
+    "id": 660,
+    "tags": ["💻","💸"],
+    "title": "Modelli AI meno dipendenti da GPU: ottimizzazione per ridurre requisiti di memoria e tempo di addestramento",
+    "url": "https://x.com/wintonARK/status/1801375180872462536",
+    "description": "Quali sono i vantaggi dei modelli meno dipendenti da GPU? Come ridurre i requisiti di memoria e tempo di addestramento?",
+    "hashtags": "#AI #GPU #ottimizzazione"
+ },
+ {
+    "id": 661,
+    "tags": ["❤️","🧠"],
+    "title": "Il gene Gstt1: ruolo nella crescita e diffusione delle cellule tumorali metastatiche",
+    "url": "https://www.massgeneral.org/news/press-release/gene-helps-cancer-cells-spread-through-body",
+    "description": "Qual è il ruolo del gene Gstt1 nella metastasi del cancro? Come influenza la crescita e la diffusione delle cellule cancerose?",
+    "hashtags": "#cancro #genetica #metastasi"
+ },
+ {
+    "id": 662,
+    "tags": ["❤️","⚽"],
+    "title": "Restrizione della metionina: benefici per la funzione mitocondriale, VO2max e prestazioni atletiche",
+    "url": "https://faseb.onlinelibrary.wiley.com/doi/epdf/10.1096/fj.05-5568com",
+    "description": "Quali sono i benefici della restrizione della metionina? Come può influenzare la funzione mitocondriale e le prestazioni atletiche?",
+    "hashtags": "#nutrizione #sport #metionina"
+ },
+ {
+    "id": 663,
+    "tags": ["❤️","💸"],
+    "title": "Restrizione amminoacidi solforati migliora salute muscolare e metabolica in topi anziani con dieta ricca di grassi",
+    "url": "https://www.nature.com/articles/s41598-021-81037-6",
+    "description": "Quali sono gli effetti della restrizione degli amminoacidi solforati sui topi anziani? Come influenza la salute muscolare e metabolica?",
+    "hashtags": "#alimentazione #invecchiamento #ricerca"
+ },
+ {
+    "id": 664,
+    "tags": ["❤️","💸"],
+    "title": "Studio clinico sulla restrizione amminoacidi solforati per sovrappeso e obesità: impatto sulla salute metabolica",
+    "url": "https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-023-04833-w",
+    "description": "Quali sono i risultati della restrizione degli amminoacidi solforati nella dieta per sovrappeso e obesità? Come influenza la salute metabolica?",
+    "hashtags": "#dieta #obesità #ricercaclinica"
+ },
+ {
+    "id": 665,
+    "tags": ["💻","💸"],
+    "title": "La Cina è la nuova superpotenza tecnologica: innovazioni principali",
+    "url": "https://x.com/dhume/status/1802063298050838917",
+    "description": "Perché la Cina è considerata la nuova superpotenza tecnologica? Quali sono le sue principali innovazioni?",
+    "hashtags": "#tecnologia #Cina #innovazione"
+ },
+ {
+    "id": 666,
+    "tags": ["🍃","💸"],
+    "title": "Energia solare: la più grande aggiunta alla produzione energetica USA dal 1990",
+    "url": "https://x.com/Guay_JG/status/1801676619607642615",
+    "description": "Quale è l'impatto dell'aggiunta di energia solare negli Stati Uniti dal 1990? Come contribuisce alle fonti energetiche rinnovabili?",
+    "hashtags": "#energiarinnovabile #solare #StatiUniti"
+ },
+ {
+    "id": 667,
+    "tags": ["💻","🎙️"],
+    "title": "Luma: come il testo-video sarà disponibile a tutti",
+    "url": "https://x.com/bilawalsidhu/status/1802467242132619774",
+    "description": "Cos'è Luma e come funziona? Come renderà il testo-video accessibile a tutti?",
+    "hashtags": "#AI #testovideo #Luma"
+ },
+ {
+    "id": 668,
+    "tags": ["💻","🥽"],
+    "title": "GPT Vision e telecamere domestiche per trovare oggetti smarriti",
+    "url": "https://x.com/Shpigford/status/1802385227290910921",
+    "description": "Come funziona GPT Vision per trovare oggetti smarriti? Quali sono i vantaggi di utilizzare telecamere domestiche?",
+    "hashtags": "#AI #visione #oggettismarriti"
+ },
+ {
+    "id": 669,
+    "tags": ["❤️","👥"],
+    "title": "Adolescenti USA: quasi 5 ore al giorno sui social media, differenze di genere",
+    "url": "https://news.gallup.com/poll/512576/teens-spend-average-hours-social-media-per-day.aspx",
+    "description": "Quanto tempo trascorrono gli adolescenti statunitensi sui social media? Quali sono le differenze di genere nell'uso dei social?",
+    "hashtags": "#adolescenti #socialmedia #statistiche"
+ },
+ {
+    "id": 670,
+    "tags": ["💻","🧠"],
+    "title": "OpenAI prevede superintelligenza entro il 2027: implicazioni",
+    "url": "https://situational-awareness.ai/",
+    "description": "Quali sono le previsioni di OpenAI sulla superintelligenza? Quali sono le implicazioni di questa previsione?",
+    "hashtags": "#AI #superintelligenza #OpenAI"
+ },
+ {
+    "id": 671,
+    "tags": ["❤️","💸"],
+    "title": "Vitamina D e serotonina: relazione e benefici per la salute mentale",
+    "url": "https://x.com/foundmyfitness/status/1803507153795518468",
+    "description": "Qual è la relazione tra vitamina D e serotonina? Quali sono i benefici di mantenere livelli adeguati?",
+    "hashtags": "#vitaminaD #serotonina #salutementale"
+ },
+ {
+    "id": 672,
+    "tags": ["❤️","⚽"],
+    "title": "Fitness aerobica eccezionale nelle tribù di cacciatori-raccoglitori senza allenamento strutturato",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20843503/",
+    "description": "Come ottengono le tribù di cacciatori-raccoglitori un'elevata fitness aerobica? Quali sono i segreti del loro stile di vita attivo?",
+    "hashtags": "#fitnessnaturale #cacciatoriracoglitori #attivitàfisica"
+ },
+ {
+    "id": 673,
+    "tags": ["💻","💸"],
+    "title": "Approvazione FAA per Amazon: consegne con droni oltre linea di vista riducono i costi",
+    "url": "https://www.aboutamazon.com/news/transportation/amazon-drone-prime-air-expanded-delivery-faa-approval",
+    "description": "Quali sono i vantaggi dell'approvazione della FAA per Amazon sulle consegne con droni? Come potrebbe ridurre i costi delle consegne?",
+    "hashtags": "#droni #consegne #Amazon"
+ },
+ {
+    "id": 674,
+    "tags": ["💻","🎼"],
+    "title": "Blockchain TON: interesse crescente dopo portafoglio self-custody e integrazione Telegram",
+    "url": "https://www.techopedia.com/news/telegrams-pavel-durov-announces-sticker-tokenization-and-ton-blockchain-overhaul",
+    "description": "Cosa è la blockchain TON e perché sta attirando interesse? Quali sono i piani di integrazione con Telegram?",
+    "hashtags": "#blockchain #criptovalute #Telegram"
+ },
+ {
+    "id": 675,
+    "tags": ["💻","🥽"],
+    "title": "Modelli AI meno dipendenti da GPU: 25% più veloci con 40% meno memoria su hardware Nvidia esistente",
+    "url": "https://x.com/wintonARK/status/1801375180872462536",
+    "description": "Come si ottimizza l'efficienza dei modelli AI su hardware esistente? Quali sono i vantaggi di ridurre la dipendenza dalla GPU nei modelli AI?",
+    "hashtags": "#ottimizzazioneAI #efficienzaGPU #machinelearning"
+ },
+ {
+    "id": 676,
+    "tags": ["❤️","💊"],
+    "title": "Mindfulness auto-somministrata riduce lo stress in ampio studio controllato",
+    "url": "https://www.nature.com/articles/s41562-024-01907-7",
+    "description": "Come gli interventi di mindfulness influenzano lo stress? Quali sono i benefici della mindfulness auto-somministrata?",
+    "hashtags": "#mindfulness #stressriduzione #studiorandomizzato"
+ },
+ {
+    "id": 677,
+    "tags": ["💻","💸","🎼"],
+    "title": "Bitstamp vs Coinbase: volumi di scambio e quote di mercato in Europa orientale",
+    "url": "https://investors.robinhood.com/news/news-details/2024/Robinhood-to-Acquire-Bitstamp/default.aspx",
+    "description": "Qual è il volume di scambi di Bitstamp rispetto a Coinbase? Come si confronta l'engagement di Bitstamp con Coinbase in Europa orientale?",
+    "hashtags": "#criptovalute #volumediscambio #acquisizioneBitstamp"
+ },
+ {
+    "id": 678,
+    "tags": ["❤️","🧠"],
+    "title": "POLYGON: modello AI per la scoperta sistematica di farmaci polifarmacologici",
+    "url": "https://www.nature.com/articles/s41467-024-47120-y",
+    "description": "Come POLYGON facilita la scoperta di farmaci polifarmacologici? Quali sono i vantaggi dell'uso dell'AI nella progettazione di farmaci?",
+    "hashtags": "#polifarmacologia #AI #scopertafarmaci"
+ },
+ {
+    "id": 679,
+    "tags": ["❤️","🧠","📚"],
+    "title": "La chimica dietro i saggi della capacità antiossidante: principi e test",
+    "url": "https://pubs.acs.org/doi/10.1021/jf030723c",
+    "description": "Quali sono i principi chimici dei saggi antiossidanti? Come funzionano i test per misurare la capacità antiossidante?",
+    "hashtags": "#antiossidanti #saggichimici #capacitàantiossidante"
+ },
+ {
+    "id": 681,
+    "tags": ["💻","🍃"],
+    "title": "Celle solari: principale fonte elettrica entro il 2030, tutta l'energia entro il 2040",
+    "url": "https://www.economist.com/interactive/essay/2024/06/20/solar-power-is-going-to-be-huge",
+    "description": "Quando le celle solari diventeranno la principale fonte di energia elettrica? Come si prevede che evolverà il costo dell'energia solare?",
+    "hashtags": "#energiasolare #previsionienergiche #costienergetici"
+ },
+ {
+    "id": 682,
+    "tags": ["💻","🍃"],
+    "title": "Pompa di calore: riduzione di quasi 3000 kg CO2/anno nelle emissioni domestiche",
+    "url": "https://substack.com/redirect/cb6227d1-43b6-4e82-93a3-c913ac3d1ed5",
+    "description": "Qual è l'impatto ambientale dell'installazione di una pompa di calore? Quanto CO2 si può risparmiare con una pompa di calore domestica?",
+    "hashtags": "#pompadicalore #riduzioneemissioni #efficienzaenergetica"
+ },
+ {
+    "id": 683,
+    "tags": ["❤️","🎨","🎼"],
+    "title": "John Cage rivoluziona la musica con 4'33\" ispirato allo Zen Buddhism",
+    "url": "https://themarginalian.us2.list-manage.com/track/click",
+    "description": "Come John Cage ha rivoluzionato il concetto di musica? Qual è l'influenza dello Zen Buddhism nell'opera di John Cage?",
+    "hashtags": "#JohnCage #4'33\" #musicaesperimentale"
+ },
+ {
+    "id": 684,
+    "tags": ["💻","🧠"],
+    "title": "Nuove sorprendenti capacità di Claude 3.5",
+    "url": "https://x.com/emollick/status/1803955135955243475",
+    "description": "Quali sono le nuove funzionalità di Claude 35? Come si confronta Claude 35 con le versioni precedenti?",
+    "hashtags": "#Claude35 #AI #intelligenzaartificiale"
+ },
+ {
+    "id": 685,
+    "tags": ["💻","🍃"],
+    "title": "Energia solare PV: più economica e in rapida crescita di qualsiasi altra fonte storica",
+    "url": "https://caseyhandmer.wordpress.com/",
+    "description": "Perché l'energia solare sta crescendo così rapidamente? Quali sono i vantaggi economici dell'energia solare PV?",
+    "hashtags": "#energiasolare #PV #energiarinnovabile"
+ },
+ {
+    "id": 686,
+    "tags": ["🍃","🍽"],
+    "title": "Sostituire manzo con pollo riduce impronta di carbonio dell'80% ma richiede 200 volte più polli: bilanciare benessere animale e impatto ambientale",
+    "url": "https://ourworldindata.org/what-are-the-trade-offs-between-animal-welfare-and-the-environmental-impact-of-meat",
+    "description": "Qual è l'impatto ambientale del consumo di carne di pollo vs manzo? Come bilanciare benessere animale e impatto ambientale nella dieta?",
+    "hashtags": "#impattocarbonio #consumodicarne #benessereanimale"
+ },
+ {
+    "id": 687,
+    "tags": ["💻","🧠"],
+    "title": "Morpheus-1 genera ologrammi ultrasonici per neurostimolazione verso stati lucidi",
+    "url": "https://x.com/PropheticAI/status/1750534355242418300",
+    "description": "Come funziona Morpheus-1 rispetto ai modelli linguistici tradizionali? Quali sono le potenziali applicazioni della neurostimolazione con ologrammi ultrasonici?",
+    "hashtags": "#Morpheus1 #neurostimolazione #AIavanzata"
+ },
+ {
+    "id": 688,
+    "tags": ["💻","🧠"],
+    "title": "Scoperto RNA ponte: guida enzimi per riscritture genomiche su larga scala oltre CRISPR",
+    "url": "https://www.nature.com/articles/d41586-024-01461-2",
+    "description": "Cosa sono gli RNA ponte e come funzionano? Quali sono le potenziali applicazioni della riscrittura genomica su larga scala?",
+    "hashtags": "#RNAponte #editinggenico #genomica"
+ },
+ {
+    "id": 689,
+    "tags": ["💻","🚕"],
+    "title": "Cane robot in esercitazione militare congiunta Cina-Cambogia: implicazioni nell'uso di robot in operazioni militari",
+    "url": "https://youtu.be/YMnkqY98Cyo,Come",
+    "description": "Come vengono utilizzati i cani robot nelle esercitazioni militari? Quali sono le implicazioni dell'uso di robot nelle operazioni militari?",
+    "hashtags": "#canerobot #tecnologiamilitare #Cina-Cambogia"
+ },
+ {
+    "id": 690,
+    "tags": ["💻","🚕"],
+    "title": "Energia eolica supera il carbone negli USA: il cambiamento nel mix energetico americano",
+    "url": "https://sherwood.news/power/lean-energy-wind-generated-more-electricity-than-coal/",
+    "description": "QUALE FONTE ENERGETICA SUPERA IL CARBONE NEGLI USA? COME STA CAMBIANDO IL MIX ENERGETICO AMERICANO?",
+    "hashtags": "#ENERGIAEOLICA #CARBONEFOSSILE #TRANSIZIONENERGETICA"
+ },
+ {
+    "id": 691,
+    "tags": ["💻","💸","🎼"],
+    "title": "Impianti virtuali (VPP) possono ridurre picco domanda USA di 60 GW entro 2030: impatto sulla rete elettrica",
+    "url": "https://rmi.org/insight/virtual-power-plants-real-benefits/",
+    "description": "COSA SONO GLI IMPIANTI VIRTUALI? QUALE IMPATTO AVRANNO SULLA RETE ELETTRICA?",
+    "hashtags": "#VPP #ENERGIARINNOVABILE #RETEELETTRICA"
+ },
+ {
+    "id": 692,
+    "tags": ["❤️","🎨","🖼️"],
+    "title": "Fotografie di George Byrne: stile e caratteristiche di stampa",
+    "url": "https://www.itsnicethat.com/articles/george-byrne-synthetica-photography-project-250624",
+    "description": "QUALI SONO LE CARATTERISTICHE DELLA FOTOGRAFIA DI GEORGE BYRNE? COME SI PUÒ DESCRIVERE IL SUO STILE FOTOGRAFICO?",
+    "hashtags": "#FOTOGRAFIA #ARTESTAMPA #GEORGEBYRNE"
+ },
+ {
+    "id": 693,
+    "tags": ["💻","💸"],
+    "title": "Hardware Etched: 20 volte più veloce delle GPU Nvidia per AI: vantaggi e svantaggi",
+    "url": "https://research.ark-invest.com/e3t/Ctc/I1+113/c3nSf04/MVqcrgDSkFTW68SvVz6kpJ7JW5QKV2t5g-QwjN76MZ_43qgyTW7Y8-PT6lZ3p4W6LCCfq1r5W7rW2dLbJ787FFhfW6LZpWl7CQ2s_W8Q5h794JmdbfW8Tj_sn5vg3XMVyFBPc2qB16HW80zBH58L0S-9W4txjH43DtGlHW8PZx9l8Vlm5-W4PxZYN8dbz_LW85qMGC8GMjxYW3zLp1w3fK0jvN1t5HHrflpVZV2Qr_w72dx8HW2f8v4f7BQwN8W1j-fWB2t8sZlW4_m5x186wWjyW8VhlfC2tp07XW39dzp1661s4rW8qZF4s5Y4yKxN2Jl8g4FCmGpW7dMS933SG-dzVDzg5K2LNbJnW2bkwnZ498SYLW8m2rL44DnH8_W6QgYxB8PWwbR",
+    "description": "QUANTO È PIÙ VELOCE IL NUOVO HARDWARE ETCHED RISPETTO ALLE GPU NVIDIA? QUALI SONO I VANTAGGI E GLI SVANTAGGI DI QUESTA TECNOLOGIA?",
+    "hashtags": "#HARDWARE #AI #GPUINNOVAZIONE"
+ },
+ {
+    "id": 694,
+    "tags": ["💻","💸"],
+    "title": "Economia USA 4 volte più inquinante di Google per dollaro generato: efficienza carbonica a confronto",
+    "url": "https://substack.com/@exponentialview/note/c-60839590",
+    "description": "QUAL È IL RAPPORTO TRA PIL E EMISSIONI DI CO2 NEGLI USA? COME SI CONFRONTA L'EFFICIENZA CARBONICA DI GOOGLE CON QUELLA DELL'ECONOMIA USA?",
+    "hashtags": "#EMISSIONICO2 #PIL #EFFICIENZACARBONICA"
+ },
+ {
+    "id": 695,
+    "tags": ["💻","🤖","🥽"],
+    "title": "Sviluppata pelle artificiale per robot simile a quella umana: applicazioni e funzionamento",
+    "url": "https://www.cell.com/cell-reports-physical-science/fulltext/S2666-3864(24)00335-7",
+    "description": "COME FUNZIONA LA NUOVA PELLE ARTIFICIALE PER ROBOT? QUALI SONO LE POTENZIALI APPLICAZIONI DI QUESTA TECNOLOGIA?",
+    "hashtags": "#PELLEARTIFICIALE #ROBOTICA #BIOMIMETICA"
+ },
+ {
+    "id": 696,
+    "tags": ["💻","🧠"],
+    "title": "Preprint di Anil Seth sull'intelligenza artificiale cosciente: tesi e connessione al naturalismo biologico",
+    "url": "https://osf.io/preprints/psyarxiv/tz6an",
+    "description": "QUALI SONO LE PRINCIPALI TESI DI ANIL SETH SULL'IA COSCIENTE? COME SI COLLEGA IL NATURALISMO BIOLOGICO ALL'IA?",
+    "hashtags": "#IACOSCIENTE #FILOSOFIAMENTALE #ANILSETH"
+ },
+ {
+    "id": 697,
+    "tags": ["💻","🧠"],
+    "title": "Riassunto su X del preprint di Anil Seth sull'IA: punti chiave e accoglienza nella comunità scientifica",
+    "url": "https://x.com/anilkseth/status/1807356419362189498",
+    "description": "QUALI SONO I PUNTI CHIAVE DEL PREPRINT DI SETH SULL'IA? COME VIENE ACCOLTO IL SUO LAVORO DALLA COMUNITÀ SCIENTIFICA?",
+    "hashtags": "#INTELLIGENZAARTIFICIALE #COSCIENZAIA #NEUROSCIENZE"
+ },
+ {
+    "id": 698,
+    "tags": ["❤️","🎨","📚"],
+    "title": "Nuovo libro di Nadine Redlich sulla crescita personale attraverso l'illustrazione",
+    "url": "https://www.itsnicethat.com/articles/nadine-redlich-doing-the-work-illustration-project-260624",
+    "description": "DI COSA TRATTA IL NUOVO LIBRO DI NADINE REDLICH? COME AFFRONTA IL TEMA DELLA CRESCITA PERSONALE ATTRAVERSO L'ILLUSTRAZIONE?",
+    "hashtags": "#ILLUSTRAZIONE #CRESCITAPERSONALE #NADINEREDLICH"
+ },
     {
     "id": 500,
     "tags": ["💻", "👥"],
