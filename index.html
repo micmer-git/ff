@@ -11,44 +11,45 @@
 
 <style>
 :root{
-  --bg:#fafaf7;--fg:#232323;--accent:#38bdf8;--gutter:64px;
+  --bg:#fafaf7;--fg:#1e1e1e;--accent:#38bdf8;--gut:56px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;font-family:"PT Serif",serif;background:var(--bg);color:var(--fg);}
+html,body{height:100%;font-family:"PT Serif",serif;background:var(--bg);color:var(--fg);overflow:hidden}
 
 header{height:60px;position:fixed;top:0;left:0;right:0;z-index:30;background:var(--bg);
-       display:flex;align-items:center;gap:.8rem;padding:0 calc(6vw + var(--gutter)) 0 6vw}
-header img{height:36px}
-header h1{font-size:1.55rem;font-style:italic;font-weight:700;margin-top:2px}
+       display:flex;align-items:center;gap:.8rem;padding:0 6vw}
+header img{height:32px}
+header h1{font-size:1.45rem;font-style:italic;font-weight:700;margin-top:2px}
 
-#topBar{margin-top:60px;padding:0 calc(6vw + var(--gutter)) 0 6vw;
-        display:flex;align-items:center;gap:.9rem}
+#topBar{margin-top:60px;padding:0 6vw;display:flex;align-items:center;gap:.8rem}
 #topBar input{flex:1;border:none;border-bottom:2px solid var(--fg);background:transparent;
-              font-size:1.2rem;padding:.28rem.15rem;outline:none}
+              font-size:1.15rem;padding:.26rem .15rem;outline:none}
 
 .pill,.tag{border:2px solid var(--fg);border-radius:9999px;cursor:pointer;
-          font-size:1.25rem;padding:.25rem 1rem;user-select:none;transition:.2s}
+          font-size:1.35rem;padding:.18rem 1rem;user-select:none;transition:.2s}
 .pill.active,.tag.active{background:var(--accent);border-color:var(--accent);color:#fff}
 
-#gutter{position:fixed;right:0;top:0;bottom:0;width:var(--gutter);padding-top:60px;
-        display:flex;flex-direction:column;align-items:center;gap:.65rem;overflow-y:auto}
+#gutter{position:fixed;right:0;top:60px;bottom:0;width:var(--gut);
+        display:flex;flex-direction:column;align-items:center;gap:.6rem;overflow-y:auto}
+#gutter .tag{font-size:1.4rem}
 
-#canvas{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;padding-top:60px}
-.page{scroll-snap-align:start;min-height:calc(100vh - 60px);display:flex;
-      align-items:center;justify-content:center;padding:0 6vw 4rem}
-.box{background:#fff;border-radius:14px;box-shadow:0 4px 10px rgba(0,0,0,.05);
-     max-width:680px;width:100%;max-height:68vh;overflow-y:auto;padding:2.1rem 2rem}
+#canvas{position:fixed;top:60px;left:0;right:var(--gut);bottom:0;
+        overflow-y:auto;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch}
+.page{scroll-snap-align:start;min-height:calc(100vh - 60px);
+      display:flex;align-items:center;justify-content:center;padding:0 6vw}
+.box{background:#fff;border-radius:14px;
+     max-width:640px;width:100%;max-height:68vh;overflow-y:auto;padding:2rem 1.8rem}
 .box::-webkit-scrollbar{display:none}
-.box h2{font-size:1.6rem;margin-bottom:.9rem;font-weight:700}
-.box h3{font-size:1.25rem;margin:.4rem 0 .25rem;font-weight:700}
-.box p{line-height:1.58;margin-bottom:.8rem}
-.box .src{font-size:.8rem;color:#666}
+.box h2{font-size:1.45rem;margin-bottom:.8rem;font-weight:700}
+.box h3{font-size:1.15rem;margin:.35rem 0 .25rem;font-weight:700}
+.box p{line-height:1.55;margin-bottom:.7rem}
+.box .src{font-size:.78rem;color:#666}
 .click{cursor:pointer}
 
 footer{position:fixed;bottom:0;left:0;right:0;background:var(--bg);
-       display:flex;justify-content:center;gap:1rem;padding:.6rem 6vw}
-footer .cta{border:2px solid var(--fg);border-radius:9999px;font-size:1.15rem;
-            padding:.2rem 1.25rem;cursor:pointer;transition:.2s}
+       display:flex;justify-content:center;gap:1rem;padding:.55rem 6vw}
+footer .cta{border:2px solid var(--fg);border-radius:9999px;font-size:1.25rem;
+            padding:.18rem 1.35rem;cursor:pointer;transition:.2s}
 footer .cta:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 </style>
 </head>
@@ -74,100 +75,111 @@ footer .cta:hover{background:var(--accent);border-color:var(--accent);color:#fff
 </footer>
 
 <script>
-/* -------- data -------- */
+/* ---- data ---- */
 const SRC={it:'newsletter_data.json',en:'newsletter_data_en.json'};
 const NOTES_PATH='notes.json',BOOKS_PATH='books.json';
 let LANG='it',PUBS,NOTES,BOOKS;
 
-/* -------- state -------- */
-const mainF=new Set(); // 📚 🎶
-const tagF =new Set(); // temi
-let q='';
+/* ---- state ---- */
+const mainF=new Set(); const tagF=new Set(); let q='';
 
-/* -------- helpers -------- */
+/* ---- helpers ---- */
 const $=s=>document.querySelector(s),
       tagList=['💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'],
       rnd=a=>a.sort(()=>Math.random()-.5),
       hasTag=(tgs)=>tagF.size? tgs?.some(t=>tagF.has(t)) : true,
       match=(t,s)=>t.toLowerCase().includes(s),
-      mark=(t)=>t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>');
+      mark=(t)=>q? t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>') : t;
 
-/* ---------- gutter tags ---------- */
+/* ---- gutter emoji ---- */
 const gut=$('#gutter');
 tagList.forEach(e=>{
-  const d=document.createElement('div');
-  d.textContent=e;d.className='tag';gut.appendChild(d);
-  d.onclick=()=>{d.classList.toggle('active');tagF.has(e)?tagF.delete(e):tagF.add(e);render();}
+  const n=document.createElement('div');
+  n.textContent=e;n.className='tag';gut.appendChild(n);
+  n.onclick=()=>{n.classList.toggle('active');tagF.has(e)?tagF.delete(e):tagF.add(e);render();}
 });
 
-/* ---------- main pills ---------- */
-$('#pillBooks').onclick=e=>togMain(e.currentTarget,'📚');
-$('#pillNotes').onclick=e=>togMain(e.currentTarget,'🎶');
-function togMain(el,emo){el.classList.toggle('active');mainF.has(emo)?mainF.delete(emo):mainF.add(emo);render();}
+/* ---- main pills ---- */
+$('#pillBooks').onclick=e=>toggleMain(e.currentTarget,'📚');
+$('#pillNotes').onclick=e=>toggleMain(e.currentTarget,'🎶');
+function toggleMain(el,emo){el.classList.toggle('active');mainF.has(emo)?mainF.delete(emo):mainF.add(emo);render();}
 
-/* ---------- search ---------- */
+/* ---- search ---- */
 $('#searchInput').oninput=e=>{q=e.target.value.toLowerCase();render();};
 
-/* ---------- load JSON ---------- */
+/* ---- load JSON ---- */
 Promise.all([
  fetch(SRC[LANG]).then(r=>r.json()),
  fetch(NOTES_PATH).then(r=>r.json()),
  fetch(BOOKS_PATH).then(r=>r.json())
 ]).then(([d,n,b])=>{
- PUBS=rnd(d.publications);
- NOTES=rnd(n.notes);
- BOOKS=rnd(b);
- render();
+  PUBS=rnd(d.publications);
+  NOTES=rnd(n.notes);
+  BOOKS=rnd(b);
+  render();
 });
 
-/* ---------- render ---------- */
+/* ---- render ---- */
 function render(){
   const C=$('#canvas');C.innerHTML='';
   let pages=[];
-  /* SEARCH */
+
+  /* search mode */
   if(q){
     PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖'))
       .forEach(c=>{const txt=[p.title,c.title,...c.contentBlocks[0].content].join(' ');
-        if(match(txt,q)&&hasTag(c.tags))pages.push(pubPage(p,c,true));}));
-    BOOKS.forEach(b=>{if(match(b.title,q)||match(b.text,q))pages.push(bookPage(b,true));});
-    NOTES.forEach(n=>{if(match(n.title+(n.description||''),q))pages.push(notePage(n,true));});
-  }else{
-    /* only books or notes view */
-    if(mainF.has('📚')&&!mainF.has('🎶')) BOOKS.forEach(b=>pages.push(bookPage(b,false)));
-    else if(mainF.has('🎶')&&!mainF.has('📚')) NOTES.forEach(n=>pages.push(notePage(n,false)));
-    else{
-      const theme=tagF.size>0;
-      PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&(!theme||c.tags?.some(t=>tagF.has(t))))
-                  .forEach(c=>pages.push(pubPage(p,c,false))));
-      if(!theme){BOOKS.forEach(b=>pages.push(bookPage(b,false)));NOTES.forEach(n=>pages.push(notePage(n,false))); }
-    }
+        if(match(txt,q)&&hasTag(c.tags)) pages.push(pubPage(p,c,true));}));
+    BOOKS.forEach(b=>{if(match(b.title,q)||match(b.text,q)) pages.push(bookPage(b,true));});
+    NOTES.forEach(n=>{const txt=n.title+(n.description||'');if(match(txt,q)) pages.push(notePage(n,true));});
+    rnd(pages).forEach(p=>C.appendChild(p));
+    return;
   }
-  pages.forEach(p=>C.appendChild(p));
+
+  /* single category mode */
+  if(mainF.has('📚')&&!mainF.has('🎶')){
+    rnd(BOOKS).forEach(b=>C.appendChild(bookPage(b,false)));return;
+  }
+  if(mainF.has('🎶')&&!mainF.has('📚')){
+    rnd(NOTES).forEach(n=>C.appendChild(notePage(n,false)));return;
+  }
+
+  /* theme filter only */
+  if(tagF.size){
+    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&hasTag(c.tags))
+      .forEach(c=>pages.push(pubPage(p,c,false))));
+    rnd(pages).forEach(p=>C.appendChild(p));return;
+  }
+
+  /* default home → 2 random cards fra tutto */
+  const bag=[];
+  PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>bag.push(pubPage(p,c,false))));
+  BOOKS.forEach(b=>bag.push(bookPage(b,false)));
+  NOTES.forEach(n=>bag.push(notePage(n,false)));
+  rnd(bag).slice(0,2).forEach(p=>C.appendChild(p));
 }
 
-/* ---------- page builders ---------- */
+/* ---- builders ---- */
 function pubPage(pub,sub,hl){
-  const s=document.createElement('section');s.className='page';
-  const b=document.createElement('div');b.className='box click';
-  b.innerHTML=`<h2>${hl?mark(pub.title):pub.title}</h2>
-               <h3>${hl?mark(sub.title):sub.title}</h3>
+  const S=document.createElement('section');S.className='page';
+  const B=document.createElement('div');B.className='box click';
+  B.innerHTML=`<h2>${mark(pub.title)}</h2>
+               <h3>${mark(sub.title)}</h3>
                ${sub.contentBlocks[0].content.map(t=>`<p>${hl?mark(t):t}</p>`).join('')}`;
-  b.onclick=()=>window.open(pub.substackLink,'_blank');s.appendChild(b);return s;
+  B.onclick=()=>window.open(pub.substackLink,'_blank');S.appendChild(B);return S;
 }
 function bookPage(o,hl){
-  const s=document.createElement('section');s.className='page';
-  const b=document.createElement('div');b.className='box click';
-  b.innerHTML=`<h2>${hl?mark(o.title):o.title}</h2>
-               <p>${hl?mark(o.text):o.text}</p>
+  const S=document.createElement('section');S.className='page';
+  const B=document.createElement('div');B.className='box click';
+  B.innerHTML=`<h2>${mark(o.title)}</h2><p>${mark(o.text)}</p>
                <p class="src">${o.book} — ${o.author}</p>`;
-  if(o.url) b.onclick=()=>window.open(o.url,'_blank');s.appendChild(b);return s;
+  if(o.url)B.onclick=()=>window.open(o.url,'_blank');S.appendChild(B);return S;
 }
 function notePage(n,hl){
-  const s=document.createElement('section');s.className='page';
-  const b=document.createElement('div');b.className='box click';
+  const S=document.createElement('section');S.className='page';
+  const B=document.createElement('div');B.className='box click';
   const host=n.url?new URL(n.url).hostname.replace(/^www\./,''):'';
-  b.innerHTML=`<h2>${hl?mark(n.title):n.title}</h2><p class="src">${host}</p>`;
-  if(n.url) b.onclick=()=>window.open(n.url,'_blank');s.appendChild(b);return s;
+  B.innerHTML=`<h2>${mark(n.title)}</h2><p class="src">${host}</p>`;
+  if(n.url)B.onclick=()=>window.open(n.url,'_blank');S.appendChild(B);return S;
 }
 </script>
 </body>
