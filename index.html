@@ -1,191 +1,89 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>futuro fortissimo – explorer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>futuro fortissimo – explorer</title>
 
-  <!-- font & tailwind -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <script>
-  tailwind.config = {
-    theme:{
-      extend:{
-        fontFamily:{sans:['"Google Sans"','Roboto','ui-sans-serif']},
-        colors:{ioBg:'#F6F9FE',brand:'#38bdf8'},
-        boxShadow:{neu:'4px 4px 8px rgba(0,0,0,.06)'}
-      }
-    }
-  };
-  </script>
-  <style>
-    body{background:#F6F9FE}
-    .snap{scroll-snap-type:y mandatory;height:100vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
-    .snap > *{scroll-snap-align:center}
-    .card{max-width:560px;width:90vw;height:80vh}
-    .pill{background:#fff;border:2px solid #dbeafe;padding:.3rem;border-radius:9999px;cursor:pointer;
-          box-shadow:0 1px 4px rgba(0,0,0,.07);transition:.15s}
-    .pill.active{background:#38bdf822;border-color:#38bdf8}
-    .quote{font-size:1.05rem;line-height:1.4rem}
-    .card-scroll{overflow-y:auto}
-  </style>
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* --- Way-of-Code look --- */
+:root{--fg:#222;--bg:#fafaf7;--accent:#9ca3af}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;scroll-behavior:smooth;font-family:"PT Serif",serif;background:var(--bg);color:var(--fg)}
+
+/* snap scrolling */
+#canvas{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;}
+.page{scroll-snap-align:start;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 6vw;position:relative}
+
+/* right gutter index */
+.gutter{position:absolute;right:0;top:0;bottom:0;width:48px;font-size:.8rem;letter-spacing:.05em;color:var(--accent);display:flex;flex-direction:column;align-items:center;padding-top:4rem;user-select:none;pointer-events:none}
+.gutter span{flex:1;padding:.4rem 0}
+
+/* title & quote */
+h1{font-size:2.1rem;margin-bottom:1rem;font-weight:700}
+h2{font-size:1.4rem;margin:2rem 0 1rem}
+p{line-height:1.6;white-space:pre-wrap}
+
+/* nav top-left */
+#nav{position:fixed;left:1.2rem;top:1rem;z-index:10;font-size:1rem;cursor:pointer;color:var(--accent)}
+#filters{position:fixed;left:1.2rem;top:3.5rem;z-index:10;display:flex;flex-direction:column;gap:.4rem}
+.pill{border:1px solid var(--accent);border-radius:9999px;padding:.2rem .6rem;font-size:.9rem;cursor:pointer}
+.pill.active{background:var(--accent);color:#fff}
+input{border:none;background:transparent;border-bottom:1px solid var(--accent);outline:none;width:140px;font-size:.9rem;color:var(--fg)}
+</style>
 </head>
 
-<body class="font-sans text-gray-800 antialiased text-[17.5px]">
-
-<!-- ===== FILTER BAR (fixed right) ===== -->
-<div id="filterBar" class="fixed right-2 top-1/2 -translate-y-1/2 space-y-2 z-20">
-  <!-- main filters -->
-  <span class="pill" data-filter="📚">📚</span>
-  <span class="pill" data-filter="🎶">🎶</span>
-  <!-- thematic filters -->
-  <span class="pill" data-filter="💻">💻</span><span class="pill" data-filter="🍃">🍃</span>
-  <span class="pill" data-filter="❤️">❤️</span><span class="pill" data-filter="💸">💸</span>
-  <span class="pill" data-filter="🧠">🧠</span><span class="pill" data-filter="💊">💊</span>
-  <span class="pill" data-filter="🎨">🎨</span>
+<body>
+<!-- nav & quick filters -->
+<div id="nav">☰</div>
+<div id="filters">
+  <input id="searchInput" placeholder="trova…">
+  <div data-filter="📚" class="pill">📚 libri</div>
+  <div data-filter="🎶" class="pill">🎶 note</div>
 </div>
 
-<!-- ===== SEARCH (top-left) ===== -->
-<div class="fixed left-2 top-2 z-20">
-  <input id="searchInput" placeholder="cerca..." class="rounded-full py-1.5 pl-8 pr-3 bg-white shadow-neu text-sm w-[40vw] min-w-[160px] focus:outline-none focus:ring-2 focus:ring-brand">
-  <span class="absolute left-3 top-2 text-sm">🔍</span>
-</div>
-
-<!-- ===== MAIN SCROLL AREA ===== -->
-<main id="app" class="snap mx-auto flex flex-col items-center justify-center"></main>
-
-<!-- ===== OVERLAY (sub-chapter) ===== -->
-<div id="overlay" class="fixed inset-0 bg-white/90 backdrop-blur hidden z-30 flex items-center justify-center p-4">
-  <div id="overlayContent" class="bg-white rounded-xl shadow-neu p-6 max-h-[90vh] w-full max-w-lg overflow-y-auto space-y-4"></div>
-  <button id="closeOv" class="absolute top-4 right-4 text-2xl">✕</button>
-</div>
+<!-- MAIN CANVAS – cards converted to “pages” -->
+<div id="canvas"></div>
 
 <script>
-/* ------------ SETTINGS / DATA ------------ */
-let LANG='it';
-const PATH={it:'newsletter_data.json',en:'newsletter_data_en.json'};
-let DATA,NOTES,BOOKS;
-const filters=new Set();
+/* ------------- simple mock loader ------------- */
+const sample=[{title:"The code that can be named\nis not the eternal code.",
+               text:`The function that can be defined
+is not the limitless function.
 
-/* ------------ HELPERS ------------ */
-const $=s=>document.querySelector(s);
-const match=(txt,term)=>txt.toLowerCase().includes(term);
+The nameless is the origin of heaven and earth.
+The named is the mother
+of ten thousand things.`,
+               idx:1
+              },
+              {title:"Free from desire, you see essence unformed.",
+               text:`Caught in desire,
+you see only the manifestations.`,
+               idx:2
+              }];
 
-/* ------------ BUILD CARD TEMPLATES ------------ */
-const gradients=[
- 'linear-gradient(135deg,#38bdf8,#c084fc)','linear-gradient(135deg,#a78bfa,#f472b6)',
- 'linear-gradient(135deg,#34d399,#60a5fa)','linear-gradient(135deg,#f87171,#fb923c)'
-];
-
-function pubCard(pub,idx){
-  const c=document.createElement('div');c.className='card snap-start rounded-xl overflow-hidden shadow-neu';
-  c.style.background=`${gradients[idx%gradients.length]}`;
-  c.innerHTML=`<div class="bg-white h-full flex flex-col p-6">
-      <h2 class="font-bold text-2xl mb-4">${pub.title}</h2>
-      <p class="italic text-base flex-1">Tap to open 👉</p>
-  </div>`;
-  c.onclick=()=>openOverlay(pub);
-  return c;
-}
-
-function bookCard(b){
-  const c=document.createElement('div');c.className='card snap-start rounded-xl overflow-hidden border-2 border-brand bg-white';
-  if(b.url)c.onclick=()=>window.open(b.url,'_blank');
-  c.innerHTML=`<div class="p-6 flex flex-col h-full">
-      <h3 class="font-semibold text-lg mb-3">${b.title}</h3>
-      <div class="quote card-scroll flex-1 pr-1">&ldquo;${b.text}&rdquo;</div>
-      <p class="mt-3 text-sm text-gray-600">${b.book} — ${b.author}</p>
-  </div>`;
-  return c;
-}
-
-function noteCard(n){
-  const c=document.createElement('div');c.className='card snap-start rounded-xl overflow-hidden border border-gray-400 bg-white';
-  if(n.url)c.onclick=()=>window.open(n.url,'_blank');
-  c.innerHTML=`<div class="p-6 flex flex-col h-full">
-      <h3 class="font-semibold mb-2 text-lg">${n.title}</h3>
-      <div class="card-scroll flex-1 pr-1">${n.text?`<p>${n.text}</p>`:''}</div>
-      <div class="flex gap-1 mt-2">${n.tags.map(t=>`<span class="tag text-sm">${t}</span>`).join('')}</div>
-  </div>`;
-  return c;
-}
-
-/* ------------ OVERLAY (sub-chapters) ------------ */
-function openOverlay(pub){
-  const out=$('#overlayContent');out.innerHTML='';
-  pub.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>{
-    out.innerHTML+=`<div><h4 class="font-bold mb-1">${c.title}</h4>
-      ${c.contentBlocks[0].content.map(l=>`<p>${l}</p>`).join('')}</div><hr class="my-3">`;
+function buildPages(arr){
+  const root=document.getElementById('canvas');
+  arr.forEach(o=>{
+    const pg=document.createElement('section');pg.className='page';
+    pg.innerHTML=`<div class="gutter">${Array(30).fill(0).map((_,i)=>`<span>${String(i).padStart(2,'0')}</span>`).join('')}</div>
+      <div>
+        <h1>${o.title}</h1>
+        <p>${o.text}</p>
+      </div>`;
+    root.appendChild(pg);
   });
-  $('#overlay').classList.remove('hidden');
 }
-$('#closeOv').onclick=()=>$('#overlay').classList.add('hidden');
+/* init with mock, replace with your JSON render() */
+buildPages(sample);
 
-/* ------------ FILTER / SEARCH HANDLERS ------------ */
-$('#filterBar').onclick=e=>{
-  if(!e.target.dataset.filter)return;
-  const k=e.target.dataset.filter;
-  e.target.classList.toggle('active');
-  filters.has(k)?filters.delete(k):filters.add(k);
-  render();
-};
-$('#searchInput').oninput=render;
-
-/* ------------ LOAD DATA ------------ */
-async function loadAll(){
-  const [p,n,b]=await Promise.all([
-    fetch(PATH[LANG]).then(r=>r.json()),
-    fetch('notes.json').then(r=>r.json()),
-    fetch('books.json').then(r=>r.json())
-  ]);
-  DATA=p;NOTES=n.notes;BOOKS=b;
-  DATA.publications.sort(()=>Math.random()-0.5);
-  BOOKS.sort(()=>Math.random()-0.5);
-  NOTES.sort(()=>Math.random()-0.5);
-  render();
-}
-
-/* ------------ MAIN RENDER ------------ */
-function render(){
-  const term=$('#searchInput').value.toLowerCase();
-  const mainSel=[...filters].filter(x=>['📚','🎶'].includes(x));
-  const themeSel=[...filters].filter(x=>!['📚','🎶'].includes(x));
-  const wrap=$('#app');wrap.innerHTML='';
-
-  /* search: show matching everywhere */
-  if(term){
-    DATA.publications.forEach((p,i)=>p.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>{
-      const txt=p.title+' '+c.title+' '+c.contentBlocks[0].content.join(' ');
-      if(match(txt,term))wrap.appendChild(pubCard(p,i));
-    }));
-    BOOKS.forEach(b=>{if(match(b.title,term)||match(b.text,term))wrap.appendChild(bookCard(b));});
-    NOTES.forEach(n=>{if(match(n.title,term)||match(n.text||'',term))wrap.appendChild(noteCard(n));});
-    return;
-  }
-
-  /* main filter only */
-  if(mainSel.length){
-    if(mainSel.includes('📚'))BOOKS.forEach(b=>wrap.appendChild(bookCard(b)));
-    if(mainSel.includes('🎶'))NOTES.forEach(n=>wrap.appendChild(noteCard(n)));
-    return;
-  }
-
-  /* thematic filter */
-  if(themeSel.length){
-    DATA.publications.forEach((p,i)=>p.cards.filter(c=>!c.title.startsWith('📖')&&c.tags?.some(t=>themeSel.includes(t))).length&&wrap.appendChild(pubCard(p,i)));
-    return;
-  }
-
-  /* default order: pubs -> books -> notes */
-  DATA.publications.forEach((p,i)=>wrap.appendChild(pubCard(p,i)));
-  BOOKS.forEach(b=>wrap.appendChild(bookCard(b)));
-  NOTES.forEach(n=>wrap.appendChild(noteCard(n)));
-}
-
-/* ------------ START ------------ */
-loadAll();
+/* ---------- tiny filter toggle --------- */
+document.getElementById('nav').onclick=()=>document.getElementById('filters').classList.toggle('hidden');
+document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>p.classList.toggle('active'));
 </script>
 </body>
 </html>
