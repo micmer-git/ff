@@ -1,74 +1,73 @@
 <!DOCTYPE html>
 <html lang="it" id="roothtml">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>futuro fortissimo – explorer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>futuro fortissimo – explorer</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Google Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<script>
-tailwind.config={
-  theme:{extend:{
-    fontFamily:{sans:['"Google Sans"','Roboto','ui-sans-serif']},
-    colors:{ioBg:'#F6F9FE'},
-    boxShadow:{neu:'4px 4px 8px rgba(0,0,0,.06)'}
-  }}
-};
-</script>
-<style>
-body{background:#F6F9FE}
-.pill,.tag{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.1);padding:4px 12px;border-radius:9999px;user-select:none;transition:.15s}
-.pill{cursor:pointer;font-size:1.1rem}.pill.active{outline:2px solid #38bdf8}
-.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
-.scroll-snap-x{scroll-snap-type:x mandatory}.snap-start{scroll-snap-align:start}
-.exp-card{transform:scale(.95);opacity:0;transition:transform .35s ease,opacity .35s ease}
-.exp-card.enter{transform:scale(1);opacity:1}.exp-card.exit{transform:scale(.9);opacity:0}
-.expander{position:absolute;right:10px;bottom:10px;background:#fff;border-radius:9999px;padding:6px 9px;font-size:18px;box-shadow:0 1px 4px rgba(0,0,0,.15);cursor:pointer}
-.quote{font-size:1rem;line-height:1.3rem;overflow-y:auto;max-height:9rem}
-.source{font-size:.75rem;color:#555}
-.pub-sub{cursor:pointer}
-</style>
+  <!-- Tailwind (CDN build) -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme:{
+        extend:{
+          fontFamily:{sans:['"Google Sans"','Roboto','ui-sans-serif']},
+          colors:{ioBg:'#F6F9FE'},
+          boxShadow:{neu:'4px 4px 8px rgba(0,0,0,.06)'}
+        }
+      }
+    };
+  </script>
+
+  <style>
+  body{background:#F6F9FE}
+  mark{background:#FFEB3B66;padding:0 2px;border-radius:3px}
+  .pill,.tag{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.1);padding:4px 12px;border-radius:9999px;user-select:none;transition:.15s}
+  .pill{cursor:pointer;font-size:1rem}.pill.active{outline:2px solid #38bdf8}
+  .hide-scrollbar::-webkit-scrollbar{display:none}
+  .hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+  .scroll-snap-x{scroll-snap-type:x mandatory}
+  .snap-start{scroll-snap-align:start}
+  .exp-card{transform:scale(.95);opacity:0;transition:.35s ease}
+  .exp-card.enter{transform:scale(1);opacity:1}
+  .exp-card.exit{transform:scale(.9);opacity:0}
+  .expander{position:absolute;right:10px;bottom:10px;background:#fff;border-radius:9999px;padding:6px 9px;font-size:18px;box-shadow:0 1px 4px rgba(0,0,0,.15);cursor:pointer}
+  </style>
 </head>
 
 <body class="font-sans text-gray-800 antialiased text-[18px]">
-
 <header class="py-2">
   <div class="max-w-3xl mx-auto flex items-center justify-center gap-3 px-4">
-    <img src="logo.png" alt="logo Futuro Fortissimo" class="h-8">
+    <img src="logo.png" alt="logo" class="h-8">
     <h1 class="italic lowercase text-3xl font-semibold">futuro fortissimo</h1>
   </div>
 </header>
 
 <section class="max-w-3xl mx-auto px-4 space-y-3">
-  <!-- search + main filter -->
-  <div class="flex items-center gap-3">
-    <div class="relative flex-grow">
-      <input id="searchInput" placeholder="search / cerca…" class="w-full rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400">
-      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-lg">🔍</span>
-    </div>
-    <div id="mainFilterRow" class="flex gap-2">
-      <span class="pill" data-filter="📚">📚</span>
-      <span class="pill" data-filter="🎶">🎶</span>
-    </div>
+  <!-- search + main filters -->
+  <div class="relative flex items-center gap-2">
+    <input id="searchInput" placeholder="search / cerca…" class="flex-1 rounded-full py-2 pl-11 pr-4 bg-white shadow-neu focus:outline-none focus:ring-2 focus:ring-sky-400">
+    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-lg">🔍</span>
+
+    <span class="pill" data-main="📚">📚</span>
+    <span class="pill" data-main="🎶">🎶</span>
   </div>
 
-  <!-- thematic filters -->
-  <div id="tagFilterRow" class="flex flex-wrap justify-center gap-2 text-xl">
-    <span class="pill" data-filter="💻">💻</span><span class="pill" data-filter="🍃">🍃</span>
-    <span class="pill" data-filter="❤️">❤️</span><span class="pill" data-filter="💸">💸</span>
-    <span class="pill" data-filter="⚽">⚽</span><span class="pill" data-filter="🍽">🍽</span>
-    <span class="pill" data-filter="🧠">🧠</span><span class="pill" data-filter="💊">💊</span>
-    <span class="pill" data-filter="🎨">🎨</span><span class="pill" data-filter="🚕">🚕</span>
-    <span class="pill" data-filter="🥽">🥽</span><span class="pill" data-filter="👥">👥</span>
-    <span class="pill" data-filter="💆">💆</span>
+  <!-- secondary tag filters -->
+  <div id="filterRow" class="flex flex-wrap justify-center gap-2 text-xl">
+    <span class="pill" data-filter="💻">💻</span><span class="pill" data-filter="🍃">🍃</span><span class="pill" data-filter="❤️">❤️</span>
+    <span class="pill" data-filter="💸">💸</span><span class="pill" data-filter="⚽">⚽</span><span class="pill" data-filter="🍽">🍽</span>
+    <span class="pill" data-filter="🧠">🧠</span><span class="pill" data-filter="💊">💊</span><span class="pill" data-filter="🎨">🎨</span>
+    <span class="pill" data-filter="🚕">🚕</span><span class="pill" data-filter="🥽">🥽</span><span class="pill" data-filter="👥">👥</span><span class="pill" data-filter="💆">💆</span>
   </div>
 </section>
 
-<main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-4 mt-6"></main>
+<main id="app" class="max-w-3xl mx-auto px-4 pb-32 space-y-6 mt-6"></main>
 
 <footer class="fixed bottom-0 inset-x-0 flex items-center justify-center gap-3 py-2 text-base bg-ioBg/90 backdrop-blur">
   <button onclick="window.open('https://www.paypal.com/paypalme/michelemerelli','_blank')" class="pill">☕ sostieni</button>
@@ -77,13 +76,16 @@ body{background:#F6F9FE}
 </footer>
 
 <script>
-/* -------- paths / globals -------- */
+/* -------- paths & globals -------- */
 let LANG='it';
-const PATH={it:'newsletter_data.json',en:'newsletter_data_en.json'};
-const NOTES_PATH='notes.json',BOOKS_PATH='books.json';
+const PATH      = {it:'newsletter_data.json',en:'newsletter_data_en.json'};
+const NOTES_PATH='notes.json';
+const BOOKS_PATH='books.json';
+
 let DATA,NOTES,BOOKS;
-const filters=new Set();
-const gradients=[
+const filters=new Set();   // emoji-tag
+const mains  =new Set();   // 📚 / 🎶
+const GRADS=[
  'linear-gradient(135deg,#38bdf8,#c084fc)','linear-gradient(135deg,#f472b6,#facc15)',
  'linear-gradient(135deg,#34d399,#60a5fa)','linear-gradient(135deg,#f87171,#fb923c)',
  'linear-gradient(135deg,#a78bfa,#f472b6)','linear-gradient(135deg,#fb923c,#fde68a)',
@@ -91,22 +93,27 @@ const gradients=[
 ];
 
 /* -------- helpers -------- */
-const $=s=>document.querySelector(s),
-      match=(t,s)=>t.toLowerCase().includes(s),
-      hl=(t,s)=>s?t.replace(new RegExp(`(${s})`,'gi'),'<mark>$1</mark>'):t,
-      safeHost=u=>{try{return new URL(/^https?:\/\//.test(u)?u:`https://${u}`).hostname.replace(/^www\./,'')}catch(e){return''}};
+const $ = s=>document.querySelector(s);
+const match=(t,s)=>t.toLowerCase().includes(s);
+const hl   =(t,s)=>s?t.replace(new RegExp(`(${s})`,'gi'),'<mark>$1</mark>'):t;
+const safeHost=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch{return''}};
+const rnd   =arr=>arr.sort(()=>Math.random()-.5);
 
 /* -------- listeners -------- */
-['#mainFilterRow','#tagFilterRow'].forEach(sel=>{
-  $(sel).addEventListener('click',e=>{
-    if(!e.target.dataset.filter) return;
-    const f=e.target.dataset.filter;
-    e.target.classList.toggle('active');
-    filters.has(f)?filters.delete(f):filters.add(f);
-    render();
-  });
+$('#filterRow').addEventListener('click',e=>{
+  const v=e.target.dataset.filter; if(!v)return;
+  e.target.classList.toggle('active');
+  filters.has(v)?filters.delete(v):filters.add(v);
+  render();
+});
+document.querySelectorAll('[data-main]').forEach(p=>p.onclick=e=>{
+  const v=e.target.dataset.main;
+  e.target.classList.toggle('active');
+  mains.has(v)?mains.delete(v):mains.add(v);
+  render();
 });
 $('#searchInput').oninput=render;
+
 $('#langToggle').onclick=()=>{
   LANG=LANG==='it'?'en':'it';
   $('#langToggle').textContent=LANG==='it'?'🇬🇧 english':'🇮🇹 italiano';
@@ -121,59 +128,56 @@ async function loadAll(){
     fetch(NOTES_PATH).then(r=>r.json()),
     fetch(BOOKS_PATH).then(r=>r.json())
   ]);
-  DATA.publications.sort(()=>Math.random()-0.5);
-  BOOKS.sort(()=>Math.random()-0.5);
-  NOTES.notes.sort(()=>Math.random()-0.5);
+  rnd(DATA.publications);
+  rnd(NOTES.notes);
+  rnd(BOOKS);
+
+  filters.clear(); mains.clear();
   document.querySelectorAll('.pill.active').forEach(p=>p.classList.remove('active'));
-  filters.clear(); $('#searchInput').value='';
+  $('#searchInput').value='';
   render();
 }
 
 /* -------- render -------- */
 function render(){
-  const term=$('#searchInput').value.toLowerCase(),
-        activeS=term.length>0,
-        mainSel=[...filters].filter(f=>['📚','🎶'].includes(f)),
-        themeSel=[...filters].filter(f=>!['📚','🎶'].includes(f));
+  const term=$('#searchInput').value.toLowerCase();
+  const tagSel=[...filters];
+  const mainSel=[...mains];
   const wrap=$('#app'); wrap.innerHTML='';
 
-  /* ---- search mode ---- */
-  if(activeS){
+  /* ---- MAIN FILTER ONLY (📚 / 🎶) ---- */
+  if(mainSel.length){
+    if(mainSel.includes('📚'))
+      wrap.appendChild(makeBooksStrip(BOOKS.filter(b=>!tagSel.length||b.tags?.some(t=>tagSel.includes(t))),true));
+    if(mainSel.includes('🎶'))
+      wrap.appendChild(makeNotesStrip(NOTES.notes.filter(n=>!tagSel.length||n.tags?.some(t=>tagSel.includes(t))),true));
+    return;
+  }
+
+  /* ---- SEARCH ACTIVE ---- */
+  if(term){
     DATA.publications.forEach((pub,i)=>{
-      pub.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>{
-        const txt=[pub.title,c.title,...c.contentBlocks[0].content].join(' ');
-        if(match(txt,term)) wrap.appendChild(makePubCard(pub,c,i,term));
-      });
+      pub.cards.filter(sc=>!sc.title.startsWith('📖') &&
+        (match(sc.title,term)||sc.contentBlocks.some(b=>b.content.some(l=>match(l,term)))))
+        .forEach(sc=>wrap.appendChild(makeOneSubCard(pub,sc,i,term)));
     });
-    /* books match */
-    BOOKS.forEach(b=>{
-      if(match(b.title,term)||match(b.text,term)) wrap.appendChild(makeBookCard(b,'mb-4'));
-    });
-    /* notes match */
-    NOTES.notes.forEach(n=>{
-      const txt=n.title+' '+(n.description||'');
-      if(match(txt,term)) wrap.appendChild(makeNoteCard(n,'mb-4'));
+    BOOKS.filter(b=>match(b.title,term)||match(b.text,term))
+         .forEach(b=>wrap.appendChild(makeBookCard(b)));
+    NOTES.notes.filter(n=>match(n.title,term)||match(n.description||'',term))
+         .forEach(n=>wrap.appendChild(makeNoteCard(n)));
+    return;
+  }
+
+  /* ---- TAG FILTER (senza main) ---- */
+  if(tagSel.length){
+    DATA.publications.forEach((pub,i)=>{
+      pub.cards.filter(sc=>!sc.title.startsWith('📖') && sc.tags?.some(t=>tagSel.includes(t)))
+        .forEach(sc=>wrap.appendChild(makeOneSubCard(pub,sc,i)));
     });
     return;
   }
 
-  /* ---- main filters ---- */
-  if(mainSel.length===1){
-    const bigger='space-y-6';
-    if(mainSel[0]==='📚'){wrap.appendChild(makeBooksList(BOOKS,bigger));return;}
-    if(mainSel[0]==='🎶'){wrap.appendChild(makeNotesList(NOTES.notes,bigger));return;}
-  }
-
-  /* ---- theme filter ---- */
-  if(themeSel.length){
-    DATA.publications.forEach((pub,i)=>{
-      pub.cards.filter(c=>!c.title.startsWith('📖')&&c.tags?.some(t=>themeSel.includes(t)))
-               .forEach(c=>wrap.appendChild(makePubCard(pub,c,i,'')));
-    });
-    return;
-  }
-
-  /* ---- default home ---- */
+  /* ---- HOME ---- */
   wrap.appendChild(makePubStrip(DATA.publications));
   wrap.appendChild(makeBooksStrip(BOOKS));
   wrap.appendChild(makeNotesStrip(NOTES.notes));
@@ -184,91 +188,125 @@ function makePubStrip(list){
   const strip=document.createElement('div');
   strip.id='pubStrip';
   strip.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
+  strip.style.paddingInline='24px';                 // peek L/R
+
   list.forEach((pub,i)=>{
     const card=document.createElement('div');
-    card.className='relative rounded-xl flex-shrink-0 snap-start overflow-hidden cursor-pointer w-full max-w-[320px]';
-    card.style.cssText=`background:${gradients[i%gradients.length]};padding:2px`;
-    const inner=document.createElement('div');
-    inner.className='bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
-    inner.innerHTML=`<h3 class="font-semibold text-xl text-center break-words">${pub.title}</h3>`;
-    card.appendChild(inner);
-    const btn=document.createElement('button');btn.className='expander';btn.textContent='⤢';
+    card.className='relative w-[300px] flex-shrink-0 snap-start overflow-hidden rounded-xl cursor-pointer';
+    card.style.cssText=`background:${GRADS[i%GRADS.length]};padding:2px`;
+
+    const inr=document.createElement('div');
+    inr.className='bg-white rounded-xl p-5 shadow-neu h-40 flex flex-col justify-center';
+    inr.innerHTML=`<h3 class="font-semibold text-xl mb-2 text-center break-words">${pub.title}</h3>`;
+    card.appendChild(inr);
+
+    const btn=document.createElement('button');
+    btn.className='expander'; btn.textContent='⤢';
     btn.onclick=e=>{e.stopPropagation();openExpanded(pub);};
-    card.appendChild(btn); card.onclick=()=>openExpanded(pub); strip.appendChild(card);
+    card.appendChild(btn);
+
+    card.onclick=()=>openExpanded(pub);
+    strip.appendChild(card);
   });
   return strip;
 }
 
-function makePubCard(pub,sub,idx,term){
+/* ---- single sub-chapter card (per filtrate/ricerca) ---- */
+function makeOneSubCard(pub,sc,idx,term=''){
   const card=document.createElement('div');
   card.className='rounded-xl overflow-hidden mb-4';
-  card.style.cssText=`background:${gradients[idx%gradients.length]};padding:2px`;
+  card.style.cssText=`background:${GRADS[idx%GRADS.length]};padding:2px`;
+
   const inner=document.createElement('div');
-  inner.className='bg-white rounded-xl p-5 shadow-neu pub-sub';
+  inner.className='bg-white rounded-xl p-5 shadow-neu';
   inner.innerHTML=`
-    <h3 class="font-semibold mb-1">${term?hl(sub.title,term):sub.title}</h3>
-    ${sub.contentBlocks[0].content.map(l=>`<p class="text-base">${term?hl(l,term):l}</p>`).join('')}
-    <div class="flex flex-wrap gap-1 mt-1">${(sub.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>`;
-  inner.onclick=()=>window.open(pub.substackLink,'_blank');
-  card.appendChild(inner); return card;
+    <h3 class="font-semibold mb-1">${hl(sc.title,term)}</h3>
+    ${sc.contentBlocks[0].content.map(l=>`<p>${hl(l,term)}</p>`).join('')}
+    ${sc.tags?`<div class="flex flex-wrap gap-1 mt-1">${sc.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>`:''}`;
+  card.appendChild(inner);
+  card.onclick=()=>window.open(pub.substackLink,'_blank');
+  return card;
 }
 
+/* ---- expanded publication ---- */
 function openExpanded(pub){
-  document.querySelectorAll('.exp-card').forEach(c=>c.remove());
   $('#pubStrip')?.classList.add('hidden');
-  const tagSel=[...filters].filter(f=>!['📚','🎶'].includes(f));
-  const subs=pub.cards.filter(c=>!c.title.startsWith('📖') && (!tagSel.length||c.tags?.some(t=>tagSel.includes(t))));
+  document.querySelectorAll('.exp-card').forEach(c=>c.remove()); // chiude eventuale card aperta
+
   const idx=DATA.publications.findIndex(p=>p.title===pub.title);
-  const cont=document.createElement('div');cont.className='exp-card rounded-xl overflow-hidden mb-4';
-  cont.style.cssText=`background:${gradients[idx%gradients.length]};padding:2px`;
-  const inr=document.createElement('div');inr.className='bg-white rounded-xl p-5 shadow-neu';
-  subs.forEach(c=>{
-    inr.innerHTML+=`
-      <div class="mb-4 pub-sub" onclick="window.open('${pub.substackLink}','_blank')">
-        <h3 class="font-semibold mb-1">${c.title}</h3>
-        ${c.contentBlocks[0].content.map(l=>`<p class="text-base">${l}</p>`).join('')}
-      </div>`;});
-  cont.appendChild(inr);
+  const card=document.createElement('div');
+  card.className='exp-card bg-white rounded-xl p-6 shadow-neu mx-auto max-w-[640px] space-y-4 relative';
+  card.style.margin='8vh auto';
+
+  pub.cards.filter(c=>!c.title.startsWith('📖')).forEach((sc,i)=>{
+    card.innerHTML+=`
+      <div>
+        <h3 class="font-semibold mb-1">${sc.title}</h3>
+        ${sc.contentBlocks[0].content.map(l=>`<p>${l}</p>`).join('')}
+        ${sc.tags?`<div class="flex flex-wrap gap-1 mt-1">${sc.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>`:''}
+      </div>
+      ${i<pub.cards.length-2?'<hr class="border-t my-3" />':''}`;
+  });
+
   const close=document.createElement('button');
-  close.textContent='✕';close.className='absolute top-2 right-2 text-2xl';
-  close.onclick=()=>{cont.classList.remove('enter');cont.classList.add('exit');setTimeout(()=>{cont.remove();$('#pubStrip')?.classList.remove('hidden');},350);};
-  cont.style.position='relative';cont.appendChild(close);
-  $('#app').prepend(cont);requestAnimationFrame(()=>cont.classList.add('enter'));
-  cont.scrollIntoView({behavior:'smooth',block:'center'});
+  close.textContent='✕'; close.className='absolute top-2 right-2 text-2xl';
+  close.onclick=()=>{card.classList.add('exit');setTimeout(()=>{card.remove();$('#pubStrip')?.classList.remove('hidden');},350);};
+  card.appendChild(close);
+
+  card.onclick=()=>window.open(pub.substackLink,'_blank');
+  $('#app').prepend(card); requestAnimationFrame(()=>card.classList.add('enter'));
 }
 
 /* ---- books ---- */
-function makeBookCard(b,extra='mb-2'){
+function makeBookCard(b){
   const card=document.createElement('div');
-  card.className=`rounded-xl border-2 border-indigo-500 p-4 ${extra}`;
-  card.style.background='#fff';
-  if(b.url) card.onclick=()=>window.open(b.url,'_blank');
-  card.innerHTML=`<h3 class="font-semibold text-lg mb-1">${b.title}</h3>
-                  <p class="quote">&ldquo;${b.text}&rdquo;</p>
-                  <p class="source mt-2">${b.book} — ${b.author}</p>`;
+  card.className='rounded-xl border-2 border-indigo-500 p-4 space-y-2';
+  card.style.minHeight='170px'; card.onclick=()=>b.url&&window.open(b.url,'_blank');
+  card.innerHTML=`
+    <h3 class="font-semibold">${b.title}</h3>
+    <p class="leading-snug text-[16px]">&ldquo;${b.text}&rdquo;</p>
+    <p class="text-sm text-gray-600">${b.book} — ${b.author}</p>`;
   return card;
 }
-const makeBooksList=(list,classes)=>{const c=document.createElement('div');if(classes)c.className=classes;list.forEach(b=>c.appendChild(makeBookCard(b,'mb-6')));return c;};
-const makeBooksStrip=list=>{
-  const d=document.createElement('div');d.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
-  list.forEach(b=>{const c=makeBookCard(b,'mb-0');c.classList.add('flex-shrink-0','w-full','max-w-[320px]','snap-start');d.appendChild(c)});return d;};
+function makeBooksStrip(list,spaced){
+  const wrap=document.createElement('div');
+  wrap.className=`flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth ${spaced?'py-2':''}`;
+  wrap.append(...rnd(list).map(b=>{const c=makeBookCard(b);c.classList.add('w-[300px]','flex-shrink-0','snap-start');return c;}));
+  return wrap;
+}
 
 /* ---- notes ---- */
-function makeNoteCard(n,extra='mb-2'){
-  const card=document.createElement('div');card.className=`rounded-xl border-2 border-black p-4 ${extra}`;
-  card.style.background='#fff';if(n.url) card.onclick=()=>window.open(n.url,'_blank');
-  const host=safeHost(n.url);
-  card.innerHTML=`<h3 class="font-semibold mb-1">${n.title}</h3>
-      <div class="flex flex-wrap gap-1 mb-1">${n.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
-      ${host?`<p class="source">${host}</p>`:''}`;
+function makeNoteCard(n){
+  const card=document.createElement('div');
+  card.className='rounded-xl border-2 border-black p-4 space-y-1';
+  card.style.minHeight='140px'; if(n.url)card.onclick=()=>window.open(n.url,'_blank');
+  card.innerHTML=`
+    <h3 class="font-semibold">${n.title}</h3>
+    <p class="leading-snug text-[16px]">${n.description||''}</p>
+    <div class="flex flex-wrap gap-1">${n.tags.map(t=>`<span class="tag">${t}</span>`).join('')}
+      <span class="tag text-xs">${safeHost(n.url)}</span></div>`;
   return card;
 }
-const makeNotesList=(list,classes)=>{const c=document.createElement('div');if(classes)c.className=classes;list.forEach(n=>c.appendChild(makeNoteCard(n,'mb-6')));return c;};
-const makeNotesStrip=list=>{
-  const d=document.createElement('div');d.className='flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth pb-2';
-  list.forEach(n=>{const c=makeNoteCard(n,'mb-0');c.classList.add('flex-shrink-0','w-full','max-w-[320px]','snap-start');d.appendChild(c)});return d;};
+function makeNotesStrip(list,spaced){
+  const wrap=document.createElement('div');
+  wrap.className=`flex gap-4 overflow-x-auto hide-scrollbar scroll-snap-x scroll-smooth ${spaced?'py-2':''}`;
+  wrap.append(...rnd(list).map(n=>{const c=makeNoteCard(n);c.classList.add('w-[260px]','flex-shrink-0','snap-start');return c;}));
+  return wrap;
+}
 
-/* ---- start ---- */
+/* ---- helpers strips when main filter active ---- */
+function makeBooksStripFull(list){       // vertical list
+  const wrap=document.createElement('div'); wrap.className='space-y-6';
+  list.forEach(b=>wrap.appendChild(makeBookCard(b)));
+  return wrap;
+}
+function makeNotesStripFull(list){
+  const wrap=document.createElement('div'); wrap.className='space-y-6';
+  list.forEach(n=>wrap.appendChild(makeNoteCard(n)));
+  return wrap;
+}
+
+/* -------- start -------- */
 loadAll();
 </script>
 </body>
