@@ -1,5 +1,105 @@
 {
   "notes": [{
+    "id": 1102,
+    "tags": [
+      "💻",
+      "💸"
+    ],
+    "title": "Prestare attenzione a quando abbiamo continuato a vivere",
+    "url": "https://flowingdata.com/2025/05/21/paying-attention-to-when-we-kept-on-living/",
+    "description": "Come cambia la nostra percezione della mortalità quando ci concentriamo sulle vite salvate? Quali sono le implicazioni delle misure preventive sulla salute pubblica a lungo termine?",
+    "hashtags": "#Società #Salute #Positivismo"
+  },
+  {
+    "id": 1103,
+    "tags": [
+      "💸"
+    ],
+    "title": "Aumento di 1 trilione di dollari della ricchezza delle famiglie più ricche",
+    "url": "https://www.wsj.com/economy/1-trillion-richest-families-wealth-increase-bc13874a?utm_source=nomercynomalice.beehiiv.com&utm_medium=newsletter&utm_campaign=rise-of-the-toligarchs&_bhlid=2cc5d3e05d0b1e758b6e0fd7157f3c9f273e6c9a",
+    "description": "Come si confronta la crescita della ricchezza delle famiglie più ricche con il reddito dei lavoratori medi? Quali sono le implicazioni di questa concentrazione di ricchezza per la società?",
+    "hashtags": "#Società #Benessere"
+  },
+  {
+    "id": 1104,
+    "tags": ["🍃","💊"],
+    "title": "La rivoluzione nei trapianti di organi è qui grazie all'editing genetico",
+    "url": "https://x.com/cremieuxrecueil/status/1926751272620707965?s=33",
+    "description": "In che modo la modifica genetica sta trasformando il campo dei trapianti di organi? Quali sono i risultati clinici dell'impianto di un rene di maiale modificato geneticamente in un essere umano?",
+    "hashtags": "#Società #Salute"
+  },
+  {
+    "id": 1105,
+    "tags": ["💻","🔋"],
+    "title": "Il gigante cinese delle batterie punta al dominio mondiale",
+    "url": "https://www.economist.com/business/2025/05/20/chinas-battery-giant-eyes-world-domination?utm_source=substack&utm_medium=email",
+    "description": "Qual è la strategia di investimento in R&S di CATL rispetto ai suoi concorrenti? In che modo la leadership cinese nella catena di approvvigionamento delle batterie influisce sul mercato globale?",
+    "hashtags": "#Tecnologia #Clima"
+  },
+  {
+    "id": 1106,
+    "tags": ["💻","💊"],
+    "title": "FutureHouse ha dimostrato la prima piattaforma di scoperta di farmaci orchestrata dall'IA a ciclo chiuso",
+    "url": "https://arxiv.org/abs/2505.13400",
+    "description": "Come funziona la piattaforma di scoperta di farmaci \"Robin\" basata sull'IA? Quali sono i vantaggi dell'utilizzo dell'IA per identificare e convalidare nuovi trattamenti per malattie come la dAMD?",
+    "hashtags": "#Tecnologia #Salute"
+  },
+  {
+   "id": 1107,
+    "tags": ["💻","👥"],
+    "title": "L'Arabia Saudita cerca di usare il suo potere finanziario per entrare nell'IA globale",
+    "url": "https://www.ft.com/content/176c7859-fdda-40d2-92a5-15d570f7accf?utm_source=semafor",
+    "description": "Quali sono le ambizioni di Humain nel mercato dell'elaborazione dell'IA? In che modo l'azienda prevede di raggiungere il suo obiettivo di elaborare il 7% della formazione e dell'inferenza dell'IA mondiale?",
+    "hashtags": "#Tecnologia #Società"
+  },
+  {
+    "id": 1108,
+    "tags": ["💻","🧠"],
+    "title": "Neuralink di Elon Musk raccoglie nuovi fondi con una valutazione di 9 miliardi di dollari",
+    "url": "https://www.semafor.com/article/05/27/2025/elon-musks-neuralink-raises-fresh-cash-at-9b-valuation?utm_medium=technology&utm_campaign=Elon's+Brain&utm_source=newsletterlink",
+    "description": "Qual è la valutazione di Neuralink prima e dopo il nuovo investimento? Quali sono i piani dell'azienda per l'utilizzo dei fondi raccolti?",
+    "hashtags": "#Tecnologia #Cervello"
+  },
+  {
+    "id": 1109,
+    "tags": ["💻","🍃"],
+    "title": "300 GW di nucleare è fantastico",
+    "url": "https://x.com/JessePeltan/status/1927829603596587403?t=iRp8zccf0Nj3pu_rImTg6A&s=33",
+    "description": "Qual è il tasso di crescita dell'energia nucleare necessario per tenere il passo con la Cina? Quali sono le implicazioni per l'industria nucleare globale?",
+    "hashtags": "#Tecnologia #Clima"
+  },
+  {
+    "id": 1110,
+    "tags": ["💸"],
+    "title": "Cerulli prevede che 124 trilioni di dollari di ricchezza verranno trasferiti entro il 2048",
+    "url": "https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048?utm_source=nomercynomalice.beehiiv.com&utm_medium=newsletter&utm_campaign=rich-kids&_bhlid=e5d39344d588283413932b617c5601fd5e90559d",
+    "description": "Qual è l'importo totale previsto della ricchezza trasferita entro il 2048? Come sarà distribuita questa ricchezza tra le diverse fasce di reddito?",
+    "hashtags": "#Società #Denaro"
+  },
+  {
+    "id": 1111,
+    "tags": ["❤️","💊"],
+    "title": "Perché Israele è al primo posto nella donazione altruistica di reni",
+    "url": "https://jweekly.com/2023/06/22/why-israel-has-more-altruistic-kidney-donors-than-any-other-country-in-the-world/?utm_source=substack&utm_medium=email",
+    "description": "Quali incentivi offre Israele ai donatori di reni viventi? Come si confronta il tasso di donazioni di organi da vivente in Israele con quello degli Stati Uniti?",
+    "hashtags": "#Società #Salute"
+  },
+  {
+    "id": 1112,
+    "tags": ["💸","💊"],
+    "title": "Rapporto dati annuale | USRDS",
+    "url": "https://usrds-adr.niddk.nih.gov/2023/end-stage-renal-disease/9-healthcare-expenditures-for-persons-with-esrd?utm_source=substack&utm_medium=email",
+    "description": "Qual è il costo annuale della dialisi finanziata da Medicare negli Stati Uniti? Come si confronta questa spesa con altre voci del bilancio federale, come il budget della NASA?",
+    "hashtags": "#Salute #Società"
+  },
+  {
+    "id": 1113,
+    "tags": ["💻","🍽"],
+    "title": "Un articolo su Nature scopre come cucinare le uova uniformemente",
+    "url": "https://x.com/itsarnavb/status/1888644776322540023?t=2BHYJeAq0VkvuhuWrl7PVQ&s=33",
+    "description": "Qual è la tecnica descritta nell'articolo di Nature per cucinare le uova in modo uniforme? Come funziona il modello di trasferimento di calore tra tuorlo e albume?",
+    "hashtags": "#Tecnologia #Dieta"
+  },{
     "id": 601,
     "tags": ["💻","🍽"],
     "title": "Robot barista di Doosan Robotics a Seul: 80 tazze/ora e latte art",
