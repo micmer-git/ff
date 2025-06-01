@@ -1,4 +1,73 @@
 [{
+    "title": "Sull'Evoluzione dell'Attività Fisica Umana",
+    "text": "La specie umana si è evoluta per essere costantemente attiva, non per \"fare esercizio\" nel senso moderno. I cacciatori-raccoglitori camminavano circa 9 miglia al giorno, senza l'opzione di stare seduti per lunghi periodi [12, 13]. Questo livello di attività, non un allenamento intenzionale, ha plasmato la nostra fisiologia. Il libro sottolinea come l'assenza di tale movimento ancestrale contribuisca alle patologie moderne.",
+    "book": "Exercised",
+    "author": "Daniel Lieberman",
+    "url": "https://amzn.to/4mGtKAB"
+  },
+  {
+    "title": "Sul Sedentarismo e le Malattie da \"Mismatch\"",
+    "text": "Il sedentarismo è una condizione evolutivamente nuova, correlata al \"mismatch\" tra il nostro genotipo ancestrale e l'ambiente contemporaneo. Questa discrepanza contribuisce all'insorgenza di malattie non trasmissibili (NCDs) come diabete di tipo 2, malattie cardiovascolari e alcuni tipi di cancro [28]. Il testo evidenzia come il nostro corpo sia ancora programmato per l'attività fisica quasi costante, non per il riposo prolungato.",
+    "book": "Exercised",
+    "author": "Daniel Lieberman",
+    "url": "https://amzn.to/4mGtKAB"
+  },
+  {
+    "title": "Sull'Infiammazione Cronica e l'Esercizio",
+    "text": "L'esercizio fisico regolare agisce come un potente anti-infiammatorio. L'attività muscolare rilascia miochine (es. IL-6), che hanno effetti sistemici riducendo l'infiammazione cronica di basso grado associata all'invecchiamento (\"inflammaging\") e a molte NCDs [253]. L'autore sottolinea che anche attività moderate sono efficaci nel modulare la risposta infiammatoria, offrendo un'azione terapeutica senza gli effetti collaterali dei farmaci.",
+    "book": "Exercised",
+    "author": "Daniel Lieberman",
+    "url": "https://amzn.to/4mGtKAB"
+  },
+  {
+    "title": "Sull'Esercizio e la Salute Metabolica (Diabete, Insulino-Resistenza)",
+    "text": "L'esercizio migliora la sensibilità all'insulina, ottimizzando l'assorbimento del glucosio da parte dei muscoli e prevenendo l'accumulo di grasso ectopico. L'attività fisica regolare può ridurre il rischio di diabete di tipo 2 fino al 50% [273], migliorando l'utilizzo del glucosio e la funzione mitocondriale [274]. Anche brevi periodi di esercizio post-prandiale possono mitigare i picchi glicemici.",
+    "book": "Exercised",
+    "author": "Daniel Lieberman",
+    "url": "https://amzn.to/4mGtKAB"
+  },
+  {
+    "title": "Sulla Forza Muscolare e la Sarcopenia",
+    "text": "La sarcopenia, la perdita di massa e funzione muscolare legata all'età, è un fattore predittivo chiave di disabilità e mortalità. Il testo enfatizza l'importanza dell'allenamento di forza (resistenza) per contrastare questo declino, raccomandando sia contrazioni isometriche (mantenere la lunghezza) che eccentriche (allungare) [379]. La forza muscolare è fondamentale per mantenere l'autonomia e la qualità della vita in età avanzata.",
+    "book": "Exercised",
+    "author": "Daniel Lieberman",
+    "url": "https://amzn.to/4mGtKAB"
+  },
+  {
+    "title": "Sull'Esercizio e la Prevenzione del Cancro",
+    "text": "L'esercizio fisico è un chemiopreventivo significativo. L'attività moderata (3-4 ore/settimana) può ridurre il rischio di cancro al seno del 30-40% e al colon del 40-50% [382]. I meccanismi includono la modulazione ormonale (es. estrogeni), il potenziamento della sorveglianza immunitaria (aumento delle cellule NK) e la riduzione dell'infiammazione e dell'insulino-resistenza [383].",
+    "book": "Exercised",
+    "author": "Daniel Lieberman",
+    "url": "https://amzn.to/4mGtKAB"
+  },
+  {
+    "title": "Sull'Esercizio e la Salute Cardiovascolare",
+    "text": "L'attività fisica regolare previene e migliora le malattie cardiovascolari. Migliora la funzione endoteliale, riduce la pressione sanguigna, ottimizza il profilo lipidico e riduce la rigidità arteriosa. L'autore menziona che l'assenza di esercizio, non l'età in sé, è il principale fattore di rischio per l'ipertensione e l'aterosclerosi [312], suggerendo che la \"malattia\" cardiovascolare sia evitabile.",
+    "book": "Exercised",
+    "author": "Daniel Lieberman",
+    "url": "https://amzn.to/4mGtKAB"
+  },
+  {
+    "title": "Sull'Esercizio e la Salute Cerebrale/Cognitiva",
+    "text": "L'esercizio ha effetti neuroprotettivi. Promuove la neurogenesi nell'ippocampo, migliora il flusso sanguigno cerebrale e modula i neurotrasmettitori. L'attività fisica è associata a un ridotto rischio di declino cognitivo, demenza (es. Alzheimer) e depressione, anche in modelli animali dove si osserva una riduzione di placche e grovigli [385]. L'esercizio può aumentare il volume dell'ippocampo di circa il 2%.",
+    "book": "Exercised",
+    "author": "Daniel Lieberman",
+    "url": "https://amzn.to/4mGtKAB"
+  },
+  {
+    "title": "Sull'Esercizio come \"Terapia Preventiva\"",
+    "text": "Il libro inquadra l'esercizio non come un'opzione di fitness, ma come una \"terapia\" evolutivamente radicata, essenziale per la prevenzione delle malattie che affliggono la società moderna. L'autore sottolinea che l'essere umano non è evoluto per evitare l'esercizio, ma per essere fisicamente attivo. L'attività fisica dovrebbe essere vista come una componente fondamentale della salute pubblica, non solo come scelta individuale.",
+    "book": "Exercised",
+    "author": "Daniel Lieberman",
+    "url": "https://amzn.to/4mGtKAB"
+  },
+  {
+    "title": "Sulla Felicità e la Resilienza Psicologica Legate al Movimento",
+    "text": "L'esercizio non è solo fisico ma anche psicologico. L'attività fisica rilascia endorfine e endocannabinoidi, promuovendo il benessere mentale e riducendo l'ansia e la depressione. La resilienza intrinseca al movimento, che ha permesso ai nostri antenati di affrontare sfide fisiche, si traduce in maggiore resilienza psicologica nel contesto moderno, fornendo un meccanismo di coping evolutivo per lo stress.",
+    "book": "Exercised",
+    "author": "Daniel Lieberman",
+    "url": "https://amzn.to/4mGtKAB"
+  },{
     "title": "Sull'Infiammazione Cronica e l'Invecchiamento",
     "text": "L'infiammazione cronica di basso grado accelera l'invecchiamento e promuove malattie cardiovascolari. Marker come la CRP sono predittivi di mortalità. Una dieta vegetale ricca di fibre e fitonutrienti riduce l'infiammazione più efficacemente dei FANS.",
     "book": "Come non invecchiare",
