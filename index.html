@@ -5,45 +5,50 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>futuro fortissimo – explorer</title>
 
-<!-- font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#fafaf7;--fg:#232323;--accent:#38bdf8;--gutterW:56px;
+  --bg:#fafaf7;--fg:#232323;--accent:#38bdf8;--gutter:64px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;font-family:"PT Serif",serif;color:var(--fg);background:var(--bg);}
+html,body{height:100%;font-family:"PT Serif",serif;background:var(--bg);color:var(--fg);}
 
-header{position:fixed;top:0;left:0;right:0;z-index:30;background:var(--bg);padding:.35rem 6vw .25rem calc(6vw+var(--gutterW));display:flex;align-items:center;gap:.8rem}
-header img{height:34px}
-header h1{font-size:1.55rem;font-style:italic;font-weight:700}
+header{height:60px;position:fixed;top:0;left:0;right:0;z-index:30;background:var(--bg);
+       display:flex;align-items:center;gap:.8rem;padding:0 calc(6vw + var(--gutter)) 0 6vw}
+header img{height:36px}
+header h1{font-size:1.55rem;font-style:italic;font-weight:700;margin-top:2px}
 
-#topBar{margin-top:.35rem;display:flex;align-items:center;gap:.7rem;padding:0 6vw 0 calc(6vw+var(--gutterW));}
-#topBar input{flex:1;border:none;border-bottom:2px solid var(--fg);background:transparent;font-size:1.1rem;outline:none;padding:.2rem .1rem}
-.pill{border:2px solid var(--fg);padding:.15rem .9rem;border-radius:9999px;cursor:pointer;font-size:1.1rem}
-.pill.active{background:var(--accent);border-color:var(--accent);color:#fff}
+#topBar{margin-top:60px;padding:0 calc(6vw + var(--gutter)) 0 6vw;
+        display:flex;align-items:center;gap:.9rem}
+#topBar input{flex:1;border:none;border-bottom:2px solid var(--fg);background:transparent;
+              font-size:1.2rem;padding:.28rem.15rem;outline:none}
 
-#gutter{position:fixed;right:0;top:0;bottom:0;width:var(--gutterW);display:flex;flex-direction:column;align-items:center;
-        padding-top:4.7rem;gap:.55rem;overflow-y:auto}
-.tag{background:#fff;border:1px solid #d1d5db;border-radius:9999px;padding:.2rem .6rem;font-size:1.15rem;cursor:pointer}
-.tag.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.pill,.tag{border:2px solid var(--fg);border-radius:9999px;cursor:pointer;
+          font-size:1.25rem;padding:.25rem 1rem;user-select:none;transition:.2s}
+.pill.active,.tag.active{background:var(--accent);border-color:var(--accent);color:#fff}
 
-#canvas{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;padding-top:6.8rem}
-.page{scroll-snap-align:start;min-height:calc(100vh - 6.8rem);display:flex;align-items:center;justify-content:center;padding:0 6vw 4rem}
-.box{background:#ffffff;border-radius:14px;box-shadow:0 4px 8px rgba(0,0,0,.06);max-width:680px;width:100%;
-     max-height:68vh;overflow-y:auto;padding:2.4rem 2rem}
+#gutter{position:fixed;right:0;top:0;bottom:0;width:var(--gutter);padding-top:60px;
+        display:flex;flex-direction:column;align-items:center;gap:.65rem;overflow-y:auto}
+
+#canvas{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;padding-top:60px}
+.page{scroll-snap-align:start;min-height:calc(100vh - 60px);display:flex;
+      align-items:center;justify-content:center;padding:0 6vw 4rem}
+.box{background:#fff;border-radius:14px;box-shadow:0 4px 10px rgba(0,0,0,.05);
+     max-width:680px;width:100%;max-height:68vh;overflow-y:auto;padding:2.1rem 2rem}
 .box::-webkit-scrollbar{display:none}
-.box h2{font-size:1.9rem;margin-bottom:1rem;font-weight:700}
-.box h3{font-size:1.3rem;margin:.5rem 0 .3rem;font-weight:700}
-.box p{line-height:1.58;margin-bottom:.9rem}
+.box h2{font-size:1.6rem;margin-bottom:.9rem;font-weight:700}
+.box h3{font-size:1.25rem;margin:.4rem 0 .25rem;font-weight:700}
+.box p{line-height:1.58;margin-bottom:.8rem}
 .box .src{font-size:.8rem;color:#666}
 .click{cursor:pointer}
 
-footer{position:fixed;bottom:0;left:0;right:0;padding:.55rem 6vw;background:var(--bg);display:flex;gap:.8rem;justify-content:center}
-footer .cta{border:2px solid var(--fg);padding:.15rem 1.1rem;border-radius:9999px;font-size:1rem;cursor:pointer}
+footer{position:fixed;bottom:0;left:0;right:0;background:var(--bg);
+       display:flex;justify-content:center;gap:1rem;padding:.6rem 6vw}
+footer .cta{border:2px solid var(--fg);border-radius:9999px;font-size:1.15rem;
+            padding:.2rem 1.25rem;cursor:pointer;transition:.2s}
 footer .cta:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 </style>
 </head>
@@ -54,46 +59,40 @@ footer .cta:hover{background:var(--accent);border-color:var(--accent);color:#fff
   <h1>futuro&nbsp;fortissimo</h1>
 </header>
 
-<!-- search + main filters -->
 <div id="topBar">
   <input id="searchInput" placeholder="cerca / search…">
   <div id="pillBooks" class="pill">📚</div>
   <div id="pillNotes" class="pill">🎶</div>
 </div>
 
-<!-- right gutter tag bar -->
 <div id="gutter"></div>
-
-<!-- vertical canvas -->
 <div id="canvas"></div>
 
-<!-- footer CTA -->
 <footer>
   <div class="cta" onclick="window.open('https://www.paypal.com/paypalme/michelemerelli','_blank')">☕ sostieni</div>
   <div class="cta" onclick="window.open('https://linktr.ee/micmer','_blank')">👤 chi&nbsp;sono</div>
 </footer>
 
 <script>
-/* -------- assets -------- */
+/* -------- data -------- */
 const SRC={it:'newsletter_data.json',en:'newsletter_data_en.json'};
 const NOTES_PATH='notes.json',BOOKS_PATH='books.json';
 let LANG='it',PUBS,NOTES,BOOKS;
 
 /* -------- state -------- */
-const mainF=new Set();          // 📚 🎶
-const tagF =new Set();          // emoji temi
+const mainF=new Set(); // 📚 🎶
+const tagF =new Set(); // temi
 let q='';
 
-/* helpers */
+/* -------- helpers -------- */
 const $=s=>document.querySelector(s),
       tagList=['💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'],
       rnd=a=>a.sort(()=>Math.random()-.5),
-      hasTag=(tags)=>tagF.size?tags?.some(t=>tagF.has(t)):true,
-      match=(t,s)=>t.toLowerCase().includes(s);
+      hasTag=(tgs)=>tagF.size? tgs?.some(t=>tagF.has(t)) : true,
+      match=(t,s)=>t.toLowerCase().includes(s),
+      mark=(t)=>t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>');
 
-function mark(t){return t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>');}
-
-/* ---------- build gutter ---------- */
+/* ---------- gutter tags ---------- */
 const gut=$('#gutter');
 tagList.forEach(e=>{
   const d=document.createElement('div');
@@ -101,48 +100,45 @@ tagList.forEach(e=>{
   d.onclick=()=>{d.classList.toggle('active');tagF.has(e)?tagF.delete(e):tagF.add(e);render();}
 });
 
-/* ---------- top pills ---------- */
-$('#pillBooks').onclick=e=>{toggleMain(e.currentTarget,'📚');};
-$('#pillNotes').onclick=e=>{toggleMain(e.currentTarget,'🎶');};
-function toggleMain(el,emo){el.classList.toggle('active');mainF.has(emo)?mainF.delete(emo):mainF.add(emo);render();}
+/* ---------- main pills ---------- */
+$('#pillBooks').onclick=e=>togMain(e.currentTarget,'📚');
+$('#pillNotes').onclick=e=>togMain(e.currentTarget,'🎶');
+function togMain(el,emo){el.classList.toggle('active');mainF.has(emo)?mainF.delete(emo):mainF.add(emo);render();}
 
-/* search */
+/* ---------- search ---------- */
 $('#searchInput').oninput=e=>{q=e.target.value.toLowerCase();render();};
 
 /* ---------- load JSON ---------- */
 Promise.all([
-  fetch(SRC[LANG]).then(r=>r.json()),
-  fetch(NOTES_PATH).then(r=>r.json()),
-  fetch(BOOKS_PATH).then(r=>r.json())
+ fetch(SRC[LANG]).then(r=>r.json()),
+ fetch(NOTES_PATH).then(r=>r.json()),
+ fetch(BOOKS_PATH).then(r=>r.json())
 ]).then(([d,n,b])=>{
-  PUBS=rnd(d.publications);
-  NOTES=rnd(n.notes);
-  BOOKS=rnd(b);
-  render();
+ PUBS=rnd(d.publications);
+ NOTES=rnd(n.notes);
+ BOOKS=rnd(b);
+ render();
 });
 
 /* ---------- render ---------- */
 function render(){
   const C=$('#canvas');C.innerHTML='';
   let pages=[];
-
-  if(q){ /* --- SEARCH --- */
-    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>{
-      const txt=[p.title,c.title,...c.contentBlocks[0].content].join(' ');
-      if(match(txt,q)&&hasTag(c.tags)) pages.push(pubPage(p,c,true));
-    }));
-    BOOKS.forEach(b=>{if(match(b.title,q)||match(b.text,q)) pages.push(bookPage(b,true));});
-    NOTES.forEach(n=>{const txt=n.title+(n.description||'');if(match(txt,q)) pages.push(notePage(n,true));});
+  /* SEARCH */
+  if(q){
+    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖'))
+      .forEach(c=>{const txt=[p.title,c.title,...c.contentBlocks[0].content].join(' ');
+        if(match(txt,q)&&hasTag(c.tags))pages.push(pubPage(p,c,true));}));
+    BOOKS.forEach(b=>{if(match(b.title,q)||match(b.text,q))pages.push(bookPage(b,true));});
+    NOTES.forEach(n=>{if(match(n.title+(n.description||''),q))pages.push(notePage(n,true));});
   }else{
-    /* main filters */
-    if(mainF.has('📚') && !mainF.has('🎶')) BOOKS.forEach(b=>pages.push(bookPage(b,false)));
-    else if(mainF.has('🎶') && !mainF.has('📚')) NOTES.forEach(n=>pages.push(notePage(n,false)));
+    /* only books or notes view */
+    if(mainF.has('📚')&&!mainF.has('🎶')) BOOKS.forEach(b=>pages.push(bookPage(b,false)));
+    else if(mainF.has('🎶')&&!mainF.has('📚')) NOTES.forEach(n=>pages.push(notePage(n,false)));
     else{
       const theme=tagF.size>0;
-      PUBS.forEach(p=>{
-        p.cards.filter(c=>!c.title.startsWith('📖') && (!theme||c.tags?.some(t=>tagF.has(t))))
-               .forEach(c=>pages.push(pubPage(p,c,false)));
-      });
+      PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&(!theme||c.tags?.some(t=>tagF.has(t))))
+                  .forEach(c=>pages.push(pubPage(p,c,false))));
       if(!theme){BOOKS.forEach(b=>pages.push(bookPage(b,false)));NOTES.forEach(n=>pages.push(notePage(n,false))); }
     }
   }
@@ -170,8 +166,7 @@ function notePage(n,hl){
   const s=document.createElement('section');s.className='page';
   const b=document.createElement('div');b.className='box click';
   const host=n.url?new URL(n.url).hostname.replace(/^www\./,''):'';
-  b.innerHTML=`<h2>${hl?mark(n.title):n.title}</h2>
-               <p class="src">${host}</p>`;
+  b.innerHTML=`<h2>${hl?mark(n.title):n.title}</h2><p class="src">${host}</p>`;
   if(n.url) b.onclick=()=>window.open(n.url,'_blank');s.appendChild(b);return s;
 }
 </script>
