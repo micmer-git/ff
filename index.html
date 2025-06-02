@@ -11,7 +11,7 @@
 <style>
 :root{
  --bg:#f6f9fe;--fg:#111;--acc:#38bdf8;
- --hdr:60px;--srch:60px;--side:54px
+ --hdr:60px;--srch:60px;--side:48px
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{font-family:Inter,sans-serif;background:var(--bg);color:var(--fg);overflow:hidden}
@@ -26,56 +26,46 @@ header{position:fixed;top:0;left:0;right:0;height:var(--hdr);
 #logoWrap h1{font-family:"Playfair Display",serif;font-size:1.55rem;font-style:italic}
 #ctaHead{display:flex;gap:1rem;font-size:1.9rem}
 
-/* SIDE-BAR EMOJI */
+/* SIDE BAR */
 #gutter{position:fixed;top:var(--hdr);bottom:var(--srch);right:0;width:var(--side);
-        display:flex;flex-direction:column;align-items:center;gap:.55rem;padding-top:.8rem;overflow-y:auto}
-.tag{font-size:1.8rem;padding:.18rem;border-radius:50%;cursor:pointer;transition:.2s}
+        display:flex;flex-direction:column;align-items:center;gap:.5rem;padding-top:.8rem;overflow-y:auto}
+.tag{font-size:1.55rem;padding:.14rem;border-radius:50%;cursor:pointer;transition:.2s}
 .tag.active{background:var(--acc);color:#fff}
 
-/* CANVAS / PAGINE */
+/* CANVAS */
 #canvas{position:fixed;top:var(--hdr);left:0;right:var(--side);bottom:var(--srch);
         overflow-y:auto;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch}
 .page{min-height:calc(100vh - var(--hdr) - var(--srch));
       display:flex;align-items:center;justify-content:flex-start;padding-left:6vw;
       scroll-snap-align:start}
 .box{max-width:700px;width:calc(100% - 12vw);max-height:80vh;
-     overflow-y:auto;padding:2.2rem 1.9rem}
+     overflow-y:auto;padding:2rem 1.7rem}
 .box::-webkit-scrollbar{display:none}
-.box h2{font-size:1.5rem;font-weight:700;margin-bottom:.7rem;text-wrap:balance}
-.box h3{font-size:1.34rem;font-weight:700;margin:.5rem 0 .45rem}
-.box p{font-size:1.22rem;line-height:1.6;margin-bottom:.85rem}
-.book h2{font-size:1.36rem}.book p{font-size:1.1rem}
-.src{font-size:.82rem;color:#555;margin-top:.37rem}
+.box h2{font-size:1.46rem;font-weight:700;margin-bottom:.7rem;text-wrap:balance}
+.box h3{font-size:1.32rem;font-weight:700;margin:.45rem 0 .4rem}
+.box p{font-size:1.2rem;line-height:1.6;margin-bottom:.8rem}
+.book h2{font-size:1.32rem}.book p{font-size:1.08rem}
+.src{font-size:.8rem;color:#555;margin-top:.34rem}
 
-/* SEARCH-BAR */
+/* SEARCH BAR */
 #searchWrap{position:fixed;left:0;right:0;bottom:0;height:var(--srch);
             background:var(--bg);display:flex;align-items:center;padding:0 6vw;gap:.7rem;z-index:25}
-#search{flex:1;font-size:1.35rem;padding:.55rem 1.05rem;border-radius:999px;
+#search{flex:1;font-size:1.33rem;padding:.55rem 1.05rem;border-radius:999px;
         border:2px solid var(--fg);background:#fff;outline:none}
 #searchBtn{font-size:2rem;color:var(--acc);line-height:1}
-
-/* UTILITIES */
-.hidden{display:none}
 </style>
 </head>
 
 <body>
-<!-- ===== HEADER ===== -->
 <header>
   <div id="logoWrap"><img src="logo.png" alt="logo"><h1>futuro&nbsp;fortissimo</h1></div>
-  <div id="ctaHead">
-    <div onclick="openNew('https://www.paypal.com/paypalme/michelemerelli')">☕</div>
-    <div onclick="openNew('https://linktr.ee/micmer')">👤</div>
-  </div>
+  <div id="ctaHead"><div onclick="openNew('https://www.paypal.com/paypalme/michelemerelli')">☕</div>
+                     <div onclick="openNew('https://linktr.ee/micmer')">👤</div></div>
 </header>
 
-<!-- ===== SIDE TAGS ===== -->
 <div id="gutter"></div>
-
-<!-- ===== MAIN CANVAS ===== -->
 <div id="canvas"></div>
 
-<!-- ===== SEARCH ===== -->
 <div id="searchWrap">
   <input id="search" placeholder="search / cerca…">
   <button id="searchBtn">🔍</button>
@@ -132,27 +122,30 @@ function render(){
   const cv=$('#canvas');cv.innerHTML='';
   let stack=[];
 
-  /* --- modes --- */
-  if(q){                                     /* SEARCH MODE */
+  /* SEARCH MODE */
+  if(q){
     PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&okByTag(c)&&match((p.title+c.title+c.contentBlocks[0].content.join(' ')).toLowerCase()))
         .forEach(c=>stack.push(pubCard(p,c,true))));
-    BOOKSARR.forEach(b=>{const t=(b.title+b.text).toLowerCase();if(okByTag(b)&&match(t))stack.push(bookCard(b,true));});
-    NOTESARR.forEach(n=>{const t=(n.title+(n.description||'')).toLowerCase();if(okByTag(n)&&match(t))stack.push(noteCard(n,true));});
-  }else if(selTags.size){                    /* TAG FILTERS */
+    BOOKSARR.forEach(b=>match((b.title+b.text).toLowerCase())&&okByTag(b)&&stack.push(bookCard(b,true)));
+    NOTESARR.forEach(n=>match((n.title+(n.description||'')).toLowerCase())&&okByTag(n)&&stack.push(noteCard(n,true)));
+  }
+  /* TAG FILTER MODE */
+  else if(selTags.size){
     if(selTags.size===1&&selTags.has('📚'))stack=BOOKSARR.map(b=>bookCard(b,false));
     else if(selTags.size===1&&selTags.has('🎶'))stack=NOTESARR.map(n=>noteCard(n,false));
-    else{
-      PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&okByTag(c))
-            .forEach(c=>stack.push(pubCard(p,c,false))));
-    }
-  }else{                                     /* HOME (all) */
-    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>stack.push(pubCard(p,c,false))));
+    else PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&okByTag(c))
+                    .forEach(c=>stack.push(pubCard(p,c,false))));
+  }
+  /* HOME – SHOW EVERYTHING (random) */
+  else{
+    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖'))
+              .forEach(c=>stack.push(pubCard(p,c,false))));
     BOOKSARR.forEach(b=>stack.push(bookCard(b,false)));
     NOTESARR.forEach(n=>stack.push(noteCard(n,false)));
   }
 
   rnd(stack).forEach(el=>cv.appendChild(el));
-  cv.scrollTo(0,0);                          /* mostra subito la prima scheda */
+  cv.scrollTo(0,0);
 }
 
 /* ---------- card factories ---------- */
@@ -160,22 +153,19 @@ function pubCard(pub,sub,hi){
   const d=document.createElement('div');d.className='box';
   d.innerHTML=`<h3>${hi?mark(sub.title):sub.title}</h3>`+
               sub.contentBlocks[0].content.map(t=>`<p>${hi?mark(t):t}</p>`).join('');
-  d.onclick=()=>openNew(pub.substackLink);
-  return pg(d);
+  d.onclick=()=>openNew(pub.substackLink);return pg(d);
 }
 function bookCard(b,hi){
   const d=document.createElement('div');d.className='box book';
   d.innerHTML=`<h2>${hi?mark(b.title):b.title}</h2><p>${hi?mark(b.text):b.text}</p>
                <p class="src">${b.book} — ${b.author}</p>`;
-  if(b.url)d.onclick=()=>openNew(b.url);
-  return pg(d);
+  if(b.url)d.onclick=()=>openNew(b.url);return pg(d);
 }
 function noteCard(n,hi){
   const host=n.url?new URL(n.url).hostname.replace(/^www\./,''):'';
   const d=document.createElement('div');d.className='box';
   d.innerHTML=`<h2>${hi?mark(n.title):n.title}</h2>${host?`<p class="src">${host}</p>`:''}`;
-  if(n.url)d.onclick=()=>openNew(n.url);
-  return pg(d);
+  if(n.url)d.onclick=()=>openNew(n.url);return pg(d);
 }
 </script>
 </body></html>
