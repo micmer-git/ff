@@ -10,178 +10,167 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg:#f6f9fe;--fg:#161616;--accent:#38bdf8;--gut:52px;
-}
+:root{--bg:#f6f9fe;--fg:#161616;--accent:#38bdf8;--gut:52px;--hdr:56px;--srch:56px;--cta:50px}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html,body{height:100%;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;
-          background:var(--bg);color:var(--fg);overflow:hidden}
-a,button{background:none;border:none;color:inherit;font:inherit;cursor:pointer}
+html,body{height:100%;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--fg);overflow:hidden}
+a,button{all:unset;cursor:pointer}
 mark{background:var(--accent);color:#fff;border-radius:3px;padding:0 2px}
 
-header{position:fixed;top:0;left:0;right:0;height:56px;display:flex;align-items:center;
-       gap:.7rem;padding:0 5vw;background:var(--bg);z-index:10}
-header img{height:28px}header h1{font-size:1.35rem;font-weight:700;font-style:italic}
+/* ----- layout ----- */
+header{position:fixed;top:0;left:0;right:0;height:var(--hdr);display:flex;gap:.6rem;
+       align-items:center;padding:0 5vw;background:var(--bg);z-index:20}
+header img{height:30px}header h1{font-size:1.4rem;font-weight:700;font-style:italic}
 
-/* top bar ----------------------------------------------------------- */
-#topBar{margin-top:56px;padding:0 5vw;display:flex;align-items:center;gap:.7rem;z-index:5}
-#search{flex:1;border-bottom:2px solid var(--fg);font-size:1.1rem;padding:.25rem .1rem;
-        background:transparent;outline:none}
-.pill{font-size:1.4rem;padding:.1rem .85rem;border-radius:9999px;user-select:none;
-      transition:.15s}
-.pill.active,.pill:hover{background:var(--accent);color:#fff}
+/* gutter */
+#gutter{position:fixed;right:0;top:var(--hdr);bottom:calc(var(--srch)+var(--cta));
+        width:var(--gut);display:flex;flex-direction:column;align-items:center;
+        gap:.55rem;padding-top:.7rem;overflow-y:auto}
+.tag{font-size:1.45rem;padding:.15rem;border-radius:9999px;cursor:pointer}
+.tag.active,.tag:hover{background:var(--accent);color:#fff}
 
-/* gutter ----------------------------------------------------------- */
-#gutter{position:fixed;right:0;top:56px;bottom:0;width:var(--gut);
-        display:flex;flex-direction:column;align-items:center;gap:.5rem;
-        overflow-y:auto;padding-top:.6rem}
-#gutter .tag{font-size:1.35rem;border-radius:9999px;padding:.15rem;
-             transition:.15s;cursor:pointer}
-#gutter .tag.active,#gutter .tag:hover{background:var(--accent);color:#fff}
-
-/* canvas ----------------------------------------------------------- */
-#canvas{position:fixed;top:56px;left:0;right:var(--gut);bottom:0;
-        overflow-y:auto;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch}
-.page{min-height:calc(100vh - 56px);display:flex;align-items:center;justify-content:center;
-      scroll-snap-align:start;padding:0 5vw}
-.box{max-width:620px;width:100%;max-height:70vh;overflow-y:auto;padding:1.8rem 1.5rem}
+/* canvas */
+#canvas{position:fixed;top:var(--hdr);left:0;right:var(--gut);
+        bottom:calc(var(--srch)+var(--cta));overflow-y:auto;
+        scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch}
+.page{min-height:calc(100vh - var(--hdr) - var(--srch) - var(--cta));
+      display:flex;align-items:center;justify-content:center;scroll-snap-align:start;padding:0 5vw}
+.box{max-width:620px;width:100%;max-height:75vh;overflow-y:auto;padding:2rem 1.7rem}
 .box::-webkit-scrollbar{display:none}
-.box h2{font-size:1.35rem;font-weight:700;margin-bottom:.6rem}
-.box h3{font-size:1.1rem;font-weight:700;margin:.3rem 0 .2rem}
-.box p{line-height:1.5;margin-bottom:.6rem}
-.box .src{font-size:.78rem;color:#555;margin-top:.3rem}
+.box h2{font-size:1.45rem;font-weight:700;margin-bottom:.65rem}
+.box h3{font-size:1.2rem;font-weight:700;margin:.35rem 0 .25rem}
+.box p{line-height:1.55;margin-bottom:.7rem;font-size:1.05rem}
+.src{font-size:.8rem;color:#555;margin-top:.3rem}
 
-footer{position:fixed;bottom:0;left:0;right:0;height:50px;background:var(--bg);
-       display:flex;justify-content:center;gap:1rem;align-items:center}
-footer .cta{font-size:1.25rem;padding:.12rem 1.25rem;border-radius:9999px;cursor:pointer;
-            transition:.15s}
-footer .cta:hover{background:var(--accent);color:#fff}
+/* bottom search */
+#searchWrap{position:fixed;left:0;right:0;bottom:var(--cta);height:var(--srch);
+            background:var(--bg);display:flex;align-items:center;padding:0 5vw;z-index:15}
+#search{flex:1;border-bottom:2px solid var(--fg);font-size:1.2rem;padding:.3rem .1rem;
+        background:transparent;outline:none}
+
+/* CTA bar */
+footer{position:fixed;left:0;right:0;bottom:0;height:var(--cta);background:var(--bg);
+       display:flex;justify-content:center;gap:1.1rem;align-items:center;z-index:20}
+.cta{font-size:1.35rem;padding:.15rem 1.3rem;border-radius:9999px;cursor:pointer}
+.cta:hover{background:var(--accent);color:#fff}
 </style>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="logo">
-  <h1>futuro&nbsp;fortissimo</h1>
+  <img src="logo.png" alt="logo"><h1>futuro&nbsp;fortissimo</h1>
 </header>
-
-<!-- search + macro-pill -->
-<div id="topBar">
-  <input id="search" placeholder="cerca / search…">
-  <div id="pBooks" class="pill" data-k="📚">📚</div>
-  <div id="pNotes" class="pill" data-k="🎶">🎶</div>
-</div>
 
 <!-- emoji gutter -->
 <div id="gutter"></div>
 
-<!-- main viewport -->
+<!-- main scroll area -->
 <div id="canvas"></div>
 
+<!-- search bottom -->
+<div id="searchWrap">
+  <input id="search" placeholder="cerca / search…">
+</div>
+
+<!-- CTA -->
 <footer>
   <div class="cta" onclick="openNew('https://www.paypal.com/paypalme/michelemerelli')">☕ sostieni</div>
   <div class="cta" onclick="openNew('https://linktr.ee/micmer')">👤 chi&nbsp;sono</div>
 </footer>
 
 <script>
-/* data PATH */
+/* data paths */
 const SRC={it:'newsletter_data.json',en:'newsletter_data_en.json'},
       NOTES_PATH='notes.json',BOOKS_PATH='books.json';
+
 /* state */
-let LANG='it',PUBS,NOTES,BOOKS,q='',mainF=new Set(),tagF=new Set();
-/* helpers */
+let PUBS,NOTES,BOOKS,q='',tagF=new Set();
+
+/* helper shorties */
 const $=s=>document.querySelector(s),
       rnd=a=>a.sort(()=>Math.random()-.5),
-      tagAll=['💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'],
-      hasTag=(t)=>tagF.size?t?.some(x=>tagF.has(x)):true,
+      tagAll=['📚','🎶','💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'],
+      openNew=u=>window.open(u,'_blank'),
       match=(t)=>t.toLowerCase().includes(q),
       hl=t=>q?t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>'):t;
-/* external */
-const openNew=url=>window.open(url,'_blank');
 
-/* build gutter */
+/* build gutter once */
 const gut=$('#gutter');
 tagAll.forEach(e=>{
-  const n=document.createElement('div');n.textContent=e;n.className='tag';gut.appendChild(n);
-  n.onclick=()=>{n.classList.toggle('active');tagF.has(e)?tagF.delete(e):tagF.add(e);render()}
+  const g=document.createElement('div');g.textContent=e;g.className='tag';gut.appendChild(g);
+  g.onclick=()=>{g.classList.toggle('active');tagF.has(e)?tagF.delete(e):tagF.add(e);render()}
 });
-
-/* top pills */
-document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>{const k=p.dataset.k;
-  p.classList.toggle('active');mainF.has(k)?mainF.delete(k):mainF.add(k);render()});
 
 /* search */
 $('#search').oninput=e=>{q=e.target.value.trim().toLowerCase();render()};
 
-/* load */
+/* load data */
 Promise.all([
-  fetch(SRC[LANG]).then(r=>r.json()),
+  fetch(SRC['it']).then(r=>r.json()), /* default ita; switch locale = reload site */
   fetch(NOTES_PATH).then(r=>r.json()),
   fetch(BOOKS_PATH).then(r=>r.json())
 ]).then(([d,n,b])=>{
   PUBS=rnd(d.publications);
-  NOTES=rnd(n.notes);
-  BOOKS=rnd(b);
+  NOTES=rnd(n.notes).map(o=>({...o,tags:['🎶']}));   /* attach tag */
+  BOOKS=rnd(b).map(o=>({...o,tags:['📚']}));
   render();
 });
 
-/* render */
+/*---- rendering logic ----*/
+function hasTag(objTags){return tagF.size?objTags?.some(t=>tagF.has(t)):true;}
+
 function render(){
   const C=$('#canvas');C.innerHTML='';
   let pages=[];
 
-  /* search */
+  /* active search -------------------------------------------------- */
   if(q){
     PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&hasTag(c.tags)&&match(p.title+c.title+c.contentBlocks[0].content.join(' ')))
-      .forEach(c=>pages.push(pubPage(p,c,false,true))));
-    BOOKS.forEach(b=>{if(match(b.title+b.text))pages.push(bookPage(b,true))});
-    NOTES.forEach(n=>{if(match(n.title+(n.description||'')))pages.push(notePage(n,true))});
+      .forEach(c=>pages.push(pubCard(p,c,true))));
+    BOOKS.forEach(b=>{if(match(b.title+b.text)&&hasTag(b.tags))pages.push(bookCard(b,true))});
+    NOTES.forEach(n=>{if(match(n.title+(n.description||''))&&hasTag(n.tags))pages.push(noteCard(n,true))});
     rnd(pages).forEach(p=>C.appendChild(p));return;
   }
-  /* only books / only notes */
-  if(mainF.has('📚')&&!mainF.has('🎶')){rnd(BOOKS).forEach(b=>C.appendChild(bookPage(b,false)));return;}
-  if(mainF.has('🎶')&&!mainF.has('📚')){rnd(NOTES).forEach(n=>C.appendChild(notePage(n,false)));return;}
-  /* tag filter */
+
+  /* tag filter only ----------------------------------------------- */
   if(tagF.size){
+    /* only book? only note? */
+    if(tagF.size===1 && tagF.has('📚')){BOOKS.forEach(b=>C.appendChild(bookCard(b,false)));return;}
+    if(tagF.size===1 && tagF.has('🎶')){NOTES.forEach(n=>C.appendChild(noteCard(n,false)));return;}
+
     PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&hasTag(c.tags))
-      .forEach(c=>pages.push(pubPage(p,c,false,false))));
+      .forEach(c=>pages.push(pubCard(p,c,false))));
     rnd(pages).forEach(p=>C.appendChild(p));return;
   }
-  /* default home: 2 random of any type */
+
+  /* home: 1 random ------------------------------------------------- */
   const bag=[];
-  PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>bag.push(pubPage(p,c,false,false))));
-  BOOKS.forEach(b=>bag.push(bookPage(b,false)));
-  NOTES.forEach(n=>bag.push(notePage(n,false)));
-  rnd(bag).slice(0,2).forEach(p=>C.appendChild(p));
+  PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>bag.push(pubCard(p,c,false))));
+  BOOKS.forEach(b=>bag.push(bookCard(b,false)));
+  NOTES.forEach(n=>bag.push(noteCard(n,false)));
+  C.appendChild(rnd(bag)[0]);
 }
 
-/* card builders */
-function pubPage(pub,sub,showPub,highlight){
-  const s=document.createElement('section');s.className='page';
-  const b=document.createElement('div');b.className='box';s.appendChild(b);
-  if(showPub) b.innerHTML+=`<h2>${hl(pub.title)}</h2>`;
-  b.innerHTML+=`<h3>${highlight?hl(sub.title):sub.title}</h3>
-    ${sub.contentBlocks[0].content.map(t=>`<p>${highlight?hl(t):t}</p>`).join('')}`;
-  b.onclick=()=>openNew(pub.substackLink);
-  return s;
+/* ---- builders ---- */
+function pageWrap(inner){const s=document.createElement('section');s.className='page';s.appendChild(inner);return s;}
+
+function pubCard(pub,sub,highlight){
+  const b=document.createElement('div');b.className='box';
+  b.innerHTML=`<h3>${highlight?hl(sub.title):sub.title}</h3>
+               ${sub.contentBlocks[0].content.map(t=>`<p>${highlight?hl(t):t}</p>`).join('')}`;
+  b.onclick=()=>openNew(pub.substackLink);return pageWrap(b);
 }
-function bookPage(o,highlight){
-  const s=document.createElement('section');s.className='page';
-  const b=document.createElement('div');b.className='box';s.appendChild(b);
+function bookCard(o,highlight){
+  const b=document.createElement('div');b.className='box';
   b.innerHTML=`<h2>${highlight?hl(o.title):o.title}</h2>
                <p>${highlight?hl(o.text):o.text}</p>
                <p class="src">${o.book} — ${o.author}</p>`;
-  if(o.url) b.onclick=()=>openNew(o.url);
-  return s;
+  if(o.url) b.onclick=()=>openNew(o.url);return pageWrap(b);
 }
-function notePage(n,highlight){
-  const s=document.createElement('section');s.className='page';
-  const b=document.createElement('div');b.className='box';s.appendChild(b);
+function noteCard(n,highlight){
+  const b=document.createElement('div');b.className='box';
   const host=n.url?new URL(n.url).hostname.replace(/^www\./,''):'';
-  b.innerHTML=`<h2>${highlight?hl(n.title):n.title}</h2>
-               ${host?`<p class="src">${host}</p>`:''}`;
-  if(n.url) b.onclick=()=>openNew(n.url);
-  return s;
+  b.innerHTML=`<h2>${highlight?hl(n.title):n.title}</h2>${host?`<p class="src">${host}</p>`:''}`;
+  if(n.url) b.onclick=()=>openNew(n.url);return pageWrap(b);
 }
 </script>
 </body>
