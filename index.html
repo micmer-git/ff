@@ -7,173 +7,117 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#fafaf7;--fg:#1e1e1e;--accent:#38bdf8;--gut:56px;
-  --shadow:0 4px 16px rgba(0,0,0,0.1);--shadow-hover:0 8px 32px rgba(0,0,0,0.15);
-  --border-radius:16px;--transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --bg:#f6f9fe;--fg:#161616;--accent:#38bdf8;--gut:52px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;font-family:"PT Serif",serif;background:var(--bg);color:var(--fg);overflow:hidden}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;
+          background:var(--bg);color:var(--fg);overflow:hidden}
+a,button{background:none;border:none;color:inherit;font:inherit;cursor:pointer}
+mark{background:var(--accent);color:#fff;border-radius:3px;padding:0 2px}
 
-header{height:60px;position:fixed;top:0;left:0;right:0;z-index:30;
-       background:rgba(250,250,247,0.95);backdrop-filter:blur(10px);
-       display:flex;align-items:center;gap:.8rem;padding:0 6vw;
-       border-bottom:1px solid rgba(30,30,30,0.1)}
-header img{height:32px}
-header h1{font-size:1.45rem;font-style:italic;font-weight:700;margin-top:2px}
+header{position:fixed;top:0;left:0;right:0;height:56px;display:flex;align-items:center;
+       gap:.7rem;padding:0 5vw;background:var(--bg);z-index:10}
+header img{height:28px}header h1{font-size:1.35rem;font-weight:700;font-style:italic}
 
-#topBar{margin-top:60px;padding:0 6vw;display:flex;align-items:center;gap:.8rem}
-#topBar input{flex:1;border:none;border-bottom:2px solid var(--fg);background:transparent;
-              font-size:1.15rem;padding:.4rem .15rem;outline:none;transition:var(--transition)}
-#topBar input:focus{border-bottom-color:var(--accent)}
+/* top bar ----------------------------------------------------------- */
+#topBar{margin-top:56px;padding:0 5vw;display:flex;align-items:center;gap:.7rem;z-index:5}
+#search{flex:1;border-bottom:2px solid var(--fg);font-size:1.1rem;padding:.25rem .1rem;
+        background:transparent;outline:none}
+.pill{font-size:1.4rem;padding:.1rem .85rem;border-radius:9999px;user-select:none;
+      transition:.15s}
+.pill.active,.pill:hover{background:var(--accent);color:#fff}
 
-.pill,.tag{border:2px solid var(--fg);border-radius:9999px;cursor:pointer;
-          font-size:1.35rem;padding:.24rem 1rem;user-select:none;
-          transition:var(--transition);position:relative;overflow:hidden}
-.pill:hover,.tag:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-.pill.active,.tag.active{background:var(--accent);border-color:var(--accent);color:#fff;
-                         box-shadow:0 4px 16px rgba(56,189,248,0.3)}
-.pill::before,.tag::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
-                          background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);
-                          transition:left 0.5s}
-.pill:hover::before,.tag:hover::before{left:100%}
+/* gutter ----------------------------------------------------------- */
+#gutter{position:fixed;right:0;top:56px;bottom:0;width:var(--gut);
+        display:flex;flex-direction:column;align-items:center;gap:.5rem;
+        overflow-y:auto;padding-top:.6rem}
+#gutter .tag{font-size:1.35rem;border-radius:9999px;padding:.15rem;
+             transition:.15s;cursor:pointer}
+#gutter .tag.active,#gutter .tag:hover{background:var(--accent);color:#fff}
 
-#gutter{position:fixed;right:0;top:60px;bottom:0;width:var(--gut);
-        display:flex;flex-direction:column;align-items:center;gap:.6rem;overflow-y:auto;
-        padding-top:1rem}
-#gutter .tag{font-size:1.4rem}
-
-#canvas{position:fixed;top:60px;left:0;right:var(--gut);bottom:0;
+/* canvas ----------------------------------------------------------- */
+#canvas{position:fixed;top:56px;left:0;right:var(--gut);bottom:0;
         overflow-y:auto;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch}
-.page{scroll-snap-align:start;min-height:calc(100vh - 60px);
-      display:flex;align-items:center;justify-content:center;padding:0 6vw}
-.box{background:#fff;border-radius:var(--border-radius);
-     max-width:640px;width:100%;max-height:68vh;overflow-y:auto;padding:2.5rem 2rem;
-     box-shadow:var(--shadow);transition:var(--transition);
-     border:1px solid rgba(0,0,0,0.05)}
-.box:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.page{min-height:calc(100vh - 56px);display:flex;align-items:center;justify-content:center;
+      scroll-snap-align:start;padding:0 5vw}
+.box{max-width:620px;width:100%;max-height:70vh;overflow-y:auto;padding:1.8rem 1.5rem}
 .box::-webkit-scrollbar{display:none}
-.box h2{font-size:1.5rem;margin-bottom:1rem;font-weight:700;color:var(--fg)}
-.box h3{font-size:1.2rem;margin:.5rem 0 .4rem;font-weight:700;color:#555}
-.box p{line-height:1.6;margin-bottom:.8rem;color:#444}
-.box .src{font-size:.85rem;color:#888;margin-top:1rem;padding-top:.8rem;
-          border-top:1px solid #eee;font-style:italic}
-.click{cursor:pointer}
+.box h2{font-size:1.35rem;font-weight:700;margin-bottom:.6rem}
+.box h3{font-size:1.1rem;font-weight:700;margin:.3rem 0 .2rem}
+.box p{line-height:1.5;margin-bottom:.6rem}
+.box .src{font-size:.78rem;color:#555;margin-top:.3rem}
 
-mark{background:linear-gradient(120deg,rgba(56,189,248,0.2) 0%,rgba(56,189,248,0.4) 100%);
-     padding:0 .2rem;border-radius:4px;color:var(--fg)}
-
-footer{position:fixed;bottom:0;left:0;right:0;
-       background:rgba(250,250,247,0.95);backdrop-filter:blur(10px);
-       display:flex;justify-content:center;gap:1rem;padding:.8rem 6vw;
-       border-top:1px solid rgba(30,30,30,0.1)}
-footer .cta{border:2px solid var(--fg);border-radius:9999px;font-size:1.25rem;
-            padding:.3rem 1.5rem;cursor:pointer;transition:var(--transition);
-            position:relative;overflow:hidden}
-footer .cta:hover{background:var(--accent);border-color:var(--accent);color:#fff;
-                  transform:translateY(-2px);box-shadow:var(--shadow)}
-footer .cta::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
-                    background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);
-                    transition:left 0.5s}
-footer .cta:hover::before{left:100%}
-
-/* Micro-animazioni per il caricamento */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.page { animation: fadeInUp 0.6s ease-out; }
-
-/* Scrollbar personalizzata per i contenitori */
-.box::-webkit-scrollbar { width: 6px; }
-.box::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
-.box::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
-.box::-webkit-scrollbar-thumb:hover { background: #aaa; }
-
-/* Miglioramenti responsive */
-@media (max-width: 768px) {
-  header, #topBar, footer { padding: 0 4vw; }
-  .page { padding: 0 4vw; }
-  .box { padding: 2rem 1.5rem; max-height: 75vh; }
-  header h1 { font-size: 1.3rem; }
-  .pill, .tag { font-size: 1.2rem; padding: .2rem .8rem; }
-  footer .cta { font-size: 1.1rem; padding: .25rem 1.2rem; }
-}
+footer{position:fixed;bottom:0;left:0;right:0;height:50px;background:var(--bg);
+       display:flex;justify-content:center;gap:1rem;align-items:center}
+footer .cta{font-size:1.25rem;padding:.12rem 1.25rem;border-radius:9999px;cursor:pointer;
+            transition:.15s}
+footer .cta:hover{background:var(--accent);color:#fff}
 </style>
 </head>
-
 <body>
+
 <header>
-  <img src="logo.png" alt="logo futuro fortissimo">
+  <img src="logo.png" alt="logo">
   <h1>futuro&nbsp;fortissimo</h1>
 </header>
 
+<!-- search + macro-pill -->
 <div id="topBar">
-  <input id="searchInput" placeholder="cerca / search…">
-  <div id="pillBooks" class="pill">📚</div>
-  <div id="pillNotes" class="pill">🎶</div>
+  <input id="search" placeholder="cerca / search…">
+  <div id="pBooks" class="pill" data-k="📚">📚</div>
+  <div id="pNotes" class="pill" data-k="🎶">🎶</div>
 </div>
 
+<!-- emoji gutter -->
 <div id="gutter"></div>
+
+<!-- main viewport -->
 <div id="canvas"></div>
 
 <footer>
-  <div class="cta" onclick="window.open('https://www.paypal.com/paypalme/michelemerelli','_blank')">☕ sostieni</div>
-  <div class="cta" onclick="window.open('https://linktr.ee/micmer','_blank')">👤 chi&nbsp;sono</div>
+  <div class="cta" onclick="openNew('https://www.paypal.com/paypalme/michelemerelli')">☕ sostieni</div>
+  <div class="cta" onclick="openNew('https://linktr.ee/micmer')">👤 chi&nbsp;sono</div>
 </footer>
 
 <script>
-/* ---- data ---- */
-const SRC={it:'newsletter_data.json',en:'newsletter_data_en.json'};
-const NOTES_PATH='notes.json',BOOKS_PATH='books.json';
-let LANG='it',PUBS,NOTES,BOOKS;
-
-/* ---- state ---- */
-const mainF=new Set(); const tagF=new Set(); let q='';
-
-/* ---- helpers ---- */
+/* data PATH */
+const SRC={it:'newsletter_data.json',en:'newsletter_data_en.json'},
+      NOTES_PATH='notes.json',BOOKS_PATH='books.json';
+/* state */
+let LANG='it',PUBS,NOTES,BOOKS,q='',mainF=new Set(),tagF=new Set();
+/* helpers */
 const $=s=>document.querySelector(s),
-      tagList=['💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'],
       rnd=a=>a.sort(()=>Math.random()-.5),
-      hasTag=(tgs)=>tagF.size? tgs?.some(t=>tagF.has(t)) : true,
-      match=(t,s)=>t.toLowerCase().includes(s),
-      mark=(t)=>q? t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>') : t;
+      tagAll=['💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'],
+      hasTag=(t)=>tagF.size?t?.some(x=>tagF.has(x)):true,
+      match=(t)=>t.toLowerCase().includes(q),
+      hl=t=>q?t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>'):t;
+/* external */
+const openNew=url=>window.open(url,'_blank');
 
-/* ---- gutter emoji ---- */
+/* build gutter */
 const gut=$('#gutter');
-tagList.forEach((e,i)=>{
-  const n=document.createElement('div');
-  n.textContent=e;n.className='tag';
-  n.style.animationDelay = `${i * 0.1}s`;
-  gut.appendChild(n);
-  n.onclick=()=>{
-    n.classList.toggle('active');
-    tagF.has(e)?tagF.delete(e):tagF.add(e);
-    render();
-  }
+tagAll.forEach(e=>{
+  const n=document.createElement('div');n.textContent=e;n.className='tag';gut.appendChild(n);
+  n.onclick=()=>{n.classList.toggle('active');tagF.has(e)?tagF.delete(e):tagF.add(e);render()}
 });
 
-/* ---- main pills ---- */
-$('#pillBooks').onclick=e=>toggleMain(e.currentTarget,'📚');
-$('#pillNotes').onclick=e=>toggleMain(e.currentTarget,'🎶');
-function toggleMain(el,emo){
-  el.classList.toggle('active');
-  mainF.has(emo)?mainF.delete(emo):mainF.add(emo);
-  render();
-}
+/* top pills */
+document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>{const k=p.dataset.k;
+  p.classList.toggle('active');mainF.has(k)?mainF.delete(k):mainF.add(k);render()});
 
-/* ---- search ---- */
-$('#searchInput').oninput=e=>{q=e.target.value.toLowerCase();render();};
+/* search */
+$('#search').oninput=e=>{q=e.target.value.trim().toLowerCase();render()};
 
-/* ---- load JSON ---- */
+/* load */
 Promise.all([
- fetch(SRC[LANG]).then(r=>r.json()),
- fetch(NOTES_PATH).then(r=>r.json()),
- fetch(BOOKS_PATH).then(r=>r.json())
+  fetch(SRC[LANG]).then(r=>r.json()),
+  fetch(NOTES_PATH).then(r=>r.json()),
+  fetch(BOOKS_PATH).then(r=>r.json())
 ]).then(([d,n,b])=>{
   PUBS=rnd(d.publications);
   NOTES=rnd(n.notes);
@@ -181,67 +125,63 @@ Promise.all([
   render();
 });
 
-/* ---- render ---- */
+/* render */
 function render(){
   const C=$('#canvas');C.innerHTML='';
   let pages=[];
 
-  /* search mode */
+  /* search */
   if(q){
-    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖'))
-      .forEach(c=>{const txt=[p.title,c.title,...c.contentBlocks[0].content].join(' ');
-        if(match(txt,q)&&hasTag(c.tags)) pages.push(pubPage(p,c,true));}));
-    BOOKS.forEach(b=>{if(match(b.title,q)||match(b.text,q)) pages.push(bookPage(b,true));});
-    NOTES.forEach(n=>{const txt=n.title+(n.description||'');if(match(txt,q)) pages.push(notePage(n,true));});
-    rnd(pages).forEach(p=>C.appendChild(p));
-    return;
-  }
-
-  /* single category mode */
-  if(mainF.has('📚')&&!mainF.has('🎶')){
-    rnd(BOOKS).forEach(b=>C.appendChild(bookPage(b,false)));return;
-  }
-  if(mainF.has('🎶')&&!mainF.has('📚')){
-    rnd(NOTES).forEach(n=>C.appendChild(notePage(n,false)));return;
-  }
-
-  /* theme filter only */
-  if(tagF.size){
-    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&hasTag(c.tags))
-      .forEach(c=>pages.push(pubPage(p,c,false))));
+    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&hasTag(c.tags)&&match(p.title+c.title+c.contentBlocks[0].content.join(' ')))
+      .forEach(c=>pages.push(pubPage(p,c,false,true))));
+    BOOKS.forEach(b=>{if(match(b.title+b.text))pages.push(bookPage(b,true))});
+    NOTES.forEach(n=>{if(match(n.title+(n.description||'')))pages.push(notePage(n,true))});
     rnd(pages).forEach(p=>C.appendChild(p));return;
   }
-
-  /* default home → 2 random cards fra tutto */
+  /* only books / only notes */
+  if(mainF.has('📚')&&!mainF.has('🎶')){rnd(BOOKS).forEach(b=>C.appendChild(bookPage(b,false)));return;}
+  if(mainF.has('🎶')&&!mainF.has('📚')){rnd(NOTES).forEach(n=>C.appendChild(notePage(n,false)));return;}
+  /* tag filter */
+  if(tagF.size){
+    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&hasTag(c.tags))
+      .forEach(c=>pages.push(pubPage(p,c,false,false))));
+    rnd(pages).forEach(p=>C.appendChild(p));return;
+  }
+  /* default home: 2 random of any type */
   const bag=[];
-  PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>bag.push(pubPage(p,c,false))));
+  PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>bag.push(pubPage(p,c,false,false))));
   BOOKS.forEach(b=>bag.push(bookPage(b,false)));
   NOTES.forEach(n=>bag.push(notePage(n,false)));
   rnd(bag).slice(0,2).forEach(p=>C.appendChild(p));
 }
 
-/* ---- builders ---- */
-function pubPage(pub,sub,hl){
-  const S=document.createElement('section');S.className='page';
-  const B=document.createElement('div');B.className='box click';
-  B.innerHTML=`<h2>${mark(pub.title)}</h2>
-               <h3>${mark(sub.title)}</h3>
-               ${sub.contentBlocks[0].content.map(t=>`<p>${hl?mark(t):t}</p>`).join('')}`;
-  B.onclick=()=>window.open(pub.substackLink,'_blank');S.appendChild(B);return S;
+/* card builders */
+function pubPage(pub,sub,showPub,highlight){
+  const s=document.createElement('section');s.className='page';
+  const b=document.createElement('div');b.className='box';s.appendChild(b);
+  if(showPub) b.innerHTML+=`<h2>${hl(pub.title)}</h2>`;
+  b.innerHTML+=`<h3>${highlight?hl(sub.title):sub.title}</h3>
+    ${sub.contentBlocks[0].content.map(t=>`<p>${highlight?hl(t):t}</p>`).join('')}`;
+  b.onclick=()=>openNew(pub.substackLink);
+  return s;
 }
-function bookPage(o,hl){
-  const S=document.createElement('section');S.className='page';
-  const B=document.createElement('div');B.className='box click';
-  B.innerHTML=`<h2>${mark(o.title)}</h2><p>${mark(o.text)}</p>
+function bookPage(o,highlight){
+  const s=document.createElement('section');s.className='page';
+  const b=document.createElement('div');b.className='box';s.appendChild(b);
+  b.innerHTML=`<h2>${highlight?hl(o.title):o.title}</h2>
+               <p>${highlight?hl(o.text):o.text}</p>
                <p class="src">${o.book} — ${o.author}</p>`;
-  if(o.url)B.onclick=()=>window.open(o.url,'_blank');S.appendChild(B);return S;
+  if(o.url) b.onclick=()=>openNew(o.url);
+  return s;
 }
-function notePage(n,hl){
-  const S=document.createElement('section');S.className='page';
-  const B=document.createElement('div');B.className='box click';
+function notePage(n,highlight){
+  const s=document.createElement('section');s.className='page';
+  const b=document.createElement('div');b.className='box';s.appendChild(b);
   const host=n.url?new URL(n.url).hostname.replace(/^www\./,''):'';
-  B.innerHTML=`<h2>${mark(n.title)}</h2><p class="src">${host}</p>`;
-  if(n.url)B.onclick=()=>window.open(n.url,'_blank');S.appendChild(B);return S;
+  b.innerHTML=`<h2>${highlight?hl(n.title):n.title}</h2>
+               ${host?`<p class="src">${host}</p>`:''}`;
+  if(n.url) b.onclick=()=>openNew(n.url);
+  return s;
 }
 </script>
 </body>
