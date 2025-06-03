@@ -92,14 +92,14 @@ const selTags = new Set();
  *          HELPERS           *
  ******************************/
 const $     = s => document.querySelector(s),
-      rnd   = a => [...a].sort(()=>Math.random()-0.5), // non-mutating shuffle
+      rnd   = a => [...a].sort(()=>Math.random()-0.5), // non‑mutating shuffle
       match = t => t.includes(q),
       mark  = t => q ? t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>') : t,
       pg    = c => { const p = document.createElement('section'); p.className='page'; p.appendChild(c); return p; },
       open  = url => window.open(url,'_blank');
 
 /******************************
- *          UI SETUP          *
+ *          UI SETUP          *
  ******************************/
 const allTags = ['📚', NOTE_TAG, '💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'];
 const side = $('#side');
@@ -128,7 +128,7 @@ searchInput.oninput =()=>{q=searchInput.value.trim().toLowerCase();render();};
 $('#searchBtn').onclick =()=>{searchInput.blur();q=searchInput.value.trim().toLowerCase();render();};
 
 /******************************
- *         DATA LOAD          *
+ *         DATA LOAD          *
  ******************************/
 function loadData(){
   Promise.all([
@@ -151,7 +151,7 @@ function loadData(){
 }
 
 /******************************
- *         CARD FACTORY       *
+ *         CARD FACTORY       *
  ******************************/
 function pubCard(pub, scheda, highlight){
   const c=document.createElement('div');
@@ -216,4 +216,35 @@ function render(){
   // —— SEARCH (with/without tags) ——
   else{
     PUBS.forEach(p=>p.cards.filter(c=>{
-      const tagOk = !hasFil
+      const tagOk = !hasFilter || c.tags?.some(t=>selTags.has(t));
+      const txtOk = match((c.title + c.contentBlocks[0].content.join(' ')).toLowerCase());
+      return !c.title.startsWith('📖') && tagOk && txtOk;
+    }).forEach(c=>stack.push(pubCard(p,c,true))));
+
+    BOOKSARR.forEach(b=>{
+      if((!hasFilter || selTags.has('📚')) && match((b.title+b.text).toLowerCase())) stack.push(bookCard(b,true));
+    });
+    NOTESARR.forEach(n=>{
+      if((!hasFilter || selTags.has(NOTE_TAG)) && match(n.title.toLowerCase())) stack.push(noteCard(n,true));
+    });
+    stack.forEach(el=>cv.appendChild(el));
+  }
+
+  // —— FALLBACK ——
+  if(stack.length===0){
+    stack=[
+      ...PUBS.flatMap(p=>p.cards.filter(c=>!c.title.startsWith('📖')).map(c=>pubCard(p,c,false))),
+      ...BOOKSARR.map(b=>bookCard(b,false)),
+      ...NOTESARR.map(n=>noteCard(n,false))
+    ];
+    rnd(stack).forEach(el=>cv.appendChild(el));
+  }
+
+  // always scroll top after render
+  cv.scrollTo(0,0);
+}
+
+loadData();
+</script>
+</body>
+</html>
