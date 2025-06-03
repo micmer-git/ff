@@ -70,187 +70,190 @@
   </footer>
 
   <script>
-    /* -------- data paths -------- */
-    const PATH = { it: 'newsletter_data.json', en: 'newsletter_data_en.json' },
-          NOTES = 'notes.json', BOOKS = 'books.json';
+    /* -------- data paths -------- */
+    const PATH = { it: 'newsletter_data.json', en: 'newsletter_data_en.json' },
+          NOTES = 'notes.json', BOOKS = 'books.json';
 
-    /* -------- state -------- */
-    let PUBS, NOTESARR, BOOKSARR, LANG = 'it', q = '';
-    const selTags = new Set();
-    const gradients = [
-      'linear-gradient(135deg,#38bdf8,#c084fc)',
-      'linear-gradient(135deg,#f472b6,#facc15)',
-      'linear-gradient(135deg,#34d399,#60a5fa)',
-      'linear-gradient(135deg,#f87171,#fb923c)',
-      'linear-gradient(135deg,#a78bfa,#f472b6)',
-      'linear-gradient(135deg,#fb923c,#fde68a)',
-      'linear-gradient(135deg,#5eead4,#3b82f6)',
-      'linear-gradient(135deg,#fda4af,#c4b5fd)'
-    ];
-    const allTags = ['📚','🎶','💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'];
+    /* -------- state -------- */
+    let PUBS, NOTESARR, BOOKSARR, LANG = 'it', q = '';
+    const selTags = new Set();
+    const gradients = [
+      'linear-gradient(135deg,#38bdf8,#c084fc)',
+      'linear-gradient(135deg,#f472b6,#facc15)',
+      'linear-gradient(135deg,#34d399,#60a5fa)',
+      'linear-gradient(135deg,#f87171,#fb923c)',
+      'linear-gradient(135deg,#a78bfa,#f472b6)',
+      'linear-gradient(135deg,#fb923c,#fde68a)',
+      'linear-gradient(135deg,#5eead4,#3b82f6)',
+      'linear-gradient(135deg,#fda4af,#c4b5fd)'
+    ];
+    const allTags = ['📚','🎶','💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'];
 
-    /* -------- helpers -------- */
-    const $ = s => document.querySelector(s),
-          rnd = a => a.sort(() => Math.random() - .5),
-          match = (t) => t.includes(q),
-          mark = (t) => q ? t.replace(new RegExp(`(${q})`, 'gi'), '<mark>$1</mark>') : t,
-          pg = (c) => { const p = document.createElement('section'); p.className = 'page'; p.appendChild(c); return p },
-          openNew = u => window.open(u, '_blank');
+    /* -------- helpers -------- */
+    const $ = s => document.querySelector(s),
+          rnd = a => a.sort(() => Math.random() - .5),
+          match = (t) => t.includes(q),
+          mark = (t) => q ? t.replace(new RegExp(`(${q})`, 'gi'), '<mark>$1</mark>') : t,
+          pg = (c) => { const p = document.createElement('section'); p.className = 'page'; p.appendChild(c); return p },
+          openNew = u => window.open(u, '_blank');
 
-    /* -------- build side tags -------- */
-    const side = $('#side');
-    allTags.forEach(t => {
-      const el = document.createElement('div');
-      el.textContent = t;
-      el.className = 'pill';
-      el.onclick = () => {
-        el.classList.toggle('active');
-        if (selTags.has(t)) selTags.delete(t);
-        else selTags.add(t);
-        render();
-      };
-      side.appendChild(el);
-    });
+    /* -------- build side tags -------- */
+    const side = $('#side');
+    allTags.forEach(t => {
+      const el = document.createElement('div');
+      el.textContent = t;
+      el.className = 'pill';
+      el.onclick = () => {
+        el.classList.toggle('active');
+        if (selTags.has(t)) selTags.delete(t);
+        else selTags.add(t);
+        render();
+      };
+      side.appendChild(el);
+    });
 
-    /* -------- CTA & lang -------- */
-    $('#ctaCoffee').onclick = () => openNew('https://www.paypal.com/paypalme/michelemerelli');
-    $('#ctaAbout').onclick = () => openNew('https://linktr.ee/micmer');
-    $('#langBtn').onclick = () => {
-      LANG = LANG === 'it' ? 'en' : 'it';
-      $('#langBtn').textContent = LANG === 'it' ? '🇬🇧' : '🇮🇹';
-      loadData();
-    };
+    /* -------- CTA & lang -------- */
+    $('#ctaCoffee').onclick = () => openNew('https://www.paypal.com/paypalme/michelemerelli');
+    $('#ctaAbout').onclick = () => openNew('https://linktr.ee/micmer');
+    $('#langBtn').onclick = () => {
+      LANG = LANG === 'it' ? 'en' : 'it';
+      $('#langBtn').textContent = LANG === 'it' ? '🇬🇧' : '🇮🇹';
+      loadData();
+    };
 
-    /* -------- search -------- */
-    const sInp = $('#search');
-    sInp.oninput = () => { q = sInp.value.trim().toLowerCase(); render(); };
-    $('#searchBtn').onclick = () => {
-      sInp.blur();
-      q = sInp.value.trim().toLowerCase();
-      render();
-    };
+    /* -------- search -------- */
+    const sInp = $('#search');
+    sInp.oninput = () => { q = sInp.value.trim().toLowerCase(); render(); };
+    $('#searchBtn').onclick = () => {
+      sInp.blur();
+      q = sInp.value.trim().toLowerCase();
+      render();
+    };
 
-    /* -------- load data -------- */
-    function loadData() {
-      Promise.all([
-        fetch(PATH[LANG]).then(r => r.json()),
-        fetch(NOTES).then(r => r.json()),
-        fetch(BOOKS).then(r => r.json())
-      ]).then(([d, n, b]) => {
-        PUBS = rnd(d.publications);
-        NOTESARR = rnd(n.notes).map(o => ({ ...o, tags: ['🎶'] }));
-        BOOKSARR = rnd(b).map(o => ({ ...o, tags: ['📚'] }));
-        selTags.clear();
-        document.querySelectorAll('#side .pill.active').forEach(p => p.classList.remove('active'));
-        q = '';
-        sInp.value = '';
-        render();
-      });
-    }
+    /* -------- load data -------- */
+    function loadData() {
+      Promise.all([
+        fetch(PATH[LANG]).then(r => r.json()),
+        fetch(NOTES).then(r => r.json()),
+        fetch(BOOKS).then(r => r.json())
+      ]).then(([d, n, b]) => {
+        PUBS = rnd(d.publications); // Randomize publications only once on load
+        NOTESARR = n.notes.map(o => ({ ...o, tags: ['🎶'] }));
+        BOOKSARR = b.map(o => ({ ...o, tags: ['📚'] }));
+        selTags.clear();
+        document.querySelectorAll('#side .pill.active').forEach(p => p.classList.remove('active'));
+        q = '';
+        sInp.value = '';
+        render();
+      });
+    }
 
-    /* -------- factories -------- */
-    function pubCard(p, s, hi) {
-      const c = document.createElement('div');
-      c.className = 'box';
-      c.style.background = '#fff';
-      c.innerHTML = `<h3>${hi ? mark(s.title) : s.title}</h3>` +
-                    s.contentBlocks[0].content.map(l => `<p>${hi ? mark(l) : l}</p>`).join('');
-      c.onclick = () => openNew(p.substackLink);
-      return pg(c);
-    }
-    function bookCard(b, hi) {
-      const c = document.createElement('div');
-      c.className = 'box book';
-      c.style.background = '#fff';
-      c.innerHTML = `<h3>${hi ? mark(b.title) : b.title}</h3><p>${hi ? mark(b.text) : b.text}</p><p class="src">${b.book} — ${b.author}</p>`;
-      if (b.url) c.onclick = () => openNew(b.url);
-      return pg(c);
-    }
-    function noteCard(n, hi) {
-      const host = n.url ? new URL(n.url).hostname.replace(/^www\./, '') : '';
-      const c = document.createElement('div');
-      c.className = 'box';
-      c.style.background = '#fff';
-      c.innerHTML = `<h3>${hi ? mark(n.title) : n.title}</h3>${host ? `<p class="src">${host}</p>` : ''}`;
-      if (n.url) c.onclick = () => openNew(n.url);
-      return pg(c);
-    }
+    /* -------- factories -------- */
+    function pubCard(p, s, hi) {
+      const c = document.createElement('div');
+      c.className = 'box';
+      c.style.background = '#fff';
+      c.innerHTML = `<h3>${hi ? mark(s.title) : s.title}</h3>` +
+                    s.contentBlocks[0].content.map(l => `<p>${hi ? mark(l) : l}</p>`).join('');
+      c.onclick = () => openNew(p.substackLink);
+      return pg(c);
+    }
+    function bookCard(b, hi) {
+      const c = document.createElement('div');
+      c.className = 'box book';
+      c.style.background = '#fff';
+      c.innerHTML = `<h3>${hi ? mark(b.title) : b.title}</h3><p>${hi ? mark(b.text) : b.text}</p><p class="src">${b.book} — ${b.author}</p>`;
+      if (b.url) c.onclick = () => openNew(b.url);
+      return pg(c);
+    }
+    function noteCard(n, hi) {
+      const host = n.url ? new URL(n.url).hostname.replace(/^www\./, '') : '';
+      const c = document.createElement('div');
+      c.className = 'box';
+      c.style.background = '#fff';
+      c.innerHTML = `<h3>${hi ? mark(n.title) : n.title}</h3>${host ? `<p class="src">${host}</p>` : ''}`;
+      if (n.url) c.onclick = () => openNew(n.url);
+      return pg(c);
+    }
 
-    /* -------- render -------- */
-    function render() {
-      const cv = $('#canvas');
-      cv.innerHTML = '';
-      const activeFilter = selTags.size,
-            qOn = q.length > 0;
-      let stack = [];
+    /* -------- render -------- */
+    function render() {
+      const cv = $('#canvas');
+      cv.innerHTML = '';
+      const activeFilter = selTags.size,
+            qOn = q.length > 0;
+      let stack = [];
 
-      // home = all content
-      if (!activeFilter && !qOn) {
-        PUBS.forEach(p => 
-          p.cards
-           .filter(c => !c.title.startsWith('📖'))
-           .forEach(c => stack.push(pubCard(p, c, false)))
-        );
-        BOOKSARR.forEach(b => stack.push(bookCard(b, false)));
-        NOTESARR.forEach(n => stack.push(noteCard(n, false)));
-      }
-      // tag filter
-      else if (activeFilter && !qOn) {
-        if (selTags.size === 1 && selTags.has('📚')) {
-          stack = BOOKSARR.map(b => bookCard(b, false));
-        }
-        else if (selTags.size === 1 && selTags.has('🎶')) {
-          stack = NOTESARR.map(n => noteCard(n, false));
-        }
-        else {
-          PUBS.forEach(p => 
-            p.cards
-             .filter(c => !c.title.startsWith('📖') && c.tags?.some(t => selTags.has(t)))
-             .forEach(c => stack.push(pubCard(p, c, false)))
-          );
-        }
-      }
-      // search (with or w/out tag)
-      else {
-        PUBS.forEach(p => 
-          p.cards
-           .filter(c => {
-             const tagOk = !activeFilter || c.tags?.some(t => selTags.has(t));
-             const textOk = match((c.title + c.contentBlocks[0].content.join(' ')).toLowerCase());
-             return !c.title.startsWith('📖') && tagOk && textOk;
-           })
-           .forEach(c => stack.push(pubCard(p, c, true)))
-        );
-        BOOKSARR.forEach(b => {
-          if ((!activeFilter || selTags.has('📚')) && match((b.title + b.text).toLowerCase())) {
-            stack.push(bookCard(b, true));
-          }
-        });
-        NOTESARR.forEach(n => {
-          if ((!activeFilter || selTags.has('🎶')) && match(n.title.toLowerCase())) {
-            stack.push(noteCard(n, true));
-          }
-        });
-      }
+      // home = all content
+      if (!activeFilter && !qOn) {
+        PUBS.forEach(p => 
+          p.cards
+           .filter(c => !c.title.startsWith('📖'))
+           .forEach(c => stack.push(pubCard(p, c, false)))
+        );
+        BOOKSARR.forEach(b => stack.push(bookCard(b, false)));
+        NOTESARR.forEach(n => stack.push(noteCard(n, false)));
+        rnd(stack).forEach(el => cv.appendChild(el)); // Apply random order when no filters are active
+      }
+      // tag filter
+      else if (activeFilter && !qOn) {
+        if (selTags.size === 1 && selTags.has('📚')) {
+          stack = BOOKSARR.map(b => bookCard(b, false));
+        }
+        else if (selTags.size === 1 && selTags.has('🎶')) {
+          stack = NOTESARR.map(n => noteCard(n, false));
+        }
+        else {
+          PUBS.forEach(p => 
+            p.cards
+             .filter(c => !c.title.startsWith('📖') && c.tags?.some(t => selTags.has(t)))
+             .forEach(c => stack.push(pubCard(p, c, false)))
+          );
+        }
+        stack.forEach(el => cv.appendChild(el)); // No randomization for filtered results
+      }
+      // search (with or w/out tag)
+      else {
+        PUBS.forEach(p => 
+          p.cards
+           .filter(c => {
+             const tagOk = !activeFilter || c.tags?.some(t => selTags.has(t));
+             const textOk = match((c.title + c.contentBlocks[0].content.join(' ')).toLowerCase());
+             return !c.title.startsWith('📖') && tagOk && textOk;
+           })
+           .forEach(c => stack.push(pubCard(p, c, true)))
+        );
+        BOOKSARR.forEach(b => {
+          if ((!activeFilter || selTags.has('📚')) && match((b.title + b.text).toLowerCase())) {
+            stack.push(bookCard(b, true));
+          }
+        });
+        NOTESARR.forEach(n => {
+          if ((!activeFilter || selTags.has('🎶')) && match(n.title.toLowerCase())) {
+            stack.push(noteCard(n, true));
+          }
+        });
+        stack.forEach(el => cv.appendChild(el)); // No randomization for filtered/searched results
+      }
 
-      // ←–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-      // Fallback: If no cards matched filters/search, show “home” content anyway
-      if (stack.length === 0) {
-        PUBS.forEach(p => 
-          p.cards
-           .filter(c => !c.title.startsWith('📖'))
-           .forEach(c => stack.push(pubCard(p, c, false)))
-        );
-        BOOKSARR.forEach(b => stack.push(bookCard(b, false)));
-        NOTESARR.forEach(n => stack.push(noteCard(n, false)));
-      }
-      // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––→
+      // ←–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+      // Fallback: If no cards matched filters/search, show “home” content anyway
+      if (stack.length === 0) {
+        PUBS.forEach(p => 
+          p.cards
+           .filter(c => !c.title.startsWith('📖'))
+           .forEach(c => stack.push(pubCard(p, c, false)))
+        );
+        BOOKSARR.forEach(b => stack.push(bookCard(b, false)));
+        NOTESARR.forEach(n => stack.push(noteCard(n, false)));
+        rnd(stack).forEach(el => cv.appendChild(el)); // Apply random order for fallback content
+      }
+      // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––→
 
-      rnd(stack).forEach(el => cv.appendChild(el));
-      cv.scrollTo(0, 0);
-    }
+      cv.scrollTo(0, 0);
+    }
 
-    loadData();
-  </script>
+    loadData();
+  </script>
 </body>
 </html>
