@@ -1,112 +1,256 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" id="root">
 <head>
-  <!-- …meta, Tailwind CDN, font imports as before… -->
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>futuro fortissimo – explorer</title>
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui']
+          },
+          colors: {
+            bg: '#f6f9fe',
+            acc: '#38bdf8'
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    /* If you’re not using Tailwind, define these: */
-    .bg-gradient-full-neon {
-      background: linear-gradient(135deg, #FF6A00 0%, #6A00FF 40%, #00D0FF 100%);
-    }
-    .bg-deepNavy {
-      background-color: #1A0033;
-    }
-    .neon-text-light {
-      color: #F5F5F5;
-    }
-    .neon-button {
-      background: #FF006F;
-      color: #F5F5F5;
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      box-shadow: 0 0 8px rgba(255,0,111,0.8);
-      cursor: pointer;
-      transition: transform 0.1s ease;
-    }
-    .neon-button:hover {
-      transform: scale(1.05);
-    }
-    .card {
-      background: #FFFFFF; /* white card, sits on top of neon border */
-      border-radius: 1rem;
-      padding: 1.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    /* Neon border wrapper: */
-    .card-wrapper {
-      background: linear-gradient(135deg, #FF6A00 0%, #6A00FF 40%, #00D0FF 100%);
-      border-radius: 1rem;
-      padding: 3px; /* border thickness */
-      margin-bottom: 2rem;
-    }
-    .card h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #1A0033; /* dark text on white */
-    }
-    .card p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #333;
-    }
-    /* A neon “blob” behind each card */
-    .blob-behind {
-      position: absolute;
-      top: -20px; left: -20px;
-      width: 150px; height: 150px;
-      background: radial-gradient(circle, rgba(0,208,255,0.5) 0%, transparent 70%);
-      filter: blur(30px);
-      z-index: 0;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent }
+    body { font-family: Inter, sans-serif; background: var(--tw-bg-opacity) bg; color: #111; overflow: hidden }
+    mark { background: #38bdf8; color: #fff; padding: 0 3px; border-radius: 3px }
+    .pill, .tag { background: #fff; padding: 4px 13px; border-radius: 9999px; cursor: pointer; user-select: none; transition: .2s }
+    .pill { font-size: 1.2rem }
+    .pill.active { outline: 2px solid #38bdf8 }
+    .tag { font-size: .85rem; margin-top: 4px; margin-right: 4px }
+    #canvas { scroll-snap-type: y mandatory; overflow-y: auto; -webkit-overflow-scrolling: touch }
+    .page { min-height: calc(100vh - 120px); scroll-snap-align: start; display: flex; align-items: center; padding-left: 6vw }
+    .box { width: calc(100% - 12vw); max-width: 720px; max-height: 78vh; overflow-y: auto; padding: 2rem 1.7rem }
+    .box::-webkit-scrollbar { display: none }
+    .box h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: .4rem }
+    .box p { font-size: 1.15rem; line-height: 1.6; margin-bottom: .65rem }
+    .box.book h3 { font-size: 1.15rem }
+    .src { font-size: .8rem; color: #555; margin-top: .3rem }
   </style>
 </head>
 
-<body class="bg-deepNavy">
-  <!-- Neon‐gradient “hero” bar at top (optional) -->
-  <header class="relative bg-gradient-full-neon neon-text-light py-4 px-8">
-    <h1 class="text-3xl font-bold">Futuro Fortissimo Explorer</h1>
+<body>
+  <!-- HEADER -->
+  <header class="fixed inset-x-0 top-0 h-[60px] px-[6vw] flex items-center justify-between z-30">
+    <div class="flex items-center gap-2">
+      <img src="logo.png" class="h-8">
+      <h1 class="font-[Playfair_Display] italic text-[1.55rem]">futuro&nbsp;fortissimo</h1>
+    </div>
+    <div id="cta" class="flex items-center gap-4 text-[2rem]">
+      <span id="ctaCoffee">☕</span><span id="ctaAbout">👤</span>
+      <span id="langBtn" class="cursor-pointer">🇬🇧</span>
+    </div>
   </header>
 
-  <!-- Add a faint corner glow -->
-  <div style="
-    position: absolute;
-    top: 0; right: 0;
-    width: 300px; height: 300px;
-    background: radial-gradient(circle at 50% 50%, rgba(255,106,0,0.4), transparent 70%);
-    pointer-events: none;
-  "></div>
+  <!-- SIDE EMOJI BAR -->
+  <aside id="side" class="fixed top-[60px] bottom-[60px] right-0 w-[46px] flex flex-col items-center gap-2 pt-3 overflow-y-auto">
+  </aside>
 
-  <!-- Main “canvas” scrolling area -->
-  <main id="canvas" class="h-[calc(100vh-120px)] overflow-y-auto py-8 px-6 space-y-8">
-    <!-- Example ‘card’ wrapper with neon border -->
-    <section class="card-wrapper mx-auto max-w-lg relative">
-      <div class="blob-behind"></div>  <!-- neon “blob” behind -->
-      <div class="card relative">
-        <h3>🔔 Nuovo aggiornamento</h3>
-        <p>Un rapido sommario di qualcosa di importante.</p>
-      </div>
-    </section>
+  <!-- CANVAS -->
+  <main id="canvas" class="fixed top-[60px] bottom-[60px] right-[46px] left-0"></main>
 
-    <section class="card-wrapper mx-auto max-w-lg relative">
-      <div class="blob-behind" style="top:-30px; left:auto; right:-30px; background:radial-gradient(circle, rgba(106,0,255,0.5) 0%, transparent 70%);"></div>
-      <div class="card relative">
-        <h3>📚 Nuovi libri consigliati</h3>
-        <p>Una breve descrizione del libro celebre.</p>
-      </div>
-    </section>
-
-    <!-- …aggiungi quante schede vuoi… -->
-  </main>
-
-  <!-- Neon‐style search/footer bar -->
-  <footer class="fixed bottom-0 left-0 w-full bg-gradient-orange-pink py-3 px-6 flex items-center justify-between">
-    <input
-      type="text"
-      placeholder="cerca / search…"
-      class="flex-1 bg-white rounded-full px-4 py-2 placeholder-gray-500 focus:outline-none"
-    />
-    <button class="neon-button ml-4">🔍 Cerca</button>
+  <!-- SEARCH -->
+  <footer class="fixed inset-x-0 bottom-0 h-[60px] bg-bg flex items-center px-[6vw] gap-3">
+    <input id="search" placeholder="cerca / search…" class="flex-1 rounded-full border-2 border-black px-4 py-2 text-lg outline-none">
+    <button id="searchBtn" class="text-[1.8rem] text-acc">🔍</button>
   </footer>
+
+  <script>
+    /* -------- data paths -------- */
+    const PATH = { it: 'newsletter_data.json', en: 'newsletter_data_en.json' },
+          NOTES = 'notes.json', BOOKS = 'books.json';
+
+    /* -------- state -------- */
+    let PUBS, NOTESARR, BOOKSARR, LANG = 'it', q = '';
+    const selTags = new Set();
+    const gradients = [
+      'linear-gradient(135deg,#38bdf8,#c084fc)',
+      'linear-gradient(135deg,#f472b6,#facc15)',
+      'linear-gradient(135deg,#34d399,#60a5fa)',
+      'linear-gradient(135deg,#f87171,#fb923c)',
+      'linear-gradient(135deg,#a78bfa,#f472b6)',
+      'linear-gradient(135deg,#fb923c,#fde68a)',
+      'linear-gradient(135deg,#5eead4,#3b82f6)',
+      'linear-gradient(135deg,#fda4af,#c4b5fd)'
+    ];
+    const allTags = ['📚','🎶','💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'];
+
+    /* -------- helpers -------- */
+    const $ = s => document.querySelector(s),
+          rnd = a => a.sort(() => Math.random() - .5),
+          match = (t) => t.includes(q),
+          mark = (t) => q ? t.replace(new RegExp(`(${q})`, 'gi'), '<mark>$1</mark>') : t,
+          pg = (c) => { const p = document.createElement('section'); p.className = 'page'; p.appendChild(c); return p },
+          openNew = u => window.open(u, '_blank');
+
+    /* -------- build side tags -------- */
+    const side = $('#side');
+    allTags.forEach(t => {
+      const el = document.createElement('div');
+      el.textContent = t;
+      el.className = 'pill';
+      el.onclick = () => {
+        el.classList.toggle('active');
+        if (selTags.has(t)) selTags.delete(t);
+        else selTags.add(t);
+        render();
+      };
+      side.appendChild(el);
+    });
+
+    /* -------- CTA & lang -------- */
+    $('#ctaCoffee').onclick = () => openNew('https://www.paypal.com/paypalme/michelemerelli');
+    $('#ctaAbout').onclick = () => openNew('https://linktr.ee/micmer');
+    $('#langBtn').onclick = () => {
+      LANG = LANG === 'it' ? 'en' : 'it';
+      $('#langBtn').textContent = LANG === 'it' ? '🇬🇧' : '🇮🇹';
+      loadData();
+    };
+
+    /* -------- search -------- */
+    const sInp = $('#search');
+    sInp.oninput = () => { q = sInp.value.trim().toLowerCase(); render(); };
+    $('#searchBtn').onclick = () => {
+      sInp.blur();
+      q = sInp.value.trim().toLowerCase();
+      render();
+    };
+
+    /* -------- load data -------- */
+    function loadData() {
+      Promise.all([
+        fetch(PATH[LANG]).then(r => r.json()),
+        fetch(NOTES).then(r => r.json()),
+        fetch(BOOKS).then(r => r.json())
+      ]).then(([d, n, b]) => {
+        PUBS = rnd(d.publications);
+        NOTESARR = rnd(n.notes).map(o => ({ ...o, tags: ['🎶'] }));
+        BOOKSARR = rnd(b).map(o => ({ ...o, tags: ['📚'] }));
+        selTags.clear();
+        document.querySelectorAll('#side .pill.active').forEach(p => p.classList.remove('active'));
+        q = '';
+        sInp.value = '';
+        render();
+      });
+    }
+
+    /* -------- factories -------- */
+    function pubCard(p, s, hi) {
+      const c = document.createElement('div');
+      c.className = 'box';
+      c.style.background = '#fff';
+      c.innerHTML = `<h3>${hi ? mark(s.title) : s.title}</h3>` +
+                    s.contentBlocks[0].content.map(l => `<p>${hi ? mark(l) : l}</p>`).join('');
+      c.onclick = () => openNew(p.substackLink);
+      return pg(c);
+    }
+    function bookCard(b, hi) {
+      const c = document.createElement('div');
+      c.className = 'box book';
+      c.style.background = '#fff';
+      c.innerHTML = `<h3>${hi ? mark(b.title) : b.title}</h3><p>${hi ? mark(b.text) : b.text}</p><p class="src">${b.book} — ${b.author}</p>`;
+      if (b.url) c.onclick = () => openNew(b.url);
+      return pg(c);
+    }
+    function noteCard(n, hi) {
+      const host = n.url ? new URL(n.url).hostname.replace(/^www\./, '') : '';
+      const c = document.createElement('div');
+      c.className = 'box';
+      c.style.background = '#fff';
+      c.innerHTML = `<h3>${hi ? mark(n.title) : n.title}</h3>${host ? `<p class="src">${host}</p>` : ''}`;
+      if (n.url) c.onclick = () => openNew(n.url);
+      return pg(c);
+    }
+
+    /* -------- render -------- */
+    function render() {
+      const cv = $('#canvas');
+      cv.innerHTML = '';
+      const activeFilter = selTags.size,
+            qOn = q.length > 0;
+      let stack = [];
+
+      // home = all content
+      if (!activeFilter && !qOn) {
+        PUBS.forEach(p => 
+          p.cards
+           .filter(c => !c.title.startsWith('📖'))
+           .forEach(c => stack.push(pubCard(p, c, false)))
+        );
+        BOOKSARR.forEach(b => stack.push(bookCard(b, false)));
+        NOTESARR.forEach(n => stack.push(noteCard(n, false)));
+      }
+      // tag filter
+      else if (activeFilter && !qOn) {
+        if (selTags.size === 1 && selTags.has('📚')) {
+          stack = BOOKSARR.map(b => bookCard(b, false));
+        }
+        else if (selTags.size === 1 && selTags.has('🎶')) {
+          stack = NOTESARR.map(n => noteCard(n, false));
+        }
+        else {
+          PUBS.forEach(p => 
+            p.cards
+             .filter(c => !c.title.startsWith('📖') && c.tags?.some(t => selTags.has(t)))
+             .forEach(c => stack.push(pubCard(p, c, false)))
+          );
+        }
+      }
+      // search (with or w/out tag)
+      else {
+        PUBS.forEach(p => 
+          p.cards
+           .filter(c => {
+             const tagOk = !activeFilter || c.tags?.some(t => selTags.has(t));
+             const textOk = match((c.title + c.contentBlocks[0].content.join(' ')).toLowerCase());
+             return !c.title.startsWith('📖') && tagOk && textOk;
+           })
+           .forEach(c => stack.push(pubCard(p, c, true)))
+        );
+        BOOKSARR.forEach(b => {
+          if ((!activeFilter || selTags.has('📚')) && match((b.title + b.text).toLowerCase())) {
+            stack.push(bookCard(b, true));
+          }
+        });
+        NOTESARR.forEach(n => {
+          if ((!activeFilter || selTags.has('🎶')) && match(n.title.toLowerCase())) {
+            stack.push(noteCard(n, true));
+          }
+        });
+      }
+
+      // ←–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+      // Fallback: If no cards matched filters/search, show “home” content anyway
+      if (stack.length === 0) {
+        PUBS.forEach(p => 
+          p.cards
+           .filter(c => !c.title.startsWith('📖'))
+           .forEach(c => stack.push(pubCard(p, c, false)))
+        );
+        BOOKSARR.forEach(b => stack.push(bookCard(b, false)));
+        NOTESARR.forEach(n => stack.push(noteCard(n, false)));
+      }
+      // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––→
+
+      rnd(stack).forEach(el => cv.appendChild(el));
+      cv.scrollTo(0, 0);
+    }
+
+    loadData();
+  </script>
 </body>
 </html>
