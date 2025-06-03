@@ -99,7 +99,7 @@ const $     = s => document.querySelector(s),
       open  = url => window.open(url,'_blank');
 
 /******************************
- *          UI SETUP          *
+ *          UI SETUP          *
  ******************************/
 const allTags = ['📚', NOTE_TAG, '💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'];
 const side = $('#side');
@@ -128,7 +128,7 @@ searchInput.oninput =()=>{q=searchInput.value.trim().toLowerCase();render();};
 $('#searchBtn').onclick =()=>{searchInput.blur();q=searchInput.value.trim().toLowerCase();render();};
 
 /******************************
- *         DATA LOAD          *
+ *         DATA LOAD          *
  ******************************/
 function loadData(){
   Promise.all([
@@ -136,7 +136,7 @@ function loadData(){
     fetch(NOTES).then(r=>r.json()),
     fetch(BOOKS).then(r=>r.json())
   ]).then(([pubData, noteData, bookData])=>{
-    PUBS      = rnd(pubData.publications); // shuffle publications once
+    PUBS      = pubData.publications; // don't shuffle here - we'll shuffle per render
     NOTESARR  = noteData.notes.map(n=>({...n, tags: n.tags?.length?n.tags:[NOTE_TAG]}));
     BOOKSARR  = bookData.map(b=>({...b, tags: b.tags?.length?b.tags:['📚']}));
 
@@ -151,7 +151,7 @@ function loadData(){
 }
 
 /******************************
- *         CARD FACTORY       *
+ *         CARD FACTORY       *
  ******************************/
 function pubCard(pub, scheda, highlight){
   const c=document.createElement('div');
@@ -200,6 +200,7 @@ function render(){
       ...BOOKSARR.map(b=>bookCard(b,false)),
       ...NOTESARR.map(n=>noteCard(n,false))
     ];
+    // Shuffle and append all items
     rnd(stack).forEach(el=>cv.appendChild(el));
   }
   // —— ONLY TAG FILTER ——
@@ -211,7 +212,8 @@ function render(){
     }else{
       PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖') && c.tags?.some(t=>selTags.has(t))).forEach(c=>stack.push(pubCard(p,c,false))));
     }
-    stack.forEach(el=>cv.appendChild(el));
+    // Shuffle and append filtered items
+    rnd(stack).forEach(el=>cv.appendChild(el));
   }
   // —— SEARCH (with/without tags) ——
   else{
@@ -227,6 +229,7 @@ function render(){
     NOTESARR.forEach(n=>{
       if((!hasFilter || selTags.has(NOTE_TAG)) && match(n.title.toLowerCase())) stack.push(noteCard(n,true));
     });
+    // Don't shuffle search results - keep them ordered by relevance
     stack.forEach(el=>cv.appendChild(el));
   }
 
