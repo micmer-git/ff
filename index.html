@@ -115,6 +115,13 @@ allTags.forEach(tag=>{
   side.appendChild(el);
 });
 
+['❤️','🍃','💻','📚'].forEach(tag => {
+  selTags.add(tag);
+  // Visually activate the pill
+  const pill = Array.from(side.children).find(el => el.textContent === tag);
+  if (pill) pill.classList.add('active');
+});
+
 $('#ctaCoffee').onclick=()=>open('https://www.paypal.com/paypalme/michelemerelli');
 $('#ctaAbout').onclick =()=>open('https://linktr.ee/micmer');
 $('#langBtn').onclick   =()=>{
@@ -145,6 +152,15 @@ function loadData(){
     document.querySelectorAll('#side .pill.active').forEach(p=>p.classList.remove('active'));
     q='';
     searchInput.value='';
+
+    // ---- ADD THIS BLOCK ----
+    ['❤️','🍃','💻','📚'].forEach(tag => {
+      selTags.add(tag);
+      // Visually activate the pill
+      const pill = Array.from(side.children).find(el => el.textContent === tag);
+      if (pill) pill.classList.add('active');
+    });
+    // ---- END BLOCK ----
 
     render();
   });
