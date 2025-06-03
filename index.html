@@ -193,62 +193,64 @@ function render(){
         hasQuery  = q.length>0;
   let stack=[];
 
+  // Gather all cards from all sources
+  const allSchede = [
+    ...PUBS?.flatMap(p => p.cards.map(c => pubCard(p, c, false))) || [],
+    ...BOOKSARR?.map(b => bookCard(b, false)) || [],
+    ...NOTESARR?.map(n => noteCard(n, false)) || []
+  ];
+
   // —— HOME (no filter, no search) ——
   if(!hasFilter && !hasQuery){
-    stack=[
-      ...PUBS.flatMap(p=>p.cards.map(c=>pubCard(p,c,false))),
-      ...BOOKSARR.map(b=>bookCard(b,false)),
-      ...NOTESARR.map(n=>noteCard(n,false))
-    ];
-    // Shuffle and append all items
-    rnd(stack).forEach(el=>cv.appendChild(el));
+    // Shuffle and show all cards
+    rnd(allSchede).forEach(el=>cv.appendChild(el));
+    return;
   }
+
   // —— ONLY TAG FILTER ——
-  else if(hasFilter && !hasQuery){
+  if(hasFilter && !hasQuery){
     // If ONLY the notes emoji is selected, show only notes
     if(selTags.size === 1 && selTags.has(NOTE_TAG)) {
-      stack.push(...NOTESARR.map(n=>noteCard(n,false)));
+      NOTESARR.forEach(n => cv.appendChild(noteCard(n, false)));
+      return;
     } else {
       // Handle books filter
       if(selTags.has('📚')){
-        stack.push(...BOOKSARR.map(b=>bookCard(b,false)));
+        BOOKSARR.forEach(b => cv.appendChild(bookCard(b, false)));
       }
       // Handle notes filter (when combined with other tags)
       if(selTags.has(NOTE_TAG)){
-        stack.push(...NOTESARR.map(n=>noteCard(n,false)));
+        NOTESARR.forEach(n => cv.appendChild(noteCard(n, false)));
       }
       // Handle publication cards with matching tags
-      PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖') && c.tags?.some(t=>selTags.has(t))).forEach(c=>stack.push(pubCard(p,c,false))));
+      PUBS.forEach(p => p.cards
+        .filter(c => !c.title.startsWith('📖') && c.tags?.some(t => selTags.has(t)))
+        .forEach(c => cv.appendChild(pubCard(p, c, false)))
+      );
+      return;
     }
-    // Shuffle and append filtered items
-    rnd(stack).forEach(el=>cv.appendChild(el));
   }
-  // —— SEARCH (with/without tags) ——
-  else{
-    PUBS.forEach(p=>p.cards.filter(c=>{
-      const tagOk = !hasFilter || c.tags?.some(t=>selTags.has(t));
-      const txtOk = match((c.title + c.contentBlocks[0].content.join(' ')).toLowerCase());
-      return !c.title.startsWith('📖') && tagOk && txtOk;
-    }).forEach(c=>stack.push(pubCard(p,c,true))));
 
-    BOOKSARR.forEach(b=>{
-      if((!hasFilter || selTags.has('📚')) && match((b.title+b.text).toLowerCase())) stack.push(bookCard(b,true));
-    });
-    NOTESARR.forEach(n=>{
-      if((!hasFilter || selTags.has(NOTE_TAG)) && match(n.title.toLowerCase())) stack.push(noteCard(n,true));
-    });
-    // Don't shuffle search results - keep them ordered by relevance
-    stack.forEach(el=>cv.appendChild(el));
-  }
+  // —— SEARCH (with/without tags) ——
+  PUBS.forEach(p=>p.cards.filter(c=>{
+    const tagOk = !hasFilter || c.tags?.some(t=>selTags.has(t));
+    const txtOk = match((c.title + c.contentBlocks[0].content.join(' ')).toLowerCase());
+    return !c.title.startsWith('📖') && tagOk && txtOk;
+  }).forEach(c=>stack.push(pubCard(p,c,true))));
+
+  BOOKSARR.forEach(b=>{
+    if((!hasFilter || selTags.has('📚')) && match((b.title+b.text).toLowerCase())) stack.push(bookCard(b,true));
+  });
+  NOTESARR.forEach(n=>{
+    if((!hasFilter || selTags.has(NOTE_TAG)) && match(n.title.toLowerCase())) stack.push(noteCard(n,true));
+  });
+
+  // Don't shuffle search results - keep them ordered by relevance
+  stack.forEach(el=>cv.appendChild(el));
 
   // —— FALLBACK ——
-  if(stack.length===0){
-    stack=[
-      ...PUBS.flatMap(p=>p.cards.map(c=>pubCard(p,c,false))),
-      ...BOOKSARR.map(b=>bookCard(b,false)),
-      ...NOTESARR.map(n=>noteCard(n,false))
-    ];
-    rnd(stack).forEach(el=>cv.appendChild(el));
+  if(stack.length===0 && allSchede.length > 0){
+    rnd(allSchede).forEach(el=>cv.appendChild(el));
   }
 
   // always scroll top after render
