@@ -33,7 +33,10 @@
     .pill.active{outline:2px solid #38bdf8}
     .tag{font-size:.85rem;margin-top:4px;margin-right:4px}
     #canvas{scroll-snap-type:y mandatory;overflow-y:auto;-webkit-overflow-scrolling:touch}
-    .page{min-height:calc(100vh - 120px);scroll-snap-align:start;display:flex;align-items:center;padding-left:6vw}
+    .page{position:relative;min-height:calc(100vh - 120px);scroll-snap-align:start;display:flex;align-items:center;padding-left:6vw}
+    .arrow{position:absolute;left:50%;transform:translateX(-50%);font-size:1.3rem;opacity:.4;pointer-events:none}
+    .arrow.up{top:6px}
+    .arrow.down{bottom:6px}
     .box{width:calc(100% - 12vw);max-width:720px;max-height:78vh;overflow-y:auto;padding:2rem 1.7rem;border-radius:.6rem;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
     .box::-webkit-scrollbar{display:none}
     .box h3{font-size:1.35rem;font-weight:700;margin-bottom:.4rem}
@@ -55,7 +58,7 @@
       <img src="logo.png" class="h-8">
       <h1 class="font-[Playfair_Display] italic text-[1.55rem]">futuro&nbsp;fortissimo</h1>
     </div>
-    <div id="cta" class="flex items-center gap-4 text-[2rem]">
+  <div id="cta" class="flex items-center gap-4 text-[1.5rem]">
       <span id="ctaCoffee">☕</span><span id="ctaAbout">👤</span>
       <span id="langBtn" class="cursor-pointer">🇬🇧</span>
     </div>
@@ -95,7 +98,20 @@ const $     = s => document.querySelector(s),
       rnd   = a => [...a].sort(()=>Math.random()-0.5), // non‑mutating shuffle
       match = t => t.includes(q),
       mark  = t => q ? t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>') : t,
-      pg    = c => { const p = document.createElement('section'); p.className='page'; p.appendChild(c); return p; },
+      pg    = c => {
+        const p = document.createElement('section');
+        p.className='page';
+        const up   = document.createElement('div');
+        up.className='arrow up';
+        up.textContent='\u2191';
+        const down = document.createElement('div');
+        down.className='arrow down';
+        down.textContent='\u2193';
+        p.appendChild(up);
+        p.appendChild(c);
+        p.appendChild(down);
+        return p;
+      },
       open  = url => window.open(url,'_blank');
 
 /******************************
@@ -209,6 +225,16 @@ function render(){
         hasQuery  = q.length>0;
   let stack=[];
 
+  // —— NOTES VIEW ——
+  if(selTags.has(NOTE_TAG)){
+    const notes = hasQuery ?
+      NOTESARR.filter(n=>match(n.title.toLowerCase())) :
+      NOTESARR;
+    notes.forEach(n=>cv.appendChild(noteCard(n, hasQuery)));
+    cv.scrollTo(0,0);
+    return;
+  }
+
   // —— HOME (no filter, no search) ——
   if(!hasFilter && !hasQuery){
     stack=[
@@ -221,21 +247,12 @@ function render(){
   }
   // —— ONLY TAG FILTER ——
   else if(hasFilter && !hasQuery){
-    // If ONLY the notes emoji is selected, show only notes
-    if(selTags.size === 1 && selTags.has(NOTE_TAG)) {
-      stack.push(...NOTESARR.map(n=>noteCard(n,false)));
-    } else {
-      // Handle books filter
-      if(selTags.has('📚')){
-        stack.push(...BOOKSARR.map(b=>bookCard(b,false)));
-      }
-      // Handle notes filter (when combined with other tags)
-      if(selTags.has(NOTE_TAG)){
-        stack.push(...NOTESARR.map(n=>noteCard(n,false)));
-      }
-      // Handle publication cards with matching tags
-      PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖') && c.tags?.some(t=>selTags.has(t))).forEach(c=>stack.push(pubCard(p,c,false))));
+    // Handle books filter
+    if(selTags.has('📚')){
+      stack.push(...BOOKSARR.map(b=>bookCard(b,false)));
     }
+    // Handle publication cards with matching tags
+    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖') && c.tags?.some(t=>selTags.has(t))).forEach(c=>stack.push(pubCard(p,c,false))));
     // Shuffle and append filtered items
     rnd(stack).forEach(el=>cv.appendChild(el));
   }
