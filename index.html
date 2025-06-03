@@ -26,7 +26,7 @@
   </script>
   <style>
     *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-    body{font-family:Inter,sans-serif;background:var(--tw-bg-opacity) bg;color:#111;overflow:hidden}
+    body{font-family:Inter,sans-serif;background:#f6f9fe;color:#111;overflow:hidden}
     mark{background:#38bdf8;color:#fff;padding:0 3px;border-radius:3px}
     .pill,.tag{background:#fff;padding:4px 13px;border-radius:9999px;cursor:pointer;user-select:none;transition:.2s}
     .pill{font-size:1.2rem}
@@ -34,7 +34,7 @@
     .tag{font-size:.85rem;margin-top:4px;margin-right:4px}
     #canvas{scroll-snap-type:y mandatory;overflow-y:auto;-webkit-overflow-scrolling:touch}
     .page{min-height:calc(100vh - 120px);scroll-snap-align:start;display:flex;align-items:center;padding-left:6vw}
-    .box{width:calc(100% - 12vw);max-width:720px;max-height:78vh;overflow-y:auto;padding:2rem 1.7rem}
+    .box{width:calc(100% - 12vw);max-width:720px;max-height:78vh;overflow-y:auto;padding:2rem 1.7rem;border-radius:.6rem;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
     .box::-webkit-scrollbar{display:none}
     .box h3{font-size:1.35rem;font-weight:700;margin-bottom:.4rem}
     .box p{font-size:1.15rem;line-height:1.6;margin-bottom:.65rem}
@@ -50,7 +50,7 @@
 </head>
 <body>
   <!-- HEADER -->
-  <header class="fixed inset-x-0 top-0 h-[60px] px-[6vw] flex items-center justify-between z-30">
+  <header class="fixed inset-x-0 top-0 h-[60px] px-[6vw] flex items-center justify-between bg-white shadow z-30">
     <div class="flex items-center gap-2">
       <img src="logo.png" class="h-8">
       <h1 class="font-[Playfair_Display] italic text-[1.55rem]">futuro&nbsp;fortissimo</h1>
@@ -68,8 +68,8 @@
   <main id="canvas" class="fixed top-[60px] bottom-[60px] right-[46px] left-0"></main>
 
   <!-- SEARCH -->
-  <footer class="fixed inset-x-0 bottom-0 h-[60px] bg-bg flex items-center px-[6vw] gap-3">
-    <input id="search" placeholder="cerca / search…" class="flex-1 rounded-full border-2 border-black px-4 py-2 text-lg outline-none">
+  <footer class="fixed inset-x-0 bottom-0 h-[60px] bg-bg shadow flex items-center px-[6vw] gap-3">
+    <input id="search" placeholder="Cerca / Search…" class="flex-1 rounded-full border-2 border-gray-400 px-4 py-2 text-lg outline-none">
     <button id="searchBtn" class="text-[1.8rem] text-acc">🔍</button>
   </footer>
 
