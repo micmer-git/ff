@@ -94,7 +94,7 @@
           rnd = a => a.sort(() => Math.random() - .5),
           match = (t) => t.includes(q),
           mark = (t) => q ? t.replace(new RegExp(`(${q})`, 'gi'), '<mark>$1</mark>') : t,
-          pg = (c) => { const p = document.createElement('section'); p.className = 'page'; p.appendChild(c); return p },
+          pg = (c) => { const p = document.createElement('section'); p.className = 'page'; p.appendChild(c); return p; },
           openNew = u => window.open(u, '_blank');
 
     /* -------- build side tags -------- */
@@ -184,17 +184,14 @@
             qOn = q.length > 0;
       let stack = [];
 
-      // home = all content
+      // 1) HOME (nessun filtro e nessuna ricerca) → mostro SOLO le note
       if (!activeFilter && !qOn) {
-        PUBS.forEach(p => 
-          p.cards
-           .filter(c => !c.title.startsWith('📖'))
-           .forEach(c => stack.push(pubCard(p, c, false)))
-        );
-        BOOKSARR.forEach(b => stack.push(bookCard(b, false)));
-        NOTESARR.forEach(n => stack.push(noteCard(n, false)));
+        // carico tutte le note in ordine random
+        NOTESARR.forEach(n => {
+          stack.push(noteCard(n, false));
+        });
       }
-      // tag filter
+      // 2) FILTRO PER TAG (senza ricerca)
       else if (activeFilter && !qOn) {
         if (selTags.size === 1 && selTags.has('📚')) {
           stack = BOOKSARR.map(b => bookCard(b, false));
@@ -203,16 +200,16 @@
           stack = NOTESARR.map(n => noteCard(n, false));
         }
         else {
-          PUBS.forEach(p => 
+          PUBS.forEach(p =>
             p.cards
              .filter(c => !c.title.startsWith('📖') && c.tags?.some(t => selTags.has(t)))
              .forEach(c => stack.push(pubCard(p, c, false)))
           );
         }
       }
-      // search (with or w/out tag)
+      // 3) RICERCA (con o senza tag)
       else {
-        PUBS.forEach(p => 
+        PUBS.forEach(p =>
           p.cards
            .filter(c => {
              const tagOk = !activeFilter || c.tags?.some(t => selTags.has(t));
@@ -233,19 +230,7 @@
         });
       }
 
-      // ←–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-      // Fallback: If no cards matched filters/search, show “home” content anyway
-      if (stack.length === 0) {
-        PUBS.forEach(p => 
-          p.cards
-           .filter(c => !c.title.startsWith('📖'))
-           .forEach(c => stack.push(pubCard(p, c, false)))
-        );
-        BOOKSARR.forEach(b => stack.push(bookCard(b, false)));
-        NOTESARR.forEach(n => stack.push(noteCard(n, false)));
-      }
-      // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––→
-
+      // mescolo gli elementi prima di aggiungerli al DOM
       rnd(stack).forEach(el => cv.appendChild(el));
       cv.scrollTo(0, 0);
     }
