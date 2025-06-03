@@ -1,182 +1,163 @@
-<!DOCTYPE html>
-<html lang="it">
+<!DOCTYPE html><html lang="it" id="root">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>futuro fortissimo – explorer</title>
 
-<!-- Fonts -->
+<!-- Fonts & Tailwind -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital@700&display=swap" rel="stylesheet">
-
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{
+  fontFamily:{sans:['Inter','system-ui']},
+  colors:{bg:'#f6f9fe',acc:'#38bdf8'}
+}}}
+</script>
 <style>
-:root{
-  --bg:#f6f9fe;--fg:#111;--acc:#38bdf8;
-  --hdr:60px;--srch:60px;--side:46px
-}
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--fg);overflow:hidden}
-a,button{all:unset;cursor:pointer}
-mark{background:var(--acc);color:#fff;padding:0 3px;border-radius:3px}
-
-/* HEADER ------------------------------------------------*/
-header{position:fixed;top:0;left:0;right:0;height:var(--hdr);
-       display:flex;align-items:center;justify-content:space-between;
-       padding:0 6vw;z-index:20}
-#logoWrap{display:flex;align-items:center;gap:.55rem}
-#logoWrap img{height:34px}
-#logoWrap h1{font-family:"Playfair Display",serif;font-size:1.55rem;font-style:italic}
-#ctaHead{display:flex;gap:.9rem;font-size:1.8rem}
-
-/* SIDE BAR ---------------------------------------------*/
-#gutter{position:fixed;top:var(--hdr);bottom:var(--srch);right:0;width:var(--side);
-        display:flex;flex-direction:column;align-items:center;gap:.45rem;padding-top:.7rem;overflow-y:auto}
-.tag{font-size:1.38rem;padding:.12rem;border-radius:50%;cursor:pointer;transition:.2s}
-.tag.active{background:var(--acc);color:#fff}
-
-/* CANVAS -----------------------------------------------*/
-#canvas{position:fixed;top:var(--hdr);left:0;right:var(--side);bottom:var(--srch);
-        overflow-y:auto;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch}
-.page{min-height:calc(100vh - var(--hdr) - var(--srch));
-      display:flex;align-items:center;justify-content:flex-start;padding-left:6vw;
-      scroll-snap-align:start}
-.box{max-width:720px;width:calc(100% - 12vw);max-height:80vh;overflow-y:auto}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:Inter,sans-serif;background:var(--tw-bg-opacity) bg;color:#111;overflow:hidden}
+mark{background:#38bdf8;color:#fff;padding:0 3px;border-radius:3px}
+.pill,.tag{background:#fff;padding:4px 13px;border-radius:9999px;cursor:pointer;user-select:none;transition:.2s}
+.pill{font-size:1.2rem}.pill.active{outline:2px solid #38bdf8}
+.tag{font-size:.85rem;margin-top:4px;margin-right:4px}
+#canvas{scroll-snap-type:y mandatory;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.page{min-height:calc(100vh - 120px);scroll-snap-align:start;display:flex;align-items:center;padding-left:6vw}
+.box{width:calc(100% - 12vw);max-width:720px;max-height:78vh;overflow-y:auto;padding:2rem 1.7rem}
 .box::-webkit-scrollbar{display:none}
-.box h2{font-size:1.44rem;font-weight:700;margin-bottom:.65rem;text-wrap:balance}
-.box h3{font-size:1.3rem;font-weight:700;margin:.45rem 0 .4rem}
-.box p{font-size:1.16rem;line-height:1.55;margin-bottom:.8rem}
-.book h2{font-size:1.26rem}.book p{font-size:1.06rem}
-.src{font-size:.8rem;color:#555;margin-top:.34rem}
-
-/* SEARCH BAR -------------------------------------------*/
-#searchWrap{position:fixed;left:0;right:0;bottom:0;height:var(--srch);
-            background:var(--bg);display:flex;align-items:center;padding:0 6vw;
-            gap:.7rem;border-top:1px solid #ddd;z-index:15}
-#search{flex:1;font-size:1.25rem;padding:.55rem 1.05rem;border-radius:999px;
-        border:2px solid var(--fg);background:#fff;outline:none}
-#searchBtn{font-size:2rem;color:var(--acc);line-height:1}
+.box h3{font-size:1.35rem;font-weight:700;margin-bottom:.4rem}
+.box p{font-size:1.15rem;line-height:1.6;margin-bottom:.65rem}
+.box.book h3{font-size:1.15rem}
+.src{font-size:.8rem;color:#555;margin-top:.3rem}
 </style>
 </head>
 
 <body>
-<!-- header -->
-<header>
-  <div id="logoWrap"><img src="logo.png" alt="logo"><h1>futuro&nbsp;fortissimo</h1></div>
-  <div id="ctaHead">
-    <div onclick="openExt('https://www.paypal.com/paypalme/michelemerelli')">☕</div>
-    <div onclick="openExt('https://linktr.ee/micmer')">👤</div>
+<!-- HEADER -->
+<header class="fixed inset-x-0 top-0 h-[60px] px-[6vw] flex items-center justify-between z-30">
+  <div class="flex items-center gap-2">
+    <img src="logo.png" class="h-8">
+    <h1 class="font-[Playfair_Display] italic text-[1.55rem]">futuro&nbsp;fortissimo</h1>
+  </div>
+  <div id="cta" class="flex items-center gap-4 text-[2rem]">
+    <span id="ctaCoffee">☕</span><span id="ctaAbout">👤</span>
+    <span id="langBtn" class="cursor-pointer">🇬🇧</span>
   </div>
 </header>
 
-<!-- side bar emoji -->
-<div id="gutter"></div>
+<!-- SIDE EMOJI BAR -->
+<aside id="side" class="fixed top-[60px] bottom-[60px] right-0 w-[46px] flex flex-col items-center gap-2 pt-3 overflow-y-auto">
+</aside>
 
-<!-- vertical canvas -->
-<div id="canvas"></div>
+<!-- CANVAS -->
+<main id="canvas" class="fixed top-[60px] bottom-[60px] right-[46px] left-0"></main>
 
-<!-- search bottom -->
-<div id="searchWrap">
-  <input id="search" placeholder="search / cerca…" />
-  <button id="searchBtn">🔍</button>
-</div>
+<!-- SEARCH -->
+<footer class="fixed inset-x-0 bottom-0 h-[60px] bg-bg flex items-center px-[6vw] gap-3">
+  <input id="search" placeholder="cerca / search…" class="flex-1 rounded-full border-2 border-black px-4 py-2 text-lg outline-none">
+  <button id="searchBtn" class="text-[1.8rem] text-acc">🔍</button>
+</footer>
 
 <script>
-/* ---------- paths ---------- */
+/* -------- data paths -------- */
 const PATH={it:'newsletter_data.json',en:'newsletter_data_en.json'},
-      NOTES_P='notes.json',BOOKS_P='books.json';
+      NOTES='notes.json',BOOKS='books.json';
 
-/* ---------- state ---------- */
-let LANG='it',PUBS,NOTES,BOOKS;
-const sel=new Set(), tagAll=['📚','🎶','💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'];
+/* -------- state -------- */
+let PUBS,NOTESARR,BOOKSARR,LANG='it',q='';
+const selTags=new Set();
+const gradients=['linear-gradient(135deg,#38bdf8,#c084fc)','linear-gradient(135deg,#f472b6,#facc15)','linear-gradient(135deg,#34d399,#60a5fa)','linear-gradient(135deg,#f87171,#fb923c)','linear-gradient(135deg,#a78bfa,#f472b6)','linear-gradient(135deg,#fb923c,#fde68a)','linear-gradient(135deg,#5eead4,#3b82f6)','linear-gradient(135deg,#fda4af,#c4b5fd)'];
+const allTags=['📚','🎶','💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'];
 
-/* ---------- helpers ---------- */
+/* -------- helpers -------- */
 const $=s=>document.querySelector(s),
       rnd=a=>a.sort(()=>Math.random()-.5),
-      openExt=u=>window.open(u,'_blank'),
-      mark=(t,q)=>q?t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>'):t;
+      match=(t)=>t.includes(q),
+      mark=(t)=>q?t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>'):t,
+      pg=(c)=>{const p=document.createElement('section');p.className='page';p.appendChild(c);return p;},
+      openNew=u=>window.open(u,'_blank');
 
-/* ---------- side bar ---------- */
-const gut=$('#gutter');
-tagAll.forEach(e=>{
-  const d=document.createElement('div');d.textContent=e;d.className='tag';
-  d.onclick=()=>{d.classList.toggle('active');sel.has(e)?sel.delete(e):sel.add(e);render();};
-  gut.appendChild(d);
+/* -------- build side tags -------- */
+const side=$('#side');
+allTags.forEach(t=>{
+  const el=document.createElement('div');el.textContent=t;el.className='pill';el.onclick=()=>{el.classList.toggle('active');selTags.has(t)?selTags.delete(t):selTags.add(t);render();};side.appendChild(el);
 });
 
-/* ---------- search ---------- */
-let q='';const sIn=$('#search');
-$('#searchBtn').onclick=()=>{q=sIn.value.trim().toLowerCase();sIn.blur();render();};
-sIn.oninput=()=>{q=sIn.value.trim().toLowerCase();render();};
+/* -------- CTA & lang -------- */
+$('#ctaCoffee').onclick=()=>openNew('https://www.paypal.com/paypalme/michelemerelli');
+$('#ctaAbout').onclick=()=>openNew('https://linktr.ee/micmer');
+$('#langBtn').onclick=()=>{LANG=LANG==='it'?'en':'it';$('#langBtn').textContent=LANG==='it'?'🇬🇧':'🇮🇹';loadData();};
 
-/* ---------- data ---------- */
-Promise.all([
- fetch(PATH.it).then(r=>r.json()),
- fetch(NOTES_P).then(r=>r.json()),
- fetch(BOOKS_P).then(r=>r.json())
-]).then(([d,n,b])=>{
-  PUBS=d.publications;
-  NOTES=n.notes.map(o=>({...o,tags:['🎶']}));
-  BOOKS=b.map(o=>({...o,tags:['📚']}));
-  shuffleAll();render();
-});
+/* -------- search -------- */
+const sInp=$('#search');sInp.oninput=()=>{q=sInp.value.trim().toLowerCase();render();};
+$('#searchBtn').onclick=()=>{sInp.blur();q=sInp.value.trim().toLowerCase();render();};
 
-/* ---------- shuffle stacks ---------- */
-function shuffleAll(){
-  PUBS=rnd(PUBS);NOTES=rnd(NOTES);BOOKS=rnd(BOOKS);
+/* -------- load data -------- */
+function loadData(){
+  Promise.all([
+    fetch(PATH[LANG]).then(r=>r.json()),
+    fetch(NOTES).then(r=>r.json()),
+    fetch(BOOKS).then(r=>r.json())
+  ]).then(([d,n,b])=>{
+    PUBS=rnd(d.publications);
+    NOTESARR=rnd(n.notes).map(o=>({...o,tags:['🎶']}));
+    BOOKSARR=rnd(b).map(o=>({...o,tags:['📚']}));
+    selTags.clear();document.querySelectorAll('#side .pill.active').forEach(p=>p.classList.remove('active'));
+    q='';sInp.value='';render();
+  });
 }
 
-/* ---------- filtering ---------- */
-const tagOK=(o)=>sel.size?o.tags?.some(t=>sel.has(t)):true;
-function searchOK(text){return q?text.toLowerCase().includes(q):true;}
-
-/* ---------- render ---------- */
-function render(){
- const cv=$('#canvas');cv.innerHTML='';let stack=[];
-
- /* build candidate list */
- if(q||sel.size){ // filtered
-   PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&tagOK(c)&&(searchOK(c.title)||c.contentBlocks[0].content.some(l=>searchOK(l))))
-              .forEach(c=>stack.push(pubCard(p,c,true))));
-   BOOKS.forEach(b=>tagOK(b)&&(searchOK(b.title)||searchOK(b.text))&&stack.push(bookCard(b,true)));
-   NOTES.forEach(n=>tagOK(n)&&searchOK(n.title)&&stack.push(noteCard(n,true)));
- }
- else{ // home: everything random
-   PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>stack.push(pubCard(p,c,false))));
-   BOOKS.forEach(b=>stack.push(bookCard(b,false)));
-   NOTES.forEach(n=>stack.push(noteCard(n,false)));
-   stack=rnd(stack);
- }
-
- /* mount pages */
- stack.forEach(el=>cv.appendChild(pageWrap(el)));
- cv.scrollTo(0,0);
+/* -------- factories -------- */
+function pubCard(p,s,hi){
+  const c=document.createElement('div');c.className='box';c.style.background='#fff';
+  c.innerHTML=`<h3>${hi?mark(s.title):s.title}</h3>`+s.contentBlocks[0].content.map(l=>`<p>${hi?mark(l):l}</p>`).join('');
+  c.onclick=()=>openNew(p.substackLink);return pg(c);
 }
-
-/* ---------- factories ---------- */
-function pageWrap(child){const s=document.createElement('section');s.className='page';s.appendChild(child);return s;}
-
-function pubCard(pub,sub,hi){
- const d=document.createElement('div');d.className='box';d.style.background='transparent';
- d.innerHTML=`<h3>${hi?mark(sub.title,q):sub.title}</h3>`+
-             sub.contentBlocks[0].content.map(l=>`<p>${hi?mark(l,q):l}</p>`).join('')+
-             `<div class="mt-2">${(sub.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>`;
- d.onclick=()=>openExt(pub.substackLink);return d;
-}
-
 function bookCard(b,hi){
- const d=document.createElement('div');d.className='box book';
- d.innerHTML=`<h2>${hi?mark(b.title,q):b.title}</h2><p>${hi?mark(b.text,q):b.text}</p>
-              <p class="src">${b.book} — ${b.author}</p>`;
- if(b.url)d.onclick=()=>openExt(b.url);return d;
+  const c=document.createElement('div');c.className='box book';c.style.background='#fff';
+  c.innerHTML=`<h3>${hi?mark(b.title):b.title}</h3><p>${hi?mark(b.text):b.text}</p><p class="src">${b.book} — ${b.author}</p>`;
+  if(b.url)c.onclick=()=>openNew(b.url);return pg(c);
+}
+function noteCard(n,hi){
+  const host=n.url?new URL(n.url).hostname.replace(/^www\./,''):'';
+  const c=document.createElement('div');c.className='box';c.style.background='#fff';
+  c.innerHTML=`<h3>${hi?mark(n.title):n.title}</h3>${host?`<p class="src">${host}</p>`:''}`;
+  if(n.url)c.onclick=()=>openNew(n.url);return pg(c);
 }
 
-function noteCard(n,hi){
- const host=n.url?new URL(n.url).hostname.replace(/^www\./,''):'';
- const d=document.createElement('div');d.className='box';
- d.innerHTML=`<h2>${hi?mark(n.title,q):n.title}</h2>${host?`<p class="src">${host}</p>`:''}`;
- if(n.url)d.onclick=()=>openExt(n.url);return d;
+/* -------- render -------- */
+function render(){
+  const cv=$('#canvas');cv.innerHTML='';
+  const activeFilter=selTags.size,qOn=q.length>0;
+  let stack=[];
+
+  // home = all content
+  if(!activeFilter && !qOn){
+    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')).forEach(c=>stack.push(pubCard(p,c,false))));
+    BOOKSARR.forEach(b=>stack.push(bookCard(b,false)));
+    NOTESARR.forEach(n=>stack.push(noteCard(n,false)));
+  }
+  // tag filter
+  else if(activeFilter && !qOn){
+    if(selTags.size===1&&selTags.has('📚')) stack=BOOKSARR.map(b=>bookCard(b,false));
+    else if(selTags.size===1&&selTags.has('🎶')) stack=NOTESARR.map(n=>noteCard(n,false));
+    else PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖')&&c.tags?.some(t=>selTags.has(t))).forEach(c=>stack.push(pubCard(p,c,false))));
+  }
+  // search (with or w/out tag)
+  else{
+    PUBS.forEach(p=>p.cards.filter(c=>{
+      const tagOk=!activeFilter||c.tags?.some(t=>selTags.has(t));
+      const textOk=match((c.title+c.contentBlocks[0].content.join(' ')).toLowerCase());
+      return !c.title.startsWith('📖')&&tagOk&&textOk;
+    }).forEach(c=>stack.push(pubCard(p,c,true))));
+    BOOKSARR.forEach(b=>{if((!activeFilter||selTags.has('📚'))&&match((b.title+b.text).toLowerCase()))stack.push(bookCard(b,true));});
+    NOTESARR.forEach(n=>{if((!activeFilter||selTags.has('🎶'))&&match(n.title.toLowerCase()))stack.push(noteCard(n,true));});
+  }
+
+  rnd(stack).forEach(el=>cv.appendChild(el));
+  cv.scrollTo(0,0);
 }
+
+loadData();
 </script>
-</body>
-</html>
+</body></html>
