@@ -205,13 +205,17 @@ function render(){
   }
   // —— ONLY TAG FILTER ——
   else if(hasFilter && !hasQuery){
-    if(selTags.size===1 && selTags.has('📚')){
-      stack=BOOKSARR.map(b=>bookCard(b,false));
-    }else if(selTags.size===1 && selTags.has(NOTE_TAG)){
-      stack=NOTESARR.map(n=>noteCard(n,false));
-    }else{
-      PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖') && c.tags?.some(t=>selTags.has(t))).forEach(c=>stack.push(pubCard(p,c,false))));
+    // Handle books filter
+    if(selTags.has('📚')){
+      stack.push(...BOOKSARR.map(b=>bookCard(b,false)));
     }
+    // Handle notes filter
+    if(selTags.has(NOTE_TAG)){
+      stack.push(...NOTESARR.map(n=>noteCard(n,false)));
+    }
+    // Handle publication cards with matching tags
+    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖') && c.tags?.some(t=>selTags.has(t))).forEach(c=>stack.push(pubCard(p,c,false))));
+    
     // Shuffle and append filtered items
     rnd(stack).forEach(el=>cv.appendChild(el));
   }
