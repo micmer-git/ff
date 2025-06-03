@@ -1,126 +1,121 @@
 <!DOCTYPE html>
 <html lang="it" id="root">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>futuro fortissimo – explorer</title>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>futuro fortissimo – explorer</title>
 
-  <!-- Fonts & Tailwind -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital@700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui']
-          },
-          colors: {
-            bg: '#f6f9fe',
-            acc: '#38bdf8'
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-    body{font-family:Inter,sans-serif;background:var(--tw-bg-opacity) bg;color:#111;overflow:hidden}
-    mark{background:#38bdf8;color:#fff;padding:0 3px;border-radius:3px}
-    .pill,.tag{background:#fff;padding:4px 13px;border-radius:9999px;cursor:pointer;user-select:none;transition:.2s}
-    .pill{font-size:1.2rem}
-    .pill.active{outline:2px solid #38bdf8}
-    .tag{font-size:.85rem;margin-top:4px;margin-right:4px}
-    #canvas{scroll-snap-type:y mandatory;overflow-y:auto;-webkit-overflow-scrolling:touch}
-    .page{min-height:calc(100vh - 120px);scroll-snap-align:start;display:flex;align-items:center;padding-left:6vw}
-    .box{width:calc(100% - 12vw);max-width:720px;max-height:78vh;overflow-y:auto;padding:2rem 1.7rem}
-    .box::-webkit-scrollbar{display:none}
-    .box h3{font-size:1.35rem;font-weight:700;margin-bottom:.4rem}
-    .box p{font-size:1.15rem;line-height:1.6;margin-bottom:.65rem}
-    .box.book h3{font-size:1.15rem}
-    .src{font-size:.8rem;color:#555;margin-top:.3rem}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui']
+          },
+          colors: {
+            bg: '#f6f9fe',
+            acc: '#38bdf8'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    body{font-family:Inter,sans-serif;background:var(--tw-bg-opacity) bg;color:#111;overflow:hidden}
+    mark{background:#38bdf8;color:#fff;padding:0 3px;border-radius:3px}
+    .pill,.tag{background:#fff;padding:4px 13px;border-radius:9999px;cursor:pointer;user-select:none;transition:.2s}
+    .pill{font-size:1.2rem}
+    .pill.active{outline:2px solid #38bdf8}
+    .tag{font-size:.85rem;margin-top:4px;margin-right:4px}
+    #canvas{scroll-snap-type:y mandatory;overflow-y:auto;-webkit-overflow-scrolling:touch}
+    .page{min-height:calc(100vh - 120px);scroll-snap-align:start;display:flex;align-items:center;padding-left:6vw}
+    .box{width:calc(100% - 12vw);max-width:720px;max-height:78vh;overflow-y:auto;padding:2rem 1.7rem}
+    .box::-webkit-scrollbar{display:none}
+    .box h3{font-size:1.35rem;font-weight:700;margin-bottom:.4rem}
+    .box p{font-size:1.15rem;line-height:1.6;margin-bottom:.65rem}
+    .box.book h3{font-size:1.15rem}
+    .src{font-size:.8rem;color:#555;margin-top:.3rem}
 
-    /* —— slightly larger fonts on desktop —— */
-    @media(min-width:1024px){
-      .box h3{font-size:1.55rem}
-      .box p{font-size:1.3rem}
-    }
-  </style>
+    /* —— slightly larger fonts on desktop —— */
+    @media(min-width:1024px){
+      .box h3{font-size:1.55rem}
+      .box p{font-size:1.3rem}
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="fixed inset-x-0 top-0 h-[60px] px-[6vw] flex items-center justify-between z-30">
-    <div class="flex items-center gap-2">
-      <img src="logo.png" class="h-8">
-      <h1 class="font-[Playfair_Display] italic text-[1.55rem]">futuro&nbsp;fortissimo</h1>
-    </div>
-    <div id="cta" class="flex items-center gap-4 text-[2rem]">
-      <span id="ctaCoffee">☕</span><span id="ctaAbout">👤</span>
-      <span id="langBtn" class="cursor-pointer">🇬🇧</span>
-    </div>
-  </header>
+    <header class="fixed inset-x-0 top-0 h-[60px] px-[6vw] flex items-center justify-between z-30">
+    <div class="flex items-center gap-2">
+      <img src="logo.png" class="h-8">
+      <h1 class="font-[Playfair_Display] italic text-[1.55rem]">futuro&nbsp;fortissimo</h1>
+    </div>
+    <div id="cta" class="flex items-center gap-4 text-[2rem]">
+      <span id="ctaCoffee">☕</span><span id="ctaAbout">👤</span>
+      <span id="langBtn" class="cursor-pointer">🇬🇧</span>
+    </div>
+  </header>
 
-  <!-- SIDE EMOJI BAR -->
-  <aside id="side" class="fixed top-[60px] bottom-[60px] right-0 w-[46px] flex flex-col items-center gap-2 pt-3 overflow-y-auto"></aside>
+    <aside id="side" class="fixed top-[60px] bottom-[60px] right-0 w-[46px] flex flex-col items-center gap-2 pt-3 overflow-y-auto"></aside>
 
-  <!-- CANVAS -->
-  <main id="canvas" class="fixed top-[60px] bottom-[60px] right-[46px] left-0"></main>
+    <main id="canvas" class="fixed top-[60px] bottom-[60px] right-[46px] left-0"></main>
 
-  <!-- SEARCH -->
-  <footer class="fixed inset-x-0 bottom-0 h-[60px] bg-bg flex items-center px-[6vw] gap-3">
-    <input id="search" placeholder="cerca / search…" class="flex-1 rounded-full border-2 border-black px-4 py-2 text-lg outline-none">
-    <button id="searchBtn" class="text-[1.8rem] text-acc">🔍</button>
-  </footer>
+    <footer class="fixed inset-x-0 bottom-0 h-[60px] bg-bg flex items-center px-[6vw] gap-3">
+    <input id="search" placeholder="cerca / search…" class="flex-1 rounded-full border-2 border-black px-4 py-2 text-lg outline-none">
+    <button id="searchBtn" class="text-[1.8rem] text-acc">🔍</button>
+  </footer>
 
 <script>
 /******************************
- *         CONSTANTS          *
- ******************************/
-const PATH  = { it: 'newsletter_data.json', en: 'newsletter_data_en.json' },
-      NOTES = 'notes.json',
-      BOOKS = 'books.json',
-      NOTE_TAG = '🎶'; // ← keep the original note tag!
+ *         CONSTANTS          *
+ ******************************/
+const PATH  = { it: 'newsletter_data.json', en: 'newsletter_data_en.json' },
+      NOTES = 'notes.json',
+      BOOKS = 'books.json',
+      NOTE_TAG = '🎶'; // ← keep the original note tag!
 
 /******************************
- *           STATE            *
- ******************************/
+ *           STATE            *
+ ******************************/
 let PUBS, NOTESARR, BOOKSARR, LANG = 'it', q = '';
 const selTags = new Set();
 
 /******************************
- *          HELPERS           *
- ******************************/
-const $     = s => document.querySelector(s),
-      rnd   = a => [...a].sort(()=>Math.random()-0.5), // non‑mutating shuffle
-      match = t => t.includes(q),
-      mark  = t => q ? t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>') : t,
-      pg    = c => { const p = document.createElement('section'); p.className='page'; p.appendChild(c); return p; },
-      open  = url => window.open(url,'_blank');
+ *          HELPERS           *
+ ******************************/
+const $     = s => document.querySelector(s),
+      rnd   = a => [...a].sort(()=>Math.random()-0.5), // non‑mutating shuffle
+      match = t => t.includes(q),
+      mark  = t => q ? t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>') : t,
+      pg    = c => { const p = document.createElement('section'); p.className='page'; p.appendChild(c); return p; },
+      open  = url => window.open(url,'_blank');
 
 /******************************
- *          UI SETUP          *
- ******************************/
+ *          UI SETUP          *
+ ******************************/
 const allTags = ['📚', NOTE_TAG, '💻','🍃','❤️','💸','⚽','🍽','🧠','💊','🎨','🚕','🥽','👥','💆'];
 const side = $('#side');
 allTags.forEach(tag=>{
-  const el=document.createElement('div');
-  el.textContent=tag;
-  el.className='pill';
-  el.onclick=()=>{
-    el.classList.toggle('active');
-    selTags.has(tag)?selTags.delete(tag):selTags.add(tag);
-    render();
-  };
-  side.appendChild(el);
+  const el=document.createElement('div');
+  el.textContent=tag;
+  el.className='pill';
+  el.onclick=()=>{
+    el.classList.toggle('active');
+    selTags.has(tag)?selTags.delete(tag):selTags.add(tag);
+    render();
+  };
+  side.appendChild(el);
 });
 
 $('#ctaCoffee').onclick=()=>open('https://www.paypal.com/paypalme/michelemerelli');
 $('#ctaAbout').onclick =()=>open('https://linktr.ee/micmer');
-$('#langBtn').onclick   =()=>{
-  LANG = LANG==='it'?'en':'it';
-  $('#langBtn').textContent = LANG==='it'?'🇬🇧':'🇮🇹';
-  loadData();
+$('#langBtn').onclick   =()=>{
+  LANG = LANG==='it'?'en':'it';
+  $('#langBtn').textContent = LANG==='it'?'🇬🇧':'🇮🇹';
+  loadData();
 };
 
 const searchInput = $('#search');
@@ -128,127 +123,134 @@ searchInput.oninput =()=>{q=searchInput.value.trim().toLowerCase();render();};
 $('#searchBtn').onclick =()=>{searchInput.blur();q=searchInput.value.trim().toLowerCase();render();};
 
 /******************************
- *         DATA LOAD          *
- ******************************/
+ *         DATA LOAD          *
+ ******************************/
 function loadData(){
-  Promise.all([
-    fetch(PATH[LANG]).then(r=>r.json()),
-    fetch(NOTES).then(r=>r.json()),
-    fetch(BOOKS).then(r=>r.json())
-  ]).then(([pubData, noteData, bookData])=>{
-    PUBS      = pubData.publications; // don't shuffle here - we'll shuffle per render
-    NOTESARR  = noteData.notes.map(n=>({...n, tags: n.tags?.length?n.tags:[NOTE_TAG]}));
-    BOOKSARR  = bookData.map(b=>({...b, tags: b.tags?.length?b.tags:['📚']}));
+  Promise.all([
+    fetch(PATH[LANG]).then(r=>r.json()),
+    fetch(NOTES).then(r=>r.json()),
+    fetch(BOOKS).then(r=>r.json())
+  ]).then(([pubData, noteData, bookData])=>{
+    PUBS      = pubData.publications; // don't shuffle here - we'll shuffle per render
+    NOTESARR  = noteData.notes.map(n => {
+      const existingTags = n.tags?.length ? n.tags : [];
+      // Ensure NOTE_TAG is always present if it's not already
+      if (!existingTags.includes(NOTE_TAG)) {
+        existingTags.push(NOTE_TAG);
+      }
+      return { ...n, tags: existingTags };
+    });
+    BOOKSARR  = bookData.map(b=>({...b, tags: b.tags?.length?b.tags:['📚']}));
 
-    // reset filters/search UI
-    selTags.clear();
-    document.querySelectorAll('#side .pill.active').forEach(p=>p.classList.remove('active'));
-    q='';
-    searchInput.value='';
+    // reset filters/search UI
+    selTags.clear();
+    document.querySelectorAll('#side .pill.active').forEach(p=>p.classList.remove('active'));
+    q='';
+    searchInput.value='';
 
-    render();
-  });
+    render();
+  });
 }
 
 /******************************
- *         CARD FACTORY       *
- ******************************/
+ *         CARD FACTORY       *
+ ******************************/
 function pubCard(pub, scheda, highlight){
-  const c=document.createElement('div');
-  c.className='box';
-  c.style.background='#fff';
-  c.innerHTML=`<h3>${highlight?mark(scheda.title):scheda.title}</h3>`+
-              scheda.contentBlocks[0].content.map(l=>`<p>${highlight?mark(l):l}</p>`).join('');
-  c.onclick=()=>open(pub.substackLink);
-  return pg(c);
+  const c=document.createElement('div');
+  c.className='box';
+  c.style.background='#fff';
+  c.innerHTML=`<h3>${highlight?mark(scheda.title):scheda.title}</h3>`+
+              scheda.contentBlocks[0].content.map(l=>`<p>${highlight?mark(l):l}</p>`).join('');
+  c.onclick=()=>open(pub.substackLink);
+  return pg(c);
 }
 function bookCard(b, highlight){
-  const c=document.createElement('div');
-  c.className='box book';
-  c.style.background='#fff';
-  c.innerHTML=`<h3>${highlight?mark(b.title):b.title}</h3>`+
-              `<p>${highlight?mark(b.text):b.text}</p>`+
-              `<p class='src'>${b.book} — ${b.author}</p>`;
-  if(b.url) c.onclick=()=>open(b.url);
-  return pg(c);
+  const c=document.createElement('div');
+  c.className='box book';
+  c.style.background='#fff';
+  c.innerHTML=`<h3>${highlight?mark(b.title):b.title}</h3>`+
+              `<p>${highlight?mark(b.text):b.text}</p>`+
+              `<p class='src'>${b.book} — ${b.author}</p>`;
+  if(b.url) c.onclick=()=>open(b.url);
+  return pg(c);
 }
 function noteCard(n, highlight){
-  const host=n.url?new URL(n.url).hostname.replace(/^www\./,''):'';
-  const c=document.createElement('div');
-  c.className='box';
-  c.style.background='#fff';
-  c.innerHTML=`<h3>${highlight?mark(n.title):n.title}</h3>${host?`<p class='src'>${host}</p>`:''}`;
-  if(n.url) c.onclick=()=>open(n.url);
-  return pg(c);
+  const host=n.url?new URL(n.url).hostname.replace(/^www\./,''):'';
+  const c=document.createElement('div');
+  c.className='box';
+  c.style.background='#fff';
+  c.innerHTML=`<h3>${highlight?mark(n.title):n.title}</h3>${host?`<p class='src'>${host}</p>`:''}`;
+  if(n.url) c.onclick=()=>open(n.url);
+  return pg(c);
 }
 
 /******************************
- *           RENDER           *
- ******************************/
+ *           RENDER           *
+ ******************************/
 function render(){
-  const cv = $('#canvas');
-  cv.innerHTML='';
+  const cv = $('#canvas');
+  cv.innerHTML='';
 
-  const hasFilter = selTags.size>0,
-        hasQuery  = q.length>0;
-  let stack=[];
+  const hasFilter = selTags.size>0,
+        hasQuery  = q.length>0;
+  let stack=[];
 
-  // —— HOME (no filter, no search) ——
-  if(!hasFilter && !hasQuery){
-    stack=[
-      ...PUBS.flatMap(p=>p.cards.filter(c=>!c.title.startsWith('📖')).map(c=>pubCard(p,c,false))),
-      ...BOOKSARR.map(b=>bookCard(b,false)),
-      ...NOTESARR.map(n=>noteCard(n,false))
-    ];
-    // Shuffle and append all items
-    rnd(stack).forEach(el=>cv.appendChild(el));
-  }
-  // —— ONLY TAG FILTER ——
-  else if(hasFilter && !hasQuery){
-    // Handle books filter
-    if(selTags.has('📚')){
-      stack.push(...BOOKSARR.map(b=>bookCard(b,false)));
-    }
-    // Handle notes filter
-    if(selTags.has(NOTE_TAG)){
-      stack.push(...NOTESARR.map(n=>noteCard(n,false)));
-    }
-    // Handle publication cards with matching tags
-    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖') && c.tags?.some(t=>selTags.has(t))).forEach(c=>stack.push(pubCard(p,c,false))));
-    
-    // Shuffle and append filtered items
-    rnd(stack).forEach(el=>cv.appendChild(el));
-  }
-  // —— SEARCH (with/without tags) ——
-  else{
-    PUBS.forEach(p=>p.cards.filter(c=>{
-      const tagOk = !hasFilter || c.tags?.some(t=>selTags.has(t));
-      const txtOk = match((c.title + c.contentBlocks[0].content.join(' ')).toLowerCase());
-      return !c.title.startsWith('📖') && tagOk && txtOk;
-    }).forEach(c=>stack.push(pubCard(p,c,true))));
+  // —— HOME (no filter, no search) ——
+  if(!hasFilter && !hasQuery){
+    stack=[
+      ...PUBS.flatMap(p=>p.cards.filter(c=>!c.title.startsWith('📖')).map(c=>pubCard(p,c,false))),
+      ...BOOKSARR.map(b=>bookCard(b,false)),
+      ...NOTESARR.map(n=>noteCard(n,false))
+    ];
+    // Shuffle and append all items
+    rnd(stack).forEach(el=>cv.appendChild(el));
+  }
+  // —— ONLY TAG FILTER ——
+  else if(hasFilter && !hasQuery){
+    // Handle books filter
+    if(selTags.has('📚')){
+      stack.push(...BOOKSARR.map(b=>bookCard(b,false)));
+    }
+    // Handle notes filter
+    if(selTags.has(NOTE_TAG)){
+      stack.push(...NOTESARR.map(n=>noteCard(n,false)));
+    }
+    // Handle publication cards with matching tags
+    PUBS.forEach(p=>p.cards.filter(c=>!c.title.startsWith('📖') && c.tags?.some(t=>selTags.has(t))).forEach(c=>stack.push(pubCard(p,c,false))));
+    
+    // Shuffle and append filtered items
+    rnd(stack).forEach(el=>cv.appendChild(el));
+  }
+  // —— SEARCH (with/without tags) ——
+  else{
+    PUBS.forEach(p=>p.cards.filter(c=>{
+      const tagOk = !hasFilter || c.tags?.some(t=>selTags.has(t));
+      const txtOk = match((c.title + c.contentBlocks[0].content.join(' ')).toLowerCase());
+      return !c.title.startsWith('📖') && tagOk && txtOk;
+    }).forEach(c=>stack.push(pubCard(p,c,true))));
 
-    BOOKSARR.forEach(b=>{
-      if((!hasFilter || selTags.has('📚')) && match((b.title+b.text).toLowerCase())) stack.push(bookCard(b,true));
-    });
-    NOTESARR.forEach(n=>{
-      if((!hasFilter || selTags.has(NOTE_TAG)) && match(n.title.toLowerCase())) stack.push(noteCard(n,true));
-    });
-    // Don't shuffle search results - keep them ordered by relevance
-    stack.forEach(el=>cv.appendChild(el));
-  }
+    BOOKSARR.forEach(b=>{
+      if((!hasFilter || selTags.has('📚')) && match((b.title+b.text).toLowerCase())) stack.push(bookCard(b,true));
+    });
+    NOTESARR.forEach(n=>{
+      if((!hasFilter || selTags.has(NOTE_TAG)) && match(n.title.toLowerCase())) stack.push(noteCard(n,true));
+    });
+    // Don't shuffle search results - keep them ordered by relevance
+    stack.forEach(el=>cv.appendChild(el));
+  }
 
-  // —— FALLBACK ——
-  if(stack.length===0){
-    stack=[
-      ...PUBS.flatMap(p=>p.cards.filter(c=>!c.title.startsWith('📖')).map(c=>pubCard(p,c,false))),
-      ...BOOKSARR.map(b=>bookCard(b,false)),
-      ...NOTESARR.map(n=>noteCard(n,false))
-    ];
-    rnd(stack).forEach(el=>cv.appendChild(el));
-  }
+  // —— FALLBACK ——
+  if(stack.length===0){
+    stack=[
+      ...PUBS.flatMap(p=>p.cards.filter(c=>!c.title.startsWith('📖')).map(c=>pubCard(p,c,false))),
+      ...BOOKSARR.map(b=>bookCard(b,false)),
+      ...NOTESARR.map(n=>noteCard(n,false))
+    ];
+    rnd(stack).forEach(el=>cv.appendChild(el));
+  }
 
-  // always scroll top after render
-  cv.scrollTo(0,0);
+  // always scroll top after render
+  cv.scrollTo(0,0);
 }
 
 loadData();
