@@ -1,14 +1,14 @@
 {
-  "short_name": "ff",
-  "name": "futuro fortissimo",
+  "short_name": "FF",
+  "name": "Futuro Fortissimo",
   "icons": [
     {
-      "src": "/index_files/ff_white.png",
+      "src": "ff_white.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/index_files/ff_white.png",
+      "src": "ff_white.png",
       "type": "image/png",
       "sizes": "512x512"
     }
