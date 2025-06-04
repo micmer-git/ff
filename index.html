@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="it" id="root">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Futuro Fortissimo newsletter explorer. Risorse su innovazione, tecnologia e cultura in italiano e inglese.">
+  <meta name="keywords" content="futuro fortissimo, newsletter, innovazione, tecnologia, cultura, futuro">
+  <meta property="og:title" content="Futuro Fortissimo – Explorer">
+  <meta property="og:description" content="Esplora il futuro con articoli, libri e note selezionate in italiano e inglese.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://futurofortissimo.com/">
+  <meta property="og:image" content="https://futurofortissimo.com/logo.png">
+  <link rel="canonical" href="https://futurofortissimo.com/">
   <title>futuro fortissimo – explorer</title>
 
   <!-- Fonts & Tailwind -->
@@ -28,16 +37,13 @@
     *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
     body{font-family:Inter,sans-serif;background:#f6f9fe;color:#111;overflow:hidden}
     mark{background:#38bdf8;color:#fff;padding:0 3px;border-radius:3px}
-    .pill,.tag{background:#fff;padding:4px 13px;border-radius:9999px;cursor:pointer;user-select:none;transition:.2s}
-    .pill{font-size:1.2rem}
+    .emoji-btn{width:40px;height:40px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;transition:.2s;font-size:1.5rem}
+    .pill{width:40px;height:40px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;transition:.2s;font-size:1.5rem}
     .pill.active{outline:2px solid #38bdf8}
     .tag{font-size:.85rem;margin-top:4px;margin-right:4px}
     #canvas{scroll-snap-type:y mandatory;overflow-y:auto;-webkit-overflow-scrolling:touch}
     .page{position:relative;min-height:calc(100vh - 120px);scroll-snap-align:start;display:flex;align-items:center;padding-left:6vw}
-    .arrow{position:absolute;left:50%;transform:translateX(-50%);font-size:1.3rem;opacity:.4;pointer-events:none}
-    .arrow.up{top:6px}
-    .arrow.down{bottom:6px}
-    .box{width:calc(100% - 12vw);max-width:720px;max-height:78vh;overflow-y:auto;padding:2rem 1.7rem;border-radius:.6rem;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+    .box{width:calc(100% - 10vw);max-width:720px;max-height:78vh;overflow-y:auto;padding:2rem 1.7rem;border-radius:.6rem;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
     .box::-webkit-scrollbar{display:none}
     .box h3{font-size:1.35rem;font-weight:700;margin-bottom:.4rem}
     .box p{font-size:1.15rem;line-height:1.6;margin-bottom:.65rem}
@@ -55,25 +61,25 @@
   <!-- HEADER -->
   <header class="fixed inset-x-0 top-0 h-[60px] px-[6vw] flex items-center justify-between bg-white shadow z-30">
     <div class="flex items-center gap-2">
-      <img src="logo.png" class="h-8">
+      <img src="logo.png" alt="futuro fortissimo logo" class="h-8">
       <h1 class="font-[Playfair_Display] italic text-[1.55rem]">futuro&nbsp;fortissimo</h1>
     </div>
   <div id="cta" class="flex items-center gap-4 text-[1.5rem]">
-      <span id="ctaCoffee">☕</span><span id="ctaAbout">👤</span>
-      <span id="langBtn" class="cursor-pointer">🇬🇧</span>
+      <span id="ctaCoffee" class="emoji-btn">☕</span><span id="ctaAbout" class="emoji-btn">👤</span>
+      <span id="langBtn" class="emoji-btn cursor-pointer">🇬🇧</span>
     </div>
   </header>
 
   <!-- SIDE EMOJI BAR -->
-  <aside id="side" class="fixed top-[60px] bottom-[60px] right-0 w-[46px] flex flex-col items-center gap-2 pt-3 overflow-y-auto"></aside>
+  <aside id="side" class="fixed top-[60px] bottom-[60px] right-0 w-[56px] flex flex-col items-center gap-2 pt-3 overflow-y-auto"></aside>
 
   <!-- CANVAS -->
-  <main id="canvas" class="fixed top-[60px] bottom-[60px] right-[46px] left-0"></main>
+  <main id="canvas" class="fixed top-[60px] bottom-[60px] right-[56px] left-0"></main>
 
   <!-- SEARCH -->
   <footer class="fixed inset-x-0 bottom-0 h-[60px] bg-bg shadow flex items-center px-[6vw] gap-3">
     <input id="search" placeholder="Cerca / Search…" class="flex-1 rounded-full border-2 border-gray-400 px-4 py-2 text-lg outline-none">
-    <button id="searchBtn" class="text-[1.8rem] text-acc">🔍</button>
+    <button id="searchBtn" class="emoji-btn text-acc">🔍</button>
   </footer>
 
 <script>
@@ -101,15 +107,7 @@ const $     = s => document.querySelector(s),
       pg    = c => {
         const p = document.createElement('section');
         p.className='page';
-        const up   = document.createElement('div');
-        up.className='arrow up';
-        up.textContent='\u2191';
-        const down = document.createElement('div');
-        down.className='arrow down';
-        down.textContent='\u2193';
-        p.appendChild(up);
         p.appendChild(c);
-        p.appendChild(down);
         return p;
       },
       open  = url => window.open(url,'_blank');
