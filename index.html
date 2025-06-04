@@ -3,15 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Futuro Fortissimo newsletter explorer. Risorse su innovazione, tecnologia e cultura in italiano e inglese.">
+  <meta name="description" content="Futuro Fortissimo newsletter con risorse su innovazione, tecnologia e cultura in italiano e inglese.">
   <meta name="keywords" content="futuro fortissimo, newsletter, innovazione, tecnologia, cultura, futuro">
-  <meta property="og:title" content="Futuro Fortissimo – Explorer">
+  <meta property="og:title" content="Futuro Fortissimo">
   <meta property="og:description" content="Esplora il futuro con articoli, libri e note selezionate in italiano e inglese.">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Futuro Fortissimo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Futuro Fortissimo">
+  <meta name="twitter:description" content="Esplora il futuro con articoli, libri e note selezionate in italiano e inglese.">
+  <meta name="twitter:image" content="logo.png">
   <meta property="og:url" content="https://futurofortissimo.com/">
-  <meta property="og:image" content="https://futurofortissimo.com/logo.png">
+  <meta property="og:image" content="logo.png">
   <link rel="canonical" href="https://futurofortissimo.com/">
-  <title>futuro fortissimo – explorer</title>
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <title>Futuro Fortissimo</title>
 
   <!-- Fonts & Tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -288,5 +298,6 @@ function render(){
 
 loadData();
 </script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js"));}</script>
 </body>
 </html>
