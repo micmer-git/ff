@@ -43,7 +43,7 @@
     .tag{font-size:.85rem;margin-top:4px;margin-right:4px}
     #canvas{scroll-snap-type:y mandatory;overflow-y:auto;-webkit-overflow-scrolling:touch}
     .page{position:relative;min-height:calc(100vh - 120px);scroll-snap-align:start;display:flex;align-items:center;padding-left:6vw}
-    .box{width:calc(100% - 10vw);max-width:720px;max-height:78vh;overflow-y:auto;padding:2rem 1.7rem;border-radius:.6rem;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+    .box{width:calc(100% - 6vw);max-width:840px;max-height:78vh;overflow-y:auto;padding:2rem 1.7rem;border-radius:.6rem;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
     .box::-webkit-scrollbar{display:none}
     .box h3{font-size:1.35rem;font-weight:700;margin-bottom:.4rem}
     .box p{font-size:1.15rem;line-height:1.6;margin-bottom:.65rem}
@@ -59,12 +59,12 @@
 </head>
 <body>
   <!-- HEADER -->
-  <header class="fixed inset-x-0 top-0 h-[60px] px-[6vw] flex items-center justify-between bg-white shadow z-30">
+  <header class="fixed inset-x-0 top-0 h-[60px] px-[6vw] flex items-center bg-white shadow z-30">
     <div class="flex items-center gap-2">
       <img src="logo.png" alt="futuro fortissimo logo" class="h-8">
       <h1 class="font-[Playfair_Display] italic text-[1.55rem]">futuro&nbsp;fortissimo</h1>
     </div>
-  <div id="cta" class="flex items-center gap-4 text-[1.5rem]">
+  <div id="cta" class="ml-auto flex items-center gap-2 text-[1.5rem]">
       <span id="ctaCoffee" class="emoji-btn">☕</span><span id="ctaAbout" class="emoji-btn">👤</span>
       <span id="langBtn" class="emoji-btn cursor-pointer">🇬🇧</span>
     </div>
@@ -86,10 +86,10 @@
 /******************************
  *         CONSTANTS          *
  ******************************/
-const PATH  = { it: 'newsletter_data.json', en: 'newsletter_data_en.json' },
-      NOTES = 'notes.json',
-      BOOKS = 'books.json',
-      NOTE_TAG = '🎶'; // ← keep the original note tag!
+const PATH       = { it: 'newsletter_data.json', en: 'newsletter_data_en.json' },
+      NOTES_PATH = { it: 'notes.json',         en: 'notes_en.json' },
+      BOOKS_PATH = { it: 'books.json',         en: 'books_en.json' },
+      NOTE_TAG   = '🎶'; // ← keep the original note tag!
 
 /******************************
  *           STATE            *
@@ -154,8 +154,8 @@ $('#searchBtn').onclick =()=>{searchInput.blur();q=searchInput.value.trim().toLo
 function loadData(){
   Promise.all([
     fetch(PATH[LANG]).then(r=>r.json()),
-    fetch(NOTES).then(r=>r.json()),
-    fetch(BOOKS).then(r=>r.json())
+    fetch(NOTES_PATH[LANG]).then(r=>r.json()),
+    fetch(BOOKS_PATH[LANG]).then(r=>r.json())
   ]).then(([pubData, noteData, bookData])=>{
     PUBS      = pubData.publications; // don't shuffle here - we'll shuffle per render
     NOTESARR  = noteData.notes.map(n=>({...n, tags: n.tags?.length?n.tags:[NOTE_TAG]}));
