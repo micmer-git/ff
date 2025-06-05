@@ -1,20 +1,21 @@
 {
-  "short_name": "FF",
   "name": "Futuro Fortissimo",
+  "short_name": "FF",
+  "start_url": "https://micmer-git.github.io/ff/",
+  "scope": "https://micmer-git.github.io/ff/",
+  "display": "standalone",
+  "background_color": "#f6f9fe",
+  "theme_color": "#38bdf8",
   "icons": [
     {
-      "src": "ff_white.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
-      "src": "ff_white.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  ],
-  "start_url": "/",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
