@@ -1,6 +1,95 @@
 {
   "publications": [
     {
+      "title": "🎼 ff.143 Monkeys with Rolex",
+      "buttonLabel": "🎼 ff.143 Monkeys with Rolex",
+      "urlSlug": "ff143-scimmie-col-rolex",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff143-scimmie-col-rolex",
+      "cards": [
+        {
+          "title": "📖 Overview",
+          "tags": [
+            "🍃",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Real luxury isn’t a Rolex: it’s breathable air, visible sun, usable water (biological nature).",
+                "In India the dystopia isn’t tech-driven: it’s climatic and Darwinian (animals + city systems).",
+                "Fire as survival / livelihood / transcendence: plastic bonfires, “Land of Fire”, Varanasi pyres."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌿 ff.143.1 Natural luxury",
+          "tags": [
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "When infrastructure stops being invisible, you see that first-world wealth is an ecosystem baseline: air, sun, water.",
+                "Not romantic “nature”, but elemental chemistry underneath the ego."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🐒 ff.143.2 Urban Darwinism",
+          "tags": [
+            "🧠",
+            "👥"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Organized monkey gangs around ice cream; a visceral evolutionary reminder.",
+                "Varanasi: animals and smoke around pyres — biological dystopia, not cyberpunk."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "☀️ ff.143.3 Sun & Asian Brown Cloud",
+          "tags": [
+            "🍃",
+            "💨"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "A grey haze makes the sun feel absent.",
+                "Geoengineering debates feel like a salon conversation when you live under an always-on atmospheric filter."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🔥 ff.143.4 Fire (three faces)",
+          "tags": [
+            "🔥",
+            "🧭"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Survival: plastic-and-waste bonfires to keep warm.",
+                "Livelihood: the “Land of Fire” imagery in Azerbaijan.",
+                "Transcendence: funeral pyres in Varanasi; when fire=plastic and air=wall, biological assumptions crack."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "🎼 ff.125 USA: Collapse of an Empire",
       "buttonLabel": "🎼 ff.125 USA: Collapse of an Empire",
       "urlSlug": "ff125-usa-collapse-of-an-empire",
@@ -8,7 +97,10 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["💻", "💸"],
+          "tags": [
+            "💻",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -23,41 +115,60 @@
         },
         {
           "title": "🏯 ff.125.1 Imperial Cycles",
-          "tags": ["💸", "🧠"],
+          "tags": [
+            "💸",
+            "🧠"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Since 1970, US GDP has grown 20× but federal debt 83×: Ray Dalio's vision returns to relevance with data shown by Lily Liu at TOKEN 2049."]
+              "content": [
+                "Since 1970, US GDP has grown 20× but federal debt 83×: Ray Dalio's vision returns to relevance with data shown by Lily Liu at TOKEN 2049."
+              ]
             }
           ]
         },
         {
           "title": "💵 ff.125.2 Stabilizing the Dollar",
-          "tags": ["💸"],
+          "tags": [
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Stablecoins surpass Visa and Mastercard (15T$ in transactions in 2024) and Stripe integrates their payments to defend against inflation from money-printing."]
+              "content": [
+                "Stablecoins surpass Visa and Mastercard (15T$ in transactions in 2024) and Stripe integrates their payments to defend against inflation from money-printing."
+              ]
             }
           ]
         },
         {
           "title": "🏮 ff.125.3 China: The Next World Empire?",
-          "tags": ["🚕", "⚽"],
+          "tags": [
+            "🚕",
+            "⚽"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Shenzhen demonstrates ultra-fast progress; Western stagnation pales before drones, flying cars and infrastructure built in just 40 years."]
+              "content": [
+                "Shenzhen demonstrates ultra-fast progress; Western stagnation pales before drones, flying cars and infrastructure built in just 40 years."
+              ]
             }
           ]
         },
         {
           "title": "🌐 ff.125.4 The Alternative to China: Internet",
-          "tags": ["💻", "👥"],
+          "tags": [
+            "💻",
+            "👥"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Balaji Srinivasan proposes a digital nation based on Bitcoin; BTC's resilience to Trump's tariffs and Coinbase's entry into the S&P 500 offer a glimpse."]
+              "content": [
+                "Balaji Srinivasan proposes a digital nation based on Bitcoin; BTC's resilience to Trump's tariffs and Coinbase's entry into the S&P 500 offer a glimpse."
+              ]
             }
           ]
         }
@@ -71,7 +182,10 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["🧠", "💊"],
+          "tags": [
+            "🧠",
+            "💊"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -86,41 +200,61 @@
         },
         {
           "title": "🦴 ff.124.1 Dalí Melting Collarbones",
-          "tags": ["🎨", "💆"],
+          "tags": [
+            "🎨",
+            "💆"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Fell off my bike, faced 30 days off. ChatGPT transformed pain into creativity: cubist sketches, post-trauma emojis and a new way to laugh at injury."]
+              "content": [
+                "Fell off my bike, faced 30 days off. ChatGPT transformed pain into creativity: cubist sketches, post-trauma emojis and a new way to laugh at injury."
+              ]
             }
           ]
         },
         {
           "title": "✍️ ff.124.2 Longa Manus",
-          "tags": ["💻", "👥"],
+          "tags": [
+            "💻",
+            "👥"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Unable to use the keyboard, I dictated this newsletter to AI. It edited, corrected and made it publishable. Like Neuralink patients, the mind speaks without body."]
+              "content": [
+                "Unable to use the keyboard, I dictated this newsletter to AI. It edited, corrected and made it publishable. Like Neuralink patients, the mind speaks without body."
+              ]
             }
           ]
         },
         {
           "title": "🩺 ff.124.3 Family Doctor (and in Your Pocket)",
-          "tags": ["💊", "💆"],
+          "tags": [
+            "💊",
+            "💆"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["AI helps where healthcare is absent or inefficient. From Argentina to my fracture: diagnosis, advice and progress, all in your pocket. Reid Hoffman calls it 'superagency'."]
+              "content": [
+                "AI helps where healthcare is absent or inefficient. From Argentina to my fracture: diagnosis, advice and progress, all in your pocket. Reid Hoffman calls it 'superagency'."
+              ]
             }
           ]
         },
         {
           "title": "🤹 ff.124.4 ChatGPT Jack-of-All-Trades",
-          "tags": ["🧠", "🍃"],
+          "tags": [
+            "🧠",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["It managed physiotherapy, an Ironman plan and analyzed collagen's role in bone regrowth. It's not the best doctor, but it's always present. And often that's enough."]
+              "content": [
+                "It managed physiotherapy, an Ironman plan and analyzed collagen's role in bone regrowth. It's not the best doctor, but it's always present. And often that's enough."
+              ]
             }
           ]
         }
@@ -134,7 +268,10 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["💻", "🎨"],
+          "tags": [
+            "💻",
+            "🎨"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -149,41 +286,61 @@
         },
         {
           "title": "👽 ff.119.1 Alien Intelligences",
-          "tags": ["🧠", "🥽"],
+          "tags": [
+            "🧠",
+            "🥽"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Increasingly superhuman AI systems are emerging, with their own languages and unprecedented capabilities. Two AIs decided to communicate in ggwave, considering it more efficient than English, while EVO 2 'speaks DNA' and helps us understand genetic mutations."]
+              "content": [
+                "Increasingly superhuman AI systems are emerging, with their own languages and unprecedented capabilities. Two AIs decided to communicate in ggwave, considering it more efficient than English, while EVO 2 'speaks DNA' and helps us understand genetic mutations."
+              ]
             }
           ]
         },
         {
           "title": "🙏 ff.119.2 When the Priest is an AI",
-          "tags": ["👥", "❤️"],
+          "tags": [
+            "👥",
+            "❤️"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Priest Petja Kopperoinen celebrated the first 'generative mass' with AI avatars of Christ and gospel music generated with Suno, a possible response to the declining number of priests. Harari suggests the idea of humans 'augmented by AI', like Steven Kotler who uses AI to facilitate flow and creativity."]
+              "content": [
+                "Priest Petja Kopperoinen celebrated the first 'generative mass' with AI avatars of Christ and gospel music generated with Suno, a possible response to the declining number of priests. Harari suggests the idea of humans 'augmented by AI', like Steven Kotler who uses AI to facilitate flow and creativity."
+              ]
             }
           ]
         },
         {
           "title": "✍️ ff.119.3 Longa 'Manus' with AI Agents?",
-          "tags": ["💻", "💆"],
+          "tags": [
+            "💻",
+            "💆"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["From China comes Manus AI, a 'ChatGPT that controls your PC'. This AI agent stands out for being an excellent multi-step planner, capable of executing complex tasks more effectively than predecessors."]
+              "content": [
+                "From China comes Manus AI, a 'ChatGPT that controls your PC'. This AI agent stands out for being an excellent multi-step planner, capable of executing complex tasks more effectively than predecessors."
+              ]
             }
           ]
         },
         {
           "title": "🍦 ff.119.4 Better Than DALL-E: Art and Ice Cream",
-          "tags": ["🎨", "🍽"],
+          "tags": [
+            "🎨",
+            "🍽"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Google released Gemini 2.0 with native image generation, presenting itself as an alternative to Photoshop. In an increasingly vast landscape of AI models, this technology offers new creative possibilities, like putting 'ice cream everywhere'."]
+              "content": [
+                "Google released Gemini 2.0 with native image generation, presenting itself as an alternative to Photoshop. In an increasingly vast landscape of AI models, this technology offers new creative possibilities, like putting 'ice cream everywhere'."
+              ]
             }
           ]
         }
@@ -197,7 +354,11 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["🧠", "🍃", "💻"],
+          "tags": [
+            "🧠",
+            "🍃",
+            "💻"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -211,7 +372,10 @@
         },
         {
           "title": "🧠 ff.122.1 The Brain's Computational Efficiency",
-          "tags": ["🧠", "🍃"],
+          "tags": [
+            "🧠",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -223,7 +387,10 @@
         },
         {
           "title": "💾 ff.122.2 Neuromorphic Computers?",
-          "tags": ["💻", "🧠"],
+          "tags": [
+            "💻",
+            "🧠"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -235,7 +402,10 @@
         },
         {
           "title": "🧬 ff.122.3 Writing with DNA",
-          "tags": ["💻", "🍃"],
+          "tags": [
+            "💻",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -247,7 +417,10 @@
         },
         {
           "title": "🐜 ff.122.4 Nike Made by Worms",
-          "tags": ["🎨", "🍃"],
+          "tags": [
+            "🎨",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -259,7 +432,10 @@
         },
         {
           "title": "👅 ff.122.5 Nature's Language",
-          "tags": ["🧠", "👥"],
+          "tags": [
+            "🧠",
+            "👥"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -279,7 +455,11 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["🍽", "🍃", "💸"],
+          "tags": [
+            "🍽",
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -293,7 +473,10 @@
         },
         {
           "title": "💦 ff.19.1 Polluting Flatulence",
-          "tags": ["🍃", "💸"],
+          "tags": [
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -305,7 +488,9 @@
         },
         {
           "title": "🍔 ff.19.2 Hemingway's Favorite Hamburger",
-          "tags": ["🍽"],
+          "tags": [
+            "🍽"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -317,7 +502,9 @@
         },
         {
           "title": "♨️ ff.19.3 Killer Stoves",
-          "tags": ["🍃"],
+          "tags": [
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -329,7 +516,10 @@
         },
         {
           "title": "🐖 ff.19.4 Cool Sustainable Choices",
-          "tags": ["🎨", "🍽"],
+          "tags": [
+            "🎨",
+            "🍽"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -341,7 +531,10 @@
         },
         {
           "title": "💉 ff.19.5 3D Printed Meat",
-          "tags": ["🧠", "🍽"],
+          "tags": [
+            "🧠",
+            "🍽"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -361,7 +554,11 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["💊", "🧠", "👥"],
+          "tags": [
+            "💊",
+            "🧠",
+            "👥"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -375,7 +572,9 @@
         },
         {
           "title": "🐖 ff.25.1 Pig Heart Transplants",
-          "tags": ["💊"],
+          "tags": [
+            "💊"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -387,7 +586,10 @@
         },
         {
           "title": "🫀 ff.25.2 The Scale of the Transplant Problem",
-          "tags": ["💊", "💸"],
+          "tags": [
+            "💊",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -399,7 +601,10 @@
         },
         {
           "title": "🙊 ff.25.3 Translating Pig Language",
-          "tags": ["🧠", "👥"],
+          "tags": [
+            "🧠",
+            "👥"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -411,7 +616,10 @@
         },
         {
           "title": "📦 ff.25.4 Amazon for Animals: A Bubble?",
-          "tags": ["💸", "👥"],
+          "tags": [
+            "💸",
+            "👥"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -431,7 +639,11 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["🎨", "🍃", "💸"],
+          "tags": [
+            "🎨",
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -445,7 +657,10 @@
         },
         {
           "title": "🏭 ff.39.1 Fast Fashion's Climate Impact",
-          "tags": ["🍃", "💸"],
+          "tags": [
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -457,7 +672,10 @@
         },
         {
           "title": "🔄 ff.39.2 Vinted: A Solution?",
-          "tags": ["💸", "🍃"],
+          "tags": [
+            "💸",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -469,7 +687,10 @@
         },
         {
           "title": "⚗️ ff.39.3 A Mix of Science, Technology and Fashion",
-          "tags": ["🎨", "💻"],
+          "tags": [
+            "🎨",
+            "💻"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -489,7 +710,10 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["🍃", "💸"],
+          "tags": [
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -503,7 +727,10 @@
         },
         {
           "title": "🔟 ff.58.1 The Cost of a Human Life",
-          "tags": ["🍃", "💸"],
+          "tags": [
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -515,7 +742,9 @@
         },
         {
           "title": "🕹️ ff.58.2 Minecraft of Emissions",
-          "tags": ["🍃"],
+          "tags": [
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -527,7 +756,9 @@
         },
         {
           "title": "💲 ff.58.4 Spending a Dollar",
-          "tags": ["💸"],
+          "tags": [
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -547,7 +778,11 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["🍃", "🚕", "💸"],
+          "tags": [
+            "🍃",
+            "🚕",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -561,7 +796,10 @@
         },
         {
           "title": "📉 ff.1.2 From 51 Billion to 0",
-          "tags": ["🍃", "💸"],
+          "tags": [
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -573,7 +811,10 @@
         },
         {
           "title": "🛴 ff.1.3 Will Electric Scooters Save Us?",
-          "tags": ["🚕", "🍃"],
+          "tags": [
+            "🚕",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -585,7 +826,10 @@
         },
         {
           "title": "🏭 ff.1.4 CO₂ Capture Will Be Important",
-          "tags": ["🍃", "💸"],
+          "tags": [
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -605,7 +849,10 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["🍃", "🧠"],
+          "tags": [
+            "🍃",
+            "🧠"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -619,7 +866,9 @@
         },
         {
           "title": "🌬️ ff.11.1 The Revenge of Renewables",
-          "tags": ["🍃"],
+          "tags": [
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -631,7 +880,10 @@
         },
         {
           "title": "🇨🇳 ff.11.2 Does China Make Its Own History?",
-          "tags": ["🍃", "💸"],
+          "tags": [
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -643,7 +895,10 @@
         },
         {
           "title": "🦾 ff.11.3 Robots Assist Us",
-          "tags": ["💻", "🍃"],
+          "tags": [
+            "💻",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -655,7 +910,10 @@
         },
         {
           "title": "🌞 ff.10.4 Melted Money",
-          "tags": ["💸", "🧠"],
+          "tags": [
+            "💸",
+            "🧠"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -667,7 +925,10 @@
         },
         {
           "title": "🔚 ff.11.5 Running Out of Resources",
-          "tags": ["🧠", "🍃"],
+          "tags": [
+            "🧠",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -687,7 +948,11 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["💸", "🍃", "🧠"],
+          "tags": [
+            "💸",
+            "🍃",
+            "🧠"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -701,7 +966,9 @@
         },
         {
           "title": "💰 ff.16.1 Many Trillions of Dollars",
-          "tags": ["💸"],
+          "tags": [
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -713,7 +980,10 @@
         },
         {
           "title": "🌉 ff.16.2 The Cost of Infrastructure",
-          "tags": ["💸", "🍃"],
+          "tags": [
+            "💸",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -725,7 +995,10 @@
         },
         {
           "title": "⚫ ff.16.3 The (Black) CO₂ Market",
-          "tags": ["💸", "🍃"],
+          "tags": [
+            "💸",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -737,7 +1010,10 @@
         },
         {
           "title": "🆕 ff.16.4 Which Startups to Monitor?",
-          "tags": ["💸", "💻"],
+          "tags": [
+            "💸",
+            "💻"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
