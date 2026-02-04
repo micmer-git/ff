@@ -1,6 +1,1126 @@
 {
   "publications": [
     {
+      "title": "🎼 ff.143 Monkeys with Rolex",
+      "buttonLabel": "🎼 ff.143 Monkeys with Rolex",
+      "urlSlug": "ff143-scimmie-col-rolex",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff143-scimmie-col-rolex",
+      "cards": [
+        {
+          "title": "📖 Overview",
+          "tags": [
+            "🍃",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Real luxury isn’t a Rolex: it’s breathable air, visible sun, usable water (biological nature).",
+                "In India the dystopia isn’t tech-driven: it’s climatic and Darwinian (animals + city systems).",
+                "Fire as survival / livelihood / transcendence: plastic bonfires, “Land of Fire”, Varanasi pyres."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌿 ff.143.1 Natural luxury",
+          "tags": [
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "When infrastructure stops being invisible, you see that first-world wealth is an ecosystem baseline: air, sun, water.",
+                "Not romantic “nature”, but elemental chemistry underneath the ego."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🐒 ff.143.2 Urban Darwinism",
+          "tags": [
+            "🧠",
+            "👥"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Organized monkey gangs around ice cream; a visceral evolutionary reminder.",
+                "Varanasi: animals and smoke around pyres — biological dystopia, not cyberpunk."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "☀️ ff.143.3 Sun & Asian Brown Cloud",
+          "tags": [
+            "🍃",
+            "💨"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "A grey haze makes the sun feel absent.",
+                "Geoengineering debates feel like a salon conversation when you live under an always-on atmospheric filter."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🔥 ff.143.4 Fire (three faces)",
+          "tags": [
+            "🔥",
+            "🧭"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Survival: plastic-and-waste bonfires to keep warm.",
+                "Livelihood: the “Land of Fire” imagery in Azerbaijan.",
+                "Transcendence: funeral pyres in Varanasi; when fire=plastic and air=wall, biological assumptions crack."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.139 E' Stato l'AI?",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff139-e-stato-lai",
+      "urlSlug": "ff139-e-stato-lai",
+      "title": "🎼 ff.139 E' Stato l'AI?",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Se NVIDIA vale più della Svizzera",
+                "Tutta la Svizzera vale come NVIDIA?",
+                "Fotocamera : influencers = Gemini : ?",
+                "… non perdetevi il furetto nutrizionista alla fine!"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🍫ff.139.1 Svizzero? No, NVIDIA",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "In 3 mesi, NVIDIA ha incassato 57 miliardi di dollari (guadagnandone 36, con un margine del 75%). Numeri incomprensibili. Proviamo a capirli.",
+                "C’è chi confronta il suo valore di mercato con il prodotto interno lordo di interi stati. E’ sbagliato.",
+                "Valuation ≠ GDP.Il primo è valoreteoricopercepito, il secondo rappresenta quantofisicamente prodotto(da uno stato) in un anno.",
+                "Più corretto parlare di fantacalcio. Se voleste NVIDIA, dovreste vendere un bel po’ di “giocatori”:",
+                "tuttele aziende svizzere quotate a Zurigo (Rolex, Nestlé, ABB, Novartis…)le 20 aziende più importanti in Europa (ASML, LVMH, SAP…)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🧃ff.139.2 Combini e paperclips",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Perché questohype? Perché l’AI si sta mostrando economicamente fruttifera.",
+                "Dave Blundin nel sempre stimolante podcast MOONSHOTfa notare che il mercato delle pubblicità online (600 miliardi) è già interamente gestito da algoritmi.",
+                "Agenti con capacità più spinte (e-commerce, contrattazione materie prime…) possono creare un mercato di almeno 1T$ (~1% del GPD mondiale).",
+                "A riconferma (e dato che gli ultimi modelli stanno saturando i benchmark più difficili:Gemini 3 risolve 1/3 delle domande dell’Humanity Last Exam), le nuove “classifiche” di AI sono economiche:",
+                "performance in finanza (Alpha Arena)abilità di vendita, contrattazione e pianificazione a lungo termine (Vending-Bench 2; anche qui Gemini 3 vince “portando a casa 5000$”).",
+                "Angolo nerd.Variazione dei guadagni suddivisi per modelli AI e strategie di contrattazione (amichevole, negoziatore, doppiogiochista).",
+                "Ottimizzazione economica,long term planning... Mi torna in mente ilminigioco per massimizzare la produzione di graffette, citato da Bolstrom come esempio di superefficienza che porta all’estinzione (🦉 ff.36.2 Il super-librozzo sulla singolarità)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🍫ff.139.3 Dov’è la mia macchina volante (in GTA 6?)",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Tutte queste riflessioni tornano in auge per via dell’ennesimo, silente ma sbalorditivo modello.",
+                "Gemini 3è più di un semplice update di numero: è il primo vero modello multimodale.",
+                "Genera app che integrano riconoscimento di videocamera, creazione immagini, search e text-to-speech. App contool-calling, insomma.",
+                "Un paio di esempi (creati con una descrizione lunga meno di un tweet):",
+                "Furetto nutrizionista. Scattando foto al cibo, la analizza e restituisce un report dettagliato (a colpo di squit!) del piatto che “ha annusato”.",
+                "Podcast converter. Copiando la puntata di oggi, ottengo post LinkedIn personalizzato, immagini sui temi più importanti e un podcast di 5 minuti.",
+                "140 caratteri.Storrs Hall lamentava che abbiamo Twitter, ma non le auto volanti (😭 ff.46.3 Anni buttati).",
+                "Ma ora con Gemini e 140 caratteri abbiamo unasimulazionedi auto volante. In un futuro robotico, lo stesso input potrebbeconcrettizzarla.",
+                "Non è un caso chePolymarket sia sempre più sicuro che Google avrà il migliore modello a fine 2025."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.138 Biofilia portami via",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff138-biofilia-portami-via",
+      "urlSlug": "ff138-biofilia-portami-via",
+      "title": "🎼 ff.138 Biofilia portami via",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Bagni nel bosco e i benefici dell'autunno",
+                "Meglio una scuola con vista sul verde?",
+                "Bagno nel bosco come la cannabis?",
+                "Piante vs Roomba: i pericoli di una casa pulita?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🏎️ff.138.1 La strada più veloce",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Brachistocrona. Oggi vi perdo con una parola.",
+                "E’ il percorso più veloce (ma non il più breve!) tra due punti: la curva rossa, la più efficace nel convertire energia potenziale in cinetica.",
+                "Gli algoritmi che sempre più regolano la società fanno di tutto per ottimizzare tempi. Per esempio, mio fratello Luca mi ha segnalatoOpenroute: tempi di percorrenza in città, con vari mezzi di trasporto.Almeno vince la bici.",
+                "Poi, si corre a ottimizzare i consumi:Google Maps e i tragitti meno inquinanti.",
+                "Ma in tutte queste ottimizzazioni, qualcuno considera il lato umano, psico-fisico delle cose? La nostra salute mentale?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "😊ff.138.2 La strada più felice",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Se ci chiedessimo invece quale percorso massimizza la felicità?",
+                "SecondoKathy Willis (La natura che cura), si trovaallungandoil tragitto verso il lavoro, includendo parchi e verde (o, ancora meglio, un florilegio di colori autunnali).",
+                "Torna con nuovi dettagli il “bagno nei boschi” (💚 ff.51.1 L’affabulazione per il verde):",
+                "Orizzonti naturali hanno una “dimensione frattale” (la complessità di uno skyline) calmante: i nostri sensi prediligono spazi ampi con qualche albero qua e là (come nella savana, da dove proveniamo evoluzionisticamente).",
+                "Scuole immerse nel verde hanno effetti benefici sullo sviluppo cognitivo dei bambini.",
+                "PS. ChatGPT ha coniato un termine per la “brachistocrona di felicità”:euthymìcrona(εὔθυμος+χρόνος), il tempo del buon animo.εὔθυμος = “di buon cuore, sereno” +  χρόνος  = “tempo”."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🪵ff.138.3 Toccare legno o ferro?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Sviste.Kathy Willies lamenta però l’eccessivo e platonico peso dato alla vista (a fronte di 1500 paper sugli effetti psicologici del “vedere la natura”, solo 40 si chiedono se abbia senso “toccarla”).",
+                "Come ci influenza, quindi, la natura attraverso gli altri sensi?",
+                "Toccare una quercia, rispetto a marmo e metallo, ha effetti calmanti.",
+                "Lo stesso gruppo, giapponese ovviamente, ha confrontato anche il contatto con foglie stampate e vere(notare il calzino)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🥌ff.138.4 Roomba o piante ornamentali?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Non è solo una questione di percezione: la natura cambia il microbioma (e, quindi, la regolamentazione fisiologica e psicologica,🥽 ff.90.3 Micro-bi di stress):",
+                "Sostituire ghiaia con foreste in asili nidoaumenta in soli 28 giorni la biodiversità nei bambini svedesi, riducendo biomarker di infiammazione e malattie auto-immuni.Una sola piantapuò ripopolare le nostre case, sterili, di microbi benefici (RoombaI see you).",
+                "Bonus.Gli ambienti indoor possono essere più inquinati dell’esterno, specie per composti volatili (Volatile Organic Compounds, VOCs) rilasciati da oggetti di plastica o detergenti.Una pianta può ridurli."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚬ff.138.5 Sto lontano dallo stress…",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Dulcis in fundo, il respiro, un altro cavallo di battaglia di futuro fortissimo (‍💨ff.87.1 Breve storia del respiro).",
+                "Il bagno nel bosco rilassa anche per l’α-pinene, sostanza rilasciata dalle conifere (e presente nella cannabis).",
+                "E bastanotre notti in un hotel che rilascia fragranze di cipresso per aumentare segnali di rilassatezza(misurati con la componente “high-frequency” (HF) dell’HRV,heart rate variability."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.137 Decrescita felice?",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff137-decrescita-felice",
+      "urlSlug": "ff137-decrescita-felice",
+      "title": "🎼 ff.137 Decrescita felice?",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Guida per accettare un futuro peggiore",
+                "Cosa fare se la crescita si arresta?",
+                "Bach o Darwin: chi era più depresso?",
+                "Sapere fluido o cristallizzato?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "⛰️ ff.137.1 Orografia di una discesa",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Spesso, si paragona un progetto al salire una montagna. La cima - obiettivo ultimo - deve essere sempre ben visibile, ma l’attenzione va rivolta a panorami e pensieri raccolti salendo.",
+                "Processi (ogni passo), più che obiettivi (la cima), insomma, come per il mio primo IRONMAN (🎼 ff.133 Sono un Ironman?).",
+                "Ma se il processo non basta?Una volta in cima, abbandonare la vista mozzafiato e discendere è dura. Durissima. Come sopravvivere a questa “depressione”, senza buttarsi dal primo precipizio?",
+                "Seth Godin e le discese della vita,per capire se valga la pena continuare il percorso:",
+                "The Dip,depressione momentanea.I più mollano, i migliori emergono superando ildowne rimanendo fedeli al processo.Cul-de-Sac, illusoria risaliza.Gli sforzi crescenti al più mantengono quanto raggiunto.The Cliff, un vero precipizio.Ulteriori sforzi non fanno che peggiorare la situazione.",
+                "Ma, come vedremo, a volte abbandonare non è possibile. La vita, la sopravvivenza è entropicamente stasi o decadenza verso il “peggio”.",
+                "Oppure, come vedremo, il segreto sta nel controllare quello che mettiamo sull’asse y. Come definiamo ilreward."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🏆 ff.137.2 Picchi entropici",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Torniamo al picco.Arthur Brooks in un famoso articolo sul The Atlantic (2019)spiega la crescente depressione dei “grandi”:principle of psychoprofessional gravitation. Più si arriva in alto, più è dura andarsene.",
+                "Sto parlando di atleti olimpici in straordinaria forma, attori che guadagnano 1 milione per episodio prodotto o ex Youtuber dimenticati (mi ci metto, con 50.000 iscritti nel 2013).",
+                "Anzi, sto parlando di tutti noi, aldilà dell’altezza raggiunta.",
+                "Brooks porta il suo personale (e musicale) esempio: un giorno “ti svegli e non suoni più il corno con la stessa fluidità”.",
+                "Non solo: rimanere al livello raggiunto è sempre più difficile. Insomma, si invecchia, vince l’entropia. Come accettarlo?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💎 ff.137.3 Cristalli e Bach",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Una cura è la psicologia diRaymond Cattell e le sue due forme di intelligenza:",
+                "fluida: quella che risolve problemi inediti con creatività (i giovani che fondano più startup).cristallizzata: quella che distilla e insegna alle future generazioni (gli storici con il picco a 60 anni).",
+                "Darwin evolve in Bach? Sempre Brooks racconta come Darwin, dopo l’innovativa gioventù, sia finito in una depressa inattività. Bach, invece, pure rivestito di successo da giovane, è riuscito a superarla, insegnando.",
+                "Serve quindi, invecchiando, cristallizzare esperienze di vita. Dar loro valore con il ricordo(📈 ff.111.4 Esperienze = investimenti), la condivisione, l’insegnamento."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📈 ff.137.4 Filosofia dell’accumulo",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "I cristalli (non meth) salvano contro la fluidità moderna.",
+                "Proprio loro, che a livello chimico-fisico sono esempio di stabilità al caos entropico.",
+                "Cristalli tanto più preziosi anche a seguito di una piccola crescita o rimanendo stabili nel tempo.",
+                "Cristalli che accumulano “storia”, nelcompound, tangibilissimo in finanza, come nel conto in banca di Warren Buffett:",
+                "Soldi a parte, in ogni ambito serve essere “storici della propria vita”: accumulare per anni buone abitudini - attività sportiva, una dieta sana - deve essere percepito come una continua crescita.",
+                "Per ricordarmelo, ho creato League of Strava, una dashboard che trasformi kcal e anni di sport in qualcosa di tangibile.",
+                "Come il conto di Buffet, ma in buffet di pizze mangiate e salute “guadagnata”.",
+                "Il cortoHagdiAnna Ginsburg: rivalutare l’estetica del post-picco nelle donne, oltre la “befana”.",
+                "hagiverseA post shared by@hagiverse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.136 On-da e-ner-ge-ti-caaa!",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff136-on-da-e-ner-ge-ti-caaa",
+      "urlSlug": "ff136-on-da-e-ner-ge-ti-caaa",
+      "title": "🎼 ff.136 On-da e-ner-ge-ti-caaa!",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Contro il consumo astronomico dell'AI, Goku?",
+                "Bollette aumentate da ChatGPT?",
+                "1/3 del PIL americano: costo dell’energia previsto da OpenAI nel 2033",
+                "Cina: quale connessione tra sanzioni e caffè(111!?!)?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💲 ff.135.1 I costi dell’Intelligenza Artificiale",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Secondo alcuni,ChatGPT sta facendo salire le bollette elettriche: dati Federal Reserve riportano un aumento da 0.17 a 0.19 $/kWh(in Europa eclissato dagli effetti ben più tangibili della guerra in Ucraina).",
+                "Però, però, però.Non è un problema di AI, ma di miopia energetica:Germania e Regno Unito producono meno energia elettrica di 40 anni fa…",
+                "Angolo nerd.I consumi dell’AI (Nature 2025):",
+                "0.5 Wh = energia per un’immagine1000 Wh/20(h)/60(min) = 0.83 Wh energia per un minuto di laptop"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌊 ff.135.2 Onda (anomala) energetica",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Tutto ciò non è nulla rispetto ai piani per il futuro:",
+                "Musk vuole comprare50 milioni di H100 nei prossimi 5 anni (assorbendo 35 GW, il 2% del consumo globale di elettricità oggi).",
+                "Altman vuole rimuovere i limiti imposti dalla produzione energetica:",
+                "Con 10 GW di calcolo, l’AI può curare il cancro. Oppure diventare un tutor privato per tutti gli studenti del mondo. Ma non può fare entrambi.Se siamo limitati dall’energia, dobbiamo scegliere a cosa dare priorità.La nostra visione è semplice: vogliamo produrre una centrale energetica per generare 1 GW di calcolo a settimana.Sam Altman,Abundant Intelligence",
+                "Fortunatamente, una soluzione è il solare:in soli 10 anni da 0 a 2073 TWh (237 GW potenza istantanea, totale energia prodotta diviso ore in un anno).",
+                "Sapevatelo.Gli investimenti nel solare ($500B) hanno superato quelli per l’aviazione durante la seconda guerra mondiale($400B, corretto per inflazione)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "♾️ ff.135.3 Siamo nella singolarità?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Tutta questa energia, comunque, serve (ed è già servita) a qualcosa.",
+                "Ad esempio, a “risolvere” la matematica.",
+                "GPT-5 Pro dà risposte a problemi “FrontierMath Livello 4” (talmente difficili che, posto che vengano risolti, richiedono a esperti matematici settimane di lavoro).",
+                "Questa svolta è importantissima: dalla matematica dipendono, a cascata, fisica, chimica e - infine - biologia.",
+                "E’ tanto sbalorditivo cheAlex Wissner, un vero geniettodice che siamonellasingolarità, descrivendola come un’illusione ottica che da lontano appare come un “asintoto verticale”, ma che “quando ci sei in mezzo... sembra abbastanza continuo”."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "☕ ff.135.4 L’AGI avanza: il “caffè” cinese",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "AGI e singolarità sono unplus: Dave Blundin, sempre nello stesso podcast, fa notare chese anche lo sviluppo dell’AI si fermasse oggi, servirebbero anni per digerire, esplorare e implementare le sue potenziali applicazioni.",
+                "I modelli attuali sono già abbastanza intelligenti, ma bisogna distribuirli in robot, fabbriche e logistica; abbassandone i consumi.",
+                "Torna così - rampante - la Cina: per l’embargo sulle GPU più potenti (🎼 ff.82 Guerra a colpi di chip) è stata costretta a spremere i “granelli di caffè” (= bits) con “macchine del caffè” (= GPU) meno performanti (analogia diRyan Cunningham).",
+                "Non a caso, durante la recente AI Conference di Shanghai, il professore Wang Yu ha coniato il“watt-to-bit”, parametro per classificare l’efficienza dei modelli-AI (Energy-Compute Theory).",
+                "Sempre non a caso, laleaderboard dell’ARC Prize include il costo per task(che traccia un limite di Pareto al momento occupato dai modelli o3 di OpenAI)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.135 Casino Royale",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff135-casino-royale",
+      "urlSlug": "ff135-casino-royale",
+      "title": "🎼 ff.135 Casino Royale",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "La politica è una slot machine?",
+                "Prevedere un premio Nobel con i mercati?",
+                "Albania: il primo ministro-AI",
+                "Controllare il figlio di Trump con le criptovalute?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎭 ff.135.1 E’ tutto un casino: manipolazioni",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Abbiamo un problema: Trump. O meglio, la possibilità che il mondo cambi con un tweet; per una guerra, un incremento di dazi, un blocco alle migrazioni.",
+                "Cinguetti di “singoli nodi” che creano onde anomale nel mare iperconnesso che ci circonda. Tanto che una nuova minaccia di tariffe può valere80 milioni in 30 minuti (almeno per qualcuno con accesso a informazioni confidenziali😉Barron Trump)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "⚜ ff.135.2 Ritorno ai Comuni medievali?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Non possiamo più permetterci di centralizzare (male) informazioni e scelte:l’incendio degli archivi in Sud Corea che ha bruciato 8 anni di lavoro pubblico.",
+                "Ecco allora che nasce l’idea di🎼 ff.52 Fondare una Nazione in garage; un’Età dei Comuni 2.0, accelerati dalla tecnologia."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎲 ff.135.3 Scommesse da Nobel",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "La sfiducia nei “nodi singoli” (e nell’America) sta tutta in questo grafico, che mostra come per la prima volta dal 1996 le banche comprano più oro che debito pubblico americano:",
+                "Accelerato dall’AI, il futuro è di una nuova superpotenza tra:",
+                "Cina, con la suacentralizzazione di datiche un tempo avrebbero sommerso ogni burocrazia, ma che oggi vengono gestiti da AI e LLMs.Internet, con la suade-centralizzazione e libertà di mercato, esemplificata da prediction market cheprevedono il Nobel per la Pace 11 ore prima dell’annuncio."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💳 ff.135.4 America, Nigeria e criptovalute",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Torniamo al debito degli Stati Uniti d’America. E alle criptovalute.",
+                "Diamo i numeri.Nel 2011, Cina e Giappone detenevano il 23% del debito USA. Oggi poco più del 6%. Chi li ha sostituiti? Probabilmente, Nigeria e Argentina.",
+                "Alla ricerca di indipendenza finanziaria (e una moneta stabile contro l’inflazione,👍 ff.73.3 Una VPN finanziaria), i paesi in via di sviluppo stanno comprando USDT, “dollari digitali” in blockchain.",
+                "Così, ildebito americano è digitalizzato e decentralizzato (report di ARK Invest)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🏛️ ff.135.5 Politica tecnologica",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Altri esempi di digitalizzazione in politica:",
+                "Il Nepal ha eletto il primo ministro tramite Discord(👾 ff.3.5 Discord).",
+                "L’Albania ha proposto un ministro creato con l’Intelligenza Artificiale. In un paese in cui 1/3 dei soldi pubblici viene bruciato in corruzione, sarebbe un dipendente imparziale e senza “nepotismi”.",
+                "🎶archivio note fortissime",
+                "👋 A presto, damicmer",
+                "©futuro fortissimo|michele merelli"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.134 Nomi alle cose",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff134-nomi-alle-cose",
+      "urlSlug": "ff134-nomi-alle-cose",
+      "title": "🎼 ff.134 Nomi alle cose",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Il valore delle parole tra umanità e ChatGPT",
+                "Perché dare un nome alle emozioni?",
+                "La bellezza sta negli occhi: le 72 stagioni giapponesi",
+                "Lingue e parole aliene?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🗣️ ff.134.1 Parole, parole, parole…",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Il rapporto tra pensiero, parole e costruzione del mondo mi affascina, specie da quando i modelli di linguaggio come ChatGPT hanno reso questa connessione ancor più stretta (🧠 ff.83.3 Linguaggio e pensiero).",
+                "1.1 Il Mondo è la totalità dei Fatti, non delle Cose.2.1 Noi ci facciamo immagini dei Fatti.3. L’immagine logica dei Fatti è il Pensiero.Ludving Witgenstein,Tractatus Logico-Philosophicus",
+                "Il Pensiero (e il Linguaggio) sono quindi un’immagine del Mondo. Tanto che alcune parole esistono solo in alcune lingue, in alcuni Mondi: solo nelle uggiose e fredde serate olandesi si può davverosentirelagezelligheid.",
+                "Altre parole uniche e intraducibili: 別腹betsubara, lo “stomaco per i dolci” giapponese."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "😭 ff.134.2 Dare un nome alle emozioni",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Le parole servono anche a identificare un altro mondo: quello che ognuno di noi ha dentro, condensato nelle emozioni.",
+                "Queste, secondo la neuroscienziata Lisa Feldman Barrett,sono simulazioni create dal cervelloper integrare vari segnali subconsci, viscerali: battito cardiaco, temperatura e altri segnali interocettivi (🥇 ff.128.1 Giochi (olimpici) mentali).",
+                "Dare un nome alle emozioni è fondamentale per superare i blocchi che ci auto-imponiamo: prima di una gara o di un esame sale l’ansia, ma spesso è solo una sfumatura dell’eccitazione, fomento dell’adrenalina dell’attesa di un grande evento.",
+                "Marc Brackett (fondatore del Centro per l’Intelligenza Emotiva a Yale) segue proprio questa linea, con una guida per capire e fare leva sulle emozioni:Dealing with Feeling: Harness Your Emotions to Create the Life You Want.",
+                "Mentre il fondatore di Pinterest ha creato un’app,How We Feel, un vero e proprio “Pokédex per le emozioni”."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "❄️ ff.134.3 Le 72 stagioni giapponesi",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Qualche tempo fa, parlavamo di come fermare il tempo: notando la novità che ogni giorno offre (🎼 ff.65 Come fermare il tempo).",
+                "In un raggio di sole che filtra tra alberi o in una particolare giustapposizione di colori può celarsi ilPerfect Day(👶 ff.108.2 Con gli occhi del fanciullino).",
+                "Proprio questi“occhi da fanciullo”possono portarci dal qualunquista “non esistono più le mezze stagioni” avederne settantadue, come in Giappone:",
+                "白露 (Hakuro): la rugiada “bianca” brilla08 – 12 Settembre土潤溽暑 (Tsuchi uruōte mushi atsushi): terra umida, caldo soffocante29 Luglio – 2 Agosto魚上氷 (Uo kōri o izuru): i pesci fanno capolino dal ghiaccio14 – 18 Febbraio"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🦴 ff.134.4 Umanità all’osso",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Questo sentire-definire è quello che ci resta, in un Mondo di “pensiero allocato a GPT”:",
+                "Un’emozione puramente disincarnata è un non-ente.William James,Che cos’è un’emozione?(1884)",
+                "E se il mondo digitale sta già cambiando il significato di certe parole: “to scale a startup”, “scaliamo” startup invece che montagne; per resistere alla disincarnazione dobbiamo ri-attaccarci alle parole, legame tra Pensiero e Mondo.",
+                "Bonus.Un caso che ilvideo di Michaell McAfeeper Max CooperI Am in a Church in Gravesend, Listening to Old Vinyl and Drinking Coffeesia un fiume di paroleche scaturisce da questa particolarissima esperienza?",
+                "🎶archivio note fortissime",
+                "👋 A presto, damicmer",
+                "©futuro fortissimo|michele merelli"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.133 Sono un Ironman?",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff133-sono-un-ironman",
+      "urlSlug": "ff133-sono-un-ironman",
+      "title": "🎼 ff.133 Sono un Ironman?",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Quello che ho capito preparando il triathlon più lungo al mondo",
+                "La follia di una maratona dopo 180km di bici e 3.8km di nuoto",
+                "Lo sport per spremere la vita (la mia filosofia-scienza del bikepacking)",
+                "Più mente che fisico? La fatica di mesi di preparazione"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.132 Inno ai videogiochi",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff132-inno-ai-videogiochi",
+      "urlSlug": "ff132-inno-ai-videogiochi",
+      "title": "🎼 ff.132 Inno ai videogiochi",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Perché i gamers hanno una vita in più?",
+                "Costruire mondi è più divertente che giocarli?",
+                "Musk e Hassabis si sfideranno a Tekken?",
+                "I videogiochi causano una crisi dell’attenzione?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎯 ff.132.1 Crisi dell’attenzione?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Da gamer e (ex) youtuber con 50.000 iscritti, i videogiochi mi stanno a cuore.",
+                "Spesso demonizzati insieme ai TikTok da 15 secondi, sono accusati di distruggere l’attenzione.",
+                "Però, però, però.Siamo sicuri che non sappiamo più concentrarci? Secondo lo storico Daniel Immerwahr, non è così.",
+                "Un paio di riflessioni che ha portato in un recente podcast con Adam Grant:",
+                "Nell’Ottocento si diceva che i libri distraessero. Oggi sono simbolo di concentrazione.I videogiochi, come i social feed,generano flow, non distrazione. E ci fanno perdere ore, nella loro immersività.",
+                "La vera domanda non è “quanto” ci concentriamo, ma su cosa."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🕹️ ff.132.2 I benefici dei videogiochi",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Ma poi, il tempo “giocando alla Play” è davvero sprecato?",
+                "Sparare in GTA aiuta a non farlo nella vita reale (🎮 ff.8.5 Ammazzare la noia (e non esseri umani)). Larelazione violenza-videogiochi? Forse fuffa.",
+                "I videogiochi favoriscono ildecision-makingsotto stress, la coordinazione occhio-mano nonché la collaborazione in team. Non a caso, molti founder hanno un passato da gamer:Kennan Davison, Top 200 in League of Legends ora CEO di Skio (YC S20).",
+                "Ash Brandin (The Gamer Educator su Instagram)fa inoltre notare che alcuni videogiochi, comeBraid,Edith FincheUntitled Goose Gamefavoriscono apprendimento emotivo."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📐 ff.132.3 Misurare e modellare il mondo",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Per “illudere” (in-ludere, parola legata alluduslatino, al gioco), un videogioco deve simulare, modellare il mondo in modo coerente (🎼 ff.98 Giochi e simulazioni).",
+                "Costruire mondi virtuali serve anche a capire quello reale.",
+                "Non a caso, Demis Hassabis (DeepMind) - pure ex videogiocatore - oggi “gioca” a modellare cellule (dopo il Nobel ricevuto per la modellazione con AI delle proteine).",
+                "E l’analogia è ancora più stretta:Genie 3 crea in tempo reale, anche da un’immagine, videogiochi interattivi e consistenti nel tempo.",
+                "CVD.SimCityè nato quandoWill Wright si accorse che creare il mondo del suo sparatutto arcade era più divertente che giocarlo."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🛶 ff.132.4 “Tutto scorre” anche Skyrim",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Per chiudere il cerchio della verosimilitudine dei videogiochi, c’è chi si chiede se l’idrogeologia diSkyrimsia corretta, cercando la sorgente dell’acqua dei suoi fiumi.",
+                "🎶archivio note fortissime",
+                "👋 A presto, damicmer",
+                "©futuro fortissimo|michele merelli"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.131 L'estate sta iniziando",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff131-lestate-sta-iniziando",
+      "urlSlug": "ff131-lestate-sta-iniziando",
+      "title": "🎼 ff.131 L'estate sta iniziando",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Come passare agosto pensando a un futuro fortissimo"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📚 ff.131.1 Una lettura",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Pensando al libro più significativo di quest’anno, non posso che tornare suLa saggezza del Tao(☯️ ff.108.3 Essere acqua).",
+                "Raccoglie e interpreta gli81 messaggi di Lao Tzuapplicandoli ai tormentati, digitali, iper-connessi e ottimizzatori giorni nostri.",
+                "Ho riletto per esempio parte del verso 23. Interessante.",
+                "Parlare poco è naturale:i venti impetuosi non soffiano tutta la mattina;una pioggia torrenziale non dura tutto il giorno.Chi li crea? Il cielo e la terra.Ma questi sono fenomeni atmosferici violenti,ecco perché non possono durare a lungo.Se il cielo e la terranon possono sostenere a lungo un’azione violenta,come potrebbero riuscire gli uomini?Lao Tzu,Tao Te Ching"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📜 ff.131.2 Due articoli",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Per letture più rapide, invece, un paio di articoli.",
+                "Due uscite di futuro fortissimo a cui tengo particolarmente: riflessioni illuminanti del viaggio tra Hong Kong e Shenzhen, che ho fatto a inizio anno.",
+                "🎼 ff.117 Viviamo in una simulazioneL'ho capito in viaggio tra Hong Kong e Shenzhen",
+                "🎼 ff.118 Paprika e massaggiSpezie tra internet e Il Mondo Nuovo",
+                "E’ un intreccio tra passato coloniale, “segni” asiatici, futuri incerti di geopolitica e riflessioni sul libero arbitrio, in un mondo di telecamere/algoritmi/social media."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎧 ff.131.3 Tre ascolti",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Se preferite il formato audio, ecco cosa ascoltare.",
+                "Un revival del podcast di Lex Fridman con Joscha Bach, filosofo esperto di neuroscienze e AI.",
+                "Se poi anche quest'anno l’onirico Salar de Uyuni in Bolivia rimane - appunto - solo un sogno, tranquilli: tuffatevi in questa live di FKJ.",
+                "Infine, una delle mie scoperte preferite dell’ultimo periodo:faccianuvola, 2002 di Sondrio che - dopo un breveexcursusa Milano per studiare Fisica - è tornato tra le sue montagne.Per fare musica elettronica che parla di passato (o undomani?).",
+                "Sai che un po' mi mancano tutti quei posti straniDove si viveva soli senza pensare al domanifaccianuvola,undomani"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "✒️ ff.131.4 Quattro riflessioni",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Spunti e citazioni su cui riflettere in riva al mare, aspettando la grande onda di Piotta.",
+                "A differenza dei beni materiali, che inizialmente sembrano eccitanti ma perdono di valore velocemente, le esperienze guadagnano valore nel tempo: pagano ciò che chiamo “dividendi di memoria”.Bill Perkins,Die with zero(🎼 ff.111 Morire con zero)",
+                "Sul tema dell’io e dell’eccessiva auto-consapevolezza, ottimizzazione, individualismo (🎁 ff.68.4 Meno ego e controllo, più flow e presente: la cura di Naval) ho trovato un’altra perla:",
+                "L'ego, il falso sé, [è] la radice di tutto il male che penetra nella terra e distrugge la vita umana, e con esso, naturalmente, la realtà del tempo, la realtà della presenza vissuta.L'ego vive solo nel futuro e nel passato; non ha un momento presente; è sempre di fretta o sogna.La radice del nostro moderno problema con il tempo non è né tecnologica, né sociologica, né economica, né psicologica. È metafisica. È una questione del significato stesso della vita umana.Jacob Needleman,Time and Soul",
+                "La ciclicità dei momenti. Belli, brutti, sfuggevoli, sempre effimeri; nel genio del professore-sballone Cosmo.",
+                "Vorrei fermare subito 'sto treno Vorrei saperlo fareVorrei saperlo fareVorrei che fosse tutto un po' più lento Vorrei saperlo fareDilatare il tempoVorrei bruciarmi e nascere di nuovo Vorrei proteggerti da questo ventoE mi godrò ogni singolo momentoPer poi lasciarlo andareE poi ricominciareCosmo,Momenti",
+                "Diventare grandi vuol dire preferire la verdura ai biscotti.",
+                "La felicità è come un biscotto. Quando sei bambino, pensi che i biscotti siano molto importanti e vuoi avere tutti i biscotti del mondo.Aspetti con impazienza di diventare adulto, perché allora potrai avere quanti biscotti vuoi, giusto? Sì, ma da adulto capisci che il biscotto è uno strumento.Uno strumento per farti mangiare le verdure.E una volta che lo capisci, mangi comunque le verdure e smetti per lo più di mangiare biscotti, perché altrimenti rischi di avere il diabete e non essere presente per i tuoi figli.Joscha Bach,Lex Fridman Podcast #101"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🖐️ ff.131.5 Cinque pezzi facili",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Considera disupportare 🎼 ff con un cafféoppure usa il tasto qui sotto per invitare un amico e guadagnarti un libro.Refer a friendDedica 15 minuti alla lettura, 20 minuti a una qualsiasi attività sportiva, 30 minuti a una chiacchierata senza cellulare nelle tue vicinanze.Mangia almeno 20g di fibre.Abbronzati un po’.Mandami per email un articolo, una citazione o unmemeleggero (michelemerelli.8@gmail.com).",
+                "Vuoi supportare questo progetto?→ Condividilo con un amico suWhatsApp→Offrimi un caffè😏→Ricordati di mettere un cuoricino qua sotto.",
+                "☕❤️",
+                "👋 Buona estate! damicmer",
+                "©futuro fortissimo|michele merelli"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.130 Microplastiche",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff130-microplastiche",
+      "urlSlug": "ff130-microplastiche",
+      "title": "🎼 ff.130 Microplastiche",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "tra diamanti, arte, sperma e carotide",
+                "Quali cibi sono più contaminati?",
+                "Trasformare bottiglie in diamanti?",
+                "Gli effetti delle microplastiche sulla salute umana (e la fecondità)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🥤 ff.130.1 Plastic is fantastic",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Non demonizziamola plastica: fa anche del bene, specie per conservare il cibo(Bressanini sempre sul pezzo).",
+                "dario.bressaniniA post shared by@dario.bressanini",
+                "Da italiani, poi, dobbiamo esserne anche un po’ fieri. Vedi Nobel per la Chimica di Natta nel 1963.",
+                "Però, però, però.I suoi vantaggi, come flessibilità e durabilità chimica, sono anche ciò che ne complicano separazione e riciclo. Lavorando con DOW, Google X proponeun’AI per categorizzare scarti in base al tipo di plastica.",
+                "Sappiate comunque che potenzialmente possiamo trasformarele bottiglie di plastica in diamanti(Science 2022).",
+                "Nell’attesa che sia economicamente fattibile, cosa fare?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎨 ff.130.2 Arte riciclabile?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Possiamo trasformala in arte.",
+                "Mandy Baker cataloga mutande e altri indumenti finiti in mare come fossero alghe(🏭 ff.39.1 L’impatto del fast fashion sul clima).",
+                "Matthew Miller crea invece grafiche su temi socio-economici, trattando anche le microplastiche."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🗑️ ff.130.3 Microplastiche: da dove provengono?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Come si vede, la plastica è ovunque. Anche nell’aria.",
+                "Amore mio, non sai quante volte ho sognatoChe lei stesse distante da noiMa poi si è intromessa ed ha rovinato tuttoTu vivi nell'aria, tu vivi dentro al mio cuoreMiani,Tu vivi nell'aria(feat. Goodzilla)",
+                "Sì, e vive anche dentro il vostro cuore. Ma ci arriviamo.",
+                "Iniziamo col dire chemicroplastiche disperse in aria possono essere assorbite dalle piante, entrando nella catena alimentare (Nature, 2024).",
+                "Un’altra sorpresa amara, come la birra, arriva da un nuovo studio francese:",
+                "Angolo nerd:se volete un Pokédex delle microplastiche,plasticlist.com elenca le microplastiche in quasi tutto(dal Vanilla Shake del Burger King al latte Oatly)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💀 ff.130.4 La danza macabra",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Le microplastiche sono talmente diffuse che neanche il superuomo-wannabeBryan Johnson può sfuggirne (💊 ff.49.4 Il superuomo che prende 100 pillole al giorno).",
+                "Consauna, trasfusione di plasma e rimozione di oggetti di plastica ha però ridotto del 90% le particelle nel suo sangue.",
+                "In omnia pericula, tasta testicula.Nonostante il mantra DON’T DIE di Bryan, il suo sperma rimane contaminato. Meglio “toccarsi” una volta in più, come suggeriscono i latini.",
+                "Nascerà un bebè di plastica, come in questo corto demenzialegenerato con Veo3?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🩸 ff.130.5 Microplastiche induriscono arterie",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Ma quali effetti hanno le microplastiche sulla salute?",
+                "Uno èindurire le arterie, aumentando infiammazione ed eventi cardiaci, come fa notare il sempre puntuale Eric Topol.",
+                "In particolare,il DEHP (uno ftalato presente nel PVC) si stima abbia causato 356.000 morti in più per malattie cardiovascolari, ossia il 13.5% delle morti totali globali (picco del 16.8% in Asia Meridionale dove il DEHP è più diffuso).",
+                "Insomma, è bene che sia stata esposta a Bangkokl’operaMega Matcon 500 tappetini di plastica riciclata.",
+                "artribuneA post shared by@artribune",
+                "👋 E con questo è tutto.Ricordatevi di mettere un❤️cuoricino qui sotto❤️",
+                "©futuro fortissimo|michele merelli"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.129 Il valzer di Tesla",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff129-il-valzer-di-tesla",
+      "urlSlug": "ff129-il-valzer-di-tesla",
+      "title": "🎼 ff.129 Il valzer di Tesla",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Altro che ChatGPT: l'intelligenza artificiale fisica",
+                "Sam Altman: il 2027 sarà l’anno dei robot",
+                "Perché la robotica sta rinascendo?",
+                "Marte sarà colonizzata da umanoidi?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🕳️ff.129.1 La singolarità “gentile” di Altman",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "QuandoSam Altmanpubblica qualcosa sul suo blog, è bene dargli una letta.",
+                "InThe Gentle Singularitysostiene che abbiamo superato l’orizzonte degli eventi dell’intelligenza artificiale. Ma in modo tanto “gentile” da non essercene nemmeno accorti.",
+                "Viviamo già con una intelligenza digitale incredibile ma, dopo lo shock iniziale, ci siamo velocemente abituati.Siamo passati da essere meravigliati per la scrittura di un paragrafo a chiederci quando l’AI scriverà interi libri; sorpresi da diagnosi mediche fino a chiederci quando svilupperà la prossima medicina.",
+                "Un agricoltore di sussistenza dell’anno 1000 direbbe che abbiamo dei lavori finti, e che il capitalismo è solo un gioco per intrattenerci, dato che abbiamo cibo e lussi a volontà.",
+                "ChaGTP (150 volte più economico ed ecologico in un solo anno) è un esempio di questa accelerazione. Ma il prossimo salto tecnologico sarà nel mondo reale."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🥧ff.129.2 Pi-greco, FigureAI e 1 ora “logistica”?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Gli LLMs non stanno solo democratizzando il software. Sono l’interfaccia più semplice che abbiamo mai avuto per il mondo fisico per “parlare ai robot”.",
+                "Così, programmarli è oggi meno costoso e più generalizzabile. Ecco il motivo della diffusione di vari “robot foundation models”:",
+                "π0, di Physical Intelligencegestisce 8 architetture e svariate azioni, come preparare il caffè o aprire i pop-corn.",
+                "Helix, di FigureAIcombina un cervello “lento e semantico” (System 2) che comprende frasi complesse e scene nuove, e uno “rapido e motorio” (System 1) che agisce.",
+                "SAS Prompt di Googletraduce coordinate x, y, z del robot in movimenti descritti a parole."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💃🏻ff.129.3 Il valzer di Tesla (con la Cina)",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Ricerca di base a parte, vi lascio alcuni esempi concreti.",
+                "Optimus di Tesla che balla un walzer:",
+                "Robot cinesi per spruzzare pesticidi:",
+                "Helix di FigureAI che smista pacchetti per un’ora (migliora in pochi mesi: da 5 a 4s per pacchetto)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🪐ff.129.4 Colonizzare Marte",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Facendo leva suknow-howe capacità produttiva di Tesla (la guida autonoma tra le strade di Roma?), Musk vuole usare proprio i robot per colonizzare Marte (non soffrono raggi cosmici e a noiosi viaggi interplanetari lunghi mesi).",
+                "Secondo alcune interpretazioni, quindi, può essere che avesse ragione Guzzanti.",
+                "infine,",
+                "prima di andare ricordati di mettere un cuoricino qua sotto❤️",
+                "👋 A presto, damicmer",
+                "©futuro fortissimo|michele merelli"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.127 Jazz con ChatGPT",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff127-jazz-con-chatgpt",
+      "urlSlug": "ff127-jazz-con-chatgpt",
+      "title": "🎼 ff.127 Jazz con ChatGPT",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Perché umanesimo e scienza devono tornare a parlarsi?",
+                "Rick Rubin: da Adele a Anthropic",
+                "Ma cos’è ilvibe coding?",
+                "Leopardi riscrive l’equazione di Schrödinger"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🛣️ ff.127.1 La terza vIA?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Sin dal liceo, sono stato affascinato dall’intersezione tra umanesimo e sapere scientifico. Penso l’avrete capito anche da futuro fortissimo (🖼️ ff.18.3 L’arte, tra intelligenza artificiale e l’uomo,📜 ff.101.4 Web Poetico).",
+                "Sinteticità.Questa la mia tesi da sbarbino maturando, sulla capacità di condensare concetti con pochi segni: daSoldatidi Ungaretti all’equazione di Eulero.",
+                "Sinteticità come punto di contatto tra umanesimo e scienza.",
+                "Le due culture,così distinte nell’omonimo saggio da Snow (1959), sono però sempre più distanti, anche per la crescente specializzazione.",
+                "[…] ho chiesto ai presenti quanti di loro sapessero descrivere il Secondo Principio della Termodinamica. La risposta è stata negativa. Eppure stavo chiedendo l'equivalente scientifico di: “hai letto un'opera di Shakespeare?”C. P. Snow,Le due culture",
+                "L’Intelligenza Artificiale può abbattere questo “muro di Berlino”?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🤘 ff.127.2 Rock ‘n’ roll e vibe coding",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Secondo il mitico Rick Rubin (🎤 ff.101.1 Il manager di Adele), sì.",
+                "Entersvibe coding.Per dimostrarlo, Rick ha lavorato con Anthropic per creareThe Way of Code, un software-libro interattivo che “remixa” messaggi del Tao di 3000 anni fa (☯️ ff.108.3 Essere acqua)con concetti contemporanei.",
+                "Rick paragona ChatGPT alla rivoluzione del jazz: permette di rimescolare elementi, non solo sonori, ma culturali (🐆 ff.127.3 Leopardi e l’equazione di Schrödinger).",
+                "Però, però, però.L’AI non deve essere un semplice copia e incolla: la prima risposta, per la natura statistica degli LLMs, è  “comune”, banale, poco creativa.",
+                "Rick spiega come usa l’AI: lo fa in modo iterativo, con domande e commenti, allineando sempre più le risposte col suo gusto artistico. Lo stesso metodo che utilizzava nei primi lavori con Johnny Cash."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🐆 ff.127.3 Leopardi e l’equazione di Schrödinger",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Perché ora? Due anni fa, l’arte generativa dava scarsi risultati (🌳 ff.35.5 L'infinito di Leopardi secondo l’AI). Oggi è tutta un’altra musica (remixata).",
+                "Ecco una poesia in stile Leopardi dell’Equazione di Schrödinger:",
+                "Onda ch’ignota dimori —ψ, tenuesospir dell’essere, in spazi ove il nullaparla con voce d’Hilbert —, ascolta:ché l’algebra del cosmo entro il tuo grembod’ombra risuona.Là, fra silenzidove il gran vuoto ricama la tramadel tempo, il segno∂/∂tt’accarezzae, con costante di Planck —ħ, lievecencio stellare —, t’invola. Il quadratodel modulo tuo — mistica densitàdi probabil verità — si fafugace patria d’ogni particella,che mai possiede stanza o confine,ma vaga, spera, decade.Cosìl’operatore Laplaciano, arcanoscalpello dell’infinito, t’incidesu potenziale campo,V(x),mentre la massa, timida ancella,in ogni punto rifrange l’equilibriotra impulso e destino.Eternosi libra allora l’equazione, severa:iħ ∂ψ/∂t = [−ħ²∇²/2m + V]ψ,lido d’incertezza dove il realeoscilla e tace, quasi sperassecon poesia d’elettrone nascosto scorgere fine al cieco divenire.Oh dolce illusïon! Che ancor m’affannia porre misura al moto del cuore,se pur la luna nel cielo profondonon sa se stessa, e noi, larve d’atomi,in un sol verso di Schrödinger, erriamo.micmer x o3 x Leopardi,Onde",
+                "“l’operatore Laplaciano, arcano scalpello dell’infinito”“noi, larve d’atomi”“ħ, lieve cencio stellare”",
+                "Se non è poetico questo…"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚁 ff.127.4 E Palantir che c’entra?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "L’umanesimo è anche cura per venti di guerra.",
+                "Nel suo recente libro, il co-fondatore di Palantir Alex Karp denuncia una Silicon Valley senza senso nazionale e militare.",
+                "Gli ingegneri della Silicon Valley si rifiutano di lavorare con l’esercito americano, ma non esitano a raccogliere fondi per costruire il prossimo social network alienante.Il numero di laureati in materie umanisticheè passato dal 14 al 7% (179k) dal 1966 ad oggi, mentre il numero di iscritti aingegneria informatica è arrivato a 90k nel 2020.Abbiamo bisogno di ingegneri curiosi del mondo, della sua storia, delle sue contraddizioni; non solo capaci di programmare.Alex Karp,The Technological Republic",
+                "In passato, ho sostenuto che🎼 ff.14 La guerra non è futuro. Però, Mariana Mazzucato ci ricorda nel suo libro,Lo Stato innovatore, che internet e GPS sono frutto del Dipartimento della Difesa americano. Poi, sono arrivati Instagram e Uber.",
+                "Insomma, se l’AI permette a Rick Rubin di diventare un programmatore, così la Silicon Valley deve riscoprire arte, storia e filosofia.",
+                "Per una terza via pacifista, ma consapevole dei rischi che il software, nuovo “nucleare”, pone rispetto al futuro dell’umanità.",
+                "🎶archivio note fortissime",
+                "👋 A presto, damicmer",
+                "©futuro fortissimo|michele merelli"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "🎼 ff.125 USA: Collapse of an Empire",
       "buttonLabel": "🎼 ff.125 USA: Collapse of an Empire",
       "urlSlug": "ff125-usa-collapse-of-an-empire",
@@ -8,7 +1128,10 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["💻", "💸"],
+          "tags": [
+            "💻",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -23,41 +1146,60 @@
         },
         {
           "title": "🏯 ff.125.1 Imperial Cycles",
-          "tags": ["💸", "🧠"],
+          "tags": [
+            "💸",
+            "🧠"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Since 1970, US GDP has grown 20× but federal debt 83×: Ray Dalio's vision returns to relevance with data shown by Lily Liu at TOKEN 2049."]
+              "content": [
+                "Since 1970, US GDP has grown 20× but federal debt 83×: Ray Dalio's vision returns to relevance with data shown by Lily Liu at TOKEN 2049."
+              ]
             }
           ]
         },
         {
           "title": "💵 ff.125.2 Stabilizing the Dollar",
-          "tags": ["💸"],
+          "tags": [
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Stablecoins surpass Visa and Mastercard (15T$ in transactions in 2024) and Stripe integrates their payments to defend against inflation from money-printing."]
+              "content": [
+                "Stablecoins surpass Visa and Mastercard (15T$ in transactions in 2024) and Stripe integrates their payments to defend against inflation from money-printing."
+              ]
             }
           ]
         },
         {
           "title": "🏮 ff.125.3 China: The Next World Empire?",
-          "tags": ["🚕", "⚽"],
+          "tags": [
+            "🚕",
+            "⚽"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Shenzhen demonstrates ultra-fast progress; Western stagnation pales before drones, flying cars and infrastructure built in just 40 years."]
+              "content": [
+                "Shenzhen demonstrates ultra-fast progress; Western stagnation pales before drones, flying cars and infrastructure built in just 40 years."
+              ]
             }
           ]
         },
         {
           "title": "🌐 ff.125.4 The Alternative to China: Internet",
-          "tags": ["💻", "👥"],
+          "tags": [
+            "💻",
+            "👥"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Balaji Srinivasan proposes a digital nation based on Bitcoin; BTC's resilience to Trump's tariffs and Coinbase's entry into the S&P 500 offer a glimpse."]
+              "content": [
+                "Balaji Srinivasan proposes a digital nation based on Bitcoin; BTC's resilience to Trump's tariffs and Coinbase's entry into the S&P 500 offer a glimpse."
+              ]
             }
           ]
         }
@@ -71,7 +1213,10 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["🧠", "💊"],
+          "tags": [
+            "🧠",
+            "💊"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -86,41 +1231,253 @@
         },
         {
           "title": "🦴 ff.124.1 Dalí Melting Collarbones",
-          "tags": ["🎨", "💆"],
+          "tags": [
+            "🎨",
+            "💆"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Fell off my bike, faced 30 days off. ChatGPT transformed pain into creativity: cubist sketches, post-trauma emojis and a new way to laugh at injury."]
+              "content": [
+                "Fell off my bike, faced 30 days off. ChatGPT transformed pain into creativity: cubist sketches, post-trauma emojis and a new way to laugh at injury."
+              ]
             }
           ]
         },
         {
           "title": "✍️ ff.124.2 Longa Manus",
-          "tags": ["💻", "👥"],
+          "tags": [
+            "💻",
+            "👥"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Unable to use the keyboard, I dictated this newsletter to AI. It edited, corrected and made it publishable. Like Neuralink patients, the mind speaks without body."]
+              "content": [
+                "Unable to use the keyboard, I dictated this newsletter to AI. It edited, corrected and made it publishable. Like Neuralink patients, the mind speaks without body."
+              ]
             }
           ]
         },
         {
           "title": "🩺 ff.124.3 Family Doctor (and in Your Pocket)",
-          "tags": ["💊", "💆"],
+          "tags": [
+            "💊",
+            "💆"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["AI helps where healthcare is absent or inefficient. From Argentina to my fracture: diagnosis, advice and progress, all in your pocket. Reid Hoffman calls it 'superagency'."]
+              "content": [
+                "AI helps where healthcare is absent or inefficient. From Argentina to my fracture: diagnosis, advice and progress, all in your pocket. Reid Hoffman calls it 'superagency'."
+              ]
             }
           ]
         },
         {
           "title": "🤹 ff.124.4 ChatGPT Jack-of-All-Trades",
-          "tags": ["🧠", "🍃"],
+          "tags": [
+            "🧠",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["It managed physiotherapy, an Ironman plan and analyzed collagen's role in bone regrowth. It's not the best doctor, but it's always present. And often that's enough."]
+              "content": [
+                "It managed physiotherapy, an Ironman plan and analyzed collagen's role in bone regrowth. It's not the best doctor, but it's always present. And often that's enough."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.123 A caccia di diamanti",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff123-a-caccia-di-diamanti",
+      "urlSlug": "ff123-a-caccia-di-diamanti",
+      "title": "🎼 ff.123 A caccia di diamanti",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "OpenAI o3 con coltellino svizzero è AGI?",
+                "L’AI che trova diamanti su Minecraft (da sola)",
+                "Il team di DeepMind: cos’è l’Era dell’Esperienza?",
+                "Pokémon-filosofi e Harry Potter al rave: non solo Ghibli"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🛠️ ff.123.1 L’AI con il coltellino svizzero",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Se Tayler Coen (teorico della “grande stagnazione”,🤔 ff.50.1 La stranezza degli ultimi 50 anni),dice che il 16 aprile 2025 ha visto l’AGI (o un porno), bisogna fermarsi.",
+                "In quel giorno, OpenAI ha reso pubblico il tanto atteso o3.",
+                "In passato, sono stati contestati a ChatGPT errori matematici banali (⚠️ ff.48.4 I limiti (matematici) di ChatGPT). La soluzione? Dargli accesso a una calcolatrice, per esempio.",
+                "o3 combina nei suoi pensieri (chain of thought) vari “strumenti” (screenshots, navigazione web, lancio codici python), raggiungendo unIQ di 136 (1% popolazione umana, l’anno scorso il record era 94).",
+                "Per darvi un’idea,risolve un labirinto mostrando il percorso."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💎 ff.123.2 Minecraft oltre l’uomo",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "In tutto questo, l’uomo è sempre più limitante. Il collo di bottiglia.",
+                "Come AlphaGo (allenato su partite umane) è stato battuto da AlphaZero (che si è allenato “da solo”)♟️ ff.18.4 Chess(i) artistici: il re degli scacchi.",
+                "L’AI capisce più di noi, ad esempio il linguaggio/struttura delle proteine (⚛️ ff.98.4 Sistemi quantistici)",
+                "David Silver e Richard Sutton - pionieri delreinforcement learning(RL) - sostengono in un nuovo paper che siamo entrati nel’Era dell’Esperienza: sistemi autonomi/agenti che in ogni ambito esplorano il mondo e possibili soluzioni, senza bisogno di conferme umane.",
+                "Cercare diamanti in Minecraft.DreamerV3 di Google/DeepMind3è un esempio di questa nuova fase tecnologica.",
+                "Pur non avendo mai visto giocare Minecraft (e non coscendone le regole), in 100 milioni di passi ha imparato a rompere alberi, costruire bastoni e migliorare picconi. Fino ad arrivare al suo primo blocco di diamante.",
+                "Bevi fuori dal coro.Dan Hendrycks, direttore delCenter for AI Safetysostiene invece chelasciare evolvere l’AI in modo indipendente è la nostra fine."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🗺️ ff.123.3 Il nuovo campione di GeoGuessr: o3",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Per mostrare l’abilità di combinare vari strumenti, tra cui le mappe, il sempre puntualeEthan Mollick ha fatto giocare o3 aGeoGuessr.",
+                "Io invece gli ho chiestoquando il sole sorgerà tra due monti che vedo fuori dalla finestra.",
+                "Ha identificato i monti, usato formule a me sconosciute e pure ipotizzato un margine di errore in base a dove mi posizioni per ammirare l’alba (se sul sagrato o nel parcheggio del cimitero)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌊 ff.123.4 Non solo Studio Ghibli",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Dato che stiamo parlando di AI, torniamo sul tormentoneGhibli.",
+                "Come noto, ilnuovo modello di generazione immagini di OpenAI(25 marzo):",
+                "replica accuratamente dettagli di immaginimigliora la precisione nei testiapplica qualsivoglia stile grafico",
+                "In scia a🦄 ff.40.1 Gotta catch ‘em all, gli ho così chiesto di immaginare gli starter di un Pokémon filosofico.",
+                "Riprendendo invece🧙 ff.63.1 Harry Potter tra Pixar, steroidi e rave estivi), segnalo che sono uscite le foto dell’after party di quest’anno della festa di Hogwarts.",
+                "pablopromptA post shared by@pabloprompt",
+                "🎶archivio note fortissime",
+                "👋 A presto, damicmer",
+                "©futuro fortissimo|michele merelli"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎼 ff.122 Is Natural Better?",
+      "buttonLabel": "🎼 ff.122 Is Natural Better?",
+      "urlSlug": "ff122-is-natural-better",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff122-naturale-e-meglio",
+      "cards": [
+        {
+          "title": "📖 Overview",
+          "tags": [
+            "🧠",
+            "🍃",
+            "💻"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "The computational efficiency of the human brain compared to supercomputers",
+                "Nature-inspired innovations: from neuromorphic computers to DNA writing",
+                "A sustainable future through biology and decoding natural languages"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🧠 ff.122.1 The Brain's Computational Efficiency",
+          "tags": [
+            "🧠",
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "A human brain (20 W) is a million times more efficient than the Frontier supercomputer (21 MW). AlphaGo beat the Go champion, but consuming the energy a human would use in a decade."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💾 ff.122.2 Neuromorphic Computers?",
+          "tags": [
+            "💻",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Paradoxical: AI simulates brain connections at the software level, but classical (binary) hardware doesn't replicate the analogical and continuous complexity of neurons."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🧬 ff.122.3 Writing with DNA",
+          "tags": [
+            "💻",
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "George Church encoded the book «Regenesis» in DNA. Today Asimov Press sells DNA-books: €60, 240 pages, 500,000 molecules."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🐜 ff.122.4 Nike Made by Worms",
+          "tags": [
+            "🎨",
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Neri Oxman (MIT) combines design, biology and technology to create footwear produced by living organisms, reducing waste and CO₂."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "👅 ff.122.5 Nature's Language",
+          "tags": [
+            "🧠",
+            "👥"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Google develops DolphinGemma to decipher dolphin language: a step towards interspecies communication thanks to AI."
+              ]
             }
           ]
         }
@@ -134,7 +1491,10 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["💻", "🎨"],
+          "tags": [
+            "💻",
+            "🎨"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -149,122 +1509,60 @@
         },
         {
           "title": "👽 ff.119.1 Alien Intelligences",
-          "tags": ["🧠", "🥽"],
+          "tags": [
+            "🧠",
+            "🥽"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Increasingly superhuman AI systems are emerging, with their own languages and unprecedented capabilities. Two AIs decided to communicate in ggwave, considering it more efficient than English, while EVO 2 'speaks DNA' and helps us understand genetic mutations."]
+              "content": [
+                "Increasingly superhuman AI systems are emerging, with their own languages and unprecedented capabilities. Two AIs decided to communicate in ggwave, considering it more efficient than English, while EVO 2 'speaks DNA' and helps us understand genetic mutations."
+              ]
             }
           ]
         },
         {
           "title": "🙏 ff.119.2 When the Priest is an AI",
-          "tags": ["👥", "❤️"],
+          "tags": [
+            "👥",
+            "❤️"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["Priest Petja Kopperoinen celebrated the first 'generative mass' with AI avatars of Christ and gospel music generated with Suno, a possible response to the declining number of priests. Harari suggests the idea of humans 'augmented by AI', like Steven Kotler who uses AI to facilitate flow and creativity."]
+              "content": [
+                "Priest Petja Kopperoinen celebrated the first 'generative mass' with AI avatars of Christ and gospel music generated with Suno, a possible response to the declining number of priests. Harari suggests the idea of humans 'augmented by AI', like Steven Kotler who uses AI to facilitate flow and creativity."
+              ]
             }
           ]
         },
         {
           "title": "✍️ ff.119.3 Longa 'Manus' with AI Agents?",
-          "tags": ["💻", "💆"],
+          "tags": [
+            "💻",
+            "💆"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
-              "content": ["From China comes Manus AI, a 'ChatGPT that controls your PC'. This AI agent stands out for being an excellent multi-step planner, capable of executing complex tasks more effectively than predecessors."]
+              "content": [
+                "From China comes Manus AI, a 'ChatGPT that controls your PC'. This AI agent stands out for being an excellent multi-step planner, capable of executing complex tasks more effectively than predecessors."
+              ]
             }
           ]
         },
         {
           "title": "🍦 ff.119.4 Better Than DALL-E: Art and Ice Cream",
-          "tags": ["🎨", "🍽"],
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": ["Google released Gemini 2.0 with native image generation, presenting itself as an alternative to Photoshop. In an increasingly vast landscape of AI models, this technology offers new creative possibilities, like putting 'ice cream everywhere'."]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "🎼 ff.122 Is Natural Better?",
-      "buttonLabel": "🎼 ff.122 Is Natural Better?",
-      "urlSlug": "ff122-is-natural-better",
-      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff122-naturale-e-meglio",
-      "cards": [
-        {
-          "title": "📖 Overview",
-          "tags": ["🧠", "🍃", "💻"],
+          "tags": [
+            "🎨",
+            "🍽"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "The computational efficiency of the human brain compared to supercomputers",
-                "Nature-inspired innovations: from neuromorphic computers to DNA writing",
-                "A sustainable future through biology and decoding natural languages"
-              ]
-            }
-          ]
-        },
-        {
-          "title": "🧠 ff.122.1 The Brain's Computational Efficiency",
-          "tags": ["🧠", "🍃"],
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "A human brain (20 W) is a million times more efficient than the Frontier supercomputer (21 MW). AlphaGo beat the Go champion, but consuming the energy a human would use in a decade."
-              ]
-            }
-          ]
-        },
-        {
-          "title": "💾 ff.122.2 Neuromorphic Computers?",
-          "tags": ["💻", "🧠"],
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Paradoxical: AI simulates brain connections at the software level, but classical (binary) hardware doesn't replicate the analogical and continuous complexity of neurons."
-              ]
-            }
-          ]
-        },
-        {
-          "title": "🧬 ff.122.3 Writing with DNA",
-          "tags": ["💻", "🍃"],
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "George Church encoded the book «Regenesis» in DNA. Today Asimov Press sells DNA-books: €60, 240 pages, 500,000 molecules."
-              ]
-            }
-          ]
-        },
-        {
-          "title": "🐜 ff.122.4 Nike Made by Worms",
-          "tags": ["🎨", "🍃"],
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Neri Oxman (MIT) combines design, biology and technology to create footwear produced by living organisms, reducing waste and CO₂."
-              ]
-            }
-          ]
-        },
-        {
-          "title": "👅 ff.122.5 Nature's Language",
-          "tags": ["🧠", "👥"],
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Google develops DolphinGemma to decipher dolphin language: a step towards interspecies communication thanks to AI."
+                "Google released Gemini 2.0 with native image generation, presenting itself as an alternative to Photoshop. In an increasingly vast landscape of AI models, this technology offers new creative possibilities, like putting 'ice cream everywhere'."
               ]
             }
           ]
@@ -272,81 +1570,88 @@
       ]
     },
     {
-      "title": "🎼 ff.19 Hemingway's Hamburger",
-      "buttonLabel": "🎼 ff.19 Hemingway's Hamburger",
-      "urlSlug": "ff19-hemingways-hamburger",
-      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff17-lhambuger-di-hemingway",
+      "buttonLabel": "🎼 ff.111 Morire con zero",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff111-morire-con-zero",
+      "urlSlug": "ff111-morire-con-zero",
+      "title": "🎼 ff.111 Morire con zero",
       "cards": [
         {
-          "title": "📖 Overview",
-          "tags": ["🍽", "🍃", "💸"],
+          "title": "📖 Panorama",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Do cows pollute as much as the United States?",
-                "Are silent gas leaks a climate problem?",
-                "How did Hemingway eat his hamburger?"
+                "L'investimento migliore? La vita!",
+                "Come evitare di lasciare “vita in banca”?",
+                "Qual è l’età ottimale per iniziare a spendere di più?",
+                "Edonismo sfrenato o inno alla vita?"
               ]
             }
           ]
         },
         {
-          "title": "💦 ff.19.1 Polluting Flatulence",
-          "tags": ["🍃", "💸"],
+          "title": "🍊 ff.111.1 Una vita da spremere",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Bovine methane emissions exceed those of the USA, equivalent to the global transport sector. Plant foods pollute 10× less than animals."
+                "Su futuro fortissimo parliamo anche di tempo. Lo abbiamo convertito in banane (⚖️ ff.61.1 Misurare l’inquinamento in ore di vita) e rallentato, notando le variazioni nella quotidianità (📝 ff.65.3 Il compito a casa per la vita, ).",
+                "Fine anno è perfetto per fermarci, e fermare il tempo. Come faccio con un video recap su YouTube, per quelli che restano dei 50.000 iscritti che mi guardavano sparare su Call of Duty.",
+                "Non basta fermarsi, però. Dobbiamo prima trasformare le nostre energie vitali, il nostro lavoro, in vita: spericolata, ricordata."
               ]
             }
           ]
         },
         {
-          "title": "🍔 ff.19.2 Hemingway's Favorite Hamburger",
-          "tags": ["🍽"],
+          "title": "💯ff.111.2 Una vita spericolata",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Ground beef, onions, capers and India Relish: crispy crust outside, soft heart, no extra sauces."
+                "Voglio una vita spericolataVoglio una vita come quelle dei filmVoglio una vita esagerataVoglio una vita come Steve McQueenVasco Rossi,Vita Spericolata",
+                "Non serve essere Vasco per vivere pienamente, basta un metodo: quello di Bill Perkins, ingegnere prestato alla compra-vendita del gas.",
+                "Il suo libroDie with zeroinizia con una riflessione: se moriamo con 10.000€ in banca, abbiamo perso 3 mesi di vita sul lavoro; non godendo di 5 viaggi, 50 cene oppure 3 di pensione."
               ]
             }
           ]
         },
         {
-          "title": "♨️ ff.19.3 Killer Stoves",
-          "tags": ["🍃"],
+          "title": "🛡️ ff.111.3 Figli, salute e anni sprecati",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Gas stoves leak methane even when turned off: annual impact equivalent to 500,000 cars in the United States."
+                "Bill ci chiede di “morire con zero”. Chiaramente, una provocazione impossibile (nessuno conosce ovviamente il giorno della propria morte). Che però svela inefficienze nascoste nella gestione delle nostre finanze:",
+                "Eredità: i figli la ricevono a 60 anni, quando sono già sistemati economicamente. Sarebbe meglio aiutarli tra i 25 e 35 anni, quando possono usarli per casa, impresa, famiglia o più esperienze.Salute: in caso di malattie importanti, i risparmi non possono coprire le ingenti spese mediche (specie in America). Meglio una buona assicurazione sanitaria.Pensione: le nostre stime di anni di vita post-lavorativa sono grossolane. Meglio lerendite vitalizie."
               ]
             }
           ]
         },
         {
-          "title": "🐖 ff.19.4 Cool Sustainable Choices",
-          "tags": ["🎨", "🍽"],
+          "title": "📈 ff.111.4 Esperienze = investimenti",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "La Vie's pop packaging (pink-green) shows that attractive design pushes consumers towards sustainable alternatives."
-              ]
-            }
-          ]
-        },
-        {
-          "title": "💉 ff.19.5 3D Printed Meat",
-          "tags": ["🧠", "🍽"],
-          "contentBlocks": [
-            {
-              "type": "paragraphs",
-              "content": [
-                "Redefine Meat prints vegan burgers with realistic muscle fibers, bringing taste and texture closer to animal meat."
+                "Scandaloso?Col suo edonismo, Bill sembra pestare valori come famiglia, salute e sicurezza sul futuro: a tutti gli effetti un inciampo mentale (skàndalon), un sasso sulla via maestra.",
+                "Uno scandalo anzitutto per se stesso, dato che Bill vuole ricordarsi delle trappole mentali in cui era finito da giovane, quando risparmiava 1.000€ di uno stipendio da 16.000. Quando lo scoprì, il suo capo gli fece notare: \"Sei idiota? Stai sacrificando 1/16 (22 giorni all’anno) della tua vita per soldi che tra 10 anni farai in 3 giorni!\".",
+                "Vediamo allora come Bill, tramite un’analogia tra soldi, tempo e investimenti, ci faccia ripensare alla vita.",
+                "Ricordi come dividendi?In finanza, prima investi, più dividendi accumuli. Questo vale anche per le esperienze: un viaggio in Italia a 20 anni genera 20+ anni di ricordi, lezioni e conoscenze rispetto che lo stesso, a 40 anni.",
+                "Inflazione fisica.Un dollaro speso a 60 anni dà meno vita. Bill porta come esempio una giornata sugli sci. In vecchiaia, rallentati fisicamente, facciamo meno discese, meno esperienze.",
+                "Però, però, però.Se anche trovo affascinanti gli spunti di Bill, mi permetto delle critiche:",
+                "senza novità, più esperienze non si convertono in più momenti da ricordare (🆕 ff.65.1 Tempo = nuove esperienze?)le novità dipendono dalla nostra attenzione (o distrazione), aldilà di quante cose ci accadono intornola vecchiaia, se anche rallenta fisicamente, valorizza eventi dati per scontati da giovani",
+                "Insomma. Un bel caos. Un bel botto. Buona fine, miglior principio.",
+                "P.S. Esercizio per il 31: massimizzare i prossimi 365/22.000 giorni, nel caso moriate (con zero) a 60 anni.",
+                "🎶archivio note fortissime",
+                "☕caffè virtuale",
+                "❤️cuoricino qui sotto?",
+                "👋 A presto, damicmer",
+                "©futuro fortissimo|michele merelli"
               ]
             }
           ]
@@ -354,69 +1659,90 @@
       ]
     },
     {
-      "title": "🎼 ff.25 Animal Farm",
-      "buttonLabel": "🎼 ff.25 Animal Farm",
-      "urlSlug": "ff25-animal-farm",
-      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff25-la-fattoria-degli-animali",
+      "buttonLabel": "🎼 ff.104 Hackerare il corpo",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff104-hackerare-il-corpo",
+      "urlSlug": "ff104-hackerare-il-corpo",
+      "title": "🎼 ff.104 Hackerare il corpo",
       "cards": [
         {
-          "title": "📖 Overview",
-          "tags": ["💊", "🧠", "👥"],
+          "title": "📖 Panorama",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Can we transplant an animal's heart into a human being?",
-                "Will we translate pig grunts?",
-                "What can we learn from the creator of Amazon for animals?"
+                "I Fantastici 4 cibi per ottenere di più, con meno",
+                "Il controverso libro di Dave Asprey",
+                "4 cibi segreti che nessuno vi dice (?)",
+                "GPT come dietista personale. Più o meno."
               ]
             }
           ]
         },
         {
-          "title": "🐖 ff.25.1 Pig Heart Transplants",
-          "tags": ["💊"],
+          "title": "💊 ff.104.1 L’hacker del corpo",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Thanks to genetic editing, the first cardiac transplant from pig to human avoids rejection, but zoonotic infection risks remain."
+                "Stiamo assistendo a un crescente interesse rispetto a longevità, supplementi e diete. O almeno, gli algoritmi che filtrano il mio internet lo fanno.",
+                "E così, futuro fortissimo vira un po’ su tutto ciò.",
+                "Ad esempio, sono incappato inDave Asprey. Personaggio particolare e contestato tanto che laBritish Dietetic Associationha descritto la dieta da lui proposta pseudo-scientifica.",
+                "Nel libro,Smarter not harderpropone il biohacking. La sua teoria è che spesso “stressiamo” il corpo con allenamenti folli, per intensità e durata, ma senza nutrirlo del cibo necessario per trarne i benefici.",
+                "Ad esempio, per carenza di minerali (il 45% degli americani non raggiunge il magnesio giornaliero)",
+                "Nel libro, Dave riporta supplementi e integratori, differenziando a seconda che si voglia ottimizzare performance sportiva, longevità o massa muscolare.",
+                "Non solo. Riporta i dosaggi. Importantissimi.",
+                "Angolo nerd.Una guida per aumentare l’assunzione di minerali dal cibo."
               ]
             }
           ]
         },
         {
-          "title": "🫀 ff.25.2 The Scale of the Transplant Problem",
-          "tags": ["💊", "💸"],
+          "title": "🦸‍♂️ ff.104.2 I fantastici 4",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "In the USA 60,000 people on waiting list: kidneys represent 83% of demand, but supply covers only 65%."
+                "Lo so. Siamo stressati e di corsa, costretti anche da compromessi sociali a scelte alimentari non ottimali.",
+                "Ecco i miei fantastici 4, super-supplementi per aggiustare un po’ la rotta.",
+                "ElettrolitiAnche mangiando bene, non è banale arrivare al fabbisogno di magnesio e potassio.Soprattutto d’estate quando sudiamo un po’ di più. E infatti il Polase in questa stagione appare sulla bocca di tutti (e sui scaffali dell’Esselunga).Il problema? Come detto, i dosaggi. Vediamo un esempio:Straccetti di soiaMangiare proteine e fibre minimizzando i grassi? Quasi impossibile.Quando ho scoperto latexturized vegetable protein(il nome spaventa, ma è soia) sono rimasto sbalordito:1.5€ per 100g, che apportano 50 g proteine, 15 g fibre e solo 7g grassi.GlicinaLa glicina supporta la longevità favorendo il turnover del collagene e potenziando la difesa antiossidante (sintesi di glutatione).Sappiamo cheridurre una sola proteina, la metionina (presente nelle proteine a fonte animale) promuove la longevità. La glicina bilancia i potenziali effetti negativi (per longevità) della metionina.Siim Land, top 10 nelle olimpiadi del rallentamento dell’invecchiamento, suggerisce una dose tra 12-18 grammi al giorno.Germe di granoIn🌶️ ff.99.2 Polenta e spermidinaabbiamo scoperto un’altra molecola, dal nome mistico:la spermidina allunga la vita.10 g di germe di grano (da mischiare nell’impasto del pane o nel porridge la mattina) forniscono una buona base. Poi mango, soia e polenta!"
               ]
             }
           ]
         },
         {
-          "title": "🙊 ff.25.3 Translating Pig Language",
-          "tags": ["🧠", "👥"],
+          "title": "🤮 ff.104.3 Gli abominevoli 5",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "An AI reaches 90% accuracy in connecting grunts to different emotional states of pigs."
+                "La cosa migliore della vita? Che per migliorare non serve per forza fare cose stratosferiche. Bastanonfare cose sbagliate.",
+                "Ecco allora 5 alimenti o ingredienti da evitare. Sempre.",
+                "Margarina (grassi trans)Di tutti i grassi, evitate soprattutto i trans: aumentano del 30% il rischio di malattie cardiache e infiammazione viscerale (🍔 ff.94.2 Grassi buoni e cattivi).Budini e yogurt processati (polisorbato 80)Questo singolo emulsionante puòridurre del 50% l'integrità della barriera intestinale, aumentando il rischio di infiammazione sistemica.Maionese in barattolo (oli di semi ossidati nei supermercati)Le maionesi commerciali contengono oli di semi, che ossidano durante la lunga permanenza in barattolo. Questioli di semi ossidati aumentano l’infiammazione e massa grassa.Bibite gassate (sciroppo di mais)Il consumo di sciroppo di mais ad altocontenuto di fruttosio è collegato a un calo del 20% nelle capacità di apprendimento e memoria.Froot loops (colorante rosso 40)Anche qui, un solo ingrediente fa la differenza: il red dye 40 è associato a un aumento del10% di ADHD (Disturbo da Deficit di Attenzione e Iperattività) nei bambini e a marcatori di neuroinfiammazione negli adulti."
               ]
             }
           ]
         },
         {
-          "title": "📦 ff.25.4 Amazon for Animals: A Bubble?",
-          "tags": ["💸", "👥"],
+          "title": "👩🏻‍⚕️ ff.104.4 BuonGPT: il mio nutrizionista privato",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Chewy, 'e-commerce for pets', lost 50% of capitalization in 2022: the pandemic-pets boom is downsizing."
+                "Momento, momento, momento.Mi chiederete: come posso sapere tutto? Non serve. Ma seguite la regola del semplice, del meno: meno ingredienti sull’etichetta, meno cibi processati, meno rischi di ingerire ingredienti a rischio.",
+                "Per aiutarvi, poi, ho costruito un GPT che vi guidi nelle scelte di ogni giorno.",
+                "Si chiamaBuonGPT(eappetit!). Parte dall’idea semplice di un ranking per alimenti. In base a valori nutritivi (rispetto alle kcal fornite) vi dice quanto sia “denso” di cose buone.",
+                "Può anche paragonare due cibi, a parità di kcal, per dirvi cosa preferire epotete provarlo qui.",
+                "Fatemi sapere nei commenti come migliorarlo!",
+                "🎶archivio note fortissime",
+                "☕caffè virtuale",
+                "❤️cuoricino qui sotto?",
+                "👋 A presto, damicmer",
+                "©futuro fortissimo|michele merelli"
               ]
             }
           ]
@@ -424,57 +1750,552 @@
       ]
     },
     {
-      "title": "🎼 ff.39 How Do You Dress?",
-      "buttonLabel": "🎼 ff.39 How Do You Dress?",
-      "urlSlug": "ff39-how-do-you-dress",
-      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff39-come-ti-vesti",
+      "buttonLabel": "🎼 ff.99 Cibi per non invecchiare",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff99-cibi-per-non-invecchiare",
+      "urlSlug": "ff99-cibi-per-non-invecchiare",
+      "title": "🎼 ff.99 Cibi per non invecchiare",
       "cards": [
         {
-          "title": "📖 Overview",
-          "tags": ["🎨", "🍃", "💸"],
+          "title": "📖 Panorama",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "What is fashion's impact on climate?",
-                "Will Vinted help the planet?",
-                "How to produce a robotic dress (starting from an NFT)?"
+                "Spermidina, patate viola e altri superfood?",
+                "Cos’è la spermidina e perché allunga la vita?",
+                "Quale superfood più economico? Polenta vs patate viola",
+                "Siamo quello che defechiamo?"
               ]
             }
           ]
         },
         {
-          "title": "🏭 ff.39.1 Fast Fashion's Climate Impact",
-          "tags": ["🍃", "💸"],
+          "title": "👴 ff.99.1 Cosa mangiare per non invecchiare?",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Textiles generate 5-10% of global emissions; 500,000 t of garments become oceanic micro-plastics every year."
+                "Tra una settimana compio 30 anni. Cade a fagiolo (non a caso un legume) il nuovo libro su come rallentare l’invecchiamento di Michael Greger, uno che a colazione si fa unoshot di spezie in amido di patate.",
+                "Invecchierete un po’ però leggendolo: ha 1400 pagine, 800 di bibliografia scientifica con 20.000 articoli!",
+                "Vediamo un riassuntozzo."
               ]
             }
           ]
         },
         {
-          "title": "🔄 ff.39.2 Vinted: A Solution?",
-          "tags": ["💸", "🍃"],
+          "title": "🌶️ ff.99.2 Polenta e spermidina",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "In 2021 US online secondhand was worth almost half of Inditex's turnover, sign of exponential growth of second-hand."
+                "Iniziamo con qualcosa di “caldo”:la spermidina può allungare la vita di quasi 6 anni.",
+                "E’ una poliammina presente nei piselli (non a caso), grano, soia e polenta. La sua struttura chimica aiuta aproteggere il DNA.",
+                "Ecco una tabella dei cibi più ricchi.",
+                "NSFW. Sì, il nome non mente. Si trova anche nello sperma umano. Ogni eiaculazione contiene però solo 0.1 mg di spermidina. Di bianco meglio iltè, protettivo del DNA tanto da poter conservar proprio lo sperma."
               ]
             }
           ]
         },
         {
-          "title": "⚗️ ff.39.3 A Mix of Science, Technology and Fashion",
-          "tags": ["🎨", "💻"],
+          "title": "🥔 ff.99.3 Patate viola: il superfood per eccellenza?",
+          "tags": [],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Bella Hadid walks in a polymeric spray-on dress; DALL-E inspires NFT-to-real collections: fashion becomes hi-tech laboratory."
+                "Invece di integratori da 100€ a barattolo, Michael propone piante, frutti, legumi. Insomma, un altro bell’esempio di semplicità.",
+                "Che sia sport, finanza, dieta, nella vita non bisogna inventarsi nulla di complicato. Bastano cose semplici, consistenza, pazienza e, soprattutto, non fare stupidate.",
+                "La verdura più nutrizionale ed economica?Le patate di Okinawa, che con il loro viola accesso sono piene di antociani, potenti antiossidanti che troviamo anche in:",
+                "Guida rapida sugli antiossidanti nel cibo."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💩 ff.99.4 Il microbioma nella cacca",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Benessere intestinale e fibre: un tema ricorrente su futuro fortissimo,🦠ff.92.2 Un organo in più: il microbioma,🎼 ff.17 Sport (e chi ne fa le feci).",
+                "Non siamo quello che defechiamo:il 75% della cacca è composto da microbi del nostro microbioma.",
+                "Quindi, più mangiamo fibre, più alimentiamo il microbioma, più andiamo in bagno, più “stiamo un fiore”.",
+                "Aveva ragione De André.",
+                "Dai diamanti non nasce nienteDal letame nascono i fiorFabrizio De André,Via del campo",
+                "PS. Le fibre non fanno bene solo all’intestino:per ogni 7g di fibre si ha una riduzione di malattie cardiache del 9%.",
+                "7g di fibre: 2x🍎 | 1x🥑 | 🥜 (mandorle, 20g) | 🧆 (ceci, 165g)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎵 ff.99.5 Altre note fortissime",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "In conclusione, altre 3 delle molteplici perle che ho trovato nel libro:",
+                "La spezia fieno greco (trigonella) alza il testosterone, mafa sudare al sapore di sciroppo d'acero. Dove si compra? Incredibilmente, leggendo l’etichetta del curry della LIDL, ho scoperto che è tra gli ingredienti.Bereun bicchiere di latte di soia al giorno riduce la probabilità di cancro al seno del 12%(effetto cumulativo per ogni 5g di proteine della soia).Più che ridurre calorie o proteine,per allungare la vita è importante limitare l’amminoacido metionina, che fra l’altro sbilancia il precursore di melatonina e serotonina:gli effetti del mangiare carne sul sonno.",
+                "E con questo è tutto per oggi. Vado a preparami qualcosa.Se ti è piaciuta questa newsletter:",
+                "☕caffè virtuale",
+                "❤️cuoricino qui sotto?",
+                "🎶archivio note fortissime",
+                "👋 A presto, damicmer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.98 Giochi e simulazioni",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff98-giochi-e-simulazioni",
+      "urlSlug": "ff98-giochi-e-simulazioni",
+      "title": "🎼 ff.98 Giochi e simulazioni",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Come i videogiochi migliorano la realtà",
+                "Effetti positivi dei videogiochi (per NVIDIA)",
+                "Simulare Dr. House è meglio che studiare medicina?",
+                "Quale connessione traIl problema dei 3 corpie Naruto?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚗ff.98.1 Simulatore di guida",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Un simulatore di guida aiuta tutti: sia Leclrec in F1 che vostra zia 50enne che finalmente si è iscritta alla patente. Ma mai quanto per Waymo. E per la guida autonoma.",
+                "Le simulazioni sono la cosa più vicina che abbiamo a una macchina (senza ruote) del tempo. Replicano con tempi di calcolo sempre più brevi migliaia di scenari possibili (e impossibili).",
+                "Tanto che le auto a guida autonoma di Waymo hanno “guidato” virtualmente 10 miliardi di miglia, 1000x quelle in realtà.",
+                "Non a caso NVIDIA, nata per ottimizzare la grafica di Battlefield, ora che il simulato ha effetti tangibili su ogni tecnologia è l’azienda più di valore al mondo."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🩼ff.98.2 Simulare Doctor House",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Usando modelli di linguaggio come ChatGPT, possiamo creare degli “agenti”: impersonificazioni di ruoli aziendali o sociali che, interagendo, creano società virtuali come in The Sims o in una puntata di Doctor House.",
+                "Simulando conversazioni tra pazienti e dottori, tra malattie e prognosi, un GPT generico “ha fatto un tirocinio” tanto dadiventare migliore (MedAgent-Zero) di modelli appositamente allenati su tutta la letteratura scientifica (Medprompt).",
+                "Nell’eterno dilemma teoria vs pratica, l’esperienza sembra far da padrone."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🦊ff.98.3 Sora luna, e il cantico delle creature a nove code",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Laudato si', mi' Signore, per sora luna e le stelle: in celu l'ài formate clarite et pretiose et belle.San Francesco d’Assisi,Cantico delle creature",
+                "Che mix fortissimo. Parliamo di Sora e di creature. Sora di OpenAI, intendo. Crea video partendo da una descrizione testuale. E lo fa in modo tanto realistico cheesperti del settore ipotizzano abbia imparato le leggi della fisica “guardando video”.",
+                "Volpe a nove code?Meglio: una volpe volante! Questa e altre bestie fantastiche inBeyond Our Reality, improbabile documentario stile National Geographic creato con Sora.",
+                "A proposito di corpi e simulazioni:Il Problema dei 3 Corpi, dagli ideatori de Il trono di spade. Suggeritissimo!",
+                "Infine, per un trip filosofico sul tema, vi ricordo🎼 ff.64 Metafisica del metaverso."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "⚛️ff.98.4 Sistemi quantistici",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Nonostante il potenziale dei computer quantistici, fondamentali per simularesuperconduttori, farmaci e nanotecnologie, la tecnologia non è matura (🎼 ff.69 Quantico?).",
+                "Presentano troppi errori di calcolo, per fenomeni comeil decoupling quantistico. Ma simulare computer quantistici può aiutarci.",
+                "Però, però, però.Forse studiare qubit e gatti di Schrödinger non serve: AlphaFold3 di Google DeepMind (🎼 ff.4 Mammut resuscitati) ha capito la fisica quantistica dall’esperienza.",
+                "Da un file di testo con una lista degli atomi presenti, la nuova versione simula struttura 3D e interazioni chimiche tra DNA, RNA e piccole molecole (farmaci). In precedenza gestiva “solo” proteine.",
+                "🎶archivio note fortissime",
+                "☕caffè virtuale",
+                "❤️cuoricino qui sotto?",
+                "👋 A presto, damicmer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.97 Tocchiamoci di più!",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff97-tocchiamoci-di-piu",
+      "urlSlug": "ff97-tocchiamoci-di-piu",
+      "title": "🎼 ff.97 Tocchiamoci di più!",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Sempre più insensibili, apatici e senza contatti?",
+                "La scienza dei benefici di un abbraccio",
+                "Massaggiatori: il lavoro del futuro?",
+                "O un robot li sostituirà?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌐ff.97.1 Sempre più soli",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Vuoi per il COVID, per i social o perché pensiamo solo a noi stessi, ma non ci tocchiamo più (figuriamoci quindi i figli,👵🏻ff.77.1 La “famiglia tradizionale” è passato?).",
+                "In 20 anni la solitudine è aumentata, specie nelle amicizie: passiamo con amici solo 40 minuti al giorno, nel 2003 erano 2 ore.Specialmente i maschietti non hanno amici stretti.",
+                "Problemi, problemi, problemi.Senza connessioni sociali, non c’è futuro (fortissimo). Se siamo isolati come gliotakugiapponesi (📙ff.74.2 Breve dizionario culturale), la nostra salute peggiora più del fumare 15 sigarette al giorno o bere 6 drink alcolici (!!!).",
+                "Il tema è tanto importante che ancheSteve Buscemi è sceso in campo, per guidare la 7° edizione del Festival UnLonely Films.",
+                "Questi e altri preoccupanti dati nelreport 2023: L’epidemia di Solitudinedel Surgeon General’s Advisory Board.",
+                "Unsondaggio Gallup fa però notare che la solitudine post-COVID sta diminuendo."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🫂ff.97.2 La carestia del contatto",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Proprio la “carestia d’affetti” è al centro diOut of Touchdi Michelle Drouin, professoressa di psicologia dell’Indiana University.",
+                "Michelle propone una to-do-list di esercizi relazionali (e non individuali):",
+                "Cercare di abbracciare, toccare qualcuno (magari anche solo un animale) per 20 secondi al giorno.Coltivare quanto più possibile relazioni e amicizie storiche, ma, se non ricambiate, cercane altre.Sfruttare la tecnologia: il cellulare, ma per una chiamata o un messaggio personale. Oppure usando ChatGPT o Replika.AI per un dialogo anche solo introspettivo, autoanalitico.",
+                "Questo focus sulle relazioni più che sull’individuo ci riporta a🔺ff.89.2 Piramide di Maslow 2.0."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🩵ff.97.3 Caressa e carezze contro lo stress",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Abbracciamoci forte e vogliamoci tanto bene.Fabio Caressa",
+                "Ok, ma per abbracciarci, non aspettiamo di rivincere i mondiali. Perché il contatto è vita. Vediamo la scienza.",
+                "A differenza di quando tocchiamo oggetti inanimati,stringiamo un essere umano tutti allo stesso modo(con una velocità di 5cm/s, quella che stimola neuroni di contatto “lenti”)",
+                "Neuroni lenti e neuroni veloci.Le due tipologie di neuroni di cui è munita la pelle: veloci per rispondere a stimoli come il dolore, lenti per trasmettere la gentilezza di una carezza.",
+                "Rangan Chatterjee (incontrato in🦁ff.90.1 Scappare da un leone o una notifica) nota chedurante l’infanzia il contatto della madre promuove la regolazione dello stress, perché vi è uncalo di cortisolo dopo un abbraccio.",
+                "La risposta fisiologica è tanto innata che, in mancanza di alternative,va bene anche farsi massaggi da soli."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌐ff.97.4 Economia e robot del massaggio",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Carestia di contatto, epidemia di stress, isolamento sociale e invecchiamento della popolazione: tutto fa presagire che i massaggiatori avranno un futuro fortissimo.",
+                "Delle10 persone intervistate dall’ATMA:",
+                "6 hanno ricevuto un massaggio nel 2023, con una media di 3 all’anno9 pensano che un massaggio debba essere innalzato a terapia clinica2 usano il massaggio per alleviare lo stress",
+                "Il problema? Probabilmente, come per infermieri e personale per cure geriatriche, non avremo abbastanza massaggiatori per tutta la richiesta.",
+                "Ecco alloraAescape: il robot massaggiatore.",
+                "E con i robot chiudiamo un bel cerchio anche oggi: la professoressa Drouin, scettica su ruolo della tecnologia contro la solitudine, si è ricreduta dopo il suo incontro conSophia, il robot di Hanson Robotics.",
+                "E con questo è tutto per oggi. Vado a toccarmi un po’.",
+                "🎶cerca tra link di futuro fortissimo",
+                "☕supporta con un caffè virtuale",
+                "metteresti un cuoricino qui sotto?❤️❤️❤️",
+                "👋 alla prossima, damicmer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.95 FarmVille e web3",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff95-farmville-e-web3",
+      "urlSlug": "ff95-farmville-e-web3",
+      "title": "🎼 ff.95 FarmVille e web3",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Feudalesimo e libertà: rivendicare internet",
+                "Facebook e TikTok: feudalesimo digitale?",
+                "Breve storia di internet: web1, web2, web3",
+                "Blockchain: non solo speculazione finanziaria"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌐ff.95.1 La sovranità dei network",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "C’è una legge che descrive la potenza dei social network. Si chiamaLegge di Metcalfe, dal nome dell’inventore anche della presa Ethernet.",
+                "Iscriviti per le potenzialità, rimani per il network.Chris Dixon",
+                "YouTube ci ha attratto con contenuti gratuiti, oggi però ha più pubblicità della TV via cavo.",
+                "I proprietari del network, poi, decidono cosa amplificare (o silenziare). Twitter/X riduce l’audience di post con link esterni e blocca la visualizzazione su Substack (devoscreenshottare il tweet di Tiboper farvelo leggere qui)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🦆ff.95.2 FarmVille e feudalesimo",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Vi sblocco un ricordo.",
+                "FarmVille e Fortnite.Ricordate quando Facebook era pieno di notifiche di questo tipo? Poi, però, nel 2011Facebook ha di fatto bloccato la crescita di Zynga, la casa produttrice di FarmVille (che ora pensa aSugartown, FarmVille su server decentralizzati).",
+                "Lo stesso potrebbe accadere a Fortnite:Epic ha un contenzioso contro Apple, che trattiene il 30% degli acquisti fatti sul videogioco."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🔑ff.95.3 La proprietà privata digitale",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Chris Dixondel fondo A16Z Crypto sostiene così la necessità di un nuovo internet, nel suo recentissimo libroRead Write Own.",
+                "Cos’è il web3?E soprattutto, cosa sono web1 e web2?",
+                "web 1 | lettura+ protocolli aperti come quelli tutt’ora usati da email (STMP) e siti web (HTML)- sistemi senza organizzazione e stimoli finanziari per utentiweb 2 | lettura e scrittura+centralizzazione dei database e creazione di piattaformeuser-friendly- libertà di parola ma mancanza di controllo sui mezzi di diffusione/algoritmiweb 3 | lettura, scrittura e possesso+decentralizzazione conblockchain dei database (il vantaggio web2)+ regole immutabili per promuovere partecipazione degli utenti (con token) e favorire finanziamenti",
+                "Un buon riassunto del libro è la chiacchierata tra l’autore e Balaji (ex-CTO di Coinbase,🌐 ff.52.3 Fondare la propria nazione)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "✍️ ff.95.4 Reinventare scrittura e stampa",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "La scrittura e le newsletter su Substack potrebbero essere un primo esempio della transizione verso il web3. Vediamo perché.",
+                "Dal momento che le newsletter sono email, su un protocollo come abbiamo visto aperto, Substack non può bloccare i suoi scrittori se vogliono migrare su altri servizi (basta un copia e incolla delle mail).",
+                "Gutenberg o Telepass?La scrittura è al centro di un’altra analogia. Come l’invenzione della stampa ha permesso di superare il blocco dell’Inquisizione, la blockchain restituisce la neutralità della rete agliutenti/influencers/brands, costretti a pagare sempre di più per ottenere lo stesso traffico sui social."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "⛓️ff.95.5 Cosa risolve la blockchain?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Chiedersi cosa risolva la blockchain è come chiedersi: “cosa risolve l’acciaio?”Chris Dixon,Read Write Own",
+                "Oltre al tema della censura e delle “tasse da marketplace”, ecco le criticità del mondo online attuale:",
+                "Boxing.L’intelligenza artificiale mette in box/FAQ/chat il contenuto raccolto online, togliendo la monetizzazione dei siti originaliDeepfakessempre più credibili minano la credibilità dei contenuti online (🍝ff.85.4 Carbonara e criptovalute,verifymedia)",
+                "e opportunità:",
+                "Tokenizzazione.Nel gaming lemodsono l’ordine del giorno (League of Legends è un remix di una mappa di Warcraft III). La blockchain premia in modo prevedibile creatività e contributi degli utenti (Edenhorde, il Signore degli Anelli collaborativo che restituisca il valore agli utenti)",
+                "Interoperatibilità.Possibilità di trasferire contatti, contenuti e acquisti da una piattaforma all’altra senza attriti (come detto, vedi esempio Substack)Burocrazia.L’esempio diEhterisc che ti rimborsa in 10 minuti il biglietto aereo",
+                "E con questo è tutto per oggi. Vado a s-bloccare un po’ la schiena.👋 A presto, damicmer",
+                "lenaweber404A post shared by@lenaweber404",
+                "🎶archivio note fortissime",
+                "☕caffè virtuale",
+                "❤️cuoricino qui sotto?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.94 Il grasso fa male?",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff94-il-grasso-fa-male",
+      "urlSlug": "ff94-il-grasso-fa-male",
+      "title": "🎼 ff.94 Il grasso fa male?",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Gravidanze, omega-3 e altre rotondità",
+                "Perché serve per la gravidanza",
+                "Gli omega-3 bilanciano le sigarette?",
+                "Un Pokédex dei grassi?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🤰ff.94.1 Come rimanere incinta?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Nelle precedenti edizioni, abbiamo parlato di obesità (🎼 ff.49 La pandemia del 21esimo secolo). E’ un tema delicato e intricato, come d’altronde tutta la biologia umana.",
+                "Stigmatizzare il grasso porta problemi sociali e psicologici, come la bulimia.Deborah Cleggspiega l’importanza di un po’ di grasso, specie sui fianchi delle donne.",
+                "I punti salienti:",
+                "Le cellule grasse sono sorgenti di estrogeni e regolano ovulazione, tanto che la loro mancanza blocca ciclo e fecondità di una donna.Il grasso che si forma dopo la menopausa è di fatto una “terza ovaria”, che ribilancia gli estrogeni venuti a mancare.Soia e germogli contengono sostanze simili agli estrogeni “ovarici” e possono aiutare a combattere gli effetti della menopausa.Cellule grasse buone e cattive: quelle “bianche” flessibili e in grado di rilasciare più facilmente il grasso al loro interno.Il rapporto della misura vita/fianchi identifica l’obesità meglio del BMI.",
+                "Fast food quindi?Non così in fretta:mangiare al McDonald e consumare poca frutta diminuiscono la fertilità. Durante la gestazione e nel periodo successivo, invece, meglio abbondare un po’:per allattare un figlio servono fino a 400kcal al giorno."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🍔ff.94.2 Grassi buoni e cattivi",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Un po’ di grasso fa bene. Ma quale?",
+                "Alimentazione e dieta sono un intreccio di chimica, biologia e fisiologia. I valori nutrizionali sull’etichetta di un alimento non bastano. Specie per i grassi.",
+                "Compound Interest raccoglie in breve le 5 categorie di grassi:",
+                "Igrassi trans sono da evitare: l’aumento di malattie cardiovascolari.Grazie ai doppi legami C=C, i grassi poli-insaturi possono avere proprietà anti-ossidanti e abbassano il colesterolo.",
+                "Pokédex degli oli.L’olio semi di lino è “super-efficace” negli omega-3 (ma quelli corti, leggi sotto). Per l’alto contenuto di grassi saturi, invece, meglio evitare il “cocco-bello”.",
+                "Come detto, però,c’è tanta chimica di mezzo. Temperature e rapporto tra reagenti vanno controllati precisamente. Se vi siete messi a panificare in casa durante il lockdown, lo sapete.",
+                "Tanto che:",
+                "Se scaldiamo troppo l’olio “buono” (extravergine, poli-insaturo) lo trasformiamo in trans, facendoci silenziosamentemoltomale(è bastato “girare” il legame C=C della catena di carbonio).I grassi poli-insaturi fanno bene, ma troppi omega-6 rispetto agli omega-3 forse no.",
+                "Per approfondire (è lungo, vi avviso), il blog Dynomight."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚬ff.94.3 Omega-3 come sigarette?",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Ok, ho aggiunto carne al fuoco e la domanda “quali grassi?” è ancora più intricata.",
+                "Una risposta semplice, se dovete scegliere quali grassi assumere: omega-3 “lunghi”.",
+                "In questo fenomenale podcast (ci torneremo), Rhonda Patrick fa notare:",
+                "Assumere 1g al giorno di omega-3 (50g di salmone) può avere gli stessi effetti di smettere di fumare.I maggiori benefici derivano da omega-3 “lunghi”(=EPA e DPA), presenti in fonti animali (il pesce).La variante “breve” di omega-3 (=ALA) presente in semi e dieta vegetariana, anche se parzialmente “allungata” durante la digestione, non basta.Vegetariani o pescetariani? Per raggiungere in modo semplice e consistente l’obbiettivo, conviene prendereun integratore(solo uno, promesso, non come💊 ff.49.4 Il superuomo che prende 100 pillole al giorno)",
+                "E con questo è tutto per oggi. Vado a sgrassare un po’.",
+                "🎶archivio note fortissime",
+                "☕caffè virtuale",
+                "❤️cuoricino qui sotto?",
+                "👋 A presto, damicmer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.92 La dieta dei centenari?",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff92-la-dieta-dei-centenari",
+      "urlSlug": "ff92-la-dieta-dei-centenari",
+      "title": "🎼 ff.92 La dieta dei centenari?",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Sfamare il microbioma con fagioli, tè e caffè",
+                "Fagioli: il prossimo super-food?",
+                "Perché il caffè può prevenire il diabete?",
+                "Siamo i microbi del nostro intestino?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🫘ff.92.1 Fagioli di bazar",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "In questa newsletter non troverete super cibi. Ma fagioli.",
+                "Dan Buettner è l’esperto quando si parla diregioni con più centenari (tra cui la Sardegna), leblue zones.Il suo bestseller ha ispirato il documentario Netflix sul tema.",
+                "93 anni.L’età media dei 9 fratelli dellafamiglia Melis quando è entrata nel Guinness dei Primati.",
+                "Il segreto?",
+                "Il minestrone centenario.Ogni giorno, a pranzo,zuppa (ricetta qui): tris di fagioli, carote, cipolle, origano, patate, sedano, peperoni rossi e un filo d’olio (e pecorino) a guarnire."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🦠ff.92.2 Un organo in più: il microbioma",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Il microbioma (strato di microbi che riveste l’intestino) è sempre più connesso con umore, glicemia e malattie.",
+                "D’altronde, se ci pensate, l’intestino è dove il cibo passa la maggior parte del tempo nel nostro corpo. I microbi controllano quindi la velocità con cui molecole, come gli zuccheri, entrano in circolo (e quindi la risposta glicemica).",
+                "Tanto che analizzare (no pun intended) la cacca può far vincere le olimpiadi (Blummenfelt, iridato triatleta:🇳🇴 ff.17.1 La Norvegia è maniacale).",
+                "Contengo moltitudinidel Pulitzer Ed Yong innalza microbi dell’intestino al pari di altre “nostre” cellule. Tanto che crescere senza microbi è impossibile (ad esempio,regolano la pressione cardiaca).",
+                "E i fagioli?Come altri cibi non processati, sono ricchi di fibre. Ele fibre favoriscono un microbioma sano e vario (e conseguentemente minori infiammazioni)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "☕ff.92.3 Tè o caffè? Benzina del microbioma",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Il microbioma è ghiotto anche di polifenoli.",
+                "Caffè e tè ne sono ricchi. Un’altra arma contro picchi glicemici e diabete?",
+                "La caffeina prende in prestito energia del futuro. Si lega ai ricettori dell’adenosina (molecola della stanchezza). Quando poi se ne va, però, tutta l’adenosina accumulata nel frattempo “ci colpisce ancora più fortemente”.Andrew Huberman,Using Caffeine to Optimize Mental & Physical Performance",
+                "E’ bene non assumere più di 400mg di caffeina (guida sulla caffeina in Starbucks). Bilanciate piuttosto con iltè, che può ridurre l’ansia,grazie alla L-teanina."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "👌ff.92.4 La dieta perfetta (secondo GPT)",
+          "tags": [],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Quindi, per riassumere, cosa mangiare per arrivare a 100 anni? Non dovete spingervi fino al metodo Blueprint di Bryan Johnson (💊 ff.49.4 Il superuomo che prende 100 pillole al giorno).",
+                "Ho chiesto a GPT di sviluppare la dieta perfetta, (con 100g di proteine, 40g di fibre e micronutrienti essenziali, stando in circa 2200 kcal).",
+                "Non solo fagioli, quindi.Meglio, altrimenti va a finire come per questa coppia, con inspiegabiliperiodiche flatulenze dopo una visita dai parenti di lei.",
+                "🎶archivio note",
+                "☕caffè virtuale",
+                "❤️metti un cuoricino qui sotto?"
               ]
             }
           ]
@@ -489,7 +2310,10 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["🍃", "💸"],
+          "tags": [
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -503,7 +2327,10 @@
         },
         {
           "title": "🔟 ff.58.1 The Cost of a Human Life",
-          "tags": ["🍃", "💸"],
+          "tags": [
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -515,7 +2342,9 @@
         },
         {
           "title": "🕹️ ff.58.2 Minecraft of Emissions",
-          "tags": ["🍃"],
+          "tags": [
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -527,7 +2356,9 @@
         },
         {
           "title": "💲 ff.58.4 Spending a Dollar",
-          "tags": ["💸"],
+          "tags": [
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -540,57 +2371,70 @@
       ]
     },
     {
-      "title": "🎼 ff.1 Climate",
-      "buttonLabel": "🎼 ff.1 Climate",
-      "urlSlug": "ff1-climate",
-      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/-ff1-clima",
+      "title": "🎼 ff.39 How Do You Dress?",
+      "buttonLabel": "🎼 ff.39 How Do You Dress?",
+      "urlSlug": "ff39-how-do-you-dress",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff39-come-ti-vesti",
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["🍃", "🚕", "💸"],
+          "tags": [
+            "🎨",
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "COP26, renewable energy, micro-mobility",
-                "Fresh artistic identity for the Glasgow conference",
-                "Bill Gates and the 'zero' roadmap"
+                "What is fashion's impact on climate?",
+                "Will Vinted help the planet?",
+                "How to produce a robotic dress (starting from an NFT)?"
               ]
             }
           ]
         },
         {
-          "title": "📉 ff.1.2 From 51 Billion to 0",
-          "tags": ["🍃", "💸"],
+          "title": "🏭 ff.39.1 Fast Fashion's Climate Impact",
+          "tags": [
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Gates: need to zero out 51 Gt CO₂ annually to avoid climate disasters; innovation + R&D investments are fundamental."
+                "Textiles generate 5-10% of global emissions; 500,000 t of garments become oceanic micro-plastics every year."
               ]
             }
           ]
         },
         {
-          "title": "🛴 ff.1.3 Will Electric Scooters Save Us?",
-          "tags": ["🚕", "🍃"],
+          "title": "🔄 ff.39.2 Vinted: A Solution?",
+          "tags": [
+            "💸",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "In the USA 80% of trips are <16 km: electric micro-mobility can drastically reduce urban emissions."
+                "In 2021 US online secondhand was worth almost half of Inditex's turnover, sign of exponential growth of second-hand."
               ]
             }
           ]
         },
         {
-          "title": "🏭 ff.1.4 CO₂ Capture Will Be Important",
-          "tags": ["🍃", "💸"],
+          "title": "⚗️ ff.39.3 A Mix of Science, Technology and Fashion",
+          "tags": [
+            "🎨",
+            "💻"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "CO₂ capture in cement and steel costs ~$100/ton; innovation will lower the price, making it a key lever."
+                "Bella Hadid walks in a polymeric spray-on dress; DALL-E inspires NFT-to-real collections: fashion becomes hi-tech laboratory."
               ]
             }
           ]
@@ -598,81 +2442,183 @@
       ]
     },
     {
-      "title": "🎼 ff.12 Sun, Heart and Love",
-      "buttonLabel": "🎼 ff.12 Sun, Heart and Love",
-      "urlSlug": "ff12-sun-heart-and-love",
-      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/-ff10-sole-cuore-e-amore",
+      "title": "🎼 ff.25 Animal Farm",
+      "buttonLabel": "🎼 ff.25 Animal Farm",
+      "urlSlug": "ff25-animal-farm",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff25-la-fattoria-degli-animali",
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["🍃", "🧠"],
+          "tags": [
+            "💊",
+            "🧠",
+            "👥"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Where is solar energy produced in the world?",
-                "Recent progress in nuclear fusion",
-                "Will we ever run out of resources on our pale blue dot?"
+                "Can we transplant an animal's heart into a human being?",
+                "Will we translate pig grunts?",
+                "What can we learn from the creator of Amazon for animals?"
               ]
             }
           ]
         },
         {
-          "title": "🌬️ ff.11.1 The Revenge of Renewables",
-          "tags": ["🍃"],
+          "title": "🐖 ff.25.1 Pig Heart Transplants",
+          "tags": [
+            "💊"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "In 2020 wind added +163 TWh, surpassing solar and hydro: renewables accelerate decarbonization."
+                "Thanks to genetic editing, the first cardiac transplant from pig to human avoids rejection, but zoonotic infection risks remain."
               ]
             }
           ]
         },
         {
-          "title": "🇨🇳 ff.11.2 Does China Make Its Own History?",
-          "tags": ["🍃", "💸"],
+          "title": "🫀 ff.25.2 The Scale of the Transplant Problem",
+          "tags": [
+            "💊",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "In 2021 China installed 227 GW of solar—more than double global 2020 capacity."
+                "In the USA 60,000 people on waiting list: kidneys represent 83% of demand, but supply covers only 65%."
               ]
             }
           ]
         },
         {
-          "title": "🦾 ff.11.3 Robots Assist Us",
-          "tags": ["💻", "🍃"],
+          "title": "🙊 ff.25.3 Translating Pig Language",
+          "tags": [
+            "🧠",
+            "👥"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Automation and robots lower panel installation costs, accelerating renewable adoption."
+                "An AI reaches 90% accuracy in connecting grunts to different emotional states of pigs."
               ]
             }
           ]
         },
         {
-          "title": "🌞 ff.10.4 Melted Money",
-          "tags": ["💸", "🧠"],
+          "title": "📦 ff.25.4 Amazon for Animals: A Bubble?",
+          "tags": [
+            "💸",
+            "👥"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Commonwealth Fusion Systems raised $1.8B (2021): goal of net-positive plasma by 2025."
+                "Chewy, 'e-commerce for pets', lost 50% of capitalization in 2022: the pandemic-pets boom is downsizing."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎼 ff.19 Hemingway's Hamburger",
+      "buttonLabel": "🎼 ff.19 Hemingway's Hamburger",
+      "urlSlug": "ff19-hemingways-hamburger",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff17-lhambuger-di-hemingway",
+      "cards": [
+        {
+          "title": "📖 Overview",
+          "tags": [
+            "🍽",
+            "🍃",
+            "💸"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Do cows pollute as much as the United States?",
+                "Are silent gas leaks a climate problem?",
+                "How did Hemingway eat his hamburger?"
               ]
             }
           ]
         },
         {
-          "title": "🔚 ff.11.5 Running Out of Resources",
-          "tags": ["🧠", "🍃"],
+          "title": "💦 ff.19.1 Polluting Flatulence",
+          "tags": [
+            "🍃",
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
-                "Naval Ravikant: human creativity will always redefine what we consider a 'resource', so we won't truly exhaust them."
+                "Bovine methane emissions exceed those of the USA, equivalent to the global transport sector. Plant foods pollute 10× less than animals."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🍔 ff.19.2 Hemingway's Favorite Hamburger",
+          "tags": [
+            "🍽"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Ground beef, onions, capers and India Relish: crispy crust outside, soft heart, no extra sauces."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "♨️ ff.19.3 Killer Stoves",
+          "tags": [
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Gas stoves leak methane even when turned off: annual impact equivalent to 500,000 cars in the United States."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🐖 ff.19.4 Cool Sustainable Choices",
+          "tags": [
+            "🎨",
+            "🍽"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "La Vie's pop packaging (pink-green) shows that attractive design pushes consumers towards sustainable alternatives."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💉 ff.19.5 3D Printed Meat",
+          "tags": [
+            "🧠",
+            "🍽"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Redefine Meat prints vegan burgers with realistic muscle fibers, bringing taste and texture closer to animal meat."
               ]
             }
           ]
@@ -687,7 +2633,11 @@
       "cards": [
         {
           "title": "📖 Overview",
-          "tags": ["💸", "🍃", "🧠"],
+          "tags": [
+            "💸",
+            "🍃",
+            "🧠"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -701,7 +2651,9 @@
         },
         {
           "title": "💰 ff.16.1 Many Trillions of Dollars",
-          "tags": ["💸"],
+          "tags": [
+            "💸"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -713,7 +2665,10 @@
         },
         {
           "title": "🌉 ff.16.2 The Cost of Infrastructure",
-          "tags": ["💸", "🍃"],
+          "tags": [
+            "💸",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -725,7 +2680,10 @@
         },
         {
           "title": "⚫ ff.16.3 The (Black) CO₂ Market",
-          "tags": ["💸", "🍃"],
+          "tags": [
+            "💸",
+            "🍃"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
@@ -737,12 +2695,185 @@
         },
         {
           "title": "🆕 ff.16.4 Which Startups to Monitor?",
-          "tags": ["💸", "💻"],
+          "tags": [
+            "💸",
+            "💻"
+          ],
           "contentBlocks": [
             {
               "type": "paragraphs",
               "content": [
                 "Mobility, energy and food: in 2021 climate-startups raised $40B, +20% every quarter."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎼 ff.12 Sun, Heart and Love",
+      "buttonLabel": "🎼 ff.12 Sun, Heart and Love",
+      "urlSlug": "ff12-sun-heart-and-love",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/-ff10-sole-cuore-e-amore",
+      "cards": [
+        {
+          "title": "📖 Overview",
+          "tags": [
+            "🍃",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Where is solar energy produced in the world?",
+                "Recent progress in nuclear fusion",
+                "Will we ever run out of resources on our pale blue dot?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌬️ ff.11.1 The Revenge of Renewables",
+          "tags": [
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "In 2020 wind added +163 TWh, surpassing solar and hydro: renewables accelerate decarbonization."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🇨🇳 ff.11.2 Does China Make Its Own History?",
+          "tags": [
+            "🍃",
+            "💸"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "In 2021 China installed 227 GW of solar—more than double global 2020 capacity."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🦾 ff.11.3 Robots Assist Us",
+          "tags": [
+            "💻",
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Automation and robots lower panel installation costs, accelerating renewable adoption."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌞 ff.10.4 Melted Money",
+          "tags": [
+            "💸",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Commonwealth Fusion Systems raised $1.8B (2021): goal of net-positive plasma by 2025."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🔚 ff.11.5 Running Out of Resources",
+          "tags": [
+            "🧠",
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Naval Ravikant: human creativity will always redefine what we consider a 'resource', so we won't truly exhaust them."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎼 ff.1 Climate",
+      "buttonLabel": "🎼 ff.1 Climate",
+      "urlSlug": "ff1-climate",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/-ff1-clima",
+      "cards": [
+        {
+          "title": "📖 Overview",
+          "tags": [
+            "🍃",
+            "🚕",
+            "💸"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "COP26, renewable energy, micro-mobility",
+                "Fresh artistic identity for the Glasgow conference",
+                "Bill Gates and the 'zero' roadmap"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📉 ff.1.2 From 51 Billion to 0",
+          "tags": [
+            "🍃",
+            "💸"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Gates: need to zero out 51 Gt CO₂ annually to avoid climate disasters; innovation + R&D investments are fundamental."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🛴 ff.1.3 Will Electric Scooters Save Us?",
+          "tags": [
+            "🚕",
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "In the USA 80% of trips are <16 km: electric micro-mobility can drastically reduce urban emissions."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🏭 ff.1.4 CO₂ Capture Will Be Important",
+          "tags": [
+            "🍃",
+            "💸"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "CO₂ capture in cement and steel costs ~$100/ton; innovation will lower the price, making it a key lever."
               ]
             }
           ]
