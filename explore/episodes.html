@@ -37,6 +37,11 @@
     .t a{{font-weight:650;display:inline-block;margin-bottom:4px}}
     .meta{{font-size:12px;color:var(--muted)}}
     .x{{margin-top:8px;color:var(--muted);line-height:1.6;font-size:13px}}
+    .actions{{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}}
+    .copy-btn{{background:rgba(122,162,255,.14);border:1px solid rgba(122,162,255,.30);color:var(--text);border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer}}
+    .copy-btn:hover{{border-color:rgba(122,162,255,.55)}}
+    .copy-btn:active{{transform:translateY(1px)}}
+    .copy-btn.ok{{background:rgba(52,168,83,.20);border-color:rgba(52,168,83,.40)}}
     .foot{{margin-top:22px;border-top:1px solid var(--rule);padding-top:14px;color:var(--muted);font-size:12px}}
   </style>
 </head>
@@ -92,7 +97,7 @@ function apply() {
   for (const row of document.querySelectorAll('tr.row')) {
     const rm = row.dataset.macro;
     const rs = row.dataset.sub;
-    const text = row.innerText.toLowerCase();
+    const text = (row.dataset.search || row.innerText).toLowerCase();
     const ok = (!m || rm === m) && (!s || rs === s) && (!qq || text.includes(qq));
     row.style.display = ok ? '' : 'none';
     if (ok) shown++;
@@ -100,11 +105,92 @@ function apply() {
   count.textContent = shown + ' episodi';
 }
 
+function flashOk(btn) {
+  btn.classList.add('ok');
+  const prev = btn.textContent;
+  btn.textContent = 'copiato';
+  setTimeout(() => {
+    btn.classList.remove('ok');
+    btn.textContent = prev;
+  }, 900);
+}
+
+async function copyText(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    await navigator.clipboard.writeText(text);
+    return true;
+  }
+  // Fallback (works in more restrictive contexts)
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  const ok = document.execCommand('copy');
+  document.body.removeChild(ta);
+  return ok;
+}
+
+function initCopyButtons() {
+  for (const row of document.querySelectorAll('tr.row')) {
+    const ff = row.dataset.ff || '';
+    const cell = row.querySelector('td.t');
+    const a = cell ? cell.querySelector('a') : null;
+    if (!cell || !a) continue;
+
+    const titleText = (a.textContent || '').trim();
+    const url = a.getAttribute('href');
+    const meta = (cell.querySelector('.meta')?.textContent || '').trim();
+    const excerpt = (cell.querySelector('.x')?.textContent || '').trim();
+
+    row.dataset.search = `${ff} ${titleText} ${meta} ${excerpt}`;
+
+    const actions = document.createElement('div');
+    actions.className = 'actions';
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy-btn';
+    btn.textContent = 'copia citation';
+    btn.addEventListener('click', async () => {
+      const md = `- [${titleText}](${url})\n  - ${meta}${excerpt ? `\n  - ${excerpt}` : ''}`;
+      try {
+        const ok = await copyText(md);
+        if (ok) flashOk(btn);
+      } catch (e) {
+        // ignore
+      }
+    });
+
+    const btnUrl = document.createElement('button');
+    btnUrl.type = 'button';
+    btnUrl.className = 'copy-btn';
+    btnUrl.textContent = 'copia link';
+    btnUrl.addEventListener('click', async () => {
+      try {
+        const ok = await copyText(url);
+        if (ok) flashOk(btnUrl);
+      } catch (e) {
+        // ignore
+      }
+    });
+
+    actions.appendChild(btn);
+    actions.appendChild(btnUrl);
+
+    // put buttons after excerpt
+    cell.appendChild(actions);
+  }
+}
+
 macroSel.addEventListener('change', function(){ repopulateSubs(); apply(); });
 subSel.addEventListener('change', apply);
 q.addEventListener('input', apply);
 
 repopulateSubs();
+initCopyButtons();
 apply();
 </script>
 </body>
