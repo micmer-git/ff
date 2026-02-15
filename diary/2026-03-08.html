@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🥗 Nutrition Diary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f8fafc; --surface: #ffffff; --surface-2: #f1f5f9;
+            --text: #1e293b; --text-muted: #64748b; --text-light: #94a3b8;
+            --primary: #4285f4; --secondary: #34a853; --warning: #fbbc04; --danger: #ea4335;
+            --purple: #a855f7; --cyan: #06b6d4; --orange: #f97316; --pink: #ec4899;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 6px rgba(0,0,0,0.04);
+            --shadow-lg: 0 4px 6px rgba(0,0,0,0.05), 0 10px 20px rgba(0,0,0,0.08);
+            --radius: 16px; --radius-sm: 12px;
+        }
+        [data-theme="dark"] {
+            --bg: #0f172a; --surface: #1e293b; --surface-2: #334155;
+            --text: #f1f5f9; --text-muted: #94a3b8; --text-light: #64748b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Google Sans','Roboto',sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; font-size: 14px; -webkit-font-smoothing: antialiased; padding-bottom: 100px; }
+        .container { max-width: 420px; margin: 0 auto; padding: 16px; }
+        .header { background: linear-gradient(135deg, #4285f4 0%, #34a853 50%, #fbbc04 100%); color: white; padding: 20px; margin: -16px -16px 16px -16px; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; }
+        .header h1 { font-size: 20px; font-weight: 500; }
+        .header-nav { display: flex; gap: 8px; align-items: center; }
+        .header-nav a { color: white; text-decoration: none; font-size: 22px; opacity: 0.9; }
+        .header-date { font-size: 13px; opacity: 0.9; margin-top: 4px; }
+        .tabs { display: flex; background: var(--surface); border-radius: 12px; padding: 4px; margin-bottom: 16px; box-shadow: var(--shadow); overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .tab { flex: 1; min-width: 60px; padding: 10px 8px; border: none; background: transparent; font-family: inherit; font-size: 11px; font-weight: 500; color: var(--text-muted); border-radius: 8px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+        .tab.active { background: var(--primary); color: white; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .card { background: var(--surface); border-radius: var(--radius); padding: 20px; margin-bottom: 12px; box-shadow: var(--shadow); }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .card-title { font-size: 13px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .badge { font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 500; }
+        .badge-green { background: rgba(52,168,83,0.1); color: var(--secondary); }
+        .badge-blue { background: rgba(66,133,244,0.1); color: var(--primary); }
+        .badge-red { background: rgba(234,67,53,0.1); color: var(--danger); }
+        .badge-yellow { background: rgba(251,188,4,0.1); color: #b8860b; }
+
+        /* Progress bars */
+        .nutrient-row { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--surface-2); }
+        .nutrient-row:last-child { border-bottom: none; }
+        .nutrient-info { flex: 1; min-width: 0; }
+        .nutrient-name { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+        .nutrient-bar { height: 6px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+        .nutrient-fill { height: 100%; border-radius: 3px; transition: width 0.6s cubic-bezier(0.4,0,0.2,1); }
+        .nutrient-values { text-align: right; margin-left: 12px; flex-shrink: 0; }
+        .nutrient-amount { font-size: 13px; font-weight: 500; }
+        .nutrient-percent { font-size: 11px; color: var(--text-light); }
+
+        /* Food buttons */
+        .food-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .food-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 4px; background: var(--surface-2); border: none; border-radius: var(--radius-sm); cursor: pointer; transition: all 0.15s; font-family: inherit; color: var(--text); }
+        .food-btn:active { transform: scale(0.95); background: var(--primary); color: white; }
+        .food-btn .emoji { font-size: 28px; }
+        .food-btn .label { font-size: 10px; text-align: center; line-height: 1.2; }
+
+        /* Daily Dozen */
+        .dozen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .dozen-item { background: var(--surface-2); border-radius: var(--radius-sm); padding: 12px 8px; text-align: center; cursor: pointer; transition: all 0.2s; }
+        .dozen-item .emoji { font-size: 24px; }
+        .dozen-item .name { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+        .dozen-item .servings { font-size: 12px; font-weight: 700; margin-top: 4px; }
+        .dozen-item.complete { background: rgba(52,168,83,0.15); }
+
+        /* Plant count */
+        .plant-counter { display: flex; align-items: center; justify-content: center; gap: 16px; }
+        .plant-count-big { font-size: 48px; font-weight: 700; color: var(--secondary); }
+        .plant-count-label { font-size: 13px; color: var(--text-muted); }
+        .plant-weekly { font-size: 14px; font-weight: 500; }
+        .plant-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+        .plant-tag { font-size: 11px; padding: 4px 10px; border-radius: 20px; background: rgba(52,168,83,0.1); color: var(--secondary); }
+
+        /* Log */
+        .log-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--surface-2); font-size: 13px; }
+        .log-item:last-child { border-bottom: none; }
+        .log-remove { background: none; border: none; color: var(--danger); cursor: pointer; font-size: 16px; padding: 4px; }
+
+        /* Bottom actions */
+        .bottom-actions { position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface); border-top: 1px solid var(--surface-2); padding: 12px 16px; display: flex; gap: 8px; justify-content: center; z-index: 50; }
+        .action-btn { padding: 10px 20px; border: none; border-radius: 24px; font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+        .action-btn.primary { background: var(--primary); color: white; }
+        .action-btn.secondary { background: var(--surface-2); color: var(--text); }
+
+        .theme-toggle { position: fixed; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2); border: none; font-size: 16px; cursor: pointer; z-index: 100; }
+        .stats-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; margin-bottom: 12px; }
+        .stat-box { background: var(--surface-2); padding: 12px; border-radius: var(--radius-sm); text-align: center; }
+        .stat-box .val { font-size: 20px; font-weight: 700; }
+        .stat-box .lbl { font-size: 11px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-top">
+                <div>
+                    <h1 id="dayTitle">🥗 Nutrition Diary</h1>
+                    <div class="header-date" id="dayDate"></div>
+                </div>
+                <div class="header-nav">
+                    <a href="#" id="prevDay">‹</a>
+                    <a href="index.html">📅</a>
+                    <a href="#" id="nextDay">›</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-grid" id="summaryStats"></div>
+
+        <div class="tabs" id="tabBar"></div>
+
+        <!-- Tab: Food -->
+        <div class="tab-content active" id="tab-food">
+            <div class="card">
+                <div class="card-header"><span class="card-title">Aggiungi Cibo</span></div>
+                <div class="food-grid" id="foodGrid"></div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">Log del giorno</span><span class="badge badge-blue" id="logCount">0</span></div>
+                <div id="foodLog"></div>
+            </div>
+        </div>
+
+        <!-- Tab: Macros -->
+        <div class="tab-content" id="tab-macros">
+            <div class="card">
+                <div class="card-header"><span class="card-title">Macronutrienti</span></div>
+                <div id="macroBars"></div>
+            </div>
+        </div>
+
+        <!-- Tab: Micros -->
+        <div class="tab-content" id="tab-micros">
+            <div class="card">
+                <div class="card-header"><span class="card-title">Vitamine & Minerali</span></div>
+                <div id="microBars"></div>
+            </div>
+        </div>
+
+        <!-- Tab: Dozen -->
+        <div class="tab-content" id="tab-dozen">
+            <div class="card">
+                <div class="card-header"><span class="card-title">Dr. Greger Daily Dozen</span><span class="badge badge-green" id="dozenScore">0/12</span></div>
+                <div class="dozen-grid" id="dozenGrid"></div>
+            </div>
+        </div>
+
+        <!-- Tab: Plants -->
+        <div class="tab-content" id="tab-plants">
+            <div class="card">
+                <div class="card-header"><span class="card-title">Plant Count</span></div>
+                <div class="plant-counter">
+                    <div>
+                        <div class="plant-count-big" id="plantCount">0</div>
+                        <div class="plant-count-label">piante oggi</div>
+                    </div>
+                    <div>
+                        <div class="plant-weekly" id="plantWeekly">0 / 30 settimana</div>
+                    </div>
+                </div>
+                <div class="plant-tags" id="plantTags"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-actions">
+        <button class="action-btn secondary" onclick="undoLast()">↩️ Undo</button>
+        <button class="action-btn secondary" onclick="exportDay()">📥 Export</button>
+        <button class="action-btn secondary" onclick="clearDay()">🗑️ Clear</button>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
+
+<script>
+// ===== DATE HANDLING =====
+function pad(n){ return String(n).padStart(2,'0'); }
+function getDateFromUrl(){
+    const p = window.location.pathname;
+    const m = p.match(/(\d{4}-\d{2}-\d{2})/);
+    if(m) return m[1];
+    const t = new Date();
+    return `${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())}`;
+}
+const DAY = getDateFromUrl();
+const STORAGE_KEY = 'nutri_' + DAY;
+
+function offsetDay(d, n){
+    const dt = new Date(d+'T12:00:00');
+    dt.setDate(dt.getDate()+n);
+    return `${dt.getFullYear()}-${pad(dt.getMonth()+1)}-${pad(dt.getDate())}`;
+}
+
+// ===== NUTRIENT DATABASE (per 100g, from USDA) =====
+// Keys: protein_g, carbs_g, fat_g, fiber_g, kcal, vitA_mcg, vitC_mg, vitD_mcg, vitE_mg, vitK_mcg, vitB12_mcg, iron_mg, calcium_mg, magnesium_mg, zinc_mg, potassium_mg, selenium_mcg
+const NDB = {
+    oats:           {protein_g:13.5, carbs_g:68.7, fat_g:5.89, fiber_g:10.6, kcal:389, iron_mg:4.34, magnesium_mg:126, potassium_mg:350, zinc_mg:2.74, selenium_mcg:25.4, calcium_mg:45.5, vitE_mg:0.42, vitK_mcg:0, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitB12_mcg:0},
+    milk:           {protein_g:3.27, carbs_g:4.63, fat_g:3.2, fiber_g:0, kcal:60, vitA_mcg:32, vitD_mcg:0.96, vitB12_mcg:0.54, calcium_mg:123, magnesium_mg:11.9, potassium_mg:150, zinc_mg:0.42, selenium_mcg:1.9, iron_mg:0, vitC_mg:0, vitE_mg:0.05, vitK_mcg:0},
+    peanuts:        {protein_g:23.2, carbs_g:26.5, fat_g:43.3, fiber_g:8.01, kcal:525, iron_mg:1.55, magnesium_mg:180, potassium_mg:636, zinc_mg:2.78, selenium_mcg:17.8, calcium_mg:49.1, vitE_mg:6.6, vitK_mcg:0, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitB12_mcg:0},
+    cocoa:          {protein_g:20, carbs_g:60, fat_g:10, fiber_g:20, kcal:410, iron_mg:36, calcium_mg:128, magnesium_mg:499, potassium_mg:1524, zinc_mg:6.81, selenium_mcg:14.3, vitK_mcg:2.5, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitE_mg:0.1, vitB12_mcg:0},
+    dark_choc:      {protein_g:4.88, carbs_g:61.2, fat_g:31.3, fiber_g:7, kcal:546, iron_mg:8.02, magnesium_mg:146, potassium_mg:559, zinc_mg:2.01, selenium_mcg:3, calcium_mg:56, vitA_mcg:2, vitE_mg:0.54, vitK_mcg:8.1, vitB12_mcg:0.23, vitC_mg:0, vitD_mcg:0},
+    banana:         {protein_g:0.74, carbs_g:23, fat_g:0.29, fiber_g:1.7, kcal:97, vitA_mcg:1, vitC_mg:12.3, calcium_mg:5, magnesium_mg:28, potassium_mg:326, zinc_mg:0.16, iron_mg:0.26, selenium_mcg:0, vitE_mg:0.1, vitK_mcg:0.1, vitD_mcg:0, vitB12_mcg:0},
+    peanut_butter:  {protein_g:24, carbs_g:22.7, fat_g:49.4, fiber_g:6.32, kcal:588, iron_mg:1.85, magnesium_mg:193, potassium_mg:654, zinc_mg:3.06, selenium_mcg:20.2, calcium_mg:49.8, vitE_mg:5.41, vitK_mcg:0, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitB12_mcg:0},
+    chicken:        {protein_g:31, carbs_g:0, fat_g:3.57, fiber_g:0, kcal:165, iron_mg:1.04, calcium_mg:15, magnesium_mg:29, potassium_mg:256, zinc_mg:1, selenium_mcg:27.6, vitA_mcg:6, vitB12_mcg:0.34, vitC_mg:0, vitD_mcg:0.1, vitE_mg:0.27, vitK_mcg:0.3},
+    rice_cooked:    {protein_g:2.69, carbs_g:28.2, fat_g:0.28, fiber_g:0.4, kcal:130, iron_mg:0.2, calcium_mg:10, magnesium_mg:12, potassium_mg:35, zinc_mg:0.49, selenium_mcg:7.5, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitE_mg:0.04, vitK_mcg:0, vitB12_mcg:0},
+    couscous:       {protein_g:3.79, carbs_g:23.2, fat_g:0.16, fiber_g:1.4, kcal:112, iron_mg:0.38, magnesium_mg:8, potassium_mg:58, zinc_mg:0.26, selenium_mcg:27.5, calcium_mg:8, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitE_mg:0.13, vitK_mcg:0.1, vitB12_mcg:0},
+    pasta_cooked:   {protein_g:5.8, carbs_g:30.9, fat_g:0.93, fiber_g:1.8, kcal:158, iron_mg:0.5, magnesium_mg:18, potassium_mg:44, zinc_mg:0.51, selenium_mcg:26.4, calcium_mg:7, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitE_mg:0.06, vitK_mcg:0, vitB12_mcg:0},
+    lettuce:        {protein_g:1.36, carbs_g:2.87, fat_g:0.15, fiber_g:1.3, kcal:15, vitA_mcg:370, vitC_mg:9.2, vitK_mcg:126, calcium_mg:36, magnesium_mg:13, potassium_mg:194, zinc_mg:0.18, iron_mg:0.86, selenium_mcg:0.6, vitE_mg:0.22, vitD_mcg:0, vitB12_mcg:0},
+    apple:          {protein_g:0.2, carbs_g:15.2, fat_g:0.18, fiber_g:2.1, kcal:63, vitA_mcg:2, vitC_mg:6, vitK_mcg:1, calcium_mg:7, magnesium_mg:5, potassium_mg:109, zinc_mg:0.04, iron_mg:0.1, selenium_mcg:0, vitE_mg:0.18, vitD_mcg:0, vitB12_mcg:0},
+    olive_oil:      {protein_g:0, carbs_g:0, fat_g:100, fiber_g:0, kcal:884, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitE_mg:14.35, vitK_mcg:60.2, iron_mg:0.56, calcium_mg:1, magnesium_mg:0, potassium_mg:1, zinc_mg:0, selenium_mcg:0, vitB12_mcg:0},
+    walnuts:        {protein_g:14.6, carbs_g:10.9, fat_g:69.7, fiber_g:5.21, kcal:654, iron_mg:2.24, magnesium_mg:142, potassium_mg:424, zinc_mg:2.76, calcium_mg:88.3, selenium_mcg:4.9, vitK_mcg:1.7, vitA_mcg:1, vitC_mg:1.3, vitD_mcg:0, vitE_mg:0.7, vitB12_mcg:0},
+    cookies:        {protein_g:5.79, carbs_g:69.6, fat_g:14.3, fiber_g:3.3, kcal:430, iron_mg:2.28, magnesium_mg:32.4, potassium_mg:245, zinc_mg:0.62, calcium_mg:29, selenium_mcg:6, vitE_mg:2.69, vitK_mcg:17.1, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitB12_mcg:0},
+    bresaola:       {protein_g:31.1, carbs_g:2.76, fat_g:1.94, fiber_g:0, kcal:153, iron_mg:2.42, magnesium_mg:19, potassium_mg:235, zinc_mg:4.93, selenium_mcg:32.4, calcium_mg:8, vitB12_mcg:1.59, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitE_mg:0.38, vitK_mcg:1.3},
+    greek_yogurt:   {protein_g:10.3, carbs_g:3.64, fat_g:0.37, fiber_g:0, kcal:61, vitA_mcg:1, vitB12_mcg:0.7, calcium_mg:111, magnesium_mg:10.7, potassium_mg:141, zinc_mg:0.53, selenium_mcg:9.9, iron_mg:0.07, vitC_mg:0, vitD_mcg:0, vitE_mg:0.01, vitK_mcg:0},
+    whey:           {protein_g:66.7, carbs_g:18, fat_g:5.13, fiber_g:0, kcal:385, iron_mg:0.92, magnesium_mg:181, potassium_mg:564, zinc_mg:7.14, selenium_mcg:24.8, calcium_mg:256, vitA_mcg:15, vitB12_mcg:2.27, vitC_mg:0.8, vitD_mcg:0, vitE_mg:0.38, vitK_mcg:0.5},
+    bread_whole:    {protein_g:12.3, carbs_g:43.1, fat_g:3.55, fiber_g:6, kcal:254, iron_mg:2.56, magnesium_mg:76.6, potassium_mg:250, zinc_mg:1.76, selenium_mcg:25.8, calcium_mg:163, vitE_mg:2.82, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitK_mcg:0, vitB12_mcg:0},
+    bread_protein:  {protein_g:18, carbs_g:35, fat_g:4, fiber_g:8, kcal:250, iron_mg:2.5, magnesium_mg:70, potassium_mg:220, zinc_mg:2, selenium_mcg:20, calcium_mg:150, vitE_mg:2, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitK_mcg:0, vitB12_mcg:0},
+    rice_cakes:     {protein_g:7.6, carbs_g:81.5, fat_g:3.8, fiber_g:5.4, kcal:392, iron_mg:1.58, magnesium_mg:136, potassium_mg:290, zinc_mg:3, calcium_mg:12, selenium_mcg:24.1, vitA_mcg:0, vitC_mg:3, vitD_mcg:0, vitE_mg:0, vitK_mcg:0, vitB12_mcg:0},
+    beans_mix:      {protein_g:8.86, carbs_g:23.4, fat_g:1.16, fiber_g:7.3, kcal:136, iron_mg:2.81, magnesium_mg:42, potassium_mg:355, zinc_mg:1.27, selenium_mcg:2.5, calcium_mg:34, vitA_mcg:0.3, vitC_mg:1.3, vitD_mcg:0, vitE_mg:0.16, vitK_mcg:4.7, vitB12_mcg:0},
+    flaxseed:       {protein_g:18, carbs_g:34.4, fat_g:37.3, fiber_g:23.1, kcal:534, iron_mg:5.78, magnesium_mg:372, potassium_mg:793, zinc_mg:4.74, selenium_mcg:136, calcium_mg:230, vitE_mg:0, vitK_mcg:3.68, vitA_mcg:0, vitC_mg:0, vitD_mcg:0, vitB12_mcg:0},
+};
+
+// ===== FOOD ITEMS (portions in grams) =====
+const FOODS = [
+    {id:'porridge', emoji:'🥣', label:'Porridge', parts:[{db:'oats',g:50},{db:'milk',g:103},{db:'peanuts',g:20},{db:'cocoa',g:10},{db:'dark_choc',g:10}], plants:['avena','arachidi','cacao'], dozen:{whole_grains:1,nuts:0.5}},
+    {id:'banana', emoji:'🍌', label:'Banana', parts:[{db:'banana',g:118}], plants:['banana'], dozen:{other_fruits:1}},
+    {id:'pb', emoji:'🥜', label:'PB 30g', parts:[{db:'peanut_butter',g:30}], plants:['arachidi'], dozen:{nuts:0.5}},
+    {id:'milk', emoji:'🥛', label:'Latte 200ml', parts:[{db:'milk',g:206}], plants:[], dozen:{}},
+    {id:'soup', emoji:'🫘', label:'Zuppa legumi', parts:[{db:'beans_mix',g:600}], plants:['fagioli','lenticchie','ceci'], dozen:{beans:3}},
+    {id:'chicken', emoji:'🍗', label:'Pollo 200g', parts:[{db:'chicken',g:200}], plants:[], dozen:{}},
+    {id:'carbs', emoji:'🍚', label:'Cous/riso/pasta', parts:[{db:'couscous',g:250}], plants:['grano'], dozen:{whole_grains:1}},
+    {id:'salad', emoji:'🥗', label:'Verdure 300g', parts:[{db:'lettuce',g:300}], plants:['insalata','verdure miste'], dozen:{greens:1,other_veg:1}},
+    {id:'fruit', emoji:'🍎', label:'Frutta', parts:[{db:'apple',g:180}], plants:['mela'], dozen:{other_fruits:1}},
+    {id:'oil', emoji:'🫒', label:'Olio EVO 10g', parts:[{db:'olive_oil',g:10}], plants:[], dozen:{}},
+    {id:'nuts', emoji:'🥜', label:'Noci 30g', parts:[{db:'walnuts',g:30}], plants:['noci'], dozen:{nuts:1}},
+    {id:'cookies', emoji:'🍪', label:'Biscotti x2', parts:[{db:'cookies',g:30}], plants:[], dozen:{}},
+    {id:'choc', emoji:'🍫', label:'Cioccolato 20g', parts:[{db:'dark_choc',g:20}], plants:['cacao'], dozen:{}},
+    {id:'bresaola', emoji:'🧈', label:'Bresaola 50g', parts:[{db:'bresaola',g:50}], plants:[], dozen:{}},
+    {id:'yogurt', emoji:'🥛', label:'Yogurt 200g', parts:[{db:'greek_yogurt',g:200}], plants:[], dozen:{}},
+    {id:'whey', emoji:'💪', label:'Whey 30g', parts:[{db:'whey',g:30}], plants:[], dozen:{}},
+    {id:'bread_w', emoji:'🍞', label:'Pane int. 100g', parts:[{db:'bread_whole',g:100}], plants:['grano integrale'], dozen:{whole_grains:1}},
+    {id:'bread_p', emoji:'🍞', label:'Pane prot. 100g', parts:[{db:'bread_protein',g:100}], plants:['grano proteico'], dozen:{whole_grains:1}},
+    {id:'gallette', emoji:'🍘', label:'Gallette x4', parts:[{db:'rice_cakes',g:36}], plants:['riso'], dozen:{whole_grains:0.5}},
+];
+
+// ===== MACRO TARGETS =====
+const MACRO_TARGETS = {protein_g:140, carbs_g:350, fat_g:70, fiber_g:70};
+const MACRO_COLORS = {protein_g:'#4285f4', carbs_g:'#fbbc04', fat_g:'#ea4335', fiber_g:'#34a853'};
+const MACRO_LABELS = {protein_g:'Proteine', carbs_g:'Carboidrati', fat_g:'Grassi', fiber_g:'Fibre'};
+
+// ===== MICRO TARGETS (RDA adult male) =====
+const MICRO_TARGETS = {
+    vitA_mcg:{target:900,label:'Vitamina A',unit:'mcg',color:'#f97316'},
+    vitC_mg:{target:90,label:'Vitamina C',unit:'mg',color:'#fbbc04'},
+    vitD_mcg:{target:15,label:'Vitamina D',unit:'mcg',color:'#a855f7'},
+    vitE_mg:{target:15,label:'Vitamina E',unit:'mg',color:'#34a853'},
+    vitK_mcg:{target:120,label:'Vitamina K',unit:'mcg',color:'#06b6d4'},
+    vitB12_mcg:{target:2.4,label:'Vitamina B12',unit:'mcg',color:'#ec4899'},
+    iron_mg:{target:8,label:'Ferro',unit:'mg',color:'#ea4335'},
+    calcium_mg:{target:1000,label:'Calcio',unit:'mg',color:'#4285f4'},
+    magnesium_mg:{target:420,label:'Magnesio',unit:'mg',color:'#7c3aed'},
+    zinc_mg:{target:11,label:'Zinco',unit:'mg',color:'#64748b'},
+    potassium_mg:{target:3400,label:'Potassio',unit:'mg',color:'#f97316'},
+    selenium_mcg:{target:55,label:'Selenio',unit:'mcg',color:'#06b6d4'},
+};
+
+// ===== DAILY DOZEN =====
+const DOZEN = [
+    {id:'beans',emoji:'🫘',name:'Beans',target:3},
+    {id:'berries',emoji:'🫐',name:'Berries',target:1},
+    {id:'other_fruits',emoji:'🍎',name:'Other Fruits',target:3},
+    {id:'cruciferous',emoji:'🥦',name:'Cruciferous',target:1},
+    {id:'greens',emoji:'🥬',name:'Greens',target:2},
+    {id:'other_veg',emoji:'🥕',name:'Other Veg',target:2},
+    {id:'flaxseeds',emoji:'🌰',name:'Flaxseeds',target:1},
+    {id:'nuts',emoji:'🥜',name:'Nuts',target:1},
+    {id:'spices',emoji:'🌶️',name:'Spices',target:1},
+    {id:'whole_grains',emoji:'🌾',name:'Whole Grains',target:3},
+    {id:'beverages',emoji:'🍵',name:'Beverages',target:5},
+    {id:'exercise',emoji:'🏃',name:'Exercise',target:1},
+];
+
+// ===== STATE =====
+let state = {log: [], dozen_extra: {}};
+
+function loadState(){
+    try {
+        const s = localStorage.getItem(STORAGE_KEY);
+        if(s) state = JSON.parse(s);
+    } catch(e){}
+    if(!state.log) state.log = [];
+    if(!state.dozen_extra) state.dozen_extra = {};
+}
+function saveState(){
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){}
+}
+
+// ===== CALCULATE TOTALS =====
+function calcTotals(){
+    const totals = {};
+    const allKeys = ['protein_g','carbs_g','fat_g','fiber_g','kcal','vitA_mcg','vitC_mg','vitD_mcg','vitE_mg','vitK_mcg','vitB12_mcg','iron_mg','calcium_mg','magnesium_mg','zinc_mg','potassium_mg','selenium_mcg'];
+    allKeys.forEach(k => totals[k] = 0);
+    state.log.forEach(entry => {
+        const food = FOODS.find(f => f.id === entry.id);
+        if(!food) return;
+        food.parts.forEach(p => {
+            const ndb = NDB[p.db];
+            if(!ndb) return;
+            const factor = (p.g * entry.qty) / 100;
+            allKeys.forEach(k => { if(ndb[k]) totals[k] += ndb[k] * factor; });
+        });
+    });
+    allKeys.forEach(k => totals[k] = Math.round(totals[k] * 10) / 10);
+    return totals;
+}
+
+function calcDozen(){
+    const servings = {};
+    DOZEN.forEach(d => servings[d.id] = 0);
+    state.log.forEach(entry => {
+        const food = FOODS.find(f => f.id === entry.id);
+        if(!food) return;
+        Object.entries(food.dozen).forEach(([k,v]) => {
+            if(servings[k] !== undefined) servings[k] += v * entry.qty;
+        });
+    });
+    Object.entries(state.dozen_extra).forEach(([k,v]) => {
+        if(servings[k] !== undefined) servings[k] += v;
+    });
+    return servings;
+}
+
+function calcPlants(){
+    const plants = new Set();
+    state.log.forEach(entry => {
+        const food = FOODS.find(f => f.id === entry.id);
+        if(food) food.plants.forEach(p => plants.add(p));
+    });
+    return plants;
+}
+
+function calcWeeklyPlants(){
+    const plants = new Set();
+    const dt = new Date(DAY+'T12:00:00');
+    const dow = (dt.getDay()+6)%7; // 0=Mon
+    for(let i = -dow; i <= 0; i++){
+        const d = offsetDay(DAY, i);
+        try {
+            const s = localStorage.getItem('nutri_'+d);
+            if(!s) continue;
+            const st = JSON.parse(s);
+            (st.log||[]).forEach(entry => {
+                const food = FOODS.find(f => f.id === entry.id);
+                if(food) food.plants.forEach(p => plants.add(p));
+            });
+        } catch(e){}
+    }
+    return plants.size;
+}
+
+// ===== RENDERING =====
+function renderAll(){
+    const totals = calcTotals();
+    renderSummary(totals);
+    renderMacros(totals);
+    renderMicros(totals);
+    renderDozen();
+    renderPlants();
+    renderLog();
+}
+
+function renderSummary(t){
+    document.getElementById('summaryStats').innerHTML = `
+        <div class="stat-box"><div class="val">${Math.round(t.kcal)}</div><div class="lbl">kcal</div></div>
+        <div class="stat-box"><div class="val">${Math.round(t.protein_g)}g</div><div class="lbl">Proteine</div></div>
+        <div class="stat-box"><div class="val">${Math.round(t.carbs_g)}g</div><div class="lbl">Carbs</div></div>
+        <div class="stat-box"><div class="val">${Math.round(t.fat_g)}g</div><div class="lbl">Grassi</div></div>`;
+}
+
+function barHTML(name, current, target, color, unit){
+    const pct = Math.min(100, (current/target)*100);
+    const cls = pct >= 90 ? 'badge-green' : pct >= 50 ? 'badge-yellow' : 'badge-red';
+    return `<div class="nutrient-row">
+        <div class="nutrient-info">
+            <div class="nutrient-name">${name}</div>
+            <div class="nutrient-bar"><div class="nutrient-fill" style="width:${pct}%;background:${color}"></div></div>
+        </div>
+        <div class="nutrient-values">
+            <div class="nutrient-amount">${Math.round(current*10)/10}${unit||'g'}</div>
+            <div class="nutrient-percent">${Math.round(pct)}% of ${target}${unit||'g'}</div>
+        </div>
+    </div>`;
+}
+
+function renderMacros(t){
+    let html = '';
+    Object.entries(MACRO_TARGETS).forEach(([k,target]) => {
+        html += barHTML(MACRO_LABELS[k], t[k]||0, target, MACRO_COLORS[k]);
+    });
+    document.getElementById('macroBars').innerHTML = html;
+}
+
+function renderMicros(t){
+    let html = '';
+    Object.entries(MICRO_TARGETS).forEach(([k,info]) => {
+        html += barHTML(info.label, t[k]||0, info.target, info.color, info.unit);
+    });
+    document.getElementById('microBars').innerHTML = html;
+}
+
+function renderDozen(){
+    const servings = calcDozen();
+    let complete = 0;
+    let html = '';
+    DOZEN.forEach(d => {
+        const cur = Math.round(servings[d.id]*10)/10;
+        const done = cur >= d.target;
+        if(done) complete++;
+        html += `<div class="dozen-item${done?' complete':''}" onclick="addDozenServing('${d.id}')">
+            <div class="emoji">${d.emoji}</div>
+            <div class="name">${d.name}</div>
+            <div class="servings">${cur}/${d.target}</div>
+        </div>`;
+    });
+    document.getElementById('dozenGrid').innerHTML = html;
+    document.getElementById('dozenScore').textContent = `${complete}/12`;
+}
+
+function renderPlants(){
+    const plants = calcPlants();
+    document.getElementById('plantCount').textContent = plants.size;
+    const weekly = calcWeeklyPlants();
+    document.getElementById('plantWeekly').textContent = `${weekly} / 30 settimana`;
+    document.getElementById('plantTags').innerHTML = [...plants].map(p => `<span class="plant-tag">🌱 ${p}</span>`).join('');
+}
+
+function renderLog(){
+    const el = document.getElementById('foodLog');
+    document.getElementById('logCount').textContent = state.log.length;
+    if(!state.log.length){ el.innerHTML = '<div style="text-align:center;color:var(--text-light);padding:20px">Nessun cibo aggiunto</div>'; return; }
+    el.innerHTML = state.log.map((entry, i) => {
+        const food = FOODS.find(f => f.id === entry.id);
+        const label = food ? `${food.emoji} ${food.label}` : entry.id;
+        return `<div class="log-item"><span>${label}${entry.qty > 1 ? ' x'+entry.qty : ''}</span><button class="log-remove" onclick="removeLog(${i})">✕</button></div>`;
+    }).join('');
+}
+
+function renderFoodGrid(){
+    document.getElementById('foodGrid').innerHTML = FOODS.map(f =>
+        `<button class="food-btn" onclick="addFood('${f.id}')"><span class="emoji">${f.emoji}</span><span class="label">${f.label}</span></button>`
+    ).join('');
+}
+
+// ===== ACTIONS =====
+function addFood(id){
+    const existing = state.log.find(e => e.id === id);
+    if(existing) existing.qty++;
+    else state.log.push({id, qty: 1, time: new Date().toISOString()});
+    saveState(); renderAll();
+}
+
+function removeLog(i){
+    state.log.splice(i, 1);
+    saveState(); renderAll();
+}
+
+function undoLast(){
+    if(state.log.length){
+        const last = state.log[state.log.length-1];
+        if(last.qty > 1) last.qty--;
+        else state.log.pop();
+        saveState(); renderAll();
+    }
+}
+
+function addDozenServing(id){
+    if(!state.dozen_extra[id]) state.dozen_extra[id] = 0;
+    state.dozen_extra[id]++;
+    saveState(); renderAll();
+}
+
+function clearDay(){
+    if(confirm('Cancellare tutti i dati di oggi?')){
+        state = {log: [], dozen_extra: {}};
+        saveState(); renderAll();
+    }
+}
+
+function exportDay(){
+    const totals = calcTotals();
+    const data = {date: DAY, log: state.log, totals, plants: [...calcPlants()], dozen: calcDozen()};
+    const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `nutrition_${DAY}.json`;
+    a.click();
+}
+
+function toggleTheme(){
+    const t = document.documentElement.getAttribute('data-theme')==='dark' ? '' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+    document.getElementById('themeBtn').textContent = t==='dark' ? '☀️' : '🌙';
+    localStorage.setItem('theme', t);
+}
+
+// ===== TABS =====
+const TAB_DEFS = [
+    {id:'food', label:'🍽️ Cibo'},
+    {id:'macros', label:'💪 Macro'},
+    {id:'micros', label:'💊 Micro'},
+    {id:'dozen', label:'✅ Dozen'},
+    {id:'plants', label:'🌱 Plants'},
+];
+
+function initTabs(){
+    const bar = document.getElementById('tabBar');
+    bar.innerHTML = TAB_DEFS.map((t,i) =>
+        `<button class="tab${i===0?' active':''}" onclick="switchTab('${t.id}')">${t.label}</button>`
+    ).join('');
+}
+
+function switchTab(id){
+    document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', TAB_DEFS[i].id===id));
+    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.toggle('active', tc.id==='tab-'+id));
+}
+
+// ===== INIT =====
+(function init(){
+    const t = localStorage.getItem('theme');
+    if(t==='dark'){ document.documentElement.setAttribute('data-theme','dark'); document.getElementById('themeBtn').textContent='☀️'; }
+
+    document.getElementById('dayTitle').textContent = '🥗 ' + DAY;
+    const dt = new Date(DAY+'T12:00:00');
+    const dayNames = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'];
+    document.getElementById('dayDate').textContent = dayNames[dt.getDay()];
+
+    const prev = offsetDay(DAY, -1);
+    const next = offsetDay(DAY, 1);
+    document.getElementById('prevDay').href = prev+'.html';
+    document.getElementById('nextDay').href = next+'.html';
+
+    loadState();
+    initTabs();
+    renderFoodGrid();
+    renderAll();
+})();
+</script>
+</body>
+</html>
