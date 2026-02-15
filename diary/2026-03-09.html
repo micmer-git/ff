@@ -64,6 +64,27 @@
         .food-btn .emoji { font-size: 28px; }
         .food-btn .label { font-size: 10px; text-align: center; line-height: 1.2; }
 
+        .food-category { margin-bottom: 8px; border-radius: var(--radius-sm); overflow: hidden; }
+        .food-cat-header { display: flex; align-items: center; gap: 8px; padding: 12px 14px; background: var(--surface-2); border: none; width: 100%; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 500; color: var(--text); transition: background 0.2s; }
+        .food-cat-header:active { background: var(--primary); color: white; }
+        .food-cat-header .cat-icon { font-size: 18px; }
+        .food-cat-header .cat-name { flex: 1; text-align: left; }
+        .food-cat-header .cat-count { font-size: 11px; color: var(--text-light); background: var(--surface); padding: 2px 8px; border-radius: 10px; }
+        .food-cat-header .cat-chevron { font-size: 14px; transition: transform 0.3s; color: var(--text-light); }
+        .food-cat-header.open .cat-chevron { transform: rotate(180deg); }
+        .food-cat-body { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), padding 0.35s; padding: 0 8px; }
+        .food-cat-body.open { max-height: 600px; padding: 8px; }
+
+        .recipe-section { margin-bottom: 16px; }
+        .recipe-section-title { font-size: 13px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+        .recipe-scroll { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+        .recipe-card { background: var(--surface-2); border-radius: var(--radius-sm); padding: 12px; cursor: pointer; transition: all 0.15s; border: none; font-family: inherit; color: var(--text); text-align: left; }
+        .recipe-card:active { transform: scale(0.97); background: var(--primary); color: white; }
+        .recipe-card .rc-emoji { font-size: 24px; }
+        .recipe-card .rc-name { font-size: 12px; font-weight: 600; margin: 4px 0; line-height: 1.2; }
+        .recipe-card .rc-ings { font-size: 10px; color: var(--text-muted); line-height: 1.3; }
+        .recipe-card:active .rc-ings { color: rgba(255,255,255,0.8); }
+
         .dozen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
         .dozen-item { background: var(--surface-2); border-radius: var(--radius-sm); padding: 12px 8px; text-align: center; cursor: pointer; transition: all 0.2s; }
         .dozen-item .emoji { font-size: 24px; }
@@ -371,6 +392,19 @@ const NDB = {
     arugula: {protein_g:2.58,carbs_g:3.65,fat_g:0.66,fiber_g:1.6,kcal:25,vitA_mcg:119,vitC_mg:15,vitD_mcg:0,vitE_mg:0.43,vitK_mcg:109,vitB12_mcg:0,vitB6_mg:0.073,vitB1_mg:0.044,vitB2_mg:0.086,vitB3_mg:0.305,folate_mcg:97,iron_mg:1.46,calcium_mg:160,magnesium_mg:47,zinc_mg:0.47,potassium_mg:369,selenium_mcg:0.076,phosphorus_mg:52,sodium_mg:27,manganese_mg:0.321,omega6_g:0.13,ala_g:0.17,epa_g:0,dha_g:0},
     grana: {protein_g:35.8,carbs_g:3.22,fat_g:25,fiber_g:0,kcal:392,vitA_mcg:207,vitC_mg:0,vitD_mcg:0.5,vitE_mg:0.22,vitK_mcg:1.7,vitB12_mcg:1.2,vitB6_mg:0.091,vitB1_mg:0.039,vitB2_mg:0.332,vitB3_mg:0.271,folate_mcg:7,iron_mg:0.82,calcium_mg:1180,magnesium_mg:44,zinc_mg:2.75,potassium_mg:92,selenium_mcg:0.032,phosphorus_mg:694,sodium_mg:1180,manganese_mg:0.02,omega6_g:0.272,ala_g:0.297,epa_g:0,dha_g:0},
     pizza_base: {protein_g:10.4,carbs_g:29,fat_g:12.3,fiber_g:2.2,kcal:268,vitA_mcg:66,vitC_mg:1.2,vitD_mcg:0,vitE_mg:1.01,vitK_mcg:6.6,vitB12_mcg:0.78,vitB6_mg:0.083,vitB1_mg:0.211,vitB2_mg:0.258,vitB3_mg:2.2,folate_mcg:38,iron_mg:2.27,calcium_mg:179,magnesium_mg:23,zinc_mg:1.32,potassium_mg:152,selenium_mcg:0.227,phosphorus_mg:179,sodium_mg:447,manganese_mg:0.291,omega6_g:1.68,ala_g:0.167,epa_g:0,dha_g:0},
+    // v4 foods
+    farro_cooked: {protein_g:5.5,carbs_g:26.4,fat_g:0.7,fiber_g:3.8,kcal:136,vitA_mcg:0,vitC_mg:0,vitD_mcg:0,vitE_mg:0.1,vitK_mcg:0.2,vitB12_mcg:0,vitB6_mg:0.12,vitB1_mg:0.12,vitB2_mg:0.06,vitB3_mg:2.0,folate_mcg:12,iron_mg:1.5,calcium_mg:12,magnesium_mg:44,zinc_mg:1.1,potassium_mg:130,selenium_mcg:11.7,phosphorus_mg:100,sodium_mg:3,manganese_mg:1.1,omega6_g:0.28,ala_g:0.02,epa_g:0,dha_g:0},
+    sausage_pork: {protein_g:19.4,carbs_g:1.5,fat_g:27.3,fiber_g:0,kcal:339,vitA_mcg:0,vitC_mg:0.8,vitD_mcg:1.1,vitE_mg:0.13,vitK_mcg:0,vitB12_mcg:1.0,vitB6_mg:0.33,vitB1_mg:0.39,vitB2_mg:0.18,vitB3_mg:4.7,folate_mcg:2,iron_mg:1.3,calcium_mg:13,magnesium_mg:18,zinc_mg:2.6,potassium_mg:294,selenium_mcg:23.5,phosphorus_mg:174,sodium_mg:749,manganese_mg:0.01,omega6_g:2.9,ala_g:0.08,epa_g:0,dha_g:0},
+    spinach_raw: {protein_g:2.86,carbs_g:3.63,fat_g:0.39,fiber_g:2.2,kcal:23,vitA_mcg:469,vitC_mg:28.1,vitD_mcg:0,vitE_mg:2.03,vitK_mcg:483,vitB12_mcg:0,vitB6_mg:0.195,vitB1_mg:0.078,vitB2_mg:0.189,vitB3_mg:0.724,folate_mcg:194,iron_mg:2.71,calcium_mg:99,magnesium_mg:79,zinc_mg:0.53,potassium_mg:558,selenium_mcg:1.0,phosphorus_mg:49,sodium_mg:79,manganese_mg:0.897,omega6_g:0.026,ala_g:0.138,epa_g:0,dha_g:0},
+    peppers_sweet: {protein_g:0.99,carbs_g:6.03,fat_g:0.3,fiber_g:2.1,kcal:31,vitA_mcg:157,vitC_mg:127.7,vitD_mcg:0,vitE_mg:1.58,vitK_mcg:4.9,vitB12_mcg:0,vitB6_mg:0.291,vitB1_mg:0.054,vitB2_mg:0.085,vitB3_mg:0.979,folate_mcg:46,iron_mg:0.43,calcium_mg:7,magnesium_mg:12,zinc_mg:0.25,potassium_mg:211,selenium_mcg:0.1,phosphorus_mg:26,sodium_mg:4,manganese_mg:0.112,omega6_g:0.06,ala_g:0.03,epa_g:0,dha_g:0},
+    onion_raw: {protein_g:1.1,carbs_g:9.34,fat_g:0.1,fiber_g:1.7,kcal:40,vitA_mcg:0,vitC_mg:7.4,vitD_mcg:0,vitE_mg:0.02,vitK_mcg:0.4,vitB12_mcg:0,vitB6_mg:0.12,vitB1_mg:0.046,vitB2_mg:0.027,vitB3_mg:0.116,folate_mcg:19,iron_mg:0.21,calcium_mg:23,magnesium_mg:10,zinc_mg:0.17,potassium_mg:146,selenium_mcg:0.5,phosphorus_mg:29,sodium_mg:4,manganese_mg:0.129,omega6_g:0.01,ala_g:0.004,epa_g:0,dha_g:0},
+    mousse_protein: {protein_g:15,carbs_g:5,fat_g:3,fiber_g:1,kcal:110,vitA_mcg:5,vitC_mg:0,vitD_mcg:0,vitE_mg:0.2,vitK_mcg:0,vitB12_mcg:0.5,vitB6_mg:0.1,vitB1_mg:0.05,vitB2_mg:0.2,vitB3_mg:0.3,folate_mcg:5,iron_mg:0.5,calcium_mg:120,magnesium_mg:20,zinc_mg:0.8,potassium_mg:180,selenium_mcg:5,phosphorus_mg:150,sodium_mg:80,manganese_mg:0.05,omega6_g:0.1,ala_g:0,epa_g:0,dha_g:0},
+    mozzarella: {protein_g:22.2,carbs_g:2.2,fat_g:17.1,fiber_g:0,kcal:254,vitA_mcg:145,vitC_mg:0,vitD_mcg:0.4,vitE_mg:0.19,vitK_mcg:2.3,vitB12_mcg:2.28,vitB6_mg:0.037,vitB1_mg:0.015,vitB2_mg:0.283,vitB3_mg:0.104,folate_mcg:7,iron_mg:0.44,calcium_mg:505,magnesium_mg:20,zinc_mg:2.92,potassium_mg:76,selenium_mcg:17,phosphorus_mg:354,sodium_mg:619,manganese_mg:0.03,omega6_g:0.39,ala_g:0.37,epa_g:0,dha_g:0},
+    ground_beef_cooked: {protein_g:25.5,carbs_g:0,fat_g:15.4,fiber_g:0,kcal:250,vitA_mcg:0,vitC_mg:0,vitD_mcg:0.1,vitE_mg:0.13,vitK_mcg:1.6,vitB12_mcg:2.64,vitB6_mg:0.37,vitB1_mg:0.047,vitB2_mg:0.194,vitB3_mg:5.3,folate_mcg:9,iron_mg:2.55,calcium_mg:18,magnesium_mg:21,zinc_mg:5.8,potassium_mg:318,selenium_mcg:18.4,phosphorus_mg:193,sodium_mg:75,manganese_mg:0.012,omega6_g:0.49,ala_g:0.04,epa_g:0,dha_g:0},
+    tomato_sauce: {protein_g:1.3,carbs_g:5.4,fat_g:0.2,fiber_g:1.5,kcal:24,vitA_mcg:20,vitC_mg:7,vitD_mcg:0,vitE_mg:0.9,vitK_mcg:3,vitB12_mcg:0,vitB6_mg:0.1,vitB1_mg:0.04,vitB2_mg:0.03,vitB3_mg:0.9,folate_mcg:9,iron_mg:0.5,calcium_mg:13,magnesium_mg:12,zinc_mg:0.17,potassium_mg:227,selenium_mcg:0.3,phosphorus_mg:22,sodium_mg:13,manganese_mg:0.1,omega6_g:0.08,ala_g:0.01,epa_g:0,dha_g:0},
+    jam: {protein_g:0.37,carbs_g:68.9,fat_g:0.07,fiber_g:0.9,kcal:250,vitA_mcg:1,vitC_mg:8.8,vitD_mcg:0,vitE_mg:0.1,vitK_mcg:0,vitB12_mcg:0,vitB6_mg:0.02,vitB1_mg:0.01,vitB2_mg:0.02,vitB3_mg:0.1,folate_mcg:5,iron_mg:0.3,calcium_mg:20,magnesium_mg:4,zinc_mg:0.06,potassium_mg:77,selenium_mcg:1.1,phosphorus_mg:14,sodium_mg:32,manganese_mg:0.04,omega6_g:0,ala_g:0,epa_g:0,dha_g:0},
+    chickpeas_cooked: {protein_g:8.86,carbs_g:27.4,fat_g:2.59,fiber_g:7.6,kcal:164,vitA_mcg:1,vitC_mg:1.3,vitD_mcg:0,vitE_mg:0.35,vitK_mcg:4,vitB12_mcg:0,vitB6_mg:0.139,vitB1_mg:0.116,vitB2_mg:0.063,vitB3_mg:0.526,folate_mcg:172,iron_mg:2.89,calcium_mg:49,magnesium_mg:48,zinc_mg:1.53,potassium_mg:291,selenium_mcg:3.7,phosphorus_mg:168,sodium_mg:7,manganese_mg:1.03,omega6_g:1.11,ala_g:0.04,epa_g:0,dha_g:0},
+    egg_whole: {protein_g:12.6,carbs_g:0.72,fat_g:9.51,fiber_g:0,kcal:143,vitA_mcg:160,vitC_mg:0,vitD_mcg:2.0,vitE_mg:1.05,vitK_mcg:0.3,vitB12_mcg:0.89,vitB6_mg:0.17,vitB1_mg:0.04,vitB2_mg:0.457,vitB3_mg:0.075,folate_mcg:47,iron_mg:1.75,calcium_mg:56,magnesium_mg:12,zinc_mg:1.29,potassium_mg:138,selenium_mcg:30.7,phosphorus_mg:198,sodium_mg:142,manganese_mg:0.028,omega6_g:1.15,ala_g:0.048,epa_g:0.004,dha_g:0.037},
 };
 
 // ===== ORAC VALUES (per 100g) =====
@@ -380,30 +414,44 @@ const ORAC = {
     mango:1300, banana:795, lettuce:1513, lentils_cooked:7282, sweet_potato:902,
     oats:1708, cocoa:55653, peanut_butter:3432, peanuts:3432, beans_mix:830,
     arugula:1904, flaxseed:1130, bread_whole:200, cookies:400,
+    spinach_raw:1687, peppers_sweet:821, onion_raw:913, farro_cooked:200,
+    chickpeas_cooked:847, egg_whole:0, mozzarella:0, sausage_pork:0,
+    mousse_protein:200, ground_beef_cooked:0, tomato_sauce:694, jam:200,
 };
 
 // ===== FOOD ITEMS =====
 const FOODS = [
-    {id:'porridge', emoji:'🥣', label:'Porridge', cat:'colazione', parts:[{db:'oats',g:50},{db:'milk',g:103},{db:'peanuts',g:20},{db:'cocoa',g:10},{db:'dark_choc',g:10}], plants:['avena','arachidi','cacao'], dozen:{whole_grains:1,nuts:0.5}},
-    {id:'banana', emoji:'🍌', label:'Banana', cat:'frutta', parts:[{db:'banana',g:118}], plants:['banana'], dozen:{other_fruits:1}},
-    {id:'pb', emoji:'🥜', label:'PB 30g', cat:'snack', parts:[{db:'peanut_butter',g:30}], plants:['arachidi'], dozen:{nuts:0.5}},
+    // 🥩 Proteine
+    {id:'chicken', emoji:'🍗', label:'Pollo 200g', cat:'proteine', parts:[{db:'chicken',g:200}], plants:[], dozen:{}},
+    {id:'bresaola', emoji:'🧈', label:'Bresaola 50g', cat:'proteine', parts:[{db:'bresaola',g:50}], plants:[], dozen:{}},
+    {id:'sausage', emoji:'🌭', label:'Salsiccia 50g', cat:'proteine', parts:[{db:'sausage_pork',g:50}], plants:[], dozen:{}},
+    {id:'tofu_150', emoji:'🫘', label:'Tofu 150g', cat:'proteine', parts:[{db:'tofu',g:150}], plants:['soia'], dozen:{beans:1}},
+    {id:'eggs', emoji:'🥚', label:'Uova x1', cat:'proteine', parts:[{db:'egg_whole',g:60}], plants:[], dozen:{}},
+    {id:'whey', emoji:'💪', label:'Whey 30g', cat:'proteine', parts:[{db:'whey',g:30}], plants:[], dozen:{}},
+    {id:'mousse_protein', emoji:'🍫', label:'Mousse prot. 100g', cat:'proteine', parts:[{db:'mousse_protein',g:100}], plants:[], dozen:{}},
+    // 🧀 Latticini
     {id:'milk', emoji:'🥛', label:'Latte 200ml', cat:'latticini', parts:[{db:'milk',g:206}], plants:[], dozen:{}},
-    {id:'soup', emoji:'🫘', label:'Zuppa legumi', cat:'pranzo', parts:[{db:'beans_mix',g:600}], plants:['fagioli','lenticchie','ceci'], dozen:{beans:3}},
-    {id:'chicken', emoji:'🍗', label:'Pollo 200g', cat:'pranzo', parts:[{db:'chicken',g:200}], plants:[], dozen:{}},
-    {id:'carbs', emoji:'🍚', label:'Cous/riso/pasta', cat:'pranzo', parts:[{db:'couscous',g:250}], plants:['grano'], dozen:{whole_grains:1}},
-    {id:'salad', emoji:'🥗', label:'Verdure 300g', cat:'pranzo', parts:[{db:'lettuce',g:300}], plants:['insalata','verdure miste'], dozen:{greens:1,other_veg:1}},
-    {id:'oil', emoji:'🫒', label:'Olio EVO 10g', cat:'condimento', parts:[{db:'olive_oil',g:10}], plants:[], dozen:{}},
-    {id:'nuts', emoji:'🥜', label:'Noci 30g', cat:'snack', parts:[{db:'walnuts',g:30}], plants:['noci'], dozen:{nuts:1}},
-    {id:'cookies', emoji:'🍪', label:'Biscotti x2', cat:'snack', parts:[{db:'cookies',g:30}], plants:[], dozen:{}},
-    {id:'choc', emoji:'🍫', label:'Cioccolato 20g', cat:'snack', parts:[{db:'dark_choc',g:20}], plants:['cacao'], dozen:{}},
-    {id:'bresaola', emoji:'🧈', label:'Bresaola 50g', cat:'pranzo', parts:[{db:'bresaola',g:50}], plants:[], dozen:{}},
-    {id:'yogurt', emoji:'🥛', label:'Yogurt 200g', cat:'latticini', parts:[{db:'greek_yogurt',g:200}], plants:[], dozen:{}},
-    {id:'whey', emoji:'💪', label:'Whey 30g', cat:'integratori', parts:[{db:'whey',g:30}], plants:[], dozen:{}},
-    {id:'bread_w', emoji:'🍞', label:'Pane int. 100g', cat:'pranzo', parts:[{db:'bread_whole',g:100}], plants:['grano integrale'], dozen:{whole_grains:1}},
-    {id:'bread_p', emoji:'🍞', label:'Pane prot. 100g', cat:'pranzo', parts:[{db:'bread_protein',g:100}], plants:['grano proteico'], dozen:{whole_grains:1}},
-    {id:'gallette', emoji:'🍘', label:'Gallette x4', cat:'snack', parts:[{db:'rice_cakes',g:36}], plants:['riso'], dozen:{whole_grains:0.5}},
-    {id:'flax', emoji:'🌰', label:'Semi lino 10g', cat:'integratori', parts:[{db:'flaxseed',g:10}], plants:['lino'], dozen:{flaxseeds:1}},
-    {id:'honey', emoji:'🍯', label:'Miele 15g', cat:'frutta', parts:[{db:'honey',g:15}], plants:[], dozen:{}},
+    {id:'yogurt', emoji:'🥛', label:'Yogurt greco 200g', cat:'latticini', parts:[{db:'greek_yogurt',g:200}], plants:[], dozen:{}},
+    {id:'mozzarella', emoji:'🧀', label:'Mozzarella 125g', cat:'latticini', parts:[{db:'mozzarella',g:125}], plants:[], dozen:{}},
+    // 🌾 Cereali & Carboidrati
+    {id:'porridge', emoji:'🥣', label:'Oats/Porridge 50g', cat:'cereali', parts:[{db:'oats',g:50}], plants:['avena'], dozen:{whole_grains:1}},
+    {id:'farro', emoji:'🌾', label:'Farro cotto 120g', cat:'cereali', parts:[{db:'farro_cooked',g:120}], plants:['farro'], dozen:{whole_grains:1}},
+    {id:'carbs', emoji:'🍚', label:'Cous/riso/pasta', cat:'cereali', parts:[{db:'couscous',g:250}], plants:['grano'], dozen:{whole_grains:1}},
+    {id:'bread_w', emoji:'🍞', label:'Pane int. 100g', cat:'cereali', parts:[{db:'bread_whole',g:100}], plants:['grano integrale'], dozen:{whole_grains:1}},
+    {id:'bread_p', emoji:'🍞', label:'Pane prot. 100g', cat:'cereali', parts:[{db:'bread_protein',g:100}], plants:['grano proteico'], dozen:{whole_grains:1}},
+    {id:'gallette', emoji:'🍘', label:'Gallette x4', cat:'cereali', parts:[{db:'rice_cakes',g:36}], plants:['riso'], dozen:{whole_grains:0.5}},
+    {id:'sweet_potato_200', emoji:'🍠', label:'Patate dolci 200g', cat:'cereali', parts:[{db:'sweet_potato',g:200}], plants:['patata dolce'], dozen:{other_veg:1}},
+    // 🫘 Legumi
+    {id:'soup', emoji:'🫘', label:'Zuppa legumi', cat:'legumi', parts:[{db:'beans_mix',g:600}], plants:['fagioli','lenticchie','ceci'], dozen:{beans:3}},
+    {id:'lentils_200', emoji:'🫘', label:'Lenticchie 200g', cat:'legumi', parts:[{db:'lentils_cooked',g:200}], plants:['lenticchie'], dozen:{beans:2}},
+    {id:'chickpeas', emoji:'🫘', label:'Ceci cotti 200g', cat:'legumi', parts:[{db:'chickpeas_cooked',g:200}], plants:['ceci'], dozen:{beans:2}},
+    // 🥗 Verdure
+    {id:'salad', emoji:'🥗', label:'Verdure 300g', cat:'verdure', parts:[{db:'lettuce',g:300}], plants:['insalata','verdure miste'], dozen:{greens:1,other_veg:1}},
+    {id:'spinach', emoji:'🥬', label:'Spinaci 100g', cat:'verdure', parts:[{db:'spinach_raw',g:100}], plants:['spinaci'], dozen:{greens:1}},
+    {id:'peppers', emoji:'🫑', label:'Peperoni 100g', cat:'verdure', parts:[{db:'peppers_sweet',g:100}], plants:['peperoni'], dozen:{other_veg:1}},
+    {id:'onion', emoji:'🧅', label:'Cipolla 80g', cat:'verdure', parts:[{db:'onion_raw',g:80}], plants:['cipolla'], dozen:{other_veg:0.5}},
+    // 🍎 Frutta
+    {id:'banana', emoji:'🍌', label:'Banana', cat:'frutta', parts:[{db:'banana',g:118}], plants:['banana'], dozen:{other_fruits:1}},
     {id:'orange', emoji:'🍊', label:'Arancia', cat:'frutta', parts:[{db:'orange',g:180}], plants:['arancia'], dozen:{other_fruits:1}},
     {id:'apple', emoji:'🍎', label:'Mela', cat:'frutta', parts:[{db:'apple',g:180}], plants:['mela'], dozen:{other_fruits:1}},
     {id:'mango', emoji:'🥭', label:'Mango', cat:'frutta', parts:[{db:'mango',g:200}], plants:['mango'], dozen:{other_fruits:1}},
@@ -413,11 +461,79 @@ const FOODS = [
     {id:'kiwi', emoji:'🥝', label:'Kiwi', cat:'frutta', parts:[{db:'kiwi',g:75}], plants:['kiwi'], dozen:{other_fruits:1}},
     {id:'peach', emoji:'🍑', label:'Pesca', cat:'frutta', parts:[{db:'peach',g:150}], plants:['pesca'], dozen:{other_fruits:1}},
     {id:'pear', emoji:'🍐', label:'Pera', cat:'frutta', parts:[{db:'pear',g:180}], plants:['pera'], dozen:{other_fruits:1}},
-    // New v3 foods
-    {id:'pizza_bresaola', emoji:'🍕', label:'Pizza bresaola', cat:'pranzo', parts:[{db:'pizza_base',g:200},{db:'bresaola',g:50},{db:'arugula',g:30},{db:'grana',g:30}], plants:['grano','rucola'], dozen:{whole_grains:1,greens:0.5}},
-    {id:'tofu_150', emoji:'🫘', label:'Tofu 150g', cat:'pranzo', parts:[{db:'tofu',g:150}], plants:['soia'], dozen:{beans:1}},
-    {id:'lentils_200', emoji:'🫘', label:'Lenticchie 200g', cat:'pranzo', parts:[{db:'lentils_cooked',g:200}], plants:['lenticchie'], dozen:{beans:2}},
-    {id:'sweet_potato_200', emoji:'🍠', label:'Patate dolci 200g', cat:'pranzo', parts:[{db:'sweet_potato',g:200}], plants:['patata dolce'], dozen:{other_veg:1}},
+    // 🥜 Grassi & Condimenti
+    {id:'oil', emoji:'🫒', label:'Olio EVO 10g', cat:'grassi', parts:[{db:'olive_oil',g:10}], plants:[], dozen:{}},
+    {id:'nuts', emoji:'🥜', label:'Noci 30g', cat:'grassi', parts:[{db:'walnuts',g:30}], plants:['noci'], dozen:{nuts:1}},
+    {id:'pb', emoji:'🥜', label:'Burro arachidi 30g', cat:'grassi', parts:[{db:'peanut_butter',g:30}], plants:['arachidi'], dozen:{nuts:0.5}},
+    {id:'jam', emoji:'🍯', label:'Marmellata 25g', cat:'grassi', parts:[{db:'jam',g:25}], plants:[], dozen:{}},
+    {id:'honey', emoji:'🍯', label:'Miele 15g', cat:'grassi', parts:[{db:'honey',g:15}], plants:[], dozen:{}},
+    {id:'flax', emoji:'🌰', label:'Semi lino 10g', cat:'grassi', parts:[{db:'flaxseed',g:10}], plants:['lino'], dozen:{flaxseeds:1}},
+    // 🍫 Snack
+    {id:'cookies', emoji:'🍪', label:'Biscotti x2', cat:'snack', parts:[{db:'cookies',g:30}], plants:[], dozen:{}},
+    {id:'choc', emoji:'🍫', label:'Cioccolato 20g', cat:'snack', parts:[{db:'dark_choc',g:20}], plants:['cacao'], dozen:{}},
+    // 🍕 Piatti
+    {id:'pizza_bresaola', emoji:'🍕', label:'Pizza bresaola', cat:'piatti', parts:[{db:'pizza_base',g:200},{db:'bresaola',g:50},{db:'arugula',g:30},{db:'grana',g:30}], plants:['grano','rucola'], dozen:{whole_grains:1,greens:0.5}},
+    {id:'ragu', emoji:'🍝', label:'Ragù 150g', cat:'piatti', parts:[{db:'ground_beef_cooked',g:80},{db:'tomato_sauce',g:60},{db:'onion_raw',g:10}], plants:['pomodoro','cipolla'], dozen:{other_veg:0.5}},
+];
+
+// ===== FOOD CATEGORIES =====
+const FOOD_CATEGORIES = [
+    {id:'proteine', icon:'🥩', name:'Proteine'},
+    {id:'latticini', icon:'🧀', name:'Latticini'},
+    {id:'cereali', icon:'🌾', name:'Cereali & Carboidrati'},
+    {id:'legumi', icon:'🫘', name:'Legumi'},
+    {id:'verdure', icon:'🥗', name:'Verdure'},
+    {id:'frutta', icon:'🍎', name:'Frutta'},
+    {id:'grassi', icon:'🥜', name:'Grassi & Condimenti'},
+    {id:'snack', icon:'🍫', name:'Snack'},
+    {id:'piatti', icon:'🍕', name:'Piatti'},
+];
+
+// ===== RECIPES =====
+const RECIPES = [
+    {id:'r_porridge', emoji:'🥣', name:'Porridge standard', ingredients:[
+        {foodId:null, db:'oats', g:50, label:'Oats 50g'},
+        {foodId:null, db:'milk', g:100, label:'Latte 100ml'},
+        {foodId:null, db:'peanuts', g:20, label:'Arachidi 20g'},
+        {foodId:null, db:'cocoa', g:10, label:'Cacao 10g'},
+        {foodId:null, db:'dark_choc', g:10, label:'Cioccolato 10g'},
+    ], plants:['avena','arachidi','cacao'], dozen:{whole_grains:1,nuts:0.5}},
+    {id:'r_pizza', emoji:'🍕', name:'Pizza bresaola', ingredients:[
+        {foodId:'pizza_bresaola', label:'Pizza bresaola completa'},
+    ], useFoodId:true},
+    {id:'r_pasta_ragu', emoji:'🍝', name:'Pasta al ragù', ingredients:[
+        {foodId:null, db:'pasta_cooked', g:250, label:'Pasta 250g'},
+        {foodId:'ragu', label:'Ragù 150g'},
+        {foodId:null, db:'grana', g:15, label:'Grana 15g'},
+    ], plants:['grano','pomodoro','cipolla'], dozen:{whole_grains:1,other_veg:0.5}},
+    {id:'r_insalata', emoji:'🥗', name:'Insalata proteica', ingredients:[
+        {foodId:null, db:'lettuce', g:300, label:'Verdure 300g'},
+        {foodId:null, db:'chicken', g:200, label:'Pollo 200g'},
+        {foodId:null, db:'olive_oil', g:10, label:'Olio 10g'},
+        {foodId:null, db:'walnuts', g:15, label:'Noci 15g'},
+    ], plants:['insalata','noci'], dozen:{greens:1,other_veg:1,nuts:0.5}},
+    {id:'r_zuppa', emoji:'🫘', name:'Zuppa completa', ingredients:[
+        {foodId:null, db:'beans_mix', g:600, label:'Zuppa legumi 600g'},
+        {foodId:null, db:'bread_whole', g:50, label:'Pane int. 50g'},
+        {foodId:null, db:'olive_oil', g:10, label:'Olio 10g'},
+    ], plants:['fagioli','lenticchie','ceci','grano integrale'], dozen:{beans:3,whole_grains:0.5}},
+    {id:'r_farro', emoji:'🌾', name:'Farro verdure', ingredients:[
+        {foodId:null, db:'farro_cooked', g:120, label:'Farro 120g'},
+        {foodId:null, db:'peppers_sweet', g:100, label:'Peperoni 100g'},
+        {foodId:null, db:'onion_raw', g:80, label:'Cipolla 80g'},
+        {foodId:null, db:'olive_oil', g:10, label:'Olio 10g'},
+    ], plants:['farro','peperoni','cipolla'], dozen:{whole_grains:1,other_veg:1.5}},
+    {id:'r_uova_spinaci', emoji:'🥚', name:'Uova spinaci', ingredients:[
+        {foodId:null, db:'egg_whole', g:120, label:'Uova x2'},
+        {foodId:null, db:'spinach_raw', g:100, label:'Spinaci 100g'},
+        {foodId:null, db:'olive_oil', g:5, label:'Olio 5g'},
+        {foodId:null, db:'bread_protein', g:50, label:'Pane prot. 50g'},
+    ], plants:['spinaci','grano proteico'], dozen:{greens:1,whole_grains:0.5}},
+    {id:'r_caprese', emoji:'🧀', name:'Caprese light', ingredients:[
+        {foodId:null, db:'mozzarella', g:125, label:'Mozzarella 125g'},
+        {foodId:null, db:'lettuce', g:200, label:'Verdure 200g'},
+        {foodId:null, db:'olive_oil', g:10, label:'Olio 10g'},
+    ], plants:['insalata','verdure miste'], dozen:{greens:1,other_veg:0.5}},
 ];
 
 // ===== MACRO/MICRO TARGETS =====
@@ -747,9 +863,60 @@ function renderLog(){
 }
 
 function renderFoodGrid(){
-    document.getElementById('foodGrid').innerHTML=FOODS.map(f=>
-        `<button class="food-btn" onclick="addFood('${f.id}')"><span class="emoji">${f.emoji}</span><span class="label">${f.label}</span></button>`
-    ).join('');
+    // Render recipes section
+    let recipesHtml = '<div class="recipe-section"><div class="recipe-section-title">📋 Ricette</div><div class="recipe-scroll">';
+    RECIPES.forEach(r => {
+        const ings = r.ingredients.map(i => i.label).join(', ');
+        recipesHtml += `<button class="recipe-card" onclick="addRecipe('${r.id}')"><span class="rc-emoji">${r.emoji}</span><div class="rc-name">${r.name}</div><div class="rc-ings">${ings}</div></button>`;
+    });
+    recipesHtml += '</div></div>';
+
+    // Render food categories as accordion
+    let catsHtml = '';
+    FOOD_CATEGORIES.forEach((cat, ci) => {
+        const foods = FOODS.filter(f => f.cat === cat.id);
+        const isOpen = ci === 0;
+        catsHtml += `<div class="food-category">
+            <button class="food-cat-header${isOpen?' open':''}" onclick="toggleCat(this)">
+                <span class="cat-icon">${cat.icon}</span>
+                <span class="cat-name">${cat.name}</span>
+                <span class="cat-count">${foods.length}</span>
+                <span class="cat-chevron">▼</span>
+            </button>
+            <div class="food-cat-body${isOpen?' open':''}">
+                <div class="food-grid">${foods.map(f =>
+                    `<button class="food-btn" onclick="addFood('${f.id}')"><span class="emoji">${f.emoji}</span><span class="label">${f.label}</span></button>`
+                ).join('')}</div>
+            </div>
+        </div>`;
+    });
+
+    document.getElementById('foodGrid').innerHTML = recipesHtml + catsHtml;
+}
+
+function toggleCat(el){
+    el.classList.toggle('open');
+    el.nextElementSibling.classList.toggle('open');
+}
+
+function addRecipe(recipeId){
+    const recipe = RECIPES.find(r => r.id === recipeId);
+    if(!recipe) return;
+    recipe.ingredients.forEach(ing => {
+        if(ing.foodId) {
+            // Add an existing food item
+            const existing = state.log.find(e => e.id === ing.foodId);
+            if(existing) existing.qty++; else state.log.push({id:ing.foodId, qty:1, time:new Date().toISOString()});
+        } else if(ing.db && NDB[ing.db]) {
+            // Add as custom food with full nutrient data
+            const ndb = NDB[ing.db];
+            const factor = ing.g / 100;
+            const cf = {name: ing.label, grams: ing.g};
+            ALL_KEYS.forEach(k => { cf[k] = Math.round((ndb[k]||0) * factor * 10) / 10; });
+            state.custom_foods.push(cf);
+        }
+    });
+    saveState(); renderAll();
 }
 
 // ===== WELLNESS RENDERING =====
