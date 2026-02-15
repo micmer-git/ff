@@ -35,8 +35,9 @@
         .view-today, .view-week { transition: opacity 0.3s, transform 0.3s; }
         .view-today.hidden, .view-week.hidden { display: none; opacity: 0; }
 
-        .tabs { display: flex; background: var(--surface); border-radius: 12px; padding: 4px; margin-bottom: 16px; box-shadow: var(--shadow); overflow-x: auto; -webkit-overflow-scrolling: touch; }
-        .tab { flex: 1; min-width: 50px; padding: 10px 6px; border: none; background: transparent; font-family: inherit; font-size: 11px; font-weight: 500; color: var(--text-muted); border-radius: 8px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+        .tabs { display: flex; background: var(--surface); border-radius: 12px; padding: 4px; margin-bottom: 16px; box-shadow: var(--shadow); overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+        .tabs::-webkit-scrollbar { display:none; }
+        .tab { flex: 1; min-width: 64px; padding: 10px 8px; border: none; background: transparent; font-family: inherit; font-size: 11px; font-weight: 600; color: var(--text-muted); border-radius: 8px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
         .tab.active { background: var(--primary); color: white; }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
@@ -59,10 +60,10 @@
         .nutrient-percent { font-size: 11px; color: var(--text-light); }
 
         .food-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-        .food-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 4px; background: var(--surface-2); border: none; border-radius: var(--radius-sm); cursor: pointer; transition: all 0.15s; font-family: inherit; color: var(--text); }
-        .food-btn:active { transform: scale(0.95); background: var(--primary); color: white; }
-        .food-btn .emoji { font-size: 28px; }
-        .food-btn .label { font-size: 10px; text-align: center; line-height: 1.2; }
+        .food-btn { display: flex; flex-direction: column; align-items: center; justify-content:center; gap: 4px; padding: 10px 6px; min-height:84px; background: var(--surface-2); border: none; border-radius: var(--radius-sm); cursor: pointer; transition: all 0.15s; font-family: inherit; color: var(--text); }
+        .food-btn:active { transform: scale(0.97); background: var(--primary); color: white; }
+        .food-btn .emoji { font-size: 24px; }
+        .food-btn .label { font-size: 10px; text-align: center; line-height: 1.2; word-break: break-word; }
 
         .dozen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
         .dozen-item { background: var(--surface-2); border-radius: var(--radius-sm); padding: 12px 8px; text-align: center; cursor: pointer; transition: all 0.2s; }
@@ -89,8 +90,8 @@
         .sub-ing-name { flex: 1; }
         .sub-ing-grams { font-weight: 500; min-width: 40px; text-align: right; }
 
-        .bottom-actions { position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface); border-top: 1px solid var(--surface-2); padding: 12px 16px; display: flex; gap: 8px; justify-content: center; z-index: 50; }
-        .action-btn { padding: 10px 20px; border: none; border-radius: 24px; font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+        .bottom-actions { position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface); border-top: 1px solid var(--surface-2); padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); display: flex; gap: 8px; justify-content: center; z-index: 50; }
+        .action-btn { padding: 10px 14px; border: none; border-radius: 24px; font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s; min-height:40px; }
         .action-btn.primary { background: var(--primary); color: white; }
         .action-btn.secondary { background: var(--surface-2); color: var(--text); }
 
@@ -179,11 +180,16 @@
             .card { padding: 14px; }
             .header { margin: -12px -12px 12px -12px; padding: 16px; }
             .header h1 { font-size: 18px; }
-            .food-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+            .view-toggle { margin-bottom: 10px; }
+            .view-btn { font-size:12px; padding:9px; }
+            .food-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap:7px; }
             .recipes-grid { grid-template-columns: 1fr; }
+            .cat-header { font-size:11px; padding:10px; }
+            .cat-meta { font-size:10px; }
+            .tab { min-width:58px; font-size:10px; }
             .sub-ing-row { flex-wrap: wrap; gap: 4px; }
             .sub-ing-name { min-width: 120px; }
-            .sub-ing-btn { width: 28px; height: 28px; }
+            .sub-ing-btn { width: 30px; height: 30px; }
             .exercise-summary { grid-template-columns: repeat(2,1fr); }
         }
     </style>
