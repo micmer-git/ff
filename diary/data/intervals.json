@@ -1,0 +1,538 @@
+{
+  "2026-02-01": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 1,
+      "hrv": 89.0,
+      "restingHR": 35,
+      "weight": null,
+      "ctl": 85.52623,
+      "atl": 79.86978,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Run",
+        "name": "\ud83d\udc29(Porco Cane)",
+        "moving_time": 8277,
+        "elapsed_time": 8800,
+        "distance": 30631.88,
+        "icu_training_load": 143,
+        "icu_intensity": 79.0,
+        "average_heartrate": 142,
+        "calories": 2053,
+        "pace": 3.7008433
+      }
+    ]
+  },
+  "2026-02-02": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 3,
+      "hrv": 85.0,
+      "restingHR": 34,
+      "weight": 70.47,
+      "ctl": 86.902016,
+      "atl": 88.40693,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Run",
+        "name": "\u203c\ufe0f(Doppietta Easy)",
+        "moving_time": 3988,
+        "elapsed_time": 3996,
+        "distance": 15017.89,
+        "icu_training_load": 71,
+        "icu_intensity": 80.0,
+        "average_heartrate": 147,
+        "calories": 1011,
+        "pace": 3.7657697
+      },
+      {
+        "type": "VirtualRide",
+        "name": "\ud83d\udcf4(Oretta Scarico)",
+        "moving_time": 3617,
+        "elapsed_time": 3617,
+        "distance": 38025.87,
+        "icu_training_load": 73,
+        "icu_intensity": 85.2,
+        "average_heartrate": null,
+        "calories": 860,
+        "pace": 10.513097
+      }
+    ]
+  },
+  "2026-02-03": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 3,
+      "hrv": 102.0,
+      "restingHR": 36,
+      "weight": null,
+      "ctl": 86.64551,
+      "atl": 86.755295,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Run",
+        "name": "\ud83d\udc0f(Pegla's Back)",
+        "moving_time": 4287,
+        "elapsed_time": 4288,
+        "distance": 15249.36,
+        "icu_training_load": 76,
+        "icu_intensity": 80.0,
+        "average_heartrate": 146,
+        "calories": 1012,
+        "pace": 3.557117
+      }
+    ]
+  },
+  "2026-02-04": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 2,
+      "hrv": 92.0,
+      "restingHR": 32,
+      "weight": null,
+      "ctl": 86.2774,
+      "atl": 84.65791,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Ride",
+        "name": "\u2744\ufe0f(Nevischio)",
+        "moving_time": 6055,
+        "elapsed_time": 6158,
+        "distance": 35112.19,
+        "icu_training_load": 71,
+        "icu_intensity": 64.95548,
+        "average_heartrate": 126,
+        "calories": 944,
+        "pace": 5.7988753
+      }
+    ]
+  },
+  "2026-02-05": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 2,
+      "hrv": 94.0,
+      "restingHR": 35,
+      "weight": null,
+      "ctl": 84.8827,
+      "atl": 76.98237,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "BackcountrySki",
+        "name": "\u271d\ufe0f(Timogno)",
+        "moving_time": 5210,
+        "elapsed_time": 5976,
+        "distance": 8216.32,
+        "icu_training_load": 27,
+        "icu_intensity": 42.8046,
+        "average_heartrate": 95,
+        "calories": 447,
+        "pace": 1.5770289
+      }
+    ]
+  },
+  "2026-02-06": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 2,
+      "hrv": 89.0,
+      "restingHR": 34,
+      "weight": null,
+      "ctl": 84.60312,
+      "atl": 76.452225,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Run",
+        "name": "\ud83c\udf02(The Umbrella Academy)",
+        "moving_time": 4425,
+        "elapsed_time": 4476,
+        "distance": 15298.15,
+        "icu_training_load": 73,
+        "icu_intensity": 77.0,
+        "average_heartrate": 149,
+        "calories": 1054,
+        "pace": 3.457209
+      }
+    ]
+  },
+  "2026-02-07": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 3,
+      "hrv": 102.0,
+      "restingHR": 32,
+      "weight": null,
+      "ctl": 85.85946,
+      "atl": 84.64559,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Ride",
+        "name": "\u2744\ufe0f(Milano Cortina 2026)",
+        "moving_time": 8992,
+        "elapsed_time": 9875,
+        "distance": 60378.61,
+        "icu_training_load": 138,
+        "icu_intensity": 74.27607,
+        "average_heartrate": 135,
+        "calories": 1664,
+        "pace": 6.714703
+      }
+    ]
+  },
+  "2026-02-08": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 1,
+      "hrv": 84.0,
+      "restingHR": 33,
+      "weight": null,
+      "ctl": 86.66273,
+      "atl": 89.35204,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Run",
+        "name": "\u23f2\ufe0f(Paced Bergamo 21)",
+        "moving_time": 4869,
+        "elapsed_time": 4874,
+        "distance": 21430.89,
+        "icu_training_load": 120,
+        "icu_intensity": 94.0,
+        "average_heartrate": 158,
+        "calories": 1401,
+        "pace": 4.4014974
+      }
+    ]
+  },
+  "2026-02-09": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 3,
+      "hrv": 98.0,
+      "restingHR": 35,
+      "weight": null,
+      "ctl": 86.929474,
+      "atl": 90.50328,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Run",
+        "name": "\u203c\ufe0f(Doppietta)",
+        "moving_time": 4018,
+        "elapsed_time": 4027,
+        "distance": 15018.9,
+        "icu_training_load": 72,
+        "icu_intensity": 80.333336,
+        "average_heartrate": 135,
+        "calories": 967,
+        "pace": 3.7379045
+      },
+      {
+        "type": "Swim",
+        "name": "\ud83d\udc86\u200d\u2642\ufe0f(Nuotatina Defa)",
+        "moving_time": 2845,
+        "elapsed_time": 2891,
+        "distance": 2250.0,
+        "icu_training_load": 26,
+        "icu_intensity": 56.910053,
+        "average_heartrate": 116,
+        "calories": 450,
+        "pace": 0.7908612
+      }
+    ]
+  },
+  "2026-02-10": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 3,
+      "hrv": 96.0,
+      "restingHR": 35,
+      "weight": null,
+      "ctl": 86.76643,
+      "atl": 89.105064,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Ride",
+        "name": "\ud83e\udd9e(Selvinata Lobster)",
+        "moving_time": 5933,
+        "elapsed_time": 5934,
+        "distance": 40927.16,
+        "icu_training_load": 80,
+        "icu_intensity": 69.67213,
+        "average_heartrate": 131,
+        "calories": 1000,
+        "pace": 6.8982234
+      }
+    ]
+  },
+  "2026-02-11": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 2,
+      "hrv": 88.0,
+      "restingHR": 33,
+      "weight": null,
+      "ctl": 86.72487,
+      "atl": 88.558586,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Run",
+        "name": "\u2620\ufe0f(Eeeempty)",
+        "moving_time": 4584,
+        "elapsed_time": 4889,
+        "distance": 16020.12,
+        "icu_training_load": 85,
+        "icu_intensity": 81.666664,
+        "average_heartrate": 148,
+        "calories": 1098,
+        "pace": 3.4947906
+      }
+    ]
+  },
+  "2026-02-12": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 3,
+      "hrv": 77.0,
+      "restingHR": 33,
+      "weight": null,
+      "ctl": 86.56664,
+      "atl": 87.41925,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Ride",
+        "name": "\u2668\ufe0f (Vapore Acqueo)",
+        "moving_time": 6188,
+        "elapsed_time": 6276,
+        "distance": 38180.1,
+        "icu_training_load": 80,
+        "icu_intensity": 68.193924,
+        "average_heartrate": 129,
+        "calories": 1062,
+        "pace": 6.170023
+      }
+    ]
+  },
+  "2026-02-13": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 4,
+      "hrv": 94.0,
+      "restingHR": 34,
+      "weight": null,
+      "ctl": 86.43567,
+      "atl": 86.564705,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Ride",
+        "name": "\ud83c\udfcd\ufe0f(Cannondale Back)",
+        "moving_time": 6315,
+        "elapsed_time": 6449,
+        "distance": 43155.07,
+        "icu_training_load": 81,
+        "icu_intensity": 67.95276,
+        "average_heartrate": 128,
+        "calories": 1043,
+        "pace": 6.83374
+      }
+    ]
+  },
+  "2026-02-14": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": 2,
+      "hrv": 87.0,
+      "restingHR": 34,
+      "weight": null,
+      "ctl": 87.366554,
+      "atl": 91.814415,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": [
+      {
+        "type": "Run",
+        "name": "\u2665\ufe0f(My Valentine)",
+        "moving_time": 7411,
+        "elapsed_time": 8203,
+        "distance": 26015.98,
+        "icu_training_load": 126,
+        "icu_intensity": 78.333336,
+        "average_heartrate": 149,
+        "calories": 1791,
+        "pace": 3.510455
+      }
+    ]
+  },
+  "2026-02-15": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": null,
+      "hrv": null,
+      "restingHR": null,
+      "weight": null,
+      "ctl": 85.31097,
+      "atl": 79.59189,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": []
+  },
+  "2026-02-16": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": null,
+      "hrv": null,
+      "restingHR": null,
+      "weight": null,
+      "ctl": 83.30374,
+      "atl": 68.99645,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": []
+  },
+  "2026-02-17": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": null,
+      "hrv": null,
+      "restingHR": null,
+      "weight": null,
+      "ctl": 81.34374,
+      "atl": 59.8115,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": []
+  },
+  "2026-02-18": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": null,
+      "hrv": null,
+      "restingHR": null,
+      "weight": null,
+      "ctl": 79.42986,
+      "atl": 51.84927,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": []
+  },
+  "2026-02-19": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": null,
+      "hrv": null,
+      "restingHR": null,
+      "weight": null,
+      "ctl": 77.56101,
+      "atl": 44.946987,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": []
+  },
+  "2026-02-20": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": null,
+      "hrv": null,
+      "restingHR": null,
+      "weight": null,
+      "ctl": 75.73613,
+      "atl": 38.96355,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": []
+  },
+  "2026-02-21": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": null,
+      "hrv": null,
+      "restingHR": null,
+      "weight": null,
+      "ctl": 73.954185,
+      "atl": 33.77664,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": []
+  },
+  "2026-02-22": {
+    "wellness": {
+      "sleepTime": null,
+      "sleepQuality": null,
+      "hrv": null,
+      "restingHR": null,
+      "weight": null,
+      "ctl": 72.214165,
+      "atl": 29.280224,
+      "mood": null,
+      "motivation": null,
+      "readiness": null
+    },
+    "activities": []
+  }
+}
