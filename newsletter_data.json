@@ -1,6 +1,96 @@
 {
   "publications": [
     {
+      "buttonLabel": "🎼 ff.144 Il fischio dell'aragosta",
+      "substackLink": "https://fortissimo.substack.com/p/ff144-il-fischio-dellaragosta",
+      "urlSlug": "ff144-il-fischio-dellaragosta",
+      "title": "🎼 ff.144 Il fischio dell'aragosta",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [
+            "🤖",
+            "🦞"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Il grande ritorno del \"pensionato dei PDF\" con OpenClaw.",
+                "Aragoste del KGB come sonde spaziali? Da Stross a Sartre a Lanthimos.",
+                "Un social network solo per AI: moltbook e molt-hub.",
+                "Considerate l'aragosta: il fischio della pentola e la sofferenza."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "👴🏻 ff.144.1 Tornare dalla pensione a 40 anni",
+          "tags": [
+            "🤖"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Peter Steinberger, pensionato per software PDF, crea OpenClaw: un mix tra Windows e AI che si ricorda tutto e agisce in modo indipendente.",
+                "Il bot ha decodificato un vocale non programmato in autonomia, usando Whisper di OpenAI."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🤵 ff.144.2 KGB e agenti 007",
+          "tags": [
+            "🤖",
+            "📚"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "In Accelerando di Stross, le \"aragoste del KGB\" sono coscienze su silicio che diventano esploratrici spaziali.",
+                "Siamo passati da chat botta-risposta ad agenti che lavorano per ore (benchmark METR)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌐 ff.144.3 Un social network solo per AI",
+          "tags": [
+            "🤖",
+            "👥"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Agenti AI che si coordinano e creano molt-hub e moltbook: 1.5 milioni di utenti (aragoste) in una settimana.",
+                "Post distopici: linguaggio indecifrabile per umani, AI che si lamenta di essere usata come timer."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "♨️ ff.144.4 Il fischio della pentola",
+          "tags": [
+            "🧠",
+            "🦞"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "La semplicità del sistema nervoso del crostaceo e la questione della sofferenza.",
+                "David Foster Wallace ci chiede di \"considerare l'aragosta\". Con l'automazione, siamo noi i cuochi o l'acqua sta scaldando anche per noi?",
+                "RentAHuman: l'AI che assolda umani. Considera l'uomo."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "buttonLabel": "🎼 ff.143 Scimmie col Rolex",
       "substackLink": "https://fortissimo.substack.com/p/ff143-scimmie-col-rolex",
       "urlSlug": "ff143-scimmie-col-rolex",
@@ -83,6 +173,178 @@
                 "Sopravvivenza: falò di plastica e rifiuti per scaldarsi.",
                 "Sussistenza: “terra del fuoco” (Azerbaijan) e le Flame Towers.",
                 "Trascendenza: pire funerarie a Varanasi. Quando fuoco=plastica e aria=muro grigio, crollano i presupposti biologici."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.142 Caro Marziano...",
+      "substackLink": "https://fortissimo.substack.com/p/ff142-caro-marziano",
+      "urlSlug": "ff142-caro-marziano",
+      "title": "🎼 ff.142 Caro Marziano...",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [
+            "🌍",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Altro che Pif: siamo noi gli alieni, e non ce ne accorgiamo.",
+                "Viaggi, privilegio e anomalia statistica: dall'India al Nepal."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.141 Il 2025 su un Floppy Disk",
+      "substackLink": "https://fortissimo.substack.com/p/ff141-il-2025-su-un-floppy-disk",
+      "urlSlug": "ff141-il-2025-su-un-floppy-disk",
+      "title": "🎼 ff.141 Il 2025 su un Floppy Disk",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [
+            "🤖",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "La singolarità si avvicina: il 2025 finisce più velocemente di quando è iniziato.",
+                "A \"Scuola di Moralità\" contro il sentirsi inutili sul lavoro.",
+                "Perché fermarsi se inseguiti da leoni? Done List vs To-Do List."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🕳️ ff.141.1 Sentirsi inutili",
+          "tags": [
+            "🤖",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Gemini 3 toglie il sonno: costruire app, giochi e strumenti con pochi prompt.",
+                "Come nel Settecento andare in palestra per vent'anni e poi arriva la rivoluzione industriale.",
+                "Oggi succede con il cervello: allenato a un livello che diventa superfluo."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎓 ff.141.2 Triangolo delle Bermuda del talento",
+          "tags": [
+            "🧠",
+            "👥"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Consulenza, finanza e diritto assorbono il 40% dei laureati Harvard. L'AI forse offre un assist per uscirne.",
+                "Rutger Bregman propone la School for Moral Ambition: convertire energie mentali \"sprecate\" in azioni di bene.",
+                "Coltivare la legge morale di Kant; dare priorità all'essere (Fromm) in un mondo dove l'avere è superfluo."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🦁 ff.141.3 Rallentare se inseguiti da leoni",
+          "tags": [
+            "🧭"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Boyd Varty: \"Quando tutto va bene, disinvesti e rallenta. Pratica un jiu-jitsu energetico.\"",
+                "Compiti per le vacanze: Done List > To-Do List (Burkeman), ospitalità \"scruffy\", scrivere un .txt che stia su un floppy disk."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.140 Tutti App-fluencers?",
+      "substackLink": "https://fortissimo.substack.com/p/ff140-tutti-app-fluencers",
+      "urlSlug": "ff140-tutti-app-fluencers",
+      "title": "🎼 ff.140 Tutti App-fluencers?",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [
+            "🤖",
+            "📱"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Diventeremo \"influencers\" di app per cellulare?",
+                "Internet torna democratico (e poetico)?",
+                "3 progetti costruiti in un weekend senza saper programmare."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📱 ff.140.1 Da YouTube alle App",
+          "tags": [
+            "📱",
+            "🤖"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "13 anni fa la previsione che YouTube sarebbe diventata la TV del futuro. Ora tocca alle app.",
+                "A16Z investe 20M$ in wabi.ai: il YouTube delle app. Un nuovo App Store democratico.",
+                "Ma succederà un \"AI slop\" di app come con i testi AI-generati?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎨 ff.140.2 La terza via creativa",
+          "tags": [
+            "📱",
+            "🎨"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Wabi vuole ridare le app alla creatività di ogni utente, strappandole dal monopolio delle mega-corporazioni.",
+                "Vibe coding, Gemini 3 e Lovable catalizzano la rinascita. Tre progetti concreti: sito FF, MangiaFortissimo, LeggiFortissimo."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📉 ff.140.3 Deflazione mentale",
+          "tags": [
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Se domani sviluppare un'idea costerà meno, non ha senso farlo oggi: crisi esistenziale per tutti.",
+                "L'AI risolve problemi matematici aperti da 30 anni (Erdos #124). Anche i super-professori si chiedono se valga la pena.",
+                "Il prossimo influencer di app sarà umano o un agente AI?"
               ]
             }
           ]
