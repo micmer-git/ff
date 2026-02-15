@@ -46,7 +46,20 @@
   <style>
     *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
     body{font-family:Inter,sans-serif;background:#f6f9fe;color:#111;overflow:hidden}
-    mark{background:#38bdf8;color:#fff;padding:0 3px;border-radius:3px}
+    mark,.highlight{padding:0 3px;border-radius:3px}
+    mark{background:#fee2e2;color:#991b1b}
+    .highlight-tech{background:#dbeafe;color:#1e40af}
+    .highlight-societa{background:#fee2e2;color:#991b1b}
+    .highlight-natura{background:#dcfce7;color:#166534}
+    .highlight-letture{background:#f3e8ff;color:#6b21a8}
+    .highlight-default{background:#e0f2fe;color:#0c4a6e}
+    .ff-ref{text-decoration:none;font-weight:500;border-bottom:1px dotted}
+    .ff-ref:hover{border-bottom-style:solid}
+    .ff-ref-tech{color:#2563eb}
+    .ff-ref-societa{color:#dc2626}
+    .ff-ref-natura{color:#16a34a}
+    .ff-ref-letture{color:#9333ea}
+    .ff-ref-default{color:#0284c7}
     .emoji-btn{width:40px;height:40px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;transition:.2s;font-size:1.5rem}
     .pill{width:40px;height:40px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;transition:.2s;font-size:1.5rem}
     .pill.active{outline:2px solid #38bdf8}
@@ -114,7 +127,22 @@ const selTags = new Set();
 const $     = s => document.querySelector(s),
       rnd   = a => [...a].sort(()=>Math.random()-0.5), // non‑mutating shuffle
       match = t => t.includes(q),
-      mark  = t => q ? t.replace(new RegExp(`(${q})`,'gi'),'<mark>$1</mark>') : t,
+      mark  = (t, cls) => q ? t.replace(new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`,'gi'),`<span class="highlight ${cls||'highlight-default'}">$1</span>`) : t,
+      sectionClass = tags => tags?.includes('❤️') ? 'societa' : tags?.includes('🍃') ? 'natura' : tags?.includes('💻') ? 'tech' : tags?.includes('📚') ? 'letture' : 'default',
+      findPubByFf = n => PUBS?.find(p => new RegExp(`ff\\.?\\s*${n}\\b`,'i').test(`${p.buttonLabel||''} ${p.title||''}`)),
+      decorateRefs = (text, fallbackUrl, sec) => {
+        if(!text) return text;
+        let out = text;
+        out = out.replace(/\(([^)]*?ff\.?\s*(\d+)(?:\.\d+)?[^)]*)\)/gi, (_m, inner, ffnum) => {
+          const p = findPubByFf(ffnum);
+          const href = (p && p.substackLink) ? p.substackLink : fallbackUrl;
+          return `<a class="ff-ref ff-ref-${sec}" href="${href}" target="_blank" rel="noopener">${inner.trim()}</a>`;
+        });
+        out = out.replace(/\(([🧠✏️📎🔗][^)]{8,})\)/g, (_m, inner) => {
+          return `<a class="ff-ref ff-ref-${sec}" href="${fallbackUrl}" target="_blank" rel="noopener">${inner.trim()}</a>`;
+        });
+        return out;
+      },
       pg    = c => {
         const p = document.createElement('section');
         p.className='page';
@@ -198,8 +226,12 @@ function pubCard(pub, scheda, highlight){
   const c=document.createElement('div');
   c.className='box';
   c.style.background='#fff';
-  c.innerHTML=`<h3>${highlight?mark(scheda.title):scheda.title}</h3>`+
-              scheda.contentBlocks[0].content.map(l=>`<p>${highlight?mark(l):l}</p>`).join('');
+  const sec = sectionClass(scheda.tags||[]);
+  c.innerHTML=`<h3>${highlight?mark(scheda.title,`highlight-${sec}`):scheda.title}</h3>`+
+              scheda.contentBlocks[0].content.map(l=>{
+                const withRefs = decorateRefs(l, pub.substackLink, sec);
+                return `<p>${highlight?mark(withRefs,`highlight-${sec}`):withRefs}</p>`;
+              }).join('');
   c.onclick=()=>open(pub.substackLink);
   return pg(c);
 }
