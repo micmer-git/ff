@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🥗 Nutrition Diary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f8fafc; --surface: #ffffff; --surface-2: #f1f5f9;
+            --text: #1e293b; --text-muted: #64748b; --text-light: #94a3b8;
+            --primary: #4285f4; --secondary: #34a853; --warning: #fbbc04; --danger: #ea4335;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 6px rgba(0,0,0,0.04);
+            --radius: 16px;
+        }
+        [data-theme="dark"] {
+            --bg: #0f172a; --surface: #1e293b; --surface-2: #334155;
+            --text: #f1f5f9; --text-muted: #94a3b8; --text-light: #64748b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Google Sans','Roboto',sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; font-size: 14px; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 420px; margin: 0 auto; padding: 16px; }
+        .header { background: linear-gradient(135deg, #4285f4 0%, #34a853 50%, #fbbc04 100%); color: white; padding: 20px; margin: -16px -16px 16px -16px; text-align: center; }
+        .header h1 { font-size: 24px; font-weight: 500; }
+        .header p { opacity: 0.9; font-size: 13px; margin-top: 4px; }
+        .card { background: var(--surface); border-radius: var(--radius); padding: 20px; margin-bottom: 12px; box-shadow: var(--shadow); }
+        .card-title { font-size: 13px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+        .nav-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+        .nav-btn { background: var(--surface); border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow); color: var(--text); font-size: 18px; }
+        .month-label { font-size: 16px; font-weight: 500; }
+        .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+        .cal-header { font-size: 11px; color: var(--text-muted); font-weight: 500; padding: 8px 0; }
+        .cal-day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; font-size: 13px; cursor: pointer; transition: all 0.2s; position: relative; }
+        .cal-day:hover { background: var(--surface-2); }
+        .cal-day.today { background: var(--primary); color: white; font-weight: 700; }
+        .cal-day.has-data { font-weight: 700; }
+        .cal-day.has-data::after { content: ''; position: absolute; bottom: 4px; width: 5px; height: 5px; border-radius: 50%; background: var(--secondary); }
+        .cal-day.empty { cursor: default; }
+        .cal-day.empty:hover { background: transparent; }
+        .quick-links { display: flex; flex-direction: column; gap: 8px; }
+        .quick-link { display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--surface-2); border-radius: 12px; text-decoration: none; color: var(--text); transition: transform 0.1s; }
+        .quick-link:active { transform: scale(0.98); }
+        .quick-link .icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .quick-link .label { font-weight: 500; font-size: 14px; }
+        .quick-link .sub { font-size: 12px; color: var(--text-muted); }
+        .theme-toggle { position: fixed; bottom: 20px; right: 20px; width: 44px; height: 44px; border-radius: 50%; background: var(--surface); box-shadow: var(--shadow); border: none; font-size: 20px; cursor: pointer; z-index: 100; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🥗 Nutrition Diary</h1>
+            <p>Track macros, micros & Daily Dozen</p>
+        </div>
+
+        <div class="card">
+            <div class="nav-row">
+                <button class="nav-btn" onclick="changeMonth(-1)">‹</button>
+                <span class="month-label" id="monthLabel"></span>
+                <button class="nav-btn" onclick="changeMonth(1)">›</button>
+            </div>
+            <div class="cal-grid" id="calGrid"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Quick Access</div>
+            <div class="quick-links" id="quickLinks"></div>
+        </div>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
+
+    <script>
+    let currentYear, currentMonth;
+    const today = new Date();
+    const MONTHS = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+    const DAYS = ['Lun','Mar','Mer','Gio','Ven','Sab','Dom'];
+
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function dateStr(y,m,d){ return `${y}-${pad(m+1)}-${pad(d)}`; }
+
+    function hasData(ds){
+        try { return localStorage.getItem('nutri_'+ds) !== null; } catch(e){ return false; }
+    }
+
+    function renderCalendar(){
+        const ml = document.getElementById('monthLabel');
+        ml.textContent = `${MONTHS[currentMonth]} ${currentYear}`;
+        const grid = document.getElementById('calGrid');
+        let html = DAYS.map(d=>`<div class="cal-header">${d}</div>`).join('');
+        const first = new Date(currentYear, currentMonth, 1);
+        let startDay = (first.getDay()+6)%7;
+        const daysInMonth = new Date(currentYear, currentMonth+1, 0).getDate();
+        for(let i=0;i<startDay;i++) html+='<div class="cal-day empty"></div>';
+        for(let d=1;d<=daysInMonth;d++){
+            const ds = dateStr(currentYear, currentMonth, d);
+            const isToday = d===today.getDate() && currentMonth===today.getMonth() && currentYear===today.getFullYear();
+            const hd = hasData(ds);
+            html+=`<div class="cal-day${isToday?' today':''}${hd?' has-data':''}" onclick="goToDay('${ds}')">${d}</div>`;
+        }
+        grid.innerHTML = html;
+    }
+
+    function changeMonth(delta){
+        currentMonth += delta;
+        if(currentMonth<0){ currentMonth=11; currentYear--; }
+        if(currentMonth>11){ currentMonth=0; currentYear++; }
+        renderCalendar();
+    }
+
+    function goToDay(ds){ window.location.href = ds+'.html'; }
+
+    function renderQuickLinks(){
+        const el = document.getElementById('quickLinks');
+        const todayStr = dateStr(today.getFullYear(), today.getMonth(), today.getDate());
+        const yesterday = new Date(today); yesterday.setDate(yesterday.getDate()-1);
+        const yStr = dateStr(yesterday.getFullYear(), yesterday.getMonth(), yesterday.getDate());
+        el.innerHTML = `
+            <a class="quick-link" href="${todayStr}.html">
+                <div class="icon" style="background:rgba(66,133,244,0.15)">📅</div>
+                <div><div class="label">Oggi</div><div class="sub">${todayStr}</div></div>
+            </a>
+            <a class="quick-link" href="${yStr}.html">
+                <div class="icon" style="background:rgba(52,168,83,0.15)">⏪</div>
+                <div><div class="label">Ieri</div><div class="sub">${yStr}</div></div>
+            </a>`;
+    }
+
+    function toggleTheme(){
+        const t = document.documentElement.getAttribute('data-theme')==='dark' ? '' : 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+        document.getElementById('themeBtn').textContent = t==='dark' ? '☀️' : '🌙';
+        localStorage.setItem('theme', t);
+    }
+
+    (function init(){
+        const t = localStorage.getItem('theme');
+        if(t==='dark'){ document.documentElement.setAttribute('data-theme','dark'); document.getElementById('themeBtn').textContent='☀️'; }
+        currentYear = today.getFullYear();
+        currentMonth = today.getMonth();
+        renderCalendar();
+        renderQuickLinks();
+    })();
+    </script>
+</body>
+</html>
