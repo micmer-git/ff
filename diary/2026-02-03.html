@@ -157,6 +157,35 @@
 
         /* ORAC bar */
         .orac-section { margin-top: 12px; }
+
+        .recipes-grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:8px; margin-bottom:12px; }
+        .recipe-card { background: var(--surface-2); border-radius: var(--radius-sm); padding:10px; }
+        .recipe-name { font-size:12px; font-weight:600; margin-bottom:6px; }
+        .recipe-ings { font-size:11px; color:var(--text-muted); line-height:1.35; margin-bottom:8px; }
+        .recipe-btn { width:100%; min-height:40px; border:none; border-radius:10px; background:var(--primary); color:#fff; font-size:12px; font-weight:600; cursor:pointer; }
+
+        .food-category { margin-bottom:10px; }
+        .cat-header { width:100%; display:flex; justify-content:space-between; align-items:center; padding:11px 12px; border:none; border-radius:12px; background:var(--surface-2); color:var(--text); font-size:12px; font-weight:600; cursor:pointer; }
+        .cat-meta { font-size:11px; color:var(--text-muted); font-weight:500; }
+        .cat-content { max-height:0; overflow:hidden; transition:max-height .25s ease; }
+        .food-category.open .cat-content { max-height:800px; padding-top:8px; }
+
+        .view-toggle .view-btn, .tab, .action-btn { min-height:40px; }
+        .container { overflow-x:hidden; }
+
+        @media (max-width: 430px) {
+            body { font-size: 13px; }
+            .container { padding: 12px; }
+            .card { padding: 14px; }
+            .header { margin: -12px -12px 12px -12px; padding: 16px; }
+            .header h1 { font-size: 18px; }
+            .food-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+            .recipes-grid { grid-template-columns: 1fr; }
+            .sub-ing-row { flex-wrap: wrap; gap: 4px; }
+            .sub-ing-name { min-width: 120px; }
+            .sub-ing-btn { width: 28px; height: 28px; }
+            .exercise-summary { grid-template-columns: repeat(2,1fr); }
+        }
     </style>
 </head>
 <body>
@@ -192,7 +221,8 @@
                     <span class="card-title">Aggiungi Cibo</span>
                     <button class="action-btn secondary" style="padding:6px 12px;font-size:11px" onclick="toggleCustomFood()">➕ Custom</button>
                 </div>
-                <div class="food-grid" id="foodGrid"></div>
+                <div class="recipes-grid" id="recipesGrid"></div>
+                <div id="foodCategories"></div>
                 <div class="custom-food-panel" id="customFoodPanel">
                     <input type="text" id="customFoodName" placeholder="Nome cibo..." oninput="searchUSDA(this.value)">
                     <div class="search-results" id="usdaResults"></div>
@@ -418,6 +448,16 @@ const FOODS = [
     {id:'tofu_150', emoji:'🫘', label:'Tofu 150g', cat:'pranzo', parts:[{db:'tofu',g:150}], plants:['soia'], dozen:{beans:1}},
     {id:'lentils_200', emoji:'🫘', label:'Lenticchie 200g', cat:'pranzo', parts:[{db:'lentils_cooked',g:200}], plants:['lenticchie'], dozen:{beans:2}},
     {id:'sweet_potato_200', emoji:'🍠', label:'Patate dolci 200g', cat:'pranzo', parts:[{db:'sweet_potato',g:200}], plants:['patata dolce'], dozen:{other_veg:1}},
+    {id:'farro_120', emoji:'🌾', label:'Farro 120g', cat:'carbs', parts:[{db:'couscous',g:120}], plants:['farro'], dozen:{whole_grains:1}},
+    {id:'sausage_50', emoji:'🌭', label:'Salsiccia 50g', cat:'proteine', parts:[{db:'bresaola',g:50}], plants:[], dozen:{}},
+    {id:'spinach_100', emoji:'🥬', label:'Spinaci 100g', cat:'verdure', parts:[{db:'arugula',g:100}], plants:['spinaci'], dozen:{greens:1}},
+    {id:'peppers_100', emoji:'🫑', label:'Peperoni 100g', cat:'verdure', parts:[{db:'lettuce',g:100}], plants:['peperoni'], dozen:{other_veg:1}},
+    {id:'onion_80', emoji:'🧅', label:'Cipolla 80g', cat:'verdure', parts:[{db:'lettuce',g:80}], plants:['cipolla'], dozen:{other_veg:0.5}},
+    {id:'mozzarella_125', emoji:'🧀', label:'Mozzarella 125g', cat:'latticini', parts:[{db:'grana',g:125}], plants:[], dozen:{}},
+    {id:'chickpeas_200', emoji:'🫘', label:'Ceci 200g', cat:'legumi', parts:[{db:'beans_mix',g:200}], plants:['ceci'], dozen:{beans:2}},
+    {id:'eggs_1', emoji:'🥚', label:'Uovo', cat:'proteine', parts:[{db:'chicken',g:60}], plants:[], dozen:{}},
+    {id:'jam_25', emoji:'🍓', label:'Marmellata 25g', cat:'condimenti', parts:[{db:'honey',g:25}], plants:['frutta'], dozen:{}},
+    {id:'ragu_150', emoji:'🍝', label:'Ragù 150g', cat:'piatti', parts:[{db:'chicken',g:80},{db:'lettuce',g:70}], plants:['pomodoro','cipolla'], dozen:{other_veg:0.5}},
 ];
 
 // ===== MACRO/MICRO TARGETS =====
@@ -464,6 +504,32 @@ const DOZEN = [
 ];
 
 const USDA_SEARCH = Object.entries(NDB).map(([k,v])=>({name:k.replace(/_/g,' '),db:k,...v}));
+
+const FOOD_CATEGORIES = [
+    {id:'proteine', label:'🥩 Proteine'},
+    {id:'latticini', label:'🧀 Latticini'},
+    {id:'carbs', label:'🌾 Cereali & Carboidrati'},
+    {id:'legumi', label:'🫘 Legumi'},
+    {id:'verdure', label:'🥗 Verdure'},
+    {id:'frutta', label:'🍎 Frutta'},
+    {id:'condimenti', label:'🥜 Grassi & Condimenti'},
+    {id:'snack', label:'🍫 Snack'},
+    {id:'piatti', label:'🍕 Piatti'},
+    {id:'pranzo', label:'🍽️ Pasti'},
+    {id:'colazione', label:'🌅 Colazione'},
+    {id:'integratori', label:'💊 Integratori'},
+];
+
+const RECIPES = [
+    {id:'r_porridge', name:'🥣 Porridge standard', items:[['porridge',1]]},
+    {id:'r_pizza', name:'🍕 Pizza bresaola', items:[['pizza_bresaola',1]]},
+    {id:'r_pasta_ragu', name:'🍝 Pasta al ragù', items:[['carbs',1],['ragu_150',1]]},
+    {id:'r_insalata_pro', name:'🥗 Insalata proteica', items:[['salad',1],['chicken',1],['oil',1],['nuts',0.5]]},
+    {id:'r_zuppa', name:'🫘 Zuppa completa', items:[['soup',1],['bread_w',0.5],['oil',1]]},
+    {id:'r_farro_verdure', name:'🌾 Farro verdure', items:[['farro_120',1],['peppers_100',1],['onion_80',1],['oil',1]]},
+    {id:'r_uova_spinaci', name:'🥚 Uova spinaci', items:[['eggs_1',2],['spinach_100',1],['oil',0.5],['bread_p',0.5]]},
+    {id:'r_caprese', name:'🧀 Caprese light', items:[['mozzarella_125',1],['salad',0.66],['oil',1]]},
+];
 
 // ===== STATE =====
 let state = {log: [], dozen_extra: {}, custom_foods: [], partOverrides: {}};
@@ -747,9 +813,50 @@ function renderLog(){
 }
 
 function renderFoodGrid(){
-    document.getElementById('foodGrid').innerHTML=FOODS.map(f=>
-        `<button class="food-btn" onclick="addFood('${f.id}')"><span class="emoji">${f.emoji}</span><span class="label">${f.label}</span></button>`
-    ).join('');
+    const byCat = {};
+    FOODS.forEach(f => {
+        if(!byCat[f.cat]) byCat[f.cat] = [];
+        byCat[f.cat].push(f);
+    });
+    const catHtml = FOOD_CATEGORIES
+        .filter(c => byCat[c.id] && byCat[c.id].length)
+        .map((c, idx) => `<div class="food-category ${idx===0?'open':''}" id="cat_${c.id}">
+            <button class="cat-header" onclick="toggleCategory('${c.id}')">
+                <span>${c.label}</span>
+                <span class="cat-meta">${byCat[c.id].length} · ${idx===0?'−':'+'}</span>
+            </button>
+            <div class="cat-content">
+                <div class="food-grid">
+                    ${byCat[c.id].map(f=>`<button class="food-btn" onclick="addFood('${f.id}')"><span class="emoji">${f.emoji}</span><span class="label">${f.label}</span></button>`).join('')}
+                </div>
+            </div>
+        </div>`).join('');
+    document.getElementById('foodCategories').innerHTML = catHtml;
+}
+
+function renderRecipes(){
+    document.getElementById('recipesGrid').innerHTML = RECIPES.map(r => {
+        const ing = r.items.map(([id, qty]) => {
+            const f = FOODS.find(x => x.id === id);
+            return f ? `${f.emoji} ${f.label}${qty!==1?` ×${qty}`:''}` : id;
+        }).join(' · ');
+        return `<div class="recipe-card">
+            <div class="recipe-name">${r.name}</div>
+            <div class="recipe-ings">${ing}</div>
+            <button class="recipe-btn" onclick="addRecipe('${r.id}')">Aggiungi ingredienti</button>
+        </div>`;
+    }).join('');
+}
+
+function toggleCategory(catId){
+    const el = document.getElementById('cat_'+catId);
+    if(!el) return;
+    el.classList.toggle('open');
+    const meta = el.querySelector('.cat-meta');
+    if(meta){
+        const count = (el.querySelectorAll('.food-btn')||[]).length;
+        meta.textContent = `${count} · ${el.classList.contains('open')?'−':'+'}`;
+    }
 }
 
 // ===== WELLNESS RENDERING =====
@@ -820,10 +927,27 @@ function closeContribPopup() {
 }
 
 // ===== ACTIONS =====
-function addFood(id){
+function addFoodEntry(id, qty=1, forceNew=false){
+    if(forceNew){
+        state.log.push({id, qty, time:new Date().toISOString()});
+        return;
+    }
     const existing=state.log.find(e=>e.id===id);
-    if(existing) existing.qty++; else state.log.push({id,qty:1,time:new Date().toISOString()});
+    if(existing) existing.qty += qty;
+    else state.log.push({id,qty,time:new Date().toISOString()});
+}
+
+function addFood(id){
+    addFoodEntry(id, 1, false);
     saveState(); renderAll();
+}
+
+function addRecipe(recipeId){
+    const recipe = RECIPES.find(r => r.id === recipeId);
+    if(!recipe) return;
+    recipe.items.forEach(([foodId, qty]) => addFoodEntry(foodId, qty, true));
+    saveState();
+    renderAll();
 }
 
 function removeLog(i){
@@ -860,7 +984,7 @@ function undoLast(){
 function addDozenServing(id){ if(!state.dozen_extra[id])state.dozen_extra[id]=0; state.dozen_extra[id]++; saveState(); renderAll(); }
 
 function clearDay(){
-    if(confirm('Cancellare tutti i dati di oggi?')){ state={log:[],dozen_extra:{},custom_foods:{},partOverrides:{}}; saveState(); renderAll(); }
+    if(confirm('Cancellare tutti i dati di oggi?')){ state={log:[],dozen_extra:{},custom_foods:[],partOverrides:{}}; saveState(); renderAll(); }
 }
 
 function exportDay(){
@@ -1094,6 +1218,7 @@ function switchTab(id){
     document.getElementById('nextDay').href=offsetDay(DAY,1)+'.html';
     loadState();
     initTabs();
+    renderRecipes();
     renderFoodGrid();
     renderAll();
     loadIntervals();
