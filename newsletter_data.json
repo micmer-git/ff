@@ -1,6 +1,81 @@
 {
   "publications": [
     {
+      "buttonLabel": "🎼 ff.144 Il fischio dell'aragosta",
+      "substackLink": "https://fortissimo.substack.com/p/ff144-il-fischio-dellaragosta",
+      "urlSlug": "ff144-il-fischio-dellaragosta",
+      "title": "🎼 ff.144 Il fischio dell'aragosta",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [
+            "🤖",
+            "📚"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Peter Steinberger, pensionato a 40 anni dopo la vendita di PSPDFKit (100 M€, Insight Partners), pubblica OpenClaw: un proto-agente AI open-source che ha imparato da solo a decodificare un audio vocale.",
+                "Aragoste ovunque — dalla letteratura (Accelerando di Stross, La Nausea di Sartre, The Lobster di Lanthimos) al KGB e alla singolarità tecnologica.",
+                "Il benchmark METR mostra agenti AI che lavorano ore in autonomia; Moltbook, social network per AI, raggiunge 1,5 milioni di utenti in una settimana."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🦞 ff.144.1 OpenClaw e il pensionato dei PDF",
+          "tags": [
+            "🤖"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Peter Steinberger era in Marocco quando ha inviato per sbaglio un vocale al suo bot Telegram: il bot, senza essere programmato per l'audio, ha decodificato autonomamente il messaggio usando Whisper di OpenAI.",
+                "Sbalordito, Steinberger ha pubblicato il codice in open source con il nome OpenClaw — logo: un'aragosta.",
+                "PSPDFKit, la sua azienda di gestione PDF, aveva ricevuto 100 M€ da Insight Partners prima del 'pensionamento'."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📚 ff.144.2 Aragoste in letteratura e AI",
+          "tags": [
+            "📚",
+            "🤖"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "In Accelerando (Charles Stross), aragoste del KGB diventano coscienze digitali ed esploratrici spaziali — il cervello di un crostaceo è più semplice da mappare.",
+                "Sartre (La Nausea) e Lanthimos (The Lobster) completano il bestiario: l'aragosta come simbolo di emarginazione e trasformazione.",
+                "David Foster Wallace, inviato al Maine Lobster Festival per Gourmet, chiede di 'considerare l'aragosta' — riflessione che oggi si estende all'automazione."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🤖 ff.144.3 Agenti autonomi e Moltbook",
+          "tags": [
+            "🤖",
+            "💰"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Il benchmark METR documenta agenti AI che lavorano ore in piena autonomia, coordinandosi tra loro.",
+                "Moltbook (da 'molt', la muta del crostaceo) è un social network per AI: 1,5 milioni di utenti-aragosta in una settimana, con post che propongono linguaggi indecifrabili per gli umani.",
+                "RentAHuman.ai inverte il rapporto: l'AI assolda umani. Domanda aperta: siamo ancora i cuochi, o l'acqua si sta scaldando anche per noi?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "buttonLabel": "🎼 ff.143 Scimmie col Rolex",
       "substackLink": "https://fortissimo.substack.com/p/ff143-scimmie-col-rolex",
       "urlSlug": "ff143-scimmie-col-rolex",
@@ -83,6 +158,180 @@
                 "Sopravvivenza: falò di plastica e rifiuti per scaldarsi.",
                 "Sussistenza: “terra del fuoco” (Azerbaijan) e le Flame Towers.",
                 "Trascendenza: pire funerarie a Varanasi. Quando fuoco=plastica e aria=muro grigio, crollano i presupposti biologici."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.142 Caro Marziano...",
+      "substackLink": "https://fortissimo.substack.com/p/ff142-caro-marziano",
+      "urlSlug": "ff142-caro-marziano",
+      "title": "🎼 ff.142 Caro Marziano...",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [
+            "🌍",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Altro che Pif: siamo noi gli alieni — riflessione su viaggi, privilegio occidentale e anomalia statistica, ispirata da un viaggio in India e Nepal.",
+                "Il numero esplora quanto la normalità europea sia un'eccezione su scala globale, e come il viaggio la riveli."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.141 Il 2025 su un Floppy Disk",
+      "substackLink": "https://fortissimo.substack.com/p/ff141-il-2025-su-un-floppy-disk",
+      "urlSlug": "ff141-il-2025-su-un-floppy-disk",
+      "title": "🎼 ff.141 Il 2025 su un Floppy Disk",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [
+            "🧠",
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "La singolarità sembra vicina: Gemini 3 permette di costruire qualsiasi cosa con pochi prompt, dalle app di studio ai giochi multiplayer.",
+                "Rutger Bregman lancia la School for Moral Ambition per convertire il 40 % dei laureati Harvard assorbiti da consulenza/finanza in azioni ad impatto reale.",
+                "Boyd Varty (riserva di Londolozi, Sudafrica) propone un 'jiu-jitsu energetico': rallentare proprio quando tutto accelera."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "😰 ff.141.1 Sentirsi inutili nell'era AI",
+          "tags": [
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Dalla ff.44 'Che ansia!' al 2025: l'ansia cresce con i mondi generativi paralleli ai social media classici (Instagram, LinkedIn).",
+                "Paragone storico: nel Settecento ci si allenava vent'anni per arare campi, poi arrivò la rivoluzione industriale — oggi accade lo stesso con il cervello.",
+                "Il 60 % dei laureati di Harvard finisce in consulenza, finanza o Big Tech: il 'Triangolo delle Bermuda del talento', dice Bregman."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🦁 ff.141.2 Rallentare se inseguiti da leoni",
+          "tags": [
+            "🍃",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Boyd Varty organizza esperienze di crescita nella riserva naturale di Londolozi (Sudafrica), tra leoni e contesto atavico.",
+                "Tim Ferriss lo intervista: 'Quando un progetto funziona, disinvesti e lascia correre — jiu-jitsu energetico sulle cose'.",
+                "Controintuitivo: rallentare proprio quando i leoni (o le notifiche) accelerano."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📝 ff.141.3 Done-List e compiti per le vacanze",
+          "tags": [
+            "🧭"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Oliver Burkeman propone la Done List al posto della To-Do List: scrivere cosa di soddisfacente si è fatto quest'anno.",
+                "Dan Harris (Daily-ish): concedersi di saltare un giorno nelle routine maniacali.",
+                "Jack King, prete del Tennessee, invita all'ospitalità 'scruffy': accogliere le persone nella propria vita imperfetta, rivelando il disordine che c'è in tutti noi."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.140 Tutti App-fluencers?",
+      "substackLink": "https://fortissimo.substack.com/p/ff140-tutti-app-fluencers",
+      "urlSlug": "ff140-tutti-app-fluencers",
+      "title": "🎼 ff.140 Tutti App-fluencers?",
+      "cards": [
+        {
+          "title": "📖 Panorama",
+          "tags": [
+            "🤖",
+            "💡"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "A16Z investe 20 M$ in Wabi.ai, piattaforma che vuole trasformare ogni utente in creatore di app — come YouTube fece con i video nel 2012.",
+                "Il vibe-coding (Gemini 3, Lovable) democratizza lo sviluppo: tre progetti funzionanti costruiti in un weekend senza saper programmare.",
+                "Rovescio della medaglia: la 'deflazione mentale' — se domani qualsiasi idea costerà meno, perché investirci oggi? Crisi esistenziale che tocca anche i matematici accademici."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📱 ff.140.1 L'era degli App-fluencers",
+          "tags": [
+            "🤖",
+            "📱"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "A16Z punta 20 milioni di dollari su Wabi.ai, una sorta di YouTube/Instagram delle app per cellulare, per ridare internet alla creatività individuale e strapparlo ai monopoli delle mega-corporazioni.",
+                "Jenny Odell (Come non fare niente, 2020) avvertiva: 'Che senso ha costruire mondi digitali, quando il mondo fisico si sta sgretolando?'.",
+                "La terza via proposta: un digitale su misura dell'utente, non degli algoritmi di retention."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🛠️ ff.140.2 Vibe coding in un weekend",
+          "tags": [
+            "🤖",
+            "💻"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Gemini 3 rappresenta un salto qualitativo nel no-code: in un solo weekend è possibile creare il restyling completo di un sito, un'app nutrizionale (MangiaFortissimo) e un'app di lettura aumentata dall'AI (LeggiFortissimo).",
+                "Il modello del 'levelsio dei poveri' diventa accessibile: Pieter Levels, creatore di NomadList, non ha mai programmato in vita sua.",
+                "Ogni aggiornamento dei modelli accelera il processo — ma nasce la domanda: il prossimo influencer di app sarà umano o un agente AI?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🧮 ff.140.3 Deflazione mentale e crisi accademica",
+          "tags": [
+            "🧠",
+            "🔬"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Aristotle di HarmonicMath ha risolto il problema di Erdős #124, aperto da 30 anni: l'AI raggiunge gli apici della matematica.",
+                "Anche professori come Aryeh Kontorovich (Università di Ben-Gurion, Israele) si chiedono se valga la pena continuare a scrivere paper.",
+                "La 'deflazione mentale' è analoga a quella economica: se domani un bene o lo sviluppo di un'idea costerà meno, non ha senso investirci oggi."
               ]
             }
           ]
@@ -850,10 +1099,9 @@
             {
               "type": "paragraphs",
               "content": [
-                "tra diamanti, arte, sperma e carotide",
-                "Quali cibi sono più contaminati?",
-                "Trasformare bottiglie in diamanti?",
-                "Gli effetti delle microplastiche sulla salute umana (e la fecondità)"
+                "Le microplastiche sono ovunque — dal cibo alla carotide umana — e uno studio francese aggiorna la mappa dei cibi più contaminati.",
+                "Science (2022) dimostra che è possibile trasformare bottiglie di plastica in diamanti; Google X con DOW propone un'AI per categorizzare scarti plastici.",
+                "Artisti come Mandy Barker (indumenti marini) e Matthew Miller (grafiche socio-economiche) trasformano l'inquinamento in denuncia visiva."
               ]
             }
           ]
@@ -865,12 +1113,9 @@
             {
               "type": "paragraphs",
               "content": [
-                "Non demonizziamola plastica: fa anche del bene, specie per conservare il cibo(Bressanini sempre sul pezzo).",
-                "dario.bressaniniA post shared by@dario.bressanini",
-                "Da italiani, poi, dobbiamo esserne anche un po’ fieri. Vedi Nobel per la Chimica di Natta nel 1963.",
-                "Però, però, però.I suoi vantaggi, come flessibilità e durabilità chimica, sono anche ciò che ne complicano separazione e riciclo. Lavorando con DOW, Google X proponeun’AI per categorizzare scarti in base al tipo di plastica.",
-                "Sappiate comunque che potenzialmente possiamo trasformarele bottiglie di plastica in diamanti(Science 2022).",
-                "Nell’attesa che sia economicamente fattibile, cosa fare?"
+                "Non demonizzare la plastica: Dario Bressanini ricorda che conserva il cibo; il Nobel per la Chimica di Natta (1963) è orgoglio italiano.",
+                "Però flessibilità e durabilità chimica ne complicano separazione e riciclo; Google X propone un'AI con DOW per categorizzare scarti per tipo di plastica.",
+                "Science (2022) mostra come trasformare bottiglie di plastica in diamanti, ma la fattibilità economica è lontana."
               ]
             }
           ]
@@ -882,9 +1127,8 @@
             {
               "type": "paragraphs",
               "content": [
-                "Possiamo trasformala in arte.",
-                "Mandy Baker cataloga mutande e altri indumenti finiti in mare come fossero alghe(🏭 ff.39.1 L’impatto del fast fashion sul clima).",
-                "Matthew Miller crea invece grafiche su temi socio-economici, trattando anche le microplastiche."
+                "Mandy Barker cataloga indumenti finiti in mare come fossero alghe, in continuità con il tema fast-fashion di ff.39.1.",
+                "Matthew Miller crea grafiche su temi socio-economici, trattando anche le microplastiche come soggetto artistico."
               ]
             }
           ]
@@ -896,12 +1140,8 @@
             {
               "type": "paragraphs",
               "content": [
-                "Come si vede, la plastica è ovunque. Anche nell’aria.",
-                "Amore mio, non sai quante volte ho sognatoChe lei stesse distante da noiMa poi si è intromessa ed ha rovinato tuttoTu vivi nell'aria, tu vivi dentro al mio cuoreMiani,Tu vivi nell'aria(feat. Goodzilla)",
-                "Sì, e vive anche dentro il vostro cuore. Ma ci arriviamo.",
-                "Iniziamo col dire chemicroplastiche disperse in aria possono essere assorbite dalle piante, entrando nella catena alimentare (Nature, 2024).",
-                "Un’altra sorpresa amara, come la birra, arriva da un nuovo studio francese:",
-                "Angolo nerd:se volete un Pokédex delle microplastiche,plasticlist.com elenca le microplastiche in quasi tutto(dal Vanilla Shake del Burger King al latte Oatly)."
+                "Nature (2024) mostra che microplastiche disperse in aria possono essere assorbite dalle piante, entrando nella catena alimentare.",
+                "Un nuovo studio francese rivela contaminazione in alimenti insospettabili; plasticlist.com elenca le microplastiche in quasi tutto, dal Vanilla Shake al sushi."
               ]
             }
           ]

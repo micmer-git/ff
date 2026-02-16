@@ -1,6 +1,81 @@
 {
   "publications": [
     {
+      "buttonLabel": "🎼 ff.144 The Lobster's Whistle",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff144-il-fischio-dellaragosta",
+      "urlSlug": "ff144-il-fischio-dellaragosta",
+      "title": "🎼 ff.144 The Lobster's Whistle",
+      "cards": [
+        {
+          "title": "📖 Overview",
+          "tags": [
+            "🤖",
+            "📚"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Peter Steinberger, retired at 40 after selling PSPDFKit (€100 M, Insight Partners), publishes OpenClaw: an open-source proto-agent that taught itself to decode a voice message.",
+                "Lobsters everywhere — from literature (Stross's Accelerando, Sartre's Nausea, Lanthimos's The Lobster) to the KGB and the technological singularity.",
+                "The METR benchmark shows AI agents working autonomously for hours; Moltbook, a social network for AI, hits 1.5 million users in one week."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🦞 ff.144.1 OpenClaw & the PDF retiree",
+          "tags": [
+            "🤖"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Steinberger was in Morocco when he accidentally sent a voice note to his Telegram bot — the bot, with no audio code, autonomously decoded the message via OpenAI's Whisper.",
+                "Astonished, he open-sourced the code as OpenClaw — logo: a lobster.",
+                "PSPDFKit, his PDF management company, had received €100 M from Insight Partners before his 'retirement'."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📚 ff.144.2 Lobsters in literature & AI",
+          "tags": [
+            "📚",
+            "🤖"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "In Accelerando (Charles Stross), KGB lobsters become digital minds and space explorers — a crustacean brain is simpler to map.",
+                "Sartre (Nausea) and Lanthimos (The Lobster) complete the bestiary: the lobster as a symbol of alienation and transformation.",
+                "David Foster Wallace, reporting on the Maine Lobster Festival for Gourmet, asked us to 'consider the lobster' — a reflection that now extends to automation."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🤖 ff.144.3 Autonomous agents & Moltbook",
+          "tags": [
+            "🤖",
+            "💰"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "The METR benchmark documents AI agents working hours on end in full autonomy, coordinating with each other.",
+                "Moltbook (from 'molt', the crustacean's shedding) is a social network for AI: 1.5 million lobster-users in one week, with posts proposing languages indecipherable to humans.",
+                "RentAHuman.ai flips the script: AI hires humans. Open question: are we still the chefs, or is the water warming for us too?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "🎼 ff.143 Monkeys with Rolex",
       "buttonLabel": "🎼 ff.143 Monkeys with Rolex",
       "urlSlug": "ff143-scimmie-col-rolex",
@@ -83,6 +158,180 @@
                 "Survival: plastic-and-waste bonfires to keep warm.",
                 "Livelihood: the “Land of Fire” imagery in Azerbaijan.",
                 "Transcendence: funeral pyres in Varanasi; when fire=plastic and air=wall, biological assumptions crack."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.142 Dear Martian...",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff142-caro-marziano",
+      "urlSlug": "ff142-caro-marziano",
+      "title": "🎼 ff.142 Dear Martian...",
+      "cards": [
+        {
+          "title": "📖 Overview",
+          "tags": [
+            "🌍",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "We are the aliens — a reflection on travel, Western privilege, and statistical anomaly, inspired by a trip through India and Nepal.",
+                "The issue explores how European normality is an exception on a global scale, and how travel exposes it."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.141 2025 on a Floppy Disk",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff141-il-2025-su-un-floppy-disk",
+      "urlSlug": "ff141-il-2025-su-un-floppy-disk",
+      "title": "🎼 ff.141 2025 on a Floppy Disk",
+      "cards": [
+        {
+          "title": "📖 Overview",
+          "tags": [
+            "🧠",
+            "🍃"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "The singularity feels close: Gemini 3 lets you build almost anything with a few prompts, from study apps to multiplayer games.",
+                "Rutger Bregman launches the School for Moral Ambition to redirect the 40 % of Harvard grads absorbed by consulting/finance into real-impact work.",
+                "Boyd Varty (Londolozi reserve, South Africa) proposes 'energetic jiu-jitsu': slow down precisely when everything accelerates."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "😰 ff.141.1 Feeling useless in the AI era",
+          "tags": [
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "From ff.44 'Che ansia!' to 2025: anxiety grows with generative worlds parallel to classic social media.",
+                "Historical parallel: in the 18th century people trained 20 years to plough fields, then the Industrial Revolution arrived — today the same happens with the brain.",
+                "60 % of Harvard grads end up in consulting, finance, or Big Tech: the 'Bermuda Triangle of talent', says Bregman."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🦁 ff.141.2 Slowing down when chased by lions",
+          "tags": [
+            "🍃",
+            "🧠"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Boyd Varty runs growth experiences in the Londolozi reserve (South Africa), among lions and primal context.",
+                "Tim Ferriss interviews him: 'When a project works, disinvest and let it run — energetic jiu-jitsu.'",
+                "Counter-intuitive: slow down precisely when lions (or notifications) speed up."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📝 ff.141.3 Done-List & holiday homework",
+          "tags": [
+            "🧭"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Oliver Burkeman proposes a Done List instead of a To-Do List: write down what satisfying things you accomplished this year.",
+                "Dan Harris (Daily-ish): allow yourself to skip a day in manic routines.",
+                "Jack King, a Tennessee priest, invites 'scruffy hospitality': welcome people into your imperfect life, revealing the mess we all share."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "buttonLabel": "🎼 ff.140 All App-fluencers?",
+      "substackLink": "https://translate.google.com/translate?sl=it&tl=en&u=https://fortissimo.substack.com/p/ff140-tutti-app-fluencers",
+      "urlSlug": "ff140-tutti-app-fluencers",
+      "title": "🎼 ff.140 All App-fluencers?",
+      "cards": [
+        {
+          "title": "📖 Overview",
+          "tags": [
+            "🤖",
+            "💡"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "A16Z invests $20 M in Wabi.ai, a platform aiming to turn every user into an app creator — much like YouTube did with video back in 2012.",
+                "Vibe-coding tools (Gemini 3, Lovable) democratise development: three working projects built in a single weekend with no coding skills.",
+                "The flip side: 'mental deflation' — if any idea will cost less tomorrow, why invest today? An existential crisis now hitting even academic mathematicians."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📱 ff.140.1 The App-fluencer era",
+          "tags": [
+            "🤖",
+            "📱"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "A16Z bets $20 million on Wabi.ai, a YouTube/Instagram for mobile apps, to hand internet creativity back to individuals and away from corporate monopolies.",
+                "Jenny Odell (How to Do Nothing, 2020) warned: 'What's the point of building digital worlds when the physical one is crumbling?'.",
+                "The third way: a digital space tailored to users, not to retention algorithms."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🛠️ ff.140.2 Vibe coding in a weekend",
+          "tags": [
+            "🤖",
+            "💻"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Gemini 3 is a step change in no-code: a full site redesign, a nutrition app (MangiaFortissimo), and an AI-augmented reading app (LeggiFortissimo) — all in one weekend.",
+                "The 'poor man's levelsio' model becomes accessible: Pieter Levels, NomadList creator, never coded a line.",
+                "Every model update speeds things up — but the question remains: will the next app influencer be human or an AI agent?"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🧮 ff.140.3 Mental deflation & academic crisis",
+          "tags": [
+            "🧠",
+            "🔬"
+          ],
+          "contentBlocks": [
+            {
+              "type": "paragraphs",
+              "content": [
+                "Aristotle by HarmonicMath solved Erdős problem #124, open for 30 years: AI reaches the pinnacle of mathematics.",
+                "Even professors like Aryeh Kontorovich (Ben-Gurion University, Israel) question the value of continuing to write papers.",
+                "'Mental deflation' mirrors economics: if goods or ideas will be cheaper tomorrow, investing today feels pointless."
               ]
             }
           ]
