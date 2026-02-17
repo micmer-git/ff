@@ -58,22 +58,17 @@
         .nutrient-amount { font-size: 13px; font-weight: 500; }
         .nutrient-percent { font-size: 11px; color: var(--text-light); }
 
-        .food-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px; }
         .food-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 4px; background: var(--surface-2); border: none; border-radius: var(--radius-sm); cursor: pointer; transition: all 0.15s; font-family: inherit; color: var(--text); }
         .food-btn:active { transform: scale(0.95); background: var(--primary); color: white; }
         .food-btn .emoji { font-size: 28px; }
         .food-btn .label { font-size: 10px; text-align: center; line-height: 1.2; }
 
-        .food-category { margin-bottom: 8px; border-radius: var(--radius-sm); overflow: hidden; }
-        .food-cat-header { display: flex; align-items: center; gap: 8px; padding: 12px 14px; background: var(--surface-2); border: none; width: 100%; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 500; color: var(--text); transition: background 0.2s; }
-        .food-cat-header:active { background: var(--primary); color: white; }
-        .food-cat-header .cat-icon { font-size: 18px; }
-        .food-cat-header .cat-name { flex: 1; text-align: left; }
-        .food-cat-header .cat-count { font-size: 11px; color: var(--text-light); background: var(--surface); padding: 2px 8px; border-radius: 10px; }
-        .food-cat-header .cat-chevron { font-size: 14px; transition: transform 0.3s; color: var(--text-light); }
-        .food-cat-header.open .cat-chevron { transform: rotate(180deg); }
-        .food-cat-body { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), padding 0.35s; padding: 0 8px; }
-        .food-cat-body.open { max-height: 600px; padding: 8px; }
+        .food-category { margin-bottom: 12px; border-radius: var(--radius-sm); }
+        .food-cat-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 2px 8px; font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .4px; }
+        .food-cat-title .cat-left { display: flex; align-items: center; gap: 6px; }
+        .food-cat-title .cat-icon { font-size: 16px; }
+        .food-cat-title .cat-count { font-size: 10px; color: var(--text-light); background: var(--surface-2); padding: 2px 8px; border-radius: 10px; }
 
         .recipe-section { margin-bottom: 16px; }
         .recipe-section-title { font-size: 13px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
@@ -104,6 +99,9 @@
         .log-item { padding: 8px 0; border-bottom: 1px solid var(--surface-2); font-size: 13px; }
         .log-item:last-child { border-bottom: none; }
         .log-item-header { display: flex; justify-content: space-between; align-items: center; }
+        .log-left { display:flex; align-items:center; gap:8px; min-width:0; }
+        .log-select { width:16px; height:16px; accent-color: var(--primary); }
+        .log-label { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
         .log-remove { background: none; border: none; color: var(--danger); cursor: pointer; font-size: 16px; padding: 4px; }
         .sub-ingredients { margin-top: 4px; padding-left: 8px; }
         .sub-ing-row { display: flex; align-items: center; gap: 6px; padding: 3px 0; font-size: 12px; color: var(--text-muted); }
@@ -334,10 +332,9 @@
 
     <div class="bottom-actions" style="flex-wrap:wrap">
         <button class="action-btn secondary" onclick="undoLast()">↩️ Undo</button>
-        <button class="action-btn secondary" onclick="duplicateToNext(1)">📄+1g</button>
-        <button class="action-btn secondary" onclick="duplicateToNext(3)">📄+3g</button>
-        <button class="action-btn secondary" onclick="duplicateToNext(7)">📄+7g</button>
-        <button class="action-btn secondary" onclick="makeRecurringAllDays()">♾️ Ricorri</button>
+        <button class="action-btn secondary" onclick="toggleSelectMode()">✅ Select</button>
+        <button class="action-btn secondary" onclick="duplicateSelectedPrompt()">📄 Duplicate</button>
+        <button class="action-btn secondary" onclick="makeRecurringFromSelected()">♾️ Recurring</button>
         <button class="action-btn secondary" onclick="exportDay()">📥 Export</button>
         <button class="action-btn secondary" onclick="clearDay()">🗑️ Clear</button>
     </div>
@@ -618,7 +615,7 @@ const DOZEN = [
 const USDA_SEARCH = Object.entries(NDB).map(([k,v])=>({name:k.replace(/_/g,' '),db:k,...v}));
 
 // ===== STATE =====
-let state = {log: [], dozen_extra: {}, custom_foods: [], partOverrides: {}};
+let state = {log: [], dozen_extra: {}, custom_foods: [], partOverrides: {}, selectMode:false, selectedLogs:[]};
 let intervalsData = null;
 
 function loadState(){
@@ -627,6 +624,8 @@ function loadState(){
     if(!state.dozen_extra) state.dozen_extra = {};
     if(!state.custom_foods) state.custom_foods = [];
     if(!state.partOverrides) state.partOverrides = {};
+    if(state.selectMode === undefined) state.selectMode = false;
+    if(!Array.isArray(state.selectedLogs)) state.selectedLogs = [];
 }
 function saveState(){
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){}
@@ -881,6 +880,7 @@ function renderPlants(){
 
 function renderLog(){
     const el=document.getElementById('foodLog');
+    state.selectedLogs = (state.selectedLogs||[]).filter(i => i >= 0 && i < state.log.length);
     const total = state.log.length + state.custom_foods.length;
     document.getElementById('logCount').textContent=total;
     if(!total){ el.innerHTML='<div style="text-align:center;color:var(--text-light);padding:20px">Nessun cibo aggiunto</div>'; return; }
@@ -901,7 +901,9 @@ function renderLog(){
             </div>`;
         });
         subHtml += '</div>';
-        return `<div class="log-item"><div class="log-item-header"><span>${label}</span><button class="log-remove" onclick="removeLog(${i})">✕</button></div>${subHtml}</div>`;
+        const checked = (state.selectedLogs||[]).includes(i) ? 'checked' : '';
+        const selectHtml = state.selectMode ? `<input class="log-select" type="checkbox" ${checked} onchange="toggleSelectedLog(${i})">` : '';
+        return `<div class="log-item"><div class="log-item-header"><div class="log-left">${selectHtml}<span class="log-label">${label}</span></div><button class="log-remove" onclick="removeLog(${i})">✕</button></div>${subHtml}</div>`;
     }).join('');
 
     html += state.custom_foods.map((cf,i)=>
@@ -919,32 +921,22 @@ function renderFoodGrid(){
     });
     recipesHtml += '</div></div>';
 
-    // Render food categories as accordion
+    // Render food categories as always-visible sections
     let catsHtml = '';
-    FOOD_CATEGORIES.forEach((cat, ci) => {
+    FOOD_CATEGORIES.forEach((cat) => {
         const foods = FOODS.filter(f => f.cat === cat.id);
-        const isOpen = ci === 0;
         catsHtml += `<div class="food-category">
-            <button class="food-cat-header${isOpen?' open':''}" onclick="toggleCat(this)">
-                <span class="cat-icon">${cat.icon}</span>
-                <span class="cat-name">${cat.name}</span>
+            <div class="food-cat-title">
+                <div class="cat-left"><span class="cat-icon">${cat.icon}</span><span>${cat.name}</span></div>
                 <span class="cat-count">${foods.length}</span>
-                <span class="cat-chevron">▼</span>
-            </button>
-            <div class="food-cat-body${isOpen?' open':''}">
-                <div class="food-grid">${foods.map(f =>
-                    `<button class="food-btn" onclick="addFood('${f.id}')"><span class="emoji">${f.emoji}</span><span class="label">${f.label}</span></button>`
-                ).join('')}</div>
             </div>
+            <div class="food-grid">${foods.map(f =>
+                `<button class="food-btn" onclick="addFood('${f.id}')"><span class="emoji">${f.emoji}</span><span class="label">${f.label}</span></button>`
+            ).join('')}</div>
         </div>`;
     });
 
     document.getElementById('foodGrid').innerHTML = recipesHtml + catsHtml;
-}
-
-function toggleCat(el){
-    el.classList.toggle('open');
-    el.nextElementSibling.classList.toggle('open');
 }
 
 function addRecipe(recipeId){
@@ -1051,6 +1043,9 @@ function removeLog(i){
     });
     state.partOverrides = newOverrides;
     state.log.splice(i,1);
+    state.selectedLogs = (state.selectedLogs||[])
+        .filter(idx => idx !== i)
+        .map(idx => idx > i ? idx - 1 : idx);
     saveState(); renderAll();
 }
 function removeCustom(i){ state.custom_foods.splice(i,1); saveState(); renderAll(); }
@@ -1075,28 +1070,53 @@ function undoLast(){
 function addDozenServing(id){ if(!state.dozen_extra[id])state.dozen_extra[id]=0; state.dozen_extra[id]++; saveState(); renderAll(); }
 
 function clearDay(){
-    if(confirm('Cancellare tutti i dati di oggi?')){ state={log:[],dozen_extra:{},custom_foods:[],partOverrides:{}}; saveState(); renderAll(); }
+    if(confirm('Cancellare tutti i dati di oggi?')){ state={log:[],dozen_extra:{},custom_foods:[],partOverrides:{},selectMode:false,selectedLogs:[]}; saveState(); renderAll(); }
 }
 
-function duplicateToNext(days){
+function toggleSelectMode(){
+    state.selectMode = !state.selectMode;
+    if(!state.selectMode) state.selectedLogs = [];
+    saveState(); renderAll();
+}
+
+function toggleSelectedLog(i){
+    if(!Array.isArray(state.selectedLogs)) state.selectedLogs = [];
+    if(state.selectedLogs.includes(i)) state.selectedLogs = state.selectedLogs.filter(x => x !== i);
+    else state.selectedLogs.push(i);
+    saveState();
+}
+
+function getSelectedEntries(){
+    const idxs = (state.selectedLogs||[]).slice().sort((a,b)=>a-b);
+    return idxs.map(i => state.log[i]).filter(Boolean);
+}
+
+function duplicateSelectedPrompt(){
+    const selected = getSelectedEntries();
+    if(!selected.length){ alert('Seleziona almeno un item nel log.'); return; }
+    const raw = prompt('Duplica nei prossimi quanti giorni?', '7');
+    const days = parseInt(raw||'0',10);
     if(!days || days < 1) return;
     for(let i=1; i<=days; i++){
         const d = offsetDay(DAY, i);
-        const cloned = JSON.parse(JSON.stringify({
-            log: state.log || [],
-            dozen_extra: state.dozen_extra || {},
-            custom_foods: state.custom_foods || [],
-            partOverrides: state.partOverrides || {}
-        }));
-        localStorage.setItem('nutri_' + d, JSON.stringify(cloned));
+        let st = {log:[],dozen_extra:{},custom_foods:[],partOverrides:{}};
+        try {
+            const s = localStorage.getItem('nutri_' + d);
+            if(s) st = JSON.parse(s);
+        } catch(e){}
+        if(!Array.isArray(st.log)) st.log = [];
+        selected.forEach(e => st.log.push({...e, time:new Date().toISOString()}));
+        localStorage.setItem('nutri_' + d, JSON.stringify(st));
     }
-    alert(`Duplicato su ${days} giorno/i successivi`);
+    alert(`Duplicati ${selected.length} item su ${days} giorni`);
 }
 
-function makeRecurringAllDays(){
-    const recurring = (state.log || []).map(e => ({id:e.id, qty:e.qty||1}));
+function makeRecurringFromSelected(){
+    const selected = getSelectedEntries();
+    if(!selected.length){ alert('Seleziona almeno un item nel log.'); return; }
+    const recurring = selected.map(e => ({id:e.id, qty:e.qty||1}));
     localStorage.setItem('nutri_recurring_all_days', JSON.stringify(recurring));
-    alert('Ricorrenza salvata: verrà applicata a tutti i giorni.');
+    alert('Ricorrenza salvata dai selezionati: verrà applicata a tutti i giorni.');
 }
 
 function applyRecurringForDay(){
