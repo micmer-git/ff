@@ -83,7 +83,9 @@
         .recipe-card .rc-emoji { font-size: 24px; }
         .recipe-card .rc-name { font-size: 12px; font-weight: 600; margin: 4px 0; line-height: 1.2; }
         .recipe-card .rc-ings { font-size: 10px; color: var(--text-muted); line-height: 1.3; }
+        .recipe-card .rc-add { margin-top: 8px; display: inline-block; font-size: 10px; font-weight: 600; padding: 4px 8px; border-radius: 999px; background: rgba(66,133,244,0.15); color: var(--primary); }
         .recipe-card:active .rc-ings { color: rgba(255,255,255,0.8); }
+        .recipe-card:active .rc-add { background: rgba(255,255,255,0.2); color: #fff; }
 
         .dozen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
         .dozen-item { background: var(--surface-2); border-radius: var(--radius-sm); padding: 12px 8px; text-align: center; cursor: pointer; transition: all 0.2s; }
@@ -155,6 +157,7 @@
         .avg-item { background: var(--surface-2); padding: 10px; border-radius: var(--radius-sm); text-align: center; }
         .avg-item .avgval { font-size: 16px; font-weight: 700; }
         .avg-item .avglbl { font-size: 10px; color: var(--text-muted); }
+        .week-bars-title { font-size: 12px; font-weight: 600; color: var(--text-muted); margin: 12px 0 8px; text-transform: uppercase; letter-spacing: .5px; }
 
         .food-category-title { font-size: 11px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 12px 0 8px; grid-column: 1/-1; }
 
@@ -296,6 +299,10 @@
             <div class="card">
                 <div class="card-header"><span class="card-title">📊 7-Day Averages</span></div>
                 <div class="avg-grid" id="weekAvgs"></div>
+                <div class="week-bars-title">Macro average bars</div>
+                <div id="weekMacroBars"></div>
+                <div class="week-bars-title">Micro average bars</div>
+                <div id="weekMicroBars"></div>
             </div>
             <div class="card">
                 <div class="card-header"><span class="card-title">Macros — 7 Days</span></div>
@@ -325,8 +332,12 @@
         <div id="contribList"></div>
     </div>
 
-    <div class="bottom-actions">
+    <div class="bottom-actions" style="flex-wrap:wrap">
         <button class="action-btn secondary" onclick="undoLast()">↩️ Undo</button>
+        <button class="action-btn secondary" onclick="duplicateToNext(1)">📄+1g</button>
+        <button class="action-btn secondary" onclick="duplicateToNext(3)">📄+3g</button>
+        <button class="action-btn secondary" onclick="duplicateToNext(7)">📄+7g</button>
+        <button class="action-btn secondary" onclick="makeRecurringAllDays()">♾️ Ricorri</button>
         <button class="action-btn secondary" onclick="exportDay()">📥 Export</button>
         <button class="action-btn secondary" onclick="clearDay()">🗑️ Clear</button>
     </div>
@@ -404,6 +415,11 @@ const NDB = {
     tomato_sauce: {protein_g:1.3,carbs_g:5.4,fat_g:0.2,fiber_g:1.5,kcal:24,vitA_mcg:20,vitC_mg:7,vitD_mcg:0,vitE_mg:0.9,vitK_mcg:3,vitB12_mcg:0,vitB6_mg:0.1,vitB1_mg:0.04,vitB2_mg:0.03,vitB3_mg:0.9,folate_mcg:9,iron_mg:0.5,calcium_mg:13,magnesium_mg:12,zinc_mg:0.17,potassium_mg:227,selenium_mcg:0.3,phosphorus_mg:22,sodium_mg:13,manganese_mg:0.1,omega6_g:0.08,ala_g:0.01,epa_g:0,dha_g:0},
     jam: {protein_g:0.37,carbs_g:68.9,fat_g:0.07,fiber_g:0.9,kcal:250,vitA_mcg:1,vitC_mg:8.8,vitD_mcg:0,vitE_mg:0.1,vitK_mcg:0,vitB12_mcg:0,vitB6_mg:0.02,vitB1_mg:0.01,vitB2_mg:0.02,vitB3_mg:0.1,folate_mcg:5,iron_mg:0.3,calcium_mg:20,magnesium_mg:4,zinc_mg:0.06,potassium_mg:77,selenium_mcg:1.1,phosphorus_mg:14,sodium_mg:32,manganese_mg:0.04,omega6_g:0,ala_g:0,epa_g:0,dha_g:0},
     chickpeas_cooked: {protein_g:8.86,carbs_g:27.4,fat_g:2.59,fiber_g:7.6,kcal:164,vitA_mcg:1,vitC_mg:1.3,vitD_mcg:0,vitE_mg:0.35,vitK_mcg:4,vitB12_mcg:0,vitB6_mg:0.139,vitB1_mg:0.116,vitB2_mg:0.063,vitB3_mg:0.526,folate_mcg:172,iron_mg:2.89,calcium_mg:49,magnesium_mg:48,zinc_mg:1.53,potassium_mg:291,selenium_mcg:3.7,phosphorus_mg:168,sodium_mg:7,manganese_mg:1.03,omega6_g:1.11,ala_g:0.04,epa_g:0,dha_g:0},
+    avocado: {protein_g:2,carbs_g:8.5,fat_g:14.7,fiber_g:6.7,kcal:160,vitA_mcg:7,vitC_mg:10,vitD_mcg:0,vitE_mg:2.1,vitK_mcg:21,vitB12_mcg:0,vitB6_mg:0.257,vitB1_mg:0.067,vitB2_mg:0.13,vitB3_mg:1.74,folate_mcg:81,iron_mg:0.55,calcium_mg:12,magnesium_mg:29,zinc_mg:0.64,potassium_mg:485,selenium_mcg:0.4,phosphorus_mg:52,sodium_mg:7,manganese_mg:0.142,omega6_g:1.67,ala_g:0.11,epa_g:0,dha_g:0},
+    protein_bar_130: {protein_g:20,carbs_g:9,fat_g:3,fiber_g:5,kcal:130,vitA_mcg:0,vitC_mg:0,vitD_mcg:0,vitE_mg:0,vitK_mcg:0,vitB12_mcg:0.2,vitB6_mg:0.2,vitB1_mg:0.1,vitB2_mg:0.1,vitB3_mg:1,folate_mcg:20,iron_mg:1,calcium_mg:100,magnesium_mg:25,zinc_mg:1,potassium_mg:150,selenium_mcg:4,phosphorus_mg:120,sodium_mg:160,manganese_mg:0.1,omega6_g:0.5,ala_g:0.02,epa_g:0,dha_g:0},
+    textured_soy: {protein_g:52,carbs_g:33,fat_g:1.2,fiber_g:13,kcal:336,vitA_mcg:0,vitC_mg:0,vitD_mcg:0,vitE_mg:0.3,vitK_mcg:0,vitB12_mcg:0,vitB6_mg:0.4,vitB1_mg:0.6,vitB2_mg:0.2,vitB3_mg:2.5,folate_mcg:200,iron_mg:9,calcium_mg:240,magnesium_mg:220,zinc_mg:4,potassium_mg:1700,selenium_mcg:12,phosphorus_mg:650,sodium_mg:25,manganese_mg:2.5,omega6_g:0.6,ala_g:0.1,epa_g:0,dha_g:0},
+    prosciutto_cotto: {protein_g:19.5,carbs_g:1,fat_g:8,kcal:150,fiber_g:0,vitA_mcg:0,vitC_mg:0,vitD_mcg:0,vitE_mg:0.2,vitK_mcg:0,vitB12_mcg:0.7,vitB6_mg:0.3,vitB1_mg:0.4,vitB2_mg:0.15,vitB3_mg:4,folate_mcg:4,iron_mg:0.8,calcium_mg:10,magnesium_mg:18,zinc_mg:2,potassium_mg:260,selenium_mcg:18,phosphorus_mg:180,sodium_mg:1050,manganese_mg:0.02,omega6_g:0.7,ala_g:0.03,epa_g:0,dha_g:0},
+    grana_padano: {protein_g:35,carbs_g:0,fat_g:28,kcal:398,fiber_g:0,vitA_mcg:225,vitC_mg:0,vitD_mcg:0.5,vitE_mg:0.2,vitK_mcg:2,vitB12_mcg:1.2,vitB6_mg:0.1,vitB1_mg:0.03,vitB2_mg:0.3,vitB3_mg:0.2,folate_mcg:6,iron_mg:0.8,calcium_mg:1165,magnesium_mg:43,zinc_mg:2.6,potassium_mg:100,selenium_mcg:14,phosphorus_mg:690,sodium_mg:1500,manganese_mg:0.02,omega6_g:0.3,ala_g:0.1,epa_g:0,dha_g:0},
     egg_whole: {protein_g:12.6,carbs_g:0.72,fat_g:9.51,fiber_g:0,kcal:143,vitA_mcg:160,vitC_mg:0,vitD_mcg:2.0,vitE_mg:1.05,vitK_mcg:0.3,vitB12_mcg:0.89,vitB6_mg:0.17,vitB1_mg:0.04,vitB2_mg:0.457,vitB3_mg:0.075,folate_mcg:47,iron_mg:1.75,calcium_mg:56,magnesium_mg:12,zinc_mg:1.29,potassium_mg:138,selenium_mcg:30.7,phosphorus_mg:198,sodium_mg:142,manganese_mg:0.028,omega6_g:1.15,ala_g:0.048,epa_g:0.004,dha_g:0.037},
 };
 
@@ -417,6 +433,7 @@ const ORAC = {
     spinach_raw:1687, peppers_sweet:821, onion_raw:913, farro_cooked:200,
     chickpeas_cooked:847, egg_whole:0, mozzarella:0, sausage_pork:0,
     mousse_protein:200, ground_beef_cooked:0, tomato_sauce:694, jam:200,
+    avocado:1922, textured_soy:500,
 };
 
 // ===== FOOD ITEMS =====
@@ -429,10 +446,14 @@ const FOODS = [
     {id:'eggs', emoji:'🥚', label:'Uova x1', cat:'proteine', parts:[{db:'egg_whole',g:60}], plants:[], dozen:{}},
     {id:'whey', emoji:'💪', label:'Whey 30g', cat:'proteine', parts:[{db:'whey',g:30}], plants:[], dozen:{}},
     {id:'mousse_protein', emoji:'🍫', label:'Mousse prot. 100g', cat:'proteine', parts:[{db:'mousse_protein',g:100}], plants:[], dozen:{}},
+    {id:'protein_bar', emoji:'🍫', label:'Barretta 130kcal/20P', cat:'proteine', parts:[{db:'protein_bar_130',g:100}], plants:[], dozen:{}},
+    {id:'textured_soy_50', emoji:'🫘', label:'Soia texturizzata 50g', cat:'proteine', parts:[{db:'textured_soy',g:50}], plants:['soia'], dozen:{beans:1}},
+    {id:'prosciutto_cotto_80', emoji:'🥓', label:'Prosciutto cotto 80g', cat:'proteine', parts:[{db:'prosciutto_cotto',g:80}], plants:[], dozen:{}},
     // 🧀 Latticini
     {id:'milk', emoji:'🥛', label:'Latte 200ml', cat:'latticini', parts:[{db:'milk',g:206}], plants:[], dozen:{}},
     {id:'yogurt', emoji:'🥛', label:'Yogurt greco 200g', cat:'latticini', parts:[{db:'greek_yogurt',g:200}], plants:[], dozen:{}},
     {id:'mozzarella', emoji:'🧀', label:'Mozzarella 125g', cat:'latticini', parts:[{db:'mozzarella',g:125}], plants:[], dozen:{}},
+    {id:'grana_padano_20', emoji:'🧀', label:'Grana Padano 20g', cat:'latticini', parts:[{db:'grana_padano',g:20}], plants:[], dozen:{}},
     // 🌾 Cereali & Carboidrati
     {id:'porridge', emoji:'🥣', label:'Oats/Porridge 50g', cat:'cereali', parts:[{db:'oats',g:50}], plants:['avena'], dozen:{whole_grains:1}},
     {id:'farro', emoji:'🌾', label:'Farro cotto 120g', cat:'cereali', parts:[{db:'farro_cooked',g:120}], plants:['farro'], dozen:{whole_grains:1}},
@@ -468,6 +489,7 @@ const FOODS = [
     {id:'jam', emoji:'🍯', label:'Marmellata 25g', cat:'grassi', parts:[{db:'jam',g:25}], plants:[], dozen:{}},
     {id:'honey', emoji:'🍯', label:'Miele 15g', cat:'grassi', parts:[{db:'honey',g:15}], plants:[], dozen:{}},
     {id:'flax', emoji:'🌰', label:'Semi lino 10g', cat:'grassi', parts:[{db:'flaxseed',g:10}], plants:['lino'], dozen:{flaxseeds:1}},
+    {id:'avocado_100', emoji:'🥑', label:'Avocado 100g', cat:'grassi', parts:[{db:'avocado',g:100}], plants:['avocado'], dozen:{other_fruits:1}},
     // 🍫 Snack
     {id:'cookies', emoji:'🍪', label:'Biscotti x2', cat:'snack', parts:[{db:'cookies',g:30}], plants:[], dozen:{}},
     {id:'choc', emoji:'🍫', label:'Cioccolato 20g', cat:'snack', parts:[{db:'dark_choc',g:20}], plants:['cacao'], dozen:{}},
@@ -534,6 +556,18 @@ const RECIPES = [
         {foodId:null, db:'lettuce', g:200, label:'Verdure 200g'},
         {foodId:null, db:'olive_oil', g:10, label:'Olio 10g'},
     ], plants:['insalata','verdure miste'], dozen:{greens:1,other_veg:0.5}},
+    {id:'r_avocado_toast', emoji:'🥑', name:'Avocado toast', ingredients:[
+        {foodId:null, db:'bread_whole', g:80, label:'Pane int. 80g'},
+        {foodId:null, db:'avocado', g:100, label:'Avocado 100g'},
+        {foodId:null, db:'egg_whole', g:60, label:'Uovo x1'},
+        {foodId:null, db:'olive_oil', g:5, label:'Olio 5g'},
+    ], plants:['grano integrale','avocado'], dozen:{whole_grains:1,other_fruits:1}},
+    {id:'r_dahl', emoji:'🍲', name:'Dahl lenticchie + patate dolci', ingredients:[
+        {foodId:null, db:'lentils_cooked', g:250, label:'Lenticchie 250g'},
+        {foodId:null, db:'sweet_potato', g:250, label:'Patate dolci 250g'},
+        {foodId:null, db:'onion_raw', g:80, label:'Cipolla 80g'},
+        {foodId:null, db:'olive_oil', g:10, label:'Olio 10g'},
+    ], plants:['lenticchie','patata dolce','cipolla'], dozen:{beans:2.5,other_veg:1.5}},
 ];
 
 // ===== MACRO/MICRO TARGETS =====
@@ -609,15 +643,18 @@ async function loadIntervals(){
 const ALL_KEYS = ['protein_g','carbs_g','fat_g','fiber_g','kcal','vitA_mcg','vitC_mg','vitD_mcg','vitE_mg','vitK_mcg','vitB12_mcg','vitB6_mg','vitB1_mg','vitB2_mg','vitB3_mg','folate_mcg','iron_mg','calcium_mg','magnesium_mg','zinc_mg','potassium_mg','selenium_mcg','phosphorus_mg','sodium_mg','manganese_mg','omega6_g','ala_g','epa_g','dha_g'];
 
 // Get effective grams for a part, considering overrides
-function getPartGrams(logIndex, partIndex, food, entry) {
+function getPartGrams(logIndex, partIndex, food, entry, overridesMap) {
     const key = `${logIndex}_${partIndex}`;
-    if (state.partOverrides && state.partOverrides[key] !== undefined) {
-        return state.partOverrides[key];
+    const map = overridesMap || state.partOverrides;
+    if (map && map[key] !== undefined) {
+        return map[key];
     }
     return food.parts[partIndex].g * (entry.qty || 1);
 }
 
 function calcTotals(log, customFoods, overrides){
+    const ov = overrides || state.partOverrides;
+
     const totals = {};
     ALL_KEYS.forEach(k => totals[k] = 0);
     (log||state.log).forEach((entry, li) => {
@@ -626,7 +663,7 @@ function calcTotals(log, customFoods, overrides){
         food.parts.forEach((p, pi) => {
             const ndb = NDB[p.db];
             if(!ndb) return;
-            const g = getPartGrams(li, pi, food, entry);
+            const g = getPartGrams(li, pi, food, entry, ov);
             const factor = g / 100;
             ALL_KEYS.forEach(k => { if(ndb[k]) totals[k] += ndb[k] * factor; });
         });
@@ -726,18 +763,27 @@ function renderSummary(t){
         <div class="stat-box"><div class="val">${Math.round(t.fat_g)}g</div><div class="lbl">Grassi</div></div>`;
 }
 
+function getPctColor(pct){
+    if (pct >= 150) return '#a855f7'; // violet
+    if (pct >= 100) return '#34a853'; // green
+    if (pct >= 80) return '#fbbc04';  // yellow
+    return '#ea4335'; // red
+}
+
 function barHTML(name, current, target, color, unit, nutrientKey){
-    const pct = Math.min(100, (current/target)*100);
+    const rawPct = target > 0 ? (current/target)*100 : 0;
+    const pct = Math.min(100, rawPct);
+    const useColor = getPctColor(rawPct) || color;
     const displayVal = current >= 100 ? Math.round(current) : Math.round(current*10)/10;
     const displayTarget = target >= 100 ? Math.round(target) : target;
-    return `<div class="nutrient-row" onclick="showContributors('${nutrientKey}','${name}','${color}','${unit||'g'}')">
+    return `<div class="nutrient-row" onclick="showContributors('${nutrientKey}','${name}','${useColor}','${unit||'g'}')">
         <div class="nutrient-info">
             <div class="nutrient-name">${name}</div>
-            <div class="nutrient-bar"><div class="nutrient-fill" style="width:${pct}%;background:${color}"></div></div>
+            <div class="nutrient-bar"><div class="nutrient-fill" style="width:${pct}%;background:${useColor}"></div></div>
         </div>
         <div class="nutrient-values">
             <div class="nutrient-amount">${displayVal}${unit||'g'} / ${displayTarget}${unit||'g'}</div>
-            <div class="nutrient-percent">${Math.round(pct)}%</div>
+            <div class="nutrient-percent">${Math.round(rawPct)}%</div>
         </div>
     </div>`;
 }
@@ -867,7 +913,7 @@ function renderFoodGrid(){
     let recipesHtml = '<div class="recipe-section"><div class="recipe-section-title">📋 Ricette</div><div class="recipe-scroll">';
     RECIPES.forEach(r => {
         const ings = r.ingredients.map(i => i.label).join(', ');
-        recipesHtml += `<button class="recipe-card" onclick="addRecipe('${r.id}')"><span class="rc-emoji">${r.emoji}</span><div class="rc-name">${r.name}</div><div class="rc-ings">${ings}</div></button>`;
+        recipesHtml += `<button class="recipe-card" onclick="addRecipe('${r.id}')"><span class="rc-emoji">${r.emoji}</span><div class="rc-name">${r.name}</div><span class="rc-add">+ Aggiungi ricetta</span><div class="rc-ings">${ings}</div></button>`;
     });
     recipesHtml += '</div></div>';
 
@@ -1027,7 +1073,44 @@ function undoLast(){
 function addDozenServing(id){ if(!state.dozen_extra[id])state.dozen_extra[id]=0; state.dozen_extra[id]++; saveState(); renderAll(); }
 
 function clearDay(){
-    if(confirm('Cancellare tutti i dati di oggi?')){ state={log:[],dozen_extra:{},custom_foods:{},partOverrides:{}}; saveState(); renderAll(); }
+    if(confirm('Cancellare tutti i dati di oggi?')){ state={log:[],dozen_extra:{},custom_foods:[],partOverrides:{}}; saveState(); renderAll(); }
+}
+
+function duplicateToNext(days){
+    if(!days || days < 1) return;
+    for(let i=1; i<=days; i++){
+        const d = offsetDay(DAY, i);
+        const cloned = JSON.parse(JSON.stringify({
+            log: state.log || [],
+            dozen_extra: state.dozen_extra || {},
+            custom_foods: state.custom_foods || [],
+            partOverrides: state.partOverrides || {}
+        }));
+        localStorage.setItem('nutri_' + d, JSON.stringify(cloned));
+    }
+    alert(`Duplicato su ${days} giorno/i successivi`);
+}
+
+function makeRecurringAllDays(){
+    const recurring = (state.log || []).map(e => ({id:e.id, qty:e.qty||1}));
+    localStorage.setItem('nutri_recurring_all_days', JSON.stringify(recurring));
+    alert('Ricorrenza salvata: verrà applicata a tutti i giorni.');
+}
+
+function applyRecurringForDay(){
+    try {
+        const raw = localStorage.getItem('nutri_recurring_all_days');
+        if(!raw || state._recurringApplied) return;
+        const recurring = JSON.parse(raw);
+        if(!Array.isArray(recurring) || recurring.length===0) return;
+        recurring.forEach(r => {
+            const existing = (state.log||[]).find(e => e.id===r.id);
+            if(existing) existing.qty = Math.max(existing.qty||1, r.qty||1);
+            else state.log.push({id:r.id, qty:r.qty||1, time:new Date().toISOString()});
+        });
+        state._recurringApplied = true;
+        saveState();
+    } catch(e){}
 }
 
 function exportDay(){
@@ -1147,6 +1230,7 @@ function renderWeekView(){
         <div class="avg-item"><div class="avgval">${Math.round(avgs.fat_g)}g</div><div class="avglbl">Avg Fat</div></div>
         <div class="avg-item"><div class="avgval">${Math.round(avgs.fiber_g)}g</div><div class="avglbl">Avg Fiber</div></div>
         <div class="avg-item"><div class="avgval">${Math.round(avgs.iron_mg*10)/10}</div><div class="avglbl">Avg Iron mg</div></div>`;
+    renderWeekAverageBars(avgs);
 
     renderLineChart('chartMacros', days, [
         {key:'protein_g',label:'Proteine',color:'#4285f4'},
@@ -1199,6 +1283,20 @@ function renderLineChart(containerId, days, series){
     series.forEach(s=>{legend+=`<div class="chart-legend-item"><div class="chart-legend-dot" style="background:${s.color}"></div>${s.label}</div>`;});
     legend+='</div>';
     document.getElementById(containerId).innerHTML=svg+legend;
+}
+
+function renderWeekAverageBars(avgs){
+    let macroHtml = '';
+    Object.entries(MACRO_TARGETS).forEach(([k,target]) => {
+        macroHtml += barHTML(`${MACRO_LABELS[k]} (avg)`, avgs[k]||0, target, MACRO_COLORS[k], 'g', k);
+    });
+    document.getElementById('weekMacroBars').innerHTML = macroHtml;
+
+    let microHtml = '';
+    Object.entries(MICRO_TARGETS).forEach(([k,info]) => {
+        microHtml += barHTML(`${info.label} (avg)`, avgs[k]||0, info.target, info.color, info.unit, k);
+    });
+    document.getElementById('weekMicroBars').innerHTML = microHtml;
 }
 
 function renderBarChart(containerId, labels, values, color, unit){
@@ -1260,6 +1358,7 @@ function switchTab(id){
     document.getElementById('prevDay').href=offsetDay(DAY,-1)+'.html';
     document.getElementById('nextDay').href=offsetDay(DAY,1)+'.html';
     loadState();
+    applyRecurringForDay();
     initTabs();
     renderFoodGrid();
     renderAll();
