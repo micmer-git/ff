@@ -179,12 +179,12 @@
                 <div>
                     <h1 id="dayTitle">🥗 Nutrition Diary</h1>
                     <div class="header-date" id="dayDate"></div>
+                    <div class="header-date" id="syncChip" style="opacity:.9;font-size:11px">Sync: local</div>
                 </div>
                 <div class="header-nav">
                     <a href="#" id="prevDay">‹</a>
                     <a href="index.html">📅</a>
                     <a href="#" onclick="refreshIntervalsData({manual:true, refreshApi:true});return false;" title="Aggiorna da Intervals API e ricarica">⟳</a>
-                    <a href="#" onclick="refreshIntervalsData({manual:true, refreshApi:true});return false;" title="Aggiorna da Intervals API">🔄</a>
                     <a href="#" onclick="configureSyncBackend();return false;" title="Sync backend">☁️</a>
                     <a href="#" onclick="configureIntervalsApi();return false;" title="Intervals API config">⚙️</a>
                     <a href="#" id="nextDay">›</a>
@@ -597,12 +597,20 @@ const USDA_SEARCH = Object.entries(NDB).map(([k,v])=>({name:k.replace(/_/g,' '),
 let state = {log: [], dozen_extra: {}, custom_foods: [], partOverrides: {}, selectMode:false, selectedLogs:[]};
 let intervalsData = null;
 let sharedDb = { saved_foods: [] };
+let syncTimer = null;
 
 const API_BASE_KEY = 'nutri_api_base';
 const API_TOKEN_KEY = 'nutri_api_token';
 const SHARED_DB_KEY = 'nutri_shared_db_v1';
 function getApiConfig(){
     return { base:(localStorage.getItem(API_BASE_KEY)||'').replace(/\/$/,'') , token:localStorage.getItem(API_TOKEN_KEY)||'' };
+}
+function setSyncChip(text, tone='muted'){
+    const el = document.getElementById('syncChip');
+    if(!el) return;
+    const colors = {ok:'#34a853', warn:'#f59e0b', err:'#ea4335', muted:'rgba(255,255,255,0.9)'};
+    el.textContent = text;
+    el.style.color = colors[tone] || colors.muted;
 }
 async function apiFetchDay(day){
     const cfg=getApiConfig();
@@ -613,12 +621,15 @@ async function apiFetchDay(day){
 }
 async function apiSaveDay(day,payload){
     const cfg=getApiConfig();
-    if(!cfg.base) return;
-    await fetch(`${cfg.base}/nutrition/day/${day}`, {
+    if(!cfg.base) return {ok:false, reason:'no_base'};
+    const resp = await fetch(`${cfg.base}/nutrition/day/${day}`, {
         method:'PUT',
         headers:{'Content-Type':'application/json', ...(cfg.token?{'Authorization':`Bearer ${cfg.token}`}:{})},
         body: JSON.stringify(payload)
     });
+    let body = null;
+    try { body = await resp.json(); } catch(e){}
+    return {ok: resp.ok, status: resp.status, body};
 }
 async function apiFetchSharedDb(){
     const cfg=getApiConfig();
@@ -744,6 +755,7 @@ function normalizeState(){
     if(!state.partOverrides) state.partOverrides = {};
     if(state.selectMode === undefined) state.selectMode = false;
     if(!Array.isArray(state.selectedLogs)) state.selectedLogs = [];
+    if(!state._updatedAt) state._updatedAt = new Date().toISOString();
 }
 async function loadState(fromApi=false){
     try { const s = localStorage.getItem(STORAGE_KEY); if(s) state = JSON.parse(s); } catch(e){}
@@ -752,16 +764,50 @@ async function loadState(fromApi=false){
         try {
             const remote = await apiFetchDay(DAY);
             if(remote && remote.state){
+                const localTs = new Date(state._updatedAt || 0).getTime();
+                const remoteTs = new Date(remote.state._updatedAt || 0).getTime();
+                if(remoteTs >= localTs){
+                    state = remote.state;
+                    normalizeState();
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+                    setSyncChip('Sync: cloud', 'ok');
+                } else {
+                    setSyncChip('Sync: local newer', 'warn');
+                }
+            }
+        } catch(e){
+            setSyncChip('Sync: offline', 'warn');
+        }
+    }
+}
+function flushStateSync(){
+    apiSaveDay(DAY, {state}).then(async (r)=>{
+        if(r.ok){
+            setSyncChip('Sync: cloud ✓', 'ok');
+            return;
+        }
+        if(r.status === 409){
+            const remote = await apiFetchDay(DAY);
+            const remoteTs = remote?.state? new Date(remote.state._updatedAt || 0).getTime() : 0;
+            const localTs = new Date(state._updatedAt || 0).getTime();
+            if(remoteTs > localTs){
                 state = remote.state;
                 normalizeState();
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+                renderAll();
+                setSyncChip('Sync: pulled newer cloud', 'warn');
             }
-        } catch(e){}
-    }
+            return;
+        }
+        setSyncChip('Sync: failed', 'err');
+    }).catch(()=> setSyncChip('Sync: failed', 'err'));
 }
 function saveState(){
+    state._updatedAt = new Date().toISOString();
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){}
-    apiSaveDay(DAY, {state}).catch(()=>{});
+    setSyncChip('Sync: local…', 'muted');
+    if(syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(flushStateSync, 600);
 }
 
 // ===== INTERVALS DATA =====
@@ -1163,11 +1209,11 @@ function addRecipe(recipeId){
 function renderWellness(){
     const el=document.getElementById('wellnessSection');
     if(!intervalsData||!intervalsData[DAY]){
-        el.innerHTML = `<div class="wellness-card"><div class="card-title" style="margin-bottom:8px">🛏️ Sleep & Activity</div><div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">Nessun dato per questo giorno (o giorni precedenti) in intervals.json.</div><button class="action-btn secondary" style="width:100%" onclick="refreshIntervalsData({manual:true, refreshApi:true})">⟳ Refresh dati</button></div>`;
+        el.innerHTML = `<div class="wellness-card"><div class="card-title" style="margin-bottom:8px">🛏️ Sleep & Activity</div><div style="font-size:12px;color:var(--text-muted)">Nessun dato per questo giorno (usa ⟳ in alto per refresh).</div></div>`;
         return;
     }
     const data=intervalsData[DAY];
-    let html = `<div style="display:flex;justify-content:flex-end;margin-bottom:8px"><button class="action-btn secondary" style="padding:6px 12px;font-size:11px" onclick="refreshIntervalsData({manual:true, refreshApi:true})">⟳ Refresh dati</button></div>`;
+    let html = '';
 
     const w=data.wellness||{};
     if(w.hrv||w.restingHR||w.sleepTime||w.sleepQuality){
@@ -1598,6 +1644,8 @@ function switchTab(id){
     document.getElementById('dayDate').textContent=dayNames[dt.getDay()];
     document.getElementById('prevDay').href='day.html?date='+offsetDay(DAY,-1);
     document.getElementById('nextDay').href='day.html?date='+offsetDay(DAY,1);
+    const hasCloud = !!getApiConfig().base;
+    setSyncChip(hasCloud ? 'Sync: cloud init…' : 'Sync: local only', hasCloud ? 'muted' : 'warn');
     (async () => {
         await loadState(true);
         await loadSharedDb(true);
