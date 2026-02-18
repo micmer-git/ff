@@ -12,6 +12,7 @@ const INTERVALS_PATH = process.env.NUTRI_INTERVALS_PATH || path.join(DIARY_ROOT,
 const INTERVALS_SYNC_SCRIPT = process.env.NUTRI_INTERVALS_SYNC_SCRIPT || path.join(DIARY_ROOT, 'sync_intervals.py');
 const PORT = Number(process.env.PORT || 8787);
 const API_TOKEN = process.env.NUTRI_API_TOKEN || '';
+const MAX_BODY_BYTES = Number(process.env.NUTRI_MAX_BODY_BYTES || 2_000_000);
 
 function readDb() {
   let db;
@@ -70,16 +71,22 @@ const server = http.createServer(async (req, res) => {
   if (req.method === 'OPTIONS') return send(res, 204, {});
   if (!authorized(req)) return send(res, 401, { error: 'unauthorized' });
 
+  if (req.url === '/health' && req.method === 'GET') {
+    return send(res, 200, { ok: true, service: 'nutrition-api' });
+  }
+
   if (req.url === '/nutrition/intervals' && req.method === 'GET') {
     return send(res, 200, { intervals: readIntervals() });
   }
 
   if (req.url === '/nutrition/intervals/refresh' && req.method === 'POST') {
-    let body = '';
-    req.on('data', (c) => (body += c));
-    req.on('end', async () => {
+    (async () => {
       let payload = {};
-      try { payload = body ? JSON.parse(body) : {}; } catch { return send(res, 400, { error: 'invalid_json' }); }
+      try { payload = await readJsonBody(req); }
+      catch (e) {
+        if (String(e.message) === 'payload_too_large') return send(res, 413, { error: 'payload_too_large' });
+        return send(res, 400, { error: 'invalid_json' });
+      }
       const daysBack = Number(payload.days_back ?? 30);
       const daysAhead = Number(payload.days_ahead ?? 3);
       try {
@@ -95,7 +102,7 @@ const server = http.createServer(async (req, res) => {
       } catch (e) {
         return send(res, 500, { error: 'intervals_sync_failed', detail: String(e.message || e) });
       }
-    });
+    })();
     return;
   }
 
@@ -105,11 +112,13 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (req.url === '/nutrition/shared-db' && req.method === 'PUT') {
-    let body = '';
-    req.on('data', (c) => (body += c));
-    req.on('end', () => {
+    (async () => {
       let payload;
-      try { payload = JSON.parse(body || '{}'); } catch { return send(res, 400, { error: 'invalid_json' }); }
+      try { payload = await readJsonBody(req); }
+      catch (e) {
+        if (String(e.message) === 'payload_too_large') return send(res, 413, { error: 'payload_too_large' });
+        return send(res, 400, { error: 'invalid_json' });
+      }
       if (!payload || typeof payload !== 'object' || !payload.shared || typeof payload.shared !== 'object') {
         return send(res, 400, { error: 'missing_shared' });
       }
@@ -123,7 +132,7 @@ const server = http.createServer(async (req, res) => {
       };
       writeDb(db);
       return send(res, 200, { ok: true, shared: db.shared });
-    });
+    })();
     return;
   }
 
@@ -137,17 +146,26 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (req.method === 'PUT') {
-    let body = '';
-    req.on('data', (c) => (body += c));
-    req.on('end', () => {
+    (async () => {
       let payload;
-      try { payload = JSON.parse(body || '{}'); } catch { return send(res, 400, { error: 'invalid_json' }); }
+      try { payload = await readJsonBody(req); }
+      catch (e) {
+        if (String(e.message) === 'payload_too_large') return send(res, 413, { error: 'payload_too_large' });
+        return send(res, 400, { error: 'invalid_json' });
+      }
       if (!payload || typeof payload !== 'object' || !payload.state) return send(res, 400, { error: 'missing_state' });
       const db = readDb();
-      db.days[day] = payload.state;
+      const incoming = payload.state;
+      const incomingTs = new Date(incoming?._updatedAt || 0).getTime();
+      const current = db.days[day];
+      const currentTs = new Date(current?._updatedAt || 0).getTime();
+      if (current && incomingTs && currentTs && incomingTs < currentTs) {
+        return send(res, 409, { error: 'stale_state', day, current });
+      }
+      db.days[day] = incoming;
       writeDb(db);
-      return send(res, 200, { ok: true, day });
-    });
+      return send(res, 200, { ok: true, day, updatedAt: incoming?._updatedAt || null });
+    })();
     return;
   }
 
