@@ -15,10 +15,6 @@
             --shadow-lg: 0 4px 6px rgba(0,0,0,0.05), 0 10px 20px rgba(0,0,0,0.08);
             --radius: 16px; --radius-sm: 12px;
         }
-        [data-theme="dark"] {
-            --bg: #0f172a; --surface: #1e293b; --surface-2: #334155;
-            --text: #f1f5f9; --text-muted: #94a3b8; --text-light: #64748b;
-        }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Google Sans','Roboto',sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; font-size: 14px; -webkit-font-smoothing: antialiased; padding-bottom: 100px; }
         .container { max-width: 420px; margin: 0 auto; padding: 16px; }
@@ -61,7 +57,7 @@
         .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px; }
         .food-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 4px; background: var(--surface-2); border: none; border-radius: var(--radius-sm); cursor: pointer; transition: all 0.15s; font-family: inherit; color: var(--text); }
         .food-btn:active { transform: scale(0.95); background: var(--primary); color: white; }
-        .food-btn .emoji { font-size: 28px; }
+        .food-btn .emoji { font-size: 24px; }
         .food-btn .label { font-size: 10px; text-align: center; line-height: 1.2; }
 
         .food-category { margin-bottom: 12px; border-radius: var(--radius-sm); }
@@ -73,18 +69,14 @@
         .recipe-section { margin-bottom: 16px; }
         .recipe-section-title { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
         .recipe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
-        .recipe-card { background: var(--surface-2); border-radius: var(--radius-sm); padding: 10px 8px; cursor: pointer; transition: all 0.15s; border: none; font-family: inherit; color: var(--text); text-align: center; min-height: 122px; display:flex; flex-direction:column; justify-content:flex-start; }
+        .recipe-card { background: var(--surface-2); border-radius: var(--radius-sm); padding: 10px 8px; cursor: pointer; transition: all 0.15s; border: none; font-family: inherit; color: var(--text); text-align: center; min-height: 96px; display:flex; flex-direction:column; justify-content:center; }
         .recipe-card:active { transform: scale(0.97); background: var(--primary); color: white; }
-        .recipe-card .rc-emoji { font-size: 22px; }
+        .recipe-card .rc-emoji { font-size: 20px; }
         .recipe-card .rc-name { font-size: 12px; font-weight: 600; margin: 4px 0 6px; line-height: 1.2; }
-        .recipe-card .rc-ings { font-size: 10px; color: var(--text-muted); line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        .recipe-card .rc-add { margin: 4px auto 6px; display: inline-block; font-size: 10px; font-weight: 600; padding: 4px 8px; border-radius: 999px; background: rgba(66,133,244,0.15); color: var(--primary); }
-        .recipe-card:active .rc-ings { color: rgba(255,255,255,0.85); }
-        .recipe-card:active .rc-add { background: rgba(255,255,255,0.2); color: #fff; }
 
         .dozen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
         .dozen-item { background: var(--surface-2); border-radius: var(--radius-sm); padding: 12px 8px; text-align: center; cursor: pointer; transition: all 0.2s; }
-        .dozen-item .emoji { font-size: 24px; }
+        .dozen-item .emoji { font-size: 22px; }
         .dozen-item .name { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
         .dozen-item .servings { font-size: 12px; font-weight: 700; margin-top: 4px; }
         .dozen-item.complete { background: rgba(52,168,83,0.15); }
@@ -115,7 +107,6 @@
         .action-btn.primary { background: var(--primary); color: white; }
         .action-btn.secondary { background: var(--surface-2); color: var(--text); }
 
-        .theme-toggle { position: fixed; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2); border: none; font-size: 16px; cursor: pointer; z-index: 100; }
         .stats-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; margin-bottom: 12px; }
         .stat-box { background: var(--surface-2); padding: 12px; border-radius: var(--radius-sm); text-align: center; }
         .stat-box .val { font-size: 20px; font-weight: 700; }
@@ -193,6 +184,7 @@
                     <a href="#" id="prevDay">‹</a>
                     <a href="index.html">📅</a>
                     <a href="#" onclick="refreshIntervalsData(true);return false;" title="Refresh sleep/activity">⟳</a>
+                    <a href="#" onclick="configureSyncBackend();return false;" title="Sync backend">☁️</a>
                     <a href="#" id="nextDay">›</a>
                 </div>
             </div>
@@ -255,16 +247,13 @@
             </div>
         </div>
 
-        <div class="tab-content" id="tab-dozen">
+        <div class="tab-content" id="tab-checklists">
             <div class="card">
-                <div class="card-header"><span class="card-title">Dr. Greger Daily Dozen</span><span class="badge badge-green" id="dozenScore">0/12</span></div>
+                <div class="card-header"><span class="card-title">Checklists — Daily Dozen</span><span class="badge badge-green" id="dozenScore">0/12</span></div>
                 <div class="dozen-grid" id="dozenGrid"></div>
             </div>
-        </div>
-
-        <div class="tab-content" id="tab-plants">
             <div class="card">
-                <div class="card-header"><span class="card-title">Plant Count</span></div>
+                <div class="card-header"><span class="card-title">Checklists — Plants</span></div>
                 <div class="plant-counter">
                     <div>
                         <div class="plant-count-big" id="plantCount">0</div>
@@ -330,7 +319,6 @@
         <button class="action-btn secondary" onclick="exportDay()">📥 Export</button>
         <button class="action-btn secondary" onclick="clearDay()">🗑️ Clear</button>
     </div>
-    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
 
 <script>
 // ===== DATE =====
@@ -610,8 +598,39 @@ const USDA_SEARCH = Object.entries(NDB).map(([k,v])=>({name:k.replace(/_/g,' '),
 let state = {log: [], dozen_extra: {}, custom_foods: [], partOverrides: {}, selectMode:false, selectedLogs:[]};
 let intervalsData = null;
 
-function loadState(){
-    try { const s = localStorage.getItem(STORAGE_KEY); if(s) state = JSON.parse(s); } catch(e){}
+const API_BASE_KEY = 'nutri_api_base';
+const API_TOKEN_KEY = 'nutri_api_token';
+function getApiConfig(){
+    return { base:(localStorage.getItem(API_BASE_KEY)||'').replace(/\/$/,'') , token:localStorage.getItem(API_TOKEN_KEY)||'' };
+}
+async function apiFetchDay(day){
+    const cfg=getApiConfig();
+    if(!cfg.base) return null;
+    const resp = await fetch(`${cfg.base}/nutrition/day/${day}`, {headers: cfg.token?{'Authorization':`Bearer ${cfg.token}`}:{}, cache:'no-store'});
+    if(!resp.ok) return null;
+    return await resp.json();
+}
+async function apiSaveDay(day,payload){
+    const cfg=getApiConfig();
+    if(!cfg.base) return;
+    await fetch(`${cfg.base}/nutrition/day/${day}`, {
+        method:'PUT',
+        headers:{'Content-Type':'application/json', ...(cfg.token?{'Authorization':`Bearer ${cfg.token}`}:{})},
+        body: JSON.stringify(payload)
+    });
+}
+function configureSyncBackend(){
+    const cur=getApiConfig();
+    const base = prompt('Backend API base URL (empty = off)', cur.base || '');
+    if(base===null) return;
+    const token = prompt('API token (optional)', cur.token || '');
+    if(base) localStorage.setItem(API_BASE_KEY, base.trim()); else localStorage.removeItem(API_BASE_KEY);
+    if(token) localStorage.setItem(API_TOKEN_KEY, token.trim()); else localStorage.removeItem(API_TOKEN_KEY);
+    alert(base ? 'Backend sync configurato.' : 'Backend sync disattivato.');
+    loadState(true);
+}
+
+function normalizeState(){
     if(!state.log) state.log = [];
     if(!state.dozen_extra) state.dozen_extra = {};
     if(!state.custom_foods) state.custom_foods = [];
@@ -619,24 +638,44 @@ function loadState(){
     if(state.selectMode === undefined) state.selectMode = false;
     if(!Array.isArray(state.selectedLogs)) state.selectedLogs = [];
 }
+async function loadState(fromApi=false){
+    try { const s = localStorage.getItem(STORAGE_KEY); if(s) state = JSON.parse(s); } catch(e){}
+    normalizeState();
+    if(fromApi){
+        try {
+            const remote = await apiFetchDay(DAY);
+            if(remote && remote.state){
+                state = remote.state;
+                normalizeState();
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+            }
+        } catch(e){}
+    }
+}
 function saveState(){
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){}
+    apiSaveDay(DAY, {state}).catch(()=>{});
 }
 
 // ===== INTERVALS DATA =====
 async function loadIntervals(forceRefresh=false){
+    let ok = false;
     try {
         const bust = forceRefresh ? ('?t=' + Date.now()) : '';
         const resp = await fetch('data/intervals.json' + bust, {cache: forceRefresh ? 'no-store' : 'default'});
-        if(resp.ok) intervalsData = await resp.json();
+        if(resp.ok) {
+            intervalsData = await resp.json();
+            ok = true;
+        }
     } catch(e){}
     renderWellness();
     if(!document.getElementById('viewWeek').classList.contains('hidden')) renderWeekView();
+    return ok;
 }
 
-function refreshIntervalsData(manual=false){
-    loadIntervals(true);
-    if(manual) alert('Dati attività/sonno aggiornati (se disponibili in intervals.json).');
+async function refreshIntervalsData(manual=false){
+    const ok = await loadIntervals(true);
+    if(manual) alert(ok ? 'Dati attività/sonno aggiornati.' : 'Refresh fallito: controlla data/intervals.json');
 }
 
 // ===== ALL NUTRIENT KEYS =====
@@ -916,7 +955,7 @@ function renderFoodGrid(){
     let recipesHtml = '<div class="recipe-section"><div class="recipe-section-title">📋 Ricette</div><div class="recipe-grid">';
     RECIPES.forEach(r => {
         const ings = r.ingredients.map(i => i.label).join(', ');
-        recipesHtml += `<button class="recipe-card" onclick="addRecipe('${r.id}')"><span class="rc-emoji">${r.emoji}</span><div class="rc-name">${r.name}</div><span class="rc-add">+ Aggiungi ricetta</span><div class="rc-ings">${ings}</div></button>`;
+        recipesHtml += `<button class="recipe-card" onclick="addRecipe('${r.id}')"><span class="rc-emoji">${r.emoji}</span><div class="rc-name">${r.name}</div></button>`;
     });
     recipesHtml += '</div></div>';
 
@@ -1229,7 +1268,7 @@ function renderWeekView(){
         acts.forEach(a => {
             totalMoving += a.moving_time || 0;
             totalKcal += a.calories || 0;
-            totalAscent += a.total_elevation_gain || 0;
+            totalAscent += (a.total_elevation_gain ?? a.elevation_gain ?? 0);
             totalKm += (a.distance || 0) / 1000;
         });
     });
@@ -1241,7 +1280,7 @@ function renderWeekView(){
         <div class="es-item"><div class="es-val">${Math.round(totalKcal).toLocaleString()}</div><div class="es-lbl">Total kcal</div></div>
         <div class="es-item"><div class="es-val">${Math.round(totalKm)}</div><div class="es-lbl">Total km</div></div>
         <div class="es-item"><div class="es-val">${movH}:${pad(movM)}</div><div class="es-lbl">Moving Time</div></div>
-        <div class="es-item"><div class="es-val">${Math.round(totalAscent)}</div><div class="es-lbl">Ascent (m)</div></div>
+        <div class="es-item"><div class="es-val">${Math.round(totalAscent)}</div><div class="es-lbl">Elevation (m)</div></div>
         <div class="es-item"><div class="es-val">${days.filter(d=>(d.intervals?.activities||[]).length>0).length}</div><div class="es-lbl">Active Days</div></div>`;
 
     // Nutrition averages
@@ -1345,20 +1384,11 @@ function renderBarChart(containerId, labels, values, color, unit){
     document.getElementById(containerId).innerHTML=svg+`<div style="text-align:center;font-size:10px;color:var(--text-light);margin-top:4px">${unit}</div>`;
 }
 
-// ===== THEME =====
-function toggleTheme(){
-    const t=document.documentElement.getAttribute('data-theme')==='dark'?'':'dark';
-    document.documentElement.setAttribute('data-theme',t);
-    document.getElementById('themeBtn').textContent=t==='dark'?'☀️':'🌙';
-    localStorage.setItem('theme',t);
-}
-
 // ===== TABS =====
 const TAB_DEFS=[
     {id:'food',label:'🍽️ Cibo'},
     {id:'nutrition',label:'🥗 Nutrition'},
-    {id:'dozen',label:'✅ Dozen'},
-    {id:'plants',label:'🌱 Plants'},
+    {id:'checklists',label:'✅ Checklists'},
 ];
 
 function initTabs(){
@@ -1374,20 +1404,20 @@ function switchTab(id){
 
 // ===== INIT =====
 (function init(){
-    const t=localStorage.getItem('theme');
-    if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');document.getElementById('themeBtn').textContent='☀️';}
     document.getElementById('dayTitle').textContent='🥗 '+DAY;
     const dt=new Date(DAY+'T12:00:00');
     const dayNames=['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'];
     document.getElementById('dayDate').textContent=dayNames[dt.getDay()];
     document.getElementById('prevDay').href='day.html?date='+offsetDay(DAY,-1);
     document.getElementById('nextDay').href='day.html?date='+offsetDay(DAY,1);
-    loadState();
-    applyRecurringForDay();
-    initTabs();
-    renderFoodGrid();
-    renderAll();
-    loadIntervals();
+    (async () => {
+        await loadState(true);
+        applyRecurringForDay();
+        initTabs();
+        renderFoodGrid();
+        renderAll();
+        loadIntervals();
+    })();
 })();
 </script>
 </body>
