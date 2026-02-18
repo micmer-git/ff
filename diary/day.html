@@ -185,6 +185,7 @@
                     <a href="index.html">📅</a>
                     <a href="#" onclick="refreshIntervalsData(true);return false;" title="Refresh sleep/activity">⟳</a>
                     <a href="#" onclick="configureSyncBackend();return false;" title="Sync backend">☁️</a>
+                    <a href="#" onclick="configureIntervalsApi();return false;" title="Intervals API config">⚙️</a>
                     <a href="#" id="nextDay">›</a>
                 </div>
             </div>
@@ -600,6 +601,8 @@ let intervalsData = null;
 
 const API_BASE_KEY = 'nutri_api_base';
 const API_TOKEN_KEY = 'nutri_api_token';
+const INTERVALS_ATHLETE_KEY = 'intervals_athlete_id';
+const INTERVALS_API_KEY = 'intervals_api_key';
 function getApiConfig(){
     return { base:(localStorage.getItem(API_BASE_KEY)||'').replace(/\/$/,'') , token:localStorage.getItem(API_TOKEN_KEY)||'' };
 }
@@ -628,6 +631,72 @@ function configureSyncBackend(){
     if(token) localStorage.setItem(API_TOKEN_KEY, token.trim()); else localStorage.removeItem(API_TOKEN_KEY);
     alert(base ? 'Backend sync configurato.' : 'Backend sync disattivato.');
     loadState(true);
+}
+
+function configureIntervalsApi(){
+    const curAth = localStorage.getItem(INTERVALS_ATHLETE_KEY) || 'i302515';
+    const curKey = localStorage.getItem(INTERVALS_API_KEY) || '';
+    const athlete = prompt('Intervals athlete id (es. i302515)', curAth);
+    if(athlete===null) return;
+    const key = prompt('Intervals API key (saved local on this device)', curKey);
+    if(key===null) return;
+    if(athlete.trim()) localStorage.setItem(INTERVALS_ATHLETE_KEY, athlete.trim());
+    if(key.trim()) localStorage.setItem(INTERVALS_API_KEY, key.trim());
+    alert('Config Intervals salvata su questo device.');
+}
+
+async function fetchIntervalsLive(oldest, newest){
+    const athlete = localStorage.getItem(INTERVALS_ATHLETE_KEY);
+    const apiKey = localStorage.getItem(INTERVALS_API_KEY);
+    if(!athlete || !apiKey) return {ok:false, reason:'missing_config'};
+    const base = `https://intervals.icu/api/v1/athlete/${athlete}`;
+    const auth = 'Basic ' + btoa(`API_KEY:${apiKey}`);
+    const headers = { 'Authorization': auth };
+    const [wellnessResp, actsResp] = await Promise.all([
+        fetch(`${base}/wellness?oldest=${oldest}&newest=${newest}`, {headers, cache:'no-store'}),
+        fetch(`${base}/activities?oldest=${oldest}&newest=${newest}`, {headers, cache:'no-store'})
+    ]);
+    if(!wellnessResp.ok || !actsResp.ok) return {ok:false, reason:'http_error'};
+    const wellnessRaw = await wellnessResp.json();
+    const actsRaw = await actsResp.json();
+    const out = {};
+    (wellnessRaw||[]).forEach(w => {
+        const d = w.id;
+        if(!d) return;
+        if(!out[d]) out[d] = {wellness:{}, activities:[]};
+        out[d].wellness = {
+            sleepTime: w.sleepTime,
+            sleepQuality: w.sleepQuality,
+            hrv: w.hrv,
+            restingHR: w.restingHR,
+            weight: w.weight,
+            ctl: w.ctl,
+            atl: w.atl,
+            mood: w.mood,
+            motivation: w.motivation,
+            readiness: w.readiness,
+        };
+    });
+    (actsRaw||[]).forEach(a => {
+        const d = (a.start_date_local || '').slice(0,10);
+        if(!d) return;
+        if(!out[d]) out[d] = {wellness:{}, activities:[]};
+        out[d].activities.push({
+            type: a.type || '',
+            name: a.name || '',
+            moving_time: a.moving_time,
+            elapsed_time: a.elapsed_time,
+            distance: a.distance,
+            icu_training_load: a.icu_training_load,
+            icu_intensity: a.icu_intensity,
+            average_heartrate: a.average_heartrate,
+            calories: a.calories,
+            pace: a.pace,
+            total_elevation_gain: a.total_elevation_gain,
+            elevation_gain: a.elevation_gain,
+        });
+    });
+    return {ok:true, data:out};
 }
 
 function normalizeState(){
@@ -668,14 +737,40 @@ async function loadIntervals(forceRefresh=false){
             ok = true;
         }
     } catch(e){}
+    try {
+        const cached = localStorage.getItem('intervals_cache');
+        if(cached){
+            const c = JSON.parse(cached);
+            intervalsData = {...(intervalsData||{}), ...c};
+            ok = true;
+        }
+    } catch(e){}
     renderWellness();
     if(!document.getElementById('viewWeek').classList.contains('hidden')) renderWeekView();
     return ok;
 }
 
 async function refreshIntervalsData(manual=false){
-    const ok = await loadIntervals(true);
-    if(manual) alert(ok ? 'Dati attività/sonno aggiornati.' : 'Refresh fallito: controlla data/intervals.json');
+    const okFile = await loadIntervals(true);
+    const oldest = offsetDay(DAY, -30);
+    const newest = offsetDay(DAY, 7);
+    let okLive = false;
+    try {
+        const live = await fetchIntervalsLive(oldest, newest);
+        if(live.ok){
+            intervalsData = intervalsData || {};
+            Object.entries(live.data).forEach(([d,v]) => intervalsData[d] = v);
+            localStorage.setItem('intervals_cache', JSON.stringify(intervalsData));
+            okLive = true;
+            renderWellness();
+            if(!document.getElementById('viewWeek').classList.contains('hidden')) renderWeekView();
+        }
+    } catch(e){}
+    if(manual){
+        if(okLive) alert('Aggiornato live da Intervals.icu');
+        else if(okFile) alert('Aggiornato da intervals.json (live non disponibile)');
+        else alert('Refresh fallito: configura ⚙️ Intervals API');
+    }
 }
 
 // ===== ALL NUTRIENT KEYS =====
@@ -1001,11 +1096,11 @@ function addRecipe(recipeId){
 function renderWellness(){
     const el=document.getElementById('wellnessSection');
     if(!intervalsData||!intervalsData[DAY]){
-        el.innerHTML = `<div class="wellness-card"><div class="card-title" style="margin-bottom:8px">🛏️ Sleep & Activity</div><div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">Nessun dato per questo giorno (o giorni precedenti) in intervals.json.</div><button class="action-btn secondary" style="width:100%" onclick="refreshIntervalsData(true)">⟳ Refresh dati</button></div>`;
+        el.innerHTML = `<div class="wellness-card"><div class="card-title" style="margin-bottom:8px">🛏️ Sleep & Activity</div><div style="font-size:12px;color:var(--text-muted)">Nessun dato disponibile per questo giorno.</div></div>`;
         return;
     }
     const data=intervalsData[DAY];
-    let html = `<div style="display:flex;justify-content:flex-end;margin-bottom:8px"><button class="action-btn secondary" style="padding:6px 12px;font-size:11px" onclick="refreshIntervalsData(true)">⟳ Refresh dati</button></div>`;
+    let html = '';
 
     const w=data.wellness||{};
     if(w.hrv||w.restingHR||w.sleepTime||w.sleepQuality){
