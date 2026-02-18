@@ -14,10 +14,6 @@
             --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 6px rgba(0,0,0,0.04);
             --radius: 16px;
         }
-        [data-theme="dark"] {
-            --bg: #0f172a; --surface: #1e293b; --surface-2: #334155;
-            --text: #f1f5f9; --text-muted: #94a3b8; --text-light: #64748b;
-        }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Google Sans','Roboto',sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; font-size: 14px; -webkit-font-smoothing: antialiased; }
         .container { max-width: 420px; margin: 0 auto; padding: 16px; }
@@ -44,7 +40,6 @@
         .quick-link .icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
         .quick-link .label { font-weight: 500; font-size: 14px; }
         .quick-link .sub { font-size: 12px; color: var(--text-muted); }
-        .theme-toggle { position: fixed; bottom: 20px; right: 20px; width: 44px; height: 44px; border-radius: 50%; background: var(--surface); box-shadow: var(--shadow); border: none; font-size: 20px; cursor: pointer; z-index: 100; }
     </style>
 </head>
 <body>
@@ -68,7 +63,6 @@
             <div class="quick-links" id="quickLinks"></div>
         </div>
     </div>
-    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
 
     <script>
     let currentYear, currentMonth;
@@ -126,16 +120,7 @@
             </a>`;
     }
 
-    function toggleTheme(){
-        const t = document.documentElement.getAttribute('data-theme')==='dark' ? '' : 'dark';
-        document.documentElement.setAttribute('data-theme', t);
-        document.getElementById('themeBtn').textContent = t==='dark' ? '☀️' : '🌙';
-        localStorage.setItem('theme', t);
-    }
-
     (function init(){
-        const t = localStorage.getItem('theme');
-        if(t==='dark'){ document.documentElement.setAttribute('data-theme','dark'); document.getElementById('themeBtn').textContent='☀️'; }
         currentYear = today.getFullYear();
         currentMonth = today.getMonth();
         renderCalendar();

@@ -57,7 +57,7 @@
         .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px; }
         .food-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 4px; background: var(--surface-2); border: none; border-radius: var(--radius-sm); cursor: pointer; transition: all 0.15s; font-family: inherit; color: var(--text); }
         .food-btn:active { transform: scale(0.95); background: var(--primary); color: white; }
-        .food-btn .emoji { font-size: 24px; }
+        .food-btn .emoji { font-size: 21px; }
         .food-btn .label { font-size: 10px; text-align: center; line-height: 1.2; }
 
         .food-category { margin-bottom: 12px; border-radius: var(--radius-sm); }
@@ -71,12 +71,12 @@
         .recipe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
         .recipe-card { background: var(--surface-2); border-radius: var(--radius-sm); padding: 10px 8px; cursor: pointer; transition: all 0.15s; border: none; font-family: inherit; color: var(--text); text-align: center; min-height: 96px; display:flex; flex-direction:column; justify-content:center; }
         .recipe-card:active { transform: scale(0.97); background: var(--primary); color: white; }
-        .recipe-card .rc-emoji { font-size: 20px; }
+        .recipe-card .rc-emoji { font-size: 18px; }
         .recipe-card .rc-name { font-size: 12px; font-weight: 600; margin: 4px 0 6px; line-height: 1.2; }
 
         .dozen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
         .dozen-item { background: var(--surface-2); border-radius: var(--radius-sm); padding: 12px 8px; text-align: center; cursor: pointer; transition: all 0.2s; }
-        .dozen-item .emoji { font-size: 22px; }
+        .dozen-item .emoji { font-size: 19px; }
         .dozen-item .name { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
         .dozen-item .servings { font-size: 12px; font-weight: 700; margin-top: 4px; }
         .dozen-item.complete { background: rgba(52,168,83,0.15); }
@@ -183,7 +183,8 @@
                 <div class="header-nav">
                     <a href="#" id="prevDay">‹</a>
                     <a href="index.html">📅</a>
-                    <a href="#" onclick="refreshIntervalsData(true);return false;" title="Refresh sleep/activity">⟳</a>
+                    <a href="#" onclick="refreshIntervalsData({manual:true, refreshApi:false});return false;" title="Ricarica dati locali sleep/activity">⟳</a>
+                    <a href="#" onclick="refreshIntervalsData({manual:true, refreshApi:true});return false;" title="Aggiorna da Intervals API">🔄</a>
                     <a href="#" onclick="configureSyncBackend();return false;" title="Sync backend">☁️</a>
                     <a href="#" id="nextDay">›</a>
                 </div>
@@ -249,12 +250,9 @@
 
         <div class="tab-content" id="tab-checklists">
             <div class="card">
-                <div class="card-header"><span class="card-title">Checklists — Daily Dozen</span><span class="badge badge-green" id="dozenScore">0/12</span></div>
+                <div class="card-header"><span class="card-title">Checklists</span><span class="badge badge-green" id="dozenScore">0/12</span></div>
                 <div class="dozen-grid" id="dozenGrid"></div>
-            </div>
-            <div class="card">
-                <div class="card-header"><span class="card-title">Checklists — Plants</span></div>
-                <div class="plant-counter">
+                <div class="plant-counter" style="margin-top:14px;">
                     <div>
                         <div class="plant-count-big" id="plantCount">0</div>
                         <div class="plant-count-label">piante oggi</div>
@@ -673,9 +671,38 @@ async function loadIntervals(forceRefresh=false){
     return ok;
 }
 
-async function refreshIntervalsData(manual=false){
-    const ok = await loadIntervals(true);
-    if(manual) alert(ok ? 'Dati attività/sonno aggiornati.' : 'Refresh fallito: controlla data/intervals.json');
+async function refreshIntervalsData(opts={}){
+    const manual = !!opts.manual;
+    let ok = true;
+    let refreshedFromApi = false;
+
+    if(opts.refreshApi){
+        const cfg = getApiConfig();
+        if(!cfg.base){
+            ok = false;
+            if(manual) alert('Configura prima il backend sync (☁️) per aggiornare da Intervals API.');
+        } else {
+            try {
+                const resp = await fetch(`${cfg.base}/nutrition/intervals/refresh`, {
+                    method:'POST',
+                    headers:{'Content-Type':'application/json', ...(cfg.token?{'Authorization':`Bearer ${cfg.token}`}:{})},
+                    body: JSON.stringify({ days_back: 30, days_ahead: 2 })
+                });
+                ok = resp.ok;
+                refreshedFromApi = resp.ok;
+            } catch(e){
+                ok = false;
+            }
+        }
+    }
+
+    const loaded = await loadIntervals(true);
+    ok = ok && loaded;
+    if(manual){
+        if(ok && refreshedFromApi) alert('Dati Intervals aggiornati da API e ricaricati.');
+        else if(ok) alert('Dati attività/sonno ricaricati.');
+        else alert('Refresh fallito: controlla backend/API o data/intervals.json');
+    }
 }
 
 // ===== ALL NUTRIENT KEYS =====
@@ -951,14 +978,6 @@ function renderLog(){
 }
 
 function renderFoodGrid(){
-    // Render recipes section
-    let recipesHtml = '<div class="recipe-section"><div class="recipe-section-title">📋 Ricette</div><div class="recipe-grid">';
-    RECIPES.forEach(r => {
-        const ings = r.ingredients.map(i => i.label).join(', ');
-        recipesHtml += `<button class="recipe-card" onclick="addRecipe('${r.id}')"><span class="rc-emoji">${r.emoji}</span><div class="rc-name">${r.name}</div></button>`;
-    });
-    recipesHtml += '</div></div>';
-
     // Render food categories as always-visible sections
     let catsHtml = '';
     FOOD_CATEGORIES.forEach((cat) => {
@@ -974,7 +993,7 @@ function renderFoodGrid(){
         </div>`;
     });
 
-    document.getElementById('foodGrid').innerHTML = recipesHtml + catsHtml;
+    document.getElementById('foodGrid').innerHTML = catsHtml;
 }
 
 function addRecipe(recipeId){
@@ -1001,11 +1020,11 @@ function addRecipe(recipeId){
 function renderWellness(){
     const el=document.getElementById('wellnessSection');
     if(!intervalsData||!intervalsData[DAY]){
-        el.innerHTML = `<div class="wellness-card"><div class="card-title" style="margin-bottom:8px">🛏️ Sleep & Activity</div><div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">Nessun dato per questo giorno (o giorni precedenti) in intervals.json.</div><button class="action-btn secondary" style="width:100%" onclick="refreshIntervalsData(true)">⟳ Refresh dati</button></div>`;
+        el.innerHTML = `<div class="wellness-card"><div class="card-title" style="margin-bottom:8px">🛏️ Sleep & Activity</div><div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">Nessun dato per questo giorno (o giorni precedenti) in intervals.json.</div><button class="action-btn secondary" style="width:100%" onclick="refreshIntervalsData({manual:true, refreshApi:false})">⟳ Refresh dati</button></div>`;
         return;
     }
     const data=intervalsData[DAY];
-    let html = `<div style="display:flex;justify-content:flex-end;margin-bottom:8px"><button class="action-btn secondary" style="padding:6px 12px;font-size:11px" onclick="refreshIntervalsData(true)">⟳ Refresh dati</button></div>`;
+    let html = `<div style="display:flex;justify-content:flex-end;margin-bottom:8px"><button class="action-btn secondary" style="padding:6px 12px;font-size:11px" onclick="refreshIntervalsData({manual:true, refreshApi:false})">⟳ Refresh dati</button></div>`;
 
     const w=data.wellness||{};
     if(w.hrv||w.restingHR||w.sleepTime||w.sleepQuality){
@@ -1268,7 +1287,7 @@ function renderWeekView(){
         acts.forEach(a => {
             totalMoving += a.moving_time || 0;
             totalKcal += a.calories || 0;
-            totalAscent += (a.total_elevation_gain ?? a.elevation_gain ?? 0);
+            totalAscent += (a.total_elevation_gain ?? a.elevation_gain ?? a.elevation ?? a.ascent ?? a.total_ascent ?? 0);
             totalKm += (a.distance || 0) / 1000;
         });
     });
