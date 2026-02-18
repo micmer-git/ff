@@ -2,7 +2,7 @@
 """Sync sleep & exercise data from Intervals.icu API to local JSON.
 
 Usage: python3 sync_intervals.py [days_back] [days_ahead]
-Default: 14 days back, 7 ahead.
+Default: 30 days back, 3 ahead.
 
 Requires INTERVALS_API_KEY env var or reads from ../../TOOLS.md
 Outputs: diary/data/intervals.json
@@ -50,8 +50,8 @@ def api_get(endpoint, api_key):
         return None
 
 def main():
-    days_back = int(sys.argv[1]) if len(sys.argv) > 1 else 14
-    days_ahead = int(sys.argv[2]) if len(sys.argv) > 2 else 7
+    days_back = int(sys.argv[1]) if len(sys.argv) > 1 else 30
+    days_ahead = int(sys.argv[2]) if len(sys.argv) > 2 else 3
 
     api_key = get_api_key()
     today = date.today()
@@ -101,6 +101,11 @@ def main():
                 "average_heartrate": a.get("average_heartrate"),
                 "calories": a.get("calories"),
                 "pace": a.get("pace"),
+                "elevation_gain": a.get("elevation_gain"),
+                "total_elevation_gain": a.get("total_elevation_gain"),
+                "elevation": a.get("elevation"),
+                "ascent": a.get("ascent"),
+                "total_ascent": a.get("total_ascent"),
             })
         total_acts = sum(len(v) for v in activities.values())
         print(f"    Got {total_acts} activities across {len(activities)} days")
