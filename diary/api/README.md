@@ -23,6 +23,8 @@ Optional env vars:
 - `PUT /nutrition/day/YYYY-MM-DD` with body:
 - `GET /nutrition/intervals` (returns current `intervals.json`)
 - `POST /nutrition/intervals/refresh` with optional body:
+- `GET /nutrition/shared-db` (shared saved foods across devices)
+- `PUT /nutrition/shared-db` with body:
 
 ```json
 { "days_back": 30, "days_ahead": 3 }
@@ -34,6 +36,10 @@ Requires `INTERVALS_API_KEY` in the server environment (or key resolution in `sy
 { "state": { "log": [], "custom_foods": [] } }
 ```
 
+```json
+{ "shared": { "saved_foods": [] } }
+```
+
 ## Connect from UI
 
 In diary page header click `☁️` and set:
@@ -43,3 +49,4 @@ In diary page header click `☁️` and set:
 Then the app will:
 - pull day state from backend on load
 - push state to backend on save
+- pull/push shared saved foods library for cross-device quick-add

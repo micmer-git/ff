@@ -183,7 +183,7 @@
                 <div class="header-nav">
                     <a href="#" id="prevDay">‹</a>
                     <a href="index.html">📅</a>
-                    <a href="#" onclick="refreshIntervalsData({manual:true, refreshApi:false});return false;" title="Ricarica dati locali sleep/activity">⟳</a>
+                    <a href="#" onclick="refreshIntervalsData({manual:true, refreshApi:true});return false;" title="Aggiorna da Intervals API e ricarica">⟳</a>
                     <a href="#" onclick="refreshIntervalsData({manual:true, refreshApi:true});return false;" title="Aggiorna da Intervals API">🔄</a>
                     <a href="#" onclick="configureSyncBackend();return false;" title="Sync backend">☁️</a>
                     <a href="#" id="nextDay">›</a>
@@ -595,9 +595,11 @@ const USDA_SEARCH = Object.entries(NDB).map(([k,v])=>({name:k.replace(/_/g,' '),
 // ===== STATE =====
 let state = {log: [], dozen_extra: {}, custom_foods: [], partOverrides: {}, selectMode:false, selectedLogs:[]};
 let intervalsData = null;
+let sharedDb = { saved_foods: [] };
 
 const API_BASE_KEY = 'nutri_api_base';
 const API_TOKEN_KEY = 'nutri_api_token';
+const SHARED_DB_KEY = 'nutri_shared_db_v1';
 function getApiConfig(){
     return { base:(localStorage.getItem(API_BASE_KEY)||'').replace(/\/$/,'') , token:localStorage.getItem(API_TOKEN_KEY)||'' };
 }
@@ -617,6 +619,45 @@ async function apiSaveDay(day,payload){
         body: JSON.stringify(payload)
     });
 }
+async function apiFetchSharedDb(){
+    const cfg=getApiConfig();
+    if(!cfg.base) return null;
+    const resp = await fetch(`${cfg.base}/nutrition/shared-db`, {headers: cfg.token?{'Authorization':`Bearer ${cfg.token}`}:{}, cache:'no-store'});
+    if(!resp.ok) return null;
+    return await resp.json();
+}
+async function apiSaveSharedDb(payload){
+    const cfg=getApiConfig();
+    if(!cfg.base) return;
+    await fetch(`${cfg.base}/nutrition/shared-db`, {
+        method:'PUT',
+        headers:{'Content-Type':'application/json', ...(cfg.token?{'Authorization':`Bearer ${cfg.token}`}:{})},
+        body: JSON.stringify(payload)
+    });
+}
+function normalizeSharedDb(){
+    if(!sharedDb || typeof sharedDb!=='object') sharedDb = { saved_foods: [] };
+    if(!Array.isArray(sharedDb.saved_foods)) sharedDb.saved_foods = [];
+}
+async function loadSharedDb(fromApi=false){
+    try { const s = localStorage.getItem(SHARED_DB_KEY); if(s) sharedDb = JSON.parse(s); } catch(e){}
+    normalizeSharedDb();
+    if(fromApi){
+        try {
+            const remote = await apiFetchSharedDb();
+            if(remote && remote.shared){
+                sharedDb = remote.shared;
+                normalizeSharedDb();
+                localStorage.setItem(SHARED_DB_KEY, JSON.stringify(sharedDb));
+            }
+        } catch(e){}
+    }
+}
+function saveSharedDb(){
+    normalizeSharedDb();
+    try { localStorage.setItem(SHARED_DB_KEY, JSON.stringify(sharedDb)); } catch(e){}
+    apiSaveSharedDb({shared:sharedDb}).catch(()=>{});
+}
 function configureSyncBackend(){
     const cur=getApiConfig();
     const base = prompt('Backend API base URL (empty = off)', cur.base || '');
@@ -626,6 +667,7 @@ function configureSyncBackend(){
     if(token) localStorage.setItem(API_TOKEN_KEY, token.trim()); else localStorage.removeItem(API_TOKEN_KEY);
     alert(base ? 'Backend sync configurato.' : 'Backend sync disattivato.');
     loadState(true);
+    loadSharedDb(true).then(()=>renderFoodGrid());
 }
 
 function normalizeState(){
@@ -993,7 +1035,33 @@ function renderFoodGrid(){
         </div>`;
     });
 
+    const saved = (sharedDb.saved_foods||[]);
+    if(saved.length){
+        catsHtml += `<div class="food-category">
+            <div class="food-cat-title">
+                <div class="cat-left"><span class="cat-icon">☁️</span><span>Saved Foods</span></div>
+                <span class="cat-count">${saved.length}</span>
+            </div>
+            <div class="food-grid">${saved.map((f,i)=>
+                `<button class="food-btn" onclick="addSavedFood(${i})"><span class="emoji">🗂️</span><span class="label">${f.name}</span></button>`
+            ).join('')}</div>
+        </div>`;
+    }
+
     document.getElementById('foodGrid').innerHTML = catsHtml;
+}
+
+function addSavedFood(index){
+    const f = (sharedDb.saved_foods||[])[index];
+    if(!f) return;
+    const grams = parseFloat(prompt(`Grammi per ${f.name}`, '100') || '0');
+    if(!grams || grams <= 0) return;
+    const factor = grams / 100;
+    const cf = {name:f.name, grams};
+    ALL_KEYS.forEach(k=>{ cf[k] = Math.round(((f.nutrients?.[k]||0) * factor) * 10)/10; });
+    state.custom_foods.push(cf);
+    saveState();
+    renderAll();
 }
 
 function addRecipe(recipeId){
@@ -1020,11 +1088,11 @@ function addRecipe(recipeId){
 function renderWellness(){
     const el=document.getElementById('wellnessSection');
     if(!intervalsData||!intervalsData[DAY]){
-        el.innerHTML = `<div class="wellness-card"><div class="card-title" style="margin-bottom:8px">🛏️ Sleep & Activity</div><div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">Nessun dato per questo giorno (o giorni precedenti) in intervals.json.</div><button class="action-btn secondary" style="width:100%" onclick="refreshIntervalsData({manual:true, refreshApi:false})">⟳ Refresh dati</button></div>`;
+        el.innerHTML = `<div class="wellness-card"><div class="card-title" style="margin-bottom:8px">🛏️ Sleep & Activity</div><div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">Nessun dato per questo giorno (o giorni precedenti) in intervals.json.</div><button class="action-btn secondary" style="width:100%" onclick="refreshIntervalsData({manual:true, refreshApi:true})">⟳ Refresh dati</button></div>`;
         return;
     }
     const data=intervalsData[DAY];
-    let html = `<div style="display:flex;justify-content:flex-end;margin-bottom:8px"><button class="action-btn secondary" style="padding:6px 12px;font-size:11px" onclick="refreshIntervalsData({manual:true, refreshApi:false})">⟳ Refresh dati</button></div>`;
+    let html = `<div style="display:flex;justify-content:flex-end;margin-bottom:8px"><button class="action-btn secondary" style="padding:6px 12px;font-size:11px" onclick="refreshIntervalsData({manual:true, refreshApi:true})">⟳ Refresh dati</button></div>`;
 
     const w=data.wellness||{};
     if(w.hrv||w.restingHR||w.sleepTime||w.sleepQuality){
@@ -1227,6 +1295,22 @@ function selectUSDA(db){
     document.getElementById('customFoodPanel').dataset.selectedDb=db;
 }
 
+function saveCustomFoodToLibrary(name, nutrients, source){
+    const item = {
+        id: `${name.toLowerCase().replace(/[^a-z0-9]+/g,'-')}-${Date.now()}`,
+        name,
+        source: source || 'manual',
+        nutrients,
+        updated_at: new Date().toISOString()
+    };
+    const idx = sharedDb.saved_foods.findIndex(f => f.name.toLowerCase() === name.toLowerCase() && f.source === item.source);
+    if(idx >= 0) sharedDb.saved_foods[idx] = {...sharedDb.saved_foods[idx], ...item};
+    else sharedDb.saved_foods.unshift(item);
+    sharedDb.saved_foods = sharedDb.saved_foods.slice(0, 60);
+    saveSharedDb();
+    renderFoodGrid();
+}
+
 function addCustomFood(){
     const name=document.getElementById('customFoodName').value.trim();
     if(!name){alert('Inserisci un nome');return;}
@@ -1246,6 +1330,16 @@ function addCustomFood(){
     }
 
     state.custom_foods.push(cf);
+
+    const nutrientsPer100 = {};
+    if(selectedDb && NDB[selectedDb]){
+        ALL_KEYS.forEach(k=>{ nutrientsPer100[k] = Math.round((NDB[selectedDb][k]||0) * 10) / 10; });
+    } else {
+        const factor = g/100;
+        ALL_KEYS.forEach(k=>{ nutrientsPer100[k] = Math.round(((cf[k]||0) / Math.max(factor,0.0001)) * 10) / 10; });
+    }
+    saveCustomFoodToLibrary(name, nutrientsPer100, selectedDb || 'manual');
+
     saveState(); renderAll();
     document.getElementById('customFoodPanel').dataset.selectedDb='';
     ['customFoodName','cfProtein','cfCarbs','cfFat','cfFiber','cfKcal'].forEach(id=>document.getElementById(id).value='');
@@ -1431,6 +1525,7 @@ function switchTab(id){
     document.getElementById('nextDay').href='day.html?date='+offsetDay(DAY,1);
     (async () => {
         await loadState(true);
+        await loadSharedDb(true);
         applyRecurringForDay();
         initTabs();
         renderFoodGrid();
