@@ -14,7 +14,13 @@ const PORT = Number(process.env.PORT || 8787);
 const API_TOKEN = process.env.NUTRI_API_TOKEN || '';
 
 function readDb() {
-  try { return JSON.parse(fs.readFileSync(DB_PATH, 'utf8')); } catch { return { days: {} }; }
+  let db;
+  try { db = JSON.parse(fs.readFileSync(DB_PATH, 'utf8')); } catch { db = {}; }
+  if (!db || typeof db !== 'object') db = {};
+  if (!db.days || typeof db.days !== 'object') db.days = {};
+  if (!db.shared || typeof db.shared !== 'object') db.shared = {};
+  if (!Array.isArray(db.shared.saved_foods)) db.shared.saved_foods = [];
+  return db;
 }
 function writeDb(db) {
   fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
@@ -89,6 +95,34 @@ const server = http.createServer(async (req, res) => {
       } catch (e) {
         return send(res, 500, { error: 'intervals_sync_failed', detail: String(e.message || e) });
       }
+    });
+    return;
+  }
+
+  if (req.url === '/nutrition/shared-db' && req.method === 'GET') {
+    const db = readDb();
+    return send(res, 200, { shared: db.shared });
+  }
+
+  if (req.url === '/nutrition/shared-db' && req.method === 'PUT') {
+    let body = '';
+    req.on('data', (c) => (body += c));
+    req.on('end', () => {
+      let payload;
+      try { payload = JSON.parse(body || '{}'); } catch { return send(res, 400, { error: 'invalid_json' }); }
+      if (!payload || typeof payload !== 'object' || !payload.shared || typeof payload.shared !== 'object') {
+        return send(res, 400, { error: 'missing_shared' });
+      }
+      const db = readDb();
+      const savedFoods = Array.isArray(payload.shared.saved_foods) ? payload.shared.saved_foods : db.shared.saved_foods;
+      db.shared = {
+        ...db.shared,
+        ...payload.shared,
+        saved_foods: savedFoods,
+        updated_at: new Date().toISOString(),
+      };
+      writeDb(db);
+      return send(res, 200, { ok: true, shared: db.shared });
     });
     return;
   }
