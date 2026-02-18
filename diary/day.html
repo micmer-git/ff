@@ -57,7 +57,7 @@
         .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px; }
         .food-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 4px; background: var(--surface-2); border: none; border-radius: var(--radius-sm); cursor: pointer; transition: all 0.15s; font-family: inherit; color: var(--text); }
         .food-btn:active { transform: scale(0.95); background: var(--primary); color: white; }
-        .food-btn .emoji { font-size: 24px; }
+        .food-btn .emoji { font-size: 21px; }
         .food-btn .label { font-size: 10px; text-align: center; line-height: 1.2; }
 
         .food-category { margin-bottom: 12px; border-radius: var(--radius-sm); }
@@ -71,12 +71,12 @@
         .recipe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
         .recipe-card { background: var(--surface-2); border-radius: var(--radius-sm); padding: 10px 8px; cursor: pointer; transition: all 0.15s; border: none; font-family: inherit; color: var(--text); text-align: center; min-height: 96px; display:flex; flex-direction:column; justify-content:center; }
         .recipe-card:active { transform: scale(0.97); background: var(--primary); color: white; }
-        .recipe-card .rc-emoji { font-size: 20px; }
+        .recipe-card .rc-emoji { font-size: 18px; }
         .recipe-card .rc-name { font-size: 12px; font-weight: 600; margin: 4px 0 6px; line-height: 1.2; }
 
         .dozen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
         .dozen-item { background: var(--surface-2); border-radius: var(--radius-sm); padding: 12px 8px; text-align: center; cursor: pointer; transition: all 0.2s; }
-        .dozen-item .emoji { font-size: 22px; }
+        .dozen-item .emoji { font-size: 19px; }
         .dozen-item .name { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
         .dozen-item .servings { font-size: 12px; font-weight: 700; margin-top: 4px; }
         .dozen-item.complete { background: rgba(52,168,83,0.15); }
@@ -183,7 +183,8 @@
                 <div class="header-nav">
                     <a href="#" id="prevDay">‹</a>
                     <a href="index.html">📅</a>
-                    <a href="#" onclick="refreshIntervalsData(true);return false;" title="Refresh sleep/activity">⟳</a>
+                    <a href="#" onclick="refreshIntervalsData({manual:true, refreshApi:true});return false;" title="Aggiorna da Intervals API e ricarica">⟳</a>
+                    <a href="#" onclick="refreshIntervalsData({manual:true, refreshApi:true});return false;" title="Aggiorna da Intervals API">🔄</a>
                     <a href="#" onclick="configureSyncBackend();return false;" title="Sync backend">☁️</a>
                     <a href="#" onclick="configureIntervalsApi();return false;" title="Intervals API config">⚙️</a>
                     <a href="#" id="nextDay">›</a>
@@ -250,12 +251,9 @@
 
         <div class="tab-content" id="tab-checklists">
             <div class="card">
-                <div class="card-header"><span class="card-title">Checklists — Daily Dozen</span><span class="badge badge-green" id="dozenScore">0/12</span></div>
+                <div class="card-header"><span class="card-title">Checklists</span><span class="badge badge-green" id="dozenScore">0/12</span></div>
                 <div class="dozen-grid" id="dozenGrid"></div>
-            </div>
-            <div class="card">
-                <div class="card-header"><span class="card-title">Checklists — Plants</span></div>
-                <div class="plant-counter">
+                <div class="plant-counter" style="margin-top:14px;">
                     <div>
                         <div class="plant-count-big" id="plantCount">0</div>
                         <div class="plant-count-label">piante oggi</div>
@@ -598,11 +596,11 @@ const USDA_SEARCH = Object.entries(NDB).map(([k,v])=>({name:k.replace(/_/g,' '),
 // ===== STATE =====
 let state = {log: [], dozen_extra: {}, custom_foods: [], partOverrides: {}, selectMode:false, selectedLogs:[]};
 let intervalsData = null;
+let sharedDb = { saved_foods: [] };
 
 const API_BASE_KEY = 'nutri_api_base';
 const API_TOKEN_KEY = 'nutri_api_token';
-const INTERVALS_ATHLETE_KEY = 'intervals_athlete_id';
-const INTERVALS_API_KEY = 'intervals_api_key';
+const SHARED_DB_KEY = 'nutri_shared_db_v1';
 function getApiConfig(){
     return { base:(localStorage.getItem(API_BASE_KEY)||'').replace(/\/$/,'') , token:localStorage.getItem(API_TOKEN_KEY)||'' };
 }
@@ -622,6 +620,45 @@ async function apiSaveDay(day,payload){
         body: JSON.stringify(payload)
     });
 }
+async function apiFetchSharedDb(){
+    const cfg=getApiConfig();
+    if(!cfg.base) return null;
+    const resp = await fetch(`${cfg.base}/nutrition/shared-db`, {headers: cfg.token?{'Authorization':`Bearer ${cfg.token}`}:{}, cache:'no-store'});
+    if(!resp.ok) return null;
+    return await resp.json();
+}
+async function apiSaveSharedDb(payload){
+    const cfg=getApiConfig();
+    if(!cfg.base) return;
+    await fetch(`${cfg.base}/nutrition/shared-db`, {
+        method:'PUT',
+        headers:{'Content-Type':'application/json', ...(cfg.token?{'Authorization':`Bearer ${cfg.token}`}:{})},
+        body: JSON.stringify(payload)
+    });
+}
+function normalizeSharedDb(){
+    if(!sharedDb || typeof sharedDb!=='object') sharedDb = { saved_foods: [] };
+    if(!Array.isArray(sharedDb.saved_foods)) sharedDb.saved_foods = [];
+}
+async function loadSharedDb(fromApi=false){
+    try { const s = localStorage.getItem(SHARED_DB_KEY); if(s) sharedDb = JSON.parse(s); } catch(e){}
+    normalizeSharedDb();
+    if(fromApi){
+        try {
+            const remote = await apiFetchSharedDb();
+            if(remote && remote.shared){
+                sharedDb = remote.shared;
+                normalizeSharedDb();
+                localStorage.setItem(SHARED_DB_KEY, JSON.stringify(sharedDb));
+            }
+        } catch(e){}
+    }
+}
+function saveSharedDb(){
+    normalizeSharedDb();
+    try { localStorage.setItem(SHARED_DB_KEY, JSON.stringify(sharedDb)); } catch(e){}
+    apiSaveSharedDb({shared:sharedDb}).catch(()=>{});
+}
 function configureSyncBackend(){
     const cur=getApiConfig();
     const base = prompt('Backend API base URL (empty = off)', cur.base || '');
@@ -631,6 +668,7 @@ function configureSyncBackend(){
     if(token) localStorage.setItem(API_TOKEN_KEY, token.trim()); else localStorage.removeItem(API_TOKEN_KEY);
     alert(base ? 'Backend sync configurato.' : 'Backend sync disattivato.');
     loadState(true);
+    loadSharedDb(true).then(()=>renderFoodGrid());
 }
 
 function configureIntervalsApi(){
@@ -750,26 +788,37 @@ async function loadIntervals(forceRefresh=false){
     return ok;
 }
 
-async function refreshIntervalsData(manual=false){
-    const okFile = await loadIntervals(true);
-    const oldest = offsetDay(DAY, -30);
-    const newest = offsetDay(DAY, 7);
-    let okLive = false;
-    try {
-        const live = await fetchIntervalsLive(oldest, newest);
-        if(live.ok){
-            intervalsData = intervalsData || {};
-            Object.entries(live.data).forEach(([d,v]) => intervalsData[d] = v);
-            localStorage.setItem('intervals_cache', JSON.stringify(intervalsData));
-            okLive = true;
-            renderWellness();
-            if(!document.getElementById('viewWeek').classList.contains('hidden')) renderWeekView();
+async function refreshIntervalsData(opts={}){
+    const manual = !!opts.manual;
+    let ok = true;
+    let refreshedFromApi = false;
+
+    if(opts.refreshApi){
+        const cfg = getApiConfig();
+        if(!cfg.base){
+            ok = false;
+            if(manual) alert('Configura prima il backend sync (☁️) per aggiornare da Intervals API.');
+        } else {
+            try {
+                const resp = await fetch(`${cfg.base}/nutrition/intervals/refresh`, {
+                    method:'POST',
+                    headers:{'Content-Type':'application/json', ...(cfg.token?{'Authorization':`Bearer ${cfg.token}`}:{})},
+                    body: JSON.stringify({ days_back: 30, days_ahead: 2 })
+                });
+                ok = resp.ok;
+                refreshedFromApi = resp.ok;
+            } catch(e){
+                ok = false;
+            }
         }
-    } catch(e){}
+    }
+
+    const loaded = await loadIntervals(true);
+    ok = ok && loaded;
     if(manual){
-        if(okLive) alert('Aggiornato live da Intervals.icu');
-        else if(okFile) alert('Aggiornato da intervals.json (live non disponibile)');
-        else alert('Refresh fallito: configura ⚙️ Intervals API');
+        if(ok && refreshedFromApi) alert('Dati Intervals aggiornati da API e ricaricati.');
+        else if(ok) alert('Dati attività/sonno ricaricati.');
+        else alert('Refresh fallito: controlla backend/API o data/intervals.json');
     }
 }
 
@@ -1046,14 +1095,6 @@ function renderLog(){
 }
 
 function renderFoodGrid(){
-    // Render recipes section
-    let recipesHtml = '<div class="recipe-section"><div class="recipe-section-title">📋 Ricette</div><div class="recipe-grid">';
-    RECIPES.forEach(r => {
-        const ings = r.ingredients.map(i => i.label).join(', ');
-        recipesHtml += `<button class="recipe-card" onclick="addRecipe('${r.id}')"><span class="rc-emoji">${r.emoji}</span><div class="rc-name">${r.name}</div></button>`;
-    });
-    recipesHtml += '</div></div>';
-
     // Render food categories as always-visible sections
     let catsHtml = '';
     FOOD_CATEGORIES.forEach((cat) => {
@@ -1069,7 +1110,33 @@ function renderFoodGrid(){
         </div>`;
     });
 
-    document.getElementById('foodGrid').innerHTML = recipesHtml + catsHtml;
+    const saved = (sharedDb.saved_foods||[]);
+    if(saved.length){
+        catsHtml += `<div class="food-category">
+            <div class="food-cat-title">
+                <div class="cat-left"><span class="cat-icon">☁️</span><span>Saved Foods</span></div>
+                <span class="cat-count">${saved.length}</span>
+            </div>
+            <div class="food-grid">${saved.map((f,i)=>
+                `<button class="food-btn" onclick="addSavedFood(${i})"><span class="emoji">🗂️</span><span class="label">${f.name}</span></button>`
+            ).join('')}</div>
+        </div>`;
+    }
+
+    document.getElementById('foodGrid').innerHTML = catsHtml;
+}
+
+function addSavedFood(index){
+    const f = (sharedDb.saved_foods||[])[index];
+    if(!f) return;
+    const grams = parseFloat(prompt(`Grammi per ${f.name}`, '100') || '0');
+    if(!grams || grams <= 0) return;
+    const factor = grams / 100;
+    const cf = {name:f.name, grams};
+    ALL_KEYS.forEach(k=>{ cf[k] = Math.round(((f.nutrients?.[k]||0) * factor) * 10)/10; });
+    state.custom_foods.push(cf);
+    saveState();
+    renderAll();
 }
 
 function addRecipe(recipeId){
@@ -1096,11 +1163,11 @@ function addRecipe(recipeId){
 function renderWellness(){
     const el=document.getElementById('wellnessSection');
     if(!intervalsData||!intervalsData[DAY]){
-        el.innerHTML = `<div class="wellness-card"><div class="card-title" style="margin-bottom:8px">🛏️ Sleep & Activity</div><div style="font-size:12px;color:var(--text-muted)">Nessun dato disponibile per questo giorno.</div></div>`;
+        el.innerHTML = `<div class="wellness-card"><div class="card-title" style="margin-bottom:8px">🛏️ Sleep & Activity</div><div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">Nessun dato per questo giorno (o giorni precedenti) in intervals.json.</div><button class="action-btn secondary" style="width:100%" onclick="refreshIntervalsData({manual:true, refreshApi:true})">⟳ Refresh dati</button></div>`;
         return;
     }
     const data=intervalsData[DAY];
-    let html = '';
+    let html = `<div style="display:flex;justify-content:flex-end;margin-bottom:8px"><button class="action-btn secondary" style="padding:6px 12px;font-size:11px" onclick="refreshIntervalsData({manual:true, refreshApi:true})">⟳ Refresh dati</button></div>`;
 
     const w=data.wellness||{};
     if(w.hrv||w.restingHR||w.sleepTime||w.sleepQuality){
@@ -1303,6 +1370,22 @@ function selectUSDA(db){
     document.getElementById('customFoodPanel').dataset.selectedDb=db;
 }
 
+function saveCustomFoodToLibrary(name, nutrients, source){
+    const item = {
+        id: `${name.toLowerCase().replace(/[^a-z0-9]+/g,'-')}-${Date.now()}`,
+        name,
+        source: source || 'manual',
+        nutrients,
+        updated_at: new Date().toISOString()
+    };
+    const idx = sharedDb.saved_foods.findIndex(f => f.name.toLowerCase() === name.toLowerCase() && f.source === item.source);
+    if(idx >= 0) sharedDb.saved_foods[idx] = {...sharedDb.saved_foods[idx], ...item};
+    else sharedDb.saved_foods.unshift(item);
+    sharedDb.saved_foods = sharedDb.saved_foods.slice(0, 60);
+    saveSharedDb();
+    renderFoodGrid();
+}
+
 function addCustomFood(){
     const name=document.getElementById('customFoodName').value.trim();
     if(!name){alert('Inserisci un nome');return;}
@@ -1322,6 +1405,16 @@ function addCustomFood(){
     }
 
     state.custom_foods.push(cf);
+
+    const nutrientsPer100 = {};
+    if(selectedDb && NDB[selectedDb]){
+        ALL_KEYS.forEach(k=>{ nutrientsPer100[k] = Math.round((NDB[selectedDb][k]||0) * 10) / 10; });
+    } else {
+        const factor = g/100;
+        ALL_KEYS.forEach(k=>{ nutrientsPer100[k] = Math.round(((cf[k]||0) / Math.max(factor,0.0001)) * 10) / 10; });
+    }
+    saveCustomFoodToLibrary(name, nutrientsPer100, selectedDb || 'manual');
+
     saveState(); renderAll();
     document.getElementById('customFoodPanel').dataset.selectedDb='';
     ['customFoodName','cfProtein','cfCarbs','cfFat','cfFiber','cfKcal'].forEach(id=>document.getElementById(id).value='');
@@ -1363,7 +1456,7 @@ function renderWeekView(){
         acts.forEach(a => {
             totalMoving += a.moving_time || 0;
             totalKcal += a.calories || 0;
-            totalAscent += (a.total_elevation_gain ?? a.elevation_gain ?? 0);
+            totalAscent += (a.total_elevation_gain ?? a.elevation_gain ?? a.elevation ?? a.ascent ?? a.total_ascent ?? 0);
             totalKm += (a.distance || 0) / 1000;
         });
     });
@@ -1507,6 +1600,7 @@ function switchTab(id){
     document.getElementById('nextDay').href='day.html?date='+offsetDay(DAY,1);
     (async () => {
         await loadState(true);
+        await loadSharedDb(true);
         applyRecurringForDay();
         initTabs();
         renderFoodGrid();
