@@ -331,6 +331,8 @@ function getDateFromUrl(){
 }
 const DAY = getDateFromUrl();
 const STORAGE_KEY = 'nutri_' + DAY;
+const INTERVALS_LAST_REFRESH_KEY = 'intervals_last_refresh_at';
+const INTERVALS_AUTO_REFRESH_MS = 45 * 60 * 1000;
 
 function offsetDay(d, n){
     const dt = new Date(d+'T12:00:00');
@@ -788,9 +790,19 @@ async function loadIntervals(forceRefresh=false){
     return ok;
 }
 
+function shouldAutoRefreshIntervals(){
+    const cfg = getApiConfig();
+    if(!cfg.base) return false;
+    const last = Number(localStorage.getItem(INTERVALS_LAST_REFRESH_KEY) || 0);
+    return !last || (Date.now() - last) > INTERVALS_AUTO_REFRESH_MS;
+}
+
 async function refreshIntervalsData(opts={}){
     const manual = !!opts.manual;
     const loaded = await loadIntervals(true);
+    if(loaded){
+        localStorage.setItem(INTERVALS_LAST_REFRESH_KEY, String(Date.now()));
+    }
     if(manual){
         if(loaded) alert('Dati attività/sonno aggiornati.');
         else alert('Refresh fallito: controlla backend/API o data/intervals.json');
@@ -1583,7 +1595,10 @@ function switchTab(id){
         initTabs();
         renderFoodGrid();
         renderAll();
-        loadIntervals();
+        await loadIntervals();
+        if(shouldAutoRefreshIntervals()){
+            refreshIntervalsData({manual:false}).catch(()=>{});
+        }
     })();
 })();
 </script>
