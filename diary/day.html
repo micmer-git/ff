@@ -184,9 +184,8 @@
                 <div class="header-nav">
                     <a href="#" id="prevDay">‹</a>
                     <a href="index.html">📅</a>
-                    <a href="#" onclick="refreshIntervalsData({manual:true, refreshApi:true});return false;" title="Aggiorna da Intervals API e ricarica">⟳</a>
+                    <a href="#" onclick="refreshIntervalsData({manual:true});return false;" title="Aggiorna da Intervals API e ricarica">⟳</a>
                     <a href="#" onclick="configureSyncBackend();return false;" title="Sync backend">☁️</a>
-                    <a href="#" onclick="configureIntervalsApi();return false;" title="Intervals API config">⚙️</a>
                     <a href="#" id="nextDay">›</a>
                 </div>
             </div>
@@ -683,69 +682,16 @@ function configureSyncBackend(){
 }
 
 function configureIntervalsApi(){
-    const curAth = localStorage.getItem(INTERVALS_ATHLETE_KEY) || 'i302515';
-    const curKey = localStorage.getItem(INTERVALS_API_KEY) || '';
-    const athlete = prompt('Intervals athlete id (es. i302515)', curAth);
-    if(athlete===null) return;
-    const key = prompt('Intervals API key (saved local on this device)', curKey);
-    if(key===null) return;
-    if(athlete.trim()) localStorage.setItem(INTERVALS_ATHLETE_KEY, athlete.trim());
-    if(key.trim()) localStorage.setItem(INTERVALS_API_KEY, key.trim());
-    alert('Config Intervals salvata su questo device.');
+    alert('Intervals config ora è lato backend (env NUTRI_INTERVALS_ATHLETE / NUTRI_INTERVALS_API_KEY).');
 }
 
 async function fetchIntervalsLive(oldest, newest){
-    const athlete = localStorage.getItem(INTERVALS_ATHLETE_KEY);
-    const apiKey = localStorage.getItem(INTERVALS_API_KEY);
-    if(!athlete || !apiKey) return {ok:false, reason:'missing_config'};
-    const base = `https://intervals.icu/api/v1/athlete/${athlete}`;
-    const auth = 'Basic ' + btoa(`API_KEY:${apiKey}`);
-    const headers = { 'Authorization': auth };
-    const [wellnessResp, actsResp] = await Promise.all([
-        fetch(`${base}/wellness?oldest=${oldest}&newest=${newest}`, {headers, cache:'no-store'}),
-        fetch(`${base}/activities?oldest=${oldest}&newest=${newest}`, {headers, cache:'no-store'})
-    ]);
-    if(!wellnessResp.ok || !actsResp.ok) return {ok:false, reason:'http_error'};
-    const wellnessRaw = await wellnessResp.json();
-    const actsRaw = await actsResp.json();
-    const out = {};
-    (wellnessRaw||[]).forEach(w => {
-        const d = w.id;
-        if(!d) return;
-        if(!out[d]) out[d] = {wellness:{}, activities:[]};
-        out[d].wellness = {
-            sleepTime: w.sleepTime,
-            sleepQuality: w.sleepQuality,
-            hrv: w.hrv,
-            restingHR: w.restingHR,
-            weight: w.weight,
-            ctl: w.ctl,
-            atl: w.atl,
-            mood: w.mood,
-            motivation: w.motivation,
-            readiness: w.readiness,
-        };
-    });
-    (actsRaw||[]).forEach(a => {
-        const d = (a.start_date_local || '').slice(0,10);
-        if(!d) return;
-        if(!out[d]) out[d] = {wellness:{}, activities:[]};
-        out[d].activities.push({
-            type: a.type || '',
-            name: a.name || '',
-            moving_time: a.moving_time,
-            elapsed_time: a.elapsed_time,
-            distance: a.distance,
-            icu_training_load: a.icu_training_load,
-            icu_intensity: a.icu_intensity,
-            average_heartrate: a.average_heartrate,
-            calories: a.calories,
-            pace: a.pace,
-            total_elevation_gain: a.total_elevation_gain,
-            elevation_gain: a.elevation_gain,
-        });
-    });
-    return {ok:true, data:out};
+    const cfg = getApiConfig();
+    if(!cfg.base) return {ok:false, reason:'no_backend'};
+    const resp = await fetch(`${cfg.base}/nutrition/intervals/live?oldest=${oldest}&newest=${newest}`, {headers: cfg.token?{'Authorization':`Bearer ${cfg.token}`}:{}, cache:'no-store'});
+    if(!resp.ok) return {ok:false, reason:'http_error'};
+    const j = await resp.json();
+    return {ok:true, data:j.intervals||{}};
 }
 
 function normalizeState(){
@@ -813,21 +759,29 @@ function saveState(){
 // ===== INTERVALS DATA =====
 async function loadIntervals(forceRefresh=false){
     let ok = false;
-    try {
-        const bust = forceRefresh ? ('?t=' + Date.now()) : '';
-        const resp = await fetch('data/intervals.json' + bust, {cache: forceRefresh ? 'no-store' : 'default'});
-        if(resp.ok) {
-            intervalsData = await resp.json();
-            ok = true;
-        }
-    } catch(e){}
+    const cfg = getApiConfig();
+    const newest = offsetDay(DAY, 2);
+    const oldest = offsetDay(DAY, -35);
+    if(cfg.base){
+        try {
+            const live = await fetchIntervalsLive(oldest, newest);
+            if(live.ok){
+                intervalsData = live.data;
+                localStorage.setItem('intervals_cache', JSON.stringify(intervalsData));
+                ok = true;
+            }
+        } catch(e){}
+    }
+    if(!ok){
+        try {
+            const bust = forceRefresh ? ('?t=' + Date.now()) : '';
+            const resp = await fetch('data/intervals.json' + bust, {cache: forceRefresh ? 'no-store' : 'default'});
+            if(resp.ok) { intervalsData = await resp.json(); ok = true; }
+        } catch(e){}
+    }
     try {
         const cached = localStorage.getItem('intervals_cache');
-        if(cached){
-            const c = JSON.parse(cached);
-            intervalsData = {...(intervalsData||{}), ...c};
-            ok = true;
-        }
+        if(cached){ intervalsData = {...(intervalsData||{}), ...JSON.parse(cached)}; ok = true; }
     } catch(e){}
     renderWellness();
     if(!document.getElementById('viewWeek').classList.contains('hidden')) renderWeekView();
@@ -836,37 +790,13 @@ async function loadIntervals(forceRefresh=false){
 
 async function refreshIntervalsData(opts={}){
     const manual = !!opts.manual;
-    let ok = true;
-    let refreshedFromApi = false;
-
-    if(opts.refreshApi){
-        const cfg = getApiConfig();
-        if(!cfg.base){
-            ok = false;
-            if(manual) alert('Configura prima il backend sync (☁️) per aggiornare da Intervals API.');
-        } else {
-            try {
-                const resp = await fetch(`${cfg.base}/nutrition/intervals/refresh`, {
-                    method:'POST',
-                    headers:{'Content-Type':'application/json', ...(cfg.token?{'Authorization':`Bearer ${cfg.token}`}:{})},
-                    body: JSON.stringify({ days_back: 30, days_ahead: 2 })
-                });
-                ok = resp.ok;
-                refreshedFromApi = resp.ok;
-            } catch(e){
-                ok = false;
-            }
-        }
-    }
-
     const loaded = await loadIntervals(true);
-    ok = ok && loaded;
     if(manual){
-        if(ok && refreshedFromApi) alert('Dati Intervals aggiornati da API e ricaricati.');
-        else if(ok) alert('Dati attività/sonno ricaricati.');
+        if(loaded) alert('Dati attività/sonno aggiornati.');
         else alert('Refresh fallito: controlla backend/API o data/intervals.json');
     }
 }
+
 
 // ===== ALL NUTRIENT KEYS =====
 const ALL_KEYS = ['protein_g','carbs_g','fat_g','fiber_g','kcal','vitA_mcg','vitC_mg','vitD_mcg','vitE_mg','vitK_mcg','vitB12_mcg','vitB6_mg','vitB1_mg','vitB2_mg','vitB3_mg','folate_mcg','iron_mg','calcium_mg','magnesium_mg','zinc_mg','potassium_mg','selenium_mcg','phosphorus_mg','sodium_mg','manganese_mg','omega6_g','ala_g','epa_g','dha_g'];
