@@ -54,11 +54,21 @@
         .nutrient-amount { font-size: 13px; font-weight: 500; }
         .nutrient-percent { font-size: 11px; color: var(--text-light); }
 
-        .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px; }
-        .food-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 4px; background: var(--surface-2); border: none; border-radius: var(--radius-sm); cursor: pointer; transition: all 0.15s; font-family: inherit; color: var(--text); }
+        .food-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 5px; }
+        .food-btn { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 8px 3px; background: var(--surface-2); border: none; border-left: 3px solid transparent; border-radius: var(--radius-sm); cursor: pointer; transition: all 0.15s; font-family: inherit; color: var(--text); }
         .food-btn:active { transform: scale(0.95); background: var(--primary); color: white; }
-        .food-btn .emoji { font-size: 21px; }
-        .food-btn .label { font-size: 10px; text-align: center; line-height: 1.2; }
+        .food-btn .emoji { font-size: 18px; }
+        .food-btn .label { font-size: 9px; text-align: center; line-height: 1.2; }
+        .food-btn.cat-proteine { border-left-color: #4285f4; }
+        .food-btn.cat-latticini { border-left-color: #a855f7; }
+        .food-btn.cat-cereali { border-left-color: #fbbc04; }
+        .food-btn.cat-legumi { border-left-color: #34a853; }
+        .food-btn.cat-verdure { border-left-color: #22c55e; }
+        .food-btn.cat-frutta { border-left-color: #ea4335; }
+        .food-btn.cat-grassi { border-left-color: #f97316; }
+        .food-btn.cat-snack { border-left-color: #64748b; }
+        .food-btn.cat-piatti { border-left-color: #06b6d4; }
+        .food-btn.cat-ricette { border-left-color: #ec4899; }
 
         .food-category { margin-bottom: 12px; border-radius: var(--radius-sm); }
         .food-cat-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 2px 8px; font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .4px; }
@@ -281,13 +291,9 @@
                 <div class="week-bars-title">Micro average bars</div>
                 <div id="weekMicroBars"></div>
             </div>
-            <div class="card">
-                <div class="card-header"><span class="card-title">Macros — 7 Days</span></div>
-                <div class="chart-container" id="chartMacros"></div>
-            </div>
-            <div class="card">
-                <div class="card-header"><span class="card-title">Key Micros — 7 Days</span></div>
-                <div class="chart-container" id="chartMicros"></div>
+            <div class="card" id="weightCard7d">
+                <div class="card-header"><span class="card-title">⚖️ Peso — 7 Days</span></div>
+                <div id="weightSection7d"></div>
             </div>
             <div class="card">
                 <div class="card-header"><span class="card-title">🛏️ Sleep Duration — 7 Days</span></div>
@@ -673,12 +679,25 @@ function saveSharedDb(){
 }
 function configureSyncBackend(){
     const cur=getApiConfig();
-    const base = prompt('Backend API base URL (empty = off)', cur.base || '');
+    const base = prompt(
+        '☁️ Cloud Sync Setup\n\n' +
+        'Inserisci l\'URL del backend API (es. http://localhost:8787)\n' +
+        'Il backend (diary/api/server.mjs) salva tutti i dati su file JSON\n' +
+        'e si sincronizza tra dispositivi.\n\n' +
+        'Lascia vuoto per usare solo localStorage (solo questo dispositivo).',
+        cur.base || ''
+    );
     if(base===null) return;
-    const token = prompt('API token (optional)', cur.token || '');
+    const token = prompt('API token di sicurezza (lascia vuoto se non impostato)', cur.token || '');
     if(base) localStorage.setItem(API_BASE_KEY, base.trim()); else localStorage.removeItem(API_BASE_KEY);
-    if(token) localStorage.setItem(API_TOKEN_KEY, token.trim()); else localStorage.removeItem(API_TOKEN_KEY);
-    alert(base ? 'Backend sync configurato.' : 'Backend sync disattivato.');
+    if(token !== null) { if(token) localStorage.setItem(API_TOKEN_KEY, token.trim()); else localStorage.removeItem(API_TOKEN_KEY); }
+    if(base) {
+        setSyncChip('Sync: cloud…', 'muted');
+        alert('✅ Backend sync attivato!\nI dati verranno sincronizzati automaticamente tra tutti i dispositivi connessi allo stesso backend.');
+    } else {
+        setSyncChip('☁️ Tap to setup sync', 'warn');
+        alert('Backend sync disattivato. I dati vengono salvati solo su questo dispositivo.');
+    }
     loadState(true);
     loadSharedDb(true).then(()=>renderFoodGrid());
 }
@@ -1073,7 +1092,9 @@ function renderLog(){
         subHtml += '</div>';
         const checked = (state.selectedLogs||[]).includes(i) ? 'checked' : '';
         const selectHtml = state.selectMode ? `<input class="log-select" type="checkbox" ${checked} onchange="toggleSelectedLog(${i})">` : '';
-        return `<div class="log-item"><div class="log-item-header"><div class="log-left">${selectHtml}<span class="log-label">${label}</span></div><button class="log-remove" onclick="removeLog(${i})">✕</button></div>${subHtml}</div>`;
+        const recurring = isRecurring(entry.id);
+        const recurBtn = `<button onclick="toggleRecurring(${i})" title="${recurring?'Rimuovi ricorrenza':'Segna ricorrente'}" style="background:none;border:none;font-size:13px;cursor:pointer;opacity:${recurring?1:0.25};padding:2px 4px" tabindex="-1">🔄</button>`;
+        return `<div class="log-item"><div class="log-item-header"><div class="log-left">${selectHtml}<span class="log-label">${label}</span>${recurBtn}</div><button class="log-remove" onclick="removeLog(${i})">✕</button></div>${subHtml}</div>`;
     }).join('');
 
     html += state.custom_foods.map((cf,i)=>
@@ -1083,18 +1104,25 @@ function renderLog(){
 }
 
 function renderFoodGrid(){
-    // Render food categories as always-visible sections
     let catsHtml = '';
     FOOD_CATEGORIES.forEach((cat) => {
         const foods = FOODS.filter(f => f.cat === cat.id);
+        // Merge recipes into piatti category
+        let recipeBtns = '';
+        if (cat.id === 'piatti') {
+            recipeBtns = RECIPES.map(r =>
+                `<button class="food-btn cat-ricette" onclick="addRecipe('${r.id}')"><span class="emoji">${r.emoji}</span><span class="label">${r.name}</span></button>`
+            ).join('');
+        }
+        const totalCount = foods.length + (cat.id === 'piatti' ? RECIPES.length : 0);
         catsHtml += `<div class="food-category">
             <div class="food-cat-title">
                 <div class="cat-left"><span class="cat-icon">${cat.icon}</span><span>${cat.name}</span></div>
-                <span class="cat-count">${foods.length}</span>
+                <span class="cat-count">${totalCount}</span>
             </div>
             <div class="food-grid">${foods.map(f =>
-                `<button class="food-btn" onclick="addFood('${f.id}')"><span class="emoji">${f.emoji}</span><span class="label">${f.label}</span></button>`
-            ).join('')}</div>
+                `<button class="food-btn cat-${cat.id}" onclick="addFood('${f.id}')"><span class="emoji">${f.emoji}</span><span class="label">${f.label}</span></button>`
+            ).join('')}${recipeBtns}</div>
         </div>`;
     });
 
@@ -1106,7 +1134,7 @@ function renderFoodGrid(){
                 <span class="cat-count">${saved.length}</span>
             </div>
             <div class="food-grid">${saved.map((f,i)=>
-                `<button class="food-btn" onclick="addSavedFood(${i})"><span class="emoji">🗂️</span><span class="label">${f.name}</span></button>`
+                `<button class="food-btn cat-piatti" onclick="addSavedFood(${i})"><span class="emoji">🗂️</span><span class="label">${f.name}</span></button>`
             ).join('')}</div>
         </div>`;
     }
@@ -1171,17 +1199,28 @@ function renderWellness(){
     const acts=data.activities||[];
     acts.forEach(a=>{
         const dur = a.moving_time ? (a.moving_time/60).toFixed(0) : '?';
-        const dist = a.distance ? (a.distance/1000).toFixed(1) : null;
-        const pace = a.pace ? `${Math.floor(a.pace)}:${pad(Math.round((a.pace%1)*60))}` : null;
+        const isSwim = a.type && a.type.toLowerCase().includes('swim');
+        const dist = a.distance ? (isSwim ? (a.distance).toFixed(0) : (a.distance/1000).toFixed(1)) : null;
+        const distUnit = isSwim ? 'm' : 'km';
+        let paceStatHtml = '';
+        if (a.pace) {
+            if (isSwim) {
+                const p100 = a.pace / 10;
+                paceStatHtml = `<div class="activity-stat"><div class="asval">${Math.floor(p100)}:${pad(Math.round((p100%1)*60))}</div><div class="aslbl">/100m</div></div>`;
+            } else {
+                const pace = `${Math.floor(a.pace)}:${pad(Math.round((a.pace%1)*60))}`;
+                paceStatHtml = `<div class="activity-stat"><div class="asval">${pace}</div><div class="aslbl">/km</div></div>`;
+            }
+        }
         html+=`<div class="activity-card">
             <div class="activity-header"><div><div class="activity-name">${a.name||a.type}</div><div class="activity-type">${a.type}</div></div>
             <div style="text-align:right"><div style="font-size:24px;font-weight:600">${a.calories||'?'}</div><div style="font-size:11px;opacity:0.8">kcal</div></div></div>
             <div class="activity-stats">
                 <div class="activity-stat"><div class="asval">${dur}′</div><div class="aslbl">Duration</div></div>
-                ${dist?`<div class="activity-stat"><div class="asval">${dist}km</div><div class="aslbl">Distance</div></div>`:''}
-                ${a.icu_training_load?`<div class="activity-stat"><div class="asval">${Math.round(a.icu_training_load)}</div><div class="aslbl">Load</div></div>`:''}
+                ${dist?`<div class="activity-stat"><div class="asval">${dist}${distUnit}</div><div class="aslbl">Distance</div></div>`:''}
+                ${a.icu_training_load?`<div class="activity-stat"><div class="asval">${Math.round(a.icu_training_load)}</div><div class="aslbl">TSS</div></div>`:''}
                 ${a.average_heartrate?`<div class="activity-stat"><div class="asval">${Math.round(a.average_heartrate)}</div><div class="aslbl">Avg HR</div></div>`:''}
-                ${pace?`<div class="activity-stat"><div class="asval">${pace}</div><div class="aslbl">/km</div></div>`:''}
+                ${paceStatHtml}
             </div></div>`;
     });
 
@@ -1302,12 +1341,33 @@ function duplicateSelectedPrompt(){
     alert(`Duplicati ${selected.length} item su ${days} giorni`);
 }
 
+function getRecurringList(){
+    try { return JSON.parse(localStorage.getItem('nutri_recurring_all_days')||'[]'); } catch(e){ return []; }
+}
+function isRecurring(id){
+    return getRecurringList().some(r => r.id === id);
+}
+function toggleRecurring(logIndex){
+    const entry = state.log[logIndex];
+    if(!entry) return;
+    let list = getRecurringList();
+    const idx = list.findIndex(r => r.id === entry.id);
+    if(idx >= 0) list.splice(idx, 1);
+    else list.push({id: entry.id, qty: entry.qty||1});
+    localStorage.setItem('nutri_recurring_all_days', JSON.stringify(list));
+    renderLog();
+}
+
 function makeRecurringFromSelected(){
     const selected = getSelectedEntries();
     if(!selected.length){ alert('Seleziona almeno un item nel log.'); return; }
-    const recurring = selected.map(e => ({id:e.id, qty:e.qty||1}));
-    localStorage.setItem('nutri_recurring_all_days', JSON.stringify(recurring));
-    alert('Ricorrenza salvata dai selezionati: verrà applicata a tutti i giorni.');
+    const existing = getRecurringList();
+    selected.forEach(e => {
+        if(!existing.find(r => r.id === e.id)) existing.push({id:e.id, qty:e.qty||1});
+    });
+    localStorage.setItem('nutri_recurring_all_days', JSON.stringify(existing));
+    renderLog();
+    alert(`${selected.length} item aggiunto/i alla ricorrenza giornaliera.`);
 }
 
 function applyRecurringForDay(){
@@ -1438,7 +1498,7 @@ function renderWeekView(){
     const days=get7DayData();
 
     // Exercise 7-day totals
-    let totalMoving=0, totalKcal=0, totalAscent=0, totalKm=0;
+    let totalMoving=0, totalKcal=0, totalAscent=0, totalKm=0, totalTSS=0;
     days.forEach(d => {
         const acts = d.intervals?.activities || [];
         acts.forEach(a => {
@@ -1446,13 +1506,13 @@ function renderWeekView(){
             totalKcal += a.calories || 0;
             totalAscent += (a.total_elevation_gain ?? a.elevation_gain ?? a.elevation ?? a.ascent ?? a.total_ascent ?? 0);
             totalKm += (a.distance || 0) / 1000;
+            totalTSS += a.icu_training_load || 0;
         });
     });
-    const totalHours = (totalMoving / 3600).toFixed(1);
     const movH = Math.floor(totalMoving/3600);
     const movM = Math.round((totalMoving%3600)/60);
     document.getElementById('exerciseSummary').innerHTML = `
-        <div class="es-item"><div class="es-val">${totalHours}</div><div class="es-lbl">Total Hours</div></div>
+        <div class="es-item"><div class="es-val">${Math.round(totalTSS)}</div><div class="es-lbl">TSS Cumul.</div></div>
         <div class="es-item"><div class="es-val">${Math.round(totalKcal).toLocaleString()}</div><div class="es-lbl">Total kcal</div></div>
         <div class="es-item"><div class="es-val">${Math.round(totalKm)}</div><div class="es-lbl">Total km</div></div>
         <div class="es-item"><div class="es-val">${movH}:${pad(movM)}</div><div class="es-lbl">Moving Time</div></div>
@@ -1470,20 +1530,7 @@ function renderWeekView(){
         <div class="avg-item"><div class="avgval">${Math.round(avgs.fiber_g)}g</div><div class="avglbl">Avg Fiber</div></div>
         <div class="avg-item"><div class="avgval">${Math.round(avgs.iron_mg*10)/10}</div><div class="avglbl">Avg Iron mg</div></div>`;
     renderWeekAverageBars(avgs);
-
-    renderLineChart('chartMacros', days, [
-        {key:'protein_g',label:'Proteine',color:'#4285f4'},
-        {key:'carbs_g',label:'Carbs',color:'#fbbc04'},
-        {key:'fat_g',label:'Grassi',color:'#ea4335'},
-        {key:'fiber_g',label:'Fibre',color:'#34a853'},
-    ]);
-
-    renderLineChart('chartMicros', days, [
-        {key:'vitC_mg',label:'Vit C',color:'#fbbc04'},
-        {key:'iron_mg',label:'Ferro',color:'#ea4335'},
-        {key:'calcium_mg',label:'Calcio',color:'#4285f4',scale:0.1},
-        {key:'magnesium_mg',label:'Magnesio',color:'#7c3aed',scale:0.1},
-    ]);
+    renderWeightSection7d(days);
 
     const sleepData=days.map(d=>{
         const w=d.intervals?.wellness;
@@ -1529,6 +1576,7 @@ function renderWeekAverageBars(avgs){
     Object.entries(MACRO_TARGETS).forEach(([k,target]) => {
         macroHtml += barHTML(`${MACRO_LABELS[k]} (avg)`, avgs[k]||0, target, MACRO_COLORS[k], 'g', k);
     });
+    macroHtml += barHTML('Kcal (avg)', avgs.kcal||0, 2800, '#64748b', ' kcal', 'kcal');
     document.getElementById('weekMacroBars').innerHTML = macroHtml;
 
     let microHtml = '';
@@ -1536,6 +1584,52 @@ function renderWeekAverageBars(avgs){
         microHtml += barHTML(`${info.label} (avg)`, avgs[k]||0, info.target, info.color, info.unit, k);
     });
     document.getElementById('weekMicroBars').innerHTML = microHtml;
+}
+
+function renderWeightSection7d(days){
+    const el = document.getElementById('weightSection7d');
+    if (!el) return;
+    const weights = days.map(d => ({
+        label: d.label, date: d.date,
+        weight: d.intervals?.wellness?.weight || null
+    }));
+    const valid = weights.filter(d => d.weight !== null);
+    if (!valid.length) {
+        el.innerHTML = '<div style="font-size:12px;color:var(--text-muted);padding:8px 0">Nessun dato peso (sincronizza Intervals)</div>';
+        return;
+    }
+    const avg = valid.reduce((s,d) => s + d.weight, 0) / valid.length;
+    const min = Math.min(...valid.map(d => d.weight));
+    const max = Math.max(...valid.map(d => d.weight));
+    const latest = valid[valid.length - 1]?.weight;
+    const trend = valid.length >= 2 ? (valid[valid.length-1].weight - valid[0].weight) : 0;
+    const trendStr = trend === 0 ? '→' : (trend > 0 ? `↑ +${trend.toFixed(1)}` : `↓ ${trend.toFixed(1)}`);
+    const trendColor = trend > 0 ? '#ea4335' : trend < 0 ? '#34a853' : '#64748b';
+
+    let html = `<div class="stats-grid" style="margin-bottom:12px">
+        <div class="stat-box"><div class="val">${latest?.toFixed(1)}<span style="font-size:12px">kg</span></div><div class="lbl">Ultimo</div></div>
+        <div class="stat-box"><div class="val">${avg.toFixed(1)}<span style="font-size:12px">kg</span></div><div class="lbl">Media</div></div>
+        <div class="stat-box"><div class="val" style="color:${trendColor}">${trendStr}</div><div class="lbl">Trend</div></div>
+        <div class="stat-box"><div class="val">${min.toFixed(1)}–${max.toFixed(1)}</div><div class="lbl">Min–Max</div></div>
+    </div>`;
+
+    // Visual bars
+    const range = Math.max(max - min, 0.5);
+    const barBase = min - range * 0.15;
+    const barMax = max + range * 0.15;
+    html += '<div style="display:flex;gap:4px;align-items:flex-end;height:72px;padding:0 2px">';
+    weights.forEach(d => {
+        const hasData = d.weight !== null;
+        const h = hasData ? Math.max(10, ((d.weight - barBase) / (barMax - barBase)) * 56) : 4;
+        const color = hasData ? '#4285f4' : 'var(--surface-2)';
+        html += `<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px">
+            <div style="font-size:8px;color:var(--text-muted)">${hasData ? d.weight.toFixed(1) : '—'}</div>
+            <div style="width:100%;height:${h}px;background:${color};border-radius:3px;min-height:4px"></div>
+            <div style="font-size:8px;color:var(--text-light)">${d.label}</div>
+        </div>`;
+    });
+    html += '</div>';
+    el.innerHTML = html;
 }
 
 function renderBarChart(containerId, labels, values, color, unit){
@@ -1587,7 +1681,7 @@ function switchTab(id){
     document.getElementById('prevDay').href='day.html?date='+offsetDay(DAY,-1);
     document.getElementById('nextDay').href='day.html?date='+offsetDay(DAY,1);
     const hasCloud = !!getApiConfig().base;
-    setSyncChip(hasCloud ? 'Sync: cloud init…' : 'Sync: local only', hasCloud ? 'muted' : 'warn');
+    setSyncChip(hasCloud ? 'Sync: cloud…' : '☁️ Tap to setup sync', hasCloud ? 'muted' : 'warn');
     (async () => {
         await loadState(true);
         await loadSharedDb(true);
