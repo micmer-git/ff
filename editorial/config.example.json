@@ -1,0 +1,10 @@
+{
+  "publication": "https://fortissimo.substack.com",
+  "issue_timezone": "Europe/Rome",
+  "scheduler_timezone": "SET_TO_SCHEDULER_LOCAL_TIMEZONE",
+  "schedule": "Friday 09:00",
+  "discord_channel_url": "REPLACE_WITH_USER_CONFIRMED_CHANNEL",
+  "selected_author": "REPLACE_WITH_CONFIRMED_USER",
+  "selection_rule": "Shares by this user in the dedicated intake channel",
+  "scheduler_owner": "REPLACE_WITH_ONE_MACHINE_OR_TASK"
+}
