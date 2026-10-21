@@ -14,7 +14,19 @@ voice. Avoid a generic news digest, corporate introductions, invented personal
 experiences, repetitive endings and formulaic "non è X, è Y" contrasts.
 
 Choose a coherent thread from the user's actual selections. Three to five strong
-sections are a starting point, not a quota. Do not pad a thin week. Distinguish
+sections are a starting point, not a quota. Do not pad a thin week.
+The issue should develop one recognizable question or theme through the sections;
+do not merely connect unrelated news with transition sentences. Prefer three
+strong connected items to four unrelated ones, returning unused sources to backlog.
+Use horizontal separators between numbered sections and short bullet lists when
+they sharpen a comparison or sequence. Alternate Michele's compact commentary
+with original source material: supported X embeds, useful screenshots, figures
+and brief attributed excerpts. Verify embedded media actually render in preview;
+a bare link or empty card does not satisfy the visual intent. Do not replace all
+source material with generated illustrations or generic charts. Generated cover
+art should express the issue's central idea and stay separate from evidence.
+
+Distinguish
 quotation, source claim and editorial interpretation. Link facts where they occur.
 Recheck numbers, dates, quotations and unstable claims against original sources.
 An AI demo is not a benchmark; a simulation is not realized wealth; a clinical
