@@ -42,6 +42,11 @@ Preserve semantic URL parameters; strip only known tracking parameters for dedup
 
 ## Editorial assembly
 
+On every run also follow `PODCAST_AND_X_INTAKE.md`: review priority podcast
+transcripts through computer use, seek one or two strong contributions and useful
+source visuals, and inspect the user's X Best list for the preceding 2–3 days.
+Record actual coverage and access gaps in private state.
+
 Also inspect the user's saved notes on https://futurofortissimo.github.io/ .
 The hosted `notes.json` may be newer than this checkout; compare actual record
 counts and retain a dated private snapshot. `newsletter_data.json` on either
@@ -112,6 +117,8 @@ editorial/WEEKLY_WORKFLOW.md and private local config/issue manifests. Verify
 Discord and Substack access. Through computer use, read new user-selected shares
 in the configured channel, parse articles and screenshots, verify original
 sources, deduplicate against saved sources, published issues and existing drafts.
+Apply editorial/PODCAST_AND_X_INTAKE.md, including transcript and source-visual
+review and the user's X Best list over the preceding 48–72 hours.
 Refresh hosted FF notes and reconcile the private source ledger; distinguish
 published, reserved in drafts, excluded and still unreviewed. Verify original
 dates, not only share dates. Aim for five connected ff.N.X contributions and
