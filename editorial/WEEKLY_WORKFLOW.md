@@ -42,6 +42,35 @@ Preserve semantic URL parameters; strip only known tracking parameters for dedup
 
 ## Editorial assembly
 
+Also inspect the user's saved notes on https://futurofortissimo.github.io/ .
+The hosted `notes.json` may be newer than this checkout; compare actual record
+counts and retain a dated private snapshot. `newsletter_data.json` on either
+host or disk may lag publication: refresh the Substack RSS and inspect recent
+published posts and existing drafts. A high note ID or recent share is not an
+original publication date. Honor the user's explicit cutoff; the October 2026
+two-draft review uses July 1, 2026. Older books, personal memories and primary
+background references may be clearly dated context, not new news.
+
+Maintain `editorial/local/source-decisions.json` as an array with `url`,
+`published_date` (verified original date), `status`, `draft_url`, and `reason`.
+Use `reserved_draft` for material saved in an unpublished draft. Do not mark it
+published until the public post is verified. Record exclusions and already-used
+topics even when a new URL discusses them. Enrichment may follow the user's
+usual authors to newer X posts, Substack articles and original research.
+
+Run the portable audit against the snapshots, for example:
+
+```sh
+python scripts/ff_source_audit.py --notes editorial/local/live-notes.json --published editorial/local/published-feed.json --published newsletter_data.json --decisions editorial/local/source-decisions.json --since 2026-07-01 --output editorial/local/source-ledger.json
+```
+
+The audit normalizes X/Twitter status URLs and YouTube variants. Its unmatched
+state deliberately means `unmatched_needs_review`, never confirmed unused.
+Inspect semantic topic overlap and draft contents manually. Preserve source and
+coverage evidence so another machine can reconstruct the ledger. Use separate
+private issue folders for multiple drafts in a week; the weekly scheduler still
+creates at most one draft unless explicitly instructed otherwise.
+
 Read `STYLE.md` and recent published issues. Compare candidates with the archive
 and ALL existing drafts, including drafts made manually. Select the strongest
 coherent angle; preserve unused material for later. Old shares may be used as
@@ -79,6 +108,10 @@ editorial/WEEKLY_WORKFLOW.md and private local config/issue manifests. Verify
 Discord and Substack access. Through computer use, read new user-selected shares
 in the configured channel, parse articles and screenshots, verify original
 sources, deduplicate against saved sources, published issues and existing drafts.
+Refresh hosted FF notes and reconcile the private source ledger; distinguish
+published, reserved in drafts, excluded and still unreviewed. Verify original
+dates, not only share dates. Aim for five connected ff.N.X contributions and
+open directly with three emoji bullets, without pre-introductory prose.
 Choose a coherent FF angle, prepare Italian copy and metadata, include useful
 credited images where appropriate, and save one unpublished Substack draft for
 the Europe/Rome ISO week. Reopen and verify persistence; record its URL and source
@@ -92,6 +125,8 @@ its own authenticated session and scheduler ownership.
 ## Validation
 
 `python -m unittest discover -s tests -p 'test_ff_weekly.py'`
+
+`python -m unittest discover -s tests -p 'test_ff_source_audit.py'`
 
 The helper only initializes and deduplicates private intake files. The agent does
 editorial judgment, source reading and browser saves; there is no unattended

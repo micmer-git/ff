@@ -13,11 +13,17 @@ technology, nature and human life. Explain why each item matters in Michele's
 voice. Avoid a generic news digest, corporate introductions, invented personal
 experiences, repetitive endings and formulaic "non è X, è Y" contrasts.
 
-Choose a coherent thread from the user's actual selections. Three to five strong
-sections are a starting point, not a quota. Do not pad a thin week.
+Open directly with exactly three short bullet points, each beginning with an emoji.
+Do not precede them with introductory prose, a support appeal or a Panorama label.
+Place a cover after this opening. Aim for five numbered `ff.N.1` through `ff.N.5`
+contributions per issue, following one coherent theme from the user's selections.
+Develop each contribution with a concrete observation, a source and an editorial
+point; five links with generic commentary do not make five contributions.
+Do not pad a thin week: expand research within the user's source ecosystem or
+record that there is not enough material for an issue.
 The issue should develop one recognizable question or theme through the sections;
-do not merely connect unrelated news with transition sentences. Prefer three
-strong connected items to four unrelated ones, returning unused sources to backlog.
+do not merely connect unrelated news with transition sentences. Return unrelated
+sources to backlog and preserve real personal details from the user's drafts.
 Use horizontal separators between numbered sections and short bullet lists when
 they sharpen a comparison or sequence. Alternate Michele's compact commentary
 with original source material: supported X embeds, useful screenshots, figures
