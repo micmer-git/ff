@@ -1,5 +1,25 @@
 # FF newsletter voice and quality gate
 
+## Approved editorial references
+
+The user approved the two revised October 2026 drafts on October 22 as best-practice
+references. Consult `editorial/local/approved-references.json` and their private
+body, metadata and image manifests before the next issue. Compare the actual
+writing and media rhythm, not just the headings: one strong theme, three immediate
+emoji bullets, five developed contributions, concrete personal observations,
+horizontal separators and original source media with useful commentary.
+Treat these as a quality benchmark, not a text template to repeat. Preserve the
+distinction between an AI demonstration and a proven result, and between nutrition
+research and personal advice. Approval of these references does not mark their
+sources published or authorize publishing future drafts.
+
+Private draft links and copy are intentionally not committed. On another machine,
+restore the private reference manifest or identify the approved drafts in Substack;
+do not claim to have read references that are unavailable. Keep using recent live
+issues to detect changes in voice and numbering.
+
+## Writing and verification
+
 Write in Italian with real accents. Read the latest three published issues in
 full before drafting; inspect the latest five RSS enclosure covers before any
 cover generation. The live publication is https://fortissimo.substack.com/ .

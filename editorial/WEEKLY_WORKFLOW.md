@@ -71,7 +71,11 @@ coverage evidence so another machine can reconstruct the ledger. Use separate
 private issue folders for multiple drafts in a week; the weekly scheduler still
 creates at most one draft unless explicitly instructed otherwise.
 
-Read `STYLE.md` and recent published issues. Compare candidates with the archive
+Read `STYLE.md`, recent published issues
+and the approved examples in `editorial/local/approved-references.json`. The two
+October 22 approved drafts are the editorial benchmark, not a request to create
+two issues every week. Preserve their private snapshots and human edits.
+Compare candidates with the archive
 and ALL existing drafts, including drafts made manually. Select the strongest
 coherent angle; preserve unused material for later. Old shares may be used as
 dated context, never passed off as this week's news. No arbitrary minimum forces
