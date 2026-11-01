@@ -57,6 +57,19 @@ figcaption a{color:var(--muted)}
 .mark input{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;width:110px}
 .mark button{font:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer}
 .mark code{background:var(--chip);padding:2px 6px;border-radius:4px}
+.bar{flex-direction:column;align-items:stretch;gap:8px}
+.bar .row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.bar input[type=search]{flex:1;min-width:0;font:16px -apple-system,system-ui,sans-serif;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+.bar .lbl{color:var(--muted);font-size:12px;margin-right:2px}
+.bar .sep{width:1px;height:20px;background:var(--line);margin:0 4px}
+.bar button.th.on{background:#fff;color:var(--ink);border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.bar .count{margin-left:auto}
+h3.sec{font:600 15px -apple-system,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:30px 0 12px;display:flex;gap:8px;align-items:baseline}
+h3.sec small{font-weight:normal;text-transform:none;letter-spacing:0}
+.chip.pr{color:var(--acc);background:#fbe7e2}
+.chip.tm{color:var(--ink);background:#fff;border:1px solid var(--line);padding:5px 10px}
+mark.hl{background:#fff1a8;color:inherit;padding:0 1px;border-radius:2px}
+@media (max-width:520px){.bar .sep{display:none}.bar .count{margin-left:0;width:100%}}
 footer{color:var(--muted);font:13px -apple-system,system-ui,sans-serif;text-align:center}
 @media (max-width:520px){body{font-size:16px}h2{font-size:21px}.card{padding:18px 15px}}
 </style>
@@ -68,10 +81,9 @@ footer{color:var(--muted);font:13px -apple-system,system-ui,sans-serif;text-alig
   <p id="sub">Caricamento…</p>
 </header>
 <nav class="bar">
-  <button data-f="tutti" class="on">Tutti</button>
-  <button data-f="dafare">Da fare</button>
-  <button data-f="fatti">Fatti</button>
-  <span class="count" id="count"></span>
+  <div class="row"><input type="search" id="q" placeholder="Cerca titolo, testo, fonti, ff.157.3…" aria-label="Cerca nelle note" autocomplete="off"></div>
+  <div class="row" id="temi"><button data-t="" class="th on">Tutti</button><button data-t="tech" class="th">🖥️ Tecnologia</button><button data-t="natura" class="th">🍃 Natura</button><button data-t="uomo" class="th">❤️ Uomo</button></div>
+  <div class="row"><span id="stati"><button data-f="tutti" class="on">Tutti</button> <button data-f="dafare">Da fare</button> <button data-f="fatti">Fatti</button></span><span class="sep"></span><span class="lbl">Ordine</span><span id="viste"><button data-v="tema" class="on">Per tema</button> <button data-v="num">Per numero</button> <button data-v="recenti">Recenti</button></span><span class="count" id="count"></span></div>
 </nav>
 <main id="list"></main>
 <footer>Pagina privata, non indicizzata. I dati sono in <code>notes.json</code>.</footer>
@@ -86,22 +98,36 @@ function md(s){return s.split(/\n\s*\n/).map(p=>{p=p.trim();if(!p)return'';
  return'<p>'+inline(p).replace(/\n/g,'<br>')+'</p>'}).join('')}
 const LS='ffnotes-local-done';
 const local=JSON.parse(localStorage.getItem(LS)||'{}');
-let DATA=[],F='tutti';
+const TEMI={tech:{e:'🖥️',n:'Tecnologia'},natura:{e:'🍃',n:'Natura'},uomo:{e:'❤️',n:'Uomo'}};
+const TORD=['tech','natura','uomo'];
+let DATA=[],META={},F='tutti',V='tema',Q='',SEL=new Set();
 const isDone=n=>n.done||!!local[n.id];
 const usedIn=n=>n.used_in||local[n.id]||null;
-const header=n=>`#### ${n.emoji} ${usedIn(n)||n.num||'ff.157.y'} ${n.titolo.replace(/ \(riserva\)$/,'')}`;
+const fid=n=>usedIn(n)||n._prop||'ff.?';
+const tIdx=n=>{const i=TORD.indexOf(n.tema);return i<0?9:i};
+const byTheme=(a,b)=>tIdx(a)-tIdx(b)||(a.ord||0)-(b.ord||0);
+// Numerazione progressiva: le note non fatte, in ordine tema (🖥️ 🍃 ❤️) e poi di arrivo, prendono ff.N.1, ff.N.2…
+// saltando i numeri già usati da note fatte nello stesso numero N.
+function numbering(){const N=META.prossimo_numero||157;const pre='ff.'+N+'.';
+ const taken=new Set(DATA.filter(isDone).map(usedIn).filter(u=>u&&u.startsWith(pre)).map(u=>u.slice(pre.length)));
+ let y=1;DATA.forEach(n=>n._prop=null);
+ DATA.filter(n=>!isDone(n)).sort(byTheme).forEach(n=>{while(taken.has(String(y)))y++;n._prop=pre+y;n._y=y;y++})}
+const header=n=>`#### ${n.emoji} ${fid(n)} ${n.titolo.replace(/ \(riserva\)$/,'')}`;
 const sources=n=>n.links.map(l=>`- [${l[0]}](${l[1]})`).join('\n');
+const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const hay=n=>norm([n.titolo,n.body,n.emoji,fid(n),n.used_in,n.num_bozza,n.sottotema,n.batch,n.id,TEMI[n.tema]?.n,
+ ...(n.links||[]).flat(),...(n.backrefs||[]).flat(),...(n.x_posts||[]),...(n.checks||[]),n.chart?.title,n.chart?.source,...(n.images||[]).map(i=>i.caption+' '+i.credit)].join(' \n '));
 async function copy(btn,txt){try{await navigator.clipboard.writeText(txt)}catch(e){const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}
  const o=btn.textContent;btn.textContent='Copiato ✓';btn.classList.add('ok');setTimeout(()=>{btn.textContent=o;btn.classList.remove('ok')},1400)}
 function chart(c){if(!c)return'';const nums=c.items.filter(i=>typeof i.value==='number').map(i=>i.value);const mx=Math.max(...nums);
  return`<div class="chart"><div class="t">${esc(c.title)}</div>${c.items.map(i=>{const na=typeof i.value!=='number';
  const w=na?12:Math.max(8,i.value/mx*100);const lab=na?i.value:c.fmt.replace('{v}',String(i.value).replace('.',',').replace(/\B(?=(\d{3})+(?!\d))/g,'.'));
  return`<div class="r"><span>${esc(i.label)}</span><div class="b${na?' na':''}" style="width:${w}%">${esc(lab)}</div></div>`}).join('')}<div class="s">Fonte: ${esc(c.source)}. Grafico costruito solo con i numeri citati.</div></div>`}
-function card(n){const d=isDone(n);
- const st=d?`<span class="chip ok">✓ usata in ${esc(usedIn(n)||'?')}</span>`:(n.stato==='bozza consegnata'?`<span class="chip bz">bozza consegnata</span>`:`<span class="chip st">da fare</span>`);
+function card(n){const d=isDone(n);const t=TEMI[n.tema];
+ const st=d?`<span class="chip ok">✓ usata in ${esc(usedIn(n)||'?')}</span>`:`<span class="chip pr">proposta ${esc(n._prop)}</span>`+(n.stato==='bozza consegnata'?`<span class="chip bz">bozza consegnata${n.num_bozza?' (era '+esc(n.num_bozza)+')':''}</span>`:`<span class="chip st">da fare</span>`);
  return`<article class="card${d?' done':''}" id="${n.id}">
- <div class="meta">${st}${n.riserva?'<span class="chip rs">riserva</span>':''}<span class="chip">${esc(n.batch)}</span>${n.tema?`<span class="chip">${esc(n.tema)}</span>`:''}<span class="chip">id ${n.id}</span></div>
- <h2>${n.emoji} <span class="num">${esc(usedIn(n)||n.num||'ff.157.y')}</span> ${esc(n.titolo)}</h2>
+ <div class="meta">${st}${t?`<span class="chip tm">${t.e} ${t.n}</span>`:''}${n.riserva?'<span class="chip rs">riserva</span>':''}${n.sottotema?`<span class="chip">${esc(n.sottotema)}</span>`:''}<span class="chip">${esc(n.batch)}</span><span class="chip">id ${n.id}</span></div>
+ <h2>${n.emoji} <span class="num">${esc(fid(n))}</span> ${esc(n.titolo)}</h2>
  <div class="body">${md(n.body)}</div>
  <div class="copyrow"><button data-c="h">📋 Titolo</button><button data-c="b">📋 Testo</button><button data-c="l">📋 Fonti</button><button data-c="a">📋 Tutto</button></div>
  ${n.checks&&n.checks.length?`<div class="checks"><b>Da verificare</b><ul>${n.checks.map(c=>`<li>${inline(c)}</li>`).join('')}</ul></div>`:''}
@@ -109,20 +135,44 @@ function card(n){const d=isDone(n);
  ${n.images.map(i=>`<figure><img loading="lazy" src="${esc(i.src)}" alt="${esc(i.caption)}"><figcaption>${esc(i.caption)} · <a href="${esc(i.href)}" target="_blank" rel="noopener">${esc(i.credit)}</a></figcaption></figure>`).join('')}
  ${n.x_posts.length?`<div class="tweets">${n.x_posts.map(u=>`<blockquote class="twitter-tweet" data-dnt="true" data-lang="it"><a href="${esc(u.replace('x.com','twitter.com'))}">${esc(u)}</a></blockquote>`).join('')}</div>`:''}
  <details><summary>Fonti e richiami</summary><ul class="links">${n.links.map(l=>`<li><a href="${esc(l[1])}" target="_blank" rel="noopener">${esc(l[0])}</a></li>`).join('')}${(n.backrefs||[]).map(l=>`<li>↩︎ <a href="${esc(l[1])}" target="_blank" rel="noopener">${esc(l[0])}</a></li>`).join('')}</ul></details>
- <div class="mark">${d?(n.done?`Segnata nel JSON.`:`Segnata solo in questo browser. <button data-u>annulla</button>`):`<input placeholder="ff.157.2" aria-label="usata in"><button data-m>Segna fatta (locale)</button>`}
- <span>Per salvarla: <code>python3 notes.py done ${n.id} ${esc(usedIn(n)||'ff.157.N')}</code></span></div>
+ <div class="mark">${d?(n.done?`Segnata nel JSON.`:`Segnata solo in questo browser. <button data-u>annulla</button>`):`<input value="${esc(n._prop)}" aria-label="usata in"><button data-m>Segna fatta (locale)</button>`}
+ <span>Per salvarla: <code>python3 notes.py done ${n.id} ${esc(fid(n))}</code></span></div>
  </article>`}
-function render(){const L=DATA.filter(n=>F==='tutti'||(F==='fatti'?isDone(n):!isDone(n)));
- const el=document.getElementById('list');el.innerHTML=L.map(card).join('')||'<p>Nessuna nota.</p>';
+function highlight(el){if(!Q)return;const q=norm(Q);
+ el.querySelectorAll('.card h2, .card .body p, .card .body blockquote').forEach(node=>{
+  const w=document.createTreeWalker(node,NodeFilter.SHOW_TEXT);const ts=[];while(w.nextNode())ts.push(w.currentNode);
+  ts.forEach(tn=>{const raw=tn.nodeValue;let nn='',map=[];for(let i=0;i<raw.length;i++){const c=norm(raw[i]);for(const ch of c){nn+=ch;map.push(i)}}
+   const k=nn.indexOf(q);if(k<0)return;const a=map[k],b=map[k+q.length-1]+1;
+   const m=document.createElement('mark');m.className='hl';const r=document.createRange();r.setStart(tn,a);r.setEnd(tn,b);try{r.surroundContents(m)}catch(e){}})})}
+function render(){numbering();const q=norm(Q.trim());
+ let L=DATA.filter(n=>(F==='tutti'||(F==='fatti'?isDone(n):!isDone(n)))&&(!SEL.size||SEL.has(n.tema))&&(!q||hay(n).includes(q)));
+ const byNum=(a,b)=>isDone(a)-isDone(b)||(isDone(a)?String(usedIn(a)).localeCompare(String(usedIn(b)),undefined,{numeric:true}):a._y-b._y);
+ const el=document.getElementById('list');let html='';
+ if(V==='tema'){TORD.concat(['?']).forEach(k=>{const G=L.filter(n=>(TEMI[n.tema]?n.tema:'?')===k).sort(byNum);if(!G.length)return;const t=TEMI[k];
+   const p=G.filter(n=>!isDone(n)).map(n=>n._y);
+   html+=`<h3 class="sec">${t?t.e+' '+t.n:'Senza tema'} <small>${G.length} note${p.length?` · proposte ff.${META.prossimo_numero||157}.${Math.min(...p)}–${Math.max(...p)}`:''}</small></h3>`+G.map(card).join('')})}
+ else{L=L.slice().sort(V==='num'?byNum:(a,b)=>(b.ord||0)-(a.ord||0));html=L.map(card).join('')}
+ el.innerHTML=html||'<p>Nessuna nota con questi filtri.</p>';
  document.getElementById('count').textContent=`${L.length} di ${DATA.length} · ${DATA.filter(isDone).length} fatte`;
  el.querySelectorAll('.card').forEach(c=>{const n=DATA.find(x=>x.id===c.id);
   c.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{const k=b.dataset.c;
    copy(b,k==='h'?header(n):k==='b'?n.body:k==='l'?sources(n):header(n)+'\n\n'+n.body+'\n\n'+sources(n))});
-  const m=c.querySelector('[data-m]');if(m)m.onclick=()=>{const v=c.querySelector('.mark input').value.trim()||'ff.?';local[n.id]=v;localStorage.setItem(LS,JSON.stringify(local));render()};
+  const m=c.querySelector('[data-m]');if(m)m.onclick=()=>{const v=c.querySelector('.mark input').value.trim()||n._prop;local[n.id]=v;localStorage.setItem(LS,JSON.stringify(local));render()};
   const u=c.querySelector('[data-u]');if(u)u.onclick=()=>{delete local[n.id];localStorage.setItem(LS,JSON.stringify(local));render()}});
+ highlight(el);
  if(window.twttr&&twttr.widgets)twttr.widgets.load(el)}
-document.querySelectorAll('.bar button').forEach(b=>b.onclick=()=>{F=b.dataset.f;document.querySelectorAll('.bar button').forEach(x=>x.classList.toggle('on',x===b));render()});
-fetch('notes.json?'+Date.now()).then(r=>r.json()).then(j=>{DATA=j.notes;document.getElementById('sub').textContent=`${DATA.length} note · aggiornato ${j.aggiornato} · Titolo, testo e fonti si copiano con un tap.`;render();
+const grp=(id,attr,fn)=>document.querySelectorAll(`#${id} button`).forEach(b=>b.onclick=()=>{fn(b.dataset[attr]);document.querySelectorAll(`#${id} button`).forEach(x=>x.classList.toggle('on',x===b));render()});
+grp('stati','f',v=>F=v);grp('viste','v',v=>V=v);
+document.querySelectorAll('#temi button').forEach(b=>b.onclick=()=>{const t=b.dataset.t;
+ if(!t)SEL.clear();else if(SEL.has(t))SEL.delete(t);else SEL.add(t);
+ document.querySelectorAll('#temi button').forEach(x=>x.classList.toggle('on',x.dataset.t?SEL.has(x.dataset.t):!SEL.size));render()});
+let qt;document.getElementById('q').addEventListener('input',e=>{clearTimeout(qt);qt=setTimeout(()=>{Q=e.target.value;render()},120)});
+{const u=new URLSearchParams(location.search);if(u.get('q')){Q=u.get('q');document.getElementById('q').value=Q}
+ (u.get('tema')||'').split(',').filter(t=>TEMI[t]).forEach(t=>SEL.add(t));
+ if(SEL.size)document.querySelectorAll('#temi button').forEach(x=>x.classList.toggle('on',x.dataset.t?SEL.has(x.dataset.t):false));
+ if(['tema','num','recenti'].includes(u.get('v'))){V=u.get('v');document.querySelectorAll('#viste button').forEach(x=>x.classList.toggle('on',x.dataset.v===V))}}
+fetch('notes.json?'+Date.now()).then(r=>r.json()).then(j=>{META=j;DATA=j.notes;
+ document.getElementById('sub').textContent=`${DATA.length} note · prossimo numero ff.${j.prossimo_numero||157} · aggiornato ${j.aggiornato} · Titolo, testo e fonti si copiano con un tap.`;render();
  const s=document.createElement('script');s.async=true;s.src='https://platform.twitter.com/widgets.js';s.onload=()=>twttr.widgets.load();document.body.appendChild(s)})
  .catch(e=>{document.getElementById('sub').textContent='Errore nel caricare notes.json: '+e});
 </script>
