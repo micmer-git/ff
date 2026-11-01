@@ -5,7 +5,7 @@
   {
    "emoji": "🌰",
    "titolo": "Un posto al sole (nell'era glaciale)",
-   "tema": "Natura",
+   "tema": "natura",
    "batch": "01/11, inviato da Michele",
    "origine": "inviato da Michele",
    "x_posts": [],
@@ -65,16 +65,17 @@
     "Link al libro: pagina dell'editore, non un link amzn.to come di solito in FF."
    ],
    "id": "n1",
-   "num": null,
    "stato": "da fare",
    "done": false,
-   "used_in": null
+   "used_in": null,
+   "sottotema": "Natura",
+   "ord": 18
   },
   {
    "id": "s1",
    "emoji": "☀️",
    "titolo": "Cento (centrali) di questi giorni",
-   "tema": "Energia",
+   "tema": "natura",
    "x_posts": [
     "https://x.com/DrSimEvans/status/2115749317453762759"
    ],
@@ -130,16 +131,17 @@
    ],
    "checks": [],
    "batch": "31/10 sera, candidati ff.157",
-   "num": null,
    "stato": "da fare",
    "done": false,
-   "used_in": null
+   "used_in": null,
+   "sottotema": "Energia",
+   "ord": 9
   },
   {
    "id": "s2",
    "emoji": "🚶",
    "titolo": "I would walk (5.000 miles)",
-   "tema": "Energia",
+   "tema": "natura",
    "x_posts": [
     "https://x.com/abundanceinst/status/2115789414324433247"
    ],
@@ -191,16 +193,17 @@
     "The Hill non leggibile da qui (bloccato/timeout): i dettagli vengono dal post X. Il nome esteso del BAAJA non è verificato, quindi resta solo la sigla."
    ],
    "batch": "31/10 sera, candidati ff.157",
-   "num": null,
    "stato": "da fare",
    "done": false,
-   "used_in": null
+   "used_in": null,
+   "sottotema": "Energia",
+   "ord": 10
   },
   {
    "id": "s3",
    "emoji": "🏋️",
    "titolo": "Sollevare il cervello",
-   "tema": "Salute",
+   "tema": "uomo",
    "x_posts": [
     "https://x.com/siimland/status/2116544219590386089",
     "https://x.com/siimland/status/2115534671173792057",
@@ -277,16 +280,17 @@
     "Extra (non nel testo): Rhonda Patrick, studio trasversale su donne di 35-63 anni, dove i pesi si associano a tempi di reazione più rapidi (associazione, non causa)."
    ],
    "batch": "31/10 sera, candidati ff.157",
-   "num": null,
    "stato": "da fare",
    "done": false,
-   "used_in": null
+   "used_in": null,
+   "sottotema": "Salute",
+   "ord": 11
   },
   {
    "id": "s4",
    "emoji": "🍪",
    "titolo": "Spuntini (di movimento)",
-   "tema": "Salute",
+   "tema": "uomo",
    "x_posts": [
     "https://x.com/foundmyfitness/status/2115537221839446430"
    ],
@@ -313,16 +317,17 @@
     "Lo studio citato da Rhonda Patrick non è linkato: trovarlo prima di pubblicare. Il trial del 2026 è una fonte diversa (doi 10.1016/j.jesf.2026.200464)."
    ],
    "batch": "31/10 sera, candidati ff.157",
-   "num": null,
    "stato": "da fare",
    "done": false,
-   "used_in": null
+   "used_in": null,
+   "sottotema": "Salute",
+   "ord": 12
   },
   {
    "id": "s5",
    "emoji": "🦊",
    "titolo": "La toppa peggio del buco",
-   "tema": "AI e sicurezza",
+   "tema": "tech",
    "x_posts": [
     "https://x.com/EpochAIResearch/status/2115921730682404869"
    ],
@@ -357,16 +362,17 @@
     "Nessuna immagine utile: quella di Epoch è solo decorativa. Il post X embeddato basta."
    ],
    "batch": "31/10 sera, candidati ff.157",
-   "num": null,
    "stato": "da fare",
    "done": false,
-   "used_in": null
+   "used_in": null,
+   "sottotema": "AI e sicurezza",
+   "ord": 13
   },
   {
    "id": "s6",
    "emoji": "👻",
    "titolo": "Censimento dei fantasmi",
-   "tema": "AI e curiosità",
+   "tema": "uomo",
    "x_posts": [
     "https://x.com/emollick/status/2116537058433081669"
    ],
@@ -404,16 +410,17 @@
     "Il sito scrive ~55 miliardi in home e ~56 nei metodi: nel testo c'è 55-56."
    ],
    "batch": "31/10 sera, candidati ff.157",
-   "num": null,
    "stato": "da fare",
    "done": false,
-   "used_in": null
+   "used_in": null,
+   "sottotema": "AI e curiosità",
+   "ord": 14
   },
   {
    "id": "s7",
    "emoji": "🧪",
    "titolo": "Pipetta, che capriccio!",
-   "tema": "Scienza",
+   "tema": "tech",
    "x_posts": [
     "https://x.com/AsimovPress/status/2115481046271795300",
     "https://x.com/emollick/status/2115594672471195779"
@@ -456,16 +463,17 @@
    ],
    "checks": [],
    "batch": "31/10 sera, candidati ff.157",
-   "num": null,
    "stato": "da fare",
    "done": false,
-   "used_in": null
+   "used_in": null,
+   "sottotema": "Scienza",
+   "ord": 15
   },
   {
    "id": "s8",
    "emoji": "🫧",
    "titolo": "Bolla (solo) AI?",
-   "tema": "Finanza",
+   "tema": "tech",
    "x_posts": [
     "https://x.com/KobeissiLetter/status/2116567209367445876",
     "https://x.com/Schuldensuehner/status/2116529278238248981",
@@ -530,16 +538,17 @@
     "FT non letto direttamente: le cifre su OpenAI arrivano via Kobeissi."
    ],
    "batch": "31/10 sera, candidati ff.157",
-   "num": null,
    "stato": "da fare",
    "done": false,
-   "used_in": null
+   "used_in": null,
+   "sottotema": "Finanza",
+   "ord": 16
   },
   {
    "id": "r1",
    "emoji": "🔥",
    "titolo": "Gas tedesco (riserva)",
-   "tema": "Energia",
+   "tema": "natura",
    "riserva": true,
    "x_posts": [
     "https://x.com/Schuldensuehner/status/2116448118694609202"
@@ -570,16 +579,16 @@
     "Riserva, con una sola fonte. Il testo è corto apposta."
    ],
    "batch": "31/10 sera, riserva",
-   "num": null,
    "stato": "da fare",
    "done": false,
-   "used_in": null
+   "used_in": null,
+   "sottotema": "Energia",
+   "ord": 17
   },
   {
    "id": "m1",
    "batch": "31/10 mattina, bozze ff.157",
    "emoji": "🍕",
-   "num": "ff.157.1",
    "titolo": "Settantamila e non sentirli",
    "stato": "bozza consegnata",
    "done": false,
@@ -602,13 +611,15 @@
     ]
    ],
    "backrefs": [],
-   "checks": []
+   "checks": [],
+   "tema": "uomo",
+   "ord": 1,
+   "num_bozza": "ff.157.1"
   },
   {
    "id": "m2",
    "batch": "31/10 mattina, bozze ff.157",
    "emoji": "🔍",
-   "num": "ff.157.2",
    "titolo": "Search e distruggi",
    "stato": "bozza consegnata",
    "done": false,
@@ -643,13 +654,15 @@
    ],
    "checks": [
     "Perdita di Alphabet: −525 mld $ qui, −480 mld $ secondo Kobeissi (vedi 🫧 Bolla (solo) AI?). Verificare."
-   ]
+   ],
+   "tema": "tech",
+   "ord": 2,
+   "num_bozza": "ff.157.2"
   },
   {
    "id": "m3",
    "batch": "31/10 mattina, bozze ff.157",
    "emoji": "🫀",
-   "num": "ff.157.3",
    "titolo": "Cuore, spegni la luce",
    "stato": "bozza consegnata",
    "done": false,
@@ -674,13 +687,15 @@
      "https://fortissimo.substack.com/i/155426992/ff-questioni-di-cuore"
     ]
    ],
-   "checks": []
+   "checks": [],
+   "tema": "uomo",
+   "ord": 3,
+   "num_bozza": "ff.157.3"
   },
   {
    "id": "m4",
    "batch": "31/10 mattina, bozze ff.157",
    "emoji": "💉",
-   "num": "ff.157.4",
    "titolo": "mRNA su misura",
    "stato": "bozza consegnata",
    "done": false,
@@ -701,13 +716,15 @@
      "https://fortissimo.substack.com/i/212236687/ff1554-modernita-contro-il-cancro"
     ]
    ],
-   "checks": []
+   "checks": [],
+   "tema": "uomo",
+   "ord": 4,
+   "num_bozza": "ff.157.4"
   },
   {
    "id": "m5",
    "batch": "31/10 mattina, bozze ff.157",
    "emoji": "🧠",
-   "num": "ff.157.5",
    "titolo": "Cervelli in vasca (di silicio)",
    "stato": "bozza consegnata",
    "done": false,
@@ -734,13 +751,15 @@
      "https://fortissimo.substack.com/i/140010460/ff-capire-il-cervello-con-lai"
     ]
    ],
-   "checks": []
+   "checks": [],
+   "tema": "tech",
+   "ord": 5,
+   "num_bozza": "ff.157.5"
   },
   {
    "id": "m6",
    "batch": "31/10 mattina, bozze ff.157",
    "emoji": "🎤",
-   "num": "ff.157.6",
    "titolo": "Karaoke artificiale",
    "stato": "bozza consegnata",
    "done": false,
@@ -761,13 +780,15 @@
      "https://fortissimo.substack.com/i/165079348/ff-rock-n-roll-e-vibe-coding"
     ]
    ],
-   "checks": []
+   "checks": [],
+   "tema": "tech",
+   "ord": 6,
+   "num_bozza": "ff.157.6"
   },
   {
    "id": "m7",
    "batch": "31/10 mattina, bozze ff.157",
    "emoji": "🪙",
-   "num": "ff.157.7",
    "titolo": "È tutto un token (la vendetta)",
    "stato": "bozza consegnata",
    "done": false,
@@ -788,13 +809,15 @@
      "https://fortissimo.substack.com/i/209629730/ff1531-le-seghe-mentali-di-claude"
     ]
    ],
-   "checks": []
+   "checks": [],
+   "tema": "tech",
+   "ord": 7,
+   "num_bozza": "ff.157.7"
   },
   {
    "id": "m8",
    "batch": "31/10 mattina, bozze ff.157",
    "emoji": "🧶",
-   "num": "ff.157.8",
    "titolo": "Tessitori a mano",
    "stato": "bozza consegnata",
    "done": false,
@@ -825,7 +848,11 @@
      "https://fortissimo.substack.com/i/118479393/ff-il-lavoro-non-e-mai-stato-cosi-importante"
     ]
    ],
-   "checks": []
+   "checks": [],
+   "tema": "uomo",
+   "ord": 8,
+   "num_bozza": "ff.157.8"
   }
- ]
+ ],
+ "prossimo_numero": 157
 }
