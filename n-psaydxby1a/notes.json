@@ -3,6 +3,339 @@
  "aggiornato": "2026-11-01",
  "notes": [
   {
+   "emoji": "⛵",
+   "titolo": "Terra! (E adesso?)",
+   "tema": "uomo",
+   "batch": "01/11, podcast",
+   "origine": "podcast: Rich Roll",
+   "x_posts": [],
+   "images": [
+    {
+     "src": "assets/p-brauer.jpg",
+     "caption": "Cole Brauer da Rich Roll: «la cosa più difficile è stata tornare a terra».",
+     "credit": "Frame da The Rich Roll Podcast (YouTube), 1:29:08",
+     "href": "https://www.youtube.com/watch?v=i49AjOc74hg&t=5340s"
+    }
+   ],
+   "body": "130 giorni, 2 ore e 45 minuti. Da sola, senza scali né assistenza, intorno al mondo passando per i tre grandi capi.\n\nCole Brauer, 29 anni all'epoca, unica donna e skipper più giovane della flotta, nel marzo 2024 è arrivata seconda alla [Global Solo Challenge](https://globalsolochallenge.com/en/gsc2023-results-en/) dopo 27.759 miglia nautiche: la prima americana a riuscirci. Dal 1969 ci sono riuscite [meno di 200 persone](https://globalsolochallenge.com/en/cole-brauer-becomes-the-first-us-female-to-sail-solo-nonstop-around-the-world/).\n\nA bordo: Starlink, batterie, cibo liofilizzato per 160 giorni, un dissalatore e le flebo da farsi da sola (lei che alla vista degli aghi sviene ancora). Più un paio di costole incrinate nella «settimana infernale». Lo racconta a Rich Roll ([1:10:00](https://www.youtube.com/watch?v=i49AjOc74hg&t=4200s)).\n\n**Però, però, però.** Il difficile non è stato l'oceano.\n\n> La cosa più difficile di tutta l'impresa è stata tornare a terra […]. Non sapevo come comportarmi. Stringo la mano? Do un bacio sulla guancia? Non toccavo nessuno da quattro mesi e mezzo.\n>\nCole Brauer, [*The Rich Roll Podcast*](https://www.youtube.com/watch?v=i49AjOc74hg&t=5340s) (29/10/2026)\n\nFinita la regata, finita la sponsorizzazione: è tornata a vivere nel suo furgone a Newport, a cercare lavoro. «Ero la velista più famosa del pianeta». Rich Roll paragona il suo rientro a quello di un soldato.\n\nCi chiedevamo dove fosse finita l'avventura ([🧭 ff.154.3 Dov’è finita l’avventura?](https://fortissimo.substack.com/i/210361320/ff1543-dove-finita-lavventura)). Forse è ancora lì, in mezzo all'oceano. Il problema è il porto.\n\nMichelle Drouin consiglia 20 secondi di abbraccio al giorno contro la carestia del contatto ([🫂 ff.97.2 La carestia del contatto](https://fortissimo.substack.com/i/141573875/ff-la-carestia-del-contatto)). Brauer ne aveva arretrati circa 130.",
+   "links": [
+    [
+     "The Rich Roll Podcast: 130 Days Alone at Sea. The Hardest Part Came After. (YouTube, 29/10/2026)",
+     "https://www.youtube.com/watch?v=i49AjOc74hg&t=5340s"
+    ],
+    [
+     "Global Solo Challenge 2023-2024: risultati",
+     "https://globalsolochallenge.com/en/gsc2023-results-en/"
+    ],
+    [
+     "Global Solo Challenge: Cole Brauer becomes the first US female to sail solo nonstop around the world (07/03/2024)",
+     "https://globalsolochallenge.com/en/cole-brauer-becomes-the-first-us-female-to-sail-solo-nonstop-around-the-world/"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🧭 ff.154.3 Dov’è finita l’avventura?",
+     "https://fortissimo.substack.com/i/210361320/ff1543-dove-finita-lavventura"
+    ],
+    [
+     "🫂 ff.97.2 La carestia del contatto",
+     "https://fortissimo.substack.com/i/141573875/ff-la-carestia-del-contatto"
+    ]
+   ],
+   "checks": [
+    "Libro: First Light: Sailing Solo but Not Alone (Cole Brauer).",
+    "Traduzione della citazione: mia."
+   ],
+   "id": "n7",
+   "ord": 24,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null
+  },
+  {
+   "emoji": "🌾",
+   "titolo": "Spade in vomeri",
+   "tema": "natura",
+   "batch": "01/11, podcast",
+   "origine": "podcast: ZOE",
+   "x_posts": [],
+   "images": [
+    {
+     "src": "assets/p-mozaffarian-borlaug.jpg",
+     "caption": "Mozaffarian racconta la Rivoluzione verde di Norman Borlaug.",
+     "credit": "Frame da ZOE Science & Nutrition (YouTube), 22:04",
+     "href": "https://www.youtube.com/watch?v=FSkQqwTcJZY&t=1320s"
+    }
+   ],
+   "chart": {
+    "title": "Popolazione mondiale (miliardi)",
+    "source": "Dariush Mozaffarian, ZOE Science & Nutrition (22/10/2026)",
+    "fmt": "{v}",
+    "items": [
+     {
+      "label": "1900",
+      "value": 1.5
+     },
+     {
+      "label": "2000",
+      "value": 6
+     }
+    ]
+   },
+   "body": "Durante la Seconda guerra mondiale quasi 30 milioni di persone sono morte di fame. Più di tutti i soldati caduti in battaglia. Rapportato a oggi, dice Mozaffarian su [*ZOE*](https://www.youtube.com/watch?v=FSkQqwTcJZY&t=1200s), sarebbe come 100 milioni di morti in pochi anni.\n\nE nel frattempo la popolazione esplodeva: da 1,5 miliardi nel 1900 a 6 miliardi nel 2000. I demografi facevano i conti con ettari e rese, e prevedevano un miliardo di morti di fame entro il 2000.\n\nLa Rockefeller Foundation, con i governi di Stati Uniti e Messico, convince un agronomo della DuPont, Norman Borlaug, a trasferirsi in Messico. Dieci-quindici anni di incroci per ottenere grano ad altissima resa. Che però esauriva il suolo in fretta. La soluzione:\n\n> C'erano tutte queste fabbriche di bombe, con una produzione incredibile di ammoniaca. Così prese l'azoto dalle fabbriche di bombe e creò il fertilizzante azotato sintetico.\n>\nDariush Mozaffarian, [*ZOE Science & Nutrition*](https://www.youtube.com/watch?v=FSkQqwTcJZY&t=1320s) (22/10/2026)\n\nPoi il DDT (scoperto in guerra per proteggere le truppe da tifo e malaria) e l'irrigazione intensiva. Rese moltiplicate. Il Messico passa da importatore a esportatore; l'India, sull'orlo della carestia, in cinque anni esporta grano. Nobel per la pace nel 1970.\n\n**Però, però, però.** Il conto arriva dopo: monocolture, suoli esausti, pesticidi, acqua. Oggi circa il 60% delle nostre calorie arriva da una manciata di colture iper-selezionate. È la tesi di Mozaffarian: il sistema alimentare del Novecento è nato per riempire la pancia, non per nutrire.\n\nSiamo geo-ingegneri da quando abbiamo inventato l'agricoltura ([🕳️ ff.56.2 Siamo già geo-ingegneri](https://fortissimo.substack.com/i/105434036/ff-siamo-gia-geo-ingegneri)). Borlaug ci ha solo dato il turbo.\n\nDalle bombe al pane. Peccato che il viaggio di ritorno ci riesca meglio.",
+   "links": [
+    [
+     "ZOE Science & Nutrition: Top heart doctor: Don't learn this too late! 5 foods you MUST eat to live longer (YouTube, 22/10/2026)",
+     "https://www.youtube.com/watch?v=FSkQqwTcJZY&t=1200s"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🕳️ ff.56.2 Siamo già geo-ingegneri",
+     "https://fortissimo.substack.com/i/105434036/ff-siamo-gia-geo-ingegneri"
+    ]
+   ],
+   "checks": [
+    "Racconto semplificato: la conversione degli impianti bellici (Haber-Bosch) a fertilizzanti fu un fenomeno generale del dopoguerra, non un'operazione personale di Borlaug.",
+    "«Rese ×15» citato in puntata: non usato, da verificare.",
+    "30 milioni di morti per fame nella WWII e 60% delle calorie da poche colture: numeri del podcast, non verificati altrove."
+   ],
+   "id": "n6",
+   "ord": 23,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "emoji": "🦠",
+   "titolo": "Mangiare per due",
+   "tema": "uomo",
+   "batch": "01/11, podcast",
+   "origine": "podcast: ZOE",
+   "x_posts": [],
+   "images": [
+    {
+     "src": "assets/p-mozaffarian-microbioma.jpg",
+     "caption": "Dariush Mozaffarian a ZOE: «il microbioma si sta godendo le altre 400 calorie».",
+     "credit": "Frame da ZOE Science & Nutrition (YouTube), 48:28",
+     "href": "https://www.youtube.com/watch?v=FSkQqwTcJZY&t=2897s"
+    }
+   ],
+   "chart": {
+    "title": "Calorie digerite dal microbioma su una dieta da 2.000 kcal (stima)",
+    "source": "Dariush Mozaffarian, ZOE Science & Nutrition (22/10/2026)",
+    "fmt": "{v} kcal",
+    "items": [
+     {
+      "label": "Dieta poco processata (20%)",
+      "value": 400
+     },
+     {
+      "label": "Dieta molto processata (5%)",
+      "value": 100
+     }
+    ]
+   },
+   "body": "A tavola non siamo mai soli. Siamo almeno qualche migliaio di miliardi.\n\nDariush Mozaffarian, cardiologo e direttore del Food is Medicine Institute di Tufts, lo spiega a Jonathan Wolf su [*ZOE*](https://www.youtube.com/watch?v=FSkQqwTcJZY&t=2880s): più il cibo è integro, più lentamente lo digeriamo, e più nutrienti arrivano all'intestino crasso, dove vive il microbioma ([🦠 ff.92.2 Un organo in più: il microbioma](https://fortissimo.substack.com/i/137958307/ff-un-organo-in-piu-il-microbioma)). Non solo fibre: anche amidi, zuccheri, proteine e grassi ancora chiusi nella struttura del cibo.\n\n> In una dieta poco processata, il microbioma potrebbe digerire il 20% delle calorie che consumiamo. In una dieta molto processata, appena il 5%.\n>\nDariush Mozaffarian, [*ZOE Science & Nutrition*](https://www.youtube.com/watch?v=FSkQqwTcJZY&t=2910s) (22/10/2026)\n\nTradotto: su 2.000 calorie di cibo vero, i nostri tessuti ne digeriscono 1.600. Le altre 400 sono per gli inquilini, che in cambio producono metaboliti bioattivi che finiscono nel sangue e ci fanno bene. Con il cibo ultra-processato, invece, il conto si ribalta: quasi tutto per noi, briciole per loro.\n\n**Però, però, però.** Quel 20% è un «potrebbe», detto a voce. Mozaffarian lo attribuisce al lavoro di Rachel Carmody, biologa evolutiva ad Harvard, ma il numero preciso va cercato nei suoi studi. E vale come ordine di grandezza, non come etichetta nutrizionale.\n\nResta l'idea, controintuitiva: non conta solo quante calorie mangiamo, ma chi se le mangia. Un'altra ragione per cui la stessa caloria di una mela e di una merendina non è la stessa caloria.\n\nContare le calorie? Dipende da chi le conta.",
+   "links": [
+    [
+     "ZOE Science & Nutrition: Top heart doctor: Don't learn this too late! 5 foods you MUST eat to live longer (YouTube, 22/10/2026)",
+     "https://www.youtube.com/watch?v=FSkQqwTcJZY&t=2880s"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🦠 ff.92.2 Un organo in più: il microbioma",
+     "https://fortissimo.substack.com/i/137958307/ff-un-organo-in-piu-il-microbioma"
+    ]
+   ],
+   "checks": [
+    "Stima 20%/5% solo dal podcast: da verificare sui paper di Rachel Carmody (Harvard).",
+    "Traduzione della citazione: mia."
+   ],
+   "id": "n5",
+   "ord": 22,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "emoji": "🎓",
+   "titolo": "Lauree a perdere",
+   "tema": "uomo",
+   "batch": "01/11, podcast",
+   "origine": "podcast: Moonshots",
+   "x_posts": [],
+   "images": [
+    {
+     "src": "assets/p-lauree-salim.jpg",
+     "caption": "Salim Ismail commenta il crollo delle iscrizioni a informatica e degli MBA.",
+     "credit": "Frame da Moonshots #307 (YouTube), 1:44:32",
+     "href": "https://www.youtube.com/watch?v=yHMU5ql7O6o&t=6270s"
+    }
+   ],
+   "chart": {
+    "title": "Calo di iscrizioni e candidature, USA, autunno 2026",
+    "source": "National Student Clearinghouse (29/10/2026); GMAC citato su Moonshots #307",
+    "fmt": "-{v}%",
+    "items": [
+     {
+      "label": "Informatica, laurea quadriennale",
+      "value": 12.4
+     },
+     {
+      "label": "Informatica, master",
+      "value": 10.4
+     },
+     {
+      "label": "MBA full-time, candidati stranieri",
+      "value": 38
+     },
+     {
+      "label": "MBA full-time, candidati americani",
+      "value": 6
+     }
+    ]
+   },
+   "body": "Programmatori e avvocati: le due professioni che ogni genitore sano di mente avrebbe suggerito ai figli. Fino a un anno fa ([❔ ff.115.2 Cosa studiare con ChatGPT?](https://fortissimo.substack.com/i/155700864/ff-cosa-studiare-con-chatgpt)).\n\nI numeri ora arrivano. Secondo il [National Student Clearinghouse](https://www.studentclearinghouse.org/news/total-higher-ed-enrollment-holds-steady-in-preliminary-fall-enrollment-trends-report/), quest'autunno negli Stati Uniti le iscrizioni a informatica sono calate del **12,4%** nelle università quadriennali e del **10,4%** ai master. Nello stesso periodo crescono le lauree in ambito sanitario (tra +2% e +6,2%).\n\nE chi l'azienda vuole gestirla? Su [*Moonshots* #307](https://www.youtube.com/watch?v=yHMU5ql7O6o&t=6180s) Diamandis cita il GMAC: candidature ai *full-time MBA* americani **-27%**, dopo due anni di crescita. Gli stranieri crollano del 38% (visti più severi), ma calano anche gli americani (-6%). Nel frattempo l'Europa (Regno Unito escluso) [cresce del 4%](https://poetsandquants.com/2026/10/27/u-s-b-school-apps-plunge-25-as-global-demand-shifts-to-europe-asia/).\n\n**Però, però, però.** Salim Ismail ([1:44:30](https://www.youtube.com/watch?v=yHMU5ql7O6o&t=6270s)) non versa lacrime: le *business school* dovrebbero smettere di formare manager e diventare istituti per imprenditori. Se l'AI scrive il codice e compila il *business plan*, quello che resta da insegnare è come rischiare.\n\nResta il dubbio sul tempismo: chi si iscrive oggi a informatica si laurea nel 2030. Chi ha ragione, i diciottenni che scappano o i professori che restano?\n\nAi posteri l'ardua sentenza. Anzi, ai laureati.",
+   "links": [
+    [
+     "Moonshots #307: AI's Stock Market Fallout, Google's Profit Problem, and Altman's 'Hold My Beer' Moment (YouTube, 31/10/2026)",
+     "https://www.youtube.com/watch?v=yHMU5ql7O6o&t=6180s"
+    ],
+    [
+     "National Student Clearinghouse: Fall 2026 preliminary enrollment trends (29/10/2026)",
+     "https://www.studentclearinghouse.org/news/total-higher-ed-enrollment-holds-steady-in-preliminary-fall-enrollment-trends-report/"
+    ],
+    [
+     "Poets&Quants: U.S. B-School Apps Plunge 25% (27/10/2026)",
+     "https://poetsandquants.com/2026/10/27/u-s-b-school-apps-plunge-25-as-global-demand-shifts-to-europe-asia/"
+    ]
+   ],
+   "backrefs": [
+    [
+     "❔ ff.115.2 Cosa studiare con ChatGPT?",
+     "https://fortissimo.substack.com/i/155700864/ff-cosa-studiare-con-chatgpt"
+    ]
+   ],
+   "checks": [
+    "In puntata si dice «due anni fa le iscrizioni CS undergrad erano calate del 18,4%»: dato confuso/non coerente con NSC, non usato.",
+    "MBA: -27% (full-time, citato in puntata) vs -25% (totale programmi USA, Poets&Quants): perimetri diversi.",
+    "Posizione di Salim Ismail parafrasata."
+   ],
+   "id": "n4",
+   "ord": 21,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "emoji": "🦮",
+   "titolo": "Cani da guerra (su catalogo)",
+   "tema": "natura",
+   "batch": "01/11, podcast",
+   "origine": "podcast: Moonshots",
+   "x_posts": [],
+   "images": [
+    {
+     "src": "assets/p-warhound.jpg",
+     "caption": "L'immagine di lancio di Warhound, «trapelata sei mesi prima», mostrata in puntata.",
+     "credit": "Frame da Moonshots #306 (YouTube), 1:34:47",
+     "href": "https://www.youtube.com/watch?v=WXELsIk4o0g&t=5670s"
+    }
+   ],
+   "body": "Oltre l'80% dei cani da lavoro americani (polizia, soccorso, esercito) arriva dall'Europa. E meno della metà è idonea al servizio: molti vengono scartati per difetti ereditari come displasia dell'anca, vista debole, tumori. Lo racconta Peter Diamandis su [*Moonshots* #306](https://www.youtube.com/watch?v=WXELsIk4o0g&t=5610s).\n\nLa soluzione di Ben Lamm (Colossal, quelli dei mammut e del metalupo) e Palmer Luckey (Anduril)? [Warhound](https://www.prnewswire.com/news-releases/warhound-launches-with-200-million-to-rebuild-americas-military-working-dog-supply-using-advanced-genetics-and-defense-technology-302918435.html): prendere le linee cellulari dei migliori pastori belga Malinois e pastori tedeschi, togliere i geni «difettosi», potenziare resistenza, olfatto, intelligenza, udito. Poi clonare. Lo stesso cane, ogni volta: «un numero di catalogo», dice Diamandis. Anduril ci mette sopra giubbotti, sensori e dati per il conduttore. Lamm: «Colossal costruisce Captain America, Anduril il costume di Iron Man».\n\n[200 milioni di dollari](https://techcrunch.com/2026/10/22/ben-lamm-raises-200m-for-warhound-to-engineer-war-dogs-and-arm-them-with-anduril-gear/) (In-Q-Tel, Sequoia, 8VC e il fondo dello stesso Diamandis), valutazione 1,2 miliardi. Primi cloni a inizio 2027, in servizio entro due anni, con la certificazione dell'American Humane Society.\n\n**Però, però, però.** La clonazione resta un processo poco efficiente, e un buon cane da lavoro è fatto anche di addestramento e carattere, non solo di DNA, ricorda [Scientific American](https://www.scientificamerican.com/article/warhound-wants-to-engineer-and-clone-military-super-dogs-can-they-do-it/). In studio ammettono il problema etico: animali progettati per entrare in zone pericolose, «costruiti per il sacrificio».\n\nIl paradosso lo nota Alex Wissner-Gross: il cane è nato dal lupo selezionando la docilità. Qui si prova a fare il percorso inverso.\n\nClaude Shannon diceva che un giorno saremmo stati i cani dell'AI ([🐕 ff.106.4 Vita da cani](https://fortissimo.substack.com/i/150754650/ff-vita-da-cani)). Intanto i cani li progetta un laboratorio. Dopo i mammut ([🦖 ff.4.3 Mammut resuscitati dall’estinzione](https://fortissimo.substack.com/i/44077581/ff43-mammut-resuscitati-dallestinzione)), tocca al migliore amico dell'uomo.\n\nChi addomestica chi?",
+   "links": [
+    [
+     "Moonshots #306: Anthropic's $2T Cash Machine, the End of Neoclouds, and Chinese Models Catch Up (YouTube, 28/10/2026)",
+     "https://www.youtube.com/watch?v=WXELsIk4o0g&t=5610s"
+    ],
+    [
+     "PR Newswire: Warhound launches with $200 million (23/10/2026)",
+     "https://www.prnewswire.com/news-releases/warhound-launches-with-200-million-to-rebuild-americas-military-working-dog-supply-using-advanced-genetics-and-defense-technology-302918435.html"
+    ],
+    [
+     "TechCrunch: Ben Lamm raises $200M for Warhound (22/10/2026)",
+     "https://techcrunch.com/2026/10/22/ben-lamm-raises-200m-for-warhound-to-engineer-war-dogs-and-arm-them-with-anduril-gear/"
+    ],
+    [
+     "Scientific American: Warhound wants to engineer and clone military super-dogs",
+     "https://www.scientificamerican.com/article/warhound-wants-to-engineer-and-clone-military-super-dogs-can-they-do-it/"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🐕 ff.106.4 Vita da cani",
+     "https://fortissimo.substack.com/i/150754650/ff-vita-da-cani"
+    ],
+    [
+     "🦖 ff.4.3 Mammut resuscitati dall’estinzione",
+     "https://fortissimo.substack.com/i/44077581/ff43-mammut-resuscitati-dallestinzione"
+    ]
+   ],
+   "checks": [
+    "«>80% dall'Europa, <50% idonei» è il dato citato in puntata/comunicato; fonte primaria (DoD) non verificata.",
+    "Conflitto d'interessi: Diamandis investe in Warhound tramite il suo fondo (lo dice lui in puntata).",
+    "Il commento di Wissner-Gross sulla domesticazione è parafrasato; timestamp esatto da ricontrollare."
+   ],
+   "id": "n3",
+   "ord": 20,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null
+  },
+  {
+   "emoji": "⚗️",
+   "titolo": "Tutto ciò che luccica (in reattore)",
+   "tema": "tech",
+   "batch": "01/11, podcast",
+   "origine": "podcast: Moonshots",
+   "x_posts": [],
+   "images": [
+    {
+     "src": "assets/p-oro-marathon.jpg",
+     "caption": "Il reattore di Marathon Fusion «nel centro di San Francisco», mostrato in puntata.",
+     "credit": "Frame da Moonshots #305 (YouTube), 1:55:30",
+     "href": "https://www.youtube.com/watch?v=LeSIe50WfLI&t=6930s"
+    }
+   ],
+   "body": "Non è tutto oro quel che luccica. A meno che non esca da un reattore a fusione.\n\nPer millenni gli alchimisti hanno provato a trasformare metalli qualunque in oro. Il 21 ottobre Marathon Fusion, startup di San Francisco, ha [annunciato su X](https://www.business-standard.com/world-news/us-startup-claims-it-turned-mercury-into-gold-in-lab-using-nuclear-fusion-126102300985_1.html) di averlo fatto. Col mercurio:\n\n> Il mese scorso abbiamo dimostrato l'alchimia ad alto rendimento, trasformando mercurio in vero oro stabile e battendo il record del CERN di un fattore 10.\n>\nMarathon Fusion, letto da Peter Diamandis su [*Moonshots* #305](https://www.youtube.com/watch?v=LeSIe50WfLI&t=6870s) (23/10/2026)\n\nL'idea: rivestire le pareti del reattore di mercurio-198. I neutroni della fusione lo bombardano e una parte degli atomi diventa oro. Secondo il loro paper del 2025, circa **2 tonnellate d'oro all'anno per ogni centrale da un gigawatt**, «potenzialmente raddoppiando i ricavi della centrale». Il primo reattore arriverà ai partner nel 2027, per gli isotopi medicali.\n\n**Però, però, però.** Quanto oro, esattamente? Non si sa: [Marathon non ha diffuso né le quantità né i dati](https://tech.yahoo.com/science/articles/marathon-fusion-claims-mercury-gold-143839034.html), e il *preprint* non è ancora passato dalla revisione paritaria. Il «record del CERN» era di qualche decina di picogrammi di oro instabile. Il reattore di oggi gira a circa 1 kW, non a un gigawatt. E l'oro così ottenuto resterebbe radioattivo per [anni](https://www.business-standard.com/world-news/us-startup-claims-it-turned-mercury-into-gold-in-lab-using-nuclear-fusion-126102300985_1.html) prima di poter finire in gioielleria.\n\nAd Alex Wissner-Gross, però, interessa la scarsità ([1:57:30](https://www.youtube.com/watch?v=LeSIe50WfLI&t=7050s)): sogna un'industria della trasmutazione che mandi i *gold bug* giù dal precipizio e renda l'oro «troppo economico per misurarlo». Diamandis rilancia con l'alluminio: ai banchetti di Napoleone III era il metallo dell'ospite d'onore, e la punta del Washington Monument è d'alluminio perché era il più raro. Oggi ci incartiamo i panini.\n\nAndreessen scriveva che l'AI è «la nostra alchimia, la nostra pietra filosofale» ([➕ ff.81.1 Il tecno-ottimismo](https://fortissimo.substack.com/i/139748848/ff-il-tecno-ottimismo)). Qualcuno l'ha preso alla lettera.\n\n*Gold bug*, siete avvisati.",
+   "links": [
+    [
+     "Moonshots #305: SpaceX's AI Business Up 830%, OpenAI Agents Lie, and Startup Turns Mercury Into Gold (YouTube, 23/10/2026)",
+     "https://www.youtube.com/watch?v=LeSIe50WfLI&t=6870s"
+    ],
+    [
+     "Business Standard: US startup claims it turned mercury into gold (23/10/2026)",
+     "https://www.business-standard.com/world-news/us-startup-claims-it-turned-mercury-into-gold-in-lab-using-nuclear-fusion-126102300985_1.html"
+    ],
+    [
+     "Yahoo Tech: Marathon Fusion claims mercury-to-gold",
+     "https://tech.yahoo.com/science/articles/marathon-fusion-claims-mercury-gold-143839034.html"
+    ]
+   ],
+   "backrefs": [
+    [
+     "➕ ff.81.1 Il tecno-ottimismo",
+     "https://fortissimo.substack.com/i/139748848/ff-il-tecno-ottimismo"
+    ]
+   ],
+   "checks": [
+    "Quantità di oro e dati non divulgati; preprint non peer-reviewed.",
+    "«2 t/anno per GW» e «raddoppio ricavi» sono stime del paper Marathon 2025, non misure.",
+    "Aneddoto Napoleone III/re del Siam: in puntata raccontato in modo confuso; verificare la versione storica.",
+    "Traduzioni delle citazioni: mie."
+   ],
+   "id": "n2",
+   "ord": 19,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null
+  },
+  {
    "emoji": "🌰",
    "titolo": "Un posto al sole (nell'era glaciale)",
    "tema": "natura",
