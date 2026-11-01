@@ -3,6 +3,74 @@
  "aggiornato": "2026-11-01",
  "notes": [
   {
+   "emoji": "🌰",
+   "titolo": "Un posto al sole (nell'era glaciale)",
+   "tema": "Natura",
+   "batch": "01/11, inviato da Michele",
+   "origine": "inviato da Michele",
+   "x_posts": [],
+   "images": [
+    {
+     "src": "assets/n-refugium-screenshot.jpg",
+     "caption": "Lo screenshot che ha fatto partire tutto: la newsletter di The Marginalian, con la frase evidenziata.",
+     "credit": "Maria Popova, The Marginalian (29/10/2026)",
+     "href": "https://www.themarginalian.org/2026/10/29/horse-chestnut-refugium/"
+    },
+    {
+     "src": "assets/n-refugium-ippocastano.jpg",
+     "caption": "Ippocastano (Aesculus hippocastanum): il sopravvissuto delle gole balcaniche.",
+     "credit": "Illustrazione da Die Bäume und Sträucher des Waldes, Gustav Hempel e Karl Wilhelm (1889), via The Marginalian",
+     "href": "https://www.themarginalian.org/2026/10/29/horse-chestnut-refugium/"
+    }
+   ],
+   "chart": {
+    "title": "Superficie delle terre emerse coperta dai ghiacci",
+    "source": "USGS, FAQ sull'ultimo massimo glaciale",
+    "fmt": "{v}%",
+    "items": [
+     {
+      "label": "20.000 anni fa",
+      "value": 25
+     },
+     {
+      "label": "Oggi",
+      "value": 11
+     }
+    ]
+   },
+   "body": "Si dice che, nei momenti difficili, bisogna trovarsi un posto al sole. Anzi, al riparo.\n\nCirca 20.000 anni fa, all'apice dell'ultima glaciazione, i ghiacci coprivano [circa il 25% delle terre emerse (oggi l'11%) e il mare stava oltre 120 metri più in basso di oggi](https://www.usgs.gov/faqs/how-does-present-glacier-extent-and-sea-level-compare-extent-glaciers-and-global-sea-level).\n\n**Però, però, però.** Non dappertutto. Cime di montagna, sorgenti calde, pianure oltre il ghiaccio: sacche di verde dove la vita è andata avanti, e da cui è ripartita quando il ghiaccio si è ritirato. Si chiamano *refugia*. Lo racconta la poetessa Hannah Fries in [*A Forest Language*](https://www.hachettebookgroup.com/titles/hannah-fries/a-forest-language/9781635869811/), ripresa da [Maria Popova su The Marginalian](https://www.themarginalian.org/2026/10/29/horse-chestnut-refugium/):\n\n> Il dono di un rifugio è il tempo. […] Anche in tempi più facili, è saggio curare il rifugio. Cos'è la Terra, dopotutto, se non un rifugio momentaneo nell'inospitale oscurità dello spazio?\n>\nHannah Fries, *[A Forest Language](https://www.hachettebookgroup.com/titles/hannah-fries/a-forest-language/9781635869811/)* (2026)\n\nUn pallido puntino blu (anzi, \"blu-verde\", scrive Fries), direbbe Sagan.\n\nPopova lo racconta con l'ippocastano: con l'inizio dell'era glaciale si è quasi estinto, sopravvivendo in poche gole di montagna in Bulgaria. Lì, al riparo, si è inventato fiori bianchi enormi a cui nessuna ape resiste. Innovare, ma solo dopo essersi messi in salvo.\n\nVi ricordate gli ultimi 22 mila anni di termometro terrestre ([🦣 ff.56.1 Gli ultimi 22k anni di termometro terrestre](https://fortissimo.substack.com/i/105434036/ff-gli-ultimi-k-anni-di-termometro-terrestre))? La fine della glaciazione ci è costata +4°C. Qualcuno, nel frattempo, teneva il posto.\n\nUn posto, una persona, una pratica, una poesia: qualunque sia il vostro *refugium*, scrive Popova, vale la pena curarlo con tutte le forze e tutti i mezzi che avete.\n\nIl vostro qual è?",
+   "links": [
+    [
+     "Maria Popova, What Is Your Refugium?, The Marginalian (29/10/2026)",
+     "https://www.themarginalian.org/2026/10/29/horse-chestnut-refugium/"
+    ],
+    [
+     "Hannah Fries, A Forest Language (Storey Publishing / Hachette, 2026)",
+     "https://www.hachettebookgroup.com/titles/hannah-fries/a-forest-language/9781635869811/"
+    ],
+    [
+     "USGS, ghiacciai e livello del mare nell'ultimo massimo glaciale",
+     "https://www.usgs.gov/faqs/how-does-present-glacier-extent-and-sea-level-compare-extent-glaciers-and-global-sea-level"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🦣 ff.56.1 Gli ultimi 22k anni di termometro terrestre",
+     "https://fortissimo.substack.com/i/105434036/ff-gli-ultimi-k-anni-di-termometro-terrestre"
+    ]
+   ],
+   "checks": [
+    "Traduzione della citazione di Fries fatta da me, non ufficiale.",
+    "Ippocastano: 'gole delle montagne della Bulgaria' e '3 milioni di anni fa' sono di Popova; non verificati su una fonte botanica (l'areale nativo è di solito indicato come Balcani).",
+    "Link al libro: pagina dell'editore, non un link amzn.to come di solito in FF."
+   ],
+   "id": "n1",
+   "num": null,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
    "id": "s1",
    "emoji": "☀️",
    "titolo": "Cento (centrali) di questi giorni",
