@@ -1,0 +1,763 @@
+{
+ "titolo": "Note Futuro Fortissimo",
+ "aggiornato": "2026-11-01",
+ "notes": [
+  {
+   "id": "s1",
+   "emoji": "☀️",
+   "titolo": "Cento (centrali) di questi giorni",
+   "tema": "Energia",
+   "x_posts": [
+    "https://x.com/DrSimEvans/status/2115749317453762759"
+   ],
+   "images": [
+    {
+     "src": "assets/157-1-carbonbrief.png",
+     "caption": "CO2 evitata ogni anno dall'export cinese di tecnologie pulite, per anno di esportazione (MtCO2).",
+     "credit": "Carbon Brief, analisi di Lauri Myllyvirta",
+     "href": "https://www.carbonbrief.org/analysis-chinas-clean-tech-exports-in-2026-to-avoid-as-much-co2-as-brazil-emits-in-a-year/"
+    },
+    {
+     "src": "assets/157-1-simevans.png",
+     "caption": "L'equivalente in centrali a carbone.",
+     "credit": "Simon Evans su X",
+     "href": "https://x.com/DrSimEvans/status/2115749317453762759"
+    }
+   ],
+   "chart": {
+    "title": "Emissioni evitate sulla vita degli impianti, export dell'anno (MtCO2)",
+    "source": "Carbon Brief, 29/10/2026",
+    "items": [
+     {
+      "label": "2024",
+      "value": 5000
+     },
+     {
+      "label": "2025",
+      "value": 6800
+     },
+     {
+      "label": "2026",
+      "value": 8400
+     }
+    ],
+    "fmt": "{v} Mt"
+   },
+   "body": "Cento di questi giorni. Anzi, di queste centrali.\n\n[Secondo un'analisi di Lauri Myllyvirta per Carbon Brief](https://www.carbonbrief.org/analysis-chinas-clean-tech-exports-in-2026-to-avoid-as-much-co2-as-brazil-emits-in-a-year/), i pannelli solari e le turbine eoliche esportati dalla Cina nel 2026 produrranno circa 800 TWh di elettricità all'anno: quanto circa 100 centrali a carbone. [Simon Evans fa il conto](https://x.com/DrSimEvans/status/2115749317453762759): \"2 centrali a carbone a settimana. Solo che queste sono evitate.\"\n\nSull'intera vita degli impianti, l'export cinese di tecnologie pulite del 2026 (solare, eolico, batterie, auto elettriche) eviterà circa 8.400 milioni di tonnellate di CO2: quanto emettono in 1 anno Stati Uniti e India messi insieme. Solo nel 2026, circa 450 milioni: più o meno le emissioni annue del Brasile.\n\n**Però, però, però.** Produrre tutto questo inquina, in Cina. Nel 2025, circa 170 milioni di tonnellate emesse in fabbrica, contro 370 evitate all'estero nello stesso anno: il \"debito\" di CO2 si ripaga in circa 6 mesi. E il 76% delle emissioni evitate finisce nel Sud globale, il 52% tra Asia meridionale e sud-orientale.\n\nVi ricordate l'Egitto che poteva salvarsi solo con l'eolico cinese ([🗽 ff.149.5 Libertà (da gas e petrolio)](https://fortissimo.substack.com/i/194269239/ff1495-liberta-da-gas-e-petrolio))? Non era un caso isolato.\n\nIndipendenza energetica, ma *made in China*?",
+   "links": [
+    [
+     "Carbon Brief, analisi (29/10/2026)",
+     "https://www.carbonbrief.org/analysis-chinas-clean-tech-exports-in-2026-to-avoid-as-much-co2-as-brazil-emits-in-a-year/"
+    ],
+    [
+     "Simon Evans su X",
+     "https://x.com/DrSimEvans/status/2115749317453762759"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🗽 ff.149.5 Libertà (da gas e petrolio)",
+     "https://fortissimo.substack.com/i/194269239/ff1495-liberta-da-gas-e-petrolio"
+    ]
+   ],
+   "checks": [],
+   "batch": "31/10 sera, candidati ff.157",
+   "num": null,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "id": "s2",
+   "emoji": "🚶",
+   "titolo": "I would walk (5.000 miles)",
+   "tema": "Energia",
+   "x_posts": [
+    "https://x.com/abundanceinst/status/2115789414324433247"
+   ],
+   "images": [
+    {
+     "src": "assets/157-2-abundance.jpg",
+     "caption": "Le miglia di rete che servirebbero, in camminate dei Proclaimers.",
+     "credit": "Abundance Institute su X",
+     "href": "https://x.com/abundanceinst/status/2115789414324433247"
+    }
+   ],
+   "chart": {
+    "title": "Linee elettriche ad alta capacità negli USA (miglia all'anno)",
+    "source": "Abundance Institute su X, 30/10/2026",
+    "items": [
+     {
+      "label": "Necessarie",
+      "value": 5000
+     },
+     {
+      "label": "Costruite l'anno scorso",
+      "value": 400
+     },
+     {
+      "label": "1 camminata dei Proclaimers",
+      "value": 500
+     }
+    ],
+    "fmt": "~{v} mi"
+   },
+   "body": "\"*And I would walk 500 miles…*\", cantavano i Proclaimers.\n\nL'Abundance Institute ha preso la canzone alla lettera: [per stare dietro alla domanda di elettricità, gli Stati Uniti dovrebbero costruire quasi 5.000 miglia di nuove linee ad alta capacità ogni anno](https://x.com/abundanceinst/status/2115789414324433247). 10 camminate dei Proclaimers. L'anno scorso ne hanno completate circa 400: l'80% di una camminata sola.\n\n**Però, però, però.** C'è una scorciatoia: sostituire i vecchi cavi sui tralicci esistenti con *conduttori avanzati*. Secondo alcuni studi di settore, su molte linee si potrebbe raddoppiare la capacità a meno della metà del costo per miglio di una linea nuova. Niente nuovi tralicci, niente anni di cantieri.\n\nUna proposta di legge bipartisan (il BAAJA) vorrebbe ridurre gli ostacoli burocratici proprio per questi interventi. [Taylor Barkley ne scrive su The Hill](https://thehill.com/opinion/energy-environment/6175998-improving-american-power-grid-infrastructure/): più elettricità dalle infrastrutture che già esistono.\n\nQuando parlavamo dei 50 milioni di H100 di Musk (35 GW!) ([🌊 ff.135.2 Onda (anomala) energetica](https://fortissimo.substack.com/i/176809376/ff-onda-anomala-energetica)), il problema era produrre l'energia. Ora è anche portarla a destinazione.\n\nCamminare di più, o camminare meglio?",
+   "links": [
+    [
+     "Abundance Institute su X",
+     "https://x.com/abundanceinst/status/2115789414324433247"
+    ],
+    [
+     "Taylor Barkley, The Hill",
+     "https://thehill.com/opinion/energy-environment/6175998-improving-american-power-grid-infrastructure/"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🌊 ff.135.2 Onda (anomala) energetica",
+     "https://fortissimo.substack.com/i/176809376/ff-onda-anomala-energetica"
+    ]
+   ],
+   "checks": [
+    "The Hill non leggibile da qui (bloccato/timeout): i dettagli vengono dal post X. Il nome esteso del BAAJA non è verificato, quindi resta solo la sigla."
+   ],
+   "batch": "31/10 sera, candidati ff.157",
+   "num": null,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "id": "s3",
+   "emoji": "🏋️",
+   "titolo": "Sollevare il cervello",
+   "tema": "Salute",
+   "x_posts": [
+    "https://x.com/siimland/status/2116544219590386089",
+    "https://x.com/siimland/status/2115534671173792057",
+    "https://x.com/foundmyfitness/status/2115783342415139166"
+   ],
+   "images": [
+    {
+     "src": "assets/157-3-springer-fig2.png",
+     "caption": "Il divario di età cerebrale nei 3 gruppi all'inizio, a 1 anno e a 2 anni.",
+     "credit": "Gonzalez-Gomez et al., GeroScience 2026 (Fig. 2)",
+     "href": "https://link.springer.com/article/10.1007/s11357-026-02141-x"
+    },
+    {
+     "src": "assets/157-3-acsm.jpg",
+     "caption": "Le nuove linee guida ACSM sull'allenamento di forza.",
+     "credit": "Siim Land su X",
+     "href": "https://x.com/siimland/status/2115534671173792057"
+    }
+   ],
+   "chart": {
+    "title": "Età cerebrale stimata rispetto all'inizio (anni in meno)",
+    "source": "Gonzalez-Gomez et al., GeroScience, 10/02/2026",
+    "items": [
+     {
+      "label": "Carichi pesanti, 1 anno",
+      "value": 1.4
+     },
+     {
+      "label": "Carichi pesanti, 2 anni",
+      "value": 1.84
+     },
+     {
+      "label": "Carichi moderati, 1 anno",
+      "value": 1.39
+     },
+     {
+      "label": "Carichi moderati, 2 anni",
+      "value": 2.26
+     },
+     {
+      "label": "Controllo",
+      "value": "n.s."
+     }
+    ],
+    "fmt": "−{v}"
+   },
+   "body": "Copenaghen. 309 persone tra i 62 e i 70 anni, appena in pensione, vengono divise a sorte in 3 gruppi: pesi pesanti (3 sessioni supervisionate a settimana), intensità moderata, oppure vita di sempre.\n\nDopo 1 anno di allenamento, [i ricercatori stimano l'età del cervello con la risonanza magnetica funzionale](https://link.springer.com/article/10.1007/s11357-026-02141-x), grazie a un \"orologio cerebrale\" addestrato su altri 2.433 adulti. Il cervello di chi si è allenato sembra più giovane di circa 1,4 anni. E a 2 anni dall'inizio, 1 anno dopo la fine del programma, ancora di più: −1,84 anni con i carichi pesanti, −2,26 con quelli moderati. Nel gruppo di controllo, nessun cambiamento significativo.\n\n**Però, però, però.** È un'età *stimata*, non un rischio di demenza ([come nota Siim Land](https://x.com/siimland/status/2116544219590386089)). E gli autori stessi ricordano che si tratta di adulti sani, europei, di un Paese ricco.\n\nNel frattempo, [l'American College of Sports Medicine ha aggiornato le linee guida sui pesi per la prima volta in 17 anni](https://x.com/siimland/status/2115534671173792057), sulla base di 137 revisioni sistematiche: carichi da almeno l'80% del massimale per la forza, almeno 10 serie a settimana per muscolo per la massa. Arrivare a cedimento non è sempre meglio, e macchine e pesi liberi funzionano entrambi.\n\nAvevamo visto i neuroni andare ghiotti di lattato ([🍼 ff.120.4 Lattato al cervello?](https://fortissimo.substack.com/i/155426992/ff-lattato-al-cervello)). A quanto pare, anche il bilanciere fa la sua parte.",
+   "links": [
+    [
+     "GeroScience 2026, trial LISA",
+     "https://link.springer.com/article/10.1007/s11357-026-02141-x"
+    ],
+    [
+     "Siim Land su X (LISA)",
+     "https://x.com/siimland/status/2116544219590386089"
+    ],
+    [
+     "Siim Land su X (ACSM)",
+     "https://x.com/siimland/status/2115534671173792057"
+    ],
+    [
+     "Rhonda Patrick su X",
+     "https://x.com/foundmyfitness/status/2115783342415139166"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🍼 ff.120.4 Lattato al cervello?",
+     "https://fortissimo.substack.com/i/155426992/ff-lattato-al-cervello"
+    ]
+   ],
+   "checks": [
+    "Siim Land scrive −1,85 anni, il paper −1,84: nel testo c'è −1,84.",
+    "Extra (non nel testo): Rhonda Patrick, studio trasversale su donne di 35-63 anni, dove i pesi si associano a tempi di reazione più rapidi (associazione, non causa)."
+   ],
+   "batch": "31/10 sera, candidati ff.157",
+   "num": null,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "id": "s4",
+   "emoji": "🍪",
+   "titolo": "Spuntini (di movimento)",
+   "tema": "Salute",
+   "x_posts": [
+    "https://x.com/foundmyfitness/status/2115537221839446430"
+   ],
+   "images": [],
+   "chart": null,
+   "body": "Ufficio, ore 15. Finisce una riunione, ne parte subito un'altra. L'ultima volta che vi siete alzati dalla sedia? Il caffè delle 11.\n\n[Rhonda Patrick riassume uno studio](https://x.com/foundmyfitness/status/2115537221839446430): fare degli *exercise snacks*, cioè piccoli spuntini di movimento, ogni 45-60 minuti abbassa la glicemia dopo i pasti più di una singola camminata di 30 minuti, anche a parità di tempo totale. I muscoli aiutano a togliere lo zucchero dal sangue, e rimetterli al lavoro più volte sembra contare. Meglio ancora se lo sforzo è intenso.\n\n**Però, però, però.** Il post non dice di quale studio si tratti. E [un trial crossover del 2026 su 18 giovani sedentari](https://pmc.ncbi.nlm.nih.gov/articles/PMC13092685/) aggiunge una sfumatura: 8 minuti di camminata veloce ogni ora abbassano la glicemia durante la giornata, ma sulle 26 ore l'effetto non è significativo. Alternando camminata ed esercizi di forza, invece, la glicemia (come area sotto la curva) scende del 17,3%.\n\nDi picchi glicemici e di come evitarli avevamo parlato con Jessie Inchauspé ([🎢 ff.145.3 Picchi glicemici (e come evitarli)](https://fortissimo.substack.com/i/187751091/ff-picchi-glicemici-e-come-evitarli)).\n\nNon solo quanto vi muovete, ma quanto spesso. Squat alla scrivania?",
+   "links": [
+    [
+     "Rhonda Patrick su X",
+     "https://x.com/foundmyfitness/status/2115537221839446430"
+    ],
+    [
+     "J Exerc Sci Fit 2026, trial crossover",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC13092685/"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🎢 ff.145.3 Picchi glicemici (e come evitarli)",
+     "https://fortissimo.substack.com/i/187751091/ff-picchi-glicemici-e-come-evitarli"
+    ]
+   ],
+   "checks": [
+    "Lo studio citato da Rhonda Patrick non è linkato: trovarlo prima di pubblicare. Il trial del 2026 è una fonte diversa (doi 10.1016/j.jesf.2026.200464)."
+   ],
+   "batch": "31/10 sera, candidati ff.157",
+   "num": null,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "id": "s5",
+   "emoji": "🦊",
+   "titolo": "La toppa peggio del buco",
+   "tema": "AI e sicurezza",
+   "x_posts": [
+    "https://x.com/EpochAIResearch/status/2115921730682404869"
+   ],
+   "images": [],
+   "chart": null,
+   "body": "Quando un buco viene chiuso, la toppa si vede. E a volte indica esattamente dove stava il buco.\n\nSi chiama *patch gap*: il tempo che passa tra il momento in cui una correzione di sicurezza compare nel codice pubblico e quello in cui arriva davvero sui computer di tutti. Finora, sfruttarlo richiedeva tempo e grande abilità.\n\n**Però, però, però.** [Epoch AI ha messo alla prova GLM 5.3](https://epoch.ai/publications/open-weight-models-patch-gap), un modello *open-weight* di Z.ai che chiunque può scaricare. Risultato: exploit funzionanti per tutte e 6 le versioni di Firefox uscite tra il 17 settembre e il 26 ottobre. Basta visitare una pagina web e l'attaccante può leggere i file del computer, comprese le password e i cookie salvati. Costo: circa 1.000 $ a versione. Su un limite di 48 ore, al tentativo più rapido ne sono bastate 12. Il modello non ha mai rifiutato. Su Chrome, per ora, non ha funzionato.\n\n[Mozilla ha già risposto](https://blog.mozilla.org/en/firefox/privacy-security/defending-patch-gap/): rilasci ogni settimana, test tenuti riservati fino alla correzione e soprattutto correzioni scaglionate, così che i pezzi necessari a un attacco non siano mai scoperti tutti insieme. La vulnerabilità inedita trovata dal modello è stata chiusa con Firefox 159.0, il 27 ottobre.\n\nAd aprile Claude Mythos era \"non per tutti\" ([🐉 ff.148.1 Claude Mythos: non per tutti](https://fortissimo.substack.com/i/193567489/ff-claude-mythos-non-per-tutti)). Sei mesi dopo, qualcosa di simile è alla portata di molti.\n\nPS. Aggiornate il browser.",
+   "links": [
+    [
+     "Epoch AI, report (29/10/2026)",
+     "https://epoch.ai/publications/open-weight-models-patch-gap"
+    ],
+    [
+     "Mozilla, Defending the patch gap",
+     "https://blog.mozilla.org/en/firefox/privacy-security/defending-patch-gap/"
+    ],
+    [
+     "Epoch AI su X",
+     "https://x.com/EpochAIResearch/status/2115921730682404869"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🐉 ff.148.1 Claude Mythos: non per tutti",
+     "https://fortissimo.substack.com/i/193567489/ff-claude-mythos-non-per-tutti"
+    ],
+    [
+     "🤯 ff.155.2 Virus mentali (dell'AI)",
+     "https://fortissimo.substack.com/i/212236687/ff1552-virus-mentali-dellai"
+    ]
+   ],
+   "checks": [
+    "Nessuna immagine utile: quella di Epoch è solo decorativa. Il post X embeddato basta."
+   ],
+   "batch": "31/10 sera, candidati ff.157",
+   "num": null,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "id": "s6",
+   "emoji": "👻",
+   "titolo": "Censimento dei fantasmi",
+   "tema": "AI e curiosità",
+   "x_posts": [
+    "https://x.com/emollick/status/2116537058433081669"
+   ],
+   "images": [
+    {
+     "src": "assets/157-6-ghost-census.png",
+     "caption": "The Ghost Census: quante persone sono morte entro 100 metri da un punto.",
+     "credit": "ghost-census.netlify.app",
+     "href": "https://ghost-census.netlify.app/"
+    }
+   ],
+   "chart": null,
+   "body": "Halloween è passato (o Aulin, come diceva il nonno: [🎼 ff.156 Aulin?](https://fortissimo.substack.com/p/ff156-aulin)). Resta una domanda da brividi: quante persone sono morte sotto casa vostra?\n\n[Ethan Mollick ha chiesto a Opus 5.5 un progetto \"spaventoso\"](https://x.com/emollick/status/2116537058433081669), ispirato al suo lavoro. Risposta: un censimento dei fantasmi. Con [The Ghost Census](https://ghost-census.netlify.app/) scegliete un punto sulla mappa e scoprite quante persone sono morte entro 100 metri, dalla preistoria fino a Halloween 1926. I morti dell'ultimo secolo li lascia in pace.\n\nI conti si basano sulla storia della popolazione mondiale dal 10.000 a.C. (il dataset HYDE), su circa 1.600 città storiche e su circa 300 battaglie, assedi ed epidemie. Ogni stima viene ripetuta 1.500 volte per ottenere una forbice.\n\n**Però, però, però.** Il totale fa circa 55-56 miliardi di morti prima del 1926 (forbice plausibile: 45-75 miliardi). Molti meno dei 117 miliardi di \"persone mai nate\" che si citano di solito: quel numero conta anche chi è nato dopo, e presuppone tassi di natalità preistorici irrealistici.\n\nCon Calvino ci chiedevamo se la macchina potesse scrivere come noi ([👻 ff.146.2 Fantasmi e Calvino](https://fortissimo.substack.com/i/186303579/ff-fantasmi-e-calvino)). Ora i fantasmi li conta, uno a uno.",
+   "links": [
+    [
+     "Ethan Mollick su X",
+     "https://x.com/emollick/status/2116537058433081669"
+    ],
+    [
+     "The Ghost Census",
+     "https://ghost-census.netlify.app/"
+    ]
+   ],
+   "backrefs": [
+    [
+     "👻 ff.146.2 Fantasmi e Calvino",
+     "https://fortissimo.substack.com/i/186303579/ff-fantasmi-e-calvino"
+    ],
+    [
+     "🎼 ff.156 Aulin?",
+     "https://fortissimo.substack.com/p/ff156-aulin"
+    ]
+   ],
+   "checks": [
+    "Il sito scrive ~55 miliardi in home e ~56 nei metodi: nel testo c'è 55-56."
+   ],
+   "batch": "31/10 sera, candidati ff.157",
+   "num": null,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "id": "s7",
+   "emoji": "🧪",
+   "titolo": "Pipetta, che capriccio!",
+   "tema": "Scienza",
+   "x_posts": [
+    "https://x.com/AsimovPress/status/2115481046271795300",
+    "https://x.com/emollick/status/2115594672471195779"
+   ],
+   "images": [
+    {
+     "src": "assets/157-7-asimov-1.jpg",
+     "caption": "Dal post di Asimov Press sulla nascita della micropipetta.",
+     "credit": "Asimov Press su X",
+     "href": "https://x.com/AsimovPress/status/2115481046271795300"
+    },
+    {
+     "src": "assets/157-7-asimov-2.jpg",
+     "caption": "Dal post di Asimov Press.",
+     "credit": "Asimov Press su X",
+     "href": "https://x.com/AsimovPress/status/2115481046271795300"
+    }
+   ],
+   "chart": null,
+   "body": "1957. Heinrich Schnitger, *postdoc* tedesco di 32 anni, sta pipettando. Con la bocca, come si faceva allora. A un certo punto perde la pazienza, sparisce dal laboratorio e torna 2 giorni dopo [con un attrezzo disegnato da lui](https://x.com/AsimovPress/status/2115481046271795300).\n\nIl brevetto arriva nel 1961. Dentro c'è già tutta la micropipetta moderna: pistone a molla, una seconda molla per espellere le ultime gocce, puntale di plastica. A diffonderla in tutto il mondo, più dell'idea, fu l'accordo con Eppendorf.\n\nStessa storia per il *vortex*: Jack e Harold Kraft lo disegnano il 20 ottobre 1958 e 3 giorni dopo hanno il prototipo, con lo stesso motorino dei giradischi.\n\n**Però, però, però.** Queste storie (e quella dei pantaloncini di taffetà cuciti per le rane) sono raccolte in [*Making the Modern Laboratory*, il nuovo libro di Asimov Press](https://press.asimov.com/articles/modern-lab): 504 pagine, 54 saggi, 36 autori. Stampato in Italia, da Grafiche Veneziane.\n\nIntanto [Ethan Mollick osserva](https://x.com/emollick/status/2115594672471195779) che l'AI, a differenza dei ricercatori, non è costretta a puntare su studi \"sicuri\", e che questo cambia il modo di fare scienza. Ne parlavamo con l'AI Scientist da 15 $ a paper ([🔭 ff.102.3 Automatizzare la ricerca scientifica](https://fortissimo.substack.com/i/145306452/ff-automatizzare-la-ricerca-scientifica)).\n\nIl laboratorio del futuro nascerà dal prossimo capriccio?",
+   "links": [
+    [
+     "Asimov Press su X",
+     "https://x.com/AsimovPress/status/2115481046271795300"
+    ],
+    [
+     "Asimov Press, Making the Modern Laboratory",
+     "https://press.asimov.com/articles/modern-lab"
+    ],
+    [
+     "Ethan Mollick su X",
+     "https://x.com/emollick/status/2115594672471195779"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🔭 ff.102.3 Automatizzare la ricerca scientifica",
+     "https://fortissimo.substack.com/i/145306452/ff-automatizzare-la-ricerca-scientifica"
+    ]
+   ],
+   "checks": [],
+   "batch": "31/10 sera, candidati ff.157",
+   "num": null,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "id": "s8",
+   "emoji": "🫧",
+   "titolo": "Bolla (solo) AI?",
+   "tema": "Finanza",
+   "x_posts": [
+    "https://x.com/KobeissiLetter/status/2116567209367445876",
+    "https://x.com/Schuldensuehner/status/2116529278238248981",
+    "https://x.com/KobeissiLetter/status/2116357848464601125"
+   ],
+   "images": [
+    {
+     "src": "assets/157-8-kobeissi.png",
+     "caption": "S&P 500 senza AI ai massimi.",
+     "credit": "The Kobeissi Letter su X",
+     "href": "https://x.com/KobeissiLetter/status/2116567209367445876"
+    },
+    {
+     "src": "assets/157-8-schuldensuehner.jpg",
+     "caption": "Performance da inizio anno, dividendi inclusi.",
+     "credit": "@Schuldensuehner su X",
+     "href": "https://x.com/Schuldensuehner/status/2116529278238248981"
+    }
+   ],
+   "chart": {
+    "title": "Performance 2026 da inizio anno, dividendi inclusi (%)",
+    "source": "@Schuldensuehner su X, 31/10/2026",
+    "items": [
+     {
+      "label": "S&P 500 equipesato",
+      "value": 15.3
+     },
+     {
+      "label": "S&P 500 senza AI",
+      "value": 14.2
+     },
+     {
+      "label": "S&P 500",
+      "value": 11.8
+     }
+    ],
+    "fmt": "+{v}%"
+   },
+   "body": "Vi ricordate quando anche il parrucchiere vi chiedeva di NVIDIA ([🧩 ff.88.1 Una bolla finanziaria?](https://fortissimo.substack.com/i/142632080/ff-una-bolla-finanziaria))?\n\nOttobre 2026: [secondo The Kobeissi Letter](https://x.com/KobeissiLetter/status/2116567209367445876), in 25 giorni il Nasdaq 100 ha bruciato 4.000 miliardi di dollari, e i titoli legati all'AI hanno perso oltre il 13% nel mese. Un mercato ribassista \"invisibile\".\n\n**Però, però, però.** Nello stesso mese l'S&P 500 *senza* AI ha guadagnato l'8%, e venerdì ha toccato il suo massimo storico. [I conti da inizio anno](https://x.com/Schuldensuehner/status/2116529278238248981): +14,2% per l'S&P 500 senza AI, contro +11,8% per l'indice intero. La versione equipesata, dove ogni azienda conta uguale, fa +15,3% (dividendi inclusi).\n\nIntanto, [riporta il Financial Times](https://x.com/KobeissiLetter/status/2116357848464601125), OpenAI ha ridotto l'obiettivo del nuovo round da 30 a 20 miliardi di dollari, e la valutazione da 1.400 a 1.250 miliardi. A poche settimane dalla quotazione attesa di Anthropic.\n\nBolla dell'AI, o bolla *solo* dell'AI? C'è vita oltre l'AI, a quanto pare.",
+   "links": [
+    [
+     "The Kobeissi Letter su X (S&P ex-AI)",
+     "https://x.com/KobeissiLetter/status/2116567209367445876"
+    ],
+    [
+     "@Schuldensuehner su X",
+     "https://x.com/Schuldensuehner/status/2116529278238248981"
+    ],
+    [
+     "The Kobeissi Letter su X (OpenAI, via FT)",
+     "https://x.com/KobeissiLetter/status/2116357848464601125"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🧩 ff.88.1 Una bolla finanziaria?",
+     "https://fortissimo.substack.com/i/142632080/ff-una-bolla-finanziaria"
+    ]
+   ],
+   "checks": [
+    "Si sovrappone a 🔍 Search e distruggi (bozza del mattino): la perdita di Alphabet in un giorno è −525 mld $ nella bozza e −480 mld $ secondo Kobeissi. Verificare prima di usarle entrambe.",
+    "FT non letto direttamente: le cifre su OpenAI arrivano via Kobeissi."
+   ],
+   "batch": "31/10 sera, candidati ff.157",
+   "num": null,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "id": "r1",
+   "emoji": "🔥",
+   "titolo": "Gas tedesco (riserva)",
+   "tema": "Energia",
+   "riserva": true,
+   "x_posts": [
+    "https://x.com/Schuldensuehner/status/2116448118694609202"
+   ],
+   "images": [
+    {
+     "src": "assets/157-r-gas.png",
+     "caption": "Prezzo all'ingrosso del gas in Germania.",
+     "credit": "@Schuldensuehner su X",
+     "href": "https://x.com/Schuldensuehner/status/2116448118694609202"
+    }
+   ],
+   "chart": null,
+   "body": "Germania, fine ottobre. [Il gas all'ingrosso è tornato a 100 €/MWh](https://x.com/Schuldensuehner/status/2116448118694609202), ai livelli della crisi di dicembre 2022.\n\nGli stoccaggi sono pieni solo al 62% circa: il livello stagionale più basso da quando esistono i dati (2009), sotto l'obiettivo del 70% fissato per il 1° novembre. La ministra Reiche promette che non ci saranno carenze.\n\n**Però, però, però.** Avere abbastanza gas e pagarlo poco sono due cose diverse. E l'inverno è appena cominciato.\n\nCollegamento possibile con ☀️ Cento (centrali) di questi giorni e con [🗽 ff.149.5 Libertà (da gas e petrolio)](https://fortissimo.substack.com/i/194269239/ff1495-liberta-da-gas-e-petrolio).",
+   "links": [
+    [
+     "@Schuldensuehner su X",
+     "https://x.com/Schuldensuehner/status/2116448118694609202"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🗽 ff.149.5 Libertà (da gas e petrolio)",
+     "https://fortissimo.substack.com/i/194269239/ff1495-liberta-da-gas-e-petrolio"
+    ]
+   ],
+   "checks": [
+    "Riserva, con una sola fonte. Il testo è corto apposta."
+   ],
+   "batch": "31/10 sera, riserva",
+   "num": null,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "id": "m1",
+   "batch": "31/10 mattina, bozze ff.157",
+   "emoji": "🍕",
+   "num": "ff.157.1",
+   "titolo": "Settantamila e non sentirli",
+   "stato": "bozza consegnata",
+   "done": false,
+   "used_in": null,
+   "x_posts": [
+    "https://x.com/Rainmaker1973/status/2108811986461159547",
+    "https://x.com/IChenuil/status/2108868072459100291"
+   ],
+   "images": [],
+   "chart": null,
+   "body": "Sabato sera, ore 20:30. Il solito dilemma: la margherita della pizzeria sotto casa o quella nuova, a 2 isolati?\n\nQualcuno ha allargato lo sguardo e [ha messo su un'unica mappa tutte le pizzerie d'Italia](https://x.com/Rainmaker1973/status/2108811986461159547). 1 puntino per locale.\n\n**Però, però, però.** [Un utente ha fatto due conti](https://x.com/IChenuil/status/2108868072459100291): anche andando in 2 pizzerie al giorno (pranzo e cena), 365 giorni l'anno, per 50 anni, ne visitereste \"solo\" 36.500. Su circa 70.000.\n\nInsomma, 1 vita non basta: ne servirebbero almeno 2. Ai posteri (e ai loro stomaci) l'ardua sentenza.",
+   "links": [
+    [
+     "ha messo su un'unica mappa tutte le pizzerie d'Italia",
+     "https://x.com/Rainmaker1973/status/2108811986461159547"
+    ],
+    [
+     "Un utente ha fatto due conti",
+     "https://x.com/IChenuil/status/2108868072459100291"
+    ]
+   ],
+   "backrefs": [],
+   "checks": []
+  },
+  {
+   "id": "m2",
+   "batch": "31/10 mattina, bozze ff.157",
+   "emoji": "🔍",
+   "num": "ff.157.2",
+   "titolo": "Search e distruggi",
+   "stato": "bozza consegnata",
+   "done": false,
+   "used_in": null,
+   "x_posts": [
+    "https://x.com/KobeissiLetter/status/2116139805516210579",
+    "https://x.com/Schuldensuehner/status/2116144902232805736",
+    "https://x.com/emollick/status/2116241785647231160"
+   ],
+   "images": [],
+   "chart": null,
+   "body": "Giovedì 29 ottobre, *earnings call* di Reddit. Il CEO, a microfoni aperti, [ammette](https://x.com/KobeissiLetter/status/2116139805516210579):\n\n> \"L'AI mode non porta traffico. Né a noi, né a nessuno, per quanto ne so. Una volta lo faceva. Ora no.\"\n\n**Però, però, però.** A pagare il conto è anche chi l'AI mode l'ha inventato: [Alphabet ha perso il 12,6% nella peggior seduta della sua storia](https://x.com/Schuldensuehner/status/2116144902232805736), bruciando 525 miliardi di dollari, con i ricavi della ricerca sotto le attese.\n\nCirca 1 anno e mezzo fa scrivevamo che Search valeva il 50% del business di Google ([🐦 ff.126.2 Non è la fine di Google](https://fortissimo.substack.com/i/164288050/ff-non-e-la-fine-di-google)). Ora qualcuno si chiede se il web aperto esisterà ancora tra 10 anni. [Ethan Mollick risponde](https://x.com/emollick/status/2116241785647231160): \"Purtroppo, credo di no.\" E consiglia di rifugiarsi in qualche Discord privato, \"con veri umani\".\n\nPizzeria sotto casa, 2.0?",
+   "links": [
+    [
+     "ammette",
+     "https://x.com/KobeissiLetter/status/2116139805516210579"
+    ],
+    [
+     "Alphabet ha perso il 12,6% nella peggior seduta della sua storia",
+     "https://x.com/Schuldensuehner/status/2116144902232805736"
+    ],
+    [
+     "Ethan Mollick risponde",
+     "https://x.com/emollick/status/2116241785647231160"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🐦 ff.126.2 Non è la fine di Google",
+     "https://fortissimo.substack.com/i/164288050/ff-non-e-la-fine-di-google"
+    ]
+   ],
+   "checks": [
+    "Perdita di Alphabet: −525 mld $ qui, −480 mld $ secondo Kobeissi (vedi 🫧 Bolla (solo) AI?). Verificare."
+   ]
+  },
+  {
+   "id": "m3",
+   "batch": "31/10 mattina, bozze ff.157",
+   "emoji": "🫀",
+   "num": "ff.157.3",
+   "titolo": "Cuore, spegni la luce",
+   "stato": "bozza consegnata",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null,
+   "body": "Ore 2 di notte. Il lampione filtra dalle tapparelle, lo smartphone si accende per l'ennesima notifica.\n\n[Uno studio su 11.071 partecipanti della UK Biobank](https://doi.org/10.1093/eurheartj/ehag563), con un sensore di luce al polso per 7 giorni, associa la luce notturna (oltre 3 *lux*) a un cuore più \"spesso\" e che si contrae peggio. Su 73.286 persone seguite per 8-10 anni, chi era più esposto aveva il 29% di rischio in più di scompenso cardiaco e il 33% in più di ictus. In parte, a quanto pare, perché dorme meno.\n\n**Però, però, però.** Il cuore sa anche tornare indietro. [Nel trial FLOWPROMOTE](https://doi.org/10.1001/jamacardio.2026.4788), su 104 pazienti per 18 mesi, la placca coronarica è regredita in entrambi i gruppi, ma di più dove l'LDL è sceso del 65% rispetto al 38%.\n\nDi zuccheri, vene rigide e VO2max avevamo parlato in ([💕 ff.120.3 Questioni di cuore](https://fortissimo.substack.com/i/155426992/ff-questioni-di-cuore)). Ora aggiungete 1 cosa alla lista: abbassare le tapparelle.",
+   "links": [
+    [
+     "Uno studio su 11.071 partecipanti della UK Biobank",
+     "https://doi.org/10.1093/eurheartj/ehag563"
+    ],
+    [
+     "Nel trial FLOWPROMOTE",
+     "https://doi.org/10.1001/jamacardio.2026.4788"
+    ]
+   ],
+   "backrefs": [
+    [
+     "💕 ff.120.3 Questioni di cuore",
+     "https://fortissimo.substack.com/i/155426992/ff-questioni-di-cuore"
+    ]
+   ],
+   "checks": []
+  },
+  {
+   "id": "m4",
+   "batch": "31/10 mattina, bozze ff.157",
+   "emoji": "💉",
+   "num": "ff.157.4",
+   "titolo": "mRNA su misura",
+   "stato": "bozza consegnata",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null,
+   "body": "Hyderabad, India: un laboratorio che può lavorare 24 ore su 24 per produrre 1 vaccino alla volta, per 1 paziente alla volta.\n\nVi ricordate la terapia personalizzata a mRNA contro le recidive del melanoma ([💉 ff.155.4 Modernità contro il cancro](https://fortissimo.substack.com/i/212236687/ff1554-modernita-contro-il-cancro))? Le approvazioni, per molti tipi di tumore, rischiano di arrivare troppo tardi per chi è malato oggi.\n\n**Però, però, però.** È appena nata [RNA Foundry](https://rnafoundry.com), progetto della biotech PopVax (finanziata, tra gli altri, da Gates Foundation e Vitalik Buterin): produce vaccini anti-cancro a mRNA personalizzati, per pazienti che seguono vie come l'uso compassionevole. Capacità: oltre 100 vaccini nei prossimi 12 mesi. La sequenza può disegnarla anche un'AI, partendo dal sequenziamento del tumore. Le fiale restano stabili per più di 9 mesi in un normale frigo (2-8 °C).\n\nCura approvata? Non ancora. Intanto, 1 paziente, 1 vaccino suona molto da futuro fortissimo.",
+   "links": [
+    [
+     "RNA Foundry",
+     "https://rnafoundry.com"
+    ]
+   ],
+   "backrefs": [
+    [
+     "💉 ff.155.4 Modernità contro il cancro",
+     "https://fortissimo.substack.com/i/212236687/ff1554-modernita-contro-il-cancro"
+    ]
+   ],
+   "checks": []
+  },
+  {
+   "id": "m5",
+   "batch": "31/10 mattina, bozze ff.157",
+   "emoji": "🧠",
+   "num": "ff.157.5",
+   "titolo": "Cervelli in vasca (di silicio)",
+   "stato": "bozza consegnata",
+   "done": false,
+   "used_in": null,
+   "x_posts": [
+    "https://x.com/AlexKsendzovsky/status/2116153410101944352"
+   ],
+   "images": [],
+   "chart": null,
+   "body": "San Francisco. Su un chip, un piattino di neuroni vivi \"guarda\" immagini e video trasformati in impulsi elettrici. Da 4 anni, ogni scarica viene registrata.\n\nIl risultato si chiama [mischief 1: un modello video che parte da mezzo centesimo al secondo](https://x.com/AlexKsendzovsky/status/2116153410101944352) e che, secondo l'azienda (TBC), è almeno 5 volte più veloce.\n\n**Però, però, però.** I neuroni restano in laboratorio. [Come racconta chi l'ha già usato in produzione](https://tbc-green-models.vercel.app), da quell'attività si ricavano algoritmi che migliorano modelli *open source*, aggiungendo meno dello 0,1% alle loro dimensioni. Lui li chiama *green models*: un cervello umano consuma circa 20 W, una GPU H100 a pieno regime 700 W.\n\nQualche anno fa usavamo l'AI per capire il cervello ([🔎 ff.83.5 Capire il cervello con l'AI](https://fortissimo.substack.com/i/140010460/ff-capire-il-cervello-con-lai)). Oggi il percorso si inverte: sono i neuroni a fare da insegnanti. Prossimo passo: 1 neurone, 1 *frame*?",
+   "links": [
+    [
+     "mischief 1: un modello video che parte da mezzo centesimo al secondo",
+     "https://x.com/AlexKsendzovsky/status/2116153410101944352"
+    ],
+    [
+     "Come racconta chi l'ha già usato in produzione",
+     "https://tbc-green-models.vercel.app"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🔎 ff.83.5 Capire il cervello con l'AI",
+     "https://fortissimo.substack.com/i/140010460/ff-capire-il-cervello-con-lai"
+    ]
+   ],
+   "checks": []
+  },
+  {
+   "id": "m6",
+   "batch": "31/10 mattina, bozze ff.157",
+   "emoji": "🎤",
+   "num": "ff.157.6",
+   "titolo": "Karaoke artificiale",
+   "stato": "bozza consegnata",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null,
+   "body": "Giappone, inizio anni '70. Il titolare di una piccola ferriera prepara la festa aziendale. L'intrattenimento? Lui, che canta. Malissimo.\n\nIl musicista che di solito lo accompagna al bar, Daisuke Inoue, quel giorno non può esserci: registra le basi su nastro. Nel 1972 nasce l'\"8-Juke\": brani selezionabili all'istante, gettoniera, testi scritti a mano e, misericordiosamente, un po' di riverbero.\n\n**Però, però, però.** Il karaoke (da *kara*, vuoto, e *oke*, orchestra) ha sì sostituito qualche musicista nei bar. Ma, [racconta l'Abundance Institute](https://abundance.institute/our-work/the-empty-orchestra-the-machine-that-made-more-performers/), ha trasformato milioni di ascoltatori in interpreti: dagli anni '80, nei *karaoke box*, cantano casalinghe, adolescenti, famiglie e anziani.\n\nRick Rubin paragonava l'AI alla rivoluzione del jazz ([🤘 ff.127.2 Rock 'n' roll e vibe coding](https://fortissimo.substack.com/i/165079348/ff-rock-n-roll-e-vibe-coding)). Forse con la musica generata andrà come nel 1972: meno orchestrali, più cantanti. Stonati, s'intende.",
+   "links": [
+    [
+     "racconta l'Abundance Institute",
+     "https://abundance.institute/our-work/the-empty-orchestra-the-machine-that-made-more-performers/"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🤘 ff.127.2 Rock 'n' roll e vibe coding",
+     "https://fortissimo.substack.com/i/165079348/ff-rock-n-roll-e-vibe-coding"
+    ]
+   ],
+   "checks": []
+  },
+  {
+   "id": "m7",
+   "batch": "31/10 mattina, bozze ff.157",
+   "emoji": "🪙",
+   "num": "ff.157.7",
+   "titolo": "È tutto un token (la vendetta)",
+   "stato": "bozza consegnata",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null,
+   "body": "Una raffineria: da una parte il greggio, dall'altra la benzina. Nel mondo delle materie prime, la differenza di prezzo tra i 2 si chiama *crack spread*.\n\na16z ha coniato la versione AI, il *Rack Spread*: le GPU sono il greggio, i token la benzina. [Da metà luglio](https://www.a16z.news/p/charts-of-the-week-job-fud-fades), l'affitto delle GPU B300 è salito del 106%, mentre il prezzo medio dei token è sceso del 58%. I mercati ci leggono una domanda in calo.\n\n**Però, però, però.** Token più economici, ma in volumi crescenti. Con un calcolo \"da tovagliolo\", la spesa in token risulta cresciuta di circa il 160% da maggio. Anche i dati di spesa sono rumorosi: per la Fed di Atlanta, si spendono in media oltre 1.000 $ di AI per dipendente; per Ramp, 188 $ l'anno (mediana).\n\nAd agosto scrivevamo che l'economia del futuro si sarebbe basata sullo spremere i token ([🪚 ff.153.1 Le seghe mentali di Claude](https://fortissimo.substack.com/i/209629730/ff1531-le-seghe-mentali-di-claude)). Chi ha ragione? Ai posteri l'ardua sentenza.",
+   "links": [
+    [
+     "Da metà luglio",
+     "https://www.a16z.news/p/charts-of-the-week-job-fud-fades"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🪚 ff.153.1 Le seghe mentali di Claude",
+     "https://fortissimo.substack.com/i/209629730/ff1531-le-seghe-mentali-di-claude"
+    ]
+   ],
+   "checks": []
+  },
+  {
+   "id": "m8",
+   "batch": "31/10 mattina, bozze ff.157",
+   "emoji": "🧶",
+   "num": "ff.157.8",
+   "titolo": "Tessitori a mano",
+   "stato": "bozza consegnata",
+   "done": false,
+   "used_in": null,
+   "x_posts": [
+    "https://x.com/DavidJPete/status/2113791410520588330"
+   ],
+   "images": [],
+   "chart": null,
+   "body": "Domanda da 1 milione di dollari: \"Cosa farai quando l'AI si prenderà tutti i lavori?\" [La risposta della Gen X](https://x.com/DavidJPete/status/2113791410520588330): \"Boh, *I guess* esco. Fino all'ora di cena.\"\n\nSecondo un sondaggio Pew, il 71% degli americani si aspetta meno posti di lavoro nei prossimi 20 anni. Ethan Mollick, [intervistato da Vox](https://www.vox.com/technology/508032/ai-jobs-ethan-mollick-co-existence) sul suo nuovo libro *Co-Existence*, la mette così: chi amava scrivere codice riga per riga è \"un tessitore a mano in un mondo di telai meccanici\".\n\n**Eppure,** [secondo a16z](https://www.a16z.news/p/charts-of-the-week-job-fud-fades), il panico da AI ha toccato il picco a maggio: ad agosto e settembre, i licenziamenti attribuiti esplicitamente all'AI sono stati i più bassi dell'anno. Da ottobre 2025, le offerte per ingegneri sono cresciute di circa il 30%.\n\nSul lavoro ci eravamo già interrogati in ([🔥 ff.62.1 Il lavoro non è mai stato così importante](https://fortissimo.substack.com/i/118479393/ff-il-lavoro-non-e-mai-stato-cosi-importante)). Il consiglio di a16z: imparate a programmare, a saldare e a far esplodere le cose. Io, intanto, esco in bici. Fino all'ora di cena.",
+   "links": [
+    [
+     "La risposta della Gen X",
+     "https://x.com/DavidJPete/status/2113791410520588330"
+    ],
+    [
+     "intervistato da Vox",
+     "https://www.vox.com/technology/508032/ai-jobs-ethan-mollick-co-existence"
+    ],
+    [
+     "secondo a16z",
+     "https://www.a16z.news/p/charts-of-the-week-job-fud-fades"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🔥 ff.62.1 Il lavoro non è mai stato così importante",
+     "https://fortissimo.substack.com/i/118479393/ff-il-lavoro-non-e-mai-stato-cosi-importante"
+    ]
+   ],
+   "checks": []
+  }
+ ]
+}

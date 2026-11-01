@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Note · Futuro Fortissimo</title>
+<style>
+:root{--bg:#faf8f4;--ink:#1d1b18;--muted:#6f6a62;--line:#e6e1d8;--acc:#b2361f;--ok:#2f7a4a;--card:#fff;--chip:#f1ede6}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,"Iowan Old Style","Times New Roman",serif}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 80px}
+header.top h1{font-size:30px;line-height:1.15;margin:0 0 6px;letter-spacing:-.01em}
+header.top p{margin:0;color:var(--muted);font:14px/1.5 -apple-system,system-ui,sans-serif}
+.bar{position:sticky;top:0;z-index:5;background:rgba(250,248,244,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);margin:18px -18px 22px;padding:10px 18px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font:14px -apple-system,system-ui,sans-serif}
+.bar button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer;color:var(--ink)}
+.bar button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.bar .count{margin-left:auto;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;margin:0 0 26px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.card.done{opacity:.72}
+.meta{display:flex;gap:6px;flex-wrap:wrap;font:12px/1 -apple-system,system-ui,sans-serif;margin-bottom:12px}
+.chip{background:var(--chip);border-radius:999px;padding:6px 10px;color:var(--muted)}
+.chip.st{color:#7a4b00;background:#fbefd9}
+.chip.bz{color:#1f4e8c;background:#e3edfa}
+.chip.ok{color:#fff;background:var(--ok)}
+.chip.rs{color:#6b3a8c;background:#f0e6f7}
+h2{font-size:23px;line-height:1.25;margin:0 0 14px}
+h2 .num{color:var(--acc);font-weight:normal}
+.body p{margin:0 0 14px}
+.body blockquote{margin:0 0 14px;padding:2px 0 2px 14px;border-left:3px solid var(--acc);color:#3d3a35;font-style:italic}
+.body a{color:var(--acc);text-decoration-thickness:1px;text-underline-offset:2px}
+.copyrow{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px;font:13px -apple-system,system-ui,sans-serif}
+.copyrow button{border:1px solid var(--ink);background:#fff;border-radius:8px;padding:8px 12px;font:inherit;cursor:pointer}
+.copyrow button.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.checks{background:#fff7e8;border:1px solid #f1dcae;border-radius:10px;padding:10px 14px;margin:14px 0 0;font:14px/1.5 -apple-system,system-ui,sans-serif;color:#5a4410}
+.checks b{display:block;margin-bottom:4px}
+.checks ul{margin:0;padding-left:18px}
+details{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+summary{cursor:pointer;font:600 13px -apple-system,system-ui,sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+figure{margin:14px 0}
+figure img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block}
+figcaption{font:13px/1.45 -apple-system,system-ui,sans-serif;color:var(--muted);margin-top:6px}
+figcaption a{color:var(--muted)}
+.chart{margin:14px 0;padding:14px;border:1px solid var(--line);border-radius:10px;font:13px -apple-system,system-ui,sans-serif}
+.chart .t{font-weight:600;margin-bottom:10px}
+.chart .r{display:grid;grid-template-columns:minmax(90px,38%) 1fr;gap:8px;align-items:center;margin:6px 0}
+.chart .b{height:20px;background:var(--acc);border-radius:4px;color:#fff;font-size:12px;line-height:20px;padding:0 6px;white-space:nowrap;min-width:fit-content}
+.chart .b.na{background:#bbb}
+.chart .s{color:var(--muted);margin-top:8px}
+.tweets{margin-top:6px}
+.tweets blockquote.twitter-tweet{font:14px -apple-system,system-ui,sans-serif;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0}
+.links{font:14px/1.6 -apple-system,system-ui,sans-serif;padding-left:18px}
+.links a{color:var(--acc)}
+.mark{margin-top:14px;font:13px -apple-system,system-ui,sans-serif;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.mark input{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;width:110px}
+.mark button{font:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer}
+.mark code{background:var(--chip);padding:2px 6px;border-radius:4px}
+footer{color:var(--muted);font:13px -apple-system,system-ui,sans-serif;text-align:center}
+@media (max-width:520px){body{font-size:16px}h2{font-size:21px}.card{padding:18px 15px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <h1>🎼 Note per Futuro Fortissimo</h1>
+  <p id="sub">Caricamento…</p>
+</header>
+<nav class="bar">
+  <button data-f="tutti" class="on">Tutti</button>
+  <button data-f="dafare">Da fare</button>
+  <button data-f="fatti">Fatti</button>
+  <span class="count" id="count"></span>
+</nav>
+<main id="list"></main>
+<footer>Pagina privata, non indicizzata. I dati sono in <code>notes.json</code>.</footer>
+</div>
+<script>
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function inline(t){t=esc(t);
+ t=t.replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+ t=t.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');return t}
+function md(s){return s.split(/\n\s*\n/).map(p=>{p=p.trim();if(!p)return'';
+ if(p.startsWith('>'))return'<blockquote>'+inline(p.replace(/^>\s?/gm,''))+'</blockquote>';
+ return'<p>'+inline(p).replace(/\n/g,'<br>')+'</p>'}).join('')}
+const LS='ffnotes-local-done';
+const local=JSON.parse(localStorage.getItem(LS)||'{}');
+let DATA=[],F='tutti';
+const isDone=n=>n.done||!!local[n.id];
+const usedIn=n=>n.used_in||local[n.id]||null;
+const header=n=>`#### ${n.emoji} ${usedIn(n)||n.num||'ff.157.y'} ${n.titolo.replace(/ \(riserva\)$/,'')}`;
+const sources=n=>n.links.map(l=>`- [${l[0]}](${l[1]})`).join('\n');
+async function copy(btn,txt){try{await navigator.clipboard.writeText(txt)}catch(e){const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}
+ const o=btn.textContent;btn.textContent='Copiato ✓';btn.classList.add('ok');setTimeout(()=>{btn.textContent=o;btn.classList.remove('ok')},1400)}
+function chart(c){if(!c)return'';const nums=c.items.filter(i=>typeof i.value==='number').map(i=>i.value);const mx=Math.max(...nums);
+ return`<div class="chart"><div class="t">${esc(c.title)}</div>${c.items.map(i=>{const na=typeof i.value!=='number';
+ const w=na?12:Math.max(8,i.value/mx*100);const lab=na?i.value:c.fmt.replace('{v}',String(i.value).replace('.',',').replace(/\B(?=(\d{3})+(?!\d))/g,'.'));
+ return`<div class="r"><span>${esc(i.label)}</span><div class="b${na?' na':''}" style="width:${w}%">${esc(lab)}</div></div>`}).join('')}<div class="s">Fonte: ${esc(c.source)}. Grafico costruito solo con i numeri citati.</div></div>`}
+function card(n){const d=isDone(n);
+ const st=d?`<span class="chip ok">✓ usata in ${esc(usedIn(n)||'?')}</span>`:(n.stato==='bozza consegnata'?`<span class="chip bz">bozza consegnata</span>`:`<span class="chip st">da fare</span>`);
+ return`<article class="card${d?' done':''}" id="${n.id}">
+ <div class="meta">${st}${n.riserva?'<span class="chip rs">riserva</span>':''}<span class="chip">${esc(n.batch)}</span>${n.tema?`<span class="chip">${esc(n.tema)}</span>`:''}<span class="chip">id ${n.id}</span></div>
+ <h2>${n.emoji} <span class="num">${esc(usedIn(n)||n.num||'ff.157.y')}</span> ${esc(n.titolo)}</h2>
+ <div class="body">${md(n.body)}</div>
+ <div class="copyrow"><button data-c="h">📋 Titolo</button><button data-c="b">📋 Testo</button><button data-c="l">📋 Fonti</button><button data-c="a">📋 Tutto</button></div>
+ ${n.checks&&n.checks.length?`<div class="checks"><b>Da verificare</b><ul>${n.checks.map(c=>`<li>${inline(c)}</li>`).join('')}</ul></div>`:''}
+ ${chart(n.chart)}
+ ${n.images.map(i=>`<figure><img loading="lazy" src="${esc(i.src)}" alt="${esc(i.caption)}"><figcaption>${esc(i.caption)} · <a href="${esc(i.href)}" target="_blank" rel="noopener">${esc(i.credit)}</a></figcaption></figure>`).join('')}
+ ${n.x_posts.length?`<div class="tweets">${n.x_posts.map(u=>`<blockquote class="twitter-tweet" data-dnt="true" data-lang="it"><a href="${esc(u.replace('x.com','twitter.com'))}">${esc(u)}</a></blockquote>`).join('')}</div>`:''}
+ <details><summary>Fonti e richiami</summary><ul class="links">${n.links.map(l=>`<li><a href="${esc(l[1])}" target="_blank" rel="noopener">${esc(l[0])}</a></li>`).join('')}${(n.backrefs||[]).map(l=>`<li>↩︎ <a href="${esc(l[1])}" target="_blank" rel="noopener">${esc(l[0])}</a></li>`).join('')}</ul></details>
+ <div class="mark">${d?(n.done?`Segnata nel JSON.`:`Segnata solo in questo browser. <button data-u>annulla</button>`):`<input placeholder="ff.157.2" aria-label="usata in"><button data-m>Segna fatta (locale)</button>`}
+ <span>Per salvarla: <code>python3 notes.py done ${n.id} ${esc(usedIn(n)||'ff.157.N')}</code></span></div>
+ </article>`}
+function render(){const L=DATA.filter(n=>F==='tutti'||(F==='fatti'?isDone(n):!isDone(n)));
+ const el=document.getElementById('list');el.innerHTML=L.map(card).join('')||'<p>Nessuna nota.</p>';
+ document.getElementById('count').textContent=`${L.length} di ${DATA.length} · ${DATA.filter(isDone).length} fatte`;
+ el.querySelectorAll('.card').forEach(c=>{const n=DATA.find(x=>x.id===c.id);
+  c.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{const k=b.dataset.c;
+   copy(b,k==='h'?header(n):k==='b'?n.body:k==='l'?sources(n):header(n)+'\n\n'+n.body+'\n\n'+sources(n))});
+  const m=c.querySelector('[data-m]');if(m)m.onclick=()=>{const v=c.querySelector('.mark input').value.trim()||'ff.?';local[n.id]=v;localStorage.setItem(LS,JSON.stringify(local));render()};
+  const u=c.querySelector('[data-u]');if(u)u.onclick=()=>{delete local[n.id];localStorage.setItem(LS,JSON.stringify(local));render()}});
+ if(window.twttr&&twttr.widgets)twttr.widgets.load(el)}
+document.querySelectorAll('.bar button').forEach(b=>b.onclick=()=>{F=b.dataset.f;document.querySelectorAll('.bar button').forEach(x=>x.classList.toggle('on',x===b));render()});
+fetch('notes.json?'+Date.now()).then(r=>r.json()).then(j=>{DATA=j.notes;document.getElementById('sub').textContent=`${DATA.length} note · aggiornato ${j.aggiornato} · Titolo, testo e fonti si copiano con un tap.`;render();
+ const s=document.createElement('script');s.async=true;s.src='https://platform.twitter.com/widgets.js';s.onload=()=>twttr.widgets.load();document.body.appendChild(s)})
+ .catch(e=>{document.getElementById('sub').textContent='Errore nel caricare notes.json: '+e});
+</script>
+</body>
+</html>
