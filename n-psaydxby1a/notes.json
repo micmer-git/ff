@@ -1,6 +1,6 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-01",
+ "aggiornato": "2026-11-07",
  "notes": [
   {
    "emoji": "⛵",
@@ -1185,6 +1185,186 @@
    "tema": "uomo",
    "ord": 8,
    "num_bozza": "ff.157.8"
+  },
+  {
+   "emoji": "🌦️",
+   "titolo": "Sole sopra, pioggia sotto",
+   "tema": "uomo",
+   "sottotema": "Mutamento",
+   "batch": "07/11, inviato da Michele",
+   "origine": "pagina fotografata di un libro non identificato; lettura di Javary controllata sul suo sito, non sulle edizioni a stampa",
+   "x_posts": [],
+   "images": [],
+   "chart": null,
+   "body": "Lo *Yijing* è il Classico dei Mutamenti, e il mutamento è un carattere: 易.\n\nCyrille Javary, [sul suo sito](https://www.cyrillejavary.com/souplessedudragon1/), lo legge così: sopra il sole 日, sotto 勿, per lui i raggi della pioggia. Si alternano, dunque «mutamento»; e, perché il cielo cambia da solo, anche «facile». 經, l'altra metà del titolo, nello [*Shuowen jiezi*](https://www.shuowen.org/view/8488) è «tessere». Duan Yucai precisa: l'ordito, il filo che sta mentre la trama corre. Di lì, «classico».\n\n**Però, però, però.** Sole e pioggia sono una lettura simbolica, non l'etimologia. Lo stesso *Shuowen* di Xu Shen (II secolo) vedeva in 易 una [lucertola](https://www.shuowen.org/view/6103), e metteva «sole e luna» in bocca a testi apocrifi. Sulle ossa oracolari, per l'[Università cinese di Hong Kong](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/oraclePiece.php?piece=%E6%98%93&sub=1), 易 è l'antenato di 賜: «dare, concedere». «Cambiare» arriva dopo, col passaggio di mano.\n\nIl libro della foto non è identificato, e gli originali a stampa di Javary non sono stati ricontrollati.",
+   "links": [
+    [
+     "Cyrille Javary, La souplesse du dragon (cyrillejavary.com): 易 come sole sopra e pioggia sotto",
+     "https://www.cyrillejavary.com/souplessedudragon1/"
+    ],
+    [
+     "Shuowen jiezi, voce 經, con il commento di Duan Yucai (shuowen.org)",
+     "https://www.shuowen.org/view/8488"
+    ],
+    [
+     "Shuowen jiezi, voce 易, con il commento di Duan Yucai (shuowen.org)",
+     "https://www.shuowen.org/view/6103"
+    ],
+    [
+     "漢語多功能字庫, Chinese University of Hong Kong, voce 易",
+     "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/oraclePiece.php?piece=%E6%98%93&sub=1"
+    ]
+   ],
+   "backrefs": [],
+   "checks": [
+    "Libro della fotografia non identificato. L'introduzione inquadrata si intitola «Omaggio a Jules Verne / Come tracciare la rotta di un viaggio straordinario». Nessun titolo di volume e nessuna immagine sono stati aggiunti.",
+    "Sole e pioggia: lettura pubblicata da Javary sul suo sito. Le pagine a stampa indicate in ricerca (Le discours de la tortue, Albin Michel 2003; Les rouages du Yi Jing, Picquier 2001) non sono state controllate sugli originali.",
+    "«Dare, concedere» è la glossa del database della Chinese University of Hong Kong: 易 come forma antica di 賜. Non entrano nel testo la lettura di 易日 («sole concesso») né l'ipotesi grafica di un liquido versato da un vaso.",
+    "Lo Shuowen è il dizionario di Xu Shen, dinastia Han (di solito datato fra il 100 e il 121 d.C.). Nel testo si dice solo II secolo."
+   ],
+   "id": "n8",
+   "ord": 25,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "emoji": "⛩️",
+   "titolo": "Ogni vent'anni",
+   "tema": "tech",
+   "sottotema": "Saper fare",
+   "batch": "07/11, inviato da Michele",
+   "origine": "Dan Wang, Breakneck (W. W. Norton, 2025); date e cifre ricontrollate su fonti pubbliche",
+   "x_posts": [],
+   "images": [],
+   "chart": null,
+   "body": "Il sapere che conta, per Dan Wang in [*Breakneck*](https://wwnorton.com/books/9781324106036) (Norton, 2025), non sta nel muro. Sta in chi sa rifarlo. Lo prende da Simon Leys, *The Hall of Uselessness*: l'architettura cinese, di legno e a volte di carta, sarebbe fatta per scadere. L'eternità, in quella lettura, non deve abitare l'edificio. Deve abitare il costruttore.\n\nL'esempio che usa non è cinese. A Ise, ogni vent'anni, si ricostruisce il palazzo divino e si rifanno i tesori: lo [*shikinen sengu*](https://www.isejingu.or.jp/en/ritual/). Il santuario data il primo rito dell'altare interno al 690, il sessantaduesimo al 2013, il trasferimento del 63° all'[autunno 2033](https://www.isejingu.or.jp/sengu/the63rd/).\n\n**Però, però, però.** Dall'altra parte Wang racconta gli Stati Uniti che avrebbero perso la ricetta del Fogbank, un materiale classificato delle testate W76. Il [GAO, nel 2009](https://www.gao.gov/products/gao-09-385), è più secco: pochi registri degli anni Ottanta, il personale andato via, l'impianto di Y-12 smantellato negli anni Novanta, 69 milioni di dollari e almeno un anno di ritardo sulla prima testata rinnovata. Una [FAQ della NNSA](https://armscontrolcenter.org/nnsa-faq-on-fogbank/), ripresa dal Center for Arms Control, risponde che la ricetta non era sparita. Era stata chiusa la linea, e mancavano le persone per riaprirla. Oggi, dice, il materiale in produzione regge il confronto con quello di allora.\n\nDue verbali, un punto solo. Se nessuno rifà il gesto, il gesto se ne va. È parente del mutamento: non il monumento, la pratica.",
+   "links": [
+    [
+     "Dan Wang, Breakneck: China's Quest to Engineer the Future, W. W. Norton, hardcover 26 agosto 2025, ISBN 978-1-324-10603-6",
+     "https://wwnorton.com/books/9781324106036"
+    ],
+    [
+     "Ise Jingu, Rituals and Ceremonies: shikinen sengu ogni vent'anni, primo rito dell'altare interno nel 690, 62° nel 2013",
+     "https://www.isejingu.or.jp/en/ritual/"
+    ],
+    [
+     "Ise Jingu, 63° shikinen sengu: trasferimento previsto nell'autunno 2033",
+     "https://www.isejingu.or.jp/sengu/the63rd/"
+    ],
+    [
+     "U.S. GAO, GAO-09-385, Nuclear Weapons: NNSA and DOD Need to More Effectively Manage the Stockpile Life Extension Program (2009)",
+     "https://www.gao.gov/products/gao-09-385"
+    ],
+    [
+     "GAO-09-385, PDF",
+     "https://www.gao.gov/assets/gao-09-385.pdf"
+    ],
+    [
+     "FAQ della NNSA sul Fogbank, ripresa dal Center for Arms Control and Non-Proliferation",
+     "https://armscontrolcenter.org/nnsa-faq-on-fogbank/"
+    ],
+    [
+     "Ian Buruma, The Man Who Got It Right, The New York Review of Books, 15 agosto 2013 (su Simon Leys)",
+     "https://www.nybooks.com/articles/2013/08/15/simon-leys-man-who-got-it-right/"
+    ],
+    [
+     "Discussione pubblica che riferisce l'argomento di Wang (process knowledge, Leys, Ise): non sostituisce il libro",
+     "https://incompletion.org/2025/09/06/technology-process-knowledge-temporality-and-design/"
+    ]
+   ],
+   "backrefs": [],
+   "checks": [
+    "L'abbinamento Ise, Fogbank e Leys, e la frase sull'eternità nel costruttore, sono la lettura di Wang in Breakneck (architettura cinese di legno e carta, obsolescenza voluta). Non è una rilettura della copia: niente numeri di pagina. La parafrasi di Leys non è stata ricontrollata sull'edizione NYRB di The Hall of Uselessness.",
+    "Date 690, 2013 (62°) e autunno 2033 (63°), e il ciclo di vent'anni: sito del santuario di Ise. Che il rito serva a trasmettere il mestiere è la lettura di Wang, non una frase del santuario usata qui come prova.",
+    "«Ricetta persa» è il racconto di Wang. Il GAO-09-385 dice che la NNSA aveva perso la conoscenza produttiva (pochi registri degli anni Ottanta, personale uscito, impianto di Y-12 smantellato negli anni Novanta) e addebita 69 milioni: 22 per sbloccare la produzione, 23 per un materiale alternativo, 24 per lo stand-by a Pantex, più lo slittamento della prima W76 rinnovata da settembre 2007 a settembre 2008. La FAQ della NNSA nega che la ricetta fosse andata persa. Restano nel testo tutte e due le versioni."
+   ],
+   "id": "n9",
+   "ord": 26,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
+  },
+  {
+   "emoji": "🚄",
+   "titolo": "Lo Stato ingegnere",
+   "tema": "tech",
+   "sottotema": "Cina",
+   "batch": "07/11, inviato da Michele",
+   "origine": "Dan Wang, Breakneck (W. W. Norton, 2025); date e cifre ricontrollate su fonti pubbliche",
+   "x_posts": [],
+   "images": [],
+   "chart": null,
+   "body": "Dan Wang, in [*Breakneck*](https://wwnorton.com/books/9781324106036) (Norton, 2025), ha una frase secca: la Cina è uno Stato di ingegneri, l'America una società di avvocati.\n\nIl suo 2002: i nove del Comitato permanente appena eletto erano tutti ingegneri. Lo scrivevano già Li Cheng e Lynn White su [*Asian Survey*](https://online.ucpress.edu/as/article-abstract/43/4/553/92691/The-Sixteenth-Central-Committee-of-the-Chinese); i nomi sono nel [comunicato](https://en.people.cn/200211/15/eng20021115_106869.shtml) del plenum. Oggi, nel profilo del [Congressional Research Service](https://www.congress.gov/crs_external_products/R/PDF/R48535/R48535.1.pdf) sul 119° Congresso: laurea in legge e pratica forense nel 31% della Camera e nel 47% del Senato. Ingegneri dichiarati: dieci.\n\nPoi due binari, come li affianca nel libro. La Pechino–Shanghai, aperta nel 2011: circa 36 miliardi di dollari, e 1,35 miliardi di viaggi in dieci anni. La California, «della stessa lunghezza»: ancora un tratto nella Central Valley, e una stima di 128 miliardi.\n\n**Però, però, però.** I documenti non stanno tutti in quella frase. La linea cinese fa [1.318 km](http://www.china-railway.com.cn/xwzx/rdzt/jhgt10/yycg/202201/t20220103_119243.html) e apre il 30 giugno 2011. [Reuters](https://web.archive.org/web/20110620000000/http://www.reuters.com/article/2011/06/13/uk-china-economy-railway-idUSLNE75C03A20110613), a ridosso dell'inaugurazione, parla di 220,9 miliardi di yuan annunciati, non di un controvalore in dollari: i 36 miliardi restano la cifra di Wang. I 1,35 miliardi di viaggi, invece, sono il dato del gruppo ferroviario riportato dal [China Daily](https://global.chinadaily.com.cn/a/202106/22/WS60d1c0f7a31024ad0bacabea.html). In California la Fase 1, San Francisco–Anaheim, misura [494 miglia](https://hsr.ca.gov/wp-content/uploads/2024/05/2024-Business-Plan-FINAL.pdf), circa 800 km. Lo stesso piano 2024 mette il capitale fra circa 89 e 128 miliardi di dollari dell'anno di spesa, con una base intorno a 106: 128 è il tetto della forbice, non il conto. A dicembre 2023 ne risultavano spesi circa 11,7. Il servizio Merced–Bakersfield, nel supplemental dell'agosto 2025, è indicato al [1° gennaio 2032](https://hsr.ca.gov/wp-content/uploads/2025/08/2025-Project-Update-Report-SUP-FINAL-081925-A11Y.pdf).\n\nE «tutti ingegneri» è la frase di Li e White. La biografia ufficiale di [Wen Jiabao](https://www.gov.cn/gjjg/2008-03/16/content_784746.htm) parla di laurea in struttura geologica, e del titolo di ingegnere. Erano dirigenti di partito con una formazione tecnica.",
+   "links": [
+    [
+     "Dan Wang, Breakneck: China's Quest to Engineer the Future, W. W. Norton, hardcover 26 agosto 2025, ISBN 978-1-324-10603-6",
+     "https://wwnorton.com/books/9781324106036"
+    ],
+    [
+     "Li Cheng e Lynn White, The Sixteenth Central Committee of the Chinese Communist Party: Hu Gets What?, Asian Survey 43, n. 4 (2003)",
+     "https://online.ucpress.edu/as/article-abstract/43/4/553/92691/The-Sixteenth-Central-Committee-of-the-Chinese"
+    ],
+    [
+     "Li Cheng e Lynn White, Asian Survey 2003, PDF consultato",
+     "https://library.fes.de/libalt/journals/swetsfulltext/17768958.pdf"
+    ],
+    [
+     "People's Daily, 16th CPC Central Committee Holds First Plenum, 15 novembre 2002: i nove nomi",
+     "https://en.people.cn/200211/15/eng20021115_106869.shtml"
+    ],
+    [
+     "Congressional Research Service, Membership of the 119th Congress: A Profile, R48535 (PDF, 13 maggio 2025)",
+     "https://www.congress.gov/crs_external_products/R/PDF/R48535/R48535.1.pdf"
+    ],
+    [
+     "Congressional Research Service, scheda Congress.gov di R48535",
+     "https://www.congress.gov/crs-product/R48535"
+    ],
+    [
+     "China State Railway Group, pagina sul decennale della Pechino–Shanghai: 1.318 km, apertura 30 giugno 2011",
+     "http://www.china-railway.com.cn/xwzx/rdzt/jhgt10/yycg/202201/t20220103_119243.html"
+    ],
+    [
+     "Reuters, 13 giugno 2011, copia Internet Archive del 20 giugno 2011: 220,9 miliardi di yuan e 1.318 km",
+     "https://web.archive.org/web/20110620000000/http://www.reuters.com/article/2011/06/13/uk-china-economy-railway-idUSLNE75C03A20110613"
+    ],
+    [
+     "Reuters, URL originale dell'articolo del 13 giugno 2011",
+     "https://www.reuters.com/article/2011/06/13/uk-china-economy-railway-idUSLNE75C03A20110613/"
+    ],
+    [
+     "China Daily, 22 giugno 2021: 1,35 miliardi di viaggi in dieci anni, dato di China State Railway Group",
+     "https://global.chinadaily.com.cn/a/202106/22/WS60d1c0f7a31024ad0bacabea.html"
+    ],
+    [
+     "California High-Speed Rail Authority, 2024 Business Plan (494 miglia; forbice di costo della Fase 1)",
+     "https://hsr.ca.gov/wp-content/uploads/2024/05/2024-Business-Plan-FINAL.pdf"
+    ],
+    [
+     "California High-Speed Rail Authority, 2025 Supplemental Project Update Report, agosto 2025",
+     "https://hsr.ca.gov/wp-content/uploads/2025/08/2025-Project-Update-Report-SUP-FINAL-081925-A11Y.pdf"
+    ],
+    [
+     "Biografia ufficiale di Wen Jiabao, gov.cn (2008): struttura geologica, titolo di ingegnere",
+     "https://www.gov.cn/gjjg/2008-03/16/content_784746.htm"
+    ]
+   ],
+   "backrefs": [],
+   "checks": [
+    "«Tutti ingegneri» è la frase di Li Cheng e Lynn White sullo Standing Committee eletto nel novembre 2002. Non descrive i Comitati permanenti successivi.",
+    "Wen Jiabao, biografia ufficiale: laurea in struttura geologica all'Istituto di geologia di Pechino e titolo di ingegnere. Li e White lo contano comunque fra i nove ingegneri.",
+    "31% della Camera e 47% del Senato, e dieci ingegneri in tutto il Congresso: CRS sul 119° Congresso, dati CQ. Non è il Congresso del 2002. Il paragone fra le due date è la tesi di Wang, non un censimento unico.",
+    "220,9 miliardi di yuan: costo annunciato da Reuters il 13 giugno 2011, non un consuntivo successivo. 1,35 miliardi di viaggi: China Daily (22 giugno 2021) che cita China State Railway Group. Apertura il 30 giugno 2011 e lunghezza 1.318 km: anche il sito del gruppo ferroviario.",
+    "California, Business Plan 2024, tabella 5.0.5, dollari dell'anno di spesa: basso 88,545, base 106,163, alto 127,933 miliardi (arrotondati nel testo a circa 89, 106 e 128). Speso a dicembre 2023, stessa tabella: 11,693 miliardi. 494 miglia: lo stesso piano, per la Fase 1 San Francisco–Anaheim. Servizio Merced–Bakersfield al 1° gennaio 2032: data indicata nel supplemental dell'agosto 2025, non un'inaugurazione già avvenuta.",
+    "Circa 36 miliardi di dollari, «stessa lunghezza» e 128 miliardi come stima secca sono il racconto di Wang. Nel testo restano attribuiti a lui. I documenti pubblici stanno nelle righe sopra: yuan annunciati, lunghezze diverse, 128 miliardi come tetto della forbice 2024.",
+    "Il link nel testo alla cifra di Reuters punta alla copia Internet Archive del 20 giugno 2011, dove si legge «Costing 220.9 billion yuan». L'URL reuters.com, nel controllo automatico, ha risposto 401."
+   ],
+   "id": "n10",
+   "ord": 27,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null
   }
  ],
  "prossimo_numero": 157
