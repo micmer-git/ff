@@ -1,7 +1,117 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-07",
+ "aggiornato": "2026-11-08",
  "notes": [
+  {
+   "emoji": "🥄",
+   "titolo": "Tre grammi di lucidità",
+   "body": "Tre grammi. Meno di un cucchiaino da caffè. La dose da palestra, quella che si prende per le *squat*, non per i pensieri.\n\n**Però, però, però.** [Uno studio esplorativo](https://doi.org/10.1177/10998004261500758) uscito il 2 novembre su *Biological Research for Nursing* ha dato 3 grammi al giorno di creatina monoidrato, per 28 giorni, a 48 donne attive: 26 giovani e 22 più anziane, contro placebo.\n\nRisultato: miglioramenti più consistenti nei tempi di reazione (visivi e uditivi), nel controllo inibitorio e nella memoria di lavoro. Le risposte più nette, [soprattutto tra le più anziane](https://doi.org/10.1177/10998004261500758).\n\n[Rhonda Patrick, su X](https://x.com/foundmyfitness/status/2119101382594609303), si dice «piacevolmente sorpresa» di vedere benefici a questa dose: lei ne prende 10 grammi al giorno, in parte per il cervello. Gli autori avvertono: è uno studio esplorativo, servono trial più grandi e disegnati per confermare l'ipotesi.\n\nInsomma, la polvere dell'*after-workout* sta facendo domanda anche per un posto in testa. Tre grammi bastano? Ai prossimi studi l'ardua sentenza.",
+   "tema": "uomo",
+   "x_posts": [
+    "https://x.com/foundmyfitness/status/2119101382594609303"
+   ],
+   "links": [
+    [
+     "Oliveira et al., Creatine Supplementation on Cognition in Young and Old Active Females, Biological Research for Nursing (2/11/2026)",
+     "https://doi.org/10.1177/10998004261500758"
+    ],
+    [
+     "Rhonda Patrick / FoundMyFitness su X",
+     "https://x.com/foundmyfitness/status/2119101382594609303"
+    ]
+   ],
+   "checks": [
+    "Studio esplorativo su 48 donne: gli autori chiedono trial più grandi per confermare. Nel testo è detto."
+   ],
+   "images": [],
+   "id": "n13",
+   "batch": "08/11, giro X",
+   "ord": 30,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "❄️",
+   "titolo": "Roba strana al Polo",
+   "body": "«Roba strana lassù», scriveva [Ryan Katz-Rosene](https://x.com/ryankatzrosene/status/2118506510611329031) riprendendo un grafico di [Zachary Labe](https://zacklabe.com/arctic-temperatures/): la temperatura quotidiana media sopra gli 80° nord.\n\nSi dice che l'alto Artico, in autunno, debba solo raffreddarsi, mentre il ghiaccio si riforma. Anzi, che lassù il 2026 fosse stato persino relativamente \"tranquillo\".\n\n**Però, però, però.** Nel grafico di Labe (media sopra gli 80°N; la linea del 2026 viene dal modello operativo ECMWF), a inizio novembre la curva risale di colpo, parecchi gradi sopra la media 1958-2002. Un picco visibile a occhio, dopo settimane in cui la stessa linea era scesa sotto la climatologia.\n\nIntanto [Copernicus](https://climate.copernicus.eu/climate-bulletin) certifica che ottobre 2026 è stato il più caldo di sempre a livello globale: 15,35 °C, [1,75 °C sopra la media preindustriale 1850-1900](https://climate.copernicus.eu/climate-bulletin), il terzo mese consecutivo oltre +1,5 °C. Il 2026 è «virtualmente certo» di chiudere tra +1,56 e +1,61 °C: sarebbe il secondo anno solare sopra la soglia, dopo il 2024.\n\nE il ghiaccio? [In Artico, ottobre è solo il 13° più basso](https://climate.copernicus.eu/sea-ice-cover-october-2026) in 48 anni di satelliti (8,5% sotto la media 1991-2020). [Nel Mare di Kara, però, l'estensione di ottobre è stata la più bassa di sempre](https://climate.copernicus.eu/sea-ice-cover-october-2026). Roba strana, davvero. Come al Polo.",
+   "tema": "natura",
+   "x_posts": [
+    "https://x.com/ryankatzrosene/status/2118506510611329031"
+   ],
+   "links": [
+    [
+     "Zachary Labe, grafici delle temperature artiche",
+     "https://zacklabe.com/arctic-temperatures/"
+    ],
+    [
+     "Copernicus Climate Bulletin, highlights di ottobre 2026 (5/11/2026)",
+     "https://climate.copernicus.eu/climate-bulletin"
+    ],
+    [
+     "Copernicus, copertura del ghiaccio marino a ottobre 2026",
+     "https://climate.copernicus.eu/sea-ice-cover-october-2026"
+    ]
+   ],
+   "checks": [
+    "Il picco di inizio novembre è letto dal grafico, non da una tabella numerica pubblicata: per questo nel testo non cito un valore in °C.",
+    "La linea del 2026 nel grafico di Labe usa il modello operativo ECMWF, non ERA5; Labe ha segnalato possibili discrepanze rispetto alla rianalisi."
+   ],
+   "images": [
+    {
+     "src": "assets/x-labe-80n-nov2026.jpg",
+     "caption": "Temperatura quotidiana media sopra gli 80°N: la linea rossa del 2026 risale di colpo a inizio novembre, sopra la media 1958-2002.",
+     "credit": "Grafico di Zachary Labe, da ERA40/ECMWF; modificato da DMI. Ripreso da Ryan Katz-Rosene su X, 6/11/2026.",
+     "href": "https://x.com/ryankatzrosene/status/2118506510611329031"
+    }
+   ],
+   "id": "n12",
+   "batch": "08/11, giro X",
+   "ord": 29,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "💊",
+   "titolo": "Meno Lp(a), stesso infarto",
+   "body": "Si dice che se abbassi il colesterolo \"giusto\", abbassi anche gli infarti. L'Lp(a) è un pezzo di quel puzzle scritto nel DNA: lo ha alto circa [una persona su cinque nel mondo](https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral), dieta e statine quasi non lo scalfiscono, e finora non c'era un farmaco approvato per farlo scendere.\n\n**Però, però, però.** [Nello studio di fase III Lp(a) HORIZON](https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral), presentato il 7 novembre alle Scientific Sessions dell'American Heart Association, il pelacarsen (80 mg sotto pelle, una volta al mese) ha ridotto l'Lp(a) in media del 78% in 8.323 adulti con malattia cardiovascolare già in corso, in 42 paesi.\n\nIl tempo al primo infarto, ictus, rivascolarizzazione urgente o morte cardiovascolare? [Invariato](https://newsroom.clevelandclinic.org/2026/11/07/cleveland-clinic-trial-shows-novel-lipoproteina-drug-did-not-reduce-major-cardiovascular-events-after-nearly-5-years): eventi nel 12,3% di chi prendeva il farmaco e nel 12,1% del placebo, dopo un follow-up mediano di 4,7 anni. Stesso nulla anche sopra i 90 mg/dL.\n\n«Non posso evitare la conclusione deludente: non ha funzionato», ha detto [Steven Nissen della Cleveland Clinic](https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral). L'Lp(a) resta un fattore di rischio da misurare almeno una volta nella vita. Abbassarlo, almeno con questa molecola e in prevenzione secondaria, è un altro mestiere.\n\nAi posteri (e ai prossimi tre trial già in corso) l'ardua sentenza.",
+   "tema": "uomo",
+   "x_posts": [
+    "https://x.com/MariosGeorgakis/status/2119081361717809603"
+   ],
+   "links": [
+    [
+     "American Heart Association: Lp(a) HORIZON, Lp(a) −78% ma esiti cardiovascolari invariati (7/11/2026)",
+     "https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral"
+    ],
+    [
+     "Cleveland Clinic: 12,3% vs 12,1% eventi, follow-up mediano 4,7 anni (7/11/2026)",
+     "https://newsroom.clevelandclinic.org/2026/11/07/cleveland-clinic-trial-shows-novel-lipoproteina-drug-did-not-reduce-major-cardiovascular-events-after-nearly-5-years"
+    ],
+    [
+     "Novartis, comunicato topline su Lp(a)HORIZON (4/9/2026)",
+     "https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd"
+    ]
+   ],
+   "checks": [
+    "L'AHA scrive che i risultati sono pubblicati contemporaneamente sul NEJM (e su NEJM Evidence per le analisi estese); URL del paper NEJM non recuperato in questo giro.",
+    "Hazard ratio 1,02 citato in un riassunto delle Scientific Sessions; nel testo ho usato le percentuali di eventi della Cleveland Clinic."
+   ],
+   "images": [],
+   "id": "n11",
+   "batch": "08/11, giro X",
+   "ord": 28,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "⛵",
    "titolo": "Terra! (E adesso?)",
