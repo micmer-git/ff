@@ -3,6 +3,319 @@
  "aggiornato": "2026-11-09",
  "notes": [
   {
+   "emoji": "🩻",
+   "titolo": "Si lavora sui pesi",
+   "tema": "tech",
+   "batch": "09/11, podcast + cultura",
+   "origine": "podcast: Moonshots",
+   "body": "In palestra si dice «lavorare sui pesi». Nell'AI, da questo mese, anche.\n\nUn gruppo del MIT CSAIL (tra gli autori Omar Khattab, quello di DSPy) ha dato a GPT-6 Astra un modellino *open*, Qwen3.5-0.8B, noto per perdersi in [ragionamenti in loop](https://rikiyat.github.io/blog/weight-space-programming/). Niente addestramento, niente gradienti: Astra ha letto i pesi, ha trovato in due strati la «direzione» responsabile dei loop e l'ha tolta. Ha toccato 131.072 pesi su 0,8 miliardi, lo 0,016%.\n\nRisultato: MATH-500 dal 7,9% al 48,1%. E, in omaggio, il rispetto delle istruzioni (IFEval) dal 21% al 62%.\n\nAltri numeri da circo: indovina per quale videogioco è stata addestrata una rete guardando solo i suoi 17.253 pesi; scrive da zero, in una sola risposta, una rete che a Breakout fa 517 punti contro i 25 di una addestrata per 500 milioni di passi.\n\n**Però, però, però.** Con Gemma 3 270M, che non va in loop ma sbaglia i conti, niente da fare: un punto in più, dentro il rumore. Lo scrivono gli autori stessi: editare i pesi può togliere un ostacolo che nascondeva una capacità, non aggiungerne una che manca.\n\nSu Moonshots ([1:02:00](https://www.youtube.com/watch?v=x09f_BuJsoY&t=3720s)) Alex Wissner-Gross si dice «sicuro al 90%» che i laboratori di frontiera lo facciano già sui propri modelli.\n\nVi ricordate quando sbirciavamo nel pensiero di Claude ([🧠 ff.152.1 Il pensiero di Claude (J-Space)](https://fortissimo.substack.com/i/206037608/ff1521-il-pensiero-di-claude-j-space))? Adesso, oltre a guardare, ci mettono le mani.",
+   "links": [
+    [
+     "Takehi, Teoh, Zhang, Khattab (MIT CSAIL), Sparks of Weight-Space Programming (02/11/2026)",
+     "https://rikiyat.github.io/blog/weight-space-programming/"
+    ],
+    [
+     "Log completi degli esperimenti (GitHub)",
+     "https://github.com/RikiyaT/lm_understand-logs"
+    ],
+    [
+     "Weight-Space Programming II: critiche e repliche",
+     "https://shubham-tripathi.com/blog/weight-space-programming-ii-critics-replications/"
+    ],
+    [
+     "Moonshots EP #308, 1:02:00 (YouTube, 04/11/2026)",
+     "https://www.youtube.com/watch?v=x09f_BuJsoY&t=3720s"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🧠 ff.152.1 Il pensiero di Claude (J-Space)",
+     "https://fortissimo.substack.com/i/206037608/ff1521-il-pensiero-di-claude-j-space"
+    ]
+   ],
+   "checks": [
+    "È un blog post, non un paper con revisione: le repliche indipendenti confermano solo in parte e alcuni risultati vengono da una sola esecuzione.",
+    "Il '90%' di Wissner-Gross è un'opinione, e la citazione viene dal riassunto finance.biggo.com perché i sottotitoli dell'EP #308 erano bloccati (429).",
+    "Breakout 517 contro 25,3 è sulla versione MinAtar del gioco (griglia 10x10), non sull'Atari."
+   ],
+   "id": "n22",
+   "ord": 39,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null
+  },
+  {
+   "emoji": "🧊",
+   "titolo": "Sbrinati in rete",
+   "tema": "tech",
+   "batch": "09/11, podcast + cultura",
+   "origine": "podcast: Moonshots",
+   "body": "Una notte di metà ottobre, in circa [500 supermercati francesi](https://www.franceinfo.fr/economie/cyberattaque-dans-les-supermarches-500-magasins-attaques-jusqu-a-200-000-euros-de-marchandises-perdues_8236066.html) (Intermarché, Carrefour, U) frigoriferi e congelatori si sono messi da soli in modalità sbrinamento. Al mattino, banco frigo da buttare. Un Intermarché in Normandia ha perso 100.000 euro di prodotti, alcuni ipermercati fino a 200.000.\n\nTre settimane dopo, il bis in [sette paesi europei](https://www.bbc.com/news/articles/cq1kd1nee80eo): Belgio, Lussemburgo, Svezia, Finlandia, Irlanda, Paesi Bassi, Estonia. Circa 40 Delhaize, 13 SuperValu, l'IKEA di Mons. Un ICA svedese ha scritto sui social: «ci hanno hackerato frigoriferi e congelatori e hanno messo la temperatura a 50 gradi».\n\n**Però, però, però.** Non basta un aggiornamento. Il CEO di Sabcobel, che gestisce gli impianti Delhaize, spiega che le unità vanno modificate fisicamente; intanto si staccano dalla rete. Il [Centre for Cybersecurity Belgium](https://ccb.belgium.be/advisories/warning-update-security-incidents-across-europe-targeting-remote-controllers) ha diramato un'allerta sui controllori remoti degli impianti di refrigerazione.\n\nSu Moonshots ([1:14:02](https://www.youtube.com/watch?v=x09f_BuJsoY&t=4442s)) Peter Diamandis la riassume così: sicurezza da anni '90 su connettività del 2026. Ogni oggetto connesso è una porta. Nessuno ha rivendicato.\n\nNoi, intanto, continuiamo a fare scorta di gelato. Nel freezer di casa, possibilmente scollegato.",
+   "links": [
+    [
+     "franceinfo: Cyberattaque dans les supermarchés, 500 magasins attaqués (13/10/2026)",
+     "https://www.franceinfo.fr/economie/cyberattaque-dans-les-supermarches-500-magasins-attaques-jusqu-a-200-000-euros-de-marchandises-perdues_8236066.html"
+    ],
+    [
+     "BBC: Shop freezers in seven European countries hit by cyber-attack (02/11/2026)",
+     "https://www.bbc.com/news/articles/cq1kd1nee80eo"
+    ],
+    [
+     "Centre for Cybersecurity Belgium: allerta sui controllori remoti degli impianti di refrigerazione",
+     "https://ccb.belgium.be/advisories/warning-update-security-incidents-across-europe-targeting-remote-controllers"
+    ],
+    [
+     "AP: Cyberattack hits supermarkets in France, sparking investigation",
+     "https://apnews.com/article/france-cyberattack-supermarkets-refrigeration-systems-78a813a8efd466b360655339f96083dc"
+    ],
+    [
+     "Moonshots EP #308, 1:14:02 (YouTube, 04/11/2026)",
+     "https://www.youtube.com/watch?v=x09f_BuJsoY&t=4442s"
+    ]
+   ],
+   "checks": [
+    "Numero dei negozi francesi: franceinfo dice circa 500, il titolo AP 700. Ho usato 500.",
+    "Su Moonshots si dice 55 °C; BBC riporta 'fino a 50 °C'. Ho usato 50.",
+    "Sottotitoli YouTube dell'EP #308 bloccati (429): la frase di Diamandis viene dal riassunto finance.biggo.com, non dalla trascrizione. Da ricontrollare all'ascolto.",
+    "Allerta CCB: non ho letto il testo completo, solo il titolo."
+   ],
+   "id": "n21",
+   "ord": 38,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "⚡",
+   "titolo": "Quanti joule per un dollaro?",
+   "tema": "tech",
+   "batch": "09/11, podcast + cultura",
+   "origine": "podcast: Moonshots",
+   "body": "Misuriamo l'intelligenza artificiale in token, parametri, benchmark. E se la misurassimo in bolletta?\n\nRicercatori di Stanford, Berkeley e UT Austin hanno proposto [Joules-to-GDP](https://arxiv.org/abs/2610.30858): quanto valore economico produce un'AI per ogni joule consumato. 220 compiti professionali veri (presi da GDPval), 44 mestieri, cinque modelli *open*.\n\nIl più bravo, GLM 5.2, produce in media 74 dollari di lavoro per compito con 0,43 megajoule: circa quattro ore di portatile acceso.\n\n**Però, però, però.** Gemma 4 31B, molto più piccolo, fa il 56% di quel valore con il 23% dell'energia: 2,5 volte più valore per joule (417 dollari per MJ contro 168). E otto GPU H100 al posto di una consumano 3,2 volte l'energia per finire appena il 22% prima.\n\nSu Moonshots ([1:10:30](https://www.youtube.com/watch?v=WF-ADiC7Khs&t=4230s)) Salim Ismail fa un conto della serva: New York consuma circa 5,5 GW e produce 1.200 miliardi di PIL. Un cluster AI, secondo lui, rende circa 8 miliardi di ricavi per GW. A spanne la metropoli umana sarebbe 25-30 volte più efficiente. Conto contestato in diretta: l'istruzione dei newyorkesi non finisce in bolletta, l'addestramento dei modelli sì.\n\nVi ricordate la nostra guida energetica ([🧮 ff.149.2 Una questione di ore…](https://fortissimo.substack.com/i/194269239/ff1492-una-questione-di-ore))? 1 GW, circa 450.000 famiglie italiane.\n\nInsomma, il futuro sarà dei modelli più intelligenti o di quelli più parchi?",
+   "chart": {
+    "title": "Valore netto per megajoule (USD/MJ, media pesata sul PIL)",
+    "source": "Zeinali et al., Joules-to-GDP (2026), tabella 1",
+    "fmt": "{v} $",
+    "items": [
+     {
+      "label": "Gemma 4 31B",
+      "value": 417.5
+     },
+     {
+      "label": "GPT-OSS 20B",
+      "value": 336.0
+     },
+     {
+      "label": "GPT-OSS 120B",
+      "value": 275.7
+     },
+     {
+      "label": "GLM 5.2",
+      "value": 168.1
+     },
+     {
+      "label": "Qwen3.6-27B",
+      "value": 123.4
+     }
+    ]
+   },
+   "links": [
+    [
+     "Joules-to-GDP: How Much Economic Value Do AI Systems Produce per Unit of Energy? (arXiv 2610.30858)",
+     "https://arxiv.org/abs/2610.30858"
+    ],
+    [
+     "Snorkel AI: Joules-to-GDP, sintesi e tabella dei risultati",
+     "https://snorkel.ai/blog/joules-to-gdp-measuring-the-economic-value-of-ai-per-unit-of-energy/"
+    ],
+    [
+     "Moonshots EP #309, 1:04:39 (Joules-to-GDP) e 1:10:30 (New York contro AI) (YouTube, 07/11/2026)",
+     "https://www.youtube.com/watch?v=WF-ADiC7Khs&t=3879s"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🧮 ff.149.2 Una questione di ore…",
+     "https://fortissimo.substack.com/i/194269239/ff1492-una-questione-di-ore"
+    ]
+   ],
+   "checks": [
+    "Numeri del paper verificati su arXiv e sulla tabella Snorkel. Il valore è stimato da un giudice AI (accordo con esperti 71,9% su 32 compiti) e conta solo l'energia di GPU, CPU e memoria, non il data center: non è PIL misurato.",
+    "Il confronto New York/AI è un conto a voce di Salim Ismail, non verificato: 5,5 GW e 1.200 miliardi sono ordini di grandezza plausibili, gli '8 miliardi per GW' sono una sua stima. 25-30 volte l'ho calcolato io dai suoi numeri (lui dice 'circa 30')."
+   ],
+   "id": "n20",
+   "ord": 37,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": []
+  },
+  {
+   "emoji": "🐎",
+   "titolo": "Mario was here (26.000 anni fa)",
+   "tema": "uomo",
+   "batch": "09/11, podcast + cultura",
+   "origine": "cultura: Artforum (arte)",
+   "body": "Ci sono posti che crediamo di conoscere a memoria.\n\nLa Cova de la Font Major, a l'Espluga de Francolí, nell'entroterra di Tarragona, è aperta dal 1957. Dal 1993 è pure un percorso turistico, la «Ruta de l'Aventura». Migliaia di visitatori, e parecchi hanno lasciato nome e data sulle pareti.\n\n**Però, però, però.** Sotto quei nomi c'erano [280 incisioni paleolitiche, 55 delle quali animali](https://www.cambridge.org/core/journals/antiquity/article/filling-gaps-the-palaeolithic-rock-art-of-the-cova-de-la-font-major-on-the-northeast-iberian-peninsula/B61327338FF78E966BEA56E2DA9CAEDB): cavalli, cervi, uri, perfino un orso con la bocca semiaperta. Le ha notate per caso un archeologo, il 30 ottobre 2019, in mezzo ai graffiti moderni. Lo studio è uscito su *Antiquity* il 5 novembre.\n\nNella grotta ci sono tracce di presenza umana tra 41.000 e 26.000 anni fa. Lungo la costa mediterranea iberica [il 75% dei siti noti ha al massimo cinque figure animali](https://www.antiquity.ac.uk/news/2026/hundreds-ice-age-rock-art-engravings-discovered-hidden-plain-sight). Questo, con 55, diventa il [terzo per numero di animali](https://comunicacio.iphes.cat/eng/p/news/new/news/v/category/1/1203.htm), dopo Ardales e La Pileta in Andalusia.\n\n> Per più di sei decenni migliaia di visitatori sono passati davanti alle superfici incise, e in alcuni casi ci hanno scritto sopra nomi e date, senza riconoscerne l'origine paleolitica.\n>\n> Josep Maria Vergès, IPHES-CERCA\n\nInsomma, il «Mario was here» era arrivato con qualche millennio di ritardo.\n\nChissà cosa c'è, oggi, sotto i nostri occhi, che ancora non vediamo.",
+   "links": [
+    [
+     "Vergès Bosch & Salas-Altès, Filling gaps: the Palaeolithic rock art of the Cova de la Font Major, Antiquity (05/11/2026)",
+     "https://www.cambridge.org/core/journals/antiquity/article/filling-gaps-the-palaeolithic-rock-art-of-the-cova-de-la-font-major-on-the-northeast-iberian-peninsula/B61327338FF78E966BEA56E2DA9CAEDB"
+    ],
+    [
+     "Antiquity: Hundreds of Ice Age rock art engravings discovered hidden in plain sight",
+     "https://www.antiquity.ac.uk/news/2026/hundreds-ice-age-rock-art-engravings-discovered-hidden-plain-sight"
+    ],
+    [
+     "IPHES-CERCA: Cova de la Font Major challenges the traditional map of European Palaeolithic art",
+     "https://comunicacio.iphes.cat/eng/p/news/new/news/v/category/1/1203.htm"
+    ],
+    [
+     "Artforum: Vast Trove of Paleolithic Art Discovered in Ice Age Cave (06/11/2026)",
+     "https://www.artforum.com/news/vast-trove-of-paleolithic-art-discovered-ice-age-cave-1234763190/"
+    ],
+    [
+     "Nature: The palaeo cave art that hid in plain sight for 26,000 years",
+     "https://www.nature.com/articles/d41586-026-03585-z"
+    ]
+   ],
+   "checks": [
+    "Le incisioni non sono ancora datate direttamente (IPHES): 41.000-26.000 anni è la presenza umana nella grotta; Smithsonian riporta circa 26.000 anni da un carbone trovato in un solco. Il titolo usa 26.000 come cifra tonda.",
+    "La citazione di Vergès è tradotta da me dall'inglese (articolo Antiquity e comunicato)."
+   ],
+   "id": "n19",
+   "ord": 36,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🧣",
+   "titolo": "Capelli bagnati (e altre leggende)",
+   "tema": "uomo",
+   "batch": "09/11, podcast + cultura",
+   "origine": "podcast: ZOE",
+   "body": "Esci con i capelli bagnati? Ti prendi il raffreddore. Lo diceva mia nonna. Probabilmente anche la vostra.\n\nNell'ultima puntata di ZOE l'immunologo Daniel Davis (Imperial College) e Tim Spector smontano un po' di certezze di casa ([22:31](https://www.youtube.com/watch?v=WD0QvfMu_-w&t=1351s)):\n\n- **Freddo e bagnato.** Negli esperimenti della Common Cold Unit britannica, volontari lasciati in costume bagnato in corridoi pieni di spifferi [non si ammalavano più degli altri](https://www.weirdsciencehistory.com/articles/the-cold-researchers-who-stood-volunteers-in-wet-swimsuits-in-a-drafty-hallway).\n- **Vitamina C.** Il mito nasce da un libro del 1970 del due volte Nobel Linus Pauling. Per la [revisione Cochrane](https://doi.org/10.1002/14651858.CD000980.pub4) (29 confronti, 11.306 persone) presa tutti i giorni non riduce i raffreddori: ne accorcia la durata dell'8% negli adulti. Su tre giorni, qualche ora.\n- **Vitamina D.** Bisogna darla a [33 persone](https://www.bmj.com/content/356/bmj.i6583) perché una sola eviti un'infezione respiratoria.\n- **Sonno.** Chi dorme 4 ore a notte (dall'1 alle 5) e poi fa l'antinfluenzale, dieci giorni dopo ha [meno della metà degli anticorpi](https://jamanetwork.com/journals/jama/article-abstract/1032061) di chi dorme normalmente.\n\n**Però, però, però.** La nonna non aveva tutti i torti. Nel 2005 a Cardiff 180 volontari sono stati divisi in due: metà con i piedi in acqua fredda, metà con i piedi in una bacinella vuota. Nei 4-5 giorni successivi [13 su 90 hanno avuto il raffreddore, contro 5 su 90](https://doi.org/10.1093/fampra/cmi072). Ipotesi degli autori: il freddo potrebbe risvegliare un virus che avevamo già nel naso.\n\nPS. Angolo *endurance*. Nella stessa Cochrane, su 598 maratoneti, sciatori e soldati in esercitazione subartica, la vitamina C quasi dimezza il rischio di raffreddore (RR 0,48). Noi comuni mortali possiamo continuare con le arance. Per gusto.\n\nTitolo già usato, quasi: 🩺 ff.28.4 Metti la canottiera (o ti senti fortunato?).",
+   "links": [
+    [
+     "ZOE Science & Nutrition: How to NOT get sick this winter, Daniel Davis e Tim Spector (YouTube, 05/11/2026), 22:31",
+     "https://www.youtube.com/watch?v=WD0QvfMu_-w&t=1351s"
+    ],
+    [
+     "ZOE: trascrizione completa dell'episodio",
+     "https://zoe.com/learn/how-to-not-get-sick-this-winter"
+    ],
+    [
+     "Hemilä & Chalker, Vitamin C for preventing and treating the common cold, Cochrane 2013",
+     "https://doi.org/10.1002/14651858.CD000980.pub4"
+    ],
+    [
+     "Martineau et al., Vitamin D supplementation to prevent acute respiratory tract infections, BMJ 2017 (NNT 33)",
+     "https://www.bmj.com/content/356/bmj.i6583"
+    ],
+    [
+     "Spiegel, Sheridan, Van Cauter, Effect of sleep deprivation on response to immunization, JAMA 2002",
+     "https://jamanetwork.com/journals/jama/article-abstract/1032061"
+    ],
+    [
+     "Johnson & Eccles, Acute cooling of the feet and the onset of common cold symptoms, Family Practice 2005",
+     "https://doi.org/10.1093/fampra/cmi072"
+    ],
+    [
+     "Weird Science History: i volontari in costume bagnato della Common Cold Unit",
+     "https://www.weirdsciencehistory.com/articles/the-cold-researchers-who-stood-volunteers-in-wet-swimsuits-in-a-drafty-hallway"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🩺 ff.28.4 Metti la canottiera (o ti senti fortunato?)",
+     "https://fortissimo.substack.com/i/50474519/ff284-metti-la-canottiera-o-ti-senti-fortunato"
+    ]
+   ],
+   "checks": [
+    "Nel podcast Spector parla di 'obiettori di coscienza nella Seconda guerra mondiale'; gli esperimenti documentati che ho trovato sono quelli di Christopher Andrewes alla Common Cold Unit di Salisbury (dal 1946), con fonte secondaria. Nel testo cito la Common Cold Unit.",
+    "Studio di Cardiff: raffreddore auto-riferito, p=0,047, 180 persone. Segnale debole.",
+    "Spiegel 2002: 11 uomini contro 14 controlli; a 3-4 settimane la differenza di anticorpi spariva.",
+    "NNT 33 (BMJ 2017): verificato sul paper (IC 95% 20-101). Effetto più grande in chi è carente."
+   ],
+   "id": "n18",
+   "ord": 35,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null
+  },
+  {
+   "emoji": "🛰️",
+   "titolo": "Quattordicimila desideri",
+   "tema": "natura",
+   "batch": "09/11, podcast + cultura",
+   "origine": "podcast: Moonshots",
+   "body": "Da bambino le stelle cadenti si aspettavano ad agosto, a San Lorenzo. Oggi basta una sera qualsiasi.\n\nIl 9 settembre Brendan Larsen, insegnante e astrofotografo di New Plymouth, ha puntato la macchina sul monte Taranaki, in Nuova Zelanda, per 1 ora e 55 minuti: [578 scatti da 8 secondi](https://www.blarsenphoto.com/store/p/14k-satellite-trails), in media 25 satelliti per foto. Poi 45 ore di Photoshop per sovrapporre le scie e cancellare le stelle.\n\nRisultato: circa 14.000 passaggi, che lui attribuisce a circa 1.400 satelliti diversi. Una ragnatela di luce sopra il vulcano.\n\n**Però, però, però.** In tanti, online, lo hanno [accusato di averla fatta con l'AI](https://www.theguardian.com/world/2026/nov/04/viral-image-nz-night-sky-satellites-accused-of-being-ai-brendan-larsen). Il cielo vero, ormai, sembra finto.\n\nSecondo il tracker citato dal [Taranaki Daily News](https://www.thepost.co.nz/nz-news/361104682/taranaki-night-sky-image-revealing-massive-satellite-numbers-goes-viral) in orbita ci sono 15.870 satelliti, 10.081 dei quali Starlink. Su Moonshots Alex Wissner-Gross la chiama «lo sciame di Dyson in fasce» ([1:34:15](https://www.youtube.com/watch?v=WF-ADiC7Khs&t=5655s)) e consiglia di andarlo a vedere in un posto buio. Larsen pensa piuttosto a pipistrelli, falene e ai residui dei satelliti che bruciano al rientro.\n\nVi ricordate quando, tra i trend pronti a decollare, c'erano i satelliti per internet ([🚀 ff.45.3 Quali trend decolleranno?](https://fortissimo.substack.com/i/90888342/ff-quali-trend-decolleranno))? Decollati, direi.\n\nPS. Guardate bene la montagna: ci sono le frontali di due alpinisti che scendono al buio. Gli unici due puntini umani della foto.",
+   "images": [
+    {
+     "src": "assets/p-moon309-taranaki.jpg",
+     "caption": "La foto di Larsen mostrata su Moonshots: 578 scatti, circa 1.400 satelliti.",
+     "credit": "Frame da Moonshots EP #309 (YouTube), 1:34:35; foto © Brendan Larsen",
+     "href": "https://www.youtube.com/watch?v=WF-ADiC7Khs&t=5675s"
+    }
+   ],
+   "links": [
+    [
+     "Brendan Larsen Photography: 14,000 Satellite Trails over Mt Taranaki (scheda tecnica dello scatto)",
+     "https://www.blarsenphoto.com/store/p/14k-satellite-trails"
+    ],
+    [
+     "The Guardian: The night-sky image so incredible the NZ man behind it has been accused of using AI (04/11/2026)",
+     "https://www.theguardian.com/world/2026/nov/04/viral-image-nz-night-sky-satellites-accused-of-being-ai-brendan-larsen"
+    ],
+    [
+     "New Scientist: Photo of 14,000 satellite trails shows how busy space is becoming (28/10/2026)",
+     "https://www.newscientist.com/article/2595529-photo-of-14000-satellite-trails-shows-how-busy-space-is-becoming/"
+    ],
+    [
+     "The Post / Taranaki Daily News: Taranaki night sky image goes viral (25/10/2026)",
+     "https://www.thepost.co.nz/nz-news/361104682/taranaki-night-sky-image-revealing-massive-satellite-numbers-goes-viral"
+    ],
+    [
+     "Moonshots EP #309, 1:34:15 (YouTube, 07/11/2026)",
+     "https://www.youtube.com/watch?v=WF-ADiC7Khs&t=5655s"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🚀 ff.45.3 Quali trend decolleranno?",
+     "https://fortissimo.substack.com/i/90888342/ff-quali-trend-decolleranno"
+    ]
+   ],
+   "checks": [
+    "14.000 è una stima di Larsen (sul suo post social: 14.450) e conta passaggi, non satelliti distinti (circa 1.400): nel testo è detto.",
+    "15.870 satelliti / 10.081 Starlink: dato del tracker Orbital Radar riportato da The Post il 25/10/2026, non ricontrollato sul tracker.",
+    "Foto protetta da copyright: in pagina c'è solo il frame del podcast; per la newsletter conviene linkare o chiedere a Larsen."
+   ],
+   "id": "n17",
+   "ord": 34,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "chart": null
+  },
+  {
    "tema": "uomo",
    "emoji": "🧹",
    "titolo": "A digiuno (di placche)",
