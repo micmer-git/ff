@@ -1,7 +1,113 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-08",
+ "aggiornato": "2026-11-09",
  "notes": [
+  {
+   "tema": "uomo",
+   "emoji": "🧹",
+   "titolo": "A digiuno (di placche)",
+   "batch": "09/11, giro X",
+   "x_posts": [
+    "https://x.com/davidasinclair/status/2119454893085802736"
+   ],
+   "body": "Si dice che per le arterie conti soprattutto il colesterolo. Abbassatelo, e la placca si ferma. Più o meno.\n\n**Però, però, però.** [Uno studio su *Cell Communication and Signaling*](https://link.springer.com/article/10.1186/s12964-026-03140-3) ha nutrito per 14 settimane 24 topi predisposti all'aterosclerosi con una dieta grassa e ricca di colesterolo. Poi ne ha sacrificati 8 come riferimento. Gli altri 16 sono passati a una dieta normale: metà a mangiatoia libera, metà a digiuno alternato, 24 ore sì e 24 no, per 4 settimane.\n\nRisultato: con il digiuno le placche sono risultate più piccole rispetto ai topi a mangiatoia libera, e persino rispetto al punto di partenza. Nucleo necrotico più piccolo, più collagene, quindi placche più stabili. Con grassi nel sangue simili tra i 2 gruppi alla fine, e la stessa quantità totale di cibo mangiata (i topi a digiuno, però, pesavano meno).\n\nIl meccanismo proposto: nei macrofagi, gli spazzini delle arterie, il digiuno attiva BMAL1, un gene dell'orologio biologico, che accende MERTK, il recettore con cui inghiottono le cellule morte. [David Sinclair lo ha rilanciato su X](https://x.com/davidasinclair/status/2119454893085802736).\n\nAvvertenze: topi maschi, 8 per gruppo, digiuni da 24 ore (altro che il 16:8 della colazione saltata). Gli autori stessi scrivono che servono test sull'uomo. Collegamento possibile con 💊 Meno Lp(a), stesso infarto: abbassare un numero nel sangue non sempre basta.\n\nLe pulizie si fanno a stomaco vuoto? Per ora, solo nei topi.",
+   "links": [
+    [
+     "Feng et al., Intermittent fasting promotes plaque regression and activates the BMAL1–MERTK efferocytosis axis, Cell Communication and Signaling (11/8/2026)",
+     "https://link.springer.com/article/10.1186/s12964-026-03140-3"
+    ],
+    [
+     "David Sinclair su X",
+     "https://x.com/davidasinclair/status/2119454893085802736"
+    ]
+   ],
+   "checks": [
+    "Studio su topi (24 maschi Ldlr-/-, 8 per gruppo), pubblicato l'11/8/2026: notizia rilanciata ora, non nuova. Numeri e limiti verificati nel paper (open access). Nessun dato sull'uomo."
+   ],
+   "id": "n16",
+   "ord": 33,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "tema": "natura",
+   "emoji": "🔌",
+   "titolo": "Attaccati alla spina",
+   "batch": "09/11, giro X",
+   "x_posts": [
+    "https://x.com/CleanPowerDave/status/2119422255377650124"
+   ],
+   "body": "Cambiate auto, e l'amico al bar parte puntuale: «Elettrica? Tanto la corrente la fanno col carbone.»\n\n[Dave Jones di Ember ha fatto i conti](https://a08cab60-5098-4b5e-a165-8c172501a676.usrfiles.com/ugd/a08cab_71fc044709d242b5873ad38578f2e511.pdf). Un'auto a benzina consuma 3,7 volte l'energia che un'auto elettrica preleva dalla rete, e la benzina emette circa 250 g di CO₂ per kWh. Risultato: l'elettrica va in pari anche con una rete da circa 900 g di CO₂ per kWh. Per la pompa di calore contro la caldaia a gas, la soglia è circa 700 g.\n\n**Però, però, però.** La rete media mondiale, nel 2025, era a 461 g. E si pulisce: gli Stati Uniti sono passati da 505 g nel 2015 a 384 g, la Cina da 670 a 528, l'India da 751 a 671. Così, [scrive Jones su X](https://x.com/CleanPowerDave/status/2119422255377650124), oltre il 99% delle persone vive in un Paese dove un'auto elettrica taglia già la CO₂ rispetto a una a benzina. Il 95%, dove la pompa di calore batte la caldaia. Fuori scala resta il Turkmenistan: 1.306 g.\n\nIl conto riguarda solo la CO₂ bruciata, non quella per costruire batterie e auto. Ma [uno studio del 2020 su *Nature Sustainability*](https://pmc.ncbi.nlm.nih.gov/articles/PMC7308170/), che metteva in conto l'intero ciclo di vita, arrivava a un risultato simile: elettrico meno inquinante in 53 regioni del mondo su 59, pari al 95% della domanda di trasporto e riscaldamento.\n\nDi indipendenza da gas e petrolio avevamo parlato qui ([🗽 ff.149.5 Libertà (da gas e petrolio)](https://fortissimo.substack.com/i/194269239/ff1495-liberta-da-gas-e-petrolio)).\n\nAspettare la rete pulita per elettrificare? Un po' come aspettare di essere in forma per iniziare ad allenarsi.",
+   "links": [
+    [
+     "Dave Jones (Ember), Why we need to electrify now, slide (nov 2026)",
+     "https://a08cab60-5098-4b5e-a165-8c172501a676.usrfiles.com/ugd/a08cab_71fc044709d242b5873ad38578f2e511.pdf"
+    ],
+    [
+     "Dave Jones su X (thread)",
+     "https://x.com/CleanPowerDave/status/2119422255377650124"
+    ],
+    [
+     "Knobloch et al., Net emission reductions from electric cars and heat pumps in 59 world regions over time, Nature Sustainability (2020)",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC7308170/"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🗽 ff.149.5 Libertà (da gas e petrolio)",
+     "https://fortissimo.substack.com/i/194269239/ff1495-liberta-da-gas-e-petrolio"
+    ]
+   ],
+   "checks": [
+    "Soglie (900 g, 700 g), 461 g, 99% e 95%, dati USA/Cina/India 2015-2025 e Turkmenistan verificati sulle slide di Dave Jones/Ember (dati elettrici 2025, release set. 2026). Solo CO₂ di combustione: lo dicono le slide e lo dice il testo. L'analisi non è (ancora) un report Ember pubblicato sul sito: è un deck linkato da Jones."
+   ],
+   "id": "n15",
+   "ord": 32,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null
+  },
+  {
+   "tema": "tech",
+   "emoji": "🧫",
+   "titolo": "Le mani in provetta",
+   "batch": "09/11, giro X",
+   "x_posts": [
+    "https://x.com/AlthoffLukas/status/2119134605530075609"
+   ],
+   "body": "Chi ha fatto un dottorato lo sa: metà del tempo si scrive, l'altra metà si pipetta. In mezzo, si compilano moduli.\n\n[Anthropic ha analizzato 207.049 sessioni di ricerca](https://www.anthropic.com/research/how-researchers-use-claude) su Claude e Claude Code, tra il 2 agosto e il 30 settembre 2026. L'analisi dei dati vale il 33,7% delle sessioni su Claude e il 48,1% su Claude Code, contro il 27,6% del tempo di un ricercatore. La scrittura il 32%, contro il 16%. L'informatica, il 4,3% dei ricercatori del mondo, da sola fa il 32,7% delle sessioni di Claude Code.\n\n**Però, però, però.** La raccolta dati occupa il 28,6% del tempo di un ricercatore, ma solo l'11,5% delle sessioni. Il collo di bottiglia sono le mani: in chimica, biomedicina e scienza dei materiali il 38-41% del tempo va in lavoro fisico, contro il 4% del campo mediano. Così, nello scenario (ipotetico) in cui l'AI fa tutto il lavoro non fisico, informatica e statistica arrivano a 15 volte la produzione di oggi. Chimica e biologia si fermano a 3-4.\n\nE i ricercatori cosa ne pensano? Su 528 intervistati, quasi tutti nelle scienze della vita e già grandi utenti di AI, circa il 40% si aspetta che l'AI porti a termine da sola interi progetti di ricerca entro il 2030. Il 16% dice: mai. [Lukas Althoff, uno degli autori, lo riassume su X](https://x.com/AlthoffLukas/status/2119134605530075609).\n\nInsomma, la prossima rivoluzione scientifica passa dai laboratori automatizzati. Oppure da un dottorando con la pipetta, ancora per un po'.",
+   "links": [
+    [
+     "Hermle, Jones, Althoff et al., AI for scientific discovery: How researchers use Claude, Anthropic (5/11/2026)",
+     "https://www.anthropic.com/research/how-researchers-use-claude"
+    ],
+    [
+     "Report completo (PDF)",
+     "https://www-cdn.anthropic.com/6e7c6446c0d8405dba73b91dabd36aac069dea2e/AI-for-Scientific-Discovery.pdf"
+    ],
+    [
+     "Lukas Althoff su X",
+     "https://x.com/AlthoffLukas/status/2119134605530075609"
+    ]
+   ],
+   "checks": [
+    "Numeri verificati sulla pagina Anthropic del 5/11/2026. Attenzione: sono dati di Anthropic sul proprio prodotto; gli scenari 15x e 3-4x sono illustrativi, non previsioni (lo dice il report). Il sondaggio (528 scienziati) è su candidati ai programmi AI for Science di Anthropic, quindi utenti sopra la media."
+   ],
+   "id": "n14",
+   "ord": 31,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "🥄",
    "titolo": "Tre grammi di lucidità",
