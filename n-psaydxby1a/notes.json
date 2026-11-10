@@ -1,7 +1,120 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-09",
+ "aggiornato": "2026-11-10",
  "notes": [
+  {
+   "emoji": "🤨",
+   "titolo": "Chi chatta non si fida",
+   "tema": "tech",
+   "batch": "10/11, giro X",
+   "origine": "Lista Best di Michele, post di Peter Diamandis su X (10/11/2026); numeri ricontrollati sul report Pew Research Center del 17/6/2026",
+   "x_posts": [
+    "https://x.com/PeterDiamandis/status/2119959134783082551"
+   ],
+   "links": [
+    [
+     "Pew Research Center, Americans and AI 2026: Chatbots, Smart Devices and Views on Impact (17/6/2026)",
+     "https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/"
+    ],
+    [
+     "Pew, report completo in PDF",
+     "https://pewresearch.org/wp-content/uploads/sites/20/2026/06/PI_2026.06.17_Americans-and-AI_REPORT.pdf"
+    ],
+    [
+     "Newsweek, Gen Z Is Most Worried About Impacts of AI",
+     "https://www.newsweek.com/gen-z-is-most-worried-about-impacts-of-ai-they-still-use-it-the-most-12088285"
+    ]
+   ],
+   "checks": [
+    "Il sondaggio è di febbraio 2026 (pubblicato a giugno): Diamandis lo rilancia ora, non è un dato nuovo di novembre.",
+    "Il 66% di under 30 che ha usato un chatbot e il dato dell'uso quotidiano (21% contro 23% dei 30-49enni) vengono da Newsweek, che riporta il report Pew."
+   ],
+   "images": [],
+   "body": "Chiedete a un ventenne: usa ChatGPT per la tesi, per la spesa, perfino per i messaggi difficili. Poi magari, a cena, vi dice che l'AI «ci rovinerà».\n\nSi dice che chi usa di più una tecnologia sia anche il primo a crederci.\n\n**Però, però, però.** Il [Pew Research Center](https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/) ha intervistato 5.119 adulti americani a febbraio 2026. Fra gli under 30, il 66% ha usato un chatbot, [più di qualsiasi altra fascia d'età](https://www.newsweek.com/gen-z-is-most-worried-about-impacts-of-ai-they-still-use-it-the-most-12088285) (era il 55% nel 2024). Ma solo il 14% pensa che nei prossimi vent'anni l'AI farà bene alla società. Il 48% pensa che farà male.\n\nSull'intero campione, i pessimisti sono il 40%, gli ottimisti il 16%. E in ogni fascia d'età, fra il 61% e il 65% dice che l'AI sta correndo troppo.\n\nDiamandis la chiama «una recensione di prodotto molto dettagliata». Forse ha ragione: i clienti più assidui sono anche quelli che si lamentano di più al bancone.\n\nAi posteri (che poi sono proprio loro) l'ardua sentenza.",
+   "id": "n25",
+   "ord": 42,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🔥",
+   "titolo": "Fumo negli occhi (artificiali)",
+   "tema": "natura",
+   "batch": "10/11, giro X",
+   "origine": "Lista Best di Michele, post dell'Abundance Institute su X (9/11/2026); dati ricontrollati su ALERTCalifornia e sul sito del Governatore della California",
+   "x_posts": [
+    "https://x.com/abundanceinst/status/2119888517224362108"
+   ],
+   "links": [
+    [
+     "ALERTCalifornia, About (UC San Diego)",
+     "https://alertcalifornia.org/about/"
+    ],
+    [
+     "ALERTCalifornia, Research & Technology",
+     "https://alertcalifornia.org/technology/"
+    ],
+    [
+     "Governatore della California, cinque anni dal 2020 fire siege (15/8/2025)",
+     "https://www.gov.ca.gov/2025/08/15/five-years-since-devastating-2020-fire-siege-heres-how-california-is-better-prepared-for-catastrophic-wildfire/"
+    ],
+    [
+     "Innovation News Network, Microsoft investe in ALERTCalifornia",
+     "https://www.innovationnewsnetwork.com/microsoft-backs-alertcalifornia-detect-california-wildfires/73486/"
+    ]
+   ],
+   "checks": [
+    "Il «più del 30% delle volte prima del 911» si riferisce alla prima stagione del sistema (dal settembre 2023), secondo ALERTCalifornia e il Governatore: non è un dato aggiornato al 2026.",
+    "Il numero di telecamere varia per fonte e data: 1.190 (Governatore, agosto 2025), oltre 1.200 (ALERTCalifornia, febbraio 2026), oltre 1.300 (Innovation News Network).",
+    "Le 2,5 ore di anticipo e i 7 milioni di immagini al giorno sono dati attribuiti a Microsoft da Innovation News Network, non verificati su fonte primaria."
+   ],
+   "images": [],
+   "body": "Notte d'estate in California, una collina lontana da tutto. Un filo di fumo che nessuno vede, perché lì non c'è nessuno a vederlo.\n\nSi dice che il primo allarme di un incendio sia sempre una telefonata: qualcuno che passa, nota il fumo, chiama il 911.\n\n**Però, però, però.** Dal settembre 2023 tutti i 21 centri operativi di CAL FIRE usano un'AI che guarda le immagini di una [rete di oltre 1.200 telecamere](https://alertcalifornia.org/about/) gestita da UC San Diego. Ogni telecamera fa un giro di 360° circa ogni due minuti e di notte vede [fino a 120 miglia](https://alertcalifornia.org/technology/). Nella prima stagione il sistema ha individuato più di 1.200 incendi, e in [più del 30% dei casi è arrivato prima della prima chiamata al 911](https://www.gov.ca.gov/2025/08/15/five-years-since-devastating-2020-fire-siege-heres-how-california-is-better-prepared-for-catastrophic-wildfire/).\n\nL'AI non spegne niente: segnala un probabile fuoco, con una percentuale di certezza e una posizione stimata. Poi un operatore umano conferma e parte la squadra. Secondo Microsoft, che ci ha messo [5 milioni di dollari](https://www.innovationnewsnetwork.com/microsoft-backs-alertcalifornia-detect-california-wildfires/73486/), alcuni incendi vengono visti fino a 2,5 ore prima.\n\nInsomma, un incendio su tre lo nota prima una macchina. Per chi si chiede a cosa servano tutti quei data center, una risposta ce l'ha.",
+   "id": "n24",
+   "ord": 41,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🏃",
+   "titolo": "Sudare sette camicie (ma correndo)",
+   "tema": "uomo",
+   "batch": "10/11, giro X",
+   "origine": "Like di Michele a BowTiedPhys su X (9/11/2026); numeri ricontrollati sulla Tabella 2 dello studio originale",
+   "x_posts": [
+    "https://x.com/BowTiedPhys/status/2119840439708913944"
+   ],
+   "links": [
+    [
+     "Kuan et al., Excretion of Ni, Pb, Cu, As, and Hg in Sweat under Two Sweating Conditions, IJERPH 2022",
+     "https://doi.org/10.3390/ijerph19074323"
+    ],
+    [
+     "Sears et al., Arsenic, Cadmium, Lead, and Mercury in Sweat: A Systematic Review, 2012",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC3312275/"
+    ]
+   ],
+   "checks": [
+    "I rapporti 11x e 10,8x li ho calcolati io dalle medie della Tabella 2 (57,3 contro 5,2 µg/L di nichel; 52,8 contro 4,9 di piombo): coincidono con quelli del post.",
+    "Lo studio misura concentrazioni nel sudore, non la quantità totale espulsa né i livelli nel sangue: nessun beneficio clinico dimostrato.",
+    "Campione piccolo: 12 studenti universitari a Taiwan, 6 uomini e 6 donne."
+   ],
+   "images": [],
+   "body": "Sabato mattina, spogliatoio della palestra. Metà della gente fa la fila per la sauna, convinta di «buttare fuori le tossine». L'altra metà esce a correre.\n\nSi dice che sudare sia sudare: conta il litro perso, non come lo perdi.\n\n**Però, però, però.** Uno [studio taiwanese del 2022](https://doi.org/10.3390/ijerph19074323) ha fatto sudare 12 studenti per 20 minuti in due modi: di corsa sul tapis roulant a 25 °C, oppure seduti in una cabina sauna a 45 °C. Stessa umidità, stessa velocità di sudorazione, circa 1,8 mg/cm² al minuto. Nel sudore della corsa c'era 11 volte il nichel (57,3 contro 5,2 µg/L) e quasi 11 volte il piombo (52,8 contro 4,9). L'arsenico +38%, il rame +30%. Il mercurio, invece, uguale.\n\nInsomma, a parità di camicia bagnata, quella della corsa è più «sporca». Gli autori la leggono così: in sauna sudi più acqua.\n\nAttenzione, però: si misurano concentrazioni nel sudore, non quanto metallo lasci davvero il corpo. E una [revisione sistematica](https://pmc.ncbi.nlm.nih.gov/articles/PMC3312275/) ricorda che i dati sul sudore sono pochi e molto eterogenei.\n\nNel dubbio, la scusa per uscire a correre ce l'avete. E fuori, d'inverno, la sauna non serve.",
+   "id": "n23",
+   "ord": 40,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "🩻",
    "titolo": "Si lavora sui pesi",
