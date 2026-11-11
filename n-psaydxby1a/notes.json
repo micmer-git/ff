@@ -1,7 +1,117 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-10",
+ "aggiornato": "2026-11-11",
  "notes": [
+  {
+   "emoji": "🥦",
+   "titolo": "Una fibra al giorno (toglie la metformina di torno?)",
+   "tema": "uomo",
+   "batch": "11/11, giro X",
+   "origine": "Lista Best di Michele su X: post di Nassim Taleb del 10/11/2026 con lo screenshot dell'abstract; numeri verificati sull'articolo su Frontiers in Microbiology",
+   "x_posts": [
+    "https://x.com/nntaleb/status/2120169434505416891"
+   ],
+   "links": [
+    [
+     "Li et al., High-fiber diet altered gut microbiota, improved glycemic control, and reduced body weight in newly diagnosed type 2 diabetes and obesity, Frontiers in Microbiology 2026",
+     "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2026.1972983/full"
+    ],
+    [
+     "News-Medical, sintesi e limiti dello studio",
+     "https://www.news-medical.net/news/20261007/High-fiber-diet-beats-metformin-for-blood-sugar-and-weight-in-trial.aspx"
+    ],
+    [
+     "Il post di Nassim Taleb",
+     "https://x.com/nntaleb/status/2120169434505416891"
+    ]
+   ],
+   "checks": [
+    "Studio piccolo, un solo centro, in aperto: 46 persone hanno finito, solo 12 nel gruppo metformina.",
+    "Il gruppo fibre mangiava anche meno calorie: parte del calo di peso può venire da lì. Le fibre erano prodotti prescritti, non una dieta qualsiasi.",
+    "Valori a 84 giorni corretti per il punto di partenza (ANCOVA). La frase di Taleb sul GLP-1 è una sua estrapolazione, lo studio non lo misura."
+   ],
+   "images": [],
+   "backrefs": [
+    [
+     "🦠 ff.92.2 Un organo in più: il microbioma",
+     "https://fortissimo.substack.com/i/137958307/ff-un-organo-in-piu-il-microbioma"
+    ]
+   ],
+   "body": "Ambulatorio, prima diagnosi di diabete di tipo 2. Spesso la prima cosa che si porta a casa è una ricetta: metformina.\n\n**Però, però, però.** A Zhengzhou hanno provato un testa a testa. [48 adulti con diabete appena diagnosticato e sovrappeso](https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2026.1972983/full), divisi a caso: 36 a dieta ricca di fibre senza farmaci, 12 a sola metformina, per 84 giorni. Alla fine emoglobina glicata 6,32% contro 6,74% e BMI 28,4 contro 30,2, con meno sbalzi di glicemia nel gruppo delle fibre. Dopo 28 giorni l'intestino era già cambiato: più *Bifidobacterium* e *Lactobacillus*, meno *Bilophila wadsworthia*. La metformina, sui batteri, quasi niente.\n\nTaleb [l'ha rilanciato senza mezzi termini](https://x.com/nntaleb/status/2120169434505416891): la fibra batte il farmaco, senza effetti collaterali.\n\nCalma. Studio piccolo, un solo centro, appena 12 persone col farmaco. E chi mangiava fibre [mangiava anche meno calorie](https://www.news-medical.net/news/20261007/High-fiber-diet-beats-metformin-for-blood-sugar-and-weight-in-trial.aspx): parte del peso perso viene da lì.\n\nVi ricordate quando dicevamo che il microbioma è quasi un organo ([🦠 ff.92.2 Un organo in più: il microbioma](https://fortissimo.substack.com/i/137958307/ff-un-organo-in-piu-il-microbioma))? Ecco, a quanto pare si cura anche dal fruttivendolo.\n\nAi posteri l'ardua sentenza. Intanto, passatemi i ceci.",
+   "id": "n28",
+   "ord": 45,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null
+  },
+  {
+   "emoji": "🧺",
+   "titolo": "Dimmi cosa leggi (e ti dirò chi sei)",
+   "tema": "tech",
+   "batch": "11/11, giro X",
+   "origine": "Lista Best di Michele su X: Dwarkesh Patel lo ha rilanciato il 10/11/2026 (post originale dell'8/9/2026); numeri verificati sull'articolo",
+   "x_posts": [
+    "https://x.com/dwarkesh_sp/status/2120359285398155623",
+    "https://x.com/dwarkesh_sp/status/2097359573581799481"
+   ],
+   "links": [
+    [
+     "Dwarkesh Patel e Jerry Han, Pretraining progress is mostly coming from data, 8/9/2026",
+     "https://www.dwarkesh.com/p/pretraining-progress-is-mostly-data"
+    ]
+   ],
+   "checks": [
+    "Esperimento piccolo: al massimo 1e19 FLOP, misurato sul benchmark OLMES (10 test facili, quasi tutti a scelta multipla). Gli autori stessi dicono che a scala di frontiera può cambiare.",
+    "Risultato di settembre, tornato a girare su X il 10/11."
+   ],
+   "images": [],
+   "backrefs": [],
+   "body": "Domenica, cucina di casa. Stessa ricetta della nonna, stessa pentola. Eppure il ragù viene meglio quando la carne arriva dal macellaio buono.\n\nNell'AI si parla quasi sempre di ricette: architetture, ottimizzatori, trucchi con nomi impronunciabili.\n\n**Però, però, però.** [Dwarkesh Patel e Jerry Han hanno riaddestrato da zero dei piccoli modelli](https://www.dwarkesh.com/p/pretraining-progress-is-mostly-data), incrociando la ricetta *open* di ogni anno dal 2019 al 2025 (da GPT-2 a OLMo-2) con il dataset dello stesso anno: da OpenWebText, circa 9 miliardi di *token* presi dai link più votati su Reddit, a UltraFineWeb. Risultato: i dati migliori valgono un risparmio di calcolo di 12 volte, le ricette migliori di 3,7. Gli ingredienti pesano 3,24 volte la ricetta. E i due effetti si sommano quasi senza interferire: spiegano l'88% delle differenze.\n\nCalma, però: siamo a 1e19 FLOP, briciole rispetto ai modelli di frontiera. E secondo gli autori il merito vero delle architetture è un altro, far reggere al modello montagne di calcolo senza che la barca si ribalti.\n\nInsomma, se il segreto è la spesa, che succede quando il supermercato di internet resta senza scorte?",
+   "id": "n27",
+   "ord": 44,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null
+  },
+  {
+   "emoji": "🐦",
+   "titolo": "Cantami, o uccello",
+   "tema": "natura",
+   "batch": "11/11, giro X",
+   "origine": "Ricerca mirata su X (post di Sigmalive English, 10/11/2026); numeri verificati sull'abstract di Science e sul comunicato McGill",
+   "x_posts": [
+    "https://x.com/Sigmalive_EN/status/2120141225936224399"
+   ],
+   "links": [
+    [
+     "James et al., Pervasive patterns in bird songs resemble those in human speech and song and are independent of vocal learning, Science, 29/10/2026",
+     "https://www.science.org/doi/10.1126/science.adr9983"
+    ],
+    [
+     "McGill University, comunicato su EurekAlert!",
+     "https://www.eurekalert.org/news-releases/1149618"
+    ],
+    [
+     "Gli autori su The Conversation",
+     "https://theconversation.com/human-speech-follows-the-same-patterns-as-birdsong-new-research-295030"
+    ]
+   ],
+   "checks": [
+    "La spiegazione del respiro (coordinare fiato e muscoli della voce) è un'ipotesi degli autori, non un risultato dello studio.",
+    "Somiglianza di schemi acustici, non di significato: gli uccelli non parlano."
+   ],
+   "images": [],
+   "backrefs": [],
+   "body": "Mattina presto, finestra aperta. Il merlo sul tetto attacca la sua strofa, si ferma, riparte. Sembra quasi una frase.\n\nForse non è solo un'impressione. [Uno studio uscito su Science il 29 ottobre](https://www.science.org/doi/10.1126/science.adr9983) ha confrontato i canti di 367 specie di uccelli (oltre 74.500 elementi vocali da circa 5.900 canti, scaricati da xeno-canto, l'archivio dei registratori amatoriali) con parlato e canto umano in 52 lingue. Stessi schemi: piccoli salti di tono tra una nota e l'altra, ritmi regolari, l'ultima sillaba della frase più lunga delle altre.\n\n**Però, però, però.** I ricercatori della McGill si aspettavano somiglianze più forti negli uccelli che imparano il canto per imitazione, come facciamo noi. E invece [nessuna differenza sistematica](https://www.eurekalert.org/news-releases/1149618) rispetto a quelli che nascono col canto già scritto, come i succiacapre.\n\nL'ipotesi degli autori [sta nei polmoni](https://theconversation.com/human-speech-follows-the-same-patterns-as-birdsong-new-research-295030): coordinare il fiato con i muscoli della voce impone gli stessi vincoli a tutti, merli e tenori.\n\nChi ha provato a cantare in salita, di corsa, lo sa bene.",
+   "id": "n26",
+   "ord": 43,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null
+  },
   {
    "emoji": "🤨",
    "titolo": "Chi chatta non si fida",
