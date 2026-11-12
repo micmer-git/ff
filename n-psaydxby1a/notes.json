@@ -1,7 +1,128 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-11",
+ "aggiornato": "2026-11-12",
  "notes": [
+  {
+   "emoji": "🌤️",
+   "titolo": "Fiat lux (almeno 1.000)",
+   "tema": "uomo",
+   "batch": "12/11, giro X",
+   "origine": "Lista Best di Michele su X: post di Peter Diamandis dell'11/11/2026; numeri verificati sull'abstract dello studio su General Psychiatry e sul comunicato EurekAlert",
+   "x_posts": [
+    "https://x.com/PeterDiamandis/status/2120538559366984010"
+   ],
+   "links": [
+    [
+     "Zheng et al., Associations between wearable-device-measured daytime and nighttime light exposures and dementia risk, General Psychiatry 2026",
+     "https://onlinelibrary.wiley.com/doi/10.1002/gps3.70039"
+    ],
+    [
+     "EurekAlert, comunicato e limiti dello studio",
+     "https://www.eurekalert.org/news-releases/1139642"
+    ],
+    [
+     "Il post di Peter Diamandis",
+     "https://x.com/PeterDiamandis/status/2120538559366984010"
+    ]
+   ],
+   "checks": [
+    "Studio osservazionale: associazione, non causa (lo scrivono gli autori).",
+    "La luce è misurata al polso, non all'occhio, per una sola settimana; i partecipanti UK Biobank sono più sani della media.",
+    "Il «-41%» vale solo in sottogruppi (cronotipo serale, portatori APOE ε4, molta luce notturna), in analisi esplorative."
+   ],
+   "body": "Ci preoccupiamo di quante ore passiamo davanti a uno schermo. Molto meno di quante ne passiamo sotto la luce vera.\n\nNella UK Biobank, [87.577 persone](https://onlinelibrary.wiley.com/doi/10.1002/gps3.70039) hanno portato per una settimana un braccialetto con un sensore di luce. Poi, otto anni di attesa: 741 hanno sviluppato demenza. Chi di giorno stava sopra i 1.000 lux aveva un rischio più basso del 16%. Bastavano 0,7 ore al giorno sopra i 5.000 lux, circa 40 minuti, per un -17%. E stare sotto quella soglia pesava, come predittore, più di sei fattori di rischio noti, obesità e alcol compresi.\n\n**Però, però, però.** È uno studio osservazionale, e [gli autori lo dicono](https://www.eurekalert.org/news-releases/1139642): chi esce di più forse è già più sano. La luce è misurata al polso, non agli occhi, e per una sola settimana.\n\nNel dubbio, il caffè di metà mattina prendetelo fuori. Anche se piove.",
+   "id": "n31",
+   "ord": 48,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🛕",
+   "titolo": "Scoperta l'acqua calda (maya)",
+   "tema": "tech",
+   "batch": "12/11, giro X",
+   "origine": "Lista Best di Michele su X: post di @cryptopunk7213 dell'11/11/2026; fatti verificati sul blog di Pietro Miotti (con l'aggiornamento dell'11/11) e sul thread Hacker News dove l'autore cita il paper del 2025",
+   "x_posts": [
+    "https://x.com/cryptopunk7213/status/2120536251199541496"
+   ],
+   "links": [
+    [
+     "Pietro Miotti, My AI Agents (Re)discovered a Maya Site in 72 Hours",
+     "https://pietromiotti.com/latest/maya-site/"
+    ],
+    [
+     "Estrada-Belli, Canuto, Šprajc, Fernandez-Diaz, Journal of Archaeological Science: Reports 2025 (il sito era già lì, p. 14)",
+     "https://doi.org/10.1016/j.jasrep.2025.105288"
+    ],
+    [
+     "Hacker News, la discussione e la correzione dell'autore",
+     "https://news.ycombinator.com/item?id=50452455"
+    ],
+    [
+     "Il post di @cryptopunk7213",
+     "https://x.com/cryptopunk7213/status/2120536251199541496"
+    ]
+   ],
+   "checks": [
+    "Il post su X dice che il governo messicano ha «confermato» il sito: l'INAH ha solo risposto che nel suo registro non c'era nessun sito a quelle coordinate.",
+    "Datazione e funzione (centro civico classico, 250–900 d.C.) sono speculazioni di Miotti e dei suoi agenti, non verificate sul campo.",
+    "Pagina 14 del paper Estrada-Belli et al. citata dall'autore su Hacker News, non controllata direttamente."
+   ],
+   "body": "In vacanza, Pietro Miotti, ingegnere di Google e non archeologo, ha un'idea: e se gli agenti AI cercassero città perdute?\n\nDetto, fatto. [48 agenti](https://pietromiotti.com/latest/maya-site/) si passano le immagini lidar della NASA, circa 1.200 km² di giungla messicana, una per una, cercando angoli troppo retti per essere natura. Nessun modello speciale: guardano le figure seguendo una guida. Al mattino c'è un candidato: una piazza livellata, una piramide ovale alta 8–12 metri, un cortile rialzato. Report tradotto in spagnolo, mail all'INAH, l'istituto nazionale di antropologia. Risposta: in quel punto non c'è nessun sito registrato. Meno di 72 ore in tutto. Su X è diventata [«l'AI ha scoperto un sito maya»](https://x.com/cryptopunk7213/status/2120536251199541496).\n\n**Però, però, però.** L'11 novembre arriva l'aggiornamento: il sito era già in un [paper del 2025](https://doi.org/10.1016/j.jasrep.2025.105288) di Estrada-Belli e colleghi. Gli agenti l'hanno mancato nella ricerca bibliografica, e lui pure. Non era nel registro, ma non era sconosciuto.\n\nMorale: in tre giorni si fa archeologia. La bibliografia, invece, richiede ancora un pomeriggio.",
+   "id": "n30",
+   "ord": 47,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🔏",
+   "titolo": "Fidarsi è bene, dimostrare è meglio",
+   "tema": "tech",
+   "batch": "12/11, giro X",
+   "origine": "Lista Best di Michele su X: post di Google DeepMind del 10/11/2026; numeri verificati sul paper AlphaProof Code e sul blog di DeepMind",
+   "x_posts": [
+    "https://x.com/GoogleDeepMind/status/2120484249321033911"
+   ],
+   "links": [
+    [
+     "Google DeepMind, Introducing AlphaProof Code (blog, 10/11/2026)",
+     "https://deepmind.google/blog/introducing-alphaproof-code/"
+    ],
+    [
+     "Chaudhuri et al., AlphaProof Code: Verifying Signal's Security at the Machine-Code Level (paper)",
+     "https://google-deepmind.github.io/code-verification/"
+    ],
+    [
+     "The Register, i limiti della dimostrazione",
+     "https://www.theregister.com/ai-and-ml/2026/11/10/google-deepmind-melds-humans-and-ai-agents-to-vet-signals-secure-messaging-techniques/5308625"
+    ],
+    [
+     "Il post di Google DeepMind",
+     "https://x.com/GoogleDeepMind/status/2120484249321033911"
+    ]
+   ],
+   "checks": [
+    "Il blog dice «oltre sei milioni» di righe, il paper «circa 6,5 milioni»: uso il numero del paper.",
+    "La dimostrazione assume crittografia perfetta e non copre primitive crittografiche, generazione delle chiavi, chat di gruppo né le app Signal (The Register, paper)."
+   ],
+   "body": "Ogni volta che scrivete su Signal o Google Messages vi fidate di un pezzo di codice che non leggerete mai. Nessuno, in realtà, l'ha mai controllato riga per riga.\n\nFino a martedì. Google DeepMind ha messo un gruppo di agenti AI a [dimostrare matematicamente](https://google-deepmind.github.io/code-verification/) che `libsignal`, compilato così com'è, mantiene le promesse di sicurezza: segretezza in avanti, autenticazione, handshake post-quantistico. Risultato: circa 6,5 milioni di righe di dimostrazioni in Lean, scritte interamente dagli agenti. Cinque persone, quattro settimane.\n\nGli stessi agenti hanno poi segnalato le parti da rivedere a mano: [l'1% del codice](https://deepmind.google/blog/introducing-alphaproof-code/). Il resto lo controlla Lean, che non si stanca e non si distrae.\n\n**Però, però, però.** Quello che un umano deve leggere e di cui si deve fidare sono le specifiche: circa 18.000 righe, più 8.000 di semantica del processore. Se lì c'è un errore, sei milioni di righe dimostrano con rigore la cosa sbagliata. E la prova [assume una crittografia perfetta](https://www.theregister.com/ai-and-ml/2026/11/10/google-deepmind-melds-humans-and-ai-agents-to-vet-signals-secure-messaging-techniques/5308625).\n\nInsomma, le macchine scrivono le dimostrazioni. A noi resta decidere cosa vale la pena dimostrare.",
+   "id": "n29",
+   "ord": 46,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "🥦",
    "titolo": "Una fibra al giorno (toglie la metformina di torno?)",
