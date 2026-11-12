@@ -3,6 +3,193 @@
  "aggiornato": "2026-11-12",
  "notes": [
   {
+   "emoji": "🌊",
+   "titolo": "Uno, nessuno e centottanta chilometri",
+   "tema": "natura",
+   "batch": "12/11, podcast + cultura",
+   "origine": "cultura: The Marginalian (Maria Popova, 9/11/2026)",
+   "body": "Shark Bay, Australia occidentale. Un gruppo della University of Western Australia campiona dieci praterie di *Posidonia australis* e legge 18.000 marcatori genetici. Risultato: [è tutta una pianta](https://theconversation.com/meet-the-worlds-largest-plant-a-single-seagrass-clone-stretching-180-km-in-western-australias-shark-bay-184056). Un solo clone lungo 180 km, 200 km² di prateria, partito da un unico seme ([Edgeloe et al., *Proc. R. Soc. B*](https://doi.org/10.1098/rspb.2022.0538)). Età stimata: circa 4.500 anni.\n\nIl trucco è il doppio dei cromosomi, 40 invece di 20. Invece di riprodursi, si allunga.\n\nMaria Popova, su [*The Marginalian*](https://www.themarginalian.org/2026/11/09/pando/), la mette accanto a Pando, il bosco di pioppi tremuli dello Utah: 47.000 tronchi, un'unica radice, circa 6.000 tonnellate. Uno [studio del 2024](https://www.nature.com/articles/d41586-024-03570-4) gli dà fra 16.000 e 80.000 anni. La nave di Teseo, ma con la linfa.\n\n**Però, però, però.** Popova scrive che la posidonia «non può fiorire». I ricercatori, in realtà, i fiori li hanno visti: sono i frutti a mancare. E Pando arretra, perché i cervi mangiano i germogli prima che diventino alberi ([PLOS One](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0203619)).\n\nE noi ce l'abbiamo sotto casa: la *Posidonia oceanica* del Mediterraneo, scrivono gli stessi autori, ha cloni di oltre 15 km che potrebbero avere 100.000 anni.\n\nInsomma, chi è più vecchio: il clone, o l'idea di lui?",
+   "links": [
+    [
+     "Edgeloe et al., Extensive polyploid clonality was a successful strategy for seagrass to expand into a newly submerged environment, Proc. R. Soc. B 2022",
+     "https://doi.org/10.1098/rspb.2022.0538"
+    ],
+    [
+     "Gli autori su The Conversation: 180 km, 200 km², 4.500 anni, fiori sì e frutti rari",
+     "https://theconversation.com/meet-the-worlds-largest-plant-a-single-seagrass-clone-stretching-180-km-in-western-australias-shark-bay-184056"
+    ],
+    [
+     "Maria Popova, What Makes You Yourself: Posidonia Australis, Pando, and the Paradox of Personhood, The Marginalian (9/11/2026)",
+     "https://www.themarginalian.org/2026/11/09/pando/"
+    ],
+    [
+     "Nature News, The world's oldest tree? Genetic analysis traces evolution of iconic Pando forest (2024)",
+     "https://www.nature.com/articles/d41586-024-03570-4"
+    ],
+    [
+     "Rogers & McAvoy, Mule deer impede Pando's recovery, PLOS One 2018",
+     "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0203619"
+    ]
+   ],
+   "backrefs": [],
+   "checks": [
+    "L'età di Pando (16.000-80.000 anni) viene da un preprint bioRxiv del 2024 raccontato da Nature News, non ancora da un articolo pubblicato con revisione.",
+    "Il dato sulla Posidonia oceanica (oltre 15 km, forse 100.000 anni) è riportato dagli autori su The Conversation; lo studio originale (Arnaud-Haond et al., PLOS ONE 2012) non l'ho riletto."
+   ],
+   "id": "n35",
+   "ord": 52,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null
+  },
+  {
+   "emoji": "🧬",
+   "titolo": "Su misura, all'ingrosso",
+   "tema": "tech",
+   "batch": "12/11, podcast + cultura",
+   "origine": "podcast: Moonshots EP #310 (11/11/2026)",
+   "body": "Quanto costa curare 5.000 malattie genetiche rare? Su [*Moonshots*](https://www.youtube.com/watch?v=ILQwMvCA2_o&t=3240s) Dave Blundin lo chiede a un suo agente AI e fa leggere la risposta a un avatar. Conto della serva: circa 2 miliardi di dollari a farmaco, per 5.000 farmaci fanno 10.000 miliardi.\n\nLa proposta: smettere di approvare farmaci e approvare un processo. Editor genetico, nanoparticella, linea di produzione, protocollo di sicurezza, approvati una volta. Poi ogni malattia è solo una sequenza diversa. Da 2 miliardi a 2 milioni: mille volte meno.\n\nDue prove fatte a mano esistono già. A Boston Timothy Yu disegna [milasen](https://www.nejm.org/doi/full/10.1056/NEJMoa1813279) per una sola bambina, Mila, e una mutazione solo sua: prima dose il 31 gennaio 2018, [otto mesi dopo la diagnosi genetica](https://www.eurekalert.org/news-releases/488013). A Filadelfia, nel 2025, il piccolo KJ riceve un [editing di base](https://www.nejm.org/doi/full/10.1056/NEJMoa2504747) costruito sul suo errore nel gene CPS1, sviluppato [in circa sei mesi](https://www.nih.gov/news-events/nih-research-matters/infant-rare-disease-receives-customized-gene-therapy). E dal 2022 la legge USA prevede una [designazione per le piattaforme](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/platform-technology-designation-program-drug-development).\n\n**Però, però, però.** Il collo di bottiglia, ammette lo stesso agente, non è l'AI. È portare la terapia nel tessuto giusto (fegato sì, rene e gran parte del cervello no) e trovare chi fa la diagnosi: negli Stati Uniti i genetisti medici certificati erano circa 1.240 ([GAO, 2020](https://www.gao.gov/assets/gao-20-593.pdf)).\n\nNe avevamo parlato in [🩹 ff.81.4 Terapie geniche](https://fortissimo.substack.com/i/139748848/ff-terapie-geniche).\n\nInsomma, farmaci sartoriali, in catena di montaggio?",
+   "links": [
+    [
+     "Moonshots EP #310, 0:54:00 (5.000 malattie) e 0:57:00 (genetisti) (YouTube, 11/11/2026)",
+     "https://www.youtube.com/watch?v=ILQwMvCA2_o&t=3240s"
+    ],
+    [
+     "Kim et al., Patient-Customized Oligonucleotide Therapy for a Rare Genetic Disease, NEJM 2019 (milasen)",
+     "https://www.nejm.org/doi/full/10.1056/NEJMoa1813279"
+    ],
+    [
+     "EurekAlert, milasen: prima dose otto mesi dopo la diagnosi",
+     "https://www.eurekalert.org/news-releases/488013"
+    ],
+    [
+     "Musunuru et al., Patient-Specific In Vivo Gene Editing to Treat a Rare Genetic Disease, NEJM 2025 (KJ)",
+     "https://www.nejm.org/doi/full/10.1056/NEJMoa2504747"
+    ],
+    [
+     "NIH, Infant with rare disease receives customized gene therapy",
+     "https://www.nih.gov/news-events/nih-research-matters/infant-rare-disease-receives-customized-gene-therapy"
+    ],
+    [
+     "FDA, Platform Technology Designation Program",
+     "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/platform-technology-designation-program-drug-development"
+    ],
+    [
+     "GAO-20-593, Genetic Services: genetisti medici certificati (~1.240, aprile 2020)",
+     "https://www.gao.gov/assets/gao-20-593.pdf"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🩹 ff.81.4 Terapie geniche",
+     "https://fortissimo.substack.com/i/139748848/ff-terapie-geniche"
+    ]
+   ],
+   "checks": [
+    "'2 miliardi a farmaco' e 'da 2 miliardi a 2 milioni' sono numeri dell'agente AI in puntata, non verificati (la stima più citata, DiMasi 2016, è circa 2,6 miliardi con il costo del capitale). La sequenza tessuti raggiungibili è la sua lettura.",
+    "Il 1.240 è il dato GAO di aprile 2020 sui genetisti clinici; l'avatar dice 'circa 1.200'. ABMS 2026 conta 2.933 diplomati in genetica medica, ma include i laboratoristi."
+   ],
+   "id": "n34",
+   "ord": 51,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null
+  },
+  {
+   "emoji": "🧪",
+   "titolo": "Fidati, è GRAS",
+   "tema": "uomo",
+   "batch": "12/11, podcast + cultura",
+   "origine": "podcast: FoundMyFitness (Rhonda Patrick con Dariush Mozaffarian, 10/11/2026)",
+   "body": "Nel 1958 il Congresso americano stabilisce che un nuovo additivo, prima di finire nel cibo, va approvato dalla FDA. Con un'eccezione di buon senso per aceto, bicarbonato, zucchero: roba *generally recognized as safe*, GRAS.\n\nSu [*FoundMyFitness*](https://www.youtube.com/watch?v=7JeZk_J7_h4&t=4950s) Dariush Mozaffarian racconta come l'eccezione sia diventata la regola. L'azienda paga il suo panel di esperti, che dichiara l'ingrediente sicuro. I documenti, volendo, restano nel cassetto.\n\nIl numero c'è. L'[analisi dell'EWG](https://www.ewg.org/news-insights/news/2022/04/ewg-analysis-almost-all-new-food-chemicals-greenlighted-industry-not-fda) sul registro FDA conta 766 nuove sostanze alimentari tra il 2000 e il 2021: 756, il 98,7%, entrate via GRAS. Le richieste formali di approvazione? 10, e una sola nell'ultimo decennio. E il conteggio vede solo chi ha mandato la notifica, che è volontaria: per gli esperti citati dall'EWG, almeno 1.000 sostanze sono entrate senza nemmeno quella.\n\n**Però, però, però.** Qualcosa si muove. L'11 agosto 2026 la FDA ha [proposto](https://www.federalregister.gov/documents/2026/08/11/2026-16296/substances-generally-recognized-as-safe) di rendere obbligatoria la notifica, anche per gli ingredienti già sul mercato. Commenti aperti fino al 9 dicembre. Precedente illustre: gli oli parzialmente idrogenati, i grassi trans, sono stati GRAS fino al 2015.\n\nUna lista di cattivi l'avevamo già fatta: [🤮 ff.104.3 Gli abominevoli 5](https://fortissimo.substack.com/i/148256016/ff-gli-abominevoli).\n\nInsomma, chi controlla il controllore? Per ora, l'etichetta.",
+   "links": [
+    [
+     "EWG, Almost all new food chemicals greenlighted by industry, not the FDA (2022)",
+     "https://www.ewg.org/news-insights/news/2022/04/ewg-analysis-almost-all-new-food-chemicals-greenlighted-industry-not-fda"
+    ],
+    [
+     "Federal Register, Substances Generally Recognized as Safe (proposta FDA, 11/8/2026)",
+     "https://www.federalregister.gov/documents/2026/08/11/2026-16296/substances-generally-recognized-as-safe"
+    ],
+    [
+     "MDRXLaw, sintesi della proposta e scadenza del 9 dicembre",
+     "https://www.mdrxlaw.com/news-and-alerts/fda-mandatory-gras-notification-self-affirmed-gras/"
+    ],
+    [
+     "FoundMyFitness con Dariush Mozaffarian, 1:22:30 (GRAS) (YouTube, 10/11/2026)",
+     "https://www.youtube.com/watch?v=7JeZk_J7_h4&t=4950s"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🤮 ff.104.3 Gli abominevoli 5",
+     "https://fortissimo.substack.com/i/148256016/ff-gli-abominevoli"
+    ]
+   ],
+   "checks": [
+    "Mozaffarian dice '99% dei composti nel cibo USA' e 'unico Paese al mondo': il 98,7% dell'EWG riguarda solo le nuove sostanze notificate 2000-2021, non tutto il cibo. 'Unico Paese' non verificato, quindi non usato.",
+    "EWG è un'associazione ambientalista, non un ente neutrale; i numeri vengono però dal GRAS Notice Inventory pubblico della FDA. La proposta FDA non è definitiva."
+   ],
+   "id": "n33",
+   "ord": 50,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null
+  },
+  {
+   "emoji": "🥶",
+   "titolo": "Al minimo (sindacale)",
+   "tema": "uomo",
+   "batch": "12/11, podcast + cultura",
+   "origine": "podcast: FoundMyFitness (Rhonda Patrick con Dariush Mozaffarian, 10/11/2026)",
+   "body": "Mangiamo più o meno come nel 2000, ci muoviamo di più, e ingrassiamo lo stesso. Dariush Mozaffarian lo chiama paradosso, ospite di Rhonda Patrick su [*FoundMyFitness*](https://www.youtube.com/watch?v=7JeZk_J7_h4&t=6510s).\n\nLa pista porta a un lavoro del 2023 su [*Nature Metabolism*](https://www.nature.com/articles/s42255-023-00782-2). John Speakman e colleghi mettono insieme le misure con l'acqua doppiamente marcata (si beve un isotopo, poi lo si conta nelle urine) di 4.799 adulti tra Stati Uniti ed Europa. A parità di età e composizione corporea, la spesa energetica totale scende dalla fine degli anni '80. Quella da attività fisica, invece, sale. A calare è il metabolismo basale.\n\nIn numeri, [lo dice Speakman stesso](https://x.com/JohnSpeakman4/status/1651246273553633280): oggi bruciamo circa 220 kcal al giorno in meno gli uomini, 122 le donne, rispetto a coetanei identici di fine anni '80. Abbastanza, secondo lui, per spiegare l'epidemia di obesità americana.\n\n**Però, però, però.** Il perché è ancora un'ipotesi. Mozaffarian punta su termogenesi, grasso bruno e cibo ultra-processato. Le prove dirette sono soprattutto nei topi, come ricorda il [CNRS](https://www.cnrs.fr/en/press/why-has-our-energy-expenditure-declined). E nelle donne il calo del basale, nel dataset principale, non è nemmeno statisticamente significativo.\n\nDi metabolismo basale parlavamo già in [👅 ff.49.2 BMI, BMR (non sono pernacchie)](https://fortissimo.substack.com/i/95768941/ff-bmi-bmr-non-sono-pernacchie).\n\nInsomma, siamo più freddini di trent'anni fa. Colpa del piatto?",
+   "links": [
+    [
+     "Speakman et al., Total daily energy expenditure has declined over the past three decades due to declining basal expenditure, not reduced activity expenditure, Nature Metabolism 2023",
+     "https://www.nature.com/articles/s42255-023-00782-2"
+    ],
+    [
+     "John Speakman su X: 220 kcal/giorno in meno per gli uomini, 122 per le donne",
+     "https://x.com/JohnSpeakman4/status/1651246273553633280"
+    ],
+    [
+     "CNRS, Why has our energy expenditure declined? (-7,7% uomini, -5,4% donne)",
+     "https://www.cnrs.fr/en/press/why-has-our-energy-expenditure-declined"
+    ],
+    [
+     "FoundMyFitness con Dariush Mozaffarian, 1:48:30 (paradosso dell'obesità) (YouTube, 10/11/2026)",
+     "https://www.youtube.com/watch?v=7JeZk_J7_h4&t=6510s"
+    ]
+   ],
+   "backrefs": [
+    [
+     "👅 ff.49.2 BMI, BMR (non sono pernacchie)",
+     "https://fortissimo.substack.com/i/95768941/ff-bmi-bmr-non-sono-pernacchie"
+    ]
+   ],
+   "checks": [
+    "Abstract del paper verificato (n = 4.799; TEE e BEE aggiustati in calo, attività in aumento; BEE nelle donne non significativo). L'articolo completo è a pagamento: 220 e 122 kcal vengono dal thread dell'autore, le percentuali dal CNRS.",
+    "Mozaffarian in puntata dice '220 calorie per la persona media, USA e Inghilterra': in realtà 220 è il dato degli uomini. Il legame con termogenesi e grasso bruno è una sua ipotesi."
+   ],
+   "id": "n32",
+   "ord": 49,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "x_posts": [],
+   "images": [],
+   "chart": null
+  },
+  {
    "emoji": "🌤️",
    "titolo": "Fiat lux (almeno 1.000)",
    "tema": "uomo",
