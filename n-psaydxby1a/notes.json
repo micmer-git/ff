@@ -1,7 +1,123 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-12",
+ "aggiornato": "2026-11-13",
  "notes": [
+  {
+   "emoji": "💉",
+   "titolo": "Chi si ferma è perduto?",
+   "tema": "uomo",
+   "batch": "13/11, giro X",
+   "origine": "Ricerca X del 13/11 (post di CTV News del 13/11/2026); numeri verificati sull'abstract dello studio su The Lancet Regional Health – Europe (9/11/2026), sul Pharmaceutical Journal e sul Science Media Centre",
+   "body": "301 centri diabetologici italiani, vent'anni di cartelle (2004-2024), 80.302 persone con diabete di tipo 2 che iniziano un GLP-1, la famiglia di Ozempic. Nessuna con malattie cardiovascolari note.\n\nAll'ultima visita il 60,5% aveva smesso. Lo [studio di Ceriello e colleghi su *The Lancet Regional Health – Europe*](https://doi.org/10.1016/j.lanepe.2026.101881) confronta 28.713 persone che hanno smesso con altrettante, simili per età, BMI, glicata e anni di diabete, che hanno continuato. Infarto, ictus o morte: [3,94 eventi ogni 100 anni-persona contro 1,96](https://pharmaceutical-journal.com/article/news/stopping-glp-1s-linked-to-twice-the-risk-of-heart-attack-stroke-or-death-in-type-2-diabetes). Il doppio.\n\nLa morte per qualsiasi causa va peggio ancora: 2,23 contro 0,48, quasi cinque volte. Eppure pressione, glicemia e colesterolo, dopo lo stop, cambiano poco.\n\n**Però, però, però.** Il dubbio sta proprio lì. Un effetto così grande, scrivono gli stessi autori, «difficilmente si spiega solo con la sospensione» del farmaco. Nessuno sa perché quei pazienti abbiano smesso: magari erano già malati d'altro. Studio osservazionale, quindi un'associazione, come ricordano gli esperti sentiti dal [Science Media Centre](https://www.sciencemediacentre.org/expert-reaction-to-a-retrospective-cohort-study-looking-at-glp-1-ra-discontinuation-and-cardiovascular-events-and-all-cause-mortality-in-people-with-type-2-diabetes/).\n\nChi si ferma è perduto, dice il proverbio. Prima però bisognerebbe sapere perché si è fermato.",
+   "x_posts": [
+    "https://x.com/CTVNewsNorthern/status/2121049165866156034"
+   ],
+   "links": [
+    [
+     "Ceriello et al., GLP-1 receptor agonist discontinuation and cardiovascular events and all-cause mortality in people with type 2 diabetes, The Lancet Regional Health – Europe 2026",
+     "https://doi.org/10.1016/j.lanepe.2026.101881"
+    ],
+    [
+     "The Pharmaceutical Journal: 3,94 contro 1,96 eventi e 2,23 contro 0,48 morti ogni 100 anni-persona",
+     "https://pharmaceutical-journal.com/article/news/stopping-glp-1s-linked-to-twice-the-risk-of-heart-attack-stroke-or-death-in-type-2-diabetes"
+    ],
+    [
+     "Science Media Centre, reazioni degli esperti",
+     "https://www.sciencemediacentre.org/expert-reaction-to-a-retrospective-cohort-study-looking-at-glp-1-ra-discontinuation-and-cardiovascular-events-and-all-cause-mortality-in-people-with-type-2-diabetes/"
+    ]
+   ],
+   "checks": [
+    "Abstract letto (copia PDF dello studio); il DOI l'ho preso dal Science Media Centre e da una rapid response sul BMJ, non l'ho aperto su lancet.com.",
+    "Studio osservazionale retrospettivo: associazione, non causa; motivi della sospensione ignoti."
+   ],
+   "id": "n38",
+   "ord": 55,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🌍",
+   "titolo": "Il sole sorge a sud",
+   "tema": "natura",
+   "batch": "13/11, giro X",
+   "origine": "Lista Best di Michele su X: post di @CleanPowerDave del 12/11/2026 («featuring our analysis») sull'articolo dell'Economist; numeri verificati sul rapporto e sul comunicato di Ember (27/8/2026)",
+   "body": "Ogni giorno del 2026, in Africa, si montano circa 100.000 pannelli solari: 47 MW al giorno, secondo [Ember](https://ember-energy.org/latest-insights/the-take-off-in-african-solar-that-official-statistics-cant-yet-see/).\n\nIl totale dell'anno fa 17 GW, il 45% in più del 2025, che a sua volta aveva fatto +51%. Terzo record di fila. In [36 paesi su 54](https://ember-energy.org/latest-updates/africa-is-on-track-for-a-record-year-of-solar-installations-in-2026-up-45-year-on-year-driven-largely-by-distributed-solar/) sarà l'anno record; nella Repubblica Democratica del Congo la crescita è del 544%, in Zimbabwe del 282%. Il Sudafrica, che nel 2023 si prendeva il 52% delle importazioni, è sceso al 20%.\n\nIl bello è che le statistiche ufficiali non lo vedono: è solare distribuito, su tetti e cortili. Ember allora conta alla dogana cinese. Nei 12 mesi a giugno 2026 la Cina ha spedito in Africa 23 GW di pannelli (+53%), quanto in tutto il Medio Oriente. Circa il 73% viene installato entro sei mesi.\n\n**Però, però, però.** Il 94% dei pannelli è cinese. Le fabbriche africane quadruplicano, fino a 3,5 GW nel 2026, ma producono soprattutto per gli Stati Uniti. E il conto del petrolio corre: secondo [Renewables Rising](https://www.renewables-rising.com/p/what-africa-s-extra-fuel-costs-could-have-built-in-solar), tra marzo e agosto 32 paesi africani hanno speso 21,9 miliardi di dollari in più di carburante.\n\nAbbronzati sì. Ma con la crema made in China.",
+   "x_posts": [
+    "https://x.com/CleanPowerDave/status/2120895930077421788"
+   ],
+   "links": [
+    [
+     "Ember, The take-off in African solar that official statistics can't yet see (rapporto, agosto 2026): 17 GW, +45%, 47 MW e 100.000 pannelli al giorno, 23 GW dalla Cina, 94% cinese",
+     "https://ember-energy.org/latest-insights/the-take-off-in-african-solar-that-official-statistics-cant-yet-see/"
+    ],
+    [
+     "Ember, comunicato del 27/8/2026: 36 paesi su 54 da record, Congo +544%, Zimbabwe +282%, manifattura a 3,5 GW",
+     "https://ember-energy.org/latest-updates/africa-is-on-track-for-a-record-year-of-solar-installations-in-2026-up-45-year-on-year-driven-largely-by-distributed-solar/"
+    ],
+    [
+     "The Economist, Africa's solar revolution is vast and speedy (12/11/2026)",
+     "https://www.economist.com/middle-east-and-africa/2026/11/12/africas-solar-revolution-is-vast-and-speedy"
+    ],
+    [
+     "Renewables Rising, What fuel costs could have built in solar (10/11/2026)",
+     "https://www.renewables-rising.com/p/what-africa-s-extra-fuel-costs-could-have-built-in-solar"
+    ]
+   ],
+   "checks": [
+    "I 17 GW del 2026 sono una stima di Ember costruita sulle esportazioni cinesi, non un dato di installazione misurato.",
+    "I 21,9 miliardi di carburante in più vengono da Renewables Rising: non ho trovato la fonte primaria dietro il calcolo.",
+    "L'articolo dell'Economist non si apre da qui (paywall/timeout): i numeri sono tutti presi da Ember."
+   ],
+   "id": "n37",
+   "ord": 54,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🤖",
+   "titolo": "Siamo rimasti in pochi",
+   "tema": "tech",
+   "batch": "13/11, giro X",
+   "origine": "Lista Best di Michele su X: post di Peter Diamandis del 12/11/2026; numeri verificati sul blog di Cloudflare (30/9/2026) e confrontati con i dati pubblici di Cloudflare Radar riportati da My Investing News",
+   "body": "Fine 2024. Cloudflare, che sta davanti a più del 20% del web, smista in media 63 milioni di richieste HTTP al secondo. Oggi sono [115 milioni](https://blog.cloudflare.com/agentic-web/), con picchi sopra i 150.\n\nIl raddoppio non l'abbiamo fatto noi. In un anno le richieste giornaliere degli agenti AI sulla rete di Cloudflare sono cresciute di oltre il 1.700%. E quest'anno, scrive l'azienda, per la prima volta più di metà del traffico Internet non era umano.\n\nChi paga il conto? Nei settori più setacciati (retail, software, servizi finanziari) il traffico umano è calato fino al 40% in meno di un anno. Le richieste dei crawler per addestrare modelli sono passate dal 22% della primavera 2025 al 52% di giugno 2026. La risposta di Cloudflare: far pagare gli agenti, con un bel codice HTTP 402 *Payment Required*.\n\n**Però, però, però.** Sul [Cloudflare Radar](https://myinvestingnews.com/josh-brown-cloudflare-bots-radar/), il cruscotto pubblico della stessa Cloudflare, nella settimana del 19 ottobre i bot erano il 39,2% delle richieste HTTP. In 200 settimane di dati, mai sopra la metà. E il CEO Matthew Prince ammette di aver sbagliato ogni previsione: a novembre 2025 il sorpasso lo aspettava per il 2027.\n\nInsomma, se state leggendo questa riga, forse siete un agente. Benvenuto, e salutami il tuo umano.",
+   "x_posts": [
+    "https://x.com/PeterDiamandis/status/2120947351627890816"
+   ],
+   "links": [
+    [
+     "Cloudflare Blog, The Internet has a second audience (30/9/2026): 63→115 milioni di richieste/s, agenti +1.700%, oltre metà del traffico non umano, traffico umano fino a -40%, crawler di training dal 22% al 52%",
+     "https://blog.cloudflare.com/agentic-web/"
+    ],
+    [
+     "Cloudflare, comunicato del 20/10/2026 (10 milioni di sviluppatori, agenti +1.700%)",
+     "https://www.cloudflare.com/press/press-releases/2026/more-than-10-million-developers-are-building-on-cloudflare/"
+    ],
+    [
+     "My Investing News, il confronto con Cloudflare Radar: bot al 39,2% (settimana del 19/10/2026) e le previsioni sbagliate di Prince",
+     "https://myinvestingnews.com/josh-brown-cloudflare-bots-radar/"
+    ]
+   ],
+   "checks": [
+    "Il 39,2% e le «200 settimane mai sopra metà» vengono da My Investing News, che cita Cloudflare Radar: non l'ho verificato direttamente sul cruscotto Radar.",
+    "Cloudflare non spiega come calcola il suo «più di metà»: misura la sua rete (circa 20% del web), non tutta Internet."
+   ],
+   "id": "n36",
+   "ord": 53,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "🌊",
    "titolo": "Uno, nessuno e centottanta chilometri",
