@@ -1,7 +1,114 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-13",
+ "aggiornato": "2026-11-14",
  "notes": [
+  {
+   "emoji": "💊",
+   "titolo": "Eroom, chi era costui?",
+   "tema": "tech",
+   "batch": "14/11, giro X",
+   "origine": "Lista Best X del 14/11 (post di @salonium sul nuovo episodio di Hard Drugs); numeri verificati sulla trascrizione ufficiale dell'episodio e sull'abstract di Scannell et al. (Nature Reviews Drug Discovery, 2012)",
+   "body": "Anni '50: con un miliardo di dollari di ricerca e sviluppo, a prezzi di oggi, l'industria farmaceutica portava a casa una cinquantina di farmaci nuovi. Oggi, circa uno. Lo ricordano Saloni Dattani e Jacob Trefethen nell'[ultima puntata di *Hard Drugs*](https://harddrugs.worksinprogress.co/episodes/why-drug-development-costs-a-billion-dollars/transcript), il podcast di Works in Progress.\n\nIl nome lo hanno dato [Jack Scannell e colleghi nel 2012](https://www.nature.com/articles/nrd3681): farmaci approvati per miliardo speso dimezzati circa ogni 9 anni dal 1950, un calo di circa 80 volte al netto dell'inflazione. La legge di Moore letta allo specchio: Eroom.\n\nScannell propone quattro cause. La più elegante è il problema «meglio dei Beatles»: ogni farmaco nuovo deve battere quelli che ci sono già, e nessuno ascolta una band nuova se ha i Beatles in casa. Passare da una mortalità del 10% al 5%, spiega Trefethen, è quattro volte più difficile da dimostrare che passare dal 20% al 10%.\n\n**Però, però, però.** Dal 2010 circa la curva si è appiattita: il costo per farmaco approvato non cresce più e le approvazioni annue salgono. Merito, pare, dei farmaci orfani per le malattie rare, ormai circa metà delle approvazioni, più economici da sviluppare.\n\nE l'AI? Per Trefethen la via d'uscita sono farmaci così buoni da vedersi a occhio nudo, come Gleevec, approvato prima della fase tre. Gli altri, intanto, fanno la fila.",
+   "x_posts": [
+    "https://x.com/salonium/status/2121288208637972735"
+   ],
+   "links": [
+    [
+     "Hard Drugs (Works in Progress), Why drug development costs a billion dollars, trascrizione, 13/11/2026",
+     "https://harddrugs.worksinprogress.co/episodes/why-drug-development-costs-a-billion-dollars/transcript"
+    ],
+    [
+     "Scannell et al., Diagnosing the decline in pharmaceutical R&D efficiency, Nature Reviews Drug Discovery 2012",
+     "https://www.nature.com/articles/nrd3681"
+    ]
+   ],
+   "checks": [
+    "'50 farmaci → 1' e 'circa metà orfani' sono dalla trascrizione del podcast; il dimezzamento ogni 9 anni e il calo di 80 volte dall'abstract di Scannell.",
+    "L'esempio 10%→5% è illustrativo, numeri dichiarati inventati dallo stesso Trefethen."
+   ],
+   "id": "n41",
+   "ord": 58,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🫀",
+   "titolo": "Battere il cuore finché è caldo",
+   "tema": "uomo",
+   "batch": "14/11, giro X",
+   "origine": "Lista Best X del 14/11 (post di @foundmyfitness); numeri verificati sugli abstract dei due studi del gruppo di Ben Levine su Circulation (2010 e 2018) e su ScienceDaily",
+   "body": "Dallas, laboratorio di Ben Levine. Nove settantenni sedentari (70,6 anni di media) si allenano per un anno: prima corsa lenta tre volte a settimana, poi il medio, poi ripetute da 30 secondi, infine lunghi da un'ora.\n\nIl VO2max [sale del 19%](https://www.ahajournals.org/doi/10.1161/circulationaha.110.973784), da 22,8 a 27,2 ml/kg/min. La massa del ventricolo sinistro cresce del 10%. La rigidità del cuore, misurata col catetere, resta dov'era: costante di rigidità da 0,062 a 0,058, differenza non significativa.\n\nStesso gruppo, otto anni dopo, [61 sedentari tra i 45 e i 64 anni](https://www.ahajournals.org/doi/full/10.1161/CIRCULATIONAHA.117.030617), sorteggiati: due anni di allenamento, 4-5 volte a settimana, almeno un'intervallata. Arrivano in fondo in 53. VO2max +18%, e stavolta la rigidità scende, da 0,072 a 0,051. Nel gruppo di controllo, niente. Levine, su [ScienceDaily](https://www.sciencedaily.com/releases/2018/01/180108090132.htm), parla di un elastico nuovo contro uno dimenticato in un cassetto, e consiglia di cominciare prima dei 65.\n\n**Però, però, però.** I settantenni erano nove, senza un gruppo di controllo sorteggiato: lo stesso post di FoundMyFitness lo chiama «piccolo». E il motore migliora comunque: +19% di VO2max a 70 anni sono tanti.\n\nIl cuore, insomma, si lascia rimodellare. Solo che a un certo punto smette di rispondere al telefono.",
+   "x_posts": [
+    "https://x.com/foundmyfitness/status/2121368028046827561"
+   ],
+   "links": [
+    [
+     "Fujimoto et al., Cardiovascular effects of 1 year of progressive and vigorous exercise training in previously sedentary individuals older than 65 years of age, Circulation 2010",
+     "https://www.ahajournals.org/doi/10.1161/circulationaha.110.973784"
+    ],
+    [
+     "Howden et al., Reversing the cardiac effects of sedentary aging in middle age, Circulation 2018",
+     "https://www.ahajournals.org/doi/full/10.1161/CIRCULATIONAHA.117.030617"
+    ],
+    [
+     "ScienceDaily: l'elastico e la soglia dei 65 anni",
+     "https://www.sciencedaily.com/releases/2018/01/180108090132.htm"
+    ]
+   ],
+   "checks": [
+    "Nomi dei primi autori (Fujimoto 2010, Howden 2018) da ricontrollare sulla pagina dell'articolo: ho letto gli abstract, non le intestazioni complete.",
+    "Studio 2010 su 9 persone, senza randomizzazione: indicazione, non prova."
+   ],
+   "id": "n40",
+   "ord": 57,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🏹",
+   "titolo": "Frecciatine preistoriche",
+   "tema": "uomo",
+   "batch": "14/11, giro X",
+   "origine": "Lista Best X del 14/11 (repost di @paulg del post di @HSB_Lab, Luke Glowacki, che cita il thread di Huw Groucutt); verificato sull'abstract su Science (12/11/2026), su The Conversation (articolo degli autori) e su Live Science",
+   "body": "Arabia Saudita meridionale, sabbia a perdita d'occhio. 125.000 anni fa qui c'era un lago, il Mundafan, con gli ippopotami dentro e bufali, gazzelle, struzzi e cammelli intorno. Il sito si chiama ‘Uruq Aljelibah, «le dune della pozza d'acqua».\n\nIl gruppo di Chris Clarkson ha raccolto [più di 5.500 manufatti in pietra](https://theconversation.com/discoveries-from-a-125-000-year-old-lakeshore-reveal-life-in-a-greener-arabia-293952) e li ha mappati accanto alle ossa. Alcune punte hanno la cima rotta da impatto, grassi e proteine animali vicino alla punta, resina e fibre vegetali alla base: erano legate a un'asta. Su diverse ci sono i biomarcatori di *Acokanthera schimperi*, l'albero del veleno per frecce, quello che colpisce il cuore. Lo studio è uscito su [*Science*](https://www.science.org/doi/10.1126/science.aef9342) il 12 novembre.\n\nSe regge, è caccia col veleno 65.000 anni prima delle punte sudafricane, finora le più antiche (circa 60.000 anni).\n\n**Però, però, però.** Lo dice lo stesso Clarkson a [Live Science](https://www.livescience.com/archaeology/middle-east/125-000-year-old-poisoned-stone-points-discovered-on-shore-of-ancient-lake-in-saudi-arabia): «potenzialmente» le più antiche, perché non sanno come preparassero il veleno né se funzionasse. E un archeologo esterno, Rose, fa notare che i manufatti sono tutti raccolti in superficie: i 125.000 anni sono l'età del lago, per le punte sono solo un massimo.\n\nPer mangiarsi la preda senza fare la stessa fine, spiega Clarkson, i cacciatori di epoche più recenti toglievano la carne intorno alla ferita. Il primo che ha provato senza saperlo non ha lasciato recensioni.",
+   "x_posts": [
+    "https://x.com/HSB_Lab/status/2121262032460599792"
+   ],
+   "links": [
+    [
+     "Clarkson et al., Poisoned hunting weapons, megafauna, and plant use at a 125,000-year-old Arabian paleolakeshore, Science 394 (2026)",
+     "https://www.science.org/doi/10.1126/science.aef9342"
+    ],
+    [
+     "The Conversation (gli autori): 5.500 manufatti, 65.000 anni prima del Sudafrica",
+     "https://theconversation.com/discoveries-from-a-125-000-year-old-lakeshore-reveal-life-in-a-greener-arabia-293952"
+    ],
+    [
+     "Live Science: le cautele di Clarkson e di Rose",
+     "https://www.livescience.com/archaeology/middle-east/125-000-year-old-poisoned-stone-points-discovered-on-shore-of-ancient-lake-in-saudi-arabia"
+    ]
+   ],
+   "checks": [
+    "Letti abstract ed editor's summary su science.org, non il PDF completo.",
+    "Datazione: 125.000 anni è l'età della riva del lago; i manufatti sono di superficie (età massima). Gli autori stessi parlano di prova 'potenziale' di veleno."
+   ],
+   "id": "n39",
+   "ord": 56,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "💉",
    "titolo": "Chi si ferma è perduto?",
