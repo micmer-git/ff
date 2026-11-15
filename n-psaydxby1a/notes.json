@@ -1,7 +1,115 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-14",
+ "aggiornato": "2026-11-15",
  "notes": [
+  {
+   "emoji": "⏱️",
+   "titolo": "Undici minuti contati",
+   "tema": "uomo",
+   "batch": "15/11, giro X",
+   "origine": "Ricerca X del 15/11 (post di @DanielBerglind); numeri verificati sul testo completo open access della meta-analisi su Sports Medicine (12/09/2026)",
+   "body": "Martedì sera, pista: dieci ripetute o un'ora di fondo tranquillo? Felipe Mattioni Maturana e colleghi hanno messo in fila [69 studi randomizzati, 2.387 persone](https://link.springer.com/article/10.1007/s40279-026-02528-y), per chiedersi quanti minuti a seduta servono davvero ad alzare il VO2max.\n\nLe ripetute battono il continuo moderato (effetto d = 0,38). Ma la sorpresa è la forma della curva. Con l'intervallato l'80% del guadagno massimo (+3,45 ml/kg/min) arriva con circa 11 minuti a seduta, riscaldamento e defaticamento esclusi, e oltre i 23 minuti si aggiunge poco. Il continuo cresce invece in linea retta: per lo stesso 80% servono circa 52 minuti, quattro-cinque volte tanto.\n\nContando solo i tratti veloci, senza i recuperi, bastano circa 5 minuti di lavoro vero a seduta, 15 a settimana. Su pressione, grassi nel sangue e glicemia, invece, pari.\n\n**Però, però, però.** L'intervallo di confidenza degli 11 minuti va da 9,5 a 40,2. I partecipanti erano quasi tutti sedentari o poco allenati, gli interventi duravano in media 10 settimane, e intensità e protocolli, che variavano parecchio, non sono stati modellati. Per chi corre già da anni il soffitto è un'altra storia: lo dicono gli autori stessi.\n\nUndici minuti per rimettersi in forma, insomma. Per la maratona ne restano un paio di centinaia.",
+   "x_posts": [
+    "https://x.com/DanielBerglind/status/2121634852588142884"
+   ],
+   "links": [
+    [
+     "Mattioni Maturana, Zadon et al., Optimising Exercise Prescription: A Meta-Analysis Examining the Dose Response of Exercise Duration on Cardiorespiratory Fitness Following HIIT and MICT, Sports Medicine 2026 (open access)",
+     "https://link.springer.com/article/10.1007/s40279-026-02528-y"
+    ]
+   ],
+   "checks": [
+    "Studio di settembre 2026, rilanciato su X il 14/11: non è una novità di questa settimana.",
+    "La durata include ripetute e recuperi, esclude riscaldamento e defaticamento; il dato dei ~5 minuti di lavoro puro è dall'analisi di sensibilità (IC 4,5-7,5)."
+   ],
+   "id": "n44",
+   "ord": 61,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🐂",
+   "titolo": "Prendere la taurina per le corna",
+   "tema": "uomo",
+   "batch": "15/11, giro X",
+   "origine": "Lista Best X del 15/11 (post di @davidasinclair su un articolo di Yale); verificato su sommario e highlights di Cell (23/10/2026), comunicato Yale, abstract di Science 2023 (Singh et al.) e Science 2025 (Fernandez et al.) con comunicato NIH",
+   "body": "Laboratorio di Vishwa Deep Dixit, Yale. Si aspettavano che la taurina, l'amminoacido delle bevande energetiche, calasse con l'età. Confrontano il sangue di giovani (20-40 anni) e anziani (60-99): [sale](https://medicine.yale.edu/news-article/amino-acid-diminishes-age-related-inflammation/).\n\nIl lavoro è uscito su [*Cell*](https://www.cell.com/cell/fulltext/S0092-8674%2826%2901207-9) il 23 ottobre. Quando un macrofago, la sentinella del sistema immunitario innato, incontra un segnale di pericolo, butta fuori fino all'80% della sua taurina. Quella perdita accende l'inflammasoma NLRP3, uno dei motori dell'infiammazione cronica dell'età. Ridare taurina alle cellule lo frena; nei topi anziani, più taurina vuol dire più salute e meno morti per sepsi.\n\nLa storia ha già due puntate. Nel 2023 [*Science*](https://www.science.org/doi/10.1126/science.abn9257) diceva: la taurina cala con l'età, e integrarla allunga la vita a vermi e topi. Nel 2025, sempre su [*Science*](https://www.science.org/doi/10.1126/science.adl2116), i ricercatori NIH seguono nel tempo persone dai 26 ai 100 anni, scimmie e topi: la taurina sale o resta ferma. David Sinclair, che racconta di averla presa e poi smessa, [ora dà un punto alla squadra taurina](https://x.com/davidasinclair/status/2121769092482781205).\n\n**Però, però, però.** Il meccanismo è dimostrato su cellule e topi. Se una pastiglia per bocca porti abbastanza taurina dentro i macrofagi umani, e in sicurezza, non lo sa ancora nessuno: serve un trial.\n\nIl corpo, insomma, la taurina la tira fuori quando serve. È che con gli anni comincia a perderla dalle tasche.",
+   "x_posts": [
+    "https://x.com/davidasinclair/status/2121769092482781205"
+   ],
+   "links": [
+    [
+     "Guan, Dixit et al., Taurine lowers inflammaging by regulating the NLRP3 inflammasome in macrophages, Cell 2026",
+     "https://www.cell.com/cell/fulltext/S0092-8674%2826%2901207-9"
+    ],
+    [
+     "Yale School of Medicine: 20-40 vs 60-99 anni, fino all'80% di taurina rilasciata",
+     "https://medicine.yale.edu/news-article/amino-acid-diminishes-age-related-inflammation/"
+    ],
+    [
+     "Singh et al., Taurine deficiency as a driver of aging, Science 2023",
+     "https://www.science.org/doi/10.1126/science.abn9257"
+    ],
+    [
+     "Fernandez et al., Is taurine an aging biomarker?, Science 2025",
+     "https://www.science.org/doi/10.1126/science.adl2116"
+    ],
+    [
+     "NIH: la taurina non è un buon biomarcatore dell'invecchiamento",
+     "https://www.nih.gov/news-events/news-releases/nih-researchers-conclude-taurine-unlikely-be-good-aging-biomarker"
+    ]
+   ],
+   "checks": [
+    "Letti sommario e highlights di Cell e il comunicato Yale, non il PDF completo.",
+    "Il dato di Sinclair (4 g per bocca → ~0,69 mM, 10 volte meno della dose efficace) non è verificato: escluso dal testo.",
+    "Singh et al. 2023 verificato sull'abstract: vita mediana dei topi +10-12%, vermi +10-23%."
+   ],
+   "id": "n43",
+   "ord": 60,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🎓",
+   "titolo": "Promossi (con riserva)",
+   "tema": "tech",
+   "batch": "15/11, giro X",
+   "origine": "Lista Best X del 15/11 (post di @emollick); numeri verificati sul README del repository SatBench (dati al 14/11/2026)",
+   "body": "Sabato sera Ethan Mollick mette insieme un esame unico: le 173 prove che i laboratori di AI citano di più negli annunci, ognuna trattata come una domanda. Una domanda è risolta quando il miglior modello arriva all'85%. Si chiama [SatBench](https://github.com/emollick/satbench) e poggia sui dati della [Benchmark Almanac](https://benchmarkalmanac.com) di Brian Zhou.\n\nRisultato al 14 novembre: 109 su 173 risolte, il 63%. Fino a inizio 2025 l'indice stava intorno al 30%, perché i test nuovi arrivavano veloci quanto cadevano i vecchi. Negli ultimi 12 mesi ha preso 20 punti.\n\nE cadono sempre prima. Dei benchmark usciti nel 2023 il 17% è stato battuto entro un anno, di quelli del 2025 il 43%. Il tempo mediano per arrivare all'85% è sceso da circa 20 a circa 14 mesi. Il canone del 2023 (MMLU, HumanEval, GSM8K…) è sparito: nel 2026 lo nominano 2 annunci su 134.\n\n**Però, però, però.** Tre prime volte su quattro oltre l'85% arrivano dal post di lancio del laboratorio stesso, e solo 10 su 75 sono state poi confermate da una misura indipendente. Contando solo quelle, SatBench è al 24%, non al 63%. Lo scrive lo stesso README.\n\nLo studente si corregge il compito da solo. E, guarda caso, prende quasi sempre il massimo.",
+   "x_posts": [
+    "https://x.com/emollick/status/2121751565845360769"
+   ],
+   "links": [
+    [
+     "SatBench (Ethan Mollick), README con dati al 14/11/2026",
+     "https://github.com/emollick/satbench"
+    ],
+    [
+     "The Benchmark Almanac (Brian Zhou)",
+     "https://benchmarkalmanac.com"
+    ]
+   ],
+   "checks": [
+    "Tutti i numeri sono dal README di SatBench; analisi di un singolo autore, non revisionata.",
+    "Le proiezioni (85% nel 2028-2030) sono estrapolazioni dichiarate, non previsioni: non usate nel testo."
+   ],
+   "id": "n42",
+   "ord": 59,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "💊",
    "titolo": "Eroom, chi era costui?",
