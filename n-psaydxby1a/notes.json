@@ -1,7 +1,123 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-15",
+ "aggiornato": "2026-11-16",
  "notes": [
+  {
+   "emoji": "🏹",
+   "titolo": "Cacciatori di anni",
+   "tema": "uomo",
+   "batch": "16/11, giro X",
+   "origine": "Lista Best X del 15/11 (post di @siimland); verificato su PNAS 2012 (Burger, Baudisch, Vaupel), comunicato Max Planck e HealthDay/MedicalXpress",
+   "body": "Sabato sera Siim Land [rilancia](https://x.com/siimland/status/2122045276198150597) un confronto che sembra un oroscopo: un giapponese di 72 anni ha la stessa probabilità di morire entro l'anno di un cacciatore-raccoglitore di 30.\n\nIl confronto è di Oskar Burger, Annette Baudisch e James Vaupel, Max Planck per la ricerca demografica, su [*PNAS*](https://www.pnas.org/doi/10.1073/pnas.1215627109) nel 2012. Come riferimento usano la mortalità media dei cacciatori-raccoglitori osservati dagli etnografi, cioè il profilo con cui ci siamo evoluti. A 65 anni un cacciatore-raccoglitore ha circa il 5,3% di probabilità di morire entro l'anno, un giapponese lo 0,8%.\n\n**Però, però, però.** Oggi la distanza tra noi e i cacciatori-raccoglitori è più grande di quella tra loro e gli scimpanzé selvatici. Quasi tutto il salto è arrivato dopo il 1900: l'hanno vissuto circa 4 delle circa 8.000 generazioni umane mai esistite. E prima dei 15 anni un cacciatore-raccoglitore aveva circa [100 volte](https://medicalxpress.com/news/2012-10-big-rapid-gains-human-lifespan.html) più probabilità di morire di un giapponese o di uno svedese di oggi.\n\n72 è il nuovo 30. Qualcuno lo dica alle ginocchia.",
+   "x_posts": [
+    "https://x.com/siimland/status/2122045276198150597"
+   ],
+   "links": [
+    [
+     "Burger, Baudisch, Vaupel, Human mortality improvement in evolutionary context, PNAS (2012)",
+     "https://www.pnas.org/doi/10.1073/pnas.1215627109"
+    ],
+    [
+     "Max Planck, The evolution of mortality",
+     "https://www.mpg.de/6607104/mortality-evolution"
+    ],
+    [
+     "MedicalXpress/HealthDay, Big, rapid gains made in human lifespan (2012)",
+     "https://medicalxpress.com/news/2012-10-big-rapid-gains-human-lifespan.html"
+    ]
+   ],
+   "checks": [
+    "Le cifre del post di Siim Land (5% nel 1950, 1,2% nel 2010 per i 72enni giapponesi) NON sono verificate sulla fonte: non usate nel testo.",
+    "Il «100 volte prima dei 15 anni» viene dal resoconto HealthDay dello studio, non dal testo PNAS letto."
+   ],
+   "id": "n47",
+   "ord": 64,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🛗",
+   "titolo": "Ascensore per il patibolo",
+   "tema": "tech",
+   "batch": "16/11, giro X",
+   "origine": "Lista Best X del 16/11 (post di @emollick); dato verificato sulla colonna di James Bessen per RIETI e sulla trascrizione Brookings (12/12/2019)",
+   "body": "Domenica mattina Ethan Mollick [scrive](https://x.com/emollick/status/2122176524610884061) che quasi chiunque lavori in Occidente ha vissuto un periodo tecnologico stabile. La prova: dei 270 mestieri del censimento USA del 1950, l'automazione ne ha fatto sparire uno solo. L'ascensorista.\n\nIl numero è di James Bessen, economista della Boston University, nel paper *How computer automation affects occupations* (2016), [riassunto da lui stesso](https://www.rieti.go.jp/en/special/p_a_w/076.html). Altri mestieri sono spariti per altri motivi: i gestori di pensioni per mancanza di domanda, i telegrafisti perché è sparita l'industria. Gli ascensoristi, invece, li ha sostituiti un bottone. E nemmeno tutti: negli USA ne restavano circa 10.000, [disse Bessen](https://www.brookings.edu/wp-content/uploads/2019/12/es_20191212_automation_labor_transcript.pdf) nel 2019.\n\n**Però, però, però.** Automatizzare un compito non vuol dire eliminare un lavoro. Nell'Ottocento è stato automatizzato il 98% del lavoro necessario a tessere una iarda di stoffa, e i tessitori sono aumentati: la stoffa costava meno, se ne comprava di più. Nei dati di Bessen le professioni che usano più computer crescono più in fretta, non più piano.\n\nMollick chiude: il 2026 somiglia al 1957 come il 1969 non somigliava al 1900. «Potrebbe cambiare.» Settant'anni, un solo ascensorista licenziato. Il prossimo piano chi lo schiaccia?",
+   "x_posts": [
+    "https://x.com/emollick/status/2122176524610884061"
+   ],
+   "links": [
+    [
+     "James Bessen, How computer automation affects occupations (RIETI, 2016)",
+     "https://www.rieti.go.jp/en/special/p_a_w/076.html"
+    ],
+    [
+     "Brookings, trascrizione evento automazione e lavoro, intervento di Bessen (2019)",
+     "https://www.brookings.edu/wp-content/uploads/2019/12/es_20191212_automation_labor_transcript.pdf"
+    ]
+   ],
+   "checks": [
+    "Il confronto 2026/1957 vs 1969/1900 è un'opinione di Mollick, non un dato.",
+    "«Circa 10.000 ascensoristi» è detto a voce da Bessen nel 2019 (trascrizione Brookings), senza fonte statistica citata."
+   ],
+   "id": "n46",
+   "ord": 63,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "📡",
+   "titolo": "Ci sentiamo domani",
+   "tema": "tech",
+   "batch": "16/11, giro X",
+   "origine": "Lista Best X del 16/11 (repost di @azeem del post di @NSFVoyager2); verificato sulle pagine NASA (Voyager mission status, What Is a Light-Day, comunicato stampa, NASA SVS 12/11/2026)",
+   "body": "Domani sera, martedì 17 novembre, la NASA chiede a tutti di accendere telefoni e torce dopo il tramonto e lampeggiare in morse «VGR», il nome in codice di Voyager 1. Si [chiama](https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities/) «Shine Bright for Voyager's Light-Day». Il trucco: i lampi vanno mandati un giorno prima, così [arrivano](https://x.com/NSFVoyager2/status/2122041222030406022) quando arriva lei.\n\nMercoledì 18 novembre alle 11:16:07 ora italiana Voyager 1 sarà a [25,902 miliardi di km](https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/) dalla Terra: un giorno luce. Primo oggetto costruito dall'uomo a quella distanza, dopo 49 anni, 2 mesi e 11 giorni di viaggio. Un comando mandato da Terra [ci mette 24 ore](https://svs.gsfc.nasa.gov/15120) ad arrivare, la risposta altre 24.\n\n**Però, però, però.** Viaggia a circa 61.000 km/h e, rispetto alla luce, è praticamente ferma. La stella verso cui punta, Gliese 445, la [incrocerà](https://science.nasa.gov/mission/voyager/voyager-1/voyager-1-what-is-a-light-day/) a 1,7 anni luce di distanza tra 40.000 anni. La gemella Voyager 2 a Nettuno ha perso velocità: il suo giorno luce arriverà a novembre 2035.\n\nMezzo secolo per fare un giorno. Ai posteri, letteralmente, l'ardua sentenza.",
+   "x_posts": [
+    "https://x.com/NSFVoyager2/status/2121936502821171647"
+   ],
+   "links": [
+    [
+     "NASA, Where Are Voyager 1 and 2 Now?",
+     "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/"
+    ],
+    [
+     "NASA, Voyager 1: What Is a Light-Day",
+     "https://science.nasa.gov/mission/voyager/voyager-1/voyager-1-what-is-a-light-day/"
+    ],
+    [
+     "NASA, comunicato Shine Bright for Voyager's Light-Day",
+     "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities/"
+    ],
+    [
+     "NASA SVS, One Light-Day, Explained (12/11/2026)",
+     "https://svs.gsfc.nasa.gov/15120"
+    ],
+    [
+     "@NSFVoyager2 sui lampi da mandare un giorno prima",
+     "https://x.com/NSFVoyager2/status/2122041222030406022"
+    ]
+   ],
+   "checks": [
+    "Orario NASA: 18/11/2026 5:16:07 EST = 11:16:07 ora italiana (UTC+1).",
+    "Il motivo per cui Voyager 2 ha perso velocità a Nettuno viene da @NSFVoyager2 (account non ufficiale NASA); la data 2035 è confermata da NASA.",
+    "Evento con data: utile per ff.157 del 20/11, a ridosso del traguardo."
+   ],
+   "id": "n45",
+   "ord": 62,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "⏱️",
    "titolo": "Undici minuti contati",
