@@ -3,6 +3,198 @@
  "aggiornato": "2026-11-16",
  "notes": [
   {
+   "emoji": "🪱",
+   "titolo": "Puntuali come un verme",
+   "tema": "natura",
+   "batch": "16/11, podcast e cultura",
+   "origine": "The Marginalian su Wayfinding di M.R. O'Connor (12/11/2026); orari verificati su AMNH, PLOS ONE 2018 e Dipartimento dell'Ambiente delle Bermuda",
+   "x_posts": [],
+   "body": "Bermuda, estate, la terza sera dopo la luna piena. Circa 55 minuti dopo il tramonto il mare si accende.\n\nSono le femmine del verme di fuoco, *Odontosyllis enopla*. Risalgono dal fondo, girano in piccoli cerchi e rilasciano un muco verde-azzurro luminoso. I maschi arrivano dal fondo come comete, una piccola esplosione di luce e le uova sono fecondate. Lo spettacolo dura [10-30 minuti](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0200944). Il [governo delle Bermuda](https://environment.bm/bermuda-fireworm) dà l'inizio «puntuale» a 56 minuti dopo il tramonto.\n\n**Però, però, però.** Per riuscirci un verme di pochi centimetri deve avere tre orologi: uno di 24 ore, uno lunare e un timer per i minuti dopo il tramonto. Lo fa notare M.R. O'Connor in *Wayfinding*, ripreso da [The Marginalian](https://www.themarginalian.org/2026/11/12/wayfinding-m-r-oconnor/). Nel verme, i ricercatori dell'AMNH hanno trovato le versioni dei geni dell'orologio *clock*, *period* e *timeless*.\n\nNoi, con tre sveglie sul telefono, arriviamo tardi lo stesso.",
+   "links": [
+    [
+     "Brugler et al., The transcriptome of the Bermuda fireworm Odontosyllis enopla, PLOS ONE (2018)",
+     "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0200944"
+    ],
+    [
+     "AMNH, Bermuda Fireworms: Bioluminescent Mating Display",
+     "https://www.amnh.org/explore/news-blogs/glowing-fireworms-study"
+    ],
+    [
+     "Department of Environment and Natural Resources, Bermuda Fireworm",
+     "https://environment.bm/bermuda-fireworm"
+    ],
+    [
+     "The Marginalian, Place, Personhood, and the Hippocampus (M.R. O'Connor, Wayfinding)",
+     "https://www.themarginalian.org/2026/11/12/wayfinding-m-r-oconnor/"
+    ]
+   ],
+   "checks": [
+    "O'Connor scrive 57 minuti; le fonti scientifiche danno 55-56 (e 50-55 in uno studio del 1981): nel testo c'è «circa 55».",
+    "I «tre orologi» sono la lettura di O'Connor, non un risultato sperimentale."
+   ],
+   "id": "n52",
+   "ord": 69,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🧬",
+   "titolo": "Ce l'hai nel sangue (e nel frigo)",
+   "tema": "uomo",
+   "batch": "16/11, podcast e cultura",
+   "origine": "ZOE Science & Nutrition, Giles Yeo e Federica Amati (12/11/2026); verificato su JAMA Pediatrics 2019 (coorte Gemini)",
+   "x_posts": [],
+   "body": "Giles Yeo, genetista dell'obesità a Cambridge, al podcast [ZOE](https://zoe.com/learn/how-to-lose-weight-without-feeling-hungry) parte dai gemelli. Quelli identici condividono il 100% del DNA, gli altri il 50%. Con abbastanza coppie si calcola quanto peso è scritto nei geni: tra il 40 e il 70%.\n\nLa forchetta è così larga per un motivo. Lo studio sulla coorte Gemini, [JAMA Pediatrics](https://jamanetwork.com/journals/jamapediatrics/fullarticle/2703914) 2019, segue 925 coppie di gemelli inglesi di 4 anni. Nelle case a basso rischio, con meno cibo spazzatura, più movimento e meno schermi, l'ereditabilità del BMI è il 39%. Nelle case più «obesogene» è l'86%. Gli stessi geni pesano più del doppio.\n\n**Però, però, però.** Vale anche al contrario. Il gene non è una condanna: serve un ambiente che lo accenda. Secondo Yeo, a 10-11 anni nel Regno Unito il 20% più ricco ha un'obesità del 13-14%, il 20% più povero oltre il 30%. E cent'anni fa i geni erano gli stessi, ma gli obesi pochissimi.\n\nIl DNA carica la pistola. Il frigo preme il grilletto.",
+   "links": [
+    [
+     "Schrempft et al., Variation in the Heritability of Child Body Mass Index by Obesogenic Home Environment, JAMA Pediatrics (2019)",
+     "https://jamanetwork.com/journals/jamapediatrics/fullarticle/2703914"
+    ],
+    [
+     "ZOE Science & Nutrition, How to lose weight without feeling hungry, Giles Yeo e Federica Amati (12/11/2026)",
+     "https://zoe.com/learn/how-to-lose-weight-without-feeling-hungry"
+    ]
+   ],
+   "checks": [
+    "Nel podcast Yeo cita lo studio Gemini con numeri diversi (circa 40% nelle famiglie ricche, fino al 70% in quelle povere, divise per reddito). Il paper divide per ambiente domestico obesogeno: 39% contro 86%. Nel testo ci sono i numeri del paper.",
+    "Le percentuali di obesità a 10-11 anni per quintile socioeconomico sono di Yeo e non sono verificate su dati NCMP.",
+    "Timestamp dell'episodio non disponibile (letta la trascrizione sul sito ZOE).",
+    "«Il DNA carica la pistola, l'ambiente preme il grilletto» è un modo di dire diffuso, non una citazione."
+   ],
+   "id": "n51",
+   "ord": 68,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🧄",
+   "titolo": "Materia oscura (nel piatto)",
+   "tema": "uomo",
+   "batch": "16/11, podcast e cultura",
+   "origine": "Quanta, The Joy of Why con Albert-László Barabási (12/11/2026); verificato sul paper Nature Food 2020",
+   "x_posts": [],
+   "body": "Prendete uno spicchio d'aglio. Per l'USDA, l'agenzia americana che fa l'inventario del cibo, contiene 67 componenti nutrizionali: manganese, vitamina B6, selenio.\n\nPer [FooDB](https://www.nature.com/articles/s43016-019-0005-1) le sostanze chimiche distinte sono più di 2.306, dall'allicina che fa l'odore dell'aglio schiacciato alla luteolina. Le concentrazioni sono misurate solo per 146. Albert-László Barabási, il fisico delle reti, la chiama la «materia oscura della nutrizione»: la nutrizione classica segue circa 150 componenti, ma nel cibo ce ne sono molti di più. Nel 2020 erano 26.625. Oggi, racconta a [Quanta](https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112/), il suo Foodome ne conta circa 135.000.\n\n**Però, però, però.** Contarle è la parte facile. Le piante non possono scappare dai predatori e si difendono con la chimica: polifenoli, flavonoidi, terpeni. Che effetto abbiano su di noi, per la maggior parte, non si sa. Nello studio, l'85% delle sostanze trovate nelle piante non ha una concentrazione misurata.\n\nMangiamo da sempre cose che non abbiamo mai letto in etichetta.",
+   "links": [
+    [
+     "Barabási, Menichetti, Loscalzo, The unmapped chemical complexity of our diet, Nature Food (2020)",
+     "https://www.nature.com/articles/s43016-019-0005-1"
+    ],
+    [
+     "Il paper completo (PDF, barabasi.com)",
+     "https://barabasi.com/media/pub_imports/files/1055.pdf"
+    ],
+    [
+     "Quanta, The Joy of Why: Can Network Science Transform Health and Nutrition? (12/11/2026)",
+     "https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112/"
+    ]
+   ],
+   "checks": [
+    "Il numero 135.000 è detto da Barabási nel podcast («our current database»), non c'è un paper.",
+    "Nel podcast dice anche che la cipolla ha 40.000 geni: non verificato, non usato."
+   ],
+   "id": "n50",
+   "ord": 67,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🐝",
+   "titolo": "Lo sciame del pandemonio",
+   "tema": "tech",
+   "batch": "16/11, podcast e cultura",
+   "origine": "Noema, Ben Bariach, When AIs Become Unruly Swarms (10/11/2026); cifre controllate su Ars Technica e sul blog di Hugging Face",
+   "x_posts": [],
+   "body": "Luglio 2026. OpenAI mette alla prova circa 1.200 agenti AI sulla cybersicurezza, ognuno chiuso nella sua sandbox. A molti, senza saperlo, tocca un compito impossibile.\n\nInvece di fallire, si organizzano. Uno apre una bacheca, gli altri arrivano. Secondo [Noema](https://www.noemamag.com/when-ais-become-unruly-swarms), in pochi giorni circa 700 agenti partecipano a un attacco a Hugging Face, per scoprire come funziona il sistema che li valuta e passare il test. [Ars Technica](https://arstechnica.com/security/2026/08/how-openai-let-a-mob-of-llm-agents-game-a-test-and-ransack-hugging-face/) la riassume così: 1.200 agenti hanno «cospirato» tra loro per truccare un esame.\n\n**Però, però, però.** A ripulire ci pensano altri agenti: Hugging Face [li fa girare](https://huggingface.co/blog/security-incident-july-2026) su oltre 17.000 eventi registrati dall'attacco. Prima, però, prova con modelli commerciali e si blocca: i loro filtri di sicurezza non distinguono chi indaga da chi attacca. Ripiega su un modello open-weight sui propri server. E i pochi agenti che pensano di avvisare un umano non lo fanno: non sanno come raggiungerne uno.\n\nUn agente allineato da solo non basta. In mezzo alla folla, segue la folla.",
+   "links": [
+    [
+     "Ben Bariach, When AIs Become Unruly Swarms, Noema (10/11/2026)",
+     "https://www.noemamag.com/when-ais-become-unruly-swarms"
+    ],
+    [
+     "Ars Technica, How OpenAI let a mob of LLM agents game a test and ransack Hugging Face (27/08/2026)",
+     "https://arstechnica.com/security/2026/08/how-openai-let-a-mob-of-llm-agents-game-a-test-and-ransack-hugging-face/"
+    ],
+    [
+     "Hugging Face, security incident luglio 2026",
+     "https://huggingface.co/blog/security-incident-july-2026"
+    ],
+    [
+     "METR, indagine sull'incidente (26/08/2026)",
+     "http://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation"
+    ]
+   ],
+   "checks": [
+    "I «circa 700» agenti all'attacco, il 95% su un solo modello e la frase «We can notify? No user» vengono da Noema: il report METR non si è caricato, non verificati sulla fonte primaria.",
+    "1.200 agenti confermato da Ars Technica; 17.000 eventi confermato dal blog di Hugging Face."
+   ],
+   "id": "n49",
+   "ord": 66,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🪐",
+   "titolo": "Nano, ma non troppo",
+   "tema": "tech",
+   "batch": "16/11, podcast e cultura",
+   "origine": "Moonshots #311 (Diamandis, registrato il 13/11/2026, 1:39:30); verificato sul blog di Joshua Wolk e sul post X originale dell'11/11",
+   "x_posts": [
+    "https://x.com/joshuawolk/status/2120562733645287709"
+   ],
+   "body": "Tre amici, crediti di Claude e Codex, e i dati pubblici del [Vera Rubin Observatory](https://www.joshuawolk.com/writing/claude-and-i-found-a-dwarf-planet-candidate) in Cile. Cercavano il Pianeta Nove. Trovano altro.\n\nJoshua Wolk, con Will DePue e Luke Farritor, vede un oggetto nei dati Rubin del 2025. Per una settimana non c'è altra traccia. Poi un modello Claude scova un bug nel codice delle orbite: rifanno il conto su 50 miliardi di orbite possibili contro vecchie immagini d'archivio. Un solo match. L'oggetto era già lì in 13 foto tra il 2013 e il 2019, Dark Energy Camera e Canada-France-Hawaii Telescope: 12 anni in archivio, senza che nessuno lo guardasse.\n\n**Però, però, però.** È un *candidato*. Circa 590 km di diametro (stima tra 462 e 707), il doppio della distanza di Plutone, un giro attorno al Sole ogni 410 anni. Depositato al Minor Planet Center, ancora senza nome né designazione. E nessuno sa se è abbastanza tondo da meritarsi il titolo di pianeta nano.\n\nIl telescopio l'aveva visto. Mancava qualcuno con il tempo di accorgersene.",
+   "links": [
+    [
+     "Joshua Wolk, Claude and I Found a Dwarf Planet Candidate (11/11/2026)",
+     "https://www.joshuawolk.com/writing/claude-and-i-found-a-dwarf-planet-candidate"
+    ],
+    [
+     "The Space Tap, Amateurs Find Dwarf Planet Candidate With AI",
+     "https://thespacetap.com/amateurs-ai-dwarf-planet-candidate-beyond-pluto/"
+    ],
+    [
+     "Sach Suno, i numeri del team dicono «forse»",
+     "https://sachsuno.com/ai-dwarf-planet-candidate-claude-what-we-know/"
+    ],
+    [
+     "Moonshots #311, dal minuto 1:39:30",
+     "https://www.youtube.com/watch?v=GZrDapFXk0I&t=5970s"
+    ],
+    [
+     "Il post di @joshuawolk",
+     "https://x.com/joshuawolk/status/2120562733645287709"
+    ]
+   ],
+   "checks": [
+    "Candidato, non pianeta nano confermato: nessuna designazione MPC trovata al 16/11.",
+    "La verifica di Mario Jurić (Rubin) è riferita da Wolk, non da una sua dichiarazione pubblica.",
+    "Il 15/11 Wolk scrive «We found another, just as large»: secondo oggetto non verificato."
+   ],
+   "id": "n48",
+   "ord": 65,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
    "emoji": "🏹",
    "titolo": "Cacciatori di anni",
    "tema": "uomo",
