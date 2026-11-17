@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Brief · Futuro Fortissimo</title>
+<style>
+:root{--bg:#faf8f4;--ink:#1d1b18;--muted:#6f6a62;--line:#e6e1d8;--acc:#b2361f;--card:#fff;--chip:#f1ede6}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,"Iowan Old Style","Times New Roman",serif}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 80px}
+.nav{font:14px -apple-system,system-ui,sans-serif;margin-bottom:18px}.nav a{color:var(--muted);text-decoration:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px}
+h1{font-size:30px;line-height:1.15;margin:0 0 6px}.sub{margin:0 0 18px;color:var(--muted);font:14px/1.5 -apple-system,system-ui,sans-serif}
+.cal{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;font:14px -apple-system,system-ui,sans-serif}
+.mh{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.mh b{font-size:16px;text-transform:capitalize}
+.mh button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer}
+.g{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.g .h{color:var(--muted);font-size:12px;padding:4px 0}
+.g .d{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:10px;color:#bbb}
+.g a.d{background:var(--acc);color:#fff;text-decoration:none;font-weight:600}
+.g .d.today{outline:2px solid var(--ink)}
+.list{margin-top:24px}.item{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px;color:inherit;text-decoration:none}
+.item .dt{font:12px -apple-system,system-ui,sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.item h2{font-size:21px;margin:4px 0}.item p{margin:0;color:#3d3a35;font-style:italic}
+footer{color:var(--muted);font:13px -apple-system,system-ui,sans-serif;text-align:center;margin-top:30px}
+</style>
+</head>
+<body><div class="wrap">
+<nav class="nav"><a href="../">🎵 Note</a></nav>
+<h1>🗞️ Brief quotidiani</h1>
+<p class="sub" id="sub">Caricamento…</p>
+<div class="cal"><div class="mh"><button id="prev" aria-label="Mese precedente">‹</button><b id="mt"></b><button id="next" aria-label="Mese successivo">›</button></div><div class="g" id="g"></div></div>
+<div class="list" id="list"></div>
+<footer>Pagina privata, non indicizzata. Un brief al giorno alle 13:30 (ora di Roma), dalla lista X «Best».</footer>
+</div>
+<script>
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let B=[],cur;const MAP={};
+const fmt=d=>new Date(d+'T12:00:00').toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+function cal(){const y=cur.getFullYear(),m=cur.getMonth();
+ document.getElementById('mt').textContent=cur.toLocaleDateString('it-IT',{month:'long',year:'numeric'});
+ const first=(new Date(y,m,1).getDay()+6)%7,n=new Date(y,m+1,0).getDate();
+ const t=new Date();const tk=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
+ let h=['L','M','M','G','V','S','D'].map(x=>`<div class="h">${x}</div>`).join('')+'<div></div>'.repeat(first);
+ for(let d=1;d<=n;d++){const k=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;const c=k===tk?' today':'';
+  h+=MAP[k]?`<a class="d${c}" href="${k}.html" title="${esc(MAP[k].titolo)}">${d}</a>`:`<div class="d${c}">${d}</div>`}
+ document.getElementById('g').innerHTML=h;
+ const L=B.filter(b=>b.date.startsWith(`${y}-${String(m+1).padStart(2,'0')}`));
+ document.getElementById('list').innerHTML=L.map(b=>`<a class="item" href="${b.date}.html"><div class="dt">${esc(fmt(b.date))}</div><h2>${esc(b.titolo)}</h2><p>${esc(b.sottotitolo)}</p></a>`).join('')||'<p>Nessun brief in questo mese.</p>'}
+document.getElementById('prev').onclick=()=>{cur=new Date(cur.getFullYear(),cur.getMonth()-1,1);cal()};
+document.getElementById('next').onclick=()=>{cur=new Date(cur.getFullYear(),cur.getMonth()+1,1);cal()};
+fetch('briefs.json?'+Date.now()).then(r=>r.json()).then(j=>{B=j.briefs.sort((a,b)=>b.date.localeCompare(a.date));B.forEach(b=>MAP[b.date]=b);
+ const u=new URLSearchParams(location.search).get('m');const last=B[0]?.date;
+ cur=u?new Date(u+'-01T12:00:00'):last?new Date(last.slice(0,7)+'-01T12:00:00'):new Date();cur.setDate(1);
+ document.getElementById('sub').textContent=`${B.length} brief · ultimo ${last?fmt(last):'—'} · tocca un giorno rosso per aprirlo.`;cal()})
+ .catch(e=>document.getElementById('sub').textContent='Errore nel caricare briefs.json: '+e);
+</script>
+</body></html>
