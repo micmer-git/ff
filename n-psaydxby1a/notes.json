@@ -1,7 +1,133 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-16",
+ "aggiornato": "2026-11-17",
  "notes": [
+  {
+   "emoji": "🧱",
+   "titolo": "Spalle al muro",
+   "tema": "uomo",
+   "batch": "17/11, giro X",
+   "origine": "Lista Best X del 16/11 (repost di @foundmyfitness del post di @Brady_H); verificato sull'abstract BJSM (Edwards et al. 2023)",
+   "body": "Schiena contro il muro, cosce parallele al pavimento, e si resta lì. Due minuti che sembrano venti. È il *wall sit*, e per la pressione potrebbe valere più di un'uscita di corsa.\n\nLo dice [la meta-analisi di Jamie Edwards e colleghi](https://bjsm.bmj.com/content/57/20/1317) (Canterbury Christ Church University) sul *British Journal of Sports Medicine*: 270 studi randomizzati, 15.827 persone. Qualsiasi allenamento abbassa la pressione a riposo rispetto a non far niente. Ma l'isometrico, quello da fermi, vince: -8,24/-4,00 mmHg, contro -4,49/-2,53 dell'aerobico e -4,08/-2,50 dell'HIIT. Nella classifica per la sistolica, il *wall squat* è la variante più efficace.\n\n**Però, però, però.** Per la diastolica il primo posto va alla corsa. E sono medie di studi diversi, tutti da almeno due settimane: un indizio forte, non una ricetta. Lo studio è del 2023, è tornato a girare ora grazie a [Brady Holmer](https://x.com/Brady_H/status/2122287152813727888), rilanciato da Rhonda Patrick.\n\nPer noi runner, la notizia è doppia: le gambe servono anche quando stanno ferme. Basta trovare un muro.",
+   "x_posts": [
+    "https://x.com/Brady_H/status/2122287152813727888"
+   ],
+   "links": [
+    [
+     "Edwards et al., BJSM 57(20):1317 (2023)",
+     "https://bjsm.bmj.com/content/57/20/1317"
+    ],
+    [
+     "DOI 10.1136/bjsports-2022-106503",
+     "https://doi.org/10.1136/bjsports-2022-106503"
+    ],
+    [
+     "Post di Brady Holmer",
+     "https://x.com/Brady_H/status/2122287152813727888"
+    ]
+   ],
+   "checks": [
+    "Studio del 2023, non nuovo: va presentato come tale.",
+    "Il post di Holmer dice che l'effetto è paragonabile a un farmaco a dose standard: non verificato nel testo completo (paywall), lasciato fuori dal testo."
+   ],
+   "id": "n55",
+   "ord": 72,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🌱",
+   "titolo": "Tornare a galla (con le radici)",
+   "tema": "natura",
+   "batch": "17/11, giro X",
+   "origine": "Ricerca X del 17/11 (post di @NASAEarth del 16/11); verificato su NASA Earth Observatory (Image of the Day, 13/11/2026) e sull'abstract di Science (Zhang et al. 2026)",
+   "body": "Burma, distretto di Myeik, febbraio 2010: risaie marroni. Stesso punto, febbraio 2026, nelle [immagini Landsat della NASA](https://science.nasa.gov/earth/earth-observatory/a-global-rebound-for-mangroves/): verde. Le mangrovie si sono riprese i campi abbandonati.\n\nDagli anni '70 i satelliti raccontavano solo perdite. Poi Zhen Zhang (Tulane) e colleghi hanno messo in fila quarant'anni di Landsat, dal 1984 al 2023, in [uno studio su *Science*](https://www.science.org/doi/10.1126/science.aec9773): quasi 3.000 km² persi fino al 2010, quasi 2.000 recuperati dopo. Circa due terzi vengono da mangrovie che colonizzano nuove piane di fango, un terzo da ricrescita e restauri. In Burma: -28,6% tra gli anni '80 e il 2010, poi +10%.\n\n**Però, però, però.** Non è tutto merito nostro. Una parte la fanno i sedimenti del Rio delle Amazzoni, un'altra il riscaldamento: meno gelate, e le mangrovie salgono fino al sud-est degli USA. Nel delta del Niger, intanto, si continua a perdere. E una mangrovia giovane ci mette anni a riaccumulare il carbonio, che a regime è fino a quattro volte quello di una foresta tropicale.\n\nLa natura si ricuce da sola. A patto di posare la motosega.",
+   "x_posts": [
+    "https://x.com/NASAEarth/status/2122449959236628660"
+   ],
+   "links": [
+    [
+     "NASA Earth Observatory, A Global Rebound for Mangroves (13/11/2026)",
+     "https://science.nasa.gov/earth/earth-observatory/a-global-rebound-for-mangroves/"
+    ],
+    [
+     "Zhang et al., Science 392(6802):1082-1087 (2026)",
+     "https://www.science.org/doi/10.1126/science.aec9773"
+    ],
+    [
+     "NASA, Satellites Show Mangrove Forest Rebound (4/6/2026)",
+     "https://science.nasa.gov/blogs/science-news/2026/06/04/mangrove-forests-rebound/"
+    ]
+   ],
+   "checks": [
+    "Lo studio Science è uscito a giugno 2026; la NASA lo rilancia come Image of the Day il 13/11/2026.",
+    "Due terzi colonizzazione / un terzo restauro: citazione di Zhen Zhang nella pagina NASA.",
+    "«Fino a quattro volte il carbonio» di una foresta tropicale: dato della pagina NASA, non dello studio."
+   ],
+   "id": "n54",
+   "ord": 71,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🏭",
+   "titolo": "C'è del marcio in Danimarca (e in Virginia)",
+   "tema": "tech",
+   "batch": "17/11, giro X",
+   "origine": "Ricerca X del 17/11 (post di @TrackOilPACs sull'articolo NYT di Harry Stevens); verificato sull'abstract di Nature Sustainability (16/11/2026), più The Verge e Quartz",
+   "body": "Lunedì 16 novembre, *Nature Sustainability*. Un gruppo guidato da Harvard, primo autore Gianluca Guidi, ha fatto il censimento che le aziende non fanno: [403 data center *hyperscale* americani](https://www.nature.com/articles/s41893-026-01985-7), trovati uno per uno tra sagome degli edifici e immagini satellitari, perché una lista pubblica [non esiste](https://rasp.jhu.edu/news2/).\n\nTra maggio 2024 e aprile 2025 hanno consumato circa 82 TWh, l'1,8% dell'elettricità degli USA. Emissioni stimate: 25,7 milioni di tonnellate di CO₂, quasi quanto Danimarca o Bolivia in un anno. Più elettricità di New York e Los Angeles messe insieme; metà delle emissioni arriva da tre stati: Virginia, Iowa e Ohio.\n\n**Però, però, però.** Il 54% della corrente viene da gas e carbone, eppure l'intensità media dei data center è 314 g di CO₂ per kWh, sotto la media USA di 348. Conta il posto: la stessa corrente in Wyoming [inquina circa sette volte](https://www.theverge.com/ai-artificial-intelligence/1034668/data-centers-electricity-climate-pollution-study-harvard) più che in Oregon. E la foto è già vecchia: il boom, dice Guidi, [non si è fermato](https://qz.com/hyperscale-data-centers-emissions-harvard-study-111626) ad aprile 2025.\n\nL'AI aveva già limato l'1% dei consumi dei data center ([🅰️ ff.126.4 AlphaEvolve](https://fortissimo.substack.com/i/164288050/ff-alphaevolve)). Ne servirà qualche altro punto.",
+   "x_posts": [
+    "https://x.com/TrackOilPACs/status/2122408826347635074"
+   ],
+   "links": [
+    [
+     "Guidi et al., Nature Sustainability (16/11/2026)",
+     "https://www.nature.com/articles/s41893-026-01985-7"
+    ],
+    [
+     "NYT, Harry Stevens, 16/11/2026 (testo ripreso su rasp.jhu.edu)",
+     "https://rasp.jhu.edu/news2/"
+    ],
+    [
+     "The Verge sullo studio (Wyoming vs Oregon)",
+     "https://www.theverge.com/ai-artificial-intelligence/1034668/data-centers-electricity-climate-pollution-study-harvard"
+    ],
+    [
+     "Quartz sullo studio",
+     "https://qz.com/hyperscale-data-centers-emissions-harvard-study-111626"
+    ],
+    [
+     "Codice e dati aggregati (GitHub)",
+     "https://github.com/gianguidi/hyperscale-emissions"
+    ]
+   ],
+   "backrefs": [
+    [
+     "🅰️ ff.126.4 AlphaEvolve",
+     "https://fortissimo.substack.com/i/164288050/ff-alphaevolve"
+    ]
+   ],
+   "checks": [
+    "82 TWh, 1,8%, 25,7 Mt, 54% fossili, 314 vs 348 gCO₂/kWh: verificati sull'abstract Nature.",
+    "«Più di New York e Los Angeles insieme», «metà da Virginia, Iowa e Ohio» e il paragone con Danimarca/Bolivia vengono dall'articolo NYT (letto in copia su rasp.jhu.edu, non sul sito NYT).",
+    "Wyoming circa 7 volte l'Oregon: dato riportato da The Verge citando Guidi, non verificato nel paper completo (paywall)."
+   ],
+   "id": "n53",
+   "ord": 70,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null
+  },
   {
    "emoji": "🪱",
    "titolo": "Puntuali come un verme",
