@@ -1,7 +1,119 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-17",
+ "aggiornato": "2026-11-18",
  "notes": [
+  {
+   "emoji": "💉",
+   "titolo": "Un'iniezione di produttività",
+   "tema": "uomo",
+   "batch": "18/11, giro X",
+   "origine": "Lista Best X del 18/11 (post di @emollick con l'abstract di Atwood); verificato su AEA e sulla replica I4R",
+   "body": "1963: negli Stati Uniti arriva il vaccino contro il morbillo. In pochi anni lo fanno quasi tutti, e la malattia crolla. Fin qui, storia di medicina.\n\nAlicia Atwood l'ha riletta come storia di stipendi. Nel suo [studio sull'American Economic Journal: Economic Policy](https://www.aeaweb.org/articles?id=10.1257%2Fpol.20190509) (2022) incrocia gli Stati con più o meno morbillo prima del vaccino e le generazioni nate con o senza copertura. Chi è cresciuto vaccinato guadagna da adulto l'1,1% in più, circa 447 dollari l'anno. Più occupazione, meno povertà, stesse ore lavorate: la differenza arriva dalla produttività.\n\n**Però, però, però.** Una [replica dell'Institute for Replication](https://www.rwi-essen.de/fileadmin/user_upload/RWI/Publikationen/I4R_Discussion_Paper_Series/033_I4R_Barschkett_Huebener_Leibing_Marcus_Margaryan.pdf) (Barschkett e colleghi) conferma effetti solidi su occupazione e povertà, mentre il dato sul reddito cambia a seconda delle regioni e degli anni esclusi. Ethan Mollick, [rilanciando lo studio](https://x.com/emollick/status/2122902226868076552), azzarda il conto di quest'anno: mezzo punto del reddito americano, 80 miliardi di dollari. È una sua stima, nel paper non c'è.\n\nAtwood aggiunge che, viste le nuove evidenze su come il virus interagisce col sistema immunitario, l'effetto potrebbe essere sottostimato. Insomma, un vaccino che a fine anno ti offre pure la cena.",
+   "x_posts": [
+    "https://x.com/emollick/status/2122902226868076552"
+   ],
+   "links": [
+    [
+     "Atwood, The Long-Term Effects of Measles Vaccination on Earnings and Employment, AEJ: Economic Policy 14(2):34–60 (2022)",
+     "https://www.aeaweb.org/articles?id=10.1257%2Fpol.20190509"
+    ],
+    [
+     "DOI 10.1257/pol.20190509",
+     "https://doi.org/10.1257/pol.20190509"
+    ],
+    [
+     "Barschkett, Huebener, Leibing, Marcus, Margaryan, replica I4R DP n. 33 (2022)",
+     "https://www.rwi-essen.de/fileadmin/user_upload/RWI/Publikationen/I4R_Discussion_Paper_Series/033_I4R_Barschkett_Huebener_Leibing_Marcus_Margaryan.pdf"
+    ],
+    [
+     "Post di Ethan Mollick",
+     "https://x.com/emollick/status/2122902226868076552"
+    ]
+   ],
+   "checks": [
+    "1,1% e 447 dollari/anno verificati (abstract AEA e citazione testuale nella replica I4R).",
+    "NON verificato: '80 miliardi, mezzo punto del reddito USA' è un'estrapolazione di Mollick, non nel paper; nel testo è attribuita a lui.",
+    "Studio del 2022, non nuovo."
+   ],
+   "id": "n58",
+   "ord": 75,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🛢️",
+   "titolo": "Il pusher del carbonio",
+   "tema": "natura",
+   "batch": "18/11, giro X",
+   "origine": "Lista Best X del 17/11 (thread di @DrSimEvans); verificato sull'analisi Carbon Brief del 17/11/2026",
+   "body": "Antalya, COP31. A presiedere i negoziati sul clima, insieme alla Turchia, c'è l'Australia. Uno dei paesi che negli ultimi 175 anni ha venduto più carbone e gas al resto del mondo.\n\nDi solito la colpa del riscaldamento si conta dove i fossili bruciano. [Carbon Brief](https://www.carbonbrief.org/revealed-russia-saudi-arabia-and-australia-are-largest-co2-exporters-of-all-time), con i dati di Robbie Andrew (CICERO, Oslo), ha provato a contarla dove si estraggono, dal 1850 al 2025. Podio degli esportatori di CO₂ di sempre: Russia, Arabia Saudita, Australia.\n\nE la classifica dei responsabili si rimescola. L'Arabia Saudita sale al quinto posto, con emissioni cumulative più che quadruplicate. L'Australia più che raddoppia ed entra fra i primi dieci. La Russia resta terza, ma si carica altri 69 miliardi di tonnellate. Il Giappone, che importa quasi tutto, scivola dal sesto al trentaquattresimo posto. Il Regno Unito sale al quarto e scavalca la Germania.\n\n**Però, però, però.** Lo dice lo stesso Andrew: la responsabilità è condivisa tra chi estrae, chi produce e chi consuma. E il petrolio del Golfo, ricorda, è stato sviluppato «da e per le potenze occidentali». Il dataset, poi, è ancora una bozza.\n\nInsomma, chi è il colpevole: chi spaccia o chi fuma? Ai posteri (più caldi) l'ardua sentenza.",
+   "x_posts": [
+    "https://x.com/DrSimEvans/status/2122665068920004718"
+   ],
+   "links": [
+    [
+     "Carbon Brief, Revealed: Russia, Saudi Arabia and Australia are largest CO2 exporters of all time (Simon Evans, 17/11/2026)",
+     "https://www.carbonbrief.org/revealed-russia-saudi-arabia-and-australia-are-largest-co2-exporters-of-all-time"
+    ],
+    [
+     "Thread di Simon Evans",
+     "https://x.com/DrSimEvans/status/2122665068920004718"
+    ]
+   ],
+   "checks": [
+    "Tutti i numeri verificati nel testo Carbon Brief.",
+    "Dataset di Robbie Andrew (CICERO) dichiarato 'draft release': cifre possono cambiare."
+   ],
+   "id": "n57",
+   "ord": 74,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🔭",
+   "titolo": "Errare è umano, citare è diabolico",
+   "tema": "tech",
+   "batch": "18/11, giro X",
+   "origine": "Lista Best X del 17/11 e ricerca news X (post di @CJHandmer); numeri verificati sulla pagina del progetto science.caseyhandmer.com/physics",
+   "body": "Caltech, anni di dottorato. Casey Handmer scrive codice su equazioni di un paper del 1997 che tutti sapevano sbagliato. Le correzioni giravano in circa 10.000 righe di email che si contraddicevano. Il paper non è mai stato corretto.\n\nOggi ha fatto rileggere a un'AI (Claude Opus 5.5) il suo vecchio campo, l'astrofisica teorica: [158.059 articoli e 554.670 citazioni](https://science.caseyhandmer.com/physics/), 50.269 passati al setaccio per intero, 659 tra i più citati ricalcolati riga per riga. Risultato: 872 errori in 433 articoli. Uno, un fattore quattro di troppo (un 6 al denominatore dove il manuale ha 24), è stato copiato sei volte tra il 2005 e il 2014, contro una sola obiezione.\n\n**Però, però, però.** La parte più amara sono i rapporti: 367 articoli hanno copiato un errore, 68 ne hanno criticato uno. La *peer review*, su questi numeri, ne toglie circa uno su cinque. E dei 56 errori nei 200 articoli letti più a fondo, 52 sono ancora nell'ultima versione su arXiv, dove correggere è gratis.\n\nCosto stimato a listino: circa 2.720 dollari, tre dollari a errore. Nessun umano ha ancora verificato quegli errori, e Handmer lo scrive: su 40 estratti a caso, una terza sessione AI ne ha confermati 33. Insomma, chi controlla i controllori? Per ora, un'altra AI.",
+   "x_posts": [
+    "https://x.com/CJHandmer/status/2122609626588061816"
+   ],
+   "links": [
+    [
+     "Casey Handmer, A field of physics, audited by machine (17/11/2026)",
+     "https://science.caseyhandmer.com/physics/"
+    ],
+    [
+     "Indice del progetto: Physics, audited",
+     "https://science.caseyhandmer.com/"
+    ],
+    [
+     "Post di Casey Handmer",
+     "https://x.com/CJHandmer/status/2122609626588061816"
+    ]
+   ],
+   "checks": [
+    "Verificato alla fonte (pagina del progetto), ma gli 872 errori sono confermati solo da AI: nessun umano li ha controllati, lo dice Handmer stesso (33 su 40 riconfermati da una terza sessione).",
+    "Nel post Handmer parla di 'nearly 1000 major errors' e di scienza accelerata '>1000x': il primo dato è arrotondato (872), il secondo è una sua opinione, lasciata fuori."
+   ],
+   "id": "n56",
+   "ord": 73,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "🧱",
    "titolo": "Spalle al muro",
