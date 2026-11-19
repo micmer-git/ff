@@ -3,6 +3,173 @@
  "aggiornato": "2026-11-19",
  "notes": [
   {
+   "emoji": "🐋",
+   "titolo": "Fatti non foste a nuotar come bruti",
+   "tema": "uomo",
+   "batch": "19/11, podcast e cultura",
+   "origine": "Rich Roll Podcast con Ross Edgley (16/11/2026); dati del nuoto verificati su BioProtect/MFRI, TGO Magazine, Men's Health, Dryrobe",
+   "x_posts": [],
+   "body": "Reykjavík, 17 maggio 2025. Ross Edgley entra in acqua a Nauthólsvík. La compagna Hester è incinta di quattro mesi. Lui ha quattro mesi per fare il giro dell'Islanda a nuoto: circa 1.000 miglia, 1.610 km, in acque fino a 4 °C.\n\nEsce sulla stessa spiaggia l'8 settembre, [dopo 114 giorni](https://bioprotect-project.eu/wp-content/uploads/2025/09/Press-Release_Ross-Edgley.pdf). Nel mezzo: uragani, piaghe da sale, la lingua che si sfalda e la pipì color cioccolato della rabdomiolisi ([Men's Health](https://www.menshealth.com/uk/adventure/a70267232/ross-edgley-iceland-swim-documentary/)). Arriva a casa [cinque giorni prima](https://www.thegreatoutdoorsmag.com/long-reads/my-tongue-fell-apart-ross-edgley-iceland-swim/) della nascita del figlio, Raife. A [Rich Roll](https://www.youtube.com/watch?v=zuWGsfw_P4g) racconta perché, per reggere cento giorni in mare, allena la forza: più riserva hai, più piccola è la quota del massimo che spendi a ogni bracciata.\n\n**Però, però, però.** La parte più utile del viaggio sta in un frigorifero. Lungo tutta la costa la barca filtra acqua di mare per l'eDNA, il DNA che pesci, cetacei e coralli lasciano in giro: [circa 100 campioni](https://eu.dryrobe.com/blogs/latest-news/the-great-icelandic-swim-a-saga-lived-and-told-by-ross-edgley), la prima raccolta continua attorno a tutta l'Islanda. Servono a [Matís e all'istituto di ricerca marina islandese](https://www.hafogvatn.is/en/about/news-announcements/the-great-scientific-swim-around-iceland) per l'obiettivo del 30% di mare protetto entro il 2030. I risultati? Non ancora pubblicati.\n\nFatti non foste a nuotar come bruti. Ma a raccogliere provette, a quanto pare, sì.",
+   "links": [
+    [
+     "BioProtect, comunicato di fine nuoto (09/2025, PDF)",
+     "https://bioprotect-project.eu/wp-content/uploads/2025/09/Press-Release_Ross-Edgley.pdf"
+    ],
+    [
+     "MFRI Islanda, The Great Scientific Swim around Iceland",
+     "https://www.hafogvatn.is/en/about/news-announcements/the-great-scientific-swim-around-iceland"
+    ],
+    [
+     "TGO Magazine, intervista a Ross Edgley",
+     "https://www.thegreatoutdoorsmag.com/long-reads/my-tongue-fell-apart-ross-edgley-iceland-swim/"
+    ],
+    [
+     "Men's Health UK (07/02/2026)",
+     "https://www.menshealth.com/uk/adventure/a70267232/ross-edgley-iceland-swim-documentary/"
+    ],
+    [
+     "Dryrobe, intervista (100 campioni eDNA)",
+     "https://eu.dryrobe.com/blogs/latest-news/the-great-icelandic-swim-a-saga-lived-and-told-by-ross-edgley"
+    ],
+    [
+     "Rich Roll Podcast, Ross Edgley (16/11/2026)",
+     "https://www.youtube.com/watch?v=zuWGsfw_P4g"
+    ]
+   ],
+   "checks": [
+    "Trascrizione dell'episodio non scaricata (YouTube 429): il passaggio sulla forza viene da un riassunto di terzi, senza timestamp verificato. La panca da 210 kg citata lì l'ho lasciata fuori.",
+    "Durata: 114 giorni per BioProtect (17/05–08/09/2025), 116 per Men's Health; fine l'8/9 per BioProtect, il 6/9 per Dryrobe.",
+    "Risultati eDNA non ancora pubblicati al 19/11/2026 (ultima notizia trovata: «attesi entro pochi mesi», settembre 2025)."
+   ],
+   "id": "n65",
+   "ord": 82,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🐎",
+   "titolo": "Tutte le strade portano a cavallo",
+   "tema": "uomo",
+   "batch": "19/11, podcast e cultura",
+   "origine": "Aeon, Lhamsuren Munkh-Erdene, The horse made the state (16/11/2026)",
+   "x_posts": [],
+   "body": "Ce l'hanno sempre raccontata così: si semina il grano, si riempiono i granai, arrivano i contabili, poi i re. Lhamsuren Munkh-Erdene, storico e antropologo dell'Università Nazionale della Mongolia, su [Aeon](https://aeon.co/essays/the-origins-of-the-state-are-not-agrarian-but-pastoralist) la gira al contrario: lo Stato nasce dal trasporto.\n\nSenza animali da soma si produce solo quello che si riesce a portare a casa a piedi. Comunità piccole, egualitarie, impossibili da conquistare. Poi arrivano asini, cavalli e barche, e con loro città e imperi. Nel 1046 a.C. i Zhou travolgono gli Shang con, secondo la tradizione, 4.000 carri da guerra. I Comanche costruiscono un impero senza un chicco di grano: cavalli e bisonti, per quasi un secolo alla pari con le potenze europee. Roma arrivava dove arrivavano le navi, i Mongoli dove arrivavano i cavalli.\n\n**Però, però, però.** È un saggio, una tesi provocatoria, non il consenso degli storici. E il corollario è scomodo: oggi il cavallo si chiama petrolio, che secondo l'autore muove più del 90% dei trasporti globali. Chi controlla Hormuz controlla la mobilità, quindi il potere.\n\nChissà se fra cent'anni qualcuno scriverà che gli Stati li hanno fatti i data center.",
+   "links": [
+    [
+     "Aeon, The horse made the state (16/11/2026)",
+     "https://aeon.co/essays/the-origins-of-the-state-are-not-agrarian-but-pastoralist"
+    ]
+   ],
+   "checks": [
+    "Tesi interpretativa dell'autore, non consenso accademico.",
+    "I 4.000 carri dei Zhou sono il dato della tradizione (Shiji) citato nel saggio, non un dato archeologico.",
+    "Il «più del 90% dei trasporti» è affermato nel saggio senza fonte esplicita."
+   ],
+   "id": "n64",
+   "ord": 81,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🧬",
+   "titolo": "Selvaggio Est",
+   "tema": "tech",
+   "batch": "19/11, podcast e cultura",
+   "origine": "Noema, Jane Qiu, What China's Gene-Editing Deaths Reveal About Its Biotech Industry (18/11/2026); verificato su Science/Retraction Watch (luglio e 13/11/2026) e China Daily (13/11/2026)",
+   "x_posts": [],
+   "body": "Marzo 2025, ospedale Xinhua di Shanghai. Una bambina di sei anni, che Science chiama Mei, riceve nel liquido spinale trilioni di virus che trasportano un *base editor*. Doveva essere la prima terapia di editing genetico diretta al cervello. Sette giorni dopo [è morta](https://www.science.org/content/article/exclusive-death-girl-chinese-gene-editing-trial-was-never-made-public), per una reazione immunitaria legata al trattamento.\n\nI genitori avevano pagato [più di 800.000 dollari](https://retractionwatch.com/2026/07/23/exclusive-death-gene-editing-trial-china-nature-science-investigation/) per farla sviluppare. A febbraio 2026 il team del neuroscienziato Qiu Zilong pubblica i dati preclinici su Nature. Della morte, nessuna menzione. I test sulle scimmie mostravano danni seri agli organi, ma il comitato etico dell'ospedale non li aveva visti. Multa all'ospedale, settembre 2025: circa 3.600 dollari.\n\n**Però, però, però.** Dopo l'inchiesta di Science e Retraction Watch, a luglio, qualcosa si muove. Il 13 novembre Shanghai pubblica [i risultati della sua indagine](https://www.chinadaily.com.cn/a/202611/13/WS6af70d2de4b03ebf8519c505.html): Qiu e un collega licenziati, cinque anni senza progetti né premi, nome nel registro delle violazioni gravi. Niente dati inventati, ma risultati negativi omessi e conflitti di interesse non dichiarati.\n\nJane Qiu, su [Noema](https://www.noemamag.com/what-chinas-gene-editing-deaths-reveal-about-its-biotech-industry), lo chiama il possibile «momento Gelsinger» della Cina: come il ragazzo morto nel 1999 in un trial americano, che cambiò le regole negli Stati Uniti.\n\nCorrere è facile. Contare chi cade per strada un po' meno.",
+   "links": [
+    [
+     "Noema, Jane Qiu (18/11/2026)",
+     "https://www.noemamag.com/what-chinas-gene-editing-deaths-reveal-about-its-biotech-industry"
+    ],
+    [
+     "Science, Death of girl in Chinese gene-editing trial was never made public",
+     "https://www.science.org/content/article/exclusive-death-girl-chinese-gene-editing-trial-was-never-made-public"
+    ],
+    [
+     "Science, Chinese gene therapy researchers fired after probe",
+     "https://www.science.org/content/article/chinese-gene-therapy-researchers-fired-after-probe-child-s-death"
+    ],
+    [
+     "Retraction Watch (23/07/2026)",
+     "https://retractionwatch.com/2026/07/23/exclusive-death-gene-editing-trial-china-nature-science-investigation/"
+    ],
+    [
+     "China Daily, esito dell'indagine di Shanghai (13/11/2026)",
+     "https://www.chinadaily.com.cn/a/202611/13/WS6af70d2de4b03ebf8519c505.html"
+    ]
+   ],
+   "checks": [
+    "Cifra pagata: Noema dice 860.000 $, Science/Retraction Watch «più di 800.000 $»; l'indagine ufficiale parla di 1,06 milioni di yuan (≈158.900 $) ricevuti da alcuni membri dello staff. Ho usato la versione prudente.",
+    "Mei è il nome usato da Science, probabilmente uno pseudonimo.",
+    "Si aggancia alla nota 🚄 «Lo Stato ingegnere» per l'uscita sulla Cina."
+   ],
+   "id": "n63",
+   "ord": 80,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🧪",
+   "titolo": "Esperimento riuscito (male)",
+   "tema": "tech",
+   "batch": "19/11, podcast e cultura",
+   "origine": "Moonshots LIVE del 18/11/2026 (dal minuto 39:30); verificato sul report ufficiale Optimizely del 17/11, BleepingComputer, Ars Technica, TechTarget",
+   "x_posts": [],
+   "body": "Lunedì 16 novembre, 7:51 UTC. Qualcuno aggiunge qualche riga di JavaScript dentro un tool per i test A/B. Niente di strano: è il mestiere di [Optimizely](https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf), che serve a capire quale bottone converte di più.\n\nSolo che quelle righe non provano bottoni. Scott Helme e il team di Report URI analizzano 1.611 script della piattaforma e ne trovano [188 infetti, di 178 organizzazioni](https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-infects-major-brands-sites-with-malware/): Zoom, CNN, BBC, Salesforce, GitLab, HSBC, IKEA. Il codice sostituisce gli indirizzi dei wallet crypto, ruba carte, cookie e screenshot, e sugli iPhone prova a caricare due exploit kit, Coruna e DarkSword. Il tutto servito da cdn.optimizely.com, [con certificato valido](https://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/).\n\n**Però, però, però.** Nessuna password rubata, nessun server bucato: l'attaccante sfrutta una falla nella registrazione per fingersi amministratore dei clienti. Optimizely chiude il buco alle 16:10 UTC e ripulisce tutto alle 22:24 dello stesso giorno. Bottino a fine giornata, [secondo TechTarget](https://www.techtarget.com/news/optimizely-supply-chain-attack-turns-trusted-scripts-against-178-orgs/874997/): circa 7.000 dollari in crypto. E i siti con una *Content Security Policy* seria non se ne sono accorti nemmeno.\n\nNe parlano anche a [Moonshots](https://www.youtube.com/watch?v=iA2gdwTWJ_E&t=2370s), tra voli cancellati e banche in tilt della stessa settimana.\n\nMorale: sulle nostre pagine gira codice di ospiti che nessuno ha mai invitato a cena. Quanti script di terzi carica la vostra homepage?",
+   "links": [
+    [
+     "Optimizely, Security Incident Report (17/11/2026, PDF)",
+     "https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf"
+    ],
+    [
+     "BleepingComputer, Optimizely supply chain attack",
+     "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-infects-major-brands-sites-with-malware/"
+    ],
+    [
+     "Ars Technica, Hundreds of websites deliver potent malware cocktail",
+     "https://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/"
+    ],
+    [
+     "TechTarget, trusted scripts against 178 orgs",
+     "https://www.techtarget.com/news/optimizely-supply-chain-attack-turns-trusted-scripts-against-178-orgs/874997/"
+    ],
+    [
+     "Malwarebytes, CNN, BBC, Zoom served malicious code",
+     "https://www.malwarebytes.com/blog/news/2026/11/cnn-bbc-zoom-and-other-sites-served-malicious-code-in-supply-chain-attack"
+    ],
+    [
+     "Moonshots LIVE 18/11, dal minuto 39:30",
+     "https://www.youtube.com/watch?v=iA2gdwTWJ_E&t=2370s"
+    ]
+   ],
+   "checks": [
+    "I circa 7.000 $ rubati sono «reportedly» secondo TechTarget, cifra della sera del 16/11: può crescere.",
+    "IKEA ed Equifax compaiono nell'elenco di TechTarget, non nel report Optimizely (che non nomina clienti)."
+   ],
+   "id": "n62",
+   "ord": 79,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
    "emoji": "💊",
    "titolo": "Tanto rumore per NAD-a",
    "tema": "uomo",
