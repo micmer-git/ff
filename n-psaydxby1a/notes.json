@@ -1,7 +1,145 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-18",
+ "aggiornato": "2026-11-19",
  "notes": [
+  {
+   "emoji": "💊",
+   "titolo": "Tanto rumore per NAD-a",
+   "tema": "uomo",
+   "batch": "19/11, giro X",
+   "origine": "Ricerca X del 19/11 (post di @WilliamWallace); verificato su Nature Metabolism, Medical Xpress, Managed Healthcare Executive",
+   "body": "Il ritornello lo conoscete: invecchiando cala il NAD, la molecola che ogni cellula usa per trasformare il cibo in energia e riparare il DNA. Quindi integratori, precursori, flebo. Di longevità e integratori FF parlava già ([💊 ff.104.1 L'hacker del corpo](https://fortissimo.substack.com/i/148256016/ff-lhacker-del-corpo)).\n\nUn gruppo dell'Università di Vilnius l'ha misurato davvero: [1.340 misure su 1.068 adulti](https://www.nature.com/articles/s42255-026-01660-3), goccia di sangue dal dito, a digiuno. Nei [707 sani senza integratori](https://www.managedhealthcareexecutive.com/view/low-blood-nad-levels-track-heart-disease-and-hypertension-not-aging) il NAD non cala con l'età: negli uomini resta piatto, nelle donne sale un poco (0,07 µM l'anno). Mediana: 19,9 µM negli uomini, 17,4 nelle donne.\n\n**Però, però, però.** Dove cala, allora? Nei malati cronici, soprattutto con malattie cardiovascolari e ipertensione. Negli uomini malati scende con gli anni; nelle donne malate l'aumento sparisce. Il colesterolo alto, invece, non lo sposta.\n\nGli autori mettono le mani avanti: nessun nesso causale, e i malati prendono farmaci che potrebbero c'entrare. Nessuna base, scrivono, per integrare il NAD a tappeto. Più che un orologio, un termometro del cuore.",
+   "x_posts": [
+    "https://x.com/WilliamWallace/status/2122736952000573905"
+   ],
+   "links": [
+    [
+     "Whole-blood NAD levels track cardiovascular disease but not chronological age, Nature Metabolism (2026)",
+     "https://www.nature.com/articles/s42255-026-01660-3"
+    ],
+    [
+     "Medical Xpress (11/2026)",
+     "https://medicalxpress.com/news/2026-11-blood-nad-track-heart-disease.html"
+    ],
+    [
+     "Managed Healthcare Executive",
+     "https://www.managedhealthcareexecutive.com/view/low-blood-nad-levels-track-heart-disease-and-hypertension-not-aging"
+    ]
+   ],
+   "backrefs": [
+    [
+     "💊 ff.104.1 L'hacker del corpo",
+     "https://fortissimo.substack.com/i/148256016/ff-lhacker-del-corpo"
+    ]
+   ],
+   "checks": [
+    "1.340 misure, 1.068 adulti, stabile negli uomini, +0,07 µM/anno nelle donne, calo in CVD e ipertensione, dislipidemia senza calo, nessuna causalità: verificati su Nature Metabolism.",
+    "707 sani e mediane 19,91 vs 17,43 µM: da Managed Healthcare Executive, non riletti nel paper.",
+    "Data di pubblicazione esatta del paper non verificata (novembre 2026 secondo Medical Xpress)."
+   ],
+   "id": "n61",
+   "ord": 78,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null
+  },
+  {
+   "emoji": "🪨",
+   "titolo": "Condominio abissale",
+   "tema": "natura",
+   "batch": "19/11, giro X",
+   "origine": "Ricerca X del 19/11 (post di @AnkitV252); verificato su Scientific Reports (11/11/2026), comunicati MARUM e NIOZ, Scientific American",
+   "body": "Clarion-Clipperton Zone, Pacifico centrale. Il fondale abissale è disseminato di sassi scuri, i noduli polimetallici: nichel, rame, cobalto. Per formarne uno servono milioni di anni, e sono tra i primi bersagli dell'estrazione mineraria in acque profonde.\n\nUn gruppo guidato da MARUM (Università di Brema) e NIOZ li ha aperti uno per uno. In [244 noduli](https://www.nature.com/articles/s41598-026-76737-w) hanno trovato 4.139 animali, più piccoli di un millimetro: soprattutto nematodi e copepodi, poi foraminiferi e qualche polichete. In media 17 per nodulo. Il più affollato ne ospitava 245, record rispetto ai 170 dei lavori precedenti.\n\n**Però, però, però.** Nelle crepe vive meno gente che nel fango intorno: circa il 10% dei nematodi e il 25% dei copepodi del sedimento. Ma è gente diversa. Il DNA dice che le comunità dentro i noduli si somigliano anche a [1.000 km di distanza](https://www.marum.de/en/Hidden-Worlds-in-the-Deep-Ocean.html), e non somigliano ai vicini di fango. E più il nodulo è grande, più inquilini ha.\n\nTradotto: togli il nodulo, togli la casa. E una casa che si costruisce in milioni di anni non si rifà con il superbonus.",
+   "x_posts": [
+    "https://x.com/AnkitV252/status/2122749053817761842"
+   ],
+   "links": [
+    [
+     "Diaz-Recio Lorenzo, Stratmann, Gollner et al., Scientific Reports (11/11/2026)",
+     "https://www.nature.com/articles/s41598-026-76737-w"
+    ],
+    [
+     "MARUM, Hidden Worlds in the Deep Ocean",
+     "https://www.marum.de/en/Hidden-Worlds-in-the-Deep-Ocean.html"
+    ],
+    [
+     "NIOZ, comunicato",
+     "https://www.nioz.nl/en/news-and-blogs/news/tiny-marine-animals-found-living-inside-deep-sea-polymetallic-nodules"
+    ],
+    [
+     "Scientific American",
+     "https://www.scientificamerican.com/article/metal-rich-deep-sea-nodules-also-harbor-diverse-ocean-life/"
+    ],
+    [
+     "ScienceDaily (16/11/2026)",
+     "https://sciencedaily.com/releases/2026/11/261114202133.htm"
+    ]
+   ],
+   "backrefs": [],
+   "checks": [
+    "244 noduli, 4.139 individui, media 17, massimo 245 (vs 170 e 86 in studi precedenti), 10% e 25%, 1.000 km, abbondanza che cresce col volume: verificati su abstract e testo di Scientific Reports e comunicato MARUM.",
+    "Profondità («5.000 metri» nel post X) non verificata sul paper: tolta dal testo."
+   ],
+   "id": "n60",
+   "ord": 77,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null
+  },
+  {
+   "emoji": "🍽️",
+   "titolo": "Più fame che clienti",
+   "tema": "tech",
+   "batch": "19/11, giro X",
+   "origine": "Lista Best del 18/11 (thread di @EpochAIResearch); verificato su Epoch AI (dati dall'S-1/A di Anthropic), CNBC, TechCrunch e comunicato Anthropic sull'IPO",
+   "body": "Mercoledì 18 novembre Anthropic ha [prezzato l'IPO a 83 dollari](https://www.anthropic.com/news/anthropic-prices-initial-public-offering) per azione: 980 milioni di azioni, [81,3 miliardi raccolti](https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html), la più grande quotazione di sempre. Oggi debutta al Nasdaq.\n\nNel prospetto c'è il numero che Epoch AI ha messo in fila: nel terzo trimestre 2026 Anthropic ha speso [9,86 miliardi di dollari](https://epoch.ai/data-insights/anthropic-openai-compute-spend-growth) in calcolo e infrastruttura, quasi 40 l'anno. Nel 2023, per tutto l'anno: 433 milioni. Crescita di 4 volte l'anno, contro il 3x stimato per OpenAI. A settembre, [5 miliardi](https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/) sono andati in capacità comprata all'ultimo, a prezzi ben più alti dei contratti pluriennali.\n\n**Però, però, però.** Quanta di quella potenza serve chi paga? Poca. Il costo dei ricavi, in pratica l'inferenza per i clienti, nei primi nove mesi del 2026 vale 4,8 miliardi su 18,8: il 26%, dal 38% del 2025. Il resto va in ricerca e uso interno (più gli utenti gratuiti, messi a bilancio nel marketing). OpenAI, nel 2025, era intorno alla metà.\n\nGli impegni già firmati, quasi tutti calcolo, sommano [circa 895 miliardi](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html). Il cliente più affamato di Anthropic è Anthropic.",
+   "x_posts": [
+    "https://x.com/EpochAIResearch/status/2123159919042207823"
+   ],
+   "links": [
+    [
+     "Epoch AI, Josh You: Anthropic's compute spending is increasing by 4x per year",
+     "https://epoch.ai/data-insights/anthropic-openai-compute-spend-growth"
+    ],
+    [
+     "Anthropic Form S-1/A (SEC)",
+     "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm"
+    ],
+    [
+     "Anthropic, comunicato prezzo IPO (18/11/2026)",
+     "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+    ],
+    [
+     "CNBC, IPO da 81,3 miliardi (18/11/2026)",
+     "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
+    ],
+    [
+     "CNBC, S-1 emendato con Q3 (02/11/2026)",
+     "https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html"
+    ],
+    [
+     "TechCrunch, l'economia del calcolo (03/11/2026)",
+     "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/"
+    ]
+   ],
+   "backrefs": [],
+   "checks": [
+    "9.863 M$ Q3 2026, 433 M$ nel 2023, 4x vs 3x, 26% vs 38% (4,812 su 18,8 mld): verificati sulla pagina Epoch, che cita l'S-1/A.",
+    "OpenAI «circa metà» dell'inferenza nel 2025: Epoch lo riprende da report di stampa, non da bilanci.",
+    "895,4 mld di impegni: dato CNBC sull'S-1 emendato del 2/11; un'analisi successiva (Aardvark Labs) riporta 900,9 mld."
+   ],
+   "id": "n59",
+   "ord": 76,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null
+  },
   {
    "emoji": "💉",
    "titolo": "Un'iniezione di produttività",
