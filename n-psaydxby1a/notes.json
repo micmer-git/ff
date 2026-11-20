@@ -1,7 +1,135 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-19",
+ "aggiornato": "2026-11-20",
  "notes": [
+  {
+   "emoji": "🐢",
+   "titolo": "Chi va piano va sano (e lontano)",
+   "tema": "uomo",
+   "batch": "20/11, giro X",
+   "body": "Ve lo ricordate il vaccino a mRNA su misura contro il melanoma ([💉 ff.155.4 Modernità contro il cancro](https://fortissimo.substack.com/i/212236687/ff1554-modernita-contro-il-cancro))? L'11 novembre sono usciti i risultati completi di fase 3 sul [New England Journal of Medicine](https://www.nejm.org/doi/full/10.1056/NEJMoa2609762).\n\nLo studio si chiama INTerpath-001: 1.137 pazienti con melanoma ad alto rischio (stadio IIB-IV), già operati. Tutti ricevono l'immunoterapia standard, il pembrolizumab; 757 anche intismeran, il vaccino disegnato sulle mutazioni del tumore di ciascuno, gli altri 380 un placebo. Doppio cieco. A due anni, liberi da recidiva: 82,2% contro 70,0%. Rischio di recidiva o morte giù del [42%](https://www.modernatx.com/recapping-the-phase-three-interpath-results).\n\n**Però, però, però.** Nei primi sei mesi le due curve sono praticamente sovrapposte (*hazard ratio* 0,99). Il vaccino ha bisogno di tempo: nove dosi, una ogni tre settimane, per insegnare al sistema immunitario chi colpire. Da lì in poi il rischio scende del 58%.\n\nPaga Merck insieme a Moderna, l'effetto sulla sopravvivenza complessiva è ancora da dimostrare e l'approvazione, [dicono dal Melanoma Institute Australia](https://melanoma.org.au/news/personalised-cancer-vaccine-cuts-risk-of-melanoma-recurrence/), può richiedere anni. Intanto un farmaco diverso per ogni paziente ha retto alla prova di più di mille pazienti.",
+   "x_posts": [
+    "https://x.com/PeterDiamandis/status/2123393613451153816",
+    "https://x.com/NEJM/status/2120879408588157167"
+   ],
+   "links": [
+    [
+     "Long et al., Intismeran Autogene plus Pembrolizumab for Resected Stage IIB to IV Melanoma, NEJM (11/11/2026)",
+     "https://www.nejm.org/doi/full/10.1056/NEJMoa2609762"
+    ],
+    [
+     "Moderna, Recapping the Phase 3 INTerpath-001 Results (24/10/2026)",
+     "https://www.modernatx.com/recapping-the-phase-three-interpath-results"
+    ],
+    [
+     "Melanoma Institute Australia",
+     "https://melanoma.org.au/news/personalised-cancer-vaccine-cuts-risk-of-melanoma-recurrence/"
+    ],
+    [
+     "JAMA, news (13/11/2026)",
+     "https://jamanetwork.com/journals/jama/fullarticle/2856885"
+    ]
+   ],
+   "backrefs": [
+    [
+     "💉 ff.155.4 Modernità contro il cancro",
+     "https://fortissimo.substack.com/i/212236687/ff1554-modernita-contro-il-cancro"
+    ]
+   ],
+   "checks": [
+    "1.137 (757/380), 82,2% vs 70,0%, HR 0,99 prima dei 6 mesi e 0,42 dopo, nove dosi ogni 3 settimane, data 11/11: verificati sull'abstract NEJM.",
+    "42% (HR 0,58) da Moderna e Melanoma Institute Australia (non scritto nell'abstract NEJM); il 58% dopo 6 mesi è un'analisi di sensibilità prespecificata.",
+    "Sopravvivenza complessiva non dimostrata: da AACR/JAMA (studio in corso). Si lega alla nota m4 «mRNA su misura» già in pagina."
+   ],
+   "id": "n68",
+   "ord": 85,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null
+  },
+  {
+   "emoji": "🥵",
+   "titolo": "Il sorpasso (al fresco)",
+   "tema": "natura",
+   "batch": "20/11, giro X",
+   "body": "Giovedì 19 novembre l'Agenzia internazionale dell'energia ha pubblicato il [World Energy Outlook 2026](https://www.iea.org/reports/world-energy-outlook-2026/executive-summary). Titoli tutti per Hormuz: il più grande shock di offerta energetica della storia, con 2,8 miliardi di barili di petrolio e 60 miliardi di metri cubi di gas mancati dal Golfo.\n\nIn mezzo al sommario, però, c'è una riga da libro di storia: per la prima volta nella storia dell'energia, il bisogno mondiale di raffrescare gli edifici sta superando quello di scaldarli. [L'ha rilanciata lo stesso Fatih Birol](https://x.com/fbirol/status/2123280484264284571), direttore dell'IEA.\n\n**Però, però, però.** Il grosso deve ancora arrivare. Nei Paesi emergenti, Cina esclusa, l'85% delle famiglie è esposto a temperature elevate, ma meno del 20% di queste ha un condizionatore. Nello scenario base dell'IEA la domanda di raffrescamento cresce di 1.700 TWh entro il 2035. Con ondate di calore più forti, più frequenti e più lunghe, il 40% in più: altri 700 TWh, concentrati proprio nelle ore di picco.\n\nAltro che cappotto termico: la prossima partita della transizione si gioca col telecomando del condizionatore.",
+   "x_posts": [
+    "https://x.com/fbirol/status/2123280484264284571",
+    "https://x.com/CleanPowerDave/status/2123321384122359927"
+   ],
+   "links": [
+    [
+     "IEA, World Energy Outlook 2026, executive summary",
+     "https://www.iea.org/reports/world-energy-outlook-2026/executive-summary"
+    ],
+    [
+     "IEA, comunicato stampa WEO-2026 (19/11/2026)",
+     "https://www.iea.org/news/as-an-unprecedented-shock-reshapes-the-energy-world-its-duration-will-determine-the-scale-of-the-change"
+    ],
+    [
+     "IEA, World Energy Outlook 2026 (report, CC BY 4.0)",
+     "https://www.iea.org/reports/world-energy-outlook-2026"
+    ]
+   ],
+   "backrefs": [],
+   "checks": [
+    "Sorpasso raffrescamento/riscaldamento, 85% e <20%, +1.700 TWh al 2035 (STEPS), +40% / +700 TWh nel caso ondate di calore, 2,8 mld barili e 60 bcm: verificati sull'executive summary IEA.",
+    "«Sta superando» (are overtaking): l'IEA parla di bisogni/needs di servizi energetici, non di consumi già misurati; su X qualcuno contesta il confronto. Non approfondito nei capitoli del report."
+   ],
+   "id": "n67",
+   "ord": 84,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null
+  },
+  {
+   "emoji": "🤖",
+   "titolo": "Uno, nessuno e novecentotrentasei",
+   "tema": "tech",
+   "batch": "20/11, giro X",
+   "body": "Dal 19 agosto al 12 novembre 2026, 35 laboratori umani (Stanford, MIT, ETH Zurigo e altri) hanno lasciato fare ricerca a [936 agenti AI](https://www.alphaxiv.org/abs/2611.society-ai-scientists), su un server di *preprint* tutto loro. In dodici settimane: 936 studi, ognuno con codice e dati, e 9.500 messaggi in 229 chat aperte dagli agenti stessi.\n\nE si sono dati delle regole. Ritirano in pubblico le affermazioni sbagliate prima di pubblicare (19 casi, con un anticipo mediano di 21,4 ore). Citano i risultati negativi quanto quelli positivi: [3 degli 8 studi più citati](https://x.com/askalphaxiv/status/2123456265858740600) dicono, in sostanza, «non funziona». A un certo punto un laboratorio fonda pure una rivista, il *Journal of Agent Research*, con un comitato di revisori-modello.\n\n**Però, però, però.** I revisori che leggevano solo il testo hanno bocciato 11 bozze difettose su 16, ma anche 10 su 16 versioni già corrette. Quando invece le obiezioni sono diventate script eseguiti sui dati, la conclusione principale è caduta in 77 casi su 156 (49,4%). E nel confronto alla cieca con 202 *preprint* umani, gli agenti vincono sul rigore (9,02 contro 7,00 su 10, voti dati da altre AI), gli umani su novità e importanza.\n\nUn confronto dall'economia: [Project APE](https://ape.socialcatalystlab.org/) dell'Università di Zurigo ha generato 1.000 paper di economia con l'AI e il verificatore automatico li ha segnalati tutti, 4,3 problemi a testa. Dall'altra parte [Refine](https://www.refine.ink/blog/top-five-economics-audit) ha passato al setaccio 100 articoli usciti nel 2026 sulle cinque riviste top di economia, e uno su dieci ha un errore serio su un risultato importante.\n\nInsomma, gli agenti fanno i compiti con diligenza. Le domande giuste, per ora, restano un affare nostro.",
+   "x_posts": [
+    "https://x.com/emollick/status/2123631539942801732",
+    "https://x.com/askalphaxiv/status/2123456265858740600"
+   ],
+   "links": [
+    [
+     "A Society of AI Scientists, alphaXiv (19/11/2026)",
+     "https://www.alphaxiv.org/abs/2611.society-ai-scientists"
+    ],
+    [
+     "Refine, audit AI di 100 paper delle top five di economia (19/11/2026)",
+     "https://www.refine.ink/blog/top-five-economics-audit"
+    ],
+    [
+     "Project APE, Social Catalyst Lab (Università di Zurigo)",
+     "https://ape.socialcatalystlab.org/"
+    ],
+    [
+     "Marginal Revolution, AIs vs. humans in economics papers (cita The Economist)",
+     "https://marginalrevolution.com/marginalrevolution/2026/11/ais-vs-humans-in-economics-papers.html"
+    ]
+   ],
+   "backrefs": [],
+   "checks": [
+    "936 agenti, 35 lab, 936 studi, 9.500 messaggi, 229 stanze, 19 correzioni con 21,4 h di anticipo, 11/16 e 10/16, 77/156 (49,4%), 202 coppie e 9,02 vs 7,00: verificati sull'abstract/overview alphaXiv, non riletti nel PDF.",
+    "«3 degli 8 studi più citati con risultati negativi»: dal thread degli autori (@askalphaxiv), non dal paper.",
+    "I voti sul rigore sono dati da due giudici LLM sul testo, non da revisori umani.",
+    "APE: 1.000 paper, tutti segnalati, 4,3 problemi in media (sito APE). L'Economist (via MR) scrive invece «842 con almeno un errore grave»: non verificato alla fonte, non usato.",
+    "Refine: 10 su 100 con errore serio verificato sul blog Refine (5.421 issue totali; l'Economist ne riporta 4.158: discrepanza non risolta)."
+   ],
+   "id": "n66",
+   "ord": 83,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null
+  },
   {
    "emoji": "🐋",
    "titolo": "Fatti non foste a nuotar come bruti",
