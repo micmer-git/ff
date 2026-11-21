@@ -1,7 +1,118 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-20",
+ "aggiornato": "2026-11-21",
  "notes": [
+  {
+   "emoji": "👯",
+   "titolo": "Cercasi gemello (politico)",
+   "tema": "uomo",
+   "batch": "21/11, giro X",
+   "origine": "Lista Best del 20/11 (post di @a16z); verificato su Electric Twin (articolo «Gen Z Unbound») e comunicato PR Newswire del 12/11/2026.",
+   "body": "Mettete 100 boomer americani in una stanza e fate loro 13 domande: immigrazione, economia, aborto, AI. Circa 20 trovano qualcuno con tutte le risposte uguali alle proprie. Con 100 americani della Gen Z, il gemello lo trovano in 9.\n\nL'esperimento è mentale, i dati no. Arrivano da [51.929 risposte](https://www.prnewswire.com/news-releases/beyond-the-gen-z-vote-study-finds-political-parties-need-to-understand-where-young-voters-get-their-information-302937934.html) raccolte in Stati Uniti, Regno Unito, Francia e Germania da Electric Twin, con lo psicologo economico Michael Muthukrishna (NYU e LSE). Nei quattro paesi la Gen Z resta sotto il 10%, i boomer tra 15 e 20%. E, secondo [a16z](https://x.com/a16z/status/2123933165102440625), per un giovane la quota di gemelli resta all'8,5% anche se la stanza la riempite di millennial, Gen X o boomer.\n\n**Però, però, però.** I giovani si somigliano sempre di più tra paesi diversi. Un ventenne di Lione e uno di Leeds condividono feed, meme e influenze, ma non lo stesso pacchetto di opinioni. [Electric Twin](https://www.electrictwin.com/research/gen-z-unbound) parla di microculture globali.\n\n«Parlare ai giovani», insomma, è come parlare a una stanza di sconosciuti. Che però guardano tutti lo stesso telefono.",
+   "x_posts": [
+    "https://x.com/a16z/status/2123925297603252618",
+    "https://x.com/a16z/status/2123933165102440625"
+   ],
+   "links": [
+    [
+     "Electric Twin, Gen Z Unbound",
+     "https://www.electrictwin.com/research/gen-z-unbound"
+    ],
+    [
+     "PR Newswire, 12/11/2026",
+     "https://www.prnewswire.com/news-releases/beyond-the-gen-z-vote-study-finds-political-parties-need-to-understand-where-young-voters-get-their-information-302937934.html"
+    ]
+   ],
+   "checks": [
+    "Studio di un'azienda di «synthetic audiences», non peer-reviewed.",
+    "L'8,5% e «quasi invariato con le altre generazioni» vengono da a16z, non verificati sul report."
+   ],
+   "id": "n71",
+   "ord": 88,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🦴",
+   "titolo": "Alti e bassi (della civiltà)",
+   "tema": "uomo",
+   "batch": "21/11, giro X",
+   "origine": "Lista Best del 20/11 (RT di @paulg da @PNASNews); verificato su abstract PNAS (doi 10.1073/pnas.2606828123) e comunicato del Max Planck Institute of Geoanthropology del 16/11/2026.",
+   "body": "Un femore dice più di una cronaca. All'Università di Tübingen e al Max Planck di Jena ne hanno misurati 18.457, da 783 siti in 45 paesi tra Europa e Asia, su 7.000 anni. Dalla lunghezza dell'osso si ricava l'altezza, e dall'altezza quanto e come si mangiava da bambini. Lo studio è uscito su [PNAS](https://doi.org/10.1073/pnas.2606828123).\n\nI numeri sono da vertigine. Gli uomini del sud-est asiatico, 7.000 anni fa, erano alti in media 1,78 metri; nell'Ottocento poco più di 1,60. Le donne cinesi passano da 1,57 a 1,48 metri. Nel nord Europa, 5.000 anni fa, gli uomini stavano a 1,62: poi arrivano i pastori dalle steppe, con latte e tolleranza al lattosio, e si cresce. Dal 500 dopo Cristo in poi, quasi ovunque, si torna a scendere fino a fine Ottocento.\n\n**Però, però, però.** Più tecnologia non ha voluto dire persone più alte. Nella Cina dell'XI secolo arrivano risi più produttivi: l'impero resta potente, ma [spiega Jörg Baten](https://www.gea.mpg.de/252586/stature-trends-reveal-7-000-years-economic-history) che le famiglie fanno più figli, la densità sale e ognuno mangia meno, con meno proteine buone.\n\nIl progresso, per millenni, si è misurato in teste. Non in centimetri.",
+   "x_posts": [
+    "https://x.com/PNASNews/status/2123869136564457647"
+   ],
+   "links": [
+    [
+     "Baten et al., PNAS 123(47), 2026",
+     "https://doi.org/10.1073/pnas.2606828123"
+    ],
+    [
+     "Max Planck Institute of Geoanthropology, comunicato 16/11/2026",
+     "https://www.gea.mpg.de/252586/stature-trends-reveal-7-000-years-economic-history"
+    ],
+    [
+     "Archaeology Magazine, 17/11/2026",
+     "https://archaeologymag.com/2026/11/bones-show-height-fell-as-technology-advanced/"
+    ]
+   ],
+   "checks": [
+    "Le altezze per regione (1,78 → 1,60; 1,57 → 1,48; 1,62) vengono dal comunicato MPG, non controllate sulle tabelle del paper."
+   ],
+   "id": "n70",
+   "ord": 87,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🧮",
+   "titolo": "Numeri primi (della classe)",
+   "tema": "tech",
+   "batch": "21/11, giro X",
+   "origine": "Lista Best del 20/11 (post di @emollick); verificato sul documento di Alpöge (alpo.ge/remark.pdf), Nature, Scientific American e BBC del 20-21/11/2026.",
+   "body": "Venerdì 20 novembre, un giorno dopo il debutto in Borsa di Anthropic, il matematico Levent Alpöge pubblica [un documento di 4 pagine](https://alpo.ge/remark.pdf). Prima riga che conta: «Credo di aver scoperto, lavorando con Claude, una dimostrazione dell'ipotesi di Riemann». Il problema è del 1859, riguarda come sono sparsi i numeri primi, e per molti matematici è il più importante ancora aperto.\n\nSecondo [la BBC](https://www.bbc.com/news/articles/c6pqr2g7w059o) ci sono volute circa sei settimane, con una versione non pubblica di Claude. La dimostrazione formale, scritta in Lean (il linguaggio che controlla le dimostrazioni passo per passo), supera le 250.000 pagine. Alpöge racconta che verso il traguardo Claude «volava, danzava e scintillava», e che lui era rimasto indietro.\n\n**Però, però, però.** Il controllo è appena cominciato. Andrew Sutherland del MIT ha ricompilato il codice e dice a [Scientific American](https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/) che la probabilità di un trucco è «circa zero». Andrew Granville, sentito da [Nature](https://www.nature.com/articles/d41586-026-03812-7), definisce il testo «confuso» e sospetta del tempismo con l'IPO. Terence Tao prevede che la digestione richiederà tempo.\n\nRiemann era nato 200 anni fa, a settembre. Come regalo di compleanno, 250.000 pagine non si incartano facilmente.",
+   "x_posts": [
+    "https://x.com/emollick/status/2123800664845500602"
+   ],
+   "links": [
+    [
+     "Levent Alpöge, remark (PDF)",
+     "https://alpo.ge/remark.pdf"
+    ],
+    [
+     "Nature, 20/11/2026",
+     "https://www.nature.com/articles/d41586-026-03812-7"
+    ],
+    [
+     "Scientific American, 20/11/2026",
+     "https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/"
+    ],
+    [
+     "BBC News",
+     "https://www.bbc.com/news/articles/c6pqr2g7w059o"
+    ]
+   ],
+   "checks": [
+    "Storia in corso: al 21/11 manca ancora il «comparator run» completo (Buzzard). Ricontrollare lo stato prima di usarla.",
+    "«Oltre 250.000 pagine» e «circa sei settimane» solo da BBC."
+   ],
+   "id": "n69",
+   "ord": 86,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "🐢",
    "titolo": "Chi va piano va sano (e lontano)",
