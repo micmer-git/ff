@@ -1,6 +1,15 @@
 {
- "aggiornato": "2026-11-20",
+ "aggiornato": "2026-11-21",
  "briefs": [
+  {
+   "date": "2026-11-21",
+   "titolo": "🗞️ Contare gli zeri",
+   "sottotitolo": "Nvidia perde 2.880 miliardi e trova otto indagini, Wall Street vive una settimana da 3 sigma, Claude (forse) dimostra l'ipotesi di Riemann. E dormire regolari batte dormire tanto",
+   "post": 256,
+   "account": 50,
+   "spunti": 3,
+   "podcast": 6
+  },
   {
    "date": "2026-11-20",
    "titolo": "🗞️ Grand Theft Anthropic",
