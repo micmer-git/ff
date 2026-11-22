@@ -1,7 +1,118 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-21",
+ "aggiornato": "2026-11-22",
  "notes": [
+  {
+   "emoji": "💊",
+   "titolo": "Tabula RAS",
+   "tema": "uomo",
+   "batch": "22/11, giro X",
+   "origine": "Lista Best del 21/11 (thread di @davidasinclair); verificato sul comunicato Revolution Medicines del 19/11/2026 e sul trial MPACT (NEJM 2013).",
+   "body": "Barcellona, 19 novembre, simposio ENA sui bersagli molecolari del cancro. Wungki Park, oncologo del Memorial Sloan Kettering, presenta i dati di una pillola contro il tumore al pancreas metastatico, quello per cui di solito si parla di mesi. Il farmaco è il daraxonrasib, nome commerciale RASONQUE, e blocca le proteine RAS mutate, il motore di quasi tutti i tumori del pancreas.\n\nI numeri, da [Revolution Medicines](https://ir.revmed.com/news-releases/news-release-details/revolution-medicines-presents-updated-phase-12-data-rasonquer): 61 pazienti mai trattati, daraxonrasib più la chemio standard (gemcitabina e nab-paclitaxel). Il tumore si è ridotto nel 60,7% dei casi, con l'8,2% di risposte complete. Sopravvivenza senza progressione: 12,8 mesi. Vivi a un anno: 76,6%. Per confronto, nel trial [MPACT](https://www.nejm.org/doi/full/10.1056/NEJMoa1304369) del 2013 la stessa chemio da sola dava risposte nel 23% dei pazienti e il 35% di vivi a un anno.\n\n**Però, però, però.** È uno studio di fase 1/2, aperto, senza gruppo di controllo, e i numeri arrivano dal comunicato dell'azienda. Il confronto con MPACT è tra studi diversi, con pazienti diversi. La risposta vera la darà la fase 3, RASolute 303, già in corso.\n\nPer un tumore abituato a vincere a mani basse, anche un pareggio sarebbe notizia.",
+   "x_posts": [
+    "https://x.com/davidasinclair/status/2124228558738612407"
+   ],
+   "links": [
+    [
+     "Revolution Medicines, comunicato 19/11/2026",
+     "https://ir.revmed.com/news-releases/news-release-details/revolution-medicines-presents-updated-phase-12-data-rasonquer"
+    ],
+    [
+     "Von Hoff et al., NEJM 2013 (MPACT)",
+     "https://www.nejm.org/doi/full/10.1056/NEJMoa1304369"
+    ]
+   ],
+   "checks": [
+    "«RAS motore di quasi tutti i tumori del pancreas»: dato generale noto (~90% mutazioni KRAS), non nel comunicato: aggiungere fonte se si usa.",
+    "Dati da comunicato aziendale, non ancora da paper peer-reviewed.",
+    "Confronto con MPACT cross-trial, solo indicativo."
+   ],
+   "id": "n74",
+   "ord": 91,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🦷",
+   "titolo": "Duro a morire (e a mordere)",
+   "tema": "uomo",
+   "batch": "22/11, giro X",
+   "origine": "Ricerca X del 22/11 (post di @ChinaScience); verificato sull'abstract Nature (s41586-026-11155-6) e su Scientific American del 18/11/2026.",
+   "body": "Due grotte di calcare nel Guangxi, sud della Cina, a pochi chilometri l'una dall'altra: Baxian e Naxian. Dentro, nove denti umani. Otto, dicono le analisi della forma e delle proteine, sono di *Homo erectus*. Lo raccontano due studi usciti su [Nature](https://www.nature.com/articles/s41586-026-11155-6).\n\nIl gruppo di Kira Westaway (Macquarie University) ha messo insieme 43 datazioni con cinque metodi diversi: i denti hanno tra 324.000 e 184.000 anni. Finora, sul continente asiatico, nessun fossile datato con sicurezza scendeva sotto i 400.000 anni circa. Secondo [Scientific American](https://www.scientificamerican.com/article/ancient-fossils-reveal-homo-erectus-survived-in-china-some-200-000-years-longer-than-we-thought/), è come allungare la vita della specie di circa 200.000 anni.\n\n**Però, però, però.** La parte strana è dove viveva. Gli isotopi del carbonio nello smalto dicono foresta pluviale chiusa, l'ambiente che si pensava riservato a *Homo sapiens*. E lo stronzio non corrisponde al calcare locale: forse questi individui arrivavano da lontano, anche dal nord del Vietnam, a circa 250 chilometri. La storia dell'erectus «specialista della savana», messo in crisi dalla foresta, scricchiola.\n\nUn ominide che per un milione e mezzo di anni si è adattato a tutto. A noi basta un cambio d'ora.",
+   "x_posts": [
+    "https://x.com/i/status/2123337986242674689"
+   ],
+   "links": [
+    [
+     "Nature: Rainforest adaptation in late Homo erectus from southern China",
+     "https://www.nature.com/articles/s41586-026-11155-6"
+    ],
+    [
+     "Nature: Evidence for late Middle Pleistocene Homo erectus in mainland East Asia",
+     "https://www.nature.com/articles/s41586-026-11271-3"
+    ],
+    [
+     "Scientific American, 18/11/2026",
+     "https://www.scientificamerican.com/article/ancient-fossils-reveal-homo-erectus-survived-in-china-some-200-000-years-longer-than-we-thought/"
+    ]
+   ],
+   "checks": [
+    "«Un milione e mezzo di anni»: Nature dà presenza della specie da ~1,9 milioni a ~108.000 anni fa; la frase finale arrotonda.",
+    "Vietnam ~250 km: ipotesi riportata da SciAm («possibly»), non certezza."
+   ],
+   "id": "n73",
+   "ord": 90,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🐍",
+   "titolo": "Serpente a rotelle",
+   "tema": "natura",
+   "batch": "22/11, giro X",
+   "origine": "Ricerca X/news del 21-22/11 (video virale); verificato sul comunicato della Toho University e sull'abstract di Current Biology (doi 10.1016/j.cub.2026.08.057).",
+   "body": "Un serpentello lungo come una matita, nel sottobosco del Sud-est asiatico, sente arrivare un predatore. Non scappa strisciando: si arrotola e parte a ruota, come un cerchione staccato da una bici in discesa. È un serpente di canneto nano, genere *Pseudorabdion*, e un gruppo giapponese e malese lo ha filmato da più angolazioni per [Current Biology](https://doi.org/10.1016/j.cub.2026.08.057).\n\nLe velocità di punta misurate vanno da 1,72 a 3,69 metri al secondo, cioè fino a circa 13 km/h: secondo [la Toho University](https://global.toho-u.ac.jp/research/pr-1658/) è circa quattro volte la velocità che lo stesso serpente raggiunge con la solita ondulazione laterale. E ci riesce su una pista larga appena 20 centimetri, senza uscire di strada.\n\n**Però, però, però.** Un animale non ha un mozzo. Se ruota tutto il corpo, ruotano anche la testa, gli occhi e il senso dell'orientamento. Il trucco è un'acrobazia in due tempi: un arco del corpo si abbatte di lato, vicino alla testa, poi si alterna destra e sinistra, ciclo dopo ciclo. La coda gira come una ruota, la testa resta dritta, alla stessa altezza, puntata dove si va.\n\nNoi abbiamo inventato la ruota 5.000 anni fa e ancora ci viene il mal d'auto.",
+   "x_posts": [
+    "https://x.com/i/status/2112305344978317624",
+    "https://x.com/i/status/2124359111236051426"
+   ],
+   "links": [
+    [
+     "Kojima et al., Current Biology (19/10/2026)",
+     "https://doi.org/10.1016/j.cub.2026.08.057"
+    ],
+    [
+     "Toho University, comunicato (20/10/2026)",
+     "https://global.toho-u.ac.jp/research/pr-1658/"
+    ],
+    [
+     "Live Science",
+     "https://www.livescience.com/animals/snakes/watch-bizarre-snake-cartwheel-away-from-danger-at-more-than-12-feet-per-second"
+    ]
+   ],
+   "checks": [
+    "«13 km/h» è la mia conversione di 3,69 m/s.",
+    "«Lungo come una matita» è un'immagine, non un dato dello studio: controllare la lunghezza nel paper prima di usarla.",
+    "«Inventato la ruota 5.000 anni fa»: data indicativa (ruote più antiche ~3500 a.C.), non dallo studio.",
+    "Studio di ottobre, tornato virale il 21-22/11."
+   ],
+   "id": "n72",
+   "ord": 89,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "👯",
    "titolo": "Cercasi gemello (politico)",
