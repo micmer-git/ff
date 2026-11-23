@@ -3,6 +3,199 @@
  "aggiornato": "2026-11-23",
  "notes": [
   {
+   "emoji": "🫙",
+   "titolo": "Sotto vetro",
+   "tema": "uomo",
+   "batch": "23/11, podcast e cultura",
+   "origine": "ZOE Science & Nutrition con Tamiko Katsumoto (Stanford) e Sarah Berry (19/11/2026, capitolo 35:21; trascrizione da audio RSS); verificato su Nature Medicine 2026 (trial PERTH) ed Environmental Health 2025 (Schlezinger et al.)",
+   "x_posts": [],
+   "body": "Perth, Australia. Per sette giorni, in un trial con 60 volontari, alcuni gruppi mangiano solo cibo che non ha mai toccato plastica: [più di 100 produttori](https://doi.org/10.1038/s41591-026-04324-7) coinvolti «dal campo al piatto», tutto lavorato, conservato, cucinato e servito in vetro, acciaio o legno. Niente scatolette, niente ultraprocessati, stesse calorie di prima.\n\nRisultato del trial PERTH, uscito su [Nature Medicine](https://pmc.ncbi.nlm.nih.gov/articles/PMC13190251/): nelle urine il bisfenolo A cala del 59,7%, i metaboliti di due ftalati del 37,5% e del 53,5%. E nella coorte di 211 persone ogni scatoletta in più vale un +14,3% di BPA. Ne parlano Tamiko Katsumoto di Stanford e Sarah Berry nell'ultima puntata di [ZOE](https://www.youtube.com/watch?v=ZP_buVujEWw).\n\n**Però, però, però.** Il DEHP, lo ftalato più classico, non scende. Anzi, [tende a salire](https://pmc.ncbi.nlm.nih.gov/articles/PMC13190251/), anche con vetro e legno. Gli autori stessi lo definiscono «inaspettato»: forse è già nel cibo, forse arriva da altrove.\n\nLa notizia che a Katsumoto [fa dire «shocked»](https://www.youtube.com/watch?v=ZP_buVujEWw&t=2121s) è un'altra. In un trial canadese sul colesterolo, uomini con LDL alto prendono 1 grammo di beta-glucano d'avena prima di ogni pasto, per 4 settimane. Rianalizzando il sangue di 72 di loro, [i PFAS a catena lunga](https://link.springer.com/article/10.1186/s12940-025-01165-8) calano in modo significativo solo nel gruppo avena (il totale scende anche col placebo). Parliamo di «forever chemicals» con emivite di 2–7 anni. Il meccanismo è da idraulico: la fibra intrappola nell'intestino gli acidi biliari, e con loro i PFAS che il fegato prova a riciclare. Altro che i 20 grammi di fibre di ([🖐️ ff.131.5 Cinque pezzi facili](https://fortissimo.substack.com/i/168408634/ff-cinque-pezzi-facili)).\n\nPorridge a colazione, allora. Possibilmente in una ciotola di ceramica.",
+   "links": [
+    [
+     "Nature Medicine 2026, Low-plastic diet and urinary levels of plastic-associated phthalates and bisphenols: the PERTH Trial",
+     "https://doi.org/10.1038/s41591-026-04324-7"
+    ],
+    [
+     "PERTH Trial, full text su PMC",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC13190251/"
+    ],
+    [
+     "Schlezinger et al., PFAS in a Canadian population and piloting a novel method to reduce serum-PFAS, Environmental Health (2025)",
+     "https://link.springer.com/article/10.1186/s12940-025-01165-8"
+    ],
+    [
+     "ZOE Science & Nutrition, Tamiko Katsumoto e Sarah Berry (19/11/2026), dal capitolo 35:21",
+     "https://www.youtube.com/watch?v=ZP_buVujEWw&t=2121s"
+    ]
+   ],
+   "images": [
+    {
+     "src": "assets/p-zoe-katsumoto-avena.jpg",
+     "caption": "Tamiko Katsumoto a ZOE, mentre racconta lo studio su avena e PFAS.",
+     "credit": "Frame da ZOE Science & Nutrition (YouTube), 35:28",
+     "href": "https://www.youtube.com/watch?v=ZP_buVujEWw&t=2128s"
+    }
+   ],
+   "checks": [
+    "Trascrizione fatta in locale (Whisper) sull'audio del feed RSS, perché i sottotitoli YouTube davano 429: in alcuni tratti, 24–27 min, è illeggibile. «I was shocked to see that that's moved» è leggibile al minuto 35:30 circa dell'audio; l'attribuzione a Katsumoto si basa sul frame video (35:28) e sul contesto.",
+    "Studio avena: analisi secondaria di un trial nato per il colesterolo (NCT03911427), 4 settimane, solo uomini (42 avena, 30 riso), nessun controllo delle fonti di esposizione. Gli autori stessi parlano di risultato da confermare.",
+    "PERTH: trial pilota di 7 giorni su 60 persone; le percentuali sono quelle dell'abstract (gruppo con cibo low-plastic vs controllo)."
+   ],
+   "id": "n81",
+   "ord": 98,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🎨",
+   "titolo": "L'arte di arrangiarsi",
+   "tema": "uomo",
+   "batch": "23/11, podcast e cultura",
+   "origine": "Artforum news (19/11/2026) e The Guardian (17/11/2026) sugli artist living grants di Sydney; verificato sul comunicato della City of Sydney (18/11/2026), sul governo irlandese (gov.ie) e sul rapporto costi-benefici di Alma Economics (settembre 2025)",
+   "x_posts": [],
+   "body": "Sydney, martedì 17 novembre. Julian Hamman, 26 anni, film-maker, sta contando quanti turni gli servono ancora, tra la galleria dove fa l'accoglienza e il lavoro da assistente paramedico, per pagarsi il prossimo film. La sera [scopre](https://www.theguardian.com/australia-news/2026/nov/18/artist-living-grant-sydney-australian-first-creative-arts) di essere uno dei 40 artisti che riceveranno 25.000 dollari australiani. Senza condizioni: niente opera da consegnare, niente rendiconto.\n\nÈ una prima volta per l'Australia: [1 milione in tutto](https://www.cityofsydney.nsw.gov.au/media-releases/2026/1-million-awarded-to-sydney-artists-to-combat-exodus-of-creative-talent), perché, dice la sindaca Clover Moore, gli artisti lasciano la città per redditi bassi e costi in salita. Il modello dichiarato è l'Irlanda, dove dal 2022 [2.000 artisti](https://www.gov.ie/en/department-of-culture-communications-and-sport/press-releases/minister-odonovan-announces-the-new-basic-income-for-the-arts-scheme/) ricevono 325 euro a settimana, per tre anni.\n\n**Però, però, però.** In Irlanda c'era un gruppo di controllo, e i conti sono pubblici. Secondo [l'analisi di Alma Economics](https://assets.gov.ie/static/documents/b87d2659/20250929_BIA_CBA_Final_Report.pdf), chi riceveva l'assegno lavorava 3 ore in meno a settimana fuori dall'arte e 4 in più sulle opere, guadagnava oltre 500 euro al mese in più dall'arte e aveva 38 punti percentuali di probabilità in meno di prendere il sussidio di disoccupazione. Per ogni euro pubblico [ne tornano 1,39](https://www.gov.ie/en/department-of-culture-communications-and-sport/press-releases/basic-income-for-the-arts-pilot-produced-over-100-million-in-social-and-economic-benefits/) in valore sociale, quasi 80 milioni dei quali in benessere psicologico. A febbraio il governo l'ha [reso permanente](https://www.rte.ie/culture/2026/0210/1557748-basic-income-for-the-arts-scheme-to-be-made-permanent/).\n\nNe parlavamo già in ([👔 ff.9.3 L'ottimismo vola (con il reddito di cittadinanza)](https://fortissimo.substack.com/i/44019486/ff93-lottimismo-vola-con-il-reddito-di-cittadinanza)), quando il reddito di base era la risposta ai robot. Alla fine i primi a provarlo sono stati pittori, attori e scrittori.\n\nGli artisti, si sa, arrivano sempre prima. Stavolta anche a fine mese.",
+   "links": [
+    [
+     "The Guardian, Sydney artists given $25k in Australian first (17/11/2026)",
+     "https://www.theguardian.com/australia-news/2026/nov/18/artist-living-grant-sydney-australian-first-creative-arts"
+    ],
+    [
+     "City of Sydney, $1m awarded to Sydney artists (18/11/2026)",
+     "https://www.cityofsydney.nsw.gov.au/media-releases/2026/1-million-awarded-to-sydney-artists-to-combat-exodus-of-creative-talent"
+    ],
+    [
+     "Artforum, Sydney Announces Basic Income Program For Artists (19/11/2026)",
+     "https://www.artforum.com/news/city-sydney-announces-basic-income-program-for-artists-1234763906/"
+    ],
+    [
+     "Alma Economics per gov.ie, Cost-benefit analysis of the Basic Income for the Arts (PDF, 09/2025)",
+     "https://assets.gov.ie/static/documents/b87d2659/20250929_BIA_CBA_Final_Report.pdf"
+    ],
+    [
+     "gov.ie, BIA pilot produced over €100 million in benefits (22/09/2025)",
+     "https://www.gov.ie/en/department-of-culture-communications-and-sport/press-releases/basic-income-for-the-arts-pilot-produced-over-100-million-in-social-and-economic-benefits/"
+    ],
+    [
+     "gov.ie, New Basic Income for the Arts scheme",
+     "https://www.gov.ie/en/department-of-culture-communications-and-sport/press-releases/minister-odonovan-announces-the-new-basic-income-for-the-arts-scheme/"
+    ],
+    [
+     "RTÉ, Basic Income for the Arts scheme to be made permanent (10/02/2026)",
+     "https://www.rte.ie/culture/2026/0210/1557748-basic-income-for-the-arts-scheme-to-be-made-permanent/"
+    ]
+   ],
+   "checks": [
+    "Il governo irlandese chiama il pilota «randomised control trial»; il rapporto Alma Economics parla di approccio «quasi sperimentale». Nel testo ho scritto solo «gruppo di controllo».",
+    "Lo schema permanente (budget 18,27 milioni €, cicli di 3 anni su 6) è stato annunciato il 10/02/2026; le domande erano previste da aprile 2026. Non ho verificato se i pagamenti siano già partiti.",
+    "25.000 AUD ≈ 16.650 USD secondo Artforum; non convertito in euro."
+   ],
+   "id": "n80",
+   "ord": 97,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🧭",
+   "titolo": "Tenere la destra",
+   "tema": "tech",
+   "batch": "23/11, podcast e cultura",
+   "origine": "Quanta Magazine, Ben Brubaker, Network Researchers Nail Down Theory of 'Perfect Resilience' (20/11/2026); verificato sul paper STOC 2026 di Bentert e Schmid (arXiv 2602.03827)",
+   "x_posts": [],
+   "body": "Autunno 1969. Da un computer di Los Angeles parte il primo messaggio di Arpanet, la nonna di internet, verso Menlo Park: «LOGIN». Ne arrivano [due lettere](https://www.quantamagazine.org/network-researchers-nail-down-theory-of-perfect-resilience-20261120/), «LO». Poi la rete crolla.\n\nOggi ogni video viaggia a pacchetti, saltando da un router all'altro. Quando un collegamento cade, ogni router deve decidere da solo, in una frazione di millisecondo, dove rimandare il pacchetto, sapendo solo cosa succede ai suoi vicini. Il rischio è il gioco dell'oca: pacchetti che girano in tondo per sempre. Dal 2012 i teorici si chiedono quando si può garantire che il pacchetto arrivi comunque, finché una strada esiste. La chiamano *perfect resilience*.\n\n**Però, però, però.** A giugno, allo STOC di Salt Lake City, Matthias Bentert e Stefan Schmid della TU di Berlino [chiudono la questione](https://arxiv.org/abs/2602.03827): le strutture che rendono impossibile la resilienza perfetta sono esattamente quattro. La matematica (il teorema di Robertson-Seymour) garantiva solo che fossero in numero finito: «potevano essere una, due o centomila», dice Bentert, che si sarebbe arreso a quota 50. In tutte le altre reti basta il trucco più vecchio dei labirinti, la regola della mano destra: gira sempre a destra.\n\nL'ironia, [nota Quanta](https://www.quantamagazine.org/network-researchers-nail-down-theory-of-perfect-resilience-20261120/): più collegamenti aggiungi per rendere la rete robusta, più è facile che una delle quattro figure ci spunti dentro.\n\nInsomma, per non perdersi basta tenere la destra. Tranne quando c'è troppo traffico. Un po' come in tangenziale.",
+   "links": [
+    [
+     "Quanta Magazine, Network Researchers Nail Down Theory of 'Perfect Resilience' (20/11/2026)",
+     "https://www.quantamagazine.org/network-researchers-nail-down-theory-of-perfect-resilience-20261120/"
+    ],
+    [
+     "Bentert, Schmid, Perfect Network Resilience in Polynomial Time, STOC 2026 (arXiv)",
+     "https://arxiv.org/abs/2602.03827"
+    ],
+    [
+     "Slide STOC 2026 (Salt Lake City, 23/06/2026)",
+     "https://schmiste.github.io/stoc26frr-slides.pdf"
+    ]
+   ],
+   "images": [
+    {
+     "src": "assets/c-quanta-quattro-minori.png",
+     "caption": "Le quattro strutture che impediscono la resilienza perfetta.",
+     "credit": "Figura 1 di Bentert e Schmid, Perfect Network Resilience in Polynomial Time (arXiv 2602.03827)",
+     "href": "https://arxiv.org/abs/2602.03827"
+    }
+   ],
+   "checks": [
+    "La citazione di Bentert su Quanta è «does it contain one or two graphs, or does it contain 100,000 graphs?»: resa liberamente come «una, due o centomila».",
+    "Il paper caratterizza minori «radicati» (rooted minors) rispetto a un nodo destinazione: nel testo semplificato in «strutture».",
+    "La regola della mano destra vale sulla rete ridotta (seguire una faccia di un'immersione planare), non su qualunque rete così com'è."
+   ],
+   "id": "n79",
+   "ord": 96,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🐦",
+   "titolo": "Il passero solitario (e il robot)",
+   "tema": "natura",
+   "batch": "23/11, podcast e cultura",
+   "origine": "Aeon Video, Dreams of birds di Martín Benchimol (18/11/2026); verificato sull'abstract del paper Physica D 2025 (Bistel, Amador, Mindlin), National Geographic, The Guardian/Yale E360 e intervista APS Physics",
+   "x_posts": [],
+   "body": "Parco Pereyra Iraola, alle porte di Buenos Aires. Un chingolo, il passero dal collare rossiccio, canta da un ramo: da due a quattro note, poi il trillo. [Due secondi di melodia](https://www.nationalgeographic.com/animals/article/robotic-tutor-singing-birds-study), ripetuti dall'alba a mezzogiorno.\n\nNegli anni Sessanta l'ornitologo Fernando Nottebohm aveva annotato a mano i «successi» del parco, con una freccia in su o in giù per ogni nota. Sessant'anni dopo il fisico Gabriel Mindlin e il suo team confrontano quegli appunti con le registrazioni di oggi: delle vecchie hit [ne sopravvivono solo tre](https://www.nationalgeographic.com/animals/article/robotic-tutor-singing-birds-study). Il maschio il canto lo impara da un adulto, nei primi tre mesi di vita. Se spariscono i maestri, sparisce la canzone.\n\n**Però, però, però.** Mindlin è un fisico. Simula trachea, glottide e becco del passero, ricostruisce [con un modello matematico](https://doi.org/10.1016/j.physd.2025.134555) uno dei temi scomparsi e lo fa cantare da tre altoparlanti nascosti nel parco, a intervalli casuali, come tre vecchi maschi che si rispondono. Un giovane lo impara e la primavera dopo [lo canta come suo](https://physics.aps.org/articles/v19/106), riconoscibile dalla seconda sillaba in discesa. Oggi, [dice Mindlin](https://e360.yale.edu/digest/teaching-birds-lost-songs), lo cantano ancora «pochi individui, vicino a dove l'abbiamo inserito».\n\nLa storia ora è un corto di Martín Benchimol, [Dreams of birds](https://aeon.co/videos/a-physicists-audacious-plan-to-teach-birds-long-lost-songs), su Aeon dal 18 novembre. Per Mindlin anche i canti fanno parte della biodiversità, accanto ai geni.\n\nLeopardi il suo passero lo voleva solitario. Questo, almeno, ha un maestro di canto. A batterie.",
+   "links": [
+    [
+     "Aeon Video, Dreams of birds (18/11/2026)",
+     "https://aeon.co/videos/a-physicists-audacious-plan-to-teach-birds-long-lost-songs"
+    ],
+    [
+     "Bistel, Amador, Mindlin, Conservation of avian vocal heritage through synthetic song reintroduction, Physica D (2025)",
+     "https://doi.org/10.1016/j.physd.2025.134555"
+    ],
+    [
+     "National Geographic, A robot taught these birds a long-lost birdsong",
+     "https://www.nationalgeographic.com/animals/article/robotic-tutor-singing-birds-study"
+    ],
+    [
+     "APS Physics, How Physics Can Replenish Birds' Ancestral Songbooks",
+     "https://physics.aps.org/articles/v19/106"
+    ],
+    [
+     "Yale E360 / The Guardian, Scientists Are Teaching Birds to Sing Lost Songs (14/10/2026)",
+     "https://e360.yale.edu/digest/teaching-birds-lost-songs"
+    ]
+   ],
+   "images": [
+    {
+     "src": "assets/c-aeon-chingolo.jpg",
+     "caption": "Un chingolo (Zonotrichia capensis) nel corto Dreams of birds.",
+     "credit": "Immagine di copertina Aeon Video, regia di Martín Benchimol",
+     "href": "https://aeon.co/videos/a-physicists-audacious-plan-to-teach-birds-long-lost-songs"
+    }
+   ],
+   "checks": [
+    "Il full text del paper Physica D non era scaricabile (repository CONICET chiede login): numeri presi da abstract, National Geographic e intervista APS. «Solo tre» canti sopravvissuti viene da National Geographic.",
+    "National Geographic parla di «studio del 2024»; Crossref data il paper marzo 2025 (vol. 473, 134555). Ho evitato l'anno nel testo.",
+    "Pagina APS letta solo tramite estratto del motore di ricerca (il sito blocca il fetch con Cloudflare): «la primavera dopo» e «seconda sillaba in discesa» sono parole di Mindlin lì riportate."
+   ],
+   "id": "n78",
+   "ord": 95,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
+  {
    "emoji": "🏋️",
    "titolo": "Ferro vecchio",
    "tema": "uomo",
@@ -470,7 +663,7 @@
    "batch": "19/11, podcast e cultura",
    "origine": "Rich Roll Podcast con Ross Edgley (16/11/2026); dati del nuoto verificati su BioProtect/MFRI, TGO Magazine, Men's Health, Dryrobe",
    "x_posts": [],
-   "body": "Reykjavík, 17 maggio 2025. Ross Edgley entra in acqua a Nauthólsvík. La compagna Hester è incinta di quattro mesi. Lui ha quattro mesi per fare il giro dell'Islanda a nuoto: circa 1.000 miglia, 1.610 km, in acque fino a 4 °C.\n\nEsce sulla stessa spiaggia l'8 settembre, [dopo 114 giorni](https://bioprotect-project.eu/wp-content/uploads/2025/09/Press-Release_Ross-Edgley.pdf). Nel mezzo: uragani, piaghe da sale, la lingua che si sfalda e la pipì color cioccolato della rabdomiolisi ([Men's Health](https://www.menshealth.com/uk/adventure/a70267232/ross-edgley-iceland-swim-documentary/)). Arriva a casa [cinque giorni prima](https://www.thegreatoutdoorsmag.com/long-reads/my-tongue-fell-apart-ross-edgley-iceland-swim/) della nascita del figlio, Raife. A [Rich Roll](https://www.youtube.com/watch?v=zuWGsfw_P4g) racconta perché, per reggere cento giorni in mare, allena la forza: più riserva hai, più piccola è la quota del massimo che spendi a ogni bracciata.\n\n**Però, però, però.** La parte più utile del viaggio sta in un frigorifero. Lungo tutta la costa la barca filtra acqua di mare per l'eDNA, il DNA che pesci, cetacei e coralli lasciano in giro: [circa 100 campioni](https://eu.dryrobe.com/blogs/latest-news/the-great-icelandic-swim-a-saga-lived-and-told-by-ross-edgley), la prima raccolta continua attorno a tutta l'Islanda. Servono a [Matís e all'istituto di ricerca marina islandese](https://www.hafogvatn.is/en/about/news-announcements/the-great-scientific-swim-around-iceland) per l'obiettivo del 30% di mare protetto entro il 2030. I risultati? Non ancora pubblicati.\n\nFatti non foste a nuotar come bruti. Ma a raccogliere provette, a quanto pare, sì.",
+   "body": "Reykjavík, 17 maggio 2025. Ross Edgley entra in acqua a Nauthólsvík. La compagna Hester è incinta di quattro mesi. Lui ha quattro mesi per fare il giro dell'Islanda a nuoto: circa 1.000 miglia, 1.610 km, in acque fino a 4 °C.\n\nEsce sulla stessa spiaggia l'8 settembre, [dopo 114 giorni](https://bioprotect-project.eu/wp-content/uploads/2025/09/Press-Release_Ross-Edgley.pdf). Nel mezzo: uragani, piaghe da sale, la lingua che si sfalda e la pipì color cioccolato della rabdomiolisi ([Men's Health](https://www.menshealth.com/uk/adventure/a70267232/ross-edgley-iceland-swim-documentary/)). Arriva a casa [cinque giorni prima](https://www.thegreatoutdoorsmag.com/long-reads/my-tongue-fell-apart-ross-edgley-iceland-swim/) della nascita del figlio, Raife. A [Rich Roll](https://www.youtube.com/watch?v=zuWGsfw_P4g&t=3090s) racconta perché, per reggere cento giorni in mare, allena la forza: più riserva hai, più piccola è la quota del massimo che spendi a ogni bracciata.\n\n**Però, però, però.** La parte più utile del viaggio sta in un frigorifero. Lungo tutta la costa la barca filtra acqua di mare per l'eDNA, il DNA che pesci, cetacei e coralli lasciano in giro: [circa 100 campioni](https://eu.dryrobe.com/blogs/latest-news/the-great-icelandic-swim-a-saga-lived-and-told-by-ross-edgley), la prima raccolta continua attorno a tutta l'Islanda. Servono a [Matís e all'istituto di ricerca marina islandese](https://www.hafogvatn.is/en/about/news-announcements/the-great-scientific-swim-around-iceland) per l'obiettivo del 30% di mare protetto entro il 2030. I risultati? Non ancora pubblicati.\n\nFatti non foste a nuotar come bruti. Ma a raccogliere provette, a quanto pare, sì.",
    "links": [
     [
      "BioProtect, comunicato di fine nuoto (09/2025, PDF)",
@@ -493,12 +686,12 @@
      "https://eu.dryrobe.com/blogs/latest-news/the-great-icelandic-swim-a-saga-lived-and-told-by-ross-edgley"
     ],
     [
-     "Rich Roll Podcast, Ross Edgley (16/11/2026)",
-     "https://www.youtube.com/watch?v=zuWGsfw_P4g"
+     "Rich Roll Podcast, Ross Edgley (16/11/2026), dal minuto 51:30 (strength reserve)",
+     "https://www.youtube.com/watch?v=zuWGsfw_P4g&t=3090s"
     ]
    ],
    "checks": [
-    "Trascrizione dell'episodio non scaricata (YouTube 429): il passaggio sulla forza viene da un riassunto di terzi, senza timestamp verificato. La panca da 210 kg citata lì l'ho lasciata fuori.",
+    "Passaggio sulla forza verificato sulla trascrizione (23/11, Whisper sull'audio RSS + clip YouTube): «strength reserve» da circa 51:30 del video YouTube; poco dopo (circa 53:20) Edgley dice «My best ever bench press was 210 kilos», ancora fuori dal testo.",
     "Durata: 114 giorni per BioProtect (17/05–08/09/2025), 116 per Men's Health; fine l'8/9 per BioProtect, il 6/9 per Dryrobe.",
     "Risultati eDNA non ancora pubblicati al 19/11/2026 (ultima notizia trovata: «attesi entro pochi mesi», settembre 2025)."
    ],
