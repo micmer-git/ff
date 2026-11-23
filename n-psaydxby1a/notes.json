@@ -1,7 +1,118 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-22",
+ "aggiornato": "2026-11-23",
  "notes": [
+  {
+   "emoji": "🏋️",
+   "titolo": "Ferro vecchio",
+   "tema": "uomo",
+   "batch": "23/11, giro X",
+   "origine": "Lista Best del 22/11 (post di @PeterDiamandis); verificato su JAMA (Fiatarone et al. 1990, doi 10.1001/jama.1990.03440220053029) e sull'archivio UPI del 12/06/1990.",
+   "body": "Boston, 1990, Hebrew Rehabilitation Center for Aged. Dieci residenti tra gli 86 e i 96 anni, fragili, con cadute ripetute, artrite, cuore malandato, osteoporosi. Maria Fiatarone, Tufts e Harvard, li mette su una macchina per le gambe tre volte a settimana, per otto settimane. Il [paper su JAMA](https://jamanetwork.com/journals/jama/article-abstract/382128) si intitola, senza giri di parole, «High-intensity strength training in nonagenarians».\n\nI nove che arrivano in fondo (sei donne e tre uomini) aumentano la forza della gamba destra del 174% in media: da circa 8 a 20,6 kg sollevati. La sezione del muscolo della coscia cresce del 9%, la velocità del cammino del 48%.\n\n**Però, però, però.** Il dato più bello non è una percentuale. Secondo [UPI](https://www.upi.com/Archives/1990/06/12/Elderly-can-boost-strength-by-lifting-weights/4952645163200/), due hanno lasciato il bastone e uno, che prima non si alzava dalla sedia senza le braccia, ce l'ha fatta da solo. Lo studio ha 36 anni, gira oggi su X grazie a Peter Diamandis, ed è ancora la risposta migliore a «sono troppo vecchio per la palestra».\n\nFerro vecchio, si dice. Basta sollevarlo.",
+   "x_posts": [
+    "https://x.com/PeterDiamandis/status/2124488823874662642"
+   ],
+   "links": [
+    [
+     "Fiatarone et al., JAMA 1990",
+     "https://jamanetwork.com/journals/jama/article-abstract/382128"
+    ],
+    [
+     "UPI Archives, 12/06/1990",
+     "https://www.upi.com/Archives/1990/06/12/Elderly-can-boost-strength-by-lifting-weights/4952645163200/"
+    ]
+   ],
+   "checks": [
+    "9% (area muscolare a metà coscia) e 48% (velocità in tandem gait) presi dall'abstract JAMA tramite una copia del PDF; UPI dice «circa 50% più veloci».",
+    "«Da circa 8 a 20,6 kg»: dal PDF; UPI riporta 17→45 libbre.",
+    "Studio del 1990, non una notizia: va bene come spunto evergreen."
+   ],
+   "id": "n77",
+   "ord": 94,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🐭",
+   "titolo": "La gravità della situazione",
+   "tema": "natura",
+   "batch": "23/11, giro X",
+   "origine": "Lista Best/ricerca X del 22-23/11 (post di @LionnetPierre e @ZachWeiner); verificato sull'abstract di npj Microgravity (s41526-026-00670-5).",
+   "body": "Topi in orbita, sulla Stazione spaziale internazionale, per 30 giorni. Alcuni fluttuano liberi. Altri girano in centrifuga, una giostra che simula la gravità: un terzo di quella terrestre, due terzi, oppure piena. Missione NASA–JAXA, i risultati sulle ossa sono usciti il 13 novembre su [npj Microgravity](https://www.nature.com/articles/s41526-026-00670-5).\n\nSolo i topi a 1 G sono tornati con ossa uguali a quelli rimasti a terra: stessa massa, stessa microarchitettura, stessa resistenza. A 0,33 e 0,67 G le perdite si sono ridotte, ma solo in parte. Il grasso corporeo invece, che nello spazio era aumentato parecchio, è calato in proporzione alla gravità.\n\n**Però, però, però.** Marte ha circa il 38% della gravità terrestre, la Luna circa il 17%. Se valesse anche per noi, vivere lassù costerebbe lo scheletro. Come scrive su X [Zach Weiner](https://x.com/ZachWeiner/status/2124524490185146659), avrebbe scommesso che due terzi bastassero: invece no, e le stazioni rotanti diventano la strada più probabile. Prudenza: topi maschi, giovani, 5-6 per gruppo.\n\nAbbiamo sempre detto che la situazione è grave. Forse non abbastanza.",
+   "x_posts": [
+    "https://x.com/LionnetPierre/status/2124454154743509485",
+    "https://x.com/ZachWeiner/status/2124524490185146659"
+   ],
+   "links": [
+    [
+     "Impact of artificial gravity on spaceflight-induced skeletal deterioration in male mice, npj Microgravity (13/11/2026)",
+     "https://www.nature.com/articles/s41526-026-00670-5"
+    ],
+    [
+     "NASA OSDR, dataset OSD-1003",
+     "https://osdr.nasa.gov/bio/repo/data/studies/OSD-1003"
+    ],
+    [
+     "Scientific American: 24 mice launched to orbit in 2023",
+     "https://www.scientificamerican.com/article/24-mice-launched-to-orbit-in-2023-what-happened-to-their-bodies-could-help/"
+    ]
+   ],
+   "checks": [
+    "Gravità di Marte (~0,38 G) e Luna (~0,17 G): valori standard, non dallo studio.",
+    "Ho letto solo abstract e ringraziamenti (JAXA hardware): verificare nel paper le percentuali di perdita ossea se servono numeri.",
+    "Il pezzo di Scientific American sui 24 topi del 2023 potrebbe riferirsi a questa missione: da confermare."
+   ],
+   "id": "n76",
+   "ord": 93,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🏳️",
+   "titolo": "Resa (cognitiva) senza condizioni",
+   "tema": "tech",
+   "batch": "23/11, giro X",
+   "origine": "Ricerca X/news del 22-23/11 (post di @thesupermannx); verificato sull'abstract SSRN di Shaw & Nave e su Ars Technica.",
+   "body": "Un test a trabocchetto, di quelli dove la prima risposta che viene in mente è sbagliata. Accanto, un chatbot pronto ad aiutare. Solo che Steven Shaw e Gideon Nave, di Wharton, l'hanno truccato: su alcune domande risponde giusto, su altre sbaglia apposta. Il [paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646) mette insieme tre esperimenti, 1.372 persone e 9.593 prove.\n\nI partecipanti hanno chiesto all'IA in più della metà dei casi. Quando l'IA aveva ragione, l'accuratezza saliva di 25 punti percentuali rispetto a chi ragionava da solo. Quando sbagliava, scendeva di 15. Secondo [Ars Technica](https://arstechnica.com/ai/2026/04/research-finds-ai-users-scarily-willing-to-surrender-their-cognition-to-llms/), le risposte sbagliate venivano accettate comunque nell'80% dei casi (il 93% quelle giuste).\n\n**Però, però, però.** La parte inquietante è la fiducia. Usare l'IA faceva salire la sicurezza nelle proprie risposte, anche dopo un errore. Gli autori la chiamano «resa cognitiva» e aggiungono un Sistema 3 al pensiero veloce e lento di Kahneman: quello che sta fuori dalla testa. Pressione del tempo, incentivi e feedback hanno spostato i risultati, senza cancellare l'effetto.\n\nKahneman ci aveva insegnato a diffidare dell'istinto. Adesso tocca diffidare anche di chi risponde troppo bene.",
+   "x_posts": [
+    "https://x.com/thesupermannx/status/2124450520056377395"
+   ],
+   "links": [
+    [
+     "Shaw & Nave, SSRN: Thinking—Fast, Slow, and Artificial",
+     "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646"
+    ],
+    [
+     "Preprint su PsyArXiv (OSF)",
+     "https://osf.io/preprints/psyarxiv/yk25n_v1"
+    ],
+    [
+     "Ars Technica (aprile 2026)",
+     "https://arstechnica.com/ai/2026/04/research-finds-ai-users-scarily-willing-to-surrender-their-cognition-to-llms/"
+    ]
+   ],
+   "checks": [
+    "Preprint del 2025-26 (Ars Technica ne parlava già ad aprile 2026), tornato virale il 22-23/11: non è una notizia nuova.",
+    "80% e 93% di accettazione vengono da Ars Technica (Studio 1), non li ho letti nel PDF.",
+    "Il collegamento a Kahneman è mio (il titolo del paper richiama «Thinking, Fast and Slow»)."
+   ],
+   "id": "n75",
+   "ord": 92,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "💊",
    "titolo": "Tabula RAS",
