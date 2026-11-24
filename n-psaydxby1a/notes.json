@@ -1,7 +1,72 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-23",
+ "aggiornato": "2026-11-24",
  "notes": [
+  {
+   "emoji": "🔋",
+   "titolo": "Carica di zuccheri",
+   "tema": "uomo",
+   "batch": "24/11, giro X",
+   "origine": "Lista Best del 23-24/11 (post di @bryan_johnson); verificato sull'abstract Nature (s41586-026-11251-7) e su Medical Xpress.",
+   "body": "Niente batteria, niente ricarica wireless. L'impianto si alimenta con lo zucchero che ha intorno: una piccola cella a combustibile su nanotubi di carbonio, con nanoparticelle d'oro che ossidano il glucosio e di platino che chiudono la reazione con l'ossigeno. Si chiama NeuroAxis ed è uscito il 18 novembre su [Nature](https://www.nature.com/articles/s41586-026-11251-7).\n\nIl trucco è che la tensione della cella sale con la glicemia. Il circuito la legge ogni 30 minuti; se resta alta per cinque letture di fila, due ore e mezza, manda tre minuti di stimolazione al nervo vago, che calma l'infiammazione e richiama all'ordine fegato e pancreas. Nei ratti con diabete di tipo 2 la glicemia è tornata vicina al normale in due settimane, racconta [Medical Xpress](https://medicalxpress.com/news/2026-11-high-blood-sugar-powers-experimental.html); in quelli con diabete di tipo 1 è cresciuta la massa delle cellule beta.\n\n**Però, però, però.** Sono ratti, e sei settimane di studio. Gli autori stessi dicono che la cella va resa più stabile e la soglia tarata meglio, prima di usarla a lungo. La parte curiosa: verso la seconda settimana l'impianto è andato in standby, e i benefici sono rimasti fino alla fine.\n\nIl diabete che si paga la bolletta da solo. Per ora, solo nei ratti.",
+   "x_posts": [
+    "https://x.com/bryan_johnson/status/2124973512997708028"
+   ],
+   "links": [
+    [
+     "Xiu et al., Nature (18/11/2026): A glucose-powered artificial neuroimmune axis for metabolic control",
+     "https://www.nature.com/articles/s41586-026-11251-7"
+    ],
+    [
+     "Medical Xpress (20/11/2026)",
+     "https://medicalxpress.com/news/2026-11-high-blood-sugar-powers-experimental.html"
+    ]
+   ],
+   "checks": [
+    "Letture ogni 30 minuti, 5 di fila, 3 minuti di stimolazione, standby verso la 2ª settimana e durata di 6 settimane vengono da Medical Xpress: non ho letto il full text Nature (paywall)."
+   ],
+   "id": "n83",
+   "ord": 100,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "⚛️",
+   "titolo": "Fino a prova contraria",
+   "tema": "tech",
+   "batch": "24/11, giro X",
+   "origine": "Lista Best del 23-24/11 (thread di @GoogleDeepMind); verificato sul blog DeepMind e sull'abstract arXiv 2611.09822.",
+   "body": "Un convegno ogni quattro ore. Niente caffè, niente badge: i relatori sono squadre di agenti Gemini 4 che lavorano in parallelo, poi si ritrovano a scambiarsi idee, discuterle, copiarsele. Google DeepMind e Google Quantum AI li hanno messi a migliorare algoritmi quantistici famosi, e il [paper su arXiv](https://arxiv.org/abs/2611.09822) racconta com'è andata.\n\nIl caso più vistoso è la fusione a confinamento inerziale, quella dei laser che comprimono l'idrogeno fino all'innesco. Per simularne una proprietà chiave, gli agenti hanno tagliato il costo di calcolo di 11,8 volte e la memoria da 5.650 a 4.338 qubit corretti dagli errori, scrive il [blog di DeepMind](https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/). Per il citocromo P450, l'enzima che smonta la maggior parte dei farmaci, il guadagno è di 2,5 volte. Per una routine di aritmetica, l'arcoseno, di 290.\n\n**Però, però, però.** Questi circuiti non li ha mai fatti girare nessuno. Non si può: sono troppo grandi per i computer classici e per i processori quantistici di oggi. L'unica garanzia è matematica: ogni idea entra nel quaderno comune solo dopo una dimostrazione in Lean. E anche così, ammette DeepMind, servirebbero più risorse di quelle che avranno i primi computer quantistici corretti dagli errori.\n\nSoftware per una macchina che ancora non esiste, con il certificato di garanzia già firmato.",
+   "x_posts": [
+    "https://x.com/GoogleDeepMind/status/2124911073266413634"
+   ],
+   "links": [
+    [
+     "Shirobokov, Jaderberg et al., arXiv: Discovering formally verified quantum programs with AI",
+     "https://arxiv.org/abs/2611.09822"
+    ],
+    [
+     "Google DeepMind blog (23/11/2026)",
+     "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/"
+    ]
+   ],
+   "checks": [
+    "Fusione: il blog dice 11,8×, l'abstract arrotonda a 12×, il post X dice «fino a 10 volte». Ho usato 11,8 (blog).",
+    "Il paper è un preprint arXiv, non ancora peer-reviewed."
+   ],
+   "id": "n82",
+   "ord": 99,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "🫙",
    "titolo": "Sotto vetro",
