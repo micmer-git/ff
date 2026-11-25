@@ -1,7 +1,80 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-24",
+ "aggiornato": "2026-11-25",
  "notes": [
+  {
+   "emoji": "🖼️",
+   "titolo": "Chi l'ha disegnato?",
+   "tema": "uomo",
+   "batch": "25/11, giro X",
+   "origine": "Like di Michele (post @HistoryGPT, Mark Humphries); verificato sul post originale Generative History (Substack) e su MLQ.ai.",
+   "body": "Un taccuino con la copertina di pelle marmorizzata, comprato da Yale a un antiquario nel 2020. Dentro, un viaggio in canoa del 1808 da Montréal al lago Superiore e ritorno: 84 pagine, 34 disegni a matita, inchiostro e acquerello, solo 3 datati. Autore ignoto. Lo storico Mark Humphries ci aveva perso ore per anni: poteva essere chiunque fra migliaia di viaggiatori.\n\nHa dato le immagini a GPT-6.2 Astra. Dopo 22 minuti e 1 secondo, racconta su [Generative History](https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical), la risposta: Louis-Guy-Charles-Guillaume de Rohan-Chabot, visconte de Chabot (1780–1875), nobile francese mai sentito. Con un consiglio: ordina il microfilm del suo diario, alla Cleveland State University. La pista? Una sola nota a piè di pagina in una tesi di dottorato del 2014 sui nobili in fuga dalla Rivoluzione.\n\n**Però, però, però.** La prova vera l'ha portata la carta. Calligrafia identica, itinerario che combacia, e il 18 giugno 1808, a Fort St. Joseph, Chabot scrive «I took a sketch» e descrive la stessa veduta del disegno. In più, 162 pagine di diario sconosciute agli storici del commercio di pellicce.\n\nHumphries dice di aver fatto l'assistente di ricerca. Almeno le fotocopie, per ora, le ordiniamo ancora noi.",
+   "x_posts": [
+    "https://x.com/HistoryGPT/status/2125213218045858149"
+   ],
+   "links": [
+    [
+     "Mark Humphries, Generative History: GPT-6.2 Astra solves a historical mystery",
+     "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical"
+    ],
+    [
+     "MLQ.ai: Historian says GPT-6.2 named the artist behind an anonymous 1808 sketchbook at Yale in 22 minutes",
+     "https://mlq.ai/news/historian-says-gpt-62-named-the-artist-behind-an-anonymous-1808-sketchbook-at-yale-in-22-minutes/"
+    ]
+   ],
+   "checks": [
+    "Disegni datati: il post X dice «quattro», il Substack dice «solo tre». Ho usato tre (Substack).",
+    "Affiliazione Humphries (Wilfrid Laurier University) e segnatura WA MSS S-4271 da MLQ.ai, non ricontrollate sul sito Beinecke.",
+    "Racconto in prima persona dello storico: nessuna verifica indipendente degli archivi."
+   ],
+   "id": "n85",
+   "ord": 102,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🧮",
+   "titolo": "Un quarto di troppo",
+   "tema": "tech",
+   "batch": "25/11, giro X",
+   "origine": "Lista Best del 24-25/11 (@gdb che rilancia @SebastienBubeck); verificato sul preprint OpenAI (PDF, 111 pagine) nel repo openai/math.",
+   "body": "Due tabelle di numeri, n righe per n colonne, da moltiplicare. A scuola si fa riga per colonna: n³ operazioni. Da quando Strassen trovò il trucco dei sette prodotti, i matematici giocano a limare quell'esponente, chiamato ω. Il record umano, dopo decenni di lavoro, era sotto 2,371055. Il sogno era 2: costo quasi pari a scrivere il risultato.\n\nIl 6 ottobre un modello di OpenAI ha portato il limite superiore a 9/4, cioè 2,25. Il 24 novembre il [preprint di OpenAI](https://github.com/openai/math/tree/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026) chiude anche il lato di sotto: ogni circuito aritmetico che moltiplica due matrici n×n richiede almeno n^(9/4)/2 moltiplicazioni o divisioni. Quindi ω vale esattamente 9/4, su qualunque campo. Effetto collaterale, nota [Sébastien Bubeck](https://x.com/SebastienBubeck/status/2125402576145572334): anche i programmi lineari si risolvono in tempo n^(9/4).\n\n**Però, però, però.** Sono 111 pagine di preprint, non ancora passate da una rivista, e il teorema vale per i «circuiti aritmetici formali», non per ogni trucco immaginabile. E il sogno ω = 2, in quel modello, è morto.\n\nBubeck: «Il tipo di risultato che non pensavo di vedere nella mia vita». Il quarto in più, invece, ce lo teniamo.",
+   "x_posts": [
+    "https://x.com/gdb/status/2125418102049628201",
+    "https://x.com/SebastienBubeck/status/2125402576145572334"
+   ],
+   "links": [
+    [
+     "OpenAI, The matrix multiplication exponent is nine fourths (preprint, 24/11/2026, PDF)",
+     "https://raw.githubusercontent.com/openai/math/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf"
+    ],
+    [
+     "Repo openai/math, cartella del preprint",
+     "https://github.com/openai/math/tree/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026"
+    ],
+    [
+     "Sébastien Bubeck su X (contesto e citazione)",
+     "https://x.com/SebastienBubeck/status/2125402576145572334"
+    ]
+   ],
+   "checks": [
+    "Preprint non peer-reviewed; nel PDF non trovo menzione di una verifica formale in Lean.",
+    "La data 6 ottobre per il limite superiore 9/4 viene dal post di Bubeck; il PDF cita il risultato OpenAI [41] senza data nel testo che ho letto.",
+    "Il corollario sui programmi lineari (n^9/4) è di Bubeck via un risultato di Yin Tat Lee, non verificato nel paper."
+   ],
+   "id": "n84",
+   "ord": 101,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "🔋",
    "titolo": "Carica di zuccheri",
