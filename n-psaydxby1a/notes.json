@@ -3,6 +3,282 @@
  "aggiornato": "2026-11-26",
  "notes": [
   {
+   "emoji": "🍚",
+   "titolo": "Paese che vai, malattia che trovi",
+   "tema": "uomo",
+   "batch": "26/11, podcast e cultura",
+   "origine": "Aeon, Alexander Pereira, Is mental illness universal? (24/11/2026); verificato sugli abstract di Psychological Medicine 1993 e International Journal of Eating Disorders 2010 (Sing Lee et al.)",
+   "x_posts": [],
+   "body": "Hong Kong, novembre 1994. Charlene Hsu Chi-Ying, 14 anni, crolla su un marciapiede in pieno giorno, con la divisa della scuola. È morta di fame. Nessuno le aveva mai diagnosticato l'anoressia: [in Asia la diagnosi occidentale quasi non circolava](https://aeon.co/essays/are-mental-illnesses-universal-or-are-they-culturally-specific). I giornali la importano in blocco, con tutto il pacchetto: paura di ingrassare, immagine distorta del corpo, modelle magre.\n\n**Però, però, però.** Lo psichiatra Sing Lee studiava da anni le ragazze di Hong Kong che smettevano di mangiare. In [uno studio su 70 pazienti](https://doi.org/10.1017/s0033291700026465), 41 (il 58,6%) non avevano mai avuto paura di ingrassare: dicevano di sentirsi gonfie, di non avere fame, o semplicemente mangiavano meno. Dopo il 1994 il quadro cambia. Confrontando [1987–1997 e 1998–2007](https://doi.org/10.1002/eat.20686) Lee vede i pazienti raddoppiare e l'anoressia diventare sempre più «fat-phobic», cioè all'occidentale. Nel 2007, [scrive Pereira](https://aeon.co/essays/are-mental-illnesses-universal-or-are-they-culturally-specific), oltre tre quarti citavano la paura di ingrassare. Oggi tocca circa una studentessa su 200, come negli Stati Uniti.\n\nPereira lo chiama *deep shaping*: la cultura non cambia solo il nome della malattia, cambia la malattia. In Cina la depressione si presenta soprattutto con stanchezza, insonnia e mal di testa, più che con apatia e bassa autostima.\n\nEsportiamo diagnosi come esportiamo jeans. Speriamo di esportare anche le cure.",
+   "links": [
+    [
+     "Alexander Pereira, Is mental illness universal?, Aeon (24/11/2026)",
+     "https://aeon.co/essays/are-mental-illnesses-universal-or-are-they-culturally-specific"
+    ],
+    [
+     "Lee, Ho, Hsu, Fat phobic and non-fat phobic anorexia nervosa: 70 Chinese patients in Hong Kong, Psychological Medicine (1993)",
+     "https://doi.org/10.1017/s0033291700026465"
+    ],
+    [
+     "Lee et al., The changing profile of eating disorders at a tertiary psychiatric clinic in Hong Kong (1987–2007), Int J Eat Disord (2010)",
+     "https://doi.org/10.1002/eat.20686"
+    ]
+   ],
+   "images": [],
+   "checks": [
+    "«Oltre tre quarti nel 2007» e «una studentessa su 200» vengono solo da Aeon: l'abstract del 2010 conferma il raddoppio e lo spostamento verso la forma fat-phobic, ma non dà quella percentuale (nel campione 1987–2007 i fat-phobic sono 76 su 115 anoressiche, il 66%).",
+    "Il collegamento causale con la morte di Charlene è la tesi di Pereira (e prima di Ethan Watters, Crazy Like Us, 2010), non un risultato dimostrato.",
+    "Lo studio del 1993 è misto retrospettivo-prospettico e copre pazienti visti prima e intorno al 1994."
+   ],
+   "id": "n93",
+   "ord": 110,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🏃",
+   "titolo": "Chi dorme piglia record",
+   "tema": "uomo",
+   "batch": "26/11, podcast e cultura",
+   "origine": "Rich Roll Podcast con Josh Kerr (23/11/2026; trascrizione locale da audio RSS, minuto 49:45 su YouTube); verificato su World Athletics, The Running Channel, The Scotsman, Box Altitude",
+   "x_posts": [],
+   "body": "Albuquerque, New Mexico, 1.600 metri. Josh Kerr, scozzese, campione del mondo dei 1500 nel 2023, va a letto alle 19:45. Si sveglia alle 5 ma non esce dalla stanza prima delle 5:45, perché la camera da letto è [un ambiente ipossico](https://boxaltitude.com/blogs/news/josh-kerr-project-222) che simula circa 2.500 metri. Altre due ore il pomeriggio, dalle 14 alle 16: luce rossa, niente schermi, pisolino. Totale, [12 ore al giorno in quota](https://www.youtube.com/watch?v=VRTTdp4Tc-Y&t=2985s). «Non sono un corridore professionista», dice a Rich Roll, «sono un *recovery artist* a tempo pieno».\n\n**Però, però, però.** Il segreto non è la stanza. Rich Roll glielo fa notare e Kerr conferma: il suo tetto era intorno alle 73 miglia a settimana, circa 117 km. Oltre si rompeva. Allora, invece di correre di più, ha comprato recupero per infilare più lavori intensi: [tre giorni duri, tre facili, sabato riposo](https://therunningchannel.com/josh-kerr-mile-marathon-recovery/), lungo massimo di 16 miglia (26 km). E i bagni nel ghiaccio [durano 3 minuti e 42 secondi](https://www.scotsman.com/sport/other-sport/josh-kerrs-meticulous-ritual-laid-bare-in-bid-for-commonwealth-games-gold-and-project-222-8764218), il tempo che voleva correre.\n\nIl 18 luglio a Londra, davanti a 60.000 persone, chiude il miglio in [3:42.66](https://worldathletics.org/news/report/london-athletics-meet-2026-josh-kerr-world-mile-record): 47 centesimi meno di El Guerrouj, record che resisteva dal 1999. Dopo la gara gli tagliano una scarpa a pezzi, per controllare che fosse regolare.\n\nNoi amatori di solito facciamo il contrario: più chilometri, meno sonno. Forse il prossimo personale si costruisce sul cuscino.",
+   "links": [
+    [
+     "Rich Roll Podcast, Josh Kerr (23/11/2026), dal minuto 49:45",
+     "https://www.youtube.com/watch?v=VRTTdp4Tc-Y&t=2985s"
+    ],
+    [
+     "World Athletics, Kerr breaks world mile record with 3:42.66 in London (18/7/2026)",
+     "https://worldathletics.org/news/report/london-athletics-meet-2026-josh-kerr-world-mile-record"
+    ],
+    [
+     "The Running Channel, Josh Kerr on the mile, the marathon and being a full-time recovery artist (21/7/2026)",
+     "https://therunningchannel.com/josh-kerr-mile-marathon-recovery/"
+    ],
+    [
+     "The Scotsman, Josh Kerr's meticulous ritual laid bare (26/6/2026)",
+     "https://www.scotsman.com/sport/other-sport/josh-kerrs-meticulous-ritual-laid-bare-in-bid-for-commonwealth-games-gold-and-project-222-8764218"
+    ],
+    [
+     "Box Altitude, Josh Kerr Project 222",
+     "https://boxaltitude.com/blogs/news/josh-kerr-project-222"
+    ]
+   ],
+   "images": [
+    {
+     "src": "assets/p-richroll-kerr.jpg",
+     "caption": "Josh Kerr al Rich Roll Podcast, mentre spiega il suo «full-time recovery artist».",
+     "credit": "Frame da Rich Roll Podcast (YouTube), 49:50",
+     "href": "https://www.youtube.com/watch?v=VRTTdp4Tc-Y&t=2990s"
+    }
+   ],
+   "checks": [
+    "Trascrizione fatta in locale (Whisper) sull'audio RSS, perché i sottotitoli YouTube davano 429; il timestamp YouTube (49:45) l'ho ritrovato trascrivendo un tratto dell'audio del video.",
+    "Le 73 miglia a settimana le dice Rich Roll; Kerr risponde «exactly what it was». Non c'è una fonte scritta indipendente.",
+    "Box Altitude è il fornitore della stanza (fonte interessata); i 2.500 m e le 12 ore coincidono con The Running Channel.",
+    "Il record è «soggetto a ratifica» secondo World Athletics a luglio; Guinness lo riporta già come record."
+   ],
+   "id": "n92",
+   "ord": 109,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🐂",
+   "titolo": "Che peste, quel bambino",
+   "tema": "natura",
+   "batch": "26/11, podcast e cultura",
+   "origine": "Aeon, Dagomar Degroot, A colossal oscillation (23/11/2026); verificato su Wikipedia (Rinderpest, 1890s African rinderpest epizootic, Great Famine of 1876–1878, con le fonti lì citate) e WOAH",
+   "x_posts": [],
+   "body": "Eritrea, 1887–1889. L'esercito italiano combatte in Etiopia e, racconta la versione più diffusa, per sfamare le truppe importa bovini dall'Asia. Con le vacche viaggia un virus: la peste bovina. [In tre anni](https://en.wikipedia.org/wiki/1890s_African_rinderpest_epizootic) percorre 8.000 km, fino a Dakar. In Etiopia muore circa il 90% del bestiame.\n\nPoi arriva lui, El Niño, «il bambino». Nel 1890-91 un Niño forte porta siccità, arrivano anche le locuste e, [scrive lo storico Dagomar Degroot su Aeon](https://aeon.co/essays/what-can-we-learn-from-the-past-experience-of-el-nino), muore forse un terzo della popolazione etiope.\n\n**Però, però, però.** Per Degroot El Niño da solo non fa una carestia: decide chi la paga. Nel 1877-78, con un altro Niño gigante, l'India del Raj esporta in Inghilterra [un record di 320.000 tonnellate di grano](https://en.wikipedia.org/wiki/Great_Famine_of_1876%E2%80%931878) mentre muoiono tra 5,6 e 9,6 milioni di persone. Negli stessi mesi gli agricoltori americani vendono grano all'Europa e Washington ci sistema i debiti della guerra civile. Stesso bambino, conti diversi.\n\nIl Pacifico si sta scaldando di nuovo: secondo Degroot quello del 2026 potrebbe essere il Niño più forte da 1.000 anni. La peste bovina, almeno, l'abbiamo battuta: è la [prima malattia animale eradicata](https://www.woah.org/en/disease/rinderpest/), ultimo caso nel 2001. Per il bambino, invece, il vaccino si chiama granai, strade e meno guerre.",
+   "links": [
+    [
+     "Dagomar Degroot, A colossal oscillation, Aeon (23/11/2026)",
+     "https://aeon.co/essays/what-can-we-learn-from-the-past-experience-of-el-nino"
+    ],
+    [
+     "1890s African rinderpest epizootic, Wikipedia",
+     "https://en.wikipedia.org/wiki/1890s_African_rinderpest_epizootic"
+    ],
+    [
+     "Rinderpest, Wikipedia (origine italiana contestata da Spinage)",
+     "https://en.wikipedia.org/wiki/Rinderpest"
+    ],
+    [
+     "Great Famine of 1876–1878, Wikipedia",
+     "https://en.wikipedia.org/wiki/Great_Famine_of_1876%E2%80%931878"
+    ],
+    [
+     "WOAH, Rinderpest",
+     "https://www.woah.org/en/disease/rinderpest/"
+    ]
+   ],
+   "images": [],
+   "checks": [
+    "L'origine italiana della peste bovina è la versione più diffusa (la riporta anche Aeon), ma lo storico Clive Spinage scrive che nei documenti dell'epoca non c'è prova dell'arrivo con i buoi dall'India a Massaua: nel testo è «racconta la versione più diffusa».",
+    "«Un terzo della popolazione etiope» è una stima (Aeon dice «perhaps a third»; Wikipedia «as high as one-third»).",
+    "Il 90% del bestiame etiope, gli 8.000 km in tre anni e le 320.000 t di grano vengono da Wikipedia, non da fonti primarie lette da me.",
+    "«Il Niño più forte da 1.000 anni» è un'ipotesi di Degroot («may be»), non una misura."
+   ],
+   "id": "n91",
+   "ord": 108,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🪞",
+   "titolo": "Riflessioni artificiali",
+   "tema": "tech",
+   "batch": "26/11, podcast e cultura",
+   "origine": "Moonshots EP #315 (24/11/2026, dal minuto 1:06:05 su YouTube); verificato su Inc. (25/11/2026), Science 1970 (Gallup), PLOS Biology 2019 e PNAS 2023 (Kohda et al.)",
+   "x_posts": [],
+   "body": "Teddy Wang, comico e creator, è in videochiamata con Nora, un'AI con volto, voce e orecchini a cerchio, fatta da Nuance Labs. Prende uno specchietto e lo punta verso la webcam. «Oh, that's me», [dice lei](https://www.inc.com/sophie-meharenna/an-ai-just-saw-its-own-reflection-for-the-first-time-the-reaction-is-fascinating/91441919). «Strano, e anche un po' bello». Il video fa milioni di visualizzazioni, e a [Moonshots](https://www.youtube.com/watch?v=CDN5X5z4gLw&t=3965s) Alex Wissner-Gross lo chiama un passo verso la *personhood* delle AI.\n\n**Però, però, però.** Il test dello specchio vero è un'altra cosa. Lo inventa Gordon Gallup [nel 1970](https://doi.org/10.1126/science.167.3914.86) con gli scimpanzé: anestesia, una macchia rossa sul sopracciglio e, al risveglio, si guarda se l'animale usa lo specchio per toccarsela. A Nora nessuno ha messo una macchia.\n\nChi il test lo passa davvero, nel 2019, è un pesce. Il labride pulitore, con un segno colorato sulla gola, [si sfrega contro il fondo](https://doi.org/10.1371/journal.pbio.3000021) per toglierlo solo se ha uno specchio davanti. Nel 2023 lo stesso gruppo mostra che [riconosce la propria faccia in foto](https://doi.org/10.1073/pnas.2208420120): attacca le foto degli sconosciuti, non le sue. Ne parlavamo in ([👁️ ff.12.3 Coscienza e intelligenza](https://fortissimo.substack.com/i/46992863/ff123-coscienza-e-intelligenza)), quando la lista dei promossi era fatta di grandi scimmie, delfini, orche ed elefanti.\n\nInsomma: il pesce si riconosce senza dirlo, l'AI lo dice senza che possiamo controllare. Chi è più cosciente del reame?",
+   "links": [
+    [
+     "Inc., An AI just saw its own reflection for the first time (25/11/2026)",
+     "https://www.inc.com/sophie-meharenna/an-ai-just-saw-its-own-reflection-for-the-first-time-the-reaction-is-fascinating/91441919"
+    ],
+    [
+     "Gallup, Chimpanzees: Self-Recognition, Science (1970)",
+     "https://doi.org/10.1126/science.167.3914.86"
+    ],
+    [
+     "Kohda et al., If a fish can pass the mark test…, PLOS Biology (2019)",
+     "https://doi.org/10.1371/journal.pbio.3000021"
+    ],
+    [
+     "Kohda et al., Cleaner fish recognize self in a mirror via self-face recognition like humans, PNAS (2023)",
+     "https://doi.org/10.1073/pnas.2208420120"
+    ],
+    [
+     "Moonshots EP #315 (24/11/2026), dal minuto 1:06:05",
+     "https://www.youtube.com/watch?v=CDN5X5z4gLw&t=3965s"
+    ]
+   ],
+   "backrefs": [
+    [
+     "👁️ ff.12.3 Coscienza e intelligenza",
+     "https://fortissimo.substack.com/i/46992863/ff123-coscienza-e-intelligenza"
+    ]
+   ],
+   "images": [
+    {
+     "src": "assets/p-moonshots315-nora.jpg",
+     "caption": "Nora, l'AI di Nuance Labs, nel video di Teddy Wang mostrato a Moonshots.",
+     "credit": "Frame da Moonshots EP #315 (YouTube), 1:07:01",
+     "href": "https://www.youtube.com/watch?v=CDN5X5z4gLw&t=4021s"
+    }
+   ],
+   "checks": [
+    "Visualizzazioni: Moonshots dice «quasi 24 milioni», un post ripreso da Pravda EN il 23/11 dice 18 milioni: nel testo solo «milioni».",
+    "Il post originale di Teddy Wang su X non l'ho trovato: niente embed.",
+    "Lo studio PLOS Biology 2019 ha avuto revisioni discordanti (lo dice la rivista stessa): l'interpretazione come autocoscienza è contestata.",
+    "La «lista dei promossi» di ff.12.3 è quella del libro citato allora (pag. 267), non una lista aggiornata."
+   ],
+   "id": "n90",
+   "ord": 107,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "chart": null
+  },
+  {
+   "emoji": "📉",
+   "titolo": "Sempre meno perplessi",
+   "tema": "tech",
+   "batch": "26/11, podcast e cultura",
+   "origine": "Moonshots EP #315 (24/11/2026, dal minuto 20:19 su YouTube; trascrizione da audio RSS); verificato sul post di Jakub Pachocki su openai.com (22/11/2026), dati del grafico presi dalla pagina, e su TechCrunch",
+   "x_posts": [],
+   "body": "Domenica 22 novembre Jakub Pachocki, chief scientist di OpenAI, pubblica [un numero che l'azienda teneva per sé](https://openai.com/index/perplexity-and-intelligence/): la *perplexity*, cioè quanto un modello è «sorpreso» dalla parola successiva. Più è bassa, meglio predice. Per Pachocki questo singolo numero spiega quasi tutto: GPT-3.5, a 0,986, chiacchierava fluente; GPT-4, a 0,913, iniziava a ragionare prima di rispondere.\n\n**Però, però, però.** Guardate la curva. Da GPT-4 (marzo 2023) a GPT-5.2 (dicembre 2025) scende di 0,025 in quasi tre anni: un altopiano. Poi, in undici mesi, cala di 0,127, fino a GPT-6.2 Astra a 0,761, sulla linea che OpenAI etichetta «ha risolto un problema del Millennio». Un modello interno è [già a 0,732](https://openai.com/index/perplexity-and-intelligence/). La prossima finestra è 0,68–0,70, e Pachocki ammette: «non so quali capacità arriveranno». Propone allora che tutti i laboratori pubblichino questi numeri e si diano limiti comuni, da non superare finché non sapremo monitorare i modelli.\n\nA Moonshots Diamandis [ci vede il rovescio](https://www.youtube.com/watch?v=CDN5X5z4gLw&t=1219s): chi decide il limite di velocità decide la velocità. Chi è davanti blinda il vantaggio, chi insegue frena il primo.\n\nUna volta eravamo noi perplessi davanti all'AI. Ora è lei a esserlo sempre meno. Davanti a noi.",
+   "links": [
+    [
+     "Jakub Pachocki, Perplexity and Intelligence, OpenAI (22/11/2026)",
+     "https://openai.com/index/perplexity-and-intelligence/"
+    ],
+    [
+     "TechCrunch, OpenAI's chief scientist has thoughts on how to limit AI development (22/11/2026)",
+     "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/"
+    ],
+    [
+     "Moonshots EP #315 (24/11/2026), dal minuto 20:19",
+     "https://www.youtube.com/watch?v=CDN5X5z4gLw&t=1219s"
+    ]
+   ],
+   "images": [
+    {
+     "src": "assets/p-moonshots315-perplexity.jpg",
+     "caption": "Il grafico di OpenAI mostrato a Moonshots: log-perplexity dei modelli base, da GPT-3.5 a un modello interno.",
+     "credit": "Frame da Moonshots EP #315 (YouTube), 20:51; grafico OpenAI",
+     "href": "https://www.youtube.com/watch?v=CDN5X5z4gLw&t=1251s"
+    }
+   ],
+   "chart": {
+    "title": "Log-perplexity dei modelli base OpenAI (più basso = meglio)",
+    "source": "OpenAI, Perplexity and Intelligence (22/11/2026), dati del grafico",
+    "fmt": "{v}",
+    "items": [
+     {
+      "label": "GPT-3.5 (mar 2022)",
+      "value": 0.986
+     },
+     {
+      "label": "GPT-4 (mar 2023)",
+      "value": 0.913
+     },
+     {
+      "label": "GPT-4o / o1 (mag 2024)",
+      "value": 0.904
+     },
+     {
+      "label": "GPT-5 / 5.1 (ago 2025)",
+      "value": 0.893
+     },
+     {
+      "label": "GPT-5.2 (dic 2025)",
+      "value": 0.888
+     },
+     {
+      "label": "GPT-5.5 (apr 2026)",
+      "value": 0.848
+     },
+     {
+      "label": "GPT-6 Astra (set 2026)",
+      "value": 0.783
+     },
+     {
+      "label": "GPT-6.2 Astra (nov 2026)",
+      "value": 0.761
+     },
+     {
+      "label": "Modello interno (nov 2026)",
+      "value": 0.732
+     }
+    ]
+   },
+   "checks": [
+    "La perplexity è misurata su un dataset interno di OpenAI (codice), non confrontabile da fuori: i numeri sono quelli dichiarati da OpenAI.",
+    "La linea «Solved a Millennium Prize math problem» si riferisce alla dimostrazione di Navier–Stokes annunciata da OpenAI l'8/9/2026: non risulta verificata dal Clay Institute né da revisori esterni.",
+    "Il valore 0,732 del modello interno è nei dati del grafico ma non nel testo del post.",
+    "La frase sul limite di velocità è di Diamandis (Moonshots), non di Pachocki."
+   ],
+   "id": "n89",
+   "ord": 106,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "backrefs": []
+  },
+  {
    "emoji": "🌡️",
    "titolo": "Due gradi di separazione",
    "tema": "natura",
