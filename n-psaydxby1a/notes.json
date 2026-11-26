@@ -1,7 +1,111 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-25",
+ "aggiornato": "2026-11-26",
  "notes": [
+  {
+   "emoji": "🌡️",
+   "titolo": "Due gradi di separazione",
+   "tema": "natura",
+   "batch": "26/11, giro X",
+   "origine": "Giro di ricerche X (@ChrisGloninger) e X News; verificato sull'articolo del Guardian con citazioni di Copernicus (C3S) e Berkeley Earth.",
+   "body": "Lunedì 23 novembre la Terra, in media, era 2,24 °C più calda del periodo 1850-1900. È il valore giornaliero più alto nei dati ERA5 di Copernicus, e arriva dopo una fila di giorni tutti sopra i 2 gradi: sei di fila, [scrive il Guardian](https://www.theguardian.com/environment/2026/nov/25/world-six-consecutive-days-2c-above-preindustrial-levels-first-time), mai successo prima.\n\nIl record precedente era 2,05 °C, del 2023, e secondo Zeke Hausfather di Berkeley Earth è stato «polverizzato». Sopra i 2 gradi si era passati solo altre due volte, a novembre 2023 e febbraio 2024, per meno giorni. Il motore è il riscaldamento di fondo più un El Niño enorme: l'ultimo di questa taglia, ricorda Samantha Burgess di Copernicus, risale agli anni 1870. E il Met Office prevede per l'anno prossimo 3,5 ppm di CO₂ in più, un terzo più veloce degli ultimi anni, perché le foreste tropicali in siccità assorbono meno.\n\n**Però, però, però.** Un giorno caldo non è un clima: la soglia di Parigi si misura su medie di vent'anni, e i dati degli ultimi giorni sono preliminari.\n\nDue gradi, per ora, li abbiamo solo provati. Come un vestito in camerino.",
+   "x_posts": [
+    "https://x.com/ChrisGloninger/status/2125582531080671524"
+   ],
+   "links": [
+    [
+     "The Guardian, World has six consecutive days 2C above preindustrial levels for first time (25/11/2026)",
+     "https://www.theguardian.com/environment/2026/nov/25/world-six-consecutive-days-2c-above-preindustrial-levels-first-time"
+    ],
+    [
+     "Copernicus Climate Pulse (dati ERA5 giornalieri)",
+     "https://pulse.climate.copernicus.eu/"
+    ]
+   ],
+   "checks": [
+    "Giorni consecutivi sopra 2 °C: il Guardian dice sei, Gloninger su X (23/11) ne conta cinque. Controllare su Climate Pulse.",
+    "Dati ERA5 preliminari: il valore del 23/11 può essere rivisto di qualche centesimo (un tracker riporta 2,22 °C).",
+    "Il paragone con l'El Niño degli anni 1870 è di Burgess (Copernicus) citata dal Guardian; la cifra della carestia non l'ho inserita."
+   ],
+   "id": "n88",
+   "ord": 105,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "💊",
+   "titolo": "Prevenire è meglio che sperimentare",
+   "tema": "uomo",
+   "batch": "26/11, giro X",
+   "origine": "Lista Best del 25-26/11 (@davidasinclair); verificato sull'abstract della review Lancet Healthy Longevity tramite longevitydocs e Longevity Progress (full text a pagamento).",
+   "body": "L'idea della geroscienza è semplice da dire: invece di curare il cuore, poi le ossa, poi il cervello, colpire l'invecchiamento che li accomuna. Prendere il guasto a monte. Bene, quanti la stanno davvero provando sulle persone?\n\nUna [review su The Lancet Healthy Longevity](https://www.thelancet.com/journals/lanhl/article/PIIS2666-7568(26)00127-3/fulltext) (Angioni, Ferrucci e altri, 23 novembre) ha contato su ClinicalTrials.gov i trial in corso al 1° gennaio 2026 con farmaci che mirano ai «segni distintivi» dell'invecchiamento: 193 studi, 131 molecole. Solo 41, il 21%, arruolano persone sane o a rischio di declino. Gli altri 152 trattano malattie già conclamate. E sono quasi tutti agli inizi: 61 in fase 1, 91 in fase 2, 41 in fase 3. Il bersaglio più gettonato è la comunicazione fra cellule, con 64 trial.\n\n**Però, però, però.** È una mappa di registrazioni, senza risultati, e appiccicare un farmaco a un «hallmark» è una scelta degli autori. Il motivo, secondo [David Sinclair](https://x.com/davidasinclair/status/2125622859494224025): tenere sani i sani costa di più, e per l'FDA l'invecchiamento non è (ancora) una malattia.\n\nVogliamo tutti invecchiare più tardi. Intanto si sperimenta su chi è già vecchio.",
+   "x_posts": [
+    "https://x.com/davidasinclair/status/2125622859494224025"
+   ],
+   "links": [
+    [
+     "Angioni et al., Agents targeting the hallmarks of ageing: the geroscience pipeline in 2026, The Lancet Healthy Longevity (23/11/2026)",
+     "https://www.thelancet.com/journals/lanhl/article/PIIS2666-7568(26)00127-3/fulltext"
+    ],
+    [
+     "longevitydocs News, riassunto dell'abstract",
+     "https://news.longevitydocs.org/research/geroscience-pipeline-2026-hallmarks-of-aging-193-trials-lancet-healthy-longevity"
+    ],
+    [
+     "Longevity Progress, scheda dello studio (DOI 10.1016/j.lanhl.2026.100943)",
+     "https://longevityprogress.com/studies/7839"
+    ]
+   ],
+   "checks": [
+    "La pagina Lancet non si è caricata: numeri verificati su due riassunti dell'abstract (longevitydocs, Longevity Progress), che coincidono. Full text a pagamento.",
+    "Il motivo (costi, FDA che non classifica l'invecchiamento come malattia) è l'opinione di Sinclair su X, non un risultato della review."
+   ],
+   "id": "n87",
+   "ord": 104,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🎣",
+   "titolo": "Abboccare all'ora legale",
+   "tema": "uomo",
+   "batch": "26/11, giro X",
+   "origine": "Lista Best del 25-26/11 (@bryan_johnson); verificato sull'abstract PNAS e sul comunicato UC Irvine.",
+   "body": "Lunedì mattina, primo caffè, la sveglia suonata un'ora prima del solito perché nella notte è scattata l'ora legale. Nella casella arriva una mail che chiede di cliccare un link. È una trappola, ma finta: la manda l'ufficio IT dell'Università della California a Irvine per allenare i dipendenti.\n\nEitan Schechtman, neurobiologo, ha [sfruttato la campagna](https://doi.org/10.1073/pnas.2622467123): 11.218 dipendenti, assegnati a caso e all'oscuro di tutto, ricevono la stessa mail il lunedì dopo il cambio d'ora oppure una settimana prima. Risultato, [dice l'università](https://news.uci.edu/2026/11/09/tired-brains-take-the-phishing-bait/): clic al 17,76% contro il 15,56%, circa il 13% in più. Aprire la mail o segnalarla come spam, invece, succede uguale nei due gruppi. Cambia solo il gesto impulsivo.\n\n**Però, però, però.** Il sonno nessuno l'ha misurato: l'ora persa si deduce dal calendario, e luce e ritmo circadiano spostati possono fare la loro parte. Ed è un solo ateneo, un solo cambio d'ora.\n\nIn compenso, l'FBI stima oltre 20 miliardi di dollari persi nel 2025 per crimini informatici negli USA. Prima di cliccare, dormirci su. Letteralmente.",
+   "x_posts": [
+    "https://x.com/bryan_johnson/status/2125661798074360005"
+   ],
+   "links": [
+    [
+     "Schechtman, Modest loss of sleep increases susceptibility to cybersecurity threats, PNAS (11/2026)",
+     "https://doi.org/10.1073/pnas.2622467123"
+    ],
+    [
+     "UC Irvine News, Tired brains take the phishing bait (9/11/2026)",
+     "https://news.uci.edu/2026/11/09/tired-brains-take-the-phishing-bait/"
+    ]
+   ],
+   "checks": [
+    "Tasso di clic del gruppo di controllo: il comunicato UCI dice 15,56%, un riassunto dell'abstract riporta 15,66%. Controllare sul PDF PNAS (il +13% torna con entrambi, arrotondato).",
+    "Il dato FBI (oltre 20 miliardi $, report IC3 2025) è citato dal comunicato UCI, non verificato sul report."
+   ],
+   "id": "n86",
+   "ord": 103,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "🖼️",
    "titolo": "Chi l'ha disegnato?",
