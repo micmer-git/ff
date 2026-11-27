@@ -1,7 +1,94 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-26",
+ "aggiornato": "2026-11-27",
  "notes": [
+  {
+   "emoji": "🦥",
+   "titolo": "Appeso a un filo",
+   "tema": "natura",
+   "batch": "27/11, giro X",
+   "origine": "Ricerca X 27/11 (@TheTicoTimes); verificato sull'articolo del Tico Times, che riprende un servizio AP.",
+   "body": "Puerto Viejo de Talamanca, costa caraibica del Costa Rica. Dietro un hotel sulla spiaggia, una squadra tende una corda da un tronco all'altro. Sembra un filo per stendere. Per un bradipo è un ponte.\n\nI bradipi non saltano. Bastano 2 o 3 metri di vuoto fra due chiome per costringerli a scendere a terra, dove li aspettano cani, auto e cavi elettrici. La zoologa Rebecca Cliffe, della Sloth Conservation Foundation, la chiama microframmentazione. Il suo gruppo ha installato circa 410 ponti, quasi sempre una corda sola, e le fotocamere hanno registrato più di 22.000 attraversamenti, [racconta il Tico Times](https://ticotimes.net/2026/11/25/costa-rica-sloth-rope-bridges-410-crossings). Non solo bradipi. Sole e pioggia consumano le corde in quattro o cinque anni.\n\n**Però, però, però.** Il Costa Rica è un campione di riforestazione: foreste al 59% del territorio, dal 21% del 1987. Ma molti boschi sono ricresciuti su vecchi pascoli, a pezzi. E nessuno sa quanti bradipi ci siano: due centri di recupero ne ricevono circa tre al giorno, senza dati storici per dire se è tanto o poco.\n\nIl sogno di Cliffe è che i ponti diventino inutili, quando gli alberi torneranno a toccarsi. Per ora, tutto appeso a un filo.",
+   "x_posts": [
+    "https://x.com/TheTicoTimes/status/2126126518334062663"
+   ],
+   "links": [
+    [
+     "The Tico Times, Costa Rica Sloth Rope Bridges Reach 410 With 22,000 Crossings (25/11/2026)",
+     "https://ticotimes.net/2026/11/25/costa-rica-sloth-rope-bridges-410-crossings"
+    ]
+   ],
+   "checks": [
+    "Copertura forestale 59% (dal 21% del 1987): dato OCSE 2023 riportato dal Tico Times, non verificato sul rapporto.",
+    "Il servizio AP originale non è stato letto; 410 ponti e 22.000 attraversamenti vengono dal Tico Times."
+   ],
+   "id": "n96",
+   "ord": 113,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "💰",
+   "titolo": "Poveri ma belli (fino al 1750)",
+   "tema": "uomo",
+   "batch": "27/11, giro X",
+   "origine": "Lista Best del 26-27/11 (@morganhousel che cita Basil Halperin); verificato sul saggio originale.",
+   "body": "Mettete a tavola i nonni dei nostri bisnonni, metà Ottocento, e accanto un contadino della Galilea ai tempi di Gesù. Chi sta meglio? Di poco, i primi.\n\nBasil Halperin, economista dell'Università della Virginia, [la mette così](https://basilhalperin.com/essays/macrohistory.html): siamo circa 10 volte più ricchi dei nostri antenati di cinque generazioni fa, che a loro volta erano circa 2 volte più ricchi di Gesù di Nazareth. Prima eravamo tutti poveri. Per secoli, ogni volta che i salari salivano sopravvivevano più bambini, la popolazione cresceva e i salari tornavano alla sussistenza. Crescita: 0,01% all'anno. Poi la Rivoluzione industriale: 0,1% intorno al 1750, 1% verso il 1870, oggi il 2%. Negli Stati Uniti il PIL per persona cresce di un 2% annuo quasi costante da 150 anni: acqua corrente, elettricità, auto, computer, web, tutti sulla stessa retta.\n\n**Però, però, però.** È la frontiera, non il mondo. L'11% più povero degli americani guadagna in media più del bangladese mediano. E l'Argentina, ricchissima a inizio Novecento, si è fermata.\n\nIl 2% sembra poco. Ma raddoppia ogni 35 anni.",
+   "x_posts": [
+    "https://x.com/morganhousel/status/2125980456311222488"
+   ],
+   "links": [
+    [
+     "Basil Halperin, Macrohistory in Six Facts (24/11/2026)",
+     "https://basilhalperin.com/essays/macrohistory.html"
+    ]
+   ],
+   "checks": [
+    "«10 volte» e «2 volte» sono stime arrotondate dell'autore (∼); le serie dietro i grafici non sono state ricontrollate.",
+    "«Raddoppia ogni 35 anni» è un calcolo nostro (regola del 70), non di Halperin."
+   ],
+   "id": "n95",
+   "ord": 112,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🏗️",
+   "titolo": "Chi troppo costruisce, nulla stringe",
+   "tema": "tech",
+   "batch": "27/11, giro X",
+   "origine": "Lista Best del 26-27/11 (@azeem); verificato sulla parte gratuita del pezzo Exponential View (analisi completa a pagamento).",
+   "body": "Inghilterra, anni Novanta dell'Ottocento. Tutti vogliono una bicicletta, e alla Borsa di Londra spuntano fabbriche di biciclette quotate come funghi. Pochi anni dopo, il conto.\n\nAzeem Azhar e William Gildea hanno [messo in fila](https://www.investmentbrief.ai/p/borrowed-time) quasi 800 tecnologie degli ultimi tre secoli. Dei boom che richiedevano di costruire qualcosa di fisico, tre su quattro sono finiti in un crollo: le bici inglesi, le centrali nucleari americane degli anni Settanta, i centri di protonterapia degli anni 2010. I segnali comuni sono tre: aziende quotate che fanno solo quello, soldi da fuori settore, e costruire prima che ci sia una domanda pagante. Quando c'erano tutti e tre, il crollo è arrivato il 94% delle volte.\n\n**Però, però, però.** L'AI ha i primi due. Sul terzo, per ora, i ricavi tengono il passo dei data center. Ma gli impegni di spesa già firmati richiedono ricavi dell'AI in crescita del 35% all'anno.\n\nIntanto l'indice dei semiconduttori PHLX è circa il 40% sotto il massimo di giugno. La storia non si ripete, ma pedala.",
+   "x_posts": [
+    "https://x.com/azeem/status/2125928524691496989"
+   ],
+   "links": [
+    [
+     "Azhar & Gildea, Borrowed time, Exponential View (25/11/2026)",
+     "https://www.investmentbrief.ai/p/borrowed-time"
+    ]
+   ],
+   "checks": [
+    "Il pezzo completo (metodo, elenco delle 800 tecnologie, dettaglio del 35% annuo) è a pagamento: 3 su 4, 94% e 35% sono presi dalla parte gratuita, metodologia non verificata.",
+    "Il -40% del PHLX dal massimo di giugno è dichiarato dagli autori, non controllato sull'indice."
+   ],
+   "id": "n94",
+   "ord": 111,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "🍚",
    "titolo": "Paese che vai, malattia che trovi",
