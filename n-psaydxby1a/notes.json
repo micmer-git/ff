@@ -1,7 +1,65 @@
 {
  "titolo": "Note Futuro Fortissimo",
- "aggiornato": "2026-11-27",
+ "aggiornato": "2026-11-28",
  "notes": [
+  {
+   "emoji": "🧬",
+   "titolo": "Due piccioni con una fava (peptidica)",
+   "tema": "tech",
+   "batch": "28/11, giro X",
+   "origine": "Lista Best del 27-28/11 (@davidasinclair); verificato sull'abstract originale su Nature.",
+   "body": "Una molecola per il peso, una per la glicemia, una per il tumore. E se ne bastasse una sola, che colpisce due bersagli insieme?\n\nSu [Nature](https://doi.org/10.1038/s41586-026-11338-1), il 25 novembre, un gruppo guidato da Tianxu Lv, Bing He e Lei Guan presenta ORIDTP: un'intelligenza artificiale che disegna da zero peptidi a doppio bersaglio. Sei dei suoi co-agonisti per il recettore del GLP-1 e per quello del glucagone battono in attività i migliori leganti naturali di ciascun recettore. Nei topi obesi il capofila fa calare peso e glicemia, senza nausea né avversione. Poi, senza riaddestrare nulla, le hanno chiesto peptidi per due freni immunitari lontanissimi da lì, PD-1 e CTLA-4: su 15 progettati, 8 bloccano entrambi e 3 funzionano in vivo. Il migliore riduce il volume del tumore del 94,2%.\n\n**Però, però, però.** Sono topi, per di più con i recettori umani inseriti apposta, e dal topo all'uomo la strada è lastricata di peptidi promettenti. E 7 dei 15 non hanno bloccato niente.\n\nIl numero che conta non è il 94,2%. È che la seconda volta l'AI non ha dovuto studiare.",
+   "x_posts": [
+    "https://x.com/davidasinclair/status/2126369891066474597"
+   ],
+   "links": [
+    [
+     "Lv, He, Guan et al., De novo design of high-potency dual-target therapeutic peptides with ORIDTP, Nature (25/11/2026)",
+     "https://doi.org/10.1038/s41586-026-11338-1"
+    ]
+   ],
+   "checks": [
+    "Numeri presi dall'abstract (6 co-agonisti, 8/15 e 3 in vivo, -94,2% di volume tumorale): il corpo del paper è a pagamento, metodologia non verificata.",
+    "Dati preclinici: topi obesi, topi db/db e topi knock-in per i checkpoint umani. Nessun dato sull'uomo."
+   ],
+   "id": "n98",
+   "ord": 115,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
+  {
+   "emoji": "🔋",
+   "titolo": "Il pieno della sera",
+   "tema": "natura",
+   "batch": "28/11, giro X",
+   "origine": "Like di Michele a @ember_energy (27/11); verificato sull'analisi Ember–Cleantech for Italy–Energy Square del 26/11/2026.",
+   "body": "Sera d'inverno in Italia: il sole è andato giù alle cinque, l'ora di punta arriva alle sette. A quell'ora la corrente la fa ancora il gas.\n\nEmber, Cleantech for Italy ed Energy Square hanno [messo i numeri in fila](https://ember-energy.org/latest-insights/energy-storage-can-help-cut-italys-power-prices): a giugno 2026 l'Italia aveva 19 GWh di accumuli su 919.000 impianti, quasi il doppio di due anni prima, e ospita quasi un quinto della capacità a batteria in esercizio di tutta l'UE. Le aste MACSE di Terna porteranno gli accumuli di rete da 7 a 38 GWh entro il 2029. E il rinnovabile spostato alla sera costa 106 €/MWh contro i 210 €/MWh del gas: fino al 49% in meno.\n\n**Però, però, però.** Nel primo semestre 2026 le batterie hanno coperto il 2,8% del picco serale italiano (era l'1,3% un anno prima). In Bulgaria, alle 20, ne coprono il 28%, con una flotta che nel frattempo ha superato la nostra. E al 2035 gli scenari di Terna e Snam ne chiedono 76-96 GWh.\n\nAbbiamo il sole, le fabbriche di celle a Teverola e Brindisi (16 GWh l'anno dal 2030) e perfino le aste. Ci manca la sera.",
+   "x_posts": [
+    "https://x.com/ember_energy/status/2126224553697317251"
+   ],
+   "links": [
+    [
+     "Ember, Cleantech for Italy, Energy Square – Energy storage can help cut Italy's power prices (26/11/2026)",
+     "https://ember-energy.org/latest-insights/energy-storage-can-help-cut-italys-power-prices"
+    ]
+   ],
+   "checks": [
+    "Tutti i numeri (19 GWh/919.000 impianti, 7→38 GWh, 2,8% vs 1,3%, Bulgaria 28%, 76-96 GWh al 2035, 16 GWh/anno Teverola-Brindisi) vengono dall'analisi Ember; non ricontrollati sui dati Terna originali.",
+    "Il post di Ember parla di «un quinto della capacità UE a fine 2025», l'analisi di «quasi un quinto» a giugno 2026: ho usato il secondo."
+   ],
+   "id": "n97",
+   "ord": 114,
+   "stato": "da fare",
+   "done": false,
+   "used_in": null,
+   "images": [],
+   "chart": null,
+   "backrefs": []
+  },
   {
    "emoji": "🦥",
    "titolo": "Appeso a un filo",
